@@ -167,7 +167,7 @@ header {
 #guideHeader {
   width: 100%;
   min-height: 50px;
-  background: #080d35;
+  background: #3EC2CF;
   box-shadow: 0 2px 5px #ccc;
   display: flex;
   align-items: center;
@@ -190,7 +190,7 @@ header {
 #guideWrap #footer {
   padding: 15px 0 10px 0;
   border: 0;
-  background: #7a7166;
+  background: #3EC2CF;
   font-size: 18px;
   color: #fff;
   text-align: center;
