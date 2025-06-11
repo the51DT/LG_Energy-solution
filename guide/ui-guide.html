@@ -9,8 +9,8 @@
   <title>LG에너지솔루션 | Component</title>
   <link type="text/css" rel="stylesheet" href="./inc/css/shCoreDefault.css" />
   <link type="text/css" rel="stylesheet" href="./inc/css/guide.css" />
-  <link type="text/css" rel="stylesheet" href="../inc/css/swiper.min.css" />
-  <link type="text/css" rel="stylesheet" href="../inc/css/common.css" />
+  <link type="text/css" rel="stylesheet" href="../public/inc/css/swiper.min.css" />
+  <link type="text/css" rel="stylesheet" href="../public/inc/css/common.css" /> 
   <style>
     #guideWrap {
       overflow: hidden;
@@ -181,15 +181,46 @@
           <h2 class="guideTit">Button</h2>
           <div class="info">
             <div class="subSection">
-              <h3 class="guideSubTit">case1 :: Text_BTN</h3>
+              <h3 class="guideSubTit">case1 :: Text Btn / Line Btn</h3>
               <div class="ui-item">
                 <div class="btn-wrap">
-                  <a href="#" class="txt-btn lg-txt-btn01">비밀번호 변경</a>
+                  <a href="#" class="txt-btn01 txt-btn-sm">Text Button</a>
                 </div>
                 <div class="btn-wrap">
-                  <a href="#" class="txt-btn md-txt-btn01">비밀번호 변경</a>
+                  <a href="#" class="txt-btn01 txt-btn-md">Text Button</a>
                 </div>
-              </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-lg">Text Button</a>
+                </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-sm disabled">Text Button</a>
+                </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-md disabled">Text Button</a>
+                </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-lg disabled">Text Button</a>
+                </div>
+
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn02 txt-btn-sm">Line Button</a>
+                </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn02 txt-btn-md">Line Button</a>
+                </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn02 txt-btn-lg">Line Button</a>
+                </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn02 txt-btn-sm disabled">Line Button</a>
+                </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn02 txt-btn-md disabled">Line Button</a>
+                </div>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn02 txt-btn-lg disabled">Line Button</a>
+                </div>
+              </div>              
               <div class="code">
                 <pre class="brush: js;">
 </pre>
@@ -200,38 +231,58 @@
               <h3 class="guideSubTit">case2 :: Primary_BTN</h3>
               <div class="ui-item">
                 <div class="btn-wrap">
-                  <button type="button" class="btn btn-lg-primary01">
-                    Label Name
+                  <button type="button" class="act-btn-xs btn-primary01">
+                    btn-primary01
                   </button>
-                  <button type="button" class="btn btn-lg-primary02">
-                    Label Name
+                  <button type="button" class="act-btn-sm btn-primary01">
+                    btn-primary01
                   </button>
-                  <button type="button" class="btn btn-lg-primary01 disabled" disabled>
-                    Label Name
+                  <button type="button" class="act-btn-md btn-primary01">
+                    btn-primary01
                   </button>
-                </div>
-                <div class="btn-wrap">
-                  <button type="button" class="btn btn-md-primary01">
-                    Label Name
+                  <button type="button" class="act-btn-lg btn-primary01">
+                    btn-primary01
                   </button>
-                  <button type="button" class="btn btn-md-primary02">
-                    Label Name
+                  <button type="button" class="act-btn-xs btn-primary01 disabled" disabled>
+                    btn-primary01
                   </button>
-                  <button type="button" class="btn btn-md-primary01 disabled" disabled>
-                    Label Name
+                  <button type="button" class="act-btn-sm btn-primary01 disabled" disabled>
+                    btn-primary01
                   </button>
-                </div>
-                <div class="btn-wrap">
-                  <button type="button" class="btn btn-xs-primary01">
-                    Label Name
+                  <button type="button" class="act-btn-md btn-primary01 disabled" disabled>
+                    btn-primary01
                   </button>
-                  <button type="button" class="btn btn-xs-primary02">
-                    Label Name
-                  </button>
-                  <button type="button" class="btn btn-xs-primary01 disabled" disabled>
-                    Label Name
+                  <button type="button" class="act-btn-lg btn-primary01 disabled" disabled>
+                    btn-primary01
                   </button>
                 </div>
+                <div class="btn-wrap">  
+                  <button type="button" class="act-btn-xs btn-primary02">
+                    btn-primary02
+                  </button>
+                  <button type="button" class="act-btn-sm btn-primary02">
+                    btn-primary02
+                  </button>
+                  <button type="button" class="act-btn-md btn-primary02">
+                    btn-primary02
+                  </button>
+                  <button type="button" class="act-btn-lg btn-primary02">
+                    btn-primary02
+                  </button>                  
+                  <button type="button" class="act-btn-xs btn-primary02 disabled" disabled>
+                    btn-primary02
+                  </button>
+                  <button type="button" class="act-btn-sm btn-primary02 disabled" disabled>
+                    btn-primary02
+                  </button>
+                  <button type="button" class="act-btn-md btn-primary02 disabled" disabled>
+                    btn-primary02
+                  </button>
+                  <button type="button" class="act-btn-lg btn-primary02 disabled" disabled>
+                    btn-primary02
+                  </button>
+                </div>
+                
               </div>
               <div class="code">
                 <pre class="brush: js;">
@@ -242,37 +293,82 @@
               <h3 class="guideSubTit">case3 :: Outline_BTN</h3>
               <div class="ui-item">
                 <div class="btn-wrap">
-                  <button type="button" class="btn btn-lg-outline01">
-                    View More
+                  <button type="button" class="act-btn-xs btn-outline01">
+                    btn-outline01
                   </button>
-                  <button type="button" class="btn btn-lg-outline02">
-                    View More
+                  <button type="button" class="act-btn-sm btn-outline01">
+                    btn-outline01
                   </button>
-                  <button type="button" class="btn btn-lg-outline01 disabled" disabled>
-                    View More
+                  <button type="button" class="act-btn-md btn-outline01">
+                    btn-outline01
                   </button>
+                  <button type="button" class="act-btn-lg btn-outline01">
+                    btn-outline01
+                  </button>
+                  <button type="button" class="act-btn-xs btn-outline01 disabled" disabled>
+                    btn-outline01
+                  </button>
+                  <button type="button" class="act-btn-sm btn-outline01 disabled" disabled>
+                    btn-outline01
+                  </button>
+                  <button type="button" class="act-btn-md btn-outline01 disabled" disabled>
+                    btn-outline01
+                  </button>
+                  <button type="button" class="act-btn-lg btn-outline01 disabled" disabled>
+                    btn-outline01
+                  </button>                  
                 </div>
                 <div class="btn-wrap">
-                  <button type="button" class="btn btn-md-outline01">
-                    View More
+                  <button type="button" class="act-btn-xs btn-outline02">
+                    btn-outline02
                   </button>
-                  <button type="button" class="btn btn-md-outline02">
-                    View More
+                  <button type="button" class="act-btn-sm btn-outline02">
+                    btn-outline02
                   </button>
-                  <button type="button" class="btn btn-md-outline01 disabled" disabled>
-                    View More
+                  <button type="button" class="act-btn-md btn-outline02">
+                    btn-outline02
                   </button>
+                  <button type="button" class="act-btn-lg btn-outline02">
+                    btn-outline02
+                  </button>
+                  <button type="button" class="act-btn-xs btn-outline02 disabled" disabled>
+                    btn-outline02
+                  </button>
+                  <button type="button" class="act-btn-sm btn-outline02 disabled" disabled>
+                    btn-outline02
+                  </button>
+                  <button type="button" class="act-btn-md btn-outline02 disabled" disabled>
+                    btn-outline02
+                  </button>
+                  <button type="button" class="act-btn-lg btn-outline02 disabled" disabled>
+                    btn-outline02
+                  </button>                  
                 </div>
-                <div class="btn-wrap">
-                  <button type="button" class="btn btn-xs-outline01">
-                    View More
+                <div class="btn-wrap" style="background-color:#e1e7ea;">
+                  <button type="button" class="act-btn-xs btn-outline03">
+                    btn-outline03
                   </button>
-                  <button type="button" class="btn btn-xs-outline02">
-                    View More
+                  <button type="button" class="act-btn-sm btn-outline03">
+                    btn-outline03
                   </button>
-                  <button type="button" class="btn btn-xs-outline01 disabled" disabled>
-                    View More
+                  <button type="button" class="act-btn-md btn-outline03">
+                    btn-outline03
                   </button>
+                  <button type="button" class="act-btn-lg btn-outline03">
+                    btn-outline03
+                  </button>
+                  <button type="button" class="act-btn-xs btn-outline03 disabled" disabled>
+                    btn-outline03
+                  </button>
+                  <button type="button" class="act-btn-sm btn-outline03 disabled" disabled>
+                    btn-outline03
+                  </button>
+                  <button type="button" class="act-btn-md btn-outline03 disabled" disabled>
+                    btn-outline03
+                  </button>
+                  <button type="button" class="act-btn-lg btn-outline03 disabled" disabled>
+                    btn-outline03
+                  </button>                  
                 </div>
               </div>
               <div class="code">
@@ -286,6 +382,160 @@
         <section id="cont04" class="section">
           <h2 class="guideTit">Form</h2>
           <div class="info">
+            <!-- checkbox button-->
+            <div class="subSection">
+              <h3 class="guideSubTit">1. Form: checkbox button</h3>
+              <div class="ui-item">
+                <form>
+                  <div class="wrap-form">
+                    <div class="wrap-form-box">
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-1" name="checkbox-1" checked>
+                        <label for="checkbox-1" class="checkbox-label">
+                          <span class="custom-checkbox"></span>
+                          <span class="txt">체크박스 버튼1</span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
+                        <label for="checkbox-2" class="checkbox-label">
+                          <span class="custom-checkbox"></span>
+                          <span class="txt">체크박스 버튼2</span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-3" name="checkbox-3" disabled>
+                        <label for="checkbox-3" class="checkbox-label">
+                          <span class="custom-checkbox"></span>
+                          <span class="txt">체크박스 버튼3</span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-4" name="checkbox-4" checked disabled>
+                        <label for="checkbox-4" class="checkbox-label">
+                          <span class="custom-checkbox"></span>
+                          <span class="txt">체크박스 버튼4</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="wrap-form">
+                    <div class="wrap-form-box horizontal">
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-5" name="checkbox-5" checked>
+                        <label for="checkbox-5" class="checkbox-label">
+                          <span class="custom-checkbox"></span>
+                          <span class="txt">체크박스 버튼5</span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-6" name="checkbox-6">
+                        <label for="checkbox-6" class="checkbox-label">
+                          <span class="custom-checkbox"></span>
+                          <span class="txt">체크박스 버튼6</span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-7" name="checkbox-7" disabled>
+                        <label for="checkbox-7" class="checkbox-label">
+                          <span class="custom-checkbox"></span>
+                          <span class="txt">체크박스 버튼7</span>
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <input type="checkbox" id="checkbox-8" name="checkbox-8" checked disabled>
+                        <label for="checkbox-8" class="checkbox-label">
+                          <span class="custom-checkbox"></span>
+                          <span class="txt">체크박스 버튼8</span>
+                        </label>
+                      </div>
+                    </div>                  
+                  </div>
+                </form>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+                </pre>
+              </div>
+            </div>
+            <!-- radio button-->
+            <div class="subSection">
+              <h3 class="guideSubTit">2. Form: Radio button</h3>
+              <div class="ui-item">
+                <form> <!-- 라디오 버튼 초기값 checked 적용 안되는 문제로 인해, form 태그 추가함 -->
+                  <div class="wrap-form">
+                    <div class="wrap-form-box">
+                      <div class="radio">
+                        <input type="radio" id="radio-1" name="radio-vertical" checked>
+                        <label for="radio-1" class="radio-label">
+                          <span class="custom-radio"></span>
+                          <span class="txt">라디오 버튼1</span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <input type="radio" id="radio-2" name="radio-vertical">
+                        <label for="radio-2" class="radio-label">
+                          <span class="custom-radio"></span>
+                          <span class="txt">라디오 버튼2</span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <input type="radio" id="radio-3" name="radio-vertical" disabled>
+                        <label for="radio-3" class="radio-label">
+                          <span class="custom-radio"></span>
+                          <span class="txt">라디오 버튼3</span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <input type="radio" id="radio-4" name="radio-vertical" disabled checked>
+                        <label for="radio-4" class="radio-label">
+                          <span class="custom-radio"></span>
+                          <span class="txt">라디오 버튼4</span>
+                        </label>
+                      </div>
+                    </div>                  
+                  </div>
+              
+                  <div class="wrap-form">
+                    <div class="wrap-form-box horizontal">                 
+                      <div class="radio">
+                        <input id="radio-5" name="radio-horizontal" type="radio" checked>
+                        <label for="radio-5" class="radio-label">
+                          <span class="custom-radio"></span>
+                          <span class="txt">라디오 버튼5</span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <input id="radio-6" name="radio-horizontal" type="radio">
+                        <label for="radio-6" class="radio-label">
+                          <span class="custom-radio"></span>
+                          <span class="txt">라디오 버튼6</span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <input id="radio-7" name="radio-horizontal" type="radio">
+                        <label for="radio-7" class="radio-label">
+                          <span class="custom-radio"></span>
+                          <span class="txt">라디오 버튼7</span>
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <input id="radio-8" name="radio-horizontal" type="radio">
+                        <label for="radio-8" class="radio-label">
+                          <span class="custom-radio"></span>
+                          <span class="txt">라디오 버튼8</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
             <div class="subSection">
               <h3 class="guideSubTit">1. Form: Title</h3>
               <div class="ui-item">
@@ -410,76 +660,7 @@
                 <pre class="brush: js;">
 </pre>
               </div>
-            </div>
-            <!-- checkbox button-->
-            <div class="subSection">
-              <h3 class="guideSubTit">5. Form: checkbox button</h3>
-              <div class="ui-item">
-                <div class="wrap-form">
-                  <div class="wrap-check">
-                    <div class="checkbox">
-                      <input type="checkbox" id="checkbox-1" name="checkbox-1" checked>
-                      <label for="checkbox-1" class="checkbox-label"><span class="txt">체크박스 버튼1</span></label>
-                    </div>
-                    <div class="checkbox">
-                      <input type="checkbox" id="checkbox-2" name="checkbox-2">
-                      <label for="checkbox-2" class="checkbox-label"><span class="txt">체크박스 버튼2</span></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="wrap-form">
-                  <div class="wrap-check horizontal">
-                    <div class="checkbox">
-                      <input type="checkbox" id="checkbox-3" name="checkbox-3" checked>
-                      <label for="checkbox-3" class="checkbox-label"><span class="txt">체크박스 버튼3</span></label>
-                    </div>
-                    <div class="checkbox">
-                      <input type="checkbox" id="checkbox-4" name="checkbox-4">
-                      <label for="checkbox-4" class="checkbox-label"><span class="txt">체크박스 버튼4</span></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="code">
-                <pre class="brush: js;">
-                </pre>
-              </div>
-            </div>
-            <!-- radio button-->
-            <div class="subSection">
-              <h3 class="guideSubTit">6. Form: Radio button</h3>
-              <div class="ui-item">
-                <div class="wrap-form ">
-                  <div class="wrap-radio">
-                    <div class="radio">
-                      <input id="radio-1" name="radio-vertical" type="radio" checked>
-                      <label for="radio-1" class="radio-label"><span class="txt">라디오 버튼1</span></label>
-                    </div>
-                    <div class="radio">
-                      <input id="radio-2" name="radio-vertical" type="radio">
-                      <label for="radio-2" class="radio-label"><span class="txt">라디오 버튼2</span></label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="wrap-form">
-                  <div class="wrap-radio horizontal">
-                    <div class="radio">
-                      <input id="radio-3" name="radio-horizontal" type="radio" checked>
-                      <label for="radio-3" class="radio-label"><span class="txt">라디오 버튼1</span> </label>
-                    </div>
-                    <div class="radio">
-                      <input id="radio-4" name="radio-horizontal" type="radio">
-                      <label for="radio-4" class="radio-label"> <span class="txt">라디오 버튼2</span></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="code">
-                <pre class="brush: js;">
-</pre>
-              </div>
-            </div>
+            </div>            
             <!-- selectbox-->
             <div class="subSection">
               <h3 class="guideSubTit">case1 :: select box 1개인 경우</h3>

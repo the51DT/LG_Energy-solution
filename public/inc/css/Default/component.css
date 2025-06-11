@@ -1,0 +1,63 @@
+/* button */
+/* text btn / line btn */
+[class^="txt-btn"] {color: var(--colorElement-light-text-text-default01); font-weight: 500; position: relative;}
+[class^="txt-btn"].disabled {color: var(--colorElement-light-icon-icon-disabled);}
+[class^="txt-btn"][class*="-sm"] {font-size: calc(18 / 16 * 1rem); line-height: calc(25.2 / 16 * 1rem); padding-right: calc(26 / 16 * 1rem);}
+[class^="txt-btn"][class*="-md"] {font-size: calc(20 / 16 * 1rem); line-height: calc(22.4 / 16 * 1rem); padding-right: calc(28 / 16 * 1rem);}
+[class^="txt-btn"][class*="-lg"] {font-size: calc(22 / 16 * 1rem); line-height: calc(30.8 / 16 * 1rem); padding-right: calc(32 / 16 * 1rem);}
+.txt-btn01[class^="txt-btn"][class*="-sm"]:after {width: calc(18 / 16 * 1rem); height: calc(18 / 16 * 1rem);}
+.txt-btn01[class^="txt-btn"][class*="-md"]:after {width: calc(20 / 16 * 1rem); height: calc(20 / 16 * 1rem);}
+.txt-btn01[class^="txt-btn"][class*="-lg"]:after {width: calc(24 / 16 * 1rem); height: calc(24 / 16 * 1rem);}
+.txt-btn01:after {content: ""; display: inline-block; background: url(../../images/icon/icon_arrow_right_bl.svg) no-repeat center center / contain; position:absolute; right: 0; top:50%; transform: translateY(-50%);}
+.txt-btn01.disabled:after  {background-image: url(../../images/icon/icon_arrow_right_gr.svg);}
+.txt-btn02 {position: relative; padding-right: 0 !important;}
+.txt-btn02[class^="txt-btn"][class*="-sm"] {padding-bottom: calc(6 / 16 * 1rem);}
+.txt-btn02[class^="txt-btn"][class*="-md"] {padding-bottom: calc(8 / 16 * 1rem);}
+.txt-btn02[class^="txt-btn"][class*="-lg"] {padding-bottom: calc(8 / 16 * 1rem);}
+.txt-btn02:after {content:""; display:inline-block; width:100%; height: 1px; background-color: var(--colorElement-light-stroke-stroke-default00); position:absolute; left:0; bottom:0;}
+.txt-btn02.disabled:after {background-color: var(--colorElement-light-stroke-stroke-disabled);}
+
+/* action btn */
+[class^="act-btn"] {color: var(--colorElement-light-text-text-on-primary); font-weight: 500; position: relative; border-radius: calc(100 / 16 * 1rem); min-width: calc(120 / 16 * 1rem); text-align: center;}
+[class^="act-btn"][class*="-xs"] {font-size: calc(16 / 16 * 1rem); line-height: calc(22.4 / 16 * 1rem); padding: calc(6 / 16 * 1rem) calc(16 / 16 * 1rem); height: calc(36 / 16 * 1rem);}
+[class^="act-btn"][class*="-sm"] {font-size: calc(18 / 16 * 1rem); line-height: calc(25.2 / 16 * 1rem); padding: calc(6 / 16 * 1rem) calc(24 / 16 * 1rem); height: calc(42 / 16 * 1rem);}
+[class^="act-btn"][class*="-md"] {font-size: calc(20 / 16 * 1rem); line-height: calc(22.4 / 16 * 1rem); padding: calc(6 / 16 * 1rem) calc(24 / 16 * 1rem); height: calc(56 / 16 * 1rem);}
+[class^="act-btn"][class*="-lg"] {font-size: calc(22 / 16 * 1rem); line-height: calc(30.8 / 16 * 1rem); padding: calc(6 / 16 * 1rem) calc(32 / 16 * 1rem); height: calc(64 / 16 * 1rem);}
+.btn-primary01 {background-color: var(--colorElement-light-fill-fill-default00);}
+.btn-primary01.disabled, .btn-primary01:disabled {background-color: var(--colorElement-light-fill-fill-disabled);}
+.btn-primary02 {background-color: var(--colorElement-light-fill-fill-primary);}
+.btn-primary02.disabled, .btn-primary02:disabled {background-color: #ADECF2;} /* 토큰키값으로 컬러코드 수정 필요 : (variables.scss)에 update 되어있지않아 추후 수정예정 */
+/* outline btn */
+.btn-outline01 {color:var(--colorElement-light-text-text-default01); border:1px solid var(--colorElement-light-stroke-stroke-default00);}
+.btn-outline01.disabled, .btn-outline01:disabled {border-color:var(--colorElement-light-stroke-stroke-disabled); color:var(--colorElement-light-text-text-disabled);}
+.btn-outline02 {color:var(--colorElement-light-text-text-primary); border:1px solid var(--colorElement-light-stroke-stroke-primary);}
+.btn-outline02.disabled, .btn-outline02:disabled {border-color:#ADECF2; color:var(--colorElement-light-primary-primary-disabled);} /* 토큰키값으로 컬러코드 수정 필요 : (variables.scss)에 update 되어있지않아 추후 수정예정 */
+.btn-outline03 {color:var(--colorElement-light-text-text-on-primary); border:1px solid var(--colorElement-light-stroke-stroke-on-primary);}
+.btn-outline03.disabled, .btn-outline03:disabled {border-color:var(--colorElement-light-stroke-stroke-default02); color:var(--colorElement-light-text-text-default03);} /* 토큰키값으로 컬러코드 수정 필요 : (variables.scss)에 update 되어있지않아 추후 수정예정  */
+
+/* form */
+.wrap-form-box {display:flex; gap:calc(12 / 16 * 1rem);}
+.wrap-form-box.horizontal {flex-direction: column;}
+/* checkbox, radio 공통 */
+.checkbox input[type="checkbox"] + label,
+.radio input[type="radio"] + label {display: flex; gap:calc(8 / 16 * 1rem); align-items: center;}
+/* checkbox */
+.checkbox input[type="checkbox"] + label .custom-checkbox {width: calc(24 / 16 * 1rem); height: calc(24 / 16 * 1rem); border: 2px solid var(--colorElement-light-stroke-stroke-default03); border-radius: calc(4 / 16 * 1rem); position: relative;} 
+.checkbox input[type="checkbox"]:checked + label .custom-checkbox {background-color: var(--colorElement-light-fill-fill-default00); border-color: var(--colorElement-light-stroke-stroke-default00);}
+.checkbox input[type="checkbox"]:checked + label .custom-checkbox::after {content:""; display:block; width: calc(20 / 16 * 1rem); height: calc(20 / 16 * 1rem); background: url(../../images/icon/icon_check_wh.svg) no-repeat center center / contain; position:absolute; left:calc(0 / 16 * 1rem); top:calc(0 / 16 * 1rem);}
+.checkbox input[type="checkbox"]:disabled + label .custom-checkbox,
+.checkbox input[type="checkbox"].disabled + label .custom-checkbox {background-color: var(--colorElement-light-fill-fill-disabled); border-color: var(--colorElement-light-stroke-stroke-default03);}
+.checkbox input[type="checkbox"]:checked:disabled + label .custom-checkbox,
+.checkbox input[type="checkbox"]:checked.disabled + label .custom-checkbox {background-color: var(--colorElement-light-fill-fill-disabled); border-color: var(--colorElement-light-stroke-stroke-default03);}
+.checkbox input[type="checkbox"] + label .txt {font-size: calc(16 / 16 * 1rem); font-weight: 400; line-height: calc(22.4 / 16 * 1rem); color: var(--colorElement-light-text-text-default01);}
+/* radio */
+.radio input[type="radio"] + label .custom-radio {display:inline-block; width: calc(24 / 16 * 1rem); height: calc(24 / 16 * 1rem); border: 2px solid var(--colorElement-light-stroke-stroke-default03); border-radius: 50%; position: relative;} 
+.radio input[type="radio"]:checked + label .custom-radio {background-color: var(--colorElement-light-fill-fill-default00); border-color: var(--colorElement-light-stroke-stroke-default00);}
+.radio input[type="radio"]:checked + label .custom-radio::after {content:""; display:block; width: calc(10 / 16 * 1rem); height:calc(10 / 16 * 1rem); background: url(../../images/icon/icon_radio_wh.svg) no-repeat center center / contain; position:absolute; left:calc(5 / 16 * 1rem); top:calc(5 / 16 * 1rem);}
+.radio input[type="radio"]:disabled + label .custom-radio,
+.radio input[type="radio"].disabled + label .custom-radio{background-color:var(--colorElement-light-fill-fill-default03);}
+.radio input[type="radio"]:checked:disabled + label .custom-radio,
+.radio input[type="radio"]:checked.disabled + label .custom-radio {background-color: var(--colorElement-light-fill-fill-disabled); border-color: var(--colorElement-light-stroke-stroke-default03);}
+.radio input[type="radio"]:checked:disabled + label .custom-radio::after,
+.radio input[type="radio"]:checked.disabled + label .custom-radio::after {background:url( ../../images/icon/icon_radio_gr.svg);}
+.radio input[type="radio"] + label .txt {font-size: calc(16 / 16 * 1rem); font-weight: 400; line-height: calc(22.4 / 16 * 1rem); color: var(--colorElement-light-text-text-default01);}

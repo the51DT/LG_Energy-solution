@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px) {
+    /* button */
+    [class^="txt-btn"][class*="-sm"] {font-size: calc(14 / 16 * 1rem); line-height: calc(19.6 / 16 * 1rem); padding-right: calc(24 / 16 * 1rem);}
+    [class^="txt-btn"][class*="-md"] {font-size: calc(16 / 16 * 1rem); line-height: calc(22.4 / 16 * 1rem); padding-right: calc(26 / 16 * 1rem);}
+    [class^="txt-btn"][class*="-lg"] {font-size: calc(18 / 16 * 1rem); line-height: calc(25.2 / 16 * 1rem); padding-right: calc(28 / 16 * 1rem);}
+    .txt-btn01[class^="txt-btn"][class*="-sm"]:after {width: calc(16 / 16 * 1rem); height: calc(16 / 16 * 1rem);}
+    .txt-btn01[class^="txt-btn"][class*="-md"]:after {width: calc(18 / 16 * 1rem); height: calc(18 / 16 * 1rem);}
+    .txt-btn01[class^="txt-btn"][class*="-lg"]:after {width: calc(20 / 16 * 1rem); height: calc(20 / 16 * 1rem);}
+
+    [class^="act-btn"][class*="-xs"] {font-size: calc(13 / 16 * 1rem); line-height: calc(18.2 / 16 * 1rem); height: calc(28 / 16 * 1rem); min-width: revert;}
+    [class^="act-btn"][class*="-sm"] {font-size: calc(14 / 16 * 1rem); line-height: calc(19.6 / 16 * 1rem); height: calc(36 / 16 * 1rem); min-width: calc(100 / 16 * 1rem); max-width: calc(320 / 16 * 1rem);}
+    [class^="act-btn"][class*="-md"] {font-size: calc(16 / 16 * 1rem); line-height: calc(22.4 / 16 * 1rem); height: calc(46 / 16 * 1rem); min-width: calc(100 / 16 * 1rem); max-width: calc(320 / 16 * 1rem);}
+    [class^="act-btn"][class*="-lg"] {font-size: calc(18 / 16 * 1rem); line-height: calc(25.2 / 16 * 1rem); height: calc(56 / 16 * 1rem); min-width: calc(100 / 16 * 1rem); max-width: calc(320 / 16 * 1rem);}
+
+    /* checkbox */
+    .checkbox input[type="checkbox"] + label .custom-checkbox {width: calc(20 / 16 * 1rem); height: calc(20 / 16 * 1rem); border: 2px solid var(--colorElement-light-stroke-stroke-default03); border-radius: calc(2 / 16 * 1rem); position: relative;} 
+    .checkbox input[type="checkbox"]:checked + label .custom-checkbox::after {width: calc(18 / 16 * 1rem); height: calc(18 / 16 * 1rem);}
+    .checkbox input[type="checkbox"] + label .txt {font-size: calc(14 / 16 * 1rem);}
+    /* radio */
+    .radio input[type="radio"] + label .custom-radio {width: calc(20 / 16 * 1rem); height: calc(20 / 16 * 1rem);} 
+    .radio input[type="radio"]:checked + label .custom-radio::after {left:calc(3 / 16 * 1rem); top:calc(3 / 16 * 1rem);}
+    .radio input[type="radio"] + label .txt {font-size: calc(14 / 16 * 1rem);}
+}
