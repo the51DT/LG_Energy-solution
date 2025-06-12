@@ -57,9 +57,9 @@ pathApp.setUrl = function () {
 
     if (link !== "") {
       const anchor = document.createElement("a");
-      anchor.href = "../html/" + link;
-      anchor.target = "_blank";
-      anchor.rel = "noopener";
+      anchor.href = "../public/src/pages/" + link;
+      // anchor.target = "_blank";
+      // anchor.rel = "noopener";
       anchor.textContent = link;
 
       // 기존 span 내용을 비우고 a 태그 삽입
@@ -230,26 +230,26 @@ pathApp.initLineEvent = function () {
   const $hoverElement = document.querySelectorAll(".pathTbl tbody th, .pathTbl tbody td");
 
   // URL 링크 클릭 이벤트
-  $urlLinks.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
+  // $urlLinks.forEach(link => {
+  //   link.addEventListener("click", function (e) {
+  //     e.preventDefault();
 
-      // 현재 링크의 조부모(tr)의 자식들
-      const row = link.closest("tr");
-      const $activeCells = row ? Array.from(row.children) : [];
+  //     // 현재 링크의 조부모(tr)의 자식들
+  //     const row = link.closest("tr");
+  //     const $activeCells = row ? Array.from(row.children) : [];
 
-      // 모든 hover 대상에서 style 제거
-      $hoverElement.forEach(elem => elem.removeAttribute("style"));
+  //     // 모든 hover 대상에서 style 제거
+  //     $hoverElement.forEach(elem => elem.removeAttribute("style"));
 
-      // 해당 행에 배경색 적용
-      $activeCells.forEach(cell => {
-        cell.style.backgroundColor = "#f2f2f2";
-      });
+  //     // 해당 행에 배경색 적용
+  //     $activeCells.forEach(cell => {
+  //       cell.style.backgroundColor = "#f2f2f2";
+  //     });
 
-      // 모든 URL 링크에서 style 제거
-      $urlLinks.forEach(l => l.removeAttribute("style"));
-    });
-  });
+  //     // 모든 URL 링크에서 style 제거
+  //     $urlLinks.forEach(l => l.removeAttribute("style"));
+  //   });
+  // });
 
   // hover 효과 처리
   $hoverElement.forEach(elem => {

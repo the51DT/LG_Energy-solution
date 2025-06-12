@@ -1,31 +1,11 @@
 @charset "utf-8";
 
 /* Font */
-@font-face {
-  font-family: "ng";
-  src: url("../font/NanumBarunGothic.eot");
-  src: local(※),
-    url("../font/NanumBarunGothic.eot?#iefix") format("embedded-opentype"),
-    url("../font/NanumBarunGothic.woff") format("woff"),
-    url("../font/NanumBarunGothic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ngB";
-  src: url("../font/NanumBarunGothicBold.eot");
-  src: local(※),
-    url("../font/NanumGothicBold.eot?#iefix") format("embedded-opentype"),
-    url("../font/NanumGothicBold.woff") format("woff"),
-    url("../font/NanumGothicBold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url(../../../public/inc/css/font.css);
 
 html,
 body {
-  font-family: ng, Arial, Dotum sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-size: 14px;
   color: #666;
 }
@@ -150,7 +130,7 @@ a:hover {
   width: 100%;
   overflow-y: auto;
   height: 100vh;
-  font-family: ng, Arial, Dotum sans-serif;
+  font-family: "Pretendard", sans-serif;
 }
 header {
   position: sticky;
@@ -226,8 +206,6 @@ header {
   border-bottom: 2px solid #000;
 }
 
-.pathNavMenu > ul {
-}
 .pathNavMenu > ul > li {
   margin-bottom: 5px;
   display: inline-block;
@@ -268,7 +246,7 @@ header {
 .pathNavMenu .allMenu,
 .pathNavMenu .menu {
   font-size: 14px;
-  font-family: ngB;
+  font-family: "Pretendard", sans-serif;
   color: #000;
 }
 .pathNavMenu .menu .countWrap .progress {
@@ -319,7 +297,7 @@ header {
 .pathList .pathTbl .dep1 {
   padding-top: 15px;
   vertical-align: top;
-  font-family: ngB;
+  font-family: "Pretendard", sans-serif;
 }
 /* .pathList .pathTbl .dep2,
 .pathList .pathTbl .dep3,
@@ -369,7 +347,7 @@ header {
 /* Guide */
 #guideHeader h1 {
   margin-left: 30px;
-  font-family: ngB;
+  font-family: "Pretendard", sans-serif;
   font-size: 20px;
   color: #fff;
 }
@@ -387,7 +365,7 @@ header {
 }
 .guideTit {
   padding-left: 15px;
-  font-family: ngB;
+  font-family: "Pretendard", sans-serif;
   font-size: 26px;
   color: #000;
   display: flex;

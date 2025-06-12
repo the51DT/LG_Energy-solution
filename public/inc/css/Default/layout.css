@@ -1,0 +1,23 @@
+.skip-navigation{display: none;}
+.wrap.cyanogen{
+    overflow:hidden;
+    height: 100%;
+    width:100%;
+}
+
+.content-wrap{
+    height:calc(100% - 6.25rem);
+    overflow-y: auto;;    
+}
+
+/* .content-header{position:relative;} */
+.content-header_bg{background-color: #000;}
+.page-map-wrap{position:sticky;top:0px; background-color: yellow;margin-top:-20px; width:80%;}
+.page-map-wrap > ul{display:flex;}
+.page-map-wrap ul.page-map{display:none;}
+.content-area-head-tab{position:sticky;top:20px;background-color: gray;}
+
+
+.content-item01{background:#000}
+.content-item02{background:#218927}
+.content-item03{background:#658733}
