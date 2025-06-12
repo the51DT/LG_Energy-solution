@@ -61,3 +61,36 @@
 .radio input[type="radio"]:checked:disabled + label .custom-radio::after,
 .radio input[type="radio"]:checked.disabled + label .custom-radio::after {background:url( ../../images/icon/icon_radio_gr.svg);}
 .radio input[type="radio"] + label .txt {font-size: calc(16 / 16 * 1rem); font-weight: 400; line-height: calc(22.4 / 16 * 1rem); color: var(--colorElement-light-text-text-default01);}
+/* input */
+.wrap-form-input {display:flex; gap:calc(8 / 16 * 1rem); flex-direction: column;}
+.wrap-form-input .input-wrap {display:flex; align-items: center; position:relative;}
+.wrap-form-input .input-wrap .btn-input-del {display: none; width:24px; height:24px; position:absolute; top: 50%; right: 0; transform: translateY(-50%); background: #fff url(../../images/icon/icon_input_del.svg) no-repeat center / 100% auto;}
+.wrap-form-input .input-box {font-size: calc(18 / 16 * 1rem); font-weight: 400; line-height: calc(28.8 / 16 * 1rem); color:var(--colorElement-light-text-text-default02); height: calc(64 / 16 * 1rem);  width: 100%; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03); padding-right: calc(32 / 16 * 1rem); position:relative;}
+.wrap-form-input .input-box:not(:read-only):focus,
+.wrap-form-input .input-box:not(:read-only):active {color:var(--colorElement-light-text-text-default01); width:100%; border-bottom: 2px solid var(--colorElement-light-stroke-stroke-default00);}
+.wrap-form-input .input-info .msg {color:var(--colorElement-light-text-text-default03); font-size: calc(13 / 16 * 1rem); line-height: calc(20.8 / 16 * 1rem); font-weight:400;}
+.wrap-form-input .input-info.status .msg {position: relative; padding-left: 22px;}
+.wrap-form-input .input-info.status .msg::before {content:""; display:inline-block; width:calc(18 / 16 * 1rem); height:calc(18 / 16 * 1rem);  position:absolute; top:-2px; left:0; }
+.wrap-form-input .input-box:read-only {color: var(--colorElement-light-text-text-default03);}
+.wrap-form-input.disabled .input-box:disabled,
+.wrap-form-input.disabled .input-box:disabled:focus,
+.wrap-form-input.disabled .input-box:disabled:active {color: var(--colorElement-light-text-text-disabled); border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: #fff;}
+.wrap-form-input.disabled .input-info .msg {color:var(--colorElement-light-text-text-disabled);}
+.wrap-form-input.err .input-info.status .msg {color:var(--colorElement-light-critical-critical-enabled);}
+.wrap-form-input.err .input-info.status .msg::before {background:url(../../images/icon/icon_msg_err.svg) no-repeat center / contain;}
+.wrap-form-input.err .input-box {border-bottom: 2px solid var(--colorElement-light-critical-critical-enabled);}
+.wrap-form-input.suc .input-info.status .msg {color:var(--colorElement-light-success-success-enabled);}
+.wrap-form-input.suc .input-info.status .msg::before {background:url(../../images/icon/icon_msg_chk.svg) no-repeat center / contain;}
+.wrap-form-input.suc .input-box {border-bottom: 2px solid var(--colorElement-light-success-success-enabled);}
+
+/* .wrap-form-input.filebox input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0;} */
+.wrap-form-input.filebox .input-box {padding-right: calc(130 / 16 * 1rem);}
+.wrap-form-input.filebox .input-box:read-only {color: var(--colorElement-light-text-text-default03);}
+.wrap-form-input.filebox .input-box:disabled {color: var(--colorElement-light-text-text-disabled); border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: #fff;}
+.wrap-form-input.filebox .input-box:disabled + .btn-wrap > .btn-file-attach {color: var(--colorElement-light-text-text-disabled); border: 1px solid var(--colorElement-light-stroke-stroke-disabled);}
+.wrap-form-input.filebox .btn-file-attach {position: absolute; right: 0; top: 50%; transform: translateY(-50%);}
+.wrap-form-input.filebox .input-wrap.type2 {border: 1px solid var(--colorElement-light-stroke-stroke-default03); border-radius: calc(4 / 16 * 1rem); height: 100%; padding:calc(16 / 16 * 1rem) calc(130 / 16 * 1rem) calc(120 / 16 * 1rem) calc(24 / 16 * 1rem);}
+.wrap-form-input.filebox .input-wrap.type2 .btn-file-attach {top: 36px; right:24px;}
+.wrap-form-input.filebox .input-wrap.type2 .input-box {border: none; padding: 0; width: 100%; height: calc(36 / 16 * 1rem); background-color: transparent;}
+.wrap-form-input.filebox .input-wrap.type2 .input-box:focus,
+.wrap-form-input.filebox .input-wrap.type2 .input-box:active {border: none; color: var(--colorElement-light-text-text-default01); background-color: transparent;}

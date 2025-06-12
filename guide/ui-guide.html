@@ -537,7 +537,7 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">1. Form: Title</h3>
+              <h3 class="guideSubTit">3. Form: Title</h3>
               <div class="ui-item">
                 <div class="wrap-form label-tit">
                   <label for="username">
@@ -557,10 +557,56 @@
             </div>
             <!--  -->
             <div class="subSection">
-              <h3 class="guideSubTit">2. Form: input</h3>
-              <div class="ui-item">
+              <h3 class="guideSubTit">4. Form: input - Default</h3>
+              <div class="ui-item">                
+                <div class="wrap-form-input">                
+                  <div class="input-wrap">
+                    <input type="text" class="input-box" placeholder="내용을 입력하세요" />
+                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
+                  </div>
+                  <div class="input-info">
+                    <span class="msg">부가 설명을 입력하세요</span>
+                  </div>
+                </div>
+                <!-- readonly 케이스 -->
                 <div class="wrap-form-input">
-                  <input type="text" placeholder="텍스트" />
+                  <div class="input-wrap">
+                    <input type="text" class="input-box" placeholder="내용을 입력하세요" readonly />
+                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
+                  </div>
+                  <div class="input-info">
+                    <span class="msg">부가 설명을 입력하세요</span>
+                  </div>
+                </div>
+                <!-- disabled 케이스 -->
+                <div class="wrap-form-input disabled"><!-- disabled 클래스 추가 필요 -->
+                  <div class="input-wrap">
+                    <input type="text" class="input-box" placeholder="내용을 입력하세요" disabled />
+                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
+                  </div>
+                  <div class="input-info">
+                    <span class="msg">부가 설명을 입력하세요</span>
+                  </div>
+                </div>
+                <!-- error 케이스 -->
+                <div class="wrap-form-input err"><!-- err 클래스 추가 필요 -->          
+                  <div class="input-wrap">
+                    <input type="text" class="input-box" placeholder="내용을 입력하세요" />
+                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
+                  </div>
+                  <div class="input-info status">
+                    <span class="msg">에러메세지를 입력하세요</span>
+                  </div>
+                </div>
+                <!-- success 케이스 -->
+                <div class="wrap-form-input suc"><!-- suc 클래스 추가 필요 -->
+                  <div class="input-wrap">
+                    <input type="text" class="input-box" placeholder="내용을 입력하세요" />
+                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
+                  </div>
+                  <div class="input-info status"> <!-- 메세지 상태 존재시 status 클래스 추가 필요 -->
+                    <span class="msg">성공메세지를 입력하세요</span>
+                  </div>
                 </div>
 
                 <div class="wrap-form-group">
@@ -593,6 +639,75 @@
                   <!-- 비밀번호 숨김 시 on-->
                   <button type="button" class="password-hidden on" title="비밀번호 숨김"><span class="visually-hidden">비밀번호
                       숨김</span></button>
+                </div>
+
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+</pre>
+              </div>
+            </div>
+            <div class="subSection">
+              <h3 class="guideSubTit">5. Form: input - File Attatch</h3>
+              <div class="ui-item">
+
+                <div class="wrap-form-input filebox">
+                  <div class="input-wrap">
+                    <input class="input-box upload-name" value="파일첨부 (선택)" placeholder="파일첨부 (선택)">
+                    <div class="btn-wrap">
+                      <label for="file" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
+                      <input type="file" id="file" style="display: none;">
+                    </div>
+                  </div>
+                  <div class="input-info">
+                    <span class="msg">이미지는 최대 5개까지, 30KB 이하 크기만 첨부 가능합니다</span>
+                  </div>
+                </div>
+                <!-- disabled 케이스 -->
+                <div class="wrap-form-input filebox">
+                  <div class="input-wrap">
+                    <input class="input-box upload-name" value="파일첨부 (선택)" placeholder="파일첨부 (선택)" disabled>
+                    <div class="btn-wrap">
+                      <label for="file" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
+                      <input type="file" id="file"> <!-- style="display: none;" --> 
+                    </div>
+                  </div>
+                  <div class="input-info">
+                    <span class="msg">이미지는 최대 5개까지, 30KB 이하 크기만 첨부 가능합니다</span>
+                  </div>
+                </div>
+                <!-- Filled 케이스 -->
+                <div class="wrap-form-input filebox">
+                  <div class="input-wrap type2">
+                    <input class="input-box upload-name" value="파일첨부 (선택)" placeholder="파일첨부 (선택)">
+                    <div class="btn-wrap">
+                      <label for="file2" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
+                      <input type="file" id="file2" style="display: none;">
+                    </div>
+                  </div>
+                  <div class="input-info">
+                    <span class="msg">이미지는 최대 5개까지, 30KB 이하 크기만 첨부 가능합니다</span>
+                  </div>
+                </div>
+                <!-- error 케이스 -->
+                <div class="wrap-form-input err"><!-- err 클래스 추가 필요 -->          
+                  <div class="input-wrap">
+                    <input type="text" class="input-box" placeholder="내용을 입력하세요" />
+                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
+                  </div>
+                  <div class="input-info status">
+                    <span class="msg">에러메세지를 입력하세요</span>
+                  </div>
+                </div>
+                <!-- success 케이스 -->
+                <div class="wrap-form-input suc"><!-- suc 클래스 추가 필요 -->
+                  <div class="input-wrap">
+                    <input type="text" class="input-box" placeholder="내용을 입력하세요" />
+                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
+                  </div>
+                  <div class="input-info status"> <!-- 메세지 상태 존재시 status 클래스 추가 필요 -->
+                    <span class="msg">성공메세지를 입력하세요</span>
+                  </div>
                 </div>
 
               </div>
@@ -760,7 +875,56 @@
 
     // fadeEvent 함수 호출
     fadeEvent();
+    // 파일첨부박스 input 상태에 따른 파일첨부 버튼 disabled 처리
+    setTimeout(function(){
+      chkFileboxDisabled();
+    },3000)
+    
   });
+
+
+  function chkFileboxDisabled() {
+    const filebox = document.querySelectorAll('.filebox');
+  
+    filebox.forEach(function(box, index) {
+      const fileUploadName = box.querySelector('.upload-name');
+      const fileAttachBtn = box.querySelector('input[type=file]');
+      if (fileUploadName.disabled == true){
+        fileAttachBtn.classList.add('disabled');
+        fileAttachBtn.setAttribute('disabled', true)
+      } else {
+        fileAttachBtn.classList.remove('disabled');
+        fileAttachBtn.removeAttribute('disabled');
+        
+      }
+    });
+
+  }
+
+  // 파일 첨부 input 이벤트 리스너
+  // 파일 첨부 input의 change 이벤트를 감지하여 파일 이름을 표시
+  const fileInputs = document.querySelectorAll('input[type=file]')
+  const uploadName = document.querySelectorAll('.upload-name');
+
+  fileInputs.forEach(function(fileInput) {
+    fileInput.addEventListener('change', function(e) {
+      const fileName = this.files[0]?.name || '파일첨부 (선택)';     
+      e.target.closest(".input-wrap").querySelector('.upload-name').value = fileName;
+      e.target.closest(".input-wrap").querySelector('.upload-name').setAttribute('readonly', true);
+    });
+  });
+
+  // 파일 첨부 input을 클릭할 수 있는 label 요소에 이벤트 리스너 추가
+  // label 요소를 클릭하면 해당 input[type=file]을 클릭하도록 설정
+  uploadName.forEach( name => {
+    name.addEventListener('click', function() {
+      const fileInput = this.closest('.input-wrap').querySelector('input[type=file]');
+      if (fileInput) {
+        fileInput.click();
+      }
+    });
+  });
+
 
 </script>
 </html>

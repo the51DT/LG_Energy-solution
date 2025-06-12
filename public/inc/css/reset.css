@@ -110,6 +110,7 @@ input {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   vertical-align: middle;
+  border: 0;
 }
 
 select {
