@@ -15,7 +15,7 @@
   <div class="skip-navigation">
     <a href="#container">본문 바로가기</a>
   </div>
-  <div class="wrap cyanogen">
+  <div class="wrap sub_p cyanogen">
     <!-- header -->
     <header class="header-wrap">
       <div class="header-cont">
@@ -108,6 +108,7 @@
         <!-- content-item03 -->
         <div class="content-item03">
 					<Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br>
+					<Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br>
         </div>
         <!-- //content-item03 -->
       </div>
@@ -115,10 +116,31 @@
     <!-- // section -->
   </div>
 
-  <!-- <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script> -->
+  <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
   <!-- <script type="text/javascript" src="../../inc/js/swiper.min.js"></script> -->
   <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
-  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+  <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+	<!-- <script>
+		$(function(){
+			cont_h = $(".content-wrap").height();
+			$(".content-wrap").scroll(function(){
+				var head_h = $(".header-wrap").height(),
+						
+						cont_scroll = $(".content-wrap").scrollTop();
+				if(cont_scroll > 0 && cont_scroll <= head_h){
+					 $(".content-wrap").css("height", cont_h + cont_scroll)
+				}else{
+					$(".content-wrap").css("height", cont_h)
+					// console.log($(".content-wrap").scrollTop() *-1, head_h)
+					// $(".header-wrap").stop().animate({"top":"-6.25rem"})
+					// $(".content-wrap").stop().animate({"height":"calc(100% - 6.25rem)"})
+					// $(".content-wrap").addClass("scroll-down")
+				}
+			
+				
+			})
+		}) -->
+	<!-- </script> -->
 </body>
 
 </html>

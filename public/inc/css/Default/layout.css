@@ -1,14 +1,20 @@
 .skip-navigation{display: none;}
-.wrap.cyanogen{
-    overflow:hidden;
-    height: 100%;
-    width:100%;
-}
 
-.content-wrap{
-    height:calc(100% - 6.25rem);
+.wrap.cyanogen{
     overflow-y: auto;;    
 }
+
+
+/* 메인 페이지 */
+
+
+
+/* 서브 페이지 */
+
+
+/* 해더 */
+.header-wrap{position: relative;height:6.25rem;}
+
 
 /* .content-header{position:relative;} */
 .content-header_bg{background-color: #000;}
