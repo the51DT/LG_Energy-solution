@@ -1,0 +1,44 @@
+/* scroll, sticky 적용되지않아 초기화하였음 */
+body {overflow: auto;}
+.wrap.sub_p.cyanogen {overflow: revert;}
+
+.header-wrap {position: relative;}
+.header-cont {max-width: 1920px; margin: 0 auto; background: #fff;}
+.header-cont > img {width: 100%; height: 100%; object-fit: cover;}
+.header-cont .default-img {height: 100px;}
+.header-cont-active { background: #fff; border-top: 1px solid #C9CED1;  display: none;}
+.header-cont-active .active-img  {width:100%; max-width:1920px; height:329px; margin:0 auto; display: flex;}
+.header-wrap.on .header-cont-active {display:block;}
+
+.page-map-wrap {font-size: 20px; line-height: 30px; font-weight: 600; z-index: 50; padding: 25px 0; margin-top:-79px; width: 100%; background: transparent;  top:-1px;}
+.page-map-wrap.stuck {background:#fff;} /* sticky 붙었을경우 예외처리 클래스 */
+.page-map-wrap::before {content:''; width: 1360px; height: 80px; background-color: #fff; position: absolute; top: 0; left: 0;}
+.page-map-wrap:before + ul:not(.page-map) {position:absolute; top:0; left:0;}
+.page-map-wrap ul:not(.page-map) {max-width: 1440px; margin: 0 auto;}
+.page-map-wrap ul:not(.page-map) > li {position:relative; padding:0 24px; }
+.page-map-wrap ul:not(.page-map) > li:first-child {padding-left: 0;}
+.page-map-wrap ul:not(.page-map) > li:not(:first-child) button {min-width: 180px;}
+.page-map-wrap ul:not(.page-map) > li:not(:first-child) button::before {content: ''; display: block; width: 24px; height: 24px; background: url(../../inc/images/icon/icon_arrow_down.svg) no-repeat center center / contain; position: absolute; right: 24px; top: 50%; transform: translateY(-50%);}
+.page-map-wrap ul:not(.page-map) > li:not(:last-child)::after {content:''; width:1px; height:20px; background:#C9CED1; display: inline-block; position: absolute; right:0; top:50%; transform: translateY(-50%);}
+.page-map-wrap ul:not(.page-map) > li > a,
+.page-map-wrap ul:not(.page-map) > li > button {font-size: 20px; line-height: 30px; font-weight: 600; display: block; text-align: left;}
+.page-map-wrap ul:not(.page-map) > li > a > img {margin-top: 3px;}
+.page-map-wrap ul.page-map.on {display: block;}
+.page-map-wrap ul.page-map {padding: 24px; width: 200px; position: absolute; top:34px; left:0; border-radius: 16px; background: #fff; box-shadow: 10px 20px 40px 0px rgba(16, 16, 16, 0.10);}
+.page-map-wrap ul.page-map > li:not(:last-child) {padding-bottom: 20px;}
+.page-map-wrap ul.page-map > li > a {color: #858889; font-size: calc(18 / 16 * 1rem); font-weight: 400; line-height: calc(28.8 / 16 * 1rem);}
+.page-map-wrap ul.page-map > li > a.active,
+.page-map-wrap ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
+
+.content-header {max-width: 1440px; margin: 0 auto; padding:100px 0 60px;}
+.content-header .subp-tit {color:#171819; font-size: 32px; font-weight: 600; line-height: 48px;}
+.content-area-head-tab {background-color: #fff; top: 79px; border-bottom: 1px solid #c9ced1;}
+.content-area-head-tab > .tab-category {display: flex; align-items: center; gap: 60px; max-width: 1440px; height: 60px; margin: 0 auto;}
+.content-area-head-tab > .tab-category > li button {font-size: 20px; line-height: 30px; font-weight: 500; color: #707273; position:relative; padding:16px 0;}
+.content-area-head-tab > .tab-category > li.on button  {color:#171819; font-weight: 600;}
+.content-area-head-tab > .tab-category > li.on button:after {content: ''; height: 4px; width: 100%; display:inline-block; background-color:#121212; position: absolute; bottom:0; left:0;}
+
+.content-item01 {max-width: 1440px; margin: 0 auto;}
+.content-item01 .tab-content-box {padding: 80px 0 220px;}
+.content-item01 .tab-content-box .tab-content {display: none;  text-align: center; font-size: 24px; font-weight: 600; line-height: 36px;}
+.content-item01 .tab-content-box .tab-content.on {display: block;}
