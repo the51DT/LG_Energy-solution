@@ -77,5 +77,5 @@ ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
 .map-info .map-info-list .map-info-item > li.active > a {background-color:#3ec2cf; color:#fff;}
 .map-info .map-info-content-box {position:absolute; top:0; right:-9999px; width:420px; height:860px; padding:40px; background:#fff; box-shadow: -4px 0px 20px 0px rgba(0, 0, 0, 0.10); backdrop-filter: blur(3px);}
 .map-info .map-info-content-box .btn-close {width:28px; height:28px; display:block;}
-.map-info.on .map-info-content-box {right:0; transition: 0.5s linear;}
+.map-info.on .map-info-content-box {right:0; transition: 0.3s linear;}
 .map-info.on .map-info-list {right:420px; transition: 0.3s linear;}
