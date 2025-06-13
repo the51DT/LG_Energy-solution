@@ -1,8 +1,7 @@
 
 // pubUi
 var pubUi = {
-    init: function () {        
-
+    init: function () {            
         pubUi.bindEvents();
         pubUi.tabCateEvt();
         pubUi.exceptionStickyEvt();
@@ -12,6 +11,26 @@ var pubUi = {
         const headerWrap = document.querySelector(".header-wrap");
         const pageMap = document.querySelectorAll(".page-map");
         const mapCateBtn = document.querySelectorAll(".map-cate button");
+        
+        const networkMap = document.querySelector(".map-conts-area");
+        const networkMapInfo = networkMap.querySelector(".map-info");
+        const mapInfoCate = networkMapInfo.querySelector(".map-cate");
+        const mapInfoItem = networkMapInfo.querySelectorAll(".map-info-item > li > a");
+        const mapInfoCont = networkMapInfo.querySelector(".map-info-content-box");
+        const mapImg = networkMap.querySelector(".map-img");        
+        const mapMarking = networkMap.querySelector(".map-img .active_img .active_mark");
+
+        mapInfoItem.forEach(item => {
+            item.addEventListener("click", function(e){
+                e.currentTarget.classList.add("active");
+                networkMapInfo.classList.add("on");
+                mapImg.classList.add("on");
+                setInterval(function(){
+                    mapMarking.style.display="block";
+                },1000)
+                
+            })
+        })
 
         headerWrap.addEventListener("click", function () {
             if (headerWrap.classList.contains("on")) {

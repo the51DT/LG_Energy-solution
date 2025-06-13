@@ -22,7 +22,7 @@
 .content-header_bg{background-color: #000;}
 .page-map-wrap{position:sticky;top:0px; background-color: yellow;margin-top:-20px; width:80%;}
 .page-map-wrap > ul{display:flex;}
-.page-map-wrap ul.page-map{display:none;}
+ul.page-map{display:none;}
 .content-area-head-tab{position:sticky;top:20px;background-color: gray;}
 
 
