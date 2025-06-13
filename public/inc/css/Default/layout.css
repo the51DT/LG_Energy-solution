@@ -8,16 +8,27 @@
 
 
 /* 메인 페이지 */
+.main_p .header-wrap{
+    
+}
 
-
-
+.gnb__tab-btn-wrap ul{display: none;}
 /* 서브 페이지 */
 
 
 /* 해더 */
-.header-wrap{position: relative;height:6.25rem;}
+.header-wrap{position: relative;height:6.25rem;display:flex;max-width:120rem;padding:0 3.75rem;align-items: center; justify-content: space-between;margin:0 auto;}
+.header-cont{width:100%;display:flex;align-items: center; justify-content: space-between;}
+.header-item .sitemap-wrap{}
+.gnb__tab-btn-wrap{display:flex;gap:5.25rem;}
+.gnb__tab-btn-wrap .depth01 > a {color: var(--text-text-default-01);font-family: var(--family-Head);font-size: var(--size-desktop-H5);font-weight: 500;line-height: var(--line-height-desktop-H5, 1.875rem);letter-spacing: var(--letter-spacing-default, 0rem);}
 
-
+.utile-cont{display:flex;align-items: center; gap:2rem;}
+.search-btn{width: 1.75rem;height: 1.75rem;background-image:url(../../images/icon/icon_head_search.svg);}
+.nav-btn{width: 2.25rem;height: 2.25rem;padding:5px;position:relative;display:flex;justify-content: center;align-items:flex-end;flex-direction:column;gap:.25rem;}
+.nav-btn .line{display:block;width:100%;height:2px;border-radius:2px;background-color:#000;}
+.nav-btn .line:last-of-type{width:60%;}
+.nav-btn .x-line{display: none;;}
 /* .content-header{position:relative;} */
 .content-header_bg{background-color: #000;}
 .page-map-wrap{position:sticky;top:0px; background-color: yellow;margin-top:-20px; width:80%;}
