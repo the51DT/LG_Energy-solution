@@ -38,7 +38,11 @@ body {overflow: auto;}
 .content-area-head-tab > .tab-category > li.on button  {color:#171819; font-weight: 600;}
 .content-area-head-tab > .tab-category > li.on button:after {content: ''; height: 4px; width: 100%; display:inline-block; background-color:#121212; position: absolute; bottom:0; left:0;}
 
-.content-item01 {max-width: 1440px; margin: 0 auto;}
-.content-item01 .tab-content-box {padding: 80px 0 220px;}
-.content-item01 .tab-content-box .tab-content {display: none;  text-align: center; font-size: 24px; font-weight: 600; line-height: 36px;}
-.content-item01 .tab-content-box .tab-content.on {display: block;}
+.content-article {max-width: 1440px; margin: 0 auto; padding: 80px 0 220px;}
+.tab-content-box .tab-content {display: none;  text-align: center; font-size: 24px; font-weight: 600; line-height: 36px;}
+.tab-content-box .tab-content.on {display: block;}
+
+.map-conts-area {display:flex; width: 100%;}
+.map-conts-area .map-info {}
+.map-conts-area .map-info .map-info-select-box {}
+.map-conts-area .map-info .map-info-content-box {display: none;}
