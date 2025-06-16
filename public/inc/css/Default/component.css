@@ -1,3 +1,7 @@
+/* icon */
+.select-btn-right-icon{display:block;position:absolute;transform: translateY(-50%); right:0; top:50%;}
+
+
 /* button */
 /* text btn / line btn */
 [class^="txt-btn"] {color: var(--colorElement-light-text-text-default01); font-weight: 500; position: relative;}
