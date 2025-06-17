@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function($) {
     var eventbtn = $(".nav-btn"),
         eventCont = $(".nav-wrap"),
         eventParent = $(".header-wrap"),
@@ -28,15 +28,7 @@ $(function(){
         };
     });
 
-    $(".wrap.main_p").on("scroll", function(){
-        if($(this).scrollTop() > 100){
-            eventParent.addClass("scroll-on");
-            $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI.svg")
-        }else{
-            eventParent.removeClass("scroll-on");
-            $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI_wh.svg")
-        }
-    })
+
 
     $(".content-item04 .more").on("click", function(){
         var eventBtn = $(this)
@@ -85,4 +77,122 @@ $(function(){
             
     })
     
+    var cont_top01 = $('.content-item01').offset().top,
+        cont_top02 = $('.content-item02').offset().top,
+        cont_top03 = $('.content-item03').offset().top,
+        cont_top04 = $('.content-item04').offset().top,
+        cont_top05 = $('.content-item05').offset().top,
+        cont_top06 = $('.content-item06').offset().top,
+        cont_top07 = $('.content-item07').offset().top;
+
+    $(".wrap.main_p").on("scroll", function(){
+        var nowScroll = $(this).scrollTop(),
+            page_h = $(window).height();
+        if(nowScroll > 100){
+            eventParent.addClass("scroll-on");
+            $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI.svg")
+        }else{
+            
+            eventParent.removeClass("scroll-on");
+            $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI_wh.svg")
+        }
+        if(nowScroll > page_h){
+            console.log(page_h)
+            $("aside").fadeIn(500);
+        }else {
+            $("aside").hide();
+        }
+        console.log(cont_top01 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top02 - (page_h * 0.4))
+        if(cont_top01 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top02){
+            if(!$('.content-item01').hasClass("scroll-on")){
+                countUp();
+            }
+            $('.content-item01').addClass("scroll-on")
+        }else if(cont_top02 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top03 - (page_h * 0.4)){
+            $('.content-item02').addClass("scroll-on")
+        }else if(cont_top03 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top04 - (page_h * 0.4)){
+            $('.content-item03').addClass("scroll-on")
+        }else if(cont_top04 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top05 - (page_h * 0.4)){
+            $('.content-item04').addClass("scroll-on")
+        }else if(cont_top05 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top06 - (page_h * 0.4)){
+            $('.content-item05').addClass("scroll-on")
+        }else if(cont_top06 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top07 - (page_h * 0.4)){
+            $('.content-item06').addClass("scroll-on")
+        }
+
+        // if(nowScroll )
+    });
+    $("aside").on("click",function(){
+        $(".wrap.main_p").stop().animate({"scrollTop":0},300)
+    });
+    function countUp() {
+        var start = 0,
+        end1 = 25.6,
+        end2 = 1.1,
+        end3 = 32071,
+        end4 = 69631,
+        end5 = 4527;
+        $({ val : start }).animate({ val : end1 }, {
+            duration: 1000,
+            step: function() {
+                var num = numberWithCommas(this.val.toFixed(1));
+                $(".count").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(this.val.toFixed(1));
+                $(".count").text(num);
+            }
+        });
+
+        $({ val : start }).animate({ val : end2 }, {
+            duration: 1000,
+            step: function() {
+                var num = numberWithCommas(this.val.toFixed(1));
+                $(".count2").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(this.val.toFixed(1));
+                $(".count2").text(num);
+            }
+        });
+        $({ val : start }).animate({ val : end3 }, {
+            duration: 1000,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count3").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count3").text(num);
+            }
+        });
+        $({ val : start }).animate({ val : end4 }, {
+            duration: 1000,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count4").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count4").text(num);
+            }
+        });
+        $({ val : start }).animate({ val : end5 }, {
+            duration: 1000,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count5").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count5").text(num);
+            }
+        });
+    }
+    
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
 });
