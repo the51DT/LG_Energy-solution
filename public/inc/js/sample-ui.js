@@ -151,8 +151,8 @@ var pubUi = {
         const yearTermLinks = Array.from(document.querySelectorAll(".year-term-container .year-item-list > a"));
 
         const yearClickIndex = {};
-        let lastClickedRange = null;
-        let isFirstClick = true;
+        let lastClickedRange = null; //lastClickedRange : 클릭한 년도 범위 체크용 변수
+        let isFirstClick = true; // terms-container 처음 클릭체크 여부 변수
 
         function parseYearRange(rangeStr) {
             const [start, end] = rangeStr.split("~").map((s) => parseInt(s.trim(), 10));
@@ -176,9 +176,43 @@ var pubUi = {
             return next < leftItems.length ? next : null;
         }
         
+        // 부드러운 숫자 카운트 + pop 애니메이션
+        function animateNumber(el, target, duration = 800) {
+            let start = parseInt(el.innerText, 10);
+            if (isNaN(start)) start = 0;
+
+            // 동일 숫자여도 시각적으로 애니메이션 주기 위해 강제로 1 차이 두고 시작
+            if (start === target) start = target - 1;
+
+            const frameRate = 1000 / 60; // 약 60fps
+            const totalFrames = Math.round(duration / frameRate);
+            let frame = 0;
+
+            const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+            const counter = setInterval(() => {
+                frame++;
+                const progress = easeOut(frame / totalFrames);
+                const current = Math.round(start + (target - start) * progress);
+
+                el.innerText = current.toString().padStart(2, "0");
+
+                if (frame === 1) {
+                    el.classList.add("num-pop"); // ✨ pop 애니메이션 추가
+                    setTimeout(() => el.classList.remove("num-pop"), 300);
+                }
+
+                if (frame >= totalFrames) {
+                    clearInterval(counter);
+                    el.innerText = target.toString().padStart(2, "0");
+                }
+            }, frameRate);
+        }
+
         yearTermLinks.forEach((link) => {
             link.addEventListener("click", function () {
                 const rangeStr = this.dataset.year;
+
                 if (lastClickedRange !== rangeStr) {
                     yearClickIndex[rangeStr] = 0;
                     lastClickedRange = rangeStr;
@@ -257,22 +291,37 @@ var pubUi = {
                     item.style.display = show ? "" : "none";
                 });
 
-
                 // 타겟 연도 파싱
                 const yearText = left.dataset.year; // 예: "1992"
-                const yearFirst = parseInt(yearText.slice(0, 2), 10);
-                const yearSecond = parseInt(yearText.slice(2, 4), 10);
 
                 // span 요소 찾기
-                const firstSpan = left.querySelector(".year .first");
-                const secondSpan = left.querySelector(".year .second");
+                const firstSpan = left.closest(".year-item-list").querySelector(".year .first");
+                const secondSpan = left.closest(".year-item-list").querySelector(".year .second");
 
                 // ✨ 숫자 + pop 애니메이션 실행
                 if (firstSpan && secondSpan) {
-                    animateNumber(firstSpan, yearFirst);
-                    animateNumber(secondSpan, yearSecond);
-                }
+                    const yearText = left.dataset.year; // 예: "2024"
+                    const yearFirst = parseInt(yearText.slice(0, 2), 10); // 예: 20
+                    const yearSecond = parseInt(yearText.slice(2, 4), 10); // 예: 24
 
+                    const currentFirst = parseInt(firstSpan.innerText, 10);
+                    const currentSecond = parseInt(secondSpan.innerText, 10);
+
+                    // 앞자리 → 시차 → 뒷자리 순서로 실행
+                    if (currentFirst !== yearFirst) {
+                        animateNumber(firstSpan, yearFirst);
+
+                        setTimeout(() => {
+                            animateNumber(secondSpan, yearSecond);
+                        }, 300); // 앞자리 duration 후 실행
+                    } else {
+                        // 앞자리가 동일할 땐 뒷자리만
+                        if (currentSecond !== yearSecond) {
+                            animateNumber(secondSpan, yearSecond);
+                        }
+                    }
+                }
+            
                 // term-container on 처리
                 const activeYear = parseInt(left.dataset.year, 10);
                 yearTermLinks.forEach((link) => {
