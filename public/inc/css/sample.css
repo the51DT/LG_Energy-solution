@@ -2,13 +2,7 @@
 body {overflow: auto;}
 .wrap.sub_p.cyanogen {overflow: revert;}
 
-.header-wrap {position: relative;}
-.header-cont {max-width: 191.25rem; margin: 0 auto; background: #fff;}
-.header-cont > img {width: 100%; height: 100%; object-fit: cover;}
-.header-cont .default-img {height: 6.25rem;}
-.header-cont-active { background: #fff; border-top: 1px solid #C9CED1;  display: none;}
-.header-cont-active .active-img  {width:100%; max-width:191.25rem; height:20.5625rem; margin:0 auto; display: flex;}
-.header-wrap.on .header-cont-active {display:block;}
+
 
 .page-map-wrap {font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; z-index: 50; padding: 1.5625rem 0; margin-top:-79px; width: 100%; background: transparent;  top:-1px;}
 .page-map-wrap.stuck {background:#fff;} /* sticky 붙었을경우 예외처리 클래스 */

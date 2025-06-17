@@ -64,13 +64,13 @@ var pubUi = {
             });
         }
 
-        headerWrap.addEventListener("click", function () {
-            if (headerWrap.classList.contains("on")) {
-                headerWrap.classList.remove("on");
-            } else {
-                headerWrap.classList.add("on");
-            }
-        });
+        // headerWrap.addEventListener("click", function () {
+        //     if (headerWrap.classList.contains("on")) {
+        //         headerWrap.classList.remove("on");
+        //     } else {
+        //         headerWrap.classList.add("on");
+        //     }
+        // });
 
         mapCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", function (e) {
