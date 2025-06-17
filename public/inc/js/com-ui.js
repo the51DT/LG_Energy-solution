@@ -41,4 +41,11 @@ $(function(){
             $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI_wh.svg")
         }
     })
+
+    $(".content-item04 .more").on("click", function(){
+        var eventBtn = $(this)
+        var eventCont = eventBtn.parents("[class*=cont0]");
+        eventCont.addClass("on").siblings().removeClass("on")
+        eventCont.parent().attr("class", "").addClass("cont-event" + (eventCont.index() + 1))
+    })
 });
