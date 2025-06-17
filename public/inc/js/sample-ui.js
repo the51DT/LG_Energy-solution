@@ -6,7 +6,7 @@ var pubUi = {
         pubUi.tabCateEvt();
         pubUi.exceptionStickyEvt();
         pubUi.scrollToEvt();
-        pubUi.historyEvt();
+        pubUi.historyMotionEvt();
     },
     // bindEvents - 클릭이벤트 등 이벤트 핸들링 관련 함수
     bindEvents: function () {
@@ -145,7 +145,7 @@ var pubUi = {
             document.querySelector("html > body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
         }        
     },
-    historyEvt: function(){
+    historyMotionEvt: function(){
         // NodeList를 일반 배열로 변환하여 배열 메서드(map, find 등) 사용 가능하도록 처리
         const leftItems = Array.from(document.querySelectorAll(".left-area .year-container .item"));
         const rightItems = Array.from(document.querySelectorAll(".right-area .year-container .item"));
@@ -219,6 +219,12 @@ var pubUi = {
         function activateYearByIndex(index) {
             const left = leftItems[index];
             const right = rightItems[index];
+
+            // right-area item의 bullet 초기화 후 모션 동작후 생성되게하기 위함
+            document.querySelector(".right-area .year-item-list").classList.remove("on");
+            setTimeout(function () {
+                document.querySelector(".right-area .year-item-list").classList.add("on");
+            }, 500);
 
             // 좌우 모든 아이템에서 상태 초기화
             leftItems.forEach((item) => item.classList.remove("active", "prev", "next"));
@@ -339,17 +345,30 @@ var pubUi = {
 
         // history-cont-wrap 내 스크롤 휠 이벤트 처리 (스크롤로 연도 이동)
         historyContArea.addEventListener("wheel", (e) => {
-            const now = Date.now();
-            if (now - lastScrollTime < scrollThrottle) return; // 과도한 휠 이벤트 차단
-            lastScrollTime = now;
-
-            e.preventDefault();
-
+            const deltaY = e.deltaY;
+            const isScrollingDown = deltaY > 0;
+        
             const currentActive = document.querySelector(".left-area .item.active");
             const currentIdx = leftItems.findIndex((item) => item === currentActive);
-
-            const nextIdx = e.deltaY > 0 ? (currentIdx + 1 < leftItems.length ? currentIdx + 1 : currentIdx) : currentIdx - 1 >= 0 ? currentIdx - 1 : currentIdx;
-
+        
+            const atFirst = currentIdx === 0;
+            const atLast = currentIdx === leftItems.length - 1;
+        
+            // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
+            const allowExternalScroll =
+                (isScrollingDown && atLast) ||
+                (!isScrollingDown && atFirst);
+        
+            // 🔒 외부 스크롤 차단
+            if (!allowExternalScroll) {
+                e.preventDefault();
+            }
+        
+            // 연도 전환 처리
+            const nextIdx = isScrollingDown
+                ? Math.min(currentIdx + 1, leftItems.length - 1)
+                : Math.max(currentIdx - 1, 0);
+        
             if (nextIdx !== currentIdx) {
                 activateYearByIndex(nextIdx);
             }
