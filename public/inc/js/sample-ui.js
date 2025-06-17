@@ -146,23 +146,31 @@ var pubUi = {
         }        
     },
     historyEvt: function(){
+        // NodeList를 일반 배열로 변환하여 배열 메서드(map, find 등) 사용 가능하도록 처리
         const leftItems = Array.from(document.querySelectorAll(".left-area .year-container .item"));
         const rightItems = Array.from(document.querySelectorAll(".right-area .year-container .item"));
         const yearTermLinks = Array.from(document.querySelectorAll(".year-term-container .year-item-list > a"));
+        const historyContArea = document.querySelector(".history-cont-wrap"); // 스크롤 이벤트 타겟 영역
 
-        const yearClickIndex = {};
-        let lastClickedRange = null; //lastClickedRange : 클릭한 년도 범위 체크용 변수
-        let isFirstClick = true; // terms-container 처음 클릭체크 여부 변수
+        let lastScrollTime = 0; // 휠 이벤트 연속 방지용 타이머
+        const scrollThrottle = 400; // 스크롤 간 최소 간격(ms)
 
+        const yearClickIndex = {}; // 연도 구간별 클릭 인덱스 기억
+        let lastClickedRange = null; // 마지막 클릭한 연도 구간
+        let isFirstClick = true; // 최초 클릭인지 여부
+
+        // "2000~2018" 형식 문자열 → {start: 2000, end: 2018} 객체로 변환
         function parseYearRange(rangeStr) {
             const [start, end] = rangeStr.split("~").map((s) => parseInt(s.trim(), 10));
             return { start, end };
         }
 
+        // 특정 연도가 주어진 범위 안에 포함되는지 확인
         function isInRange(year, start, end) {
             return year >= start && year <= end;
         }
 
+        // 특정 연도 구간에 해당하는 leftItems 필터링
         function getMatchingItems(rangeStr) {
             const { start, end } = parseYearRange(rangeStr);
             return leftItems.filter((item) => {
@@ -171,20 +179,19 @@ var pubUi = {
             });
         }
 
+        // 현재 인덱스 기준 다음 연도 인덱스 찾기
         function findNextGlobalIndex(currentIndex) {
             const next = currentIndex + 1;
             return next < leftItems.length ? next : null;
         }
-        
-        // 부드러운 숫자 카운트 + pop 애니메이션
+
+        // 숫자 카운트 애니메이션 함수 (숫자 증가 + pop 효과)
         function animateNumber(el, target, duration = 800) {
             let start = parseInt(el.innerText, 10);
             if (isNaN(start)) start = 0;
-
-            // 동일 숫자여도 시각적으로 애니메이션 주기 위해 강제로 1 차이 두고 시작
             if (start === target) start = target - 1;
 
-            const frameRate = 1000 / 60; // 약 60fps
+            const frameRate = 1000 / 60;
             const totalFrames = Math.round(duration / frameRate);
             let frame = 0;
 
@@ -194,11 +201,10 @@ var pubUi = {
                 frame++;
                 const progress = easeOut(frame / totalFrames);
                 const current = Math.round(start + (target - start) * progress);
-
                 el.innerText = current.toString().padStart(2, "0");
 
                 if (frame === 1) {
-                    el.classList.add("num-pop"); // ✨ pop 애니메이션 추가
+                    el.classList.add("num-pop");
                     setTimeout(() => el.classList.remove("num-pop"), 300);
                 }
 
@@ -209,6 +215,69 @@ var pubUi = {
             }, frameRate);
         }
 
+        // 공통 연도 전환 처리 (좌우 영역 + 숫자 애니메이션 + 상태 클래스 제어 포함)
+        function activateYearByIndex(index) {
+            const left = leftItems[index];
+            const right = rightItems[index];
+
+            // 좌우 모든 아이템에서 상태 초기화
+            leftItems.forEach((item) => item.classList.remove("active", "prev", "next"));
+            rightItems.forEach((item) => {
+                item.classList.remove("active", "prev", "next");
+                item.style.display = "none";
+            });
+
+            // 현재 인덱스 항목 활성화 + 양 옆 prev/next 클래스 추가
+            left.classList.add("active");
+            right.classList.add("active");
+
+            
+            if (leftItems[index - 1]) leftItems[index - 1].classList.add("prev");
+            if (leftItems[index + 1]) leftItems[index + 1].classList.add("next");
+            if (rightItems[index - 1]) rightItems[index - 1].classList.add("prev");
+            if (rightItems[index + 1]) rightItems[index + 1].classList.add("next");
+            
+            
+            // right 영역 표시/숨김 처리
+            rightItems.forEach((item) => {
+                const show = item.classList.contains("active") || item.classList.contains("prev") || item.classList.contains("next");
+                item.style.display = show ? "" : "none";
+            });
+
+            // 연도 숫자 처리 (슬라이드 애니메이션)
+            const yearText = left.dataset.year;
+            const firstSpan = left.closest(".year-item-list").querySelector(".year .first");
+            const secondSpan = left.closest(".year-item-list").querySelector(".year .second");
+
+            if (firstSpan && secondSpan) {
+                const yearFirst = parseInt(yearText.slice(0, 2), 10);
+                const yearSecond = parseInt(yearText.slice(2, 4), 10);
+
+                const currentFirst = parseInt(firstSpan.innerText, 10);
+                const currentSecond = parseInt(secondSpan.innerText, 10);
+
+                if (currentFirst !== yearFirst) {
+                    animateNumber(firstSpan, yearFirst);
+                    setTimeout(() => {
+                        if (currentSecond !== yearSecond) {
+                            animateNumber(secondSpan, yearSecond);
+                        }
+                    }, 300);
+                } else if (currentSecond !== yearSecond) {
+                    animateNumber(secondSpan, yearSecond);
+                }
+            }
+
+            // 연도 구간 탭(on) 처리
+            const activeYear = parseInt(left.dataset.year, 10);
+            yearTermLinks.forEach((link) => {
+                const { start, end } = parseYearRange(link.dataset.year);
+                const li = link.closest(".year-item-list");
+                li.classList.toggle("on", isInRange(activeYear, start, end));
+            });
+        }
+
+        // 연도 탭 클릭 이벤트 처리
         yearTermLinks.forEach((link) => {
             link.addEventListener("click", function () {
                 const rangeStr = this.dataset.year;
@@ -221,7 +290,7 @@ var pubUi = {
                 const matches = getMatchingItems(rangeStr);
                 let rangeIdx = yearClickIndex[rangeStr] || 0;
 
-                // 최초 클릭 시: 기존 active 제거하고 다음 연도로 이동
+                // 최초 클릭 시 기존 active가 동일하면 다음 인덱스로 강제 이동
                 if (isFirstClick && matches.length > 0) {
                     const activeLeft = document.querySelector(".left-area .item.active");
                     const matchLeft = matches[rangeIdx];
@@ -240,6 +309,7 @@ var pubUi = {
                 }
 
                 let globalIndex = null;
+
                 if (rangeIdx < matches.length) {
                     globalIndex = leftItems.findIndex((item) => item === matches[rangeIdx]);
                     yearClickIndex[rangeStr]++;
@@ -261,76 +331,29 @@ var pubUi = {
                     }
                 }
 
-                if (globalIndex === null || !leftItems[globalIndex]) return;
-
-                const left = leftItems[globalIndex];
-                const right = rightItems[globalIndex];
-
-                // 초기화
-                leftItems.forEach((item) => item.classList.remove("active", "prev", "next"));
-                rightItems.forEach((item) => {
-                    item.classList.remove("active", "prev", "next");
-
-                    // display 제어: 클래스가 없으면 숨기기
-                    item.style.display = "none";
-                });
-
-                // 활성화
-                left.classList.add("active");
-                right.classList.add("active");
-
-                // 이전/다음 클래스 처리
-                if (leftItems[globalIndex - 1]) leftItems[globalIndex - 1].classList.add("prev");
-                if (leftItems[globalIndex + 1]) leftItems[globalIndex + 1].classList.add("next");
-                if (rightItems[globalIndex - 1]) rightItems[globalIndex - 1].classList.add("prev");
-                if (rightItems[globalIndex + 1]) rightItems[globalIndex + 1].classList.add("next");
-
-                // rightItems 표시/숨김 재조정
-                rightItems.forEach((item) => {
-                    const show = item.classList.contains("active") || item.classList.contains("prev") || item.classList.contains("next");
-                    item.style.display = show ? "" : "none";
-                });
-
-                // 타겟 연도 파싱
-                const yearText = left.dataset.year; // 예: "1992"
-
-                // span 요소 찾기
-                const firstSpan = left.closest(".year-item-list").querySelector(".year .first");
-                const secondSpan = left.closest(".year-item-list").querySelector(".year .second");
-
-                // ✨ 숫자 + pop 애니메이션 실행
-                if (firstSpan && secondSpan) {
-                    const yearText = left.dataset.year; // 예: "2024"
-                    const yearFirst = parseInt(yearText.slice(0, 2), 10); // 예: 20
-                    const yearSecond = parseInt(yearText.slice(2, 4), 10); // 예: 24
-
-                    const currentFirst = parseInt(firstSpan.innerText, 10);
-                    const currentSecond = parseInt(secondSpan.innerText, 10);
-
-                    // 앞자리 → 시차 → 뒷자리 순서로 실행
-                    if (currentFirst !== yearFirst) {
-                        animateNumber(firstSpan, yearFirst);
-
-                        setTimeout(() => {
-                            animateNumber(secondSpan, yearSecond);
-                        }, 300); // 앞자리 duration 후 실행
-                    } else {
-                        // 앞자리가 동일할 땐 뒷자리만
-                        if (currentSecond !== yearSecond) {
-                            animateNumber(secondSpan, yearSecond);
-                        }
-                    }
+                if (globalIndex !== null && leftItems[globalIndex]) {
+                    activateYearByIndex(globalIndex);
                 }
-            
-                // term-container on 처리
-                const activeYear = parseInt(left.dataset.year, 10);
-                yearTermLinks.forEach((link) => {
-                    const { start, end } = parseYearRange(link.dataset.year);
-                    const li = link.closest(".year-item-list");
-                    li.classList.toggle("on", isInRange(activeYear, start, end));
-                });
             });
         });
+
+        // history-cont-wrap 내 스크롤 휠 이벤트 처리 (스크롤로 연도 이동)
+        historyContArea.addEventListener("wheel", (e) => {
+            const now = Date.now();
+            if (now - lastScrollTime < scrollThrottle) return; // 과도한 휠 이벤트 차단
+            lastScrollTime = now;
+
+            e.preventDefault();
+
+            const currentActive = document.querySelector(".left-area .item.active");
+            const currentIdx = leftItems.findIndex((item) => item === currentActive);
+
+            const nextIdx = e.deltaY > 0 ? (currentIdx + 1 < leftItems.length ? currentIdx + 1 : currentIdx) : currentIdx - 1 >= 0 ? currentIdx - 1 : currentIdx;
+
+            if (nextIdx !== currentIdx) {
+                activateYearByIndex(nextIdx);
+            }
+        }, { passive: false });
     }
 };
 

@@ -103,8 +103,8 @@ ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
 .history-wrap .btn-area button::after {content:''; width:1.5rem; height:1.5rem; display:inline-block; background-size: contain; background-repeat: no-repeat; background-position: center center; position:absolute; right:1rem; top:50%; transform: translateY(-50%);}
 .history-wrap.each-view .btn-area button::after {background-image:url(../images/sample/icon_arrow_nav_down.svg);}
 .history-wrap.all-view .btn-area button::after {background-image:url(../images/sample/icon_arrow_nav_up.svg);}
-.history-wrap.each-view .history-cont-wrap {position:relative; height: calc(100vh - 140px); overflow: hidden;}
-.history-cont-wrap .left-area {position:absolute; top:50%; left:0; transform:translateY(-50%);}
+.history-wrap.each-view .history-cont-wrap {position:relative; height: calc(100vh - 140px);  overflow: hidden;} 
+.history-cont-wrap .left-area {position:absolute; top:50%; left:0; transform:translateY(-50%); min-width:500px;}
 .history-cont-wrap .left-area .year-item-list .year {font-size:8.75rem; font-weight:700; line-height:6.3rem; display:flex; align-items: center;}
 .history-cont-wrap .left-area .year-item-list .year .first {color:#C9CED1;}
 .history-cont-wrap .left-area .year-item-list .year .second {color:#171819;}
@@ -115,14 +115,15 @@ ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
 .history-cont-wrap .left-area .year-term-container li.year-item-list:not(:last-child) {padding-bottom:0.5rem;}
 .history-cont-wrap .left-area .year-term-container li.year-item-list a{color: #b4b8ba; font-size: 1.125rem; font-weight:400; line-height:1.8rem;}
 .history-cont-wrap .left-area .year-term-container li.year-item-list.on a {color: #1eb2c0; font-size: 1.25rem; font-weight: 800; line-height: 1.875rem; padding-right:0.87rem; position:relative;}
-.history-cont-wrap .left-area .year-term-container li.year-item-list.on a:after{content:''; width:0.375rem; height:0.375rem; display:inline-block; background:#1eb2c0; border-radius:50%; position:absolute; top:50%; right:0; transform:translateY(-50%);}
+.history-cont-wrap .left-area .year-term-container li.year-item-list.on a:after{content:''; width:0.375rem; height:0.375rem; display:inline-block; background:#1eb2c0; border-radius:50%; position:absolute; top:50%; right:0; transform:translateY(-50%); margin-top:1px;}
 
-.history-cont-wrap .center-line-area {width:101rem; height:101rem; border-radius: 101rem; border:1px solid #c9ced1; z-index:-1; position:absolute; top:50%; left:-75%; transform: translateY(-50%);} /*position:absolute; top:50%; left:-75%; transform: translateY(-50%);*/
+.history-cont-wrap .center-line-area {width:101rem; height:101rem; border-radius: 101rem; border:1px solid #c9ced1; z-index:-1; position:relative; top:50%; left:-75%; transform: translateY(-50%);} /*position:absolute; top:50%; left:-75%; transform: translateY(-50%);*/
 
-
-.history-cont-wrap .right-area {position:absolute; top: 50%; right: 0; transform:translateY(-50%);}
+.history-cont-wrap .right-area .year-item-list .item {position: absolute; margin-right:30px; top:0%; transition: 0.5s ease-out;}
+.history-cont-wrap .right-area .year-item-list .item.active {top:50%; right:-903px; transform: translateY(-50%);}
+.history-cont-wrap .right-area .year-item-list .item:not(.active).prev {transform: rotate(-30deg); bottom:1350px; right:-928px;}
+.history-cont-wrap .right-area .year-item-list .item:not(.active).next {transform: rotate(30deg); top:1350px; right:-908px;}
 .history-cont-wrap .right-area .year-item-list .item.active::after {content:''; display:block; width:15rem; height:15rem; backdrop-filter:blur(12px); position:absolute; right:-30px; top:-5rem; border-radius:100%;}
-
 .history-cont-wrap .right-area .year-item-list .item .img-box img {width: 50rem; height:21.25rem; border-radius:12.5rem;}
 .history-cont-wrap .right-area .year-item-list .item .img-box .img-title {font-size: 1.25rem; font-weight: 500; line-height: 1.875rem; color:#171819; margin-top:1.31rem; text-align: center;}
 
@@ -134,11 +135,7 @@ ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
 
 
 .history-cont-wrap .year-item-list .item:not(.active) {display:none;}
-.history-cont-wrap .right-area .year-item-list .item {position: absolute; margin-right:30px; transition:0.5s linear;}
 .history-cont-wrap .right-area .year-item-list .item:not(.active) {display:block;}
-.history-cont-wrap .right-area .year-item-list .item.active {top:50%; right:0; transform: translateY(-50%);}
-.history-cont-wrap .right-area .year-item-list .item:not(.active).prev {transform: rotate(-30deg); bottom:550px; right:0;}
-.history-cont-wrap .right-area .year-item-list .item:not(.active).next {transform: rotate(30deg); top:550px; right:0;}
 .history-cont-wrap .right-area .year-item-list .item:not(.active) .img-box {opacity: 0.5; filter: blur(10px);}
 .history-cont-wrap .right-area .year-item-list .item:not(.active) .img-box .img-title {display:none;}
 .history-cont-wrap .right-area .year-item-list .item:not(.active) .img-box .img-title strong {font-weight:800;}
