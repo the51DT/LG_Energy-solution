@@ -195,7 +195,7 @@ aside{position:fixed;bottom:100px;right:30px;}
 
 
 /* 서브 페이지 */
-
+.sub_p .lang-button{color:var(--text-text-default-01, #171819);}
 
 /* 해더 */
 /*  */
