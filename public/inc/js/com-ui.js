@@ -48,4 +48,45 @@ $(function(){
         eventCont.addClass("on").siblings().removeClass("on")
         eventCont.parent().attr("class", "").addClass("cont-event" + (eventCont.index() + 1))
     })
+    $(".content-item02 .event-item02").on("click", function(){
+        var eventBtn = $(this),
+            eventCont = eventBtn.parents(".area1"),
+            eventVideo = eventCont.find(".video"),
+            eventVideoSrc = eventVideo.find("source");
+        if(eventVideoSrc.hasClass("video1")){
+            return
+        }else if(eventVideoSrc.hasClass("video2")){
+            eventVideoSrc.attr("class","");
+            eventVideoSrc.addClass("video1").attr("src","../../../inc/video/2_Main_battery(pouch).mp4")
+            eventVideo[0].load();
+            eventVideo[0].play();
+        }else{
+            eventVideoSrc.attr("class","")
+            eventVideoSrc.addClass("video1").attr("src","../../../inc/video/2_Main_battery(pouch).mp4")
+            eventVideo[0].load();
+            eventVideo[0].play();
+        }
+            
+    })
+    $(".content-item02 .event-item01").on("click", function(){
+        var eventBtn = $(this),
+            eventCont = eventBtn.parents(".area1"),
+            eventVideo = eventCont.find(".video"),
+            eventVideoSrc = eventVideo.find("source");
+        if(eventVideoSrc.hasClass("video2")){
+            return
+        }else if(eventVideoSrc.hasClass("video1")){
+            eventVideoSrc.attr("class","");
+            eventVideoSrc.addClass("video2").attr("src","../../../inc/video/3_Main_battery(cylinder).mp4")
+            eventVideo[0].load();
+            eventVideo[0].play();
+        }else{
+            eventVideoSrc.attr("class","")
+            eventVideoSrc.addClass("video2").attr("src","../../../inc/video/3_Main_battery(cylinder).mp4")
+            eventVideo[0].load();
+            eventVideo[0].play();
+        }
+            
+    })
+    
 });
