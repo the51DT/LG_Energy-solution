@@ -157,7 +157,7 @@ var pubUi = {
             const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
             const totalHeadHeight = pageMapHeight + contentHeadHeight;
                         
-            document.querySelector("html > body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
+            document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
         }        
     },
     historyMotionEvt: function(){
