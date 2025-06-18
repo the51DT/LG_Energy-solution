@@ -100,7 +100,7 @@ var pubUi = {
         });
 
 
-        $(".wrap.sub_p").on("scroll", function () {
+        $("body").on("scroll", function () {
             var nowScroll = $(this).scrollTop(),
                 page_h = $(window).height() * 0.3;
             
@@ -111,7 +111,7 @@ var pubUi = {
             }
         });
         $(".wrap.sub_p aside").on("click", function () {
-            $(".wrap.sub_p").stop().animate({ scrollTop: 0 }, 300);
+            $("body").stop().animate({ scrollTop: 0 }, 300);
         });
     },
     // 탭카테고리 제어 이벤트
@@ -157,7 +157,7 @@ var pubUi = {
             const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
             const totalHeadHeight = pageMapHeight + contentHeadHeight;
                         
-            document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
+            document.querySelector("html > body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
         }        
     },
     historyMotionEvt: function(){
