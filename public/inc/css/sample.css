@@ -1,9 +1,5 @@
-/* scroll, sticky 적용되지않아 초기화하였음 */
-body {overflow: auto;}
-.wrap.sub_p.cyanogen {overflow: revert;}
-
-
-
+.wrap.sub_p {height:100%; overflow-y: auto;}
+/* .wrap.sub_p.cyanogen_sub2 aside {display: block !important;} */
 .page-map-wrap {font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; z-index: 50; padding: 1.5625rem 0; margin-top:-79px; width: 100%; background: transparent;  top:-1px;}
 .page-map-wrap.stuck {background:#fff;} /* sticky 붙었을경우 예외처리 클래스 */
 .page-map-wrap::before {content:''; width: 85rem; height: 5rem; background-color: #fff; position: absolute; top: 0; left: 0;}

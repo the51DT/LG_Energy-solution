@@ -40,16 +40,16 @@ var pubUi = {
                     mapMarking.style.display = "block";
 
                     // 기존 깜빡임 인터벌 제거 (중복 방지)
-                    if (checkingInterval) clearInterval(checkingInterval);
+                    // if (checkingInterval) clearInterval(checkingInterval);
 
-                    // 깜빡임 시작
-                    checkingInterval = setInterval(() => {
-                        if (mapMarking.style.display === "block") {
-                            mapMarking.style.display = "none";
-                        } else {
-                            mapMarking.style.display = "block";
-                        }
-                    }, 1000);
+                    // // 깜빡임 시작
+                    // checkingInterval = setInterval(() => {
+                    //     if (mapMarking.style.display === "block") {
+                    //         mapMarking.style.display = "none";
+                    //     } else {
+                    //         mapMarking.style.display = "block";
+                    //     }
+                    // }, 1000);
                 });
             });
 
@@ -97,6 +97,21 @@ var pubUi = {
                     subCate.classList.add("active");
                 });
             });
+        });
+
+
+        $(".wrap.sub_p").on("scroll", function () {
+            var nowScroll = $(this).scrollTop(),
+                page_h = $(window).height() * 0.3;
+            
+            if (nowScroll > page_h) {
+                $("aside").fadeIn(500);
+            } else {
+                $("aside").hide();
+            }
+        });
+        $(".wrap.sub_p aside").on("click", function () {
+            $(".wrap.sub_p").stop().animate({ scrollTop: 0 }, 300);
         });
     },
     // 탭카테고리 제어 이벤트
@@ -151,9 +166,6 @@ var pubUi = {
         const rightItems = Array.from(document.querySelectorAll(".right-area .year-container .item"));
         const yearTermLinks = Array.from(document.querySelectorAll(".year-term-container .year-item-list > a"));
         const historyContArea = document.querySelector(".history-cont-wrap"); // 스크롤 이벤트 타겟 영역
-
-        let lastScrollTime = 0; // 휠 이벤트 연속 방지용 타이머
-        const scrollThrottle = 400; // 스크롤 간 최소 간격(ms)
 
         const yearClickIndex = {}; // 연도 구간별 클릭 인덱스 기억
         let lastClickedRange = null; // 마지막 클릭한 연도 구간
@@ -344,35 +356,37 @@ var pubUi = {
         });
 
         // history-cont-wrap 내 스크롤 휠 이벤트 처리 (스크롤로 연도 이동)
-        historyContArea.addEventListener("wheel", (e) => {
-            const deltaY = e.deltaY;
-            const isScrollingDown = deltaY > 0;
-        
-            const currentActive = document.querySelector(".left-area .item.active");
-            const currentIdx = leftItems.findIndex((item) => item === currentActive);
-        
-            const atFirst = currentIdx === 0;
-            const atLast = currentIdx === leftItems.length - 1;
-        
-            // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
-            const allowExternalScroll =
-                (isScrollingDown && atLast) ||
-                (!isScrollingDown && atFirst);
-        
-            // 🔒 외부 스크롤 차단
-            if (!allowExternalScroll) {
-                e.preventDefault();
-            }
-        
-            // 연도 전환 처리
-            const nextIdx = isScrollingDown
-                ? Math.min(currentIdx + 1, leftItems.length - 1)
-                : Math.max(currentIdx - 1, 0);
-        
-            if (nextIdx !== currentIdx) {
-                activateYearByIndex(nextIdx);
-            }
-        }, { passive: false });
+        if(historyContArea) {
+            historyContArea.addEventListener("wheel", (e) => {
+                const deltaY = e.deltaY;
+                const isScrollingDown = deltaY > 0;
+            
+                const currentActive = document.querySelector(".left-area .item.active");
+                const currentIdx = leftItems.findIndex((item) => item === currentActive);
+            
+                const atFirst = currentIdx === 0;
+                const atLast = currentIdx === leftItems.length - 1;
+            
+                // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
+                const allowExternalScroll =
+                    (isScrollingDown && atLast) ||
+                    (!isScrollingDown && atFirst);
+            
+                // 🔒 외부 스크롤 차단
+                if (!allowExternalScroll) {
+                    e.preventDefault();
+                }
+            
+                // 연도 전환 처리
+                const nextIdx = isScrollingDown
+                    ? Math.min(currentIdx + 1, leftItems.length - 1)
+                    : Math.max(currentIdx - 1, 0);
+            
+                if (nextIdx !== currentIdx) {
+                    activateYearByIndex(nextIdx);
+                }
+            }, { passive: false });
+        }
     }
 };
 
