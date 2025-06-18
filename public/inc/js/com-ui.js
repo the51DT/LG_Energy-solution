@@ -76,14 +76,18 @@ $(document).ready(function($) {
         }
             
     })
+    if($(".wrap.main_p").length > 0){
+        var cont_top01 = $('.content-item01').offset().top,
+            cont_top02 = $('.content-item02').offset().top,
+            cont_top03 = $('.content-item03').offset().top,
+            cont_top04 = $('.content-item04').offset().top,
+            cont_top05 = $('.content-item05').offset().top,
+            cont_top06 = $('.content-item06').offset().top,
+            cont_top07 = $('.content-item07').offset().top;
+    }else{
+        return;
+    }
     
-    var cont_top01 = $('.content-item01').offset().top,
-        cont_top02 = $('.content-item02').offset().top,
-        cont_top03 = $('.content-item03').offset().top,
-        cont_top04 = $('.content-item04').offset().top,
-        cont_top05 = $('.content-item05').offset().top,
-        cont_top06 = $('.content-item06').offset().top,
-        cont_top07 = $('.content-item07').offset().top;
 
     $(".wrap.main_p").on("scroll", function(){
         var nowScroll = $(this).scrollTop(),
