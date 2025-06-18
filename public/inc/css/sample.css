@@ -97,7 +97,7 @@ ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
 .history-wrap .btn-area button::after {content:''; width:1.5rem; height:1.5rem; display:inline-block; background-size: contain; background-repeat: no-repeat; background-position: center center; position:absolute; right:1rem; top:50%; transform: translateY(-50%);}
 .history-wrap.each-view .btn-area button::after {background-image:url(../images/sample/icon_arrow_nav_down.svg);}
 .history-wrap.all-view .btn-area button::after {background-image:url(../images/sample/icon_arrow_nav_up.svg);}
-.history-wrap.each-view .history-cont-wrap {position:relative; height: calc(100vh - 140px);  overflow: hidden; overscroll-behavior: contain; /* iOS 등에서 바운스 방지 */}
+.history-wrap.each-view .history-cont-wrap {position:relative; height: calc(100vh - 140px);  overflow: hidden;}
 .history-cont-wrap .left-area {position:absolute; top:50%; left:0; transform:translateY(-50%); min-width:500px;}
 .history-cont-wrap .left-area .year-item-list .year {font-size:8.75rem; font-weight:700; line-height:6.3rem; display:flex; align-items: center;}
 .history-cont-wrap .left-area .year-item-list .year .first {color:#C9CED1;}
