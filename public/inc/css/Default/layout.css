@@ -127,8 +127,8 @@ backdrop-filter: blur(7px);}
 .main_p .content-item04 .cont-area div .cont03.on{padding-left:17.62rem;padding-right:7.5rem;}
 .main_p .content-item04 .cont-area div .cont03.on >img{left:41%;top:50%; transform: translate(-50%,-50%);}
 .main_p .content-item04 .cont-area div .cont01{padding:5.5rem 2rem 4.5rem 2rem;width:21.75rem;overflow: hidden;}
-.main_p .content-item04 .cont-event2 .cont02{right:auto;left: 16.5rem !important;;}
-.main_p .content-item04 .cont-event3 .cont02{right:auto;left: 16.5rem !important;;}
+.main_p .content-item04 .cont-event2 .cont02{right:auto;left: 16.5rem !important;}
+.main_p .content-item04 .cont-event3 .cont02{right:auto;left: 16.5rem !important;}
 .main_p .content-item04.scroll-on .cont01{left:0rem;opacity: 1;}
 .main_p .content-item04.scroll-on .cont02{left:71.5rem;opacity: 1;}
 .main_p .content-item04.scroll-on .cont03{right:0rem;opacity: 1;}
