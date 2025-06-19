@@ -58,13 +58,13 @@ var pubUi = {
                     pageMapCate.forEach((otherBox) => {
                         if (otherBox !== e.currentTarget) {
                             otherBox.classList.remove("active");
-                        }
+                        } 
                     });
                     const subCateName = subCate.innerText;
                     map.closest(".select-cate").querySelector("button").innerText = subCateName;
                     map.closest(".select-cate").querySelector("button").classList.add("on");
+                    map.closest(".select-cate").querySelector("button").classList.remove("active");
                     map.classList.remove("on");
-                    subCate.classList.add("active");
                 });
             });
         });

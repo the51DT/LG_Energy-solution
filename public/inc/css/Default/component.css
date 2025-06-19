@@ -144,6 +144,7 @@
 .map-info .map-info-list .select-cate {position: relative;}
 .map-info .map-info-list .select-cate > button {height: 4rem; width:100%; max-width: 440.5rem; border-radius: 1rem; padding:1rem 1.5rem; border:1px solid #c9ced1; font-size: 1.25rem; font-weight: 400; line-height: 1.875rem; text-align: left; color:#555758;}
 .map-info .map-info-list .select-cate > button:after {content: ''; display: block; width: 1.5rem; height: 1.5rem; background: url(../../images/icon/icon_arrow_down.svg) no-repeat center center / contain; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);}
+.map-info .map-info-list .select-cate > button.active:after {transform: translateY(-50%) rotate(180deg);}
 
 
 .page-map-wrap {font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; z-index: 50; padding: 1.5625rem 0; margin-top:-79px; width: 100%; background: transparent;  top:-1px;}
