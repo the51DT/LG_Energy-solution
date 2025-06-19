@@ -11,6 +11,7 @@
   <link type="text/css" rel="stylesheet" href="./inc/css/guide.css" />
   <link type="text/css" rel="stylesheet" href="../public/inc/css/swiper.min.css" />
   <link type="text/css" rel="stylesheet" href="../public/inc/css/common.css" /> 
+  <script type="text/javascript" src="../public/inc/js/pub-ui.js"></script>
   <style>
     #guideWrap {
       overflow: hidden;
@@ -46,6 +47,8 @@
             <li><a data-scroll='cont02' title="내부링크">Color</a></li>
             <li><a data-scroll='cont03' title="내부링크">Button, Link</a></li>
             <li><a data-scroll='cont04' title="내부링크">Form</a></li>
+            <li><a data-scroll='cont05' title="내부링크">Tab</a></li>
+            <li><a data-scroll='cont06' title="내부링크">Accordion</a></li>
           </ul>
         </div>
       </nav>
@@ -384,7 +387,7 @@
           <div class="info">
             <!-- checkbox button-->
             <div class="subSection">
-              <h3 class="guideSubTit">1. Form: checkbox button</h3>
+              <h3 class="guideSubTit">1. checkbox button</h3>
               <div class="ui-item">
                 <form>
                   <div class="wrap-form">
@@ -461,7 +464,7 @@
             </div>
             <!-- radio button-->
             <div class="subSection">
-              <h3 class="guideSubTit">2. Form: Radio button</h3>
+              <h3 class="guideSubTit">2. Radio button</h3>
               <div class="ui-item">
                 <form> <!-- 라디오 버튼 초기값 checked 적용 안되는 문제로 인해, form 태그 추가함 -->
                   <div class="wrap-form">
@@ -537,7 +540,7 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">3. Form: Title</h3>
+              <h3 class="guideSubTit">3. Title</h3>
               <div class="ui-item">
                 <div class="wrap-form label-tit">
                   <label for="username">
@@ -557,14 +560,14 @@
             </div>
             <!--  -->
             <div class="subSection">
-              <h3 class="guideSubTit">4. Form: input - Default</h3>
+              <h3 class="guideSubTit">4. input - Default</h3>
               <div class="ui-item">                
                 <div class="wrap-form-input">                
                   <div class="input-wrap">
                     <input type="text" class="input-box" placeholder="내용을 입력하세요" />
                     <button class="btn-input-del" title="입력 내용 삭제"></button>                    
                   </div>
-                  <div class="input-info">
+                  <div class="input-info on"><!-- on 클래스 존재시 메시지 노출-->
                     <span class="msg">부가 설명을 입력하세요</span>
                   </div>
                 </div>
@@ -574,7 +577,7 @@
                     <input type="text" class="input-box" placeholder="내용을 입력하세요" readonly />
                     <button class="btn-input-del" title="입력 내용 삭제"></button>                    
                   </div>
-                  <div class="input-info">
+                  <div class="input-info on"><!-- on 클래스 존재시 메시지 노출-->
                     <span class="msg">부가 설명을 입력하세요</span>
                   </div>
                 </div>
@@ -584,7 +587,7 @@
                     <input type="text" class="input-box" placeholder="내용을 입력하세요" disabled />
                     <button class="btn-input-del" title="입력 내용 삭제"></button>                    
                   </div>
-                  <div class="input-info">
+                  <div class="input-info on"><!-- on 클래스 존재시 메시지 노출-->
                     <span class="msg">부가 설명을 입력하세요</span>
                   </div>
                 </div>
@@ -594,7 +597,7 @@
                     <input type="text" class="input-box" placeholder="내용을 입력하세요" />
                     <button class="btn-input-del" title="입력 내용 삭제"></button>                    
                   </div>
-                  <div class="input-info status">
+                  <div class="input-info status on"> <!-- 메시지 상태 아이콘 존재시 status 클래스 추가 필요 / on 클래스 존재시 메시지 노출 -->
                     <span class="msg">에러메세지를 입력하세요</span>
                   </div>
                 </div>
@@ -604,11 +607,11 @@
                     <input type="text" class="input-box" placeholder="내용을 입력하세요" />
                     <button class="btn-input-del" title="입력 내용 삭제"></button>                    
                   </div>
-                  <div class="input-info status"> <!-- 메세지 상태 존재시 status 클래스 추가 필요 -->
+                  <div class="input-info status on"> <!-- 메시지 상태 아이콘 존재시 status 클래스 추가 필요 / on 클래스 존재시 메시지 노출 -->
                     <span class="msg">성공메세지를 입력하세요</span>
                   </div>
                 </div>
-
+                <!-- 
                 <div class="wrap-form-group">
                   <div class="wrap-form-input tel">
                     <input type="number" placeholder="" name="number1" />
@@ -635,11 +638,10 @@
                       표시</span></button>
                 </div>
                 <div class="wrap-form-input password">
-                  <input type="password" placeholder="비밀번호 (숨김케이스)" />
-                  <!-- 비밀번호 숨김 시 on-->
+                  <input type="password" placeholder="비밀번호 (숨김케이스)" />                  
                   <button type="button" class="password-hidden on" title="비밀번호 숨김"><span class="visually-hidden">비밀번호
                       숨김</span></button>
-                </div>
+                </div> -->
 
               </div>
               <div class="code">
@@ -648,19 +650,32 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">5. Form: input - File Attatch</h3>
+              <h3 class="guideSubTit">5. input - File Attatch</h3>
               <div class="ui-item">
-
+                <!-- 기본 케이스 -->
                 <div class="wrap-form-input filebox">
                   <div class="input-wrap">
                     <input class="input-box upload-name" value="파일첨부 (선택)" placeholder="파일첨부 (선택)">
                     <div class="btn-wrap">
-                      <label for="file" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
-                      <input type="file" id="file" style="display: none;">
+                      <label for="file1" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
+                      <input type="file" id="file1" style="display: none;">
                     </div>
                   </div>
-                  <div class="input-info">
+                  <div class="input-info on"> <!-- on 클래스 존재시 메시지 노출-->
                     <span class="msg">이미지는 최대 5개까지, 30KB 이하 크기만 첨부 가능합니다</span>
+                  </div>
+                </div>
+                <!-- readonly 케이스 -->
+                <div class="wrap-form-input filebox">
+                  <div class="input-wrap">
+                    <input class="input-box upload-name" value="파일첨부 (선택)" placeholder="파일첨부 (선택)" readonly>
+                    <div class="btn-wrap">
+                      <label for="file4" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
+                      <input type="file" id="file4">
+                    </div>
+                  </div>
+                  <div class="input-info on"> <!-- on 클래스 존재시 메시지 노출 -->
+                    <span class="msg">부가 설명을 입력하세요</span>
                   </div>
                 </div>
                 <!-- disabled 케이스 -->
@@ -668,45 +683,38 @@
                   <div class="input-wrap">
                     <input class="input-box upload-name" value="파일첨부 (선택)" placeholder="파일첨부 (선택)" disabled>
                     <div class="btn-wrap">
-                      <label for="file" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
-                      <input type="file" id="file"> <!-- style="display: none;" --> 
+                      <label for="file2" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
+                      <input type="file" id="file2"> <!-- style="display: none;" --> 
                     </div>
                   </div>
-                  <div class="input-info">
-                    <span class="msg">이미지는 최대 5개까지, 30KB 이하 크기만 첨부 가능합니다</span>
+                  <div class="input-info on"> <!-- on 클래스 존재시 메시지 노출 -->
+                    <span class="msg">부가 설명을 입력하세요</span>
                   </div>
-                </div>
-                <!-- Filled 케이스 -->
+                </div> 
+                <!-- Filled 케이스 : input-wrap에 type2 클래스 추가 -->
                 <div class="wrap-form-input filebox">
-                  <div class="input-wrap type2">
+                  <div class="input-wrap type2"><!-- type2 -->
                     <input class="input-box upload-name" value="파일첨부 (선택)" placeholder="파일첨부 (선택)">
                     <div class="btn-wrap">
-                      <label for="file2" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
-                      <input type="file" id="file2" style="display: none;">
+                      <label for="file3" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
+                      <input type="file" id="file3">
                     </div>
                   </div>
-                  <div class="input-info">
+                  <div class="input-info on"><!-- on 클래스 존재시 메시지 노출 -->
                     <span class="msg">이미지는 최대 5개까지, 30KB 이하 크기만 첨부 가능합니다</span>
                   </div>
                 </div>
                 <!-- error 케이스 -->
-                <div class="wrap-form-input err"><!-- err 클래스 추가 필요 -->          
+                <div class="wrap-form-input filebox err"><!-- err 클래스 추가 필요 -->          
                   <div class="input-wrap">
-                    <input type="text" class="input-box" placeholder="내용을 입력하세요" />
-                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
+                    <input class="input-box upload-name" value="파일첨부 (선택)" placeholder="파일첨부 (선택)">
+                    <div class="btn-wrap">
+                      <label for="file4" class="act-btn-xs btn-outline01 btn-file-attach">파일첨부</label>
+                      <input type="file" id="file4">
+                    </div>
                   </div>
-                  <div class="input-info status">
+                  <div class="input-info status on"> <!-- 메시지 상태 아이콘 존재시 status 클래스 추가 필요 / on 클래스 존재시 메시지 노출 -->
                     <span class="msg">에러메세지를 입력하세요</span>
-                  </div>
-                </div>
-                <!-- success 케이스 -->
-                <div class="wrap-form-input suc"><!-- suc 클래스 추가 필요 -->
-                  <div class="input-wrap">
-                    <input type="text" class="input-box" placeholder="내용을 입력하세요" />
-                    <button class="btn-input-del" title="입력 내용 삭제"></button>                    
-                  </div>
-                  <div class="input-info status"> <!-- 메세지 상태 존재시 status 클래스 추가 필요 -->
-                    <span class="msg">성공메세지를 입력하세요</span>
                   </div>
                 </div>
 
@@ -718,31 +726,62 @@
             </div>
             <!--  -->
             <div class="subSection">
-              <h3 class="guideSubTit">3. Form: group</h3>
-              <di class="ui-item">
-                <div class="form-group ty01">
-                  <div class="wrap-form label-tit">
-                    <label for="usernum">
-                      <span>Title</span>
-                    </label>
+              <h3 class="guideSubTit">6. textarea</h3>
+              <div class="ui-item">
+                <!-- normal 케이스 -->
+                <div class="wrap-form-input">
+                  <div class="textarea-box">
+                    <textarea class="textarea" placeholder="[normal 케이스] 문의하실 내용을 남겨주세요" maxlength="1000"></textarea>
+                    <p class="byte-check"><span class="count">0</span><span class="count-total">1,000</span></p>
+                    <!-- 하단 메시지 영역
+                    <div class="textarea-bot">
+                      <div class="input-info status on">
+                        <span class="msg">에러메세지를 입력하세요</span>
+                      </div>                                            
+                    </div> -->
                   </div>
-                  <div class="wrap-form-input">
-                    <input type="text" placeholder="사원번호" id="usernum" />
+                </div>
+                <!-- normal 케이스 : textarea-box ty02 클래스 존재시, 텍스트박스 영역 초과시 높이값 리사이징(scrollbar 미생성) -->
+                <div class="wrap-form-input">
+                  <div class="textarea-box ty02">
+                    <textarea class="textarea" placeholder="[normal ty02 케이스] textarea-box ty02 클래스 존재시, 텍스트박스 영역 초과시 높이값 리사이징(scrollbar 미생성)" maxlength="1000"></textarea>
+                    <p class="byte-check"><span class="count">0</span><span class="count-total">1,000</span></p>
+                    <!-- 하단 메시지 영역
+                    <div class="textarea-bot">
+                      <div class="input-info status on">
+                        <span class="msg">에러메세지를 입력하세요</span>
+                      </div>                                            
+                    </div> -->
+                  </div>
+                </div>
+                <!-- readonly 케이스 -->
+                <div class="wrap-form-input">
+                  <div class="textarea-box">
+                    <textarea class="textarea" placeholder="내용을 입력해주세요" maxlength="1000" readonly></textarea>
+                    <p class="byte-check"><span class="count">0</span><span class="count-total">1,000</span></p>
+                  </div>
+                </div>
+                <!-- disabled 케이스 -->
+                <div class="wrap-form-input">
+                  <div class="textarea-box">
+                    <textarea class="textarea" placeholder="내용을 입력해주세요" maxlength="1000" disabled></textarea>
+                    <p class="byte-check"><span class="count">0</span><span class="count-total">1,000</span></p>
+                  </div>
+                </div>
+                <!-- error 케이스 -->
+                <div class="wrap-form-input err"><!-- err 클래스 추가 필요 -->          
+                  <div class="textarea-box">
+                    <textarea class="textarea" placeholder="문의하실 내용을 남겨주세요" maxlength="1000"></textarea>
+                    <p class="byte-check" style="display:none;"><span class="count">0</span><span class="count-total">1,000</span></p>
+                    <div class="textarea-bot">
+                      <div class="input-info status on"> <!-- 메시지 상태 아이콘 존재시 status 클래스 추가 필요 / on 클래스 존재시 메시지 노출 -->
+                        <span class="msg">에러메세지를 입력하세요</span>
+                      </div>                                            
+                    </div>
                   </div>
                 </div>
 
-                <div class="form-group ty02">
-                  <div class="wrap-form label-tit">
-                    <label for="username">
-                      <span>성명</span>
-                    </label>
-                  </div>
-                  <div class="wrap-form-input">
-                    <input type="text" placeholder="성명 입력" id="username" />
-                  </div>
-                </div>
-
-              </di v>
+              </div>
               <div class="code">
                 <pre class="brush: js;">
                 </pre>
@@ -750,24 +789,47 @@
             </div>
             <!--  -->
             <div class="subSection">
-              <h3 class="guideSubTit">4. Form: Textarea 01</h3>
+              <h3 class="guideSubTit">7. selectbox option</h3>
               <div class="ui-item">
-                <!-- text area -->
-                <div class="wrap-form textarea">
-                  <textarea placeholder="문의하실 내용을 남겨주세요"></textarea>
-
-                  <!-- 하단 문구 & count 영역 : 필요시 사용 -->
-                  <div class="wrap-form-bottom comment-type02">
-                    <div class="comment-type02-1">
-                      <p>
-                        <span class="text-comment">
-                          유의사항 문구입니다
-                        </span>
-                      </p>
-                    </div>
-                    <p class="text-num-chk">
-                      <span>0 / 500</span>
-                    </p>
+                <div class="page-map-wrap">
+                    <ul>
+                        <li>
+                            <a href="/"><img src="../public/inc/images/sample/icon_home.svg" alt="home" title="홈 이동" /></a>
+                        </li>
+                        <li class="select-cate">
+                            <button type="button" id="select-cate1">회사소개</button>
+                            <ul class="select-menu">
+                                <li><a href="javascript:;">사업영역</a></li>
+                                <li><a href="javascript:;" class="active">회사소개</a></li>
+                                <li><a href="javascript:;">지속가능경영</a></li>
+                                <li><a href="javascript:;">투자정보</a></li>
+                                <li><a href="javascript:;">채용정보</a></li>
+                            </ul>
+                        </li>
+                        <li class="select-cate">
+                            <button type="button" id="select-cate2">글로벌 네트워크</button>
+                            <ul class="select-menu">
+                                <li><a href="javascript:;">소개</a></li>
+                                <li><a href="javascript:;">정도경영</a></li>
+                                <li><a href="javascript:;" class="active">글로벌 네트워크</a></li>
+                                <li><a href="javascript:;">뉴스룸</a></li>
+                                <li><a href="javascript:;">R&D</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="map-info">
+                  <div class="map-info-list">
+                      <div class="select-cate">
+                          <button type="button">생산</button>                                                
+                          <ul class="select-menu">
+                              <li><a href="javascript:;" class="active">생산</a></li>
+                              <li><a href="javascript:;">본사</a></li>
+                              <li><a href="javascript:;">R&D</a></li>
+                              <li><a href="javascript:;">생산</a></li>
+                              <li><a href="javascript:;">판매</a></li>
+                          </ul>
+                      </div>
                   </div>
                 </div>
               </div>
@@ -798,6 +860,84 @@
           </div>
         </section>
         <!-- cont04 End -->
+        <section id="cont05" class="section">
+          <h2 class="guideTit">Tab</h2>
+          <div class="info">
+            <div class="subSection">
+              <h3 class="guideSubTit">1. tab</h3>
+              <div class="ui-item">
+                <div class="tab-wrap">
+                  <ul class="tab-category" role="tablist">
+                    <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">비전 및 전략</button></li>
+                    <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">거버넌스</button></li>
+                    <li class="tab" id="tab3"><button role="tab" aria-selected="false" aria-controls="tab3-content">글로벌 파트너십</button></li>
+                  </ul>
+                  <div class="tab-content-box">
+                    <div class="tab-content on" id="tab1-content">
+                      비전 및 전략 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                      컨텐츠 정보를 등록해주세요.
+                    </div>
+                    <div class="tab-content" id="tab2-content">
+                        거버넌스 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                        컨텐츠 정보를 등록해주세요.
+                    </div>
+                    <div class="tab-content" id="tab3-content">
+                        글로벌 파트너십 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                        컨텐츠 정보를 등록해주세요.
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-wrap">
+                  <ul class="tab-category" role="tablist">
+                    <li class="tab on" id="tab4"><button role="tab" aria-selected="true" aria-controls="tab1-content">Tab 4</button></li>
+                    <li class="tab" id="tab5"><button role="tab" aria-selected="false" aria-controls="tab2-content">Tab 5</button></li>
+                    <li class="tab" id="tab6"><button role="tab" aria-selected="false" aria-controls="tab3-content">Tab 6</button></li>
+                  </ul>
+                  <div class="tab-content-box">
+                    <div class="tab-content on" id="tab4-content">
+                      비전 및 전략 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                      컨텐츠 정보를 등록해주세요.
+                    </div>
+                    <div class="tab-content" id="tab5-content">
+                        거버넌스 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                        컨텐츠 정보를 등록해주세요.
+                    </div>
+                    <div class="tab-content" id="tab6-content">
+                        글로벌 파트너십 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                        컨텐츠 정보를 등록해주세요.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+                </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- cont05 End -->
+        <section id="cont06" class="section">
+          <h2 class="guideTit">Accordion</h2>
+          <div class="info">
+            <div class="subSection">
+              <h3 class="guideSubTit">기본 타입</h3>
+              <div class="ui-item">
+                <div class="accordion-list acdItem">
+                  <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd_btn accordion-btn"><p class="acd_tit">MSDS 및 UL 인증서 등을 받고 싶습니다.</p></a>
+                  <div class="acd_panel accordion-content" role="region">
+                    LG에너지솔루션이 제조하는 리튬이온배터리 셀은 오직 산업용 고객 (e.g. 배터리 팩 제조사, 시스템 제조사 등)에만 판매됩니다. LG에너지솔루션은 리튬 이온 배터리 셀/팩의 취급으로 인한 사고 예방 및 안전한 제품 사용을 위해 개인 소비자에게는 리튬이온배터리 셀 (i.e. 18650, 단전지)을 판매하지 않습니다.전자상거래를 통해 유통되는 LG에너지솔루션의 리튬이온배터리 셀을 구매하지 마시기를 바랍니다. 자세한 내용은 홈페이지에 게시된 ‘리튬이온배터리 안전가이드’를 참고해주시기 바랍니다.
+                  </div>
+                </div>
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+                </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- cont06 End -->
 
     </section>
   </div>
@@ -874,57 +1014,8 @@
     });
 
     // fadeEvent 함수 호출
-    fadeEvent();
-    // 파일첨부박스 input 상태에 따른 파일첨부 버튼 disabled 처리
-    setTimeout(function(){
-      chkFileboxDisabled();
-    },3000)
+    fadeEvent();    
     
   });
-
-
-  function chkFileboxDisabled() {
-    const filebox = document.querySelectorAll('.filebox');
-  
-    filebox.forEach(function(box, index) {
-      const fileUploadName = box.querySelector('.upload-name');
-      const fileAttachBtn = box.querySelector('input[type=file]');
-      if (fileUploadName.disabled == true){
-        fileAttachBtn.classList.add('disabled');
-        fileAttachBtn.setAttribute('disabled', true)
-      } else {
-        fileAttachBtn.classList.remove('disabled');
-        fileAttachBtn.removeAttribute('disabled');
-        
-      }
-    });
-
-  }
-
-  // 파일 첨부 input 이벤트 리스너
-  // 파일 첨부 input의 change 이벤트를 감지하여 파일 이름을 표시
-  const fileInputs = document.querySelectorAll('input[type=file]')
-  const uploadName = document.querySelectorAll('.upload-name');
-
-  fileInputs.forEach(function(fileInput) {
-    fileInput.addEventListener('change', function(e) {
-      const fileName = this.files[0]?.name || '파일첨부 (선택)';     
-      e.target.closest(".input-wrap").querySelector('.upload-name').value = fileName;
-      e.target.closest(".input-wrap").querySelector('.upload-name').setAttribute('readonly', true);
-    });
-  });
-
-  // 파일 첨부 input을 클릭할 수 있는 label 요소에 이벤트 리스너 추가
-  // label 요소를 클릭하면 해당 input[type=file]을 클릭하도록 설정
-  uploadName.forEach( name => {
-    name.addEventListener('click', function() {
-      const fileInput = this.closest('.input-wrap').querySelector('input[type=file]');
-      if (fileInput) {
-        fileInput.click();
-      }
-    });
-  });
-
-
 </script>
 </html>
