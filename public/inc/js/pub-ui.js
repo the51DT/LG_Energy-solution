@@ -22,25 +22,36 @@ var pubUi = {
 
         self.tabLists = document.querySelectorAll(".tab-wrap [role=tablist]");
 
-        self.pageMap = document.querySelectorAll(".select-menu");
-        self.mapCateBtn = document.querySelectorAll(".select-cate button");        
+        self.selectMenu = document.querySelectorAll(".select-menu");
+        self.selectCate = document.querySelectorAll(".select-cate");
+        self.selectCateBtn = document.querySelectorAll(".select-cate button");        
 
     },
     // bindEvents - 클릭이벤트 등 이벤트 핸들링 관련 함수
-    bindEvents: function () {
-        self.mapCateBtn.forEach((targetBtn) => {
+    bindEvents: function () {        
+        self.selectCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", function (e) {
+                const currentTarget = e.currentTarget;
+
+                // 클릭한 타겟 selectbox 이외 다른 selectbox 모두 숨기기
+                self.selectCateBtn.forEach(otherTargetBtn => {
+                    if(otherTargetBtn != currentTarget) {
+                        otherTargetBtn.classList.remove("active");
+                        otherTargetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
+                    }
+                })
+                
                 if (targetBtn.closest(".select-cate").querySelector(".select-menu").classList.contains("on")) {
                     targetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
                     targetBtn.classList.remove("active");
                 } else {
                     targetBtn.closest(".select-cate").querySelector(".select-menu").classList.add("on");
                     targetBtn.classList.add("active");
-                }
+                }                
             });
         });        
 
-        self.pageMap.forEach((map) => {
+        self.selectMenu.forEach((map) => {
             const pageMapCate = map.querySelectorAll("li > a");
             pageMapCate.forEach((subCate) => {
                 subCate.addEventListener("click", function (e) {
