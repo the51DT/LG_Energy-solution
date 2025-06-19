@@ -193,7 +193,6 @@ var form = {
         });
     },
     textareaResize: function (obj) {
-        console.log(obj)
         obj.style.height = "auto";
         obj.style.height = obj.scrollHeight + 2 + "px";
     },
