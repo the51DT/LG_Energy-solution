@@ -30,12 +30,12 @@ $(document).ready(function($) {
 
 
 
-    $(".content-item04 .more").on("click", function(){
-        var eventBtn = $(this)
-        var eventCont = eventBtn.parents("[class*=cont0]");
+    $(".content-item04 [class*=cont0]").on("mouseenter", function(){
+        var eventCont = $(this);
         eventCont.addClass("on").siblings().removeClass("on")
         eventCont.parent().attr("class", "").addClass("cont-event" + (eventCont.index() + 1))
-    })
+    });
+
     $(".content-item02 .event-item02").on("click", function(){
         var eventBtn = $(this),
             eventCont = eventBtn.parents(".area1"),
@@ -92,14 +92,14 @@ $(document).ready(function($) {
     $(".wrap.main_p").on("scroll", function(){
         var nowScroll = $(this).scrollTop(),
             page_h = $(window).height();
-        if(nowScroll > 100){
-            eventParent.addClass("scroll-on");
-            $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI.svg")
-        }else{
+        // if(nowScroll > 100){
+        //     eventParent.addClass("scroll-on");
+        //     $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI.svg")
+        // }else{
             
-            eventParent.removeClass("scroll-on");
-            $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI_wh.svg")
-        }
+        //     eventParent.removeClass("scroll-on");
+        //     $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI_wh.svg")
+        // }
         if(nowScroll > page_h){
             console.log(page_h)
             $("aside").fadeIn(500);

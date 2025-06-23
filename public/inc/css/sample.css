@@ -1,5 +1,12 @@
 body {overflow: auto;}
+<<<<<<< Updated upstream
 .wrap.sub_p {overflow: revert; height:100%;}
+=======
+.wrap.sub_p.cyanogen {overflow: revert;}
+
+
+
+>>>>>>> Stashed changes
 .page-map-wrap {font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; z-index: 50; padding: 1.5625rem 0; margin-top:-79px; width: 100%; background: transparent;  top:-1px;}
 .page-map-wrap::before {content:''; width: 50%; height: 5rem; background-color: #fff; position: absolute; top: 0; left: 0;}
 .page-map-wrap:before + ul:not(.page-map) {position:absolute; top:0; left:0;}
