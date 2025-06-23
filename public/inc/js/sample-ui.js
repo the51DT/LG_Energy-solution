@@ -432,7 +432,7 @@ var pubUi = {
                 allView.classList.remove("active");
                 setTimeout(() => {
                     eachView.style.display = "block";
-                }, 400); // transition 시간만큼 기다림
+                }, 100);
 
                 setTimeout(function () {
                     pubUi.scrollToEvt("#eachView");
