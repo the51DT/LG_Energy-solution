@@ -176,7 +176,7 @@ var pubUi = {
             const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
             const totalHeadHeight = pageMapHeight + contentHeadHeight;
                         
-            document.querySelector("html > body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
+            document.querySelector("body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
         }        
     },
     historyMotionEvt: function(){
@@ -432,7 +432,7 @@ var pubUi = {
                 allView.classList.remove("active");
                 setTimeout(() => {
                     eachView.style.display = "block";
-                }, 100);
+                }, 400); // transition 시간만큼 기다림
 
                 setTimeout(function () {
                     pubUi.scrollToEvt("#eachView");
