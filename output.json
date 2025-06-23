@@ -177,7 +177,10 @@
             "thirdaryThirdaryEnabled": "#e12991",
             "thirdaryThirdaryPressed": "#99095b",
             "thirdaryThirdaryDisabled": "#ffcde9",
-            "strokeStrokeDefault02": "#858889"
+            "strokeStrokeDefault02": "#858889",
+            "accentSuccessEnabled": "#266df2",
+            "accentSuccessPressed": "#194ba9",
+            "accentSuccessDisabled": "#bacff5"
         }
     },
     "typography": {
@@ -287,7 +290,7 @@
             "horizontalSpacingMobileSpacing03": 24,
             "horizontalSpacingMobileSpacing04": 32,
             "horizontalSpacingMobileSpacing05": 40,
-            "horizontalSpacingMobileSpacing06": 48,
+            "horizontalSpacingMobileSpacing06 ": 48,
             "horizontalSpacingMobileSpacing07": 56,
             "horizontalSpacingMobileSpacing08": 80,
             "horizontalSpacingMobileSpacing09": 96,

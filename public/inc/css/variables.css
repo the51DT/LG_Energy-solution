@@ -172,6 +172,9 @@
     --colorElement-light-thirdary-thirdary-pressed: #99095b;
     --colorElement-light-thirdary-thirdary-disabled: #ffcde9;
     --colorElement-light-stroke-stroke-default02: #858889;
+    --colorElement-light-accent-success-enabled: #266df2;
+    --colorElement-light-accent-success-pressed: #194ba9;
+    --colorElement-light-accent-success-disabled: #bacff5;
     --typography-value-family-detail: Pretendard;
     --typography-value-family-body: Pretendard;
     --typography-value-family-large: Pretendard;
@@ -269,7 +272,7 @@
     --spacing-mode1-horizontal-spacing-mobile-spacing03: 24;
     --spacing-mode1-horizontal-spacing-mobile-spacing04: 32;
     --spacing-mode1-horizontal-spacing-mobile-spacing05: 40;
-    --spacing-mode1-horizontal-spacing-mobile-spacing06: 48;
+    --spacing-mode1-horizontal-spacing-mobile-spacing06 : 48;
     --spacing-mode1-horizontal-spacing-mobile-spacing07: 56;
     --spacing-mode1-horizontal-spacing-mobile-spacing08: 80;
     --spacing-mode1-horizontal-spacing-mobile-spacing09: 96;

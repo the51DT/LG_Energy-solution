@@ -45,12 +45,12 @@ $(document).ready(function($) {
             return
         }else if(eventVideoSrc.hasClass("video2")){
             eventVideoSrc.attr("class","");
-            eventVideoSrc.addClass("video1").attr("src","../../../inc/video/2_Main_battery(pouch).mp4")
+            eventVideoSrc.addClass("video1").attr("src","../../../inc/video/4_Main_battery(re-pouch).mp4")
             eventVideo[0].load();
             eventVideo[0].play();
         }else{
             eventVideoSrc.attr("class","")
-            eventVideoSrc.addClass("video1").attr("src","../../../inc/video/2_Main_battery(pouch).mp4")
+            eventVideoSrc.addClass("video1").attr("src","../../../inc/video/4_Main_battery(re-pouch).mp4")
             eventVideo[0].load();
             eventVideo[0].play();
         }
