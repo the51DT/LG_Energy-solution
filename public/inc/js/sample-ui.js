@@ -7,6 +7,7 @@ var pubUi = {
         pubUi.exceptionStickyEvt();
         pubUi.scrollToEvt();
         pubUi.historyMotionEvt();
+        pubUi.historyViewEvt();
     },
     // bindEvents - 클릭이벤트 등 이벤트 핸들링 관련 함수
     bindEvents: function () {
@@ -99,7 +100,7 @@ var pubUi = {
             });
         });
 
-
+        
         $("body").on("scroll", function () {
             var nowScroll = $(this).scrollTop(),
                 page_h = $(window).height() * 0.3;
@@ -109,9 +110,27 @@ var pubUi = {
             } else {
                 $("aside").hide();
             }
-        });
-        $(".wrap.sub_p aside").on("click", function () {
-            $("body").stop().animate({ scrollTop: 0 }, 300);
+            
+            $(".wrap.sub_p aside").on("click", function () {
+                $("body").stop().animate({ scrollTop: 0 }, 300);
+            });
+            
+            
+
+            if ($(".history-wrap").length > 0) {
+                const historyView = document.querySelector(".history-wrap.each-view");
+                const historyViewY = historyView.offsetTop - 140;
+                
+                if (nowScroll === 0) {
+                    historyView.removeAttribute("data-scrolling")
+                    console.log("스크롤 최상단, isScrolledOnce 초기화");                    
+                }
+                if (nowScroll < historyViewY && !historyView.getAttribute("data-scrolling")) {                    
+                    document.querySelector("body").scrollTo({ top: historyViewY, behavior: "smooth" });
+                    historyView.setAttribute("data-scrolling", true);
+                    console.log(historyViewY + "히스토리 위치로 스크롤 이동");
+                } 
+            }
         });
     },
     // 탭카테고리 제어 이벤트
@@ -368,13 +387,19 @@ var pubUi = {
                 const atLast = currentIdx === leftItems.length - 1;
             
                 // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
-                const allowExternalScroll =
-                    (isScrollingDown && atLast) ||
-                    (!isScrollingDown && atFirst);
+                const allowExternalScroll = (isScrollingDown && atLast) || (!isScrollingDown && atFirst);
             
                 // 🔒 외부 스크롤 차단
                 if (!allowExternalScroll) {
                     e.preventDefault();
+                    // setTimeout(function () {                        
+                    //     document.querySelector(".history-wrap.each-view").setAttribute("data-scrolling", true);
+                    // }, 500);
+                } else {                    
+                    // setTimeout(function(){                        
+                    //     document.querySelector(".history-wrap.each-view").setAttribute("data-scrolling", true);
+                    // },500)
+                    
                 }
             
                 // 연도 전환 처리
@@ -386,6 +411,33 @@ var pubUi = {
                     activateYearByIndex(nextIdx);
                 }
             }, { passive: false });
+        }
+    },
+    historyViewEvt: function(){
+
+        if(document.querySelector(".history-wrap") != null) {
+            const allView = document.querySelector("#allView");
+            const eachView = document.querySelector("#eachView");
+            const showAllBtn = document.querySelector("button[onclick*='#allView']");
+            const backToEachBtn = document.querySelector("button[onclick*='#eachView']");
+            
+            // 한눈에 보기 클릭 시 팝업 표시
+            showAllBtn.addEventListener("click", () => {
+                allView.classList.add("active");
+                eachView.style.display = "none";
+            });
+
+            // 하나씩 보기 클릭 시 팝업 숨기기
+            backToEachBtn.addEventListener("click", () => {
+                allView.classList.remove("active");
+                setTimeout(() => {
+                    eachView.style.display = "block";
+                }, 400); // transition 시간만큼 기다림
+
+                setTimeout(function () {
+                    pubUi.scrollToEvt("#eachView");
+                }, 1000);
+            });     
         }
     }
 };

@@ -164,7 +164,7 @@
                             <div class="tab-content" id="tab2-content">
                                 비전
                             </div>
-                            <div class="tab-content on" id="tab3-content">                                
+                            <div class="tab-content on" id="tab3-content">
                                 <div class="history-wrap each-view" id="eachView">
                                     <div class="history-cont-wrap">
                                         <div class="left-area">
@@ -240,11 +240,12 @@
                                         </div>
                                     </div>
                                     <div class="btn-area">
-                                        <button type="button" onclick="pubUi.scrollToEvt('#allView')">한눈에 보기</button>
+                                        <button type="button" onclick="pubUi.historyViewEvt('#allView')">한눈에 보기</button>
                                     </div>
-                                </div>
-                                <div class="history-container">
-                                    <div class="history-wrap all-view" id="allView">
+                                </div>                                
+                                <!-- (한눈에 보기) 레이어팝업 형식으로 노출되도록 변경 -->
+                                <div class="history-container" id="allView">
+                                    <div class="history-wrap all-view">
                                         <div class="history-cont-wrap">
                                             <div class="year-container">
                                                 <ul class="year-item-list">
@@ -418,7 +419,7 @@
                                             </div>
                                         </div>
                                         <div class="btn-area">
-                                            <button type="button" onclick="pubUi.scrollToEvt('#eachView')">하나씩 보기</button>
+                                            <button type="button" onclick="pubUi.historyViewEvt('#eachView')">하나씩 보기</button>
                                         </div>
                                     </div>
                                 </div>
