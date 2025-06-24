@@ -124,13 +124,13 @@ var pubUi = {
                 if (nowScroll === 0) {
                     historyView.removeAttribute("data-scrolling")
                     document.querySelector("body").style.overflow = "auto";
-                    console.log("스크롤 최상단, isScrolledOnce 초기화");
+                    // console.log("스크롤 최상단, isScrolledOnce 초기화");
                 }
                 if (nowScroll < historyViewY && !historyView.getAttribute("data-scrolling")) {                    
                     document.querySelector("body").scrollTo({ top: historyViewY, behavior: "smooth" });
                     historyView.setAttribute("data-scrolling", true);
                     document.querySelector("body").style.overflow = "hidden"
-                    console.log(historyViewY + "히스토리 위치로 스크롤 이동");
+                    // console.log(historyViewY + "히스토리 위치로 스크롤 이동");
                 } 
             }
         });
@@ -144,7 +144,7 @@ var pubUi = {
             tab.addEventListener("click", function (e) {
                 const target = e.currentTarget;
                 const targetId = target.getAttribute("id");
-                console.log(targetId);
+                // console.log(targetId);
 
                 tabCategory.forEach((otherTab) => {
                     if (otherTab !== target) {
@@ -399,8 +399,8 @@ var pubUi = {
                 if (!allowExternalScroll) {
                     e.preventDefault();                    
                     document.querySelector("body").style.overflow = "hidden";
-                    
-                    if (isScrollingUp) {
+
+                    if (isScrollingUp || isScrollingDown) { //내부 스크롤 영역 안에서는 포지션 벗어나지 않도록 위치 고정
                         document.querySelector("body").scrollTo({ top: historyViewY, behavior: "smooth" });
                     }
                 } else {
