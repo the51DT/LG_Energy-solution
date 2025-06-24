@@ -136,11 +136,13 @@ ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
 
 
 /* 연혁 - 한눈에 보기 */
-.history-container {background-color: #f3f5f7; position: fixed; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 9999; transform: translateY(100%); transition: transform 0.4s ease-in-out; overflow-y: auto;}
-.history-container.active {transform: translateY(0);}
+.history-container {background-color: #f3f5f7; position: fixed; bottom: -9999px; left: 0; width: 100%; height: 100%; z-index: 9999; transition: bottom 0.4s ease-in-out; overflow-y: auto;} 
 .history-wrap.all-view {padding: 7.75rem 0 14.69rem;}
-.history-wrap.all-view .btn-area {top: 0; bottom:revert;}
-.history-wrap.all-view .btn-area button {border-radius:0 0 1rem 1rem; border-top:0; border-bottom:1px solid #555758;}
+.history-wrap.all-view .btn-area {top: 0; bottom:revert; position:fixed; opacity:0; transition: opacity 0.8s ease-in-out;}
+.history-wrap.all-view .btn-area button {border-radius:0 0 1rem 1rem; border-top:0; border-bottom:1px solid #555758; display:none;}
+.history-container.active {bottom: 0;} 
+.history-container.active .history-wrap.all-view .btn-area {opacity: 1;}
+.history-container.active .history-wrap.all-view .btn-area button {display: inline-flex;}
 .history-wrap.all-view .history-cont-wrap .year-item-list {position: relative;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item:before {content:''; display:block; width:1px; height:calc(100% - 120px); background:#C9CED1; position: absolute; top:45px; left:0;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item {display:flex; justify-content: space-between; text-align: left; }
@@ -158,10 +160,7 @@ ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc::before {content:''; width:0.25rem; height:0.25rem; background-color:#555758; display: inline-block; border-radius: 50%; position:absolute; top:50%; left:0; transform: translateY(-50%);}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .img-box img {width: 29.125rem; height:17.5rem; border-radius:1.5rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .img-box .img-title {margin-top:1.25rem;}
-
-.num-pop {
-    animation: popIn 0.3s ease-out;
-}
+.num-pop { animation: popIn 0.3s ease-out;}
 
 @keyframes popIn {
     0% { transform: scale(1); }

@@ -121,11 +121,11 @@ var pubUi = {
                 const historyView = document.querySelector(".history-wrap.each-view");
                 const historyViewY = historyView.offsetTop - 140;
                 
-                if (nowScroll === 0) {
-                    historyView.removeAttribute("data-scrolling")
-                    document.querySelector("body").style.overflow = "auto";
-                    // console.log("스크롤 최상단, isScrolledOnce 초기화");
-                }
+                // if (nowScroll === 0) {
+                //     historyView.removeAttribute("data-scrolling")
+                //     document.querySelector("body").style.overflow = "auto";
+                //     // console.log("스크롤 최상단, isScrolledOnce 초기화");
+                // }
                 if (nowScroll < historyViewY && !historyView.getAttribute("data-scrolling")) {                    
                     document.querySelector("body").scrollTo({ top: historyViewY, behavior: "smooth" });
                     historyView.setAttribute("data-scrolling", true);
@@ -398,13 +398,13 @@ var pubUi = {
                 // 🔒 외부 스크롤 차단
                 if (!allowExternalScroll) {
                     e.preventDefault();                    
-                    document.querySelector("body").style.overflow = "hidden";
-
-                    if (isScrollingUp || isScrollingDown) { //내부 스크롤 영역 안에서는 포지션 벗어나지 않도록 위치 고정
-                        document.querySelector("body").scrollTo({ top: historyViewY, behavior: "smooth" });
-                    }
+                    // document.querySelector("body").style.overflow = "hidden";
                 } else {
                     document.querySelector("body").style.overflow = "auto";
+
+                    if (isScrollingUp) { //내부 스크롤 영역 안에서는 포지션 벗어나지 않도록 위치 고정
+                    document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+                    }
                 }                                                
             
                 // 연도 전환 처리
