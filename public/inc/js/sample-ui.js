@@ -474,14 +474,11 @@ var pubUi = {
                     e.preventDefault();
                     // document.querySelector("body").style.overflow = "hidden";
                 } else {
-                    document.querySelector("body").style.overflow = "auto";
-
-                    setTimeout(function () {
-                        if (isScrollingUp) {
-                            console.log("scrollUp !!");
-                            document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
-                        }
-                    }, 1000);
+                    document.querySelector("body").style.overflow = "auto";                    
+                    if (isScrollingUp) {
+                        console.log("scrollUp !!!");
+                        document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+                    }                    
                 }
 
                 // 연도 전환 처리
