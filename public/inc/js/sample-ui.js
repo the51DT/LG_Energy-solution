@@ -115,21 +115,15 @@ var pubUi = {
                 $("body").stop().animate({ scrollTop: 0 }, 300);
             });
             
-            
-
             if ($(".history-wrap").length > 0) {
                 const historyView = document.querySelector(".history-wrap.each-view");
                 const historyViewY = historyView.offsetTop - 140;
-                
-                // if (nowScroll === 0) {
-                //     historyView.removeAttribute("data-scrolling")
-                //     document.querySelector("body").style.overflow = "auto";
-                //     // console.log("스크롤 최상단, isScrolledOnce 초기화");
-                // }
-                if (nowScroll < historyViewY && !historyView.getAttribute("data-scrolling")) {                    
+                                
+                if (nowScroll > 0 && !historyView.getAttribute("data-scrolling")) {
                     document.querySelector("body").scrollTo({ top: historyViewY, behavior: "smooth" });
                     historyView.setAttribute("data-scrolling", true);
                     document.querySelector("body").style.overflow = "hidden"
+                    console.log("scrollDown !!!");
                     // console.log(historyViewY + "히스토리 위치로 스크롤 이동");
                 } 
             }
@@ -472,12 +466,15 @@ var pubUi = {
 
                 if (!allowExternalScroll) {
                     e.preventDefault();
-                    // document.querySelector("body").style.overflow = "hidden";
+                    // document.querySelector("body").style.overflow = "hidden";                    
                 } else {
                     document.querySelector("body").style.overflow = "auto";                    
                     if (isScrollingUp) {
                         console.log("scrollUp !!!");
                         document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+                        setTimeout(function(){
+                            historyView.removeAttribute("data-scrolling");
+                        },1000)
                     }                    
                 }
 
