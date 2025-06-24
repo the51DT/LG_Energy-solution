@@ -238,6 +238,7 @@ background: #FFF;overflow: hidden;position: relative;}
 .main_p .content-item07 .area-box li:hover a .more{color:#fff}
 /* aside */
 aside{position:fixed;bottom:100px;right:30px;display: none; z-index:100}
+aside > img{cursor: pointer;}
 
 /* 서브 페이지 */
 .sub_p .lang-button{color:var(--text-text-default-01, #171819);}
