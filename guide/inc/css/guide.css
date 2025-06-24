@@ -750,23 +750,30 @@ nav .layout-list li:first-child a {
   color: #fff;
 }
 .color-type01 {
-  background: #121c72;
+  background: #3EC2CF;
 }
 .color-type02 {
-  background: #163376;
+  background: #554596;
 }
 .color-type03 {
-  background: #367a1b;
+  background: #E12991;
 }
 .color-type04 {
-  background: #999999;
+  background: #F1593F;
 }
 .color-type05 {
-  background: #e92d1f;
+  background: #303188;
 }
 .color-type06 {
-  background: #ffbd00;
+  background: #A6CE39;
 }
 .color-type07 {
-  background: #5bbb56;
+  background: #858889;
+}
+.color-type-black {
+  background: #000000;
+}
+.color-type-white {
+  background: #FFFFFF;
+  color: #171819;
 }

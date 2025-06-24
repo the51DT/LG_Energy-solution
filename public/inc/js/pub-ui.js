@@ -33,21 +33,24 @@ var pubUi = {
             targetBtn.addEventListener("click", function (e) {
                 const currentTarget = e.currentTarget;
 
-                // 클릭한 타겟 selectbox 이외 다른 selectbox 모두 숨기기
-                self.selectCateBtn.forEach(otherTargetBtn => {
-                    if(otherTargetBtn != currentTarget) {
-                        otherTargetBtn.classList.remove("active");
-                        otherTargetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
-                    }
-                })
                 
-                if (targetBtn.closest(".select-cate").querySelector(".select-menu").classList.contains("on")) {
-                    targetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
-                    targetBtn.classList.remove("active");
-                } else {
-                    targetBtn.closest(".select-cate").querySelector(".select-menu").classList.add("on");
-                    targetBtn.classList.add("active");
-                }                
+                if(!currentTarget.closest(".select-cate").classList.contains("disabled")){
+                    // 클릭한 타겟 selectbox 이외 다른 selectbox 모두 숨기기
+                    self.selectCateBtn.forEach((otherTargetBtn) => {
+                        if (otherTargetBtn != currentTarget) {
+                            otherTargetBtn.classList.remove("active");
+                            otherTargetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
+                        }
+                    });
+
+                    if (targetBtn.closest(".select-cate").querySelector(".select-menu").classList.contains("on")) {
+                        targetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
+                        targetBtn.classList.remove("active");
+                    } else {
+                        targetBtn.closest(".select-cate").querySelector(".select-menu").classList.add("on");
+                        targetBtn.classList.add("active");
+                    }
+                }                             
             });
         });        
 
@@ -58,6 +61,8 @@ var pubUi = {
                     pageMapCate.forEach((otherBox) => {
                         if (otherBox !== e.currentTarget) {
                             otherBox.classList.remove("active");
+                        } else {
+                            otherBox.classList.add("active");
                         } 
                     });
                     const subCateName = subCate.innerText;
