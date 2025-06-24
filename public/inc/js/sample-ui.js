@@ -270,13 +270,11 @@ var pubUi = {
             left.classList.add("active");
             right.classList.add("active");
 
-            
             if (leftItems[index - 1]) leftItems[index - 1].classList.add("prev");
             if (leftItems[index + 1]) leftItems[index + 1].classList.add("next");
             if (rightItems[index - 1]) rightItems[index - 1].classList.add("prev");
             if (rightItems[index + 1]) rightItems[index + 1].classList.add("next");
-            
-            
+
             // right 영역 표시/숨김 처리
             rightItems.forEach((item) => {
                 const show = item.classList.contains("active") || item.classList.contains("prev") || item.classList.contains("next");
@@ -377,47 +375,129 @@ var pubUi = {
         });
 
         // history-cont-wrap 내 스크롤 휠 이벤트 처리 (스크롤로 연도 이동)
+        // as-is
+        // if(historyContArea) {
+        //     historyContArea.addEventListener("wheel", (e) => {
+        //         const deltaY = e.deltaY;
+        //         const isScrollingDown = deltaY > 0;
+        //         const isScrollingUp = deltaY < 0;
+
+        //         const currentActive = document.querySelector(".left-area .item.active");
+        //         const currentIdx = leftItems.findIndex((item) => item === currentActive);
+
+        //         const atFirst = currentIdx === 0;
+        //         const atLast = currentIdx === leftItems.length - 1;
+
+        //         const historyView = document.querySelector(".history-wrap.each-view");
+        //         const historyViewY = historyView.offsetTop - 140;
+
+        //         // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
+        //         const allowExternalScroll = (isScrollingDown && atLast) || (!isScrollingDown && atFirst);
+
+        //         // 🔒 외부 스크롤 차단
+        //         if (!allowExternalScroll) {
+        //             e.preventDefault();
+        //             // document.querySelector("body").style.overflow = "hidden";
+        //         } else {
+        //             document.querySelector("body").style.overflow = "auto";
+
+        //             setTimeout(function(){
+        //                 if (isScrollingUp) {
+        //                     console.log("scrollUp !!");
+        //                     document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+        //                 }
+        //             },1000)
+        //         }
+
+        //         // 연도 전환 처리
+        //         const nextIdx = isScrollingDown
+        //             ? Math.min(currentIdx + 1, leftItems.length - 1)
+        //             : Math.max(currentIdx - 1, 0);
+
+        //         if (nextIdx !== currentIdx) {
+        //             activateYearByIndex(nextIdx);
+        //         }
+        //     }, { passive: false });
+        // }
+
+        // to-be mac os 대응
         if(historyContArea) {
-            historyContArea.addEventListener("wheel", (e) => {
-                const deltaY = e.deltaY;
-                const isScrollingDown = deltaY > 0;
-                const isScrollingUp = deltaY < 0;
-            
+            let isHandlingScroll = false;
+
+            // 터치 시작 위치 저장 (iOS 터치 대응용) - ios는 휠이벤트 인식하지못해, touchpad기반이라 다른 이벤트 조건 처리되도록 예외처리 필요하다고하여 소스 수정하였음.
+            historyContArea.addEventListener("touchstart", (e) => { 
+                handleCustomScroll.touchStartY = e.touches[0].clientY; 
+                }, { passive: true }
+            );
+
+            // 다양한 이벤트 리스너 등록
+            ["wheel", "mousewheel", "DOMMouseScroll", "touchmove"].forEach((eventType) => {
+                historyContArea.addEventListener(eventType, handleCustomScroll, { passive: false });
+            });
+
+            function handleCustomScroll(e) {
+                // ✅ 중복 실행 방지
+                if (isHandlingScroll) return;
+
+                // ✅ 스크롤 방향 추출
+                let deltaY = 0;
+
+                if (e.type === "touchmove") {
+                    if (typeof handleCustomScroll.touchStartY === "number") {
+                        deltaY = handleCustomScroll.touchStartY - e.touches[0].clientY;
+                    }
+                } else {
+                    deltaY = e.deltaY || -e.wheelDelta || e.detail || 0;
+                }
+
+                const isScrollingDown = deltaY > 5;
+                const isScrollingUp = deltaY < -5;
+
+                if (!isScrollingDown && !isScrollingUp) return;
+
+                isHandlingScroll = true; // 🔒 debounce
+
+                // ✅ 기존 로직 그대로 유지
                 const currentActive = document.querySelector(".left-area .item.active");
                 const currentIdx = leftItems.findIndex((item) => item === currentActive);
-            
+
                 const atFirst = currentIdx === 0;
                 const atLast = currentIdx === leftItems.length - 1;
-                
+
                 const historyView = document.querySelector(".history-wrap.each-view");
                 const historyViewY = historyView.offsetTop - 140;
 
-                // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
-                const allowExternalScroll = (isScrollingDown && atLast) || (!isScrollingDown && atFirst);
-            
-                // 🔒 외부 스크롤 차단
+                // 외부 스크롤 허용 조건
+                const allowExternalScroll = (isScrollingDown && atLast) || (isScrollingUp && atFirst);
+
                 if (!allowExternalScroll) {
-                    e.preventDefault();                    
+                    e.preventDefault();
                     // document.querySelector("body").style.overflow = "hidden";
                 } else {
                     document.querySelector("body").style.overflow = "auto";
 
-                    if (isScrollingUp) {
-                        console.log("scrollUp")
-                        document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
-                    }
-                }                                                
-            
+                    setTimeout(function () {
+                        if (isScrollingUp) {
+                            console.log("scrollUp !!");
+                            document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                    }, 1000);
+                }
+
                 // 연도 전환 처리
-                const nextIdx = isScrollingDown
-                    ? Math.min(currentIdx + 1, leftItems.length - 1)
-                    : Math.max(currentIdx - 1, 0);
-            
+                const nextIdx = isScrollingDown ? Math.min(currentIdx + 1, leftItems.length - 1) : Math.max(currentIdx - 1, 0);
+
                 if (nextIdx !== currentIdx) {
                     activateYearByIndex(nextIdx);
                 }
-            }, { passive: false });
+
+                // ✅ debounce 해제 (500ms 후)
+                setTimeout(() => {
+                    isHandlingScroll = false;
+                }, 500);
+            }
         }
+
     },
     historyViewEvt: function(){
 
