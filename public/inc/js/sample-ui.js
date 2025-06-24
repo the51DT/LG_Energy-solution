@@ -402,8 +402,9 @@ var pubUi = {
                 } else {
                     document.querySelector("body").style.overflow = "auto";
 
-                    if (isScrollingUp) { //내부 스크롤 영역 안에서는 포지션 벗어나지 않도록 위치 고정
-                    document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+                    if (isScrollingUp) {
+                        console.log("scrollUp")
+                        document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
                     }
                 }                                                
             
