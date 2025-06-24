@@ -250,7 +250,7 @@ aside > img{cursor: pointer;}
 .header-wrap.on .header-area{height:6.825rem;border-bottom: 1px solid var(--stroke-stroke-default-03, #C9CED1);}
 .header-wrap.on{height:500px;}
 .header-wrap.scroll-on{height:6.825rem;}
-.header-cont{position:relative;left:50%;transform: translateX(-50%);width:100%;max-width:120rem;height:6.25rem;display:flex;justify-content: space-between;padding:3rem 3.75rem 1.5rem;}
+.header-cont{position:relative;left:50%;transform: translateX(-50%);width:100%;max-width:120rem;height:6.25rem;display:flex;align-items: center;justify-content: space-between;padding:1.25rem 3.75rem ;}
 .header-wrap.on .header-cont,
 .header-wrap.scroll-on .header-cont{height:6.825rem;}
 .sitemap-wrap{display:flex;align-items: center;}
