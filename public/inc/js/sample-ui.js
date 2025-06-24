@@ -123,11 +123,13 @@ var pubUi = {
                 
                 if (nowScroll === 0) {
                     historyView.removeAttribute("data-scrolling")
-                    console.log("스크롤 최상단, isScrolledOnce 초기화");                    
+                    document.querySelector("body").style.overflow = "auto";
+                    console.log("스크롤 최상단, isScrolledOnce 초기화");
                 }
                 if (nowScroll < historyViewY && !historyView.getAttribute("data-scrolling")) {                    
                     document.querySelector("body").scrollTo({ top: historyViewY, behavior: "smooth" });
                     historyView.setAttribute("data-scrolling", true);
+                    document.querySelector("body").style.overflow = "hidden"
                     console.log(historyViewY + "히스토리 위치로 스크롤 이동");
                 } 
             }
@@ -379,28 +381,31 @@ var pubUi = {
             historyContArea.addEventListener("wheel", (e) => {
                 const deltaY = e.deltaY;
                 const isScrollingDown = deltaY > 0;
+                const isScrollingUp = deltaY < 0;
             
                 const currentActive = document.querySelector(".left-area .item.active");
                 const currentIdx = leftItems.findIndex((item) => item === currentActive);
             
                 const atFirst = currentIdx === 0;
                 const atLast = currentIdx === leftItems.length - 1;
-            
+                
+                const historyView = document.querySelector(".history-wrap.each-view");
+                const historyViewY = historyView.offsetTop - 140;
+
                 // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
                 const allowExternalScroll = (isScrollingDown && atLast) || (!isScrollingDown && atFirst);
             
                 // 🔒 외부 스크롤 차단
                 if (!allowExternalScroll) {
-                    e.preventDefault();
-                    // setTimeout(function () {                        
-                    //     document.querySelector(".history-wrap.each-view").setAttribute("data-scrolling", true);
-                    // }, 500);
-                } else {                    
-                    // setTimeout(function(){                        
-                    //     document.querySelector(".history-wrap.each-view").setAttribute("data-scrolling", true);
-                    // },500)
+                    e.preventDefault();                    
+                    document.querySelector("body").style.overflow = "hidden";
                     
-                }
+                    if (isScrollingUp) {
+                        document.querySelector("body").scrollTo({ top: historyViewY, behavior: "smooth" });
+                    }
+                } else {
+                    document.querySelector("body").style.overflow = "auto";
+                }                                                
             
                 // 연도 전환 처리
                 const nextIdx = isScrollingDown
