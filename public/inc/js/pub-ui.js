@@ -1,4 +1,3 @@
-
 // pubUi
 var pubUi = {
     init: function () {
@@ -14,29 +13,29 @@ var pubUi = {
         acdItem.init();
     },
     settings: function(){
-        self = this;
-        self.tabCategory = document.querySelector(".tab-category");
-        self.mobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);        
-        self.isPc = window.innerWidth >= 1440;
-        self.isMobile = window.innerWidth <= 768;
+        pubUi.self = this;
+        pubUi.self.tabCategory = document.querySelector(".tab-category");
+        pubUi.self.mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;        
+        pubUi.self.isPc = window.innerWidth >= 1440;
+        pubUi.self.isMobile = window.innerWidth <= 768;
 
-        self.tabLists = document.querySelectorAll(".tab-wrap [role=tablist]");
+        pubUi.self.tabLists = document.querySelectorAll(".tab-wrap [role=tablist]");
 
-        self.selectMenu = document.querySelectorAll(".select-menu");
-        self.selectCate = document.querySelectorAll(".select-cate");
-        self.selectCateBtn = document.querySelectorAll(".select-cate button");        
+        pubUi.self.selectMenu = document.querySelectorAll(".select-menu");
+        pubUi.self.selectCate = document.querySelectorAll(".select-cate");
+        pubUi.self.selectCateBtn = document.querySelectorAll(".select-cate button");        
 
     },
     // bindEvents - 클릭이벤트 등 이벤트 핸들링 관련 함수
     bindEvents: function () {        
-        self.selectCateBtn.forEach((targetBtn) => {
+        pubUi.self.selectCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", function (e) {
                 const currentTarget = e.currentTarget;
 
                 
                 if(!currentTarget.closest(".select-cate").classList.contains("disabled")){
                     // 클릭한 타겟 selectbox 이외 다른 selectbox 모두 숨기기
-                    self.selectCateBtn.forEach((otherTargetBtn) => {
+                    pubUi.self.selectCateBtn.forEach((otherTargetBtn) => {
                         if (otherTargetBtn != currentTarget) {
                             otherTargetBtn.classList.remove("active");
                             otherTargetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
@@ -54,7 +53,7 @@ var pubUi = {
             });
         });        
 
-        self.selectMenu.forEach((map) => {
+        pubUi.self.selectMenu.forEach((map) => {
             const pageMapCate = map.querySelectorAll("li > a");
             pageMapCate.forEach((subCate) => {
                 subCate.addEventListener("click", function (e) {
@@ -206,54 +205,45 @@ var form = {
 
 // pop_layer
 var popUp = {
-    open: function (pop, btn) {
-        //$('body').removeClass('scroll');
+    open: function (pop, btn) {        
         document.querySelector("body").classList.add("noScroll");
 
-        if (document.querySelector(".modal_pop.open").length) {
-            var _zindex = parseInt(document.querySelector(pop).style.zIndex);
-            var _length = document.querySelector(".modal_pop.open").length;
+        const popEl = document.querySelector(pop);
+        const popS = document.createElement("div");
+        popS.className = "pop-s";
+        popS.setAttribute("tabindex", "0");
+        popEl.prepend(popS);
 
-            document.querySelector(pop).style.zIndex = _zindex + _length;
-        }
+        const popE = document.createElement("div");
+        popE.className = "pop-e";
+        popE.setAttribute("tabindex", "0");
+        popEl.append(popE);
+        
+        popEl.querySelector(".pop-wrap").setAttribute("tabindex", "0");
 
-        document.querySelector(pop).prepend('<div class="pop_s" tabindex="0"></div>');
-        document.querySelector(pop).append('<div class="pop_e" tabindex="0"></div>');
-        document.querySelector(pop).querySelector(".pop_wrap").setAttribute("tabindex", "0");
+        popEl.classList.add("open");
 
-        document.querySelector(pop).classList.add("open");
+        popEl.querySelector(".pop-s, .pop-e").addEventListener("focus", function () {
+            popEl.querySelector(".pop-wrap").focus();
+        });
 
-        document
-            .querySelector(pop)
-            .querySelector(".pop_s, .pop_e")
-            .addEventListener("focus", function () {
-                document.querySelector(pop).querySelector(".pop_wrap").focus();
-            });
-
-        document
-            .querySelector(pop)
-            .querySelector("[data-action=close]")
-            .on("click", function () {
-                popUp.close(pop, btn);
-            });
+        popEl.querySelector("[data-action=close]").addEventListener("click", () => {
+            popUp.close(pop, btn);
+        })
 
         popUp.scroll(pop);
         // pubUi.setMetaViewport(pop);
     },
     close: function (pop, btn) {
-        //12.01 추가
-        const btnText = document.querySelector(pop).querySelector("[data-action=close]").text();
-        if (btnText) {
-            localStorage.setItem("btnTxt", btnText);
-        }
+        const popEl = document.querySelector(pop);
 
-        document.querySelector(pop).classList.remove("open");
+        popEl.classList.remove("open");
+        popEl.removeAttribute("style");
+        popEl.querySelector(".pop-s").remove();
+        popEl.querySelector(".pop-e").remove();
+        popEl.querySelector(".pop-wrap").removeAttribute("tabindex");
 
-        document.querySelector(pop).removeAttribute("style");
-        document.querySelector(pop).querySelector(".pop_s, .pop_e").remove();
-        document.querySelector(pop).querySelector(".pop_wrap").removeAttribute("tabindex");
-
-        if (document.querySelector(".modal_pop.open").length < 1) {
+        if (document.querySelector(".modal-pop.open")) {
             document.querySelector("body").classList.remove("noScroll");
             //$('body').addClass('scroll');
         }
@@ -261,43 +251,43 @@ var popUp = {
         document.querySelector(btn).focus();
     },
     scroll: function (pop) {
-        var _scroll = document.querySelector(pop).querySelector(".pop_content").scrollTop;
+        const popEl = document.querySelector(pop);
+        
+        var _scroll = popEl.querySelector(".pop-content").scrollTop;
 
         if (1 < _scroll) {
-            document.querySelector(pop).querySelector(".pop_wrap").classList.add("scroll");
+            popEl.querySelector(".pop-wrap").classList.add("scroll");
         } else {
-            document.querySelector(pop).querySelector(".pop_wrap").classList.remove("scroll");
+            popEl.querySelector(".pop-wrap").classList.remove("scroll");
         }
 
-        document
-            .querySelector(pop)
-            .querySelector(".pop_content")
-            .addEventListener("scroll", function () {
-                var _scroll = document.querySelector(pop).querySelector(".pop_content").scrollTop;
+        popEl.querySelector(".pop-content").addEventListener("scroll", function () {
+            var _scroll = popEl.querySelector(".pop-content").scrollTop;
 
-                if (1 < _scroll) {
-                    document.querySelector(pop).querySelector(".pop_wrap").classList.add("scroll");
-                } else {
-                    document.querySelector(pop).querySelector(".pop_wrap").classList.remove("scroll");
-                }
-            });
+            if (1 < _scroll) {
+                popEl.querySelector(".pop-wrap").classList.add("scroll");
+            } else {
+                popEl.querySelector(".pop-wrap").classList.remove("scroll");
+            }
+        });
     },
 };
 
 // tab
 var tabList = {
     init: function () {
-        tabList.tab();        
+        tabList.tab();
+        tabList.scroll();
     },
     // 탭카테고리 제어 이벤트
-    tab: function () {                
-        Array.from(self.tabLists).forEach(function (tabList, index) {
+    tab: function () {
+        Array.from(pubUi.self.tabLists).forEach(function (tabList, index) {
             const tabCategory = tabList.querySelectorAll(".tab-category > li");
             tabCategory.forEach((tab, idx) => {
                 tab.addEventListener("click", function (e) {
                     const target = e.currentTarget;
                     const targetId = target.getAttribute("id");
-                    const tabContent = tabList.closest(".tab-wrap").querySelectorAll(".tab-content-box > .tab-content");``                    
+                    const tabContent = tabList.closest(".tab-wrap").querySelectorAll(".tab-content-box > .tab-content");                    
 
                     tabCategory.forEach((otherTab) => {
                         if (otherTab !== target) {
@@ -312,19 +302,18 @@ var tabList = {
 
                     document.querySelector(`#${targetId}`).classList.add("on");
                     document.querySelector(`#${targetId} > button`).setAttribute("aria-selected", true);
-                    document.querySelector(`#${targetId}-content`).classList.add("on");                    
+                    document.querySelector(`#${targetId}-content`).classList.add("on");
                     document.querySelector(`#${targetId}-content`).setAttribute("aria-expanded", true);
                 });
             });
         });
     },
     scroll: function () {
-        Array.from(self.tabLists).forEach(function (tabList, index) {
-            // mobile일 경우, scroll 클래스 추가하여 탭 스크롤 방식으로 변경
-            if (self.isMobile) {
-                tabList.classList.add("scroll");
+        Array.from(pubUi.self.tabLists).forEach(function (tabList, index) {
+            if (pubUi.self.isMobile || pubUi.self.mobileDevice) {
+                tabList.closest(".tab-cate-wrap").classList.add("scroll");
             } else {
-                tabList.classList.remove("scroll");
+                tabList.closest(".tab-cate-wrap").classList.remove("scroll");
             }
         });
     },
@@ -368,10 +357,17 @@ var acdItem = {
     }, 1000);
 
     // 리사이즈 대응
+    let resizeTimer;
     window.addEventListener("resize", () => {
-        clearTimeout(window.resizeTimer);
-        window.resizeTimer = setTimeout(() => {
+        if (resizeTimer) cancelAnimationFrame(resizeTimer);
+        resizeTimer = requestAnimationFrame(() => {
+            if (!pubUi.self) return; // 안전성 보강
+
+            //전역 변수값 갱신
+            pubUi.self.isPc = window.innerWidth >= 1440;
+            pubUi.self.isMobile = window.innerWidth <= 768;
+
             tabList.scroll();
-        }, 500);
+        });
     });
 })();

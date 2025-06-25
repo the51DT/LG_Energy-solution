@@ -777,3 +777,19 @@ nav .layout-list li:first-child a {
   background: #FFFFFF;
   color: #171819;
 }
+
+/* guide-title font 크기 설정시 추가하여 사용 */
+[class^="guide-title"] {margin-bottom: 0.625rem;}
+[class^="guide-title"][class*="-h3"] {
+  font-size: 1.5rem; line-height: 2.25rem; font-weight: 600;
+}
+
+.guide-wrapper {padding:1rem;}
+.guide-header {display: flex; justify-content: space-between; align-items: center;}
+.guide-section.intro {border-bottom: 1px solid #ccc; padding-bottom: 24px;}
+.guide-section.intro [class^="guide-title"] {color: seagreen; }
+.guide-section:not(:last-child) {margin-bottom: 24px;}
+.guide-list {padding-top:12px;}
+.guide-list > li {position: relative; font-size: 1rem; padding-left: 8px;}
+.guide-list > li:not(:last-child) {padding-bottom:8px;}
+.guide-list > li::before {content:''; display:inline-block; width: 4px; height: 4px; background-color: #acacac; border-radius: 50%; position: absolute; top:50%; left:0; transform: translateY(-50%);}

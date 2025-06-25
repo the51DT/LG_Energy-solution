@@ -26,20 +26,19 @@
     .wrap-form-input .input-info.status .msg {padding-left: 20px;}
     .wrap-form-input .input-info.status .msg::before {content:""; display:inline-block; width:calc(16 / 16 * 1rem); height:calc(16 / 16 * 1rem); top:-1px;}
 
-    /* tab */
-    .tab-category {gap: 1rem; height: 3.19rem;}
-    .tab-category > li button {font-size: 1.125rem; line-height: 1.6875rem;padding:0.75rem 0;}
+    /* tab */    
+    .tab-category {gap: 1rem; height: 3.125rem; padding:0 20px;}
+    .tab-category > li button {font-size: 1.125rem; line-height: 1.6875rem; padding:0.75rem 0;}
     .tab-category > li.on button:after {height: 0.125rem;}
 
     /* accordion */
     .accordion-list {padding: 1.5rem 0;}
-    .accordion-list .accordion-btn {font-size: 1.125rem; line-height: 1.6rem; white-space:wrap; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}    
+    .accordion-list .accordion-btn {font-size: 1.125rem; line-height: 1.6rem; white-space:wrap; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
     .accordion-list .accordion-btn:after {width: 1.5rem; height: 1.5rem;}
-    .accordion-list .accordion-content {margin-top: 1rem;  font-size: 1rem; line-height: 1.6rem;}    
+    .accordion-list .accordion-content {margin-top: 1rem;  font-size: 1rem; line-height: 1.6rem;}
 
     /* textarea */
     .textarea-box .textarea {height: 8.13rem;}
 
-
-
+    /* selectbox */
 }

@@ -10,8 +10,7 @@
   <link type="text/css" rel="stylesheet" href="./inc/css/shCoreDefault.css" />
   <link type="text/css" rel="stylesheet" href="./inc/css/guide.css" />
   <link type="text/css" rel="stylesheet" href="../public/inc/css/swiper.min.css" />
-  <link type="text/css" rel="stylesheet" href="../public/inc/css/common.css" /> 
-  <script type="text/javascript" src="../public/inc/js/pub-ui.js"></script>
+  <link type="text/css" rel="stylesheet" href="../public/inc/css/common.css" />
   <style>
     #guideWrap {
       overflow: hidden;
@@ -51,6 +50,7 @@
             <li><a data-scroll='cont06' title="내부링크">Accordion</a></li>
             <li><a data-scroll='cont07' title="내부링크">Table</a></li>
             <li><a data-scroll='cont08' title="내부링크">Text-list</a></li>
+            <li><a href="../guide/component/popup.html" data-scroll='cont09' title="외부링크">Popup</a></li>
           </ul>
         </div>
       </nav>
@@ -911,11 +911,13 @@
               <h3 class="guideSubTit">1. tab</h3>
               <div class="ui-item">
                 <div class="tab-wrap">
-                  <ul class="tab-category" role="tablist">
-                    <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">비전 및 전략</button></li>
-                    <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">거버넌스</button></li>
-                    <li class="tab" id="tab3"><button role="tab" aria-selected="false" aria-controls="tab3-content">글로벌 파트너십</button></li>
-                  </ul>
+                  <div class="tab-cate-wrap">
+                    <ul class="tab-category" role="tablist">
+                      <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">비전 및 전략</button></li>
+                      <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">거버넌스</button></li>
+                      <li class="tab" id="tab3"><button role="tab" aria-selected="false" aria-controls="tab3-content">글로벌 파트너십</button></li>
+                    </ul>
+                  </div>
                   <div class="tab-content-box">
                     <div class="tab-content on" id="tab1-content">
                       비전 및 전략 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
@@ -932,22 +934,39 @@
                   </div>
                 </div>
                 <div class="tab-wrap">
-                  <ul class="tab-category" role="tablist">
-                    <li class="tab on" id="tab4"><button role="tab" aria-selected="true" aria-controls="tab1-content">Tab 4</button></li>
-                    <li class="tab" id="tab5"><button role="tab" aria-selected="false" aria-controls="tab2-content">Tab 5</button></li>
-                    <li class="tab" id="tab6"><button role="tab" aria-selected="false" aria-controls="tab3-content">Tab 6</button></li>
-                  </ul>
+                  <div class="tab-cate-wrap">
+                    <ul class="tab-category" role="tablist">
+                      <li class="tab on" id="tab4"><button role="tab" aria-selected="true" aria-controls="tab4-content">Tab 4</button></li>
+                      <li class="tab" id="tab5"><button role="tab" aria-selected="false" aria-controls="tab5-content">Tab 5</button></li>
+                      <li class="tab" id="tab6"><button role="tab" aria-selected="false" aria-controls="tab6-content">Tab 6</button></li>
+                      <li class="tab" id="tab7"><button role="tab" aria-selected="false" aria-controls="tab7-content">비전 및 전략</button></li>
+                      <li class="tab" id="tab8"><button role="tab" aria-selected="false" aria-controls="tab8-content">거버넌스</button></li>
+                      <li class="tab" id="tab9"><button role="tab" aria-selected="false" aria-controls="tab9-content">글로벌 파트너십</button></li>
+                    </ul>
+                  </div>
                   <div class="tab-content-box">
                     <div class="tab-content on" id="tab4-content">
-                      비전 및 전략 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                      비전 및 전략 컨텐츠 박스입니다.4 등록된 정보가 없습니다. <br />
                       컨텐츠 정보를 등록해주세요.
                     </div>
                     <div class="tab-content" id="tab5-content">
-                        거버넌스 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                        거버넌스 컨텐츠 박스입니다.5 등록된 정보가 없습니다. <br />
                         컨텐츠 정보를 등록해주세요.
                     </div>
                     <div class="tab-content" id="tab6-content">
-                        글로벌 파트너십 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                        글로벌 파트너십 컨텐츠 박스입니다.6 등록된 정보가 없습니다. <br />
+                        컨텐츠 정보를 등록해주세요.
+                    </div>
+                    <div class="tab-content" id="tab7-content">
+                        거버넌스 컨텐츠 박스입니다.7 등록된 정보가 없습니다. <br />
+                        컨텐츠 정보를 등록해주세요.
+                    </div>
+                    <div class="tab-content" id="tab8-content">
+                        글로벌 파트너십 컨텐츠 박스입니다.8 등록된 정보가 없습니다. <br />
+                        컨텐츠 정보를 등록해주세요.
+                    </div>
+                    <div class="tab-content" id="tab9-content">
+                        글로벌 파트너십 컨텐츠 박스입니다.9 등록된 정보가 없습니다. <br />
                         컨텐츠 정보를 등록해주세요.
                     </div>
                   </div>
@@ -1404,7 +1423,7 @@
           <h2 class="guideTit">Text list</h2>
           <div class="info">
             <div class="subSection">
-              <h3 class="guideSubTit">기본</h3>
+              <h3 class="guideSubTit">기본 케이스</h3>
               <div class="ui-item">
                 <div class="text-list-wrap">
                   <ul class="text-list">
@@ -1420,11 +1439,11 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">숫자</h3>
+              <h3 class="guideSubTit">숫자 케이스 : ol > li 사용 (ul 사용시 bullet 노출)</h3>
               <div class="ui-item">
                 <div class="text-list-wrap">
                   <ol class="text-list">
-                    <li>1. 협력회사 사장단 워크숍 개최</li>
+                    <li>1. 기술자료 임치제도 지원</li>
                     <li>2. 영업비밀 원본증명서비스 지원</li>
                     <li>3. 해외 공동진출</li>
                   </ol>
@@ -1436,26 +1455,13 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">bar(-)</h3>
+              <h3 class="guideSubTit">ty02 케이스 : bar(-) / star(*)</h3>
               <div class="ui-item">
                 <div class="text-list-wrap">
                   <ul class="text-list ty02">
                     <li>- 협력회사 사장단 워크숍 개최</li>
                     <li>- 영업비밀 원본증명서비스 지원</li>
                     <li>- 해외 공동진출</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="code">
-                <pre class="brush: js;">
-                </pre>
-              </div>
-            </div>
-            <div class="subSection">
-              <h3 class="guideSubTit">star(*)</h3>
-              <div class="ui-item">
-                <div class="text-list-wrap">
-                  <ul class="text-list ty02">
                     <li>* 협력회사 사장단 워크숍 개최</li>
                     <li>* 영업비밀 원본증명서비스 지원</li>
                     <li>* 해외 공동진출</li>
@@ -1468,7 +1474,7 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">info(!)</h3>
+              <h3 class="guideSubTit">ty-info(!) 케이스 : 유의사항</h3>
               <div class="ui-item">
                 <div class="text-list-wrap">
                   <ul class="text-list ty-info">
@@ -1486,7 +1492,6 @@
           </div>
         </section>
         <!-- cont08 End -->
-
     </section>
   </div>
   <!-- //Section -->
@@ -1498,7 +1503,7 @@
 <script type="text/javascript" src="./inc/js/shCore.js"></script>
 <script type="text/javascript" src="./inc/js/shBrushJScript.js"></script>
 <script type="text/javascript" src="./inc/js/guideUi.js"></script>
-<!-- <script type="text/javascript" src="../inc/js/pub-ui.js"></script> -->
+<script type="text/javascript" src="../public/inc/js/pub-ui.js"></script>
 <script>
 
   function fadeEvent() {
@@ -1515,35 +1520,41 @@
     // 오브젝트 리스트의 각 링크에 클릭 이벤트 바인딩
     const objectLinks = document.querySelectorAll('.object-list li a');
     objectLinks.forEach(function (link, index) {
+
       link.addEventListener('click', function (e) {
-        e.preventDefault();
+        // 링크값 존재할 경우, 연결된 링크 페이지로 접근 처리하기 위하여 해당 조건 추가하였음.
+        if(link.getAttribute("href") === null || link.getAttribute("href") === "") {
+          // 링크값 존재하지 않을때 기존로직 실행
+          e.preventDefault();
 
-        // 모든 링크에서 'on' 클래스 제거
-        objectLinks.forEach(function (l) {
-          l.classList.remove('on');
-        });
+          // 모든 링크에서 'on' 클래스 제거
+          objectLinks.forEach(function (l) {
+            l.classList.remove('on');
+          });        
 
-        // 현재 클릭된 링크에 'on' 클래스 추가
-        link.classList.add('on');
+          // 현재 클릭된 링크에 'on' 클래스 추가
+          link.classList.add('on');
 
-        // 모든 섹션 숨기기
-        sectionElements.forEach(function (section) {
-          section.style.display = 'none';
-        });
+          // 모든 섹션 숨기기
+          sectionElements.forEach(function (section) {
+            section.style.display = 'none';
+          });
 
-        // 해당 인덱스에 해당하는 섹션 표시 (fade 효과는 간단히 구현)
-        const targetSection = document.getElementById(sectionItem[index]);
-        if (targetSection) {
-          targetSection.style.opacity = 0;
-          targetSection.style.display = 'block';
+          // 해당 인덱스에 해당하는 섹션 표시 (fade 효과는 간단히 구현)
+          const targetSection = document.getElementById(sectionItem[index]);
+          if (targetSection) {
+            targetSection.style.opacity = 0;
+            targetSection.style.display = 'block';
 
-          // 간단한 fadeIn 효과
-          let opacity = 0;
-          const fadeIn = setInterval(function () {
-            opacity += 0.05;
-            targetSection.style.opacity = opacity;
-            if (opacity >= 1) clearInterval(fadeIn);
-          }, 25); // 약 500ms로 설정
+            // 간단한 fadeIn 효과
+            let opacity = 0;
+            const fadeIn = setInterval(function () {
+              opacity += 0.05;
+              targetSection.style.opacity = opacity;
+              if (opacity >= 1) clearInterval(fadeIn);
+            }, 25); // 약 500ms로 설정
+          }
+
         }
       });
     });

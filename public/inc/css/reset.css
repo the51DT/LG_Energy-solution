@@ -242,14 +242,23 @@ body {
   padding: 0 !important;
   box-sizing: border-box;
 }
-body * {
+/* body * {
   outline: none;
-}
-body *:focus {
+} */
+/* body *:focus {
   outline: none;
-}
+} */
 
 a,
 button {
   cursor: pointer;
+}
+
+.blind {
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
