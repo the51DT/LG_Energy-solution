@@ -10,7 +10,7 @@ var pubUi = {
 
         form.init();
         tabList.init();
-        acdItem.init();
+        acdItem.init();        
     },
     settings: function(){
         pubUi.self = this;
@@ -23,7 +23,7 @@ var pubUi = {
 
         pubUi.self.selectMenu = document.querySelectorAll(".select-menu");
         pubUi.self.selectCate = document.querySelectorAll(".select-cate");
-        pubUi.self.selectCateBtn = document.querySelectorAll(".select-cate button");        
+        pubUi.self.selectCateBtn = document.querySelectorAll(".select-cate button");
 
     },
     // bindEvents - 클릭이벤트 등 이벤트 핸들링 관련 함수
@@ -205,7 +205,7 @@ var form = {
 
 // pop_layer
 var popUp = {
-    open: function (pop, btn) {        
+    open: function (pop, btn) {
         document.querySelector("body").classList.add("noScroll");
 
         const popEl = document.querySelector(pop);
@@ -218,24 +218,26 @@ var popUp = {
         popE.className = "pop-e";
         popE.setAttribute("tabindex", "0");
         popEl.append(popE);
-        
+
         popEl.querySelector(".pop-wrap").setAttribute("tabindex", "0");
 
-        popEl.classList.add("open");
+        popEl.classList.add("open");        
 
         popEl.querySelector(".pop-s, .pop-e").addEventListener("focus", function () {
             popEl.querySelector(".pop-wrap").focus();
         });
 
-        popEl.querySelector("[data-action=close]").addEventListener("click", () => {
-            popUp.close(pop, btn);
-        })
+        if (popEl.querySelector("[data-action=close]") != null ) {
+            popEl.querySelector("[data-action=close]").addEventListener("click", () => {
+                popUp.close(pop, btn);
+            });
+        }
 
         popUp.scroll(pop);
         // pubUi.setMetaViewport(pop);
     },
     close: function (pop, btn) {
-        const popEl = document.querySelector(pop);        
+        const popEl = document.querySelector(pop);
 
         if (document.querySelector(".modal-pop.open")) {
             document.querySelector("body").classList.remove("noScroll");
@@ -248,21 +250,12 @@ var popUp = {
         }
 
         document.querySelector(btn).focus();
-
-        
     },
     scroll: function (pop) {
         const popEl = document.querySelector(pop);
-        
-        var _scroll = popEl.querySelector(".pop-content").scrollTop;
 
-        if (1 < _scroll) {
-            popEl.querySelector(".pop-wrap").classList.add("scroll");
-        } else {
-            popEl.querySelector(".pop-wrap").classList.remove("scroll");
-        }
 
-        popEl.querySelector(".pop-content").addEventListener("scroll", function () {
+        if(popEl.querySelector(".pop-content")) {
             var _scroll = popEl.querySelector(".pop-content").scrollTop;
 
             if (1 < _scroll) {
@@ -270,7 +263,17 @@ var popUp = {
             } else {
                 popEl.querySelector(".pop-wrap").classList.remove("scroll");
             }
-        });
+
+            popEl.querySelector(".pop-content").addEventListener("scroll", function () {
+                var _scroll = popEl.querySelector(".pop-content").scrollTop;
+
+                if (1 < _scroll) {
+                    popEl.querySelector(".pop-wrap").classList.add("scroll");
+                } else {
+                    popEl.querySelector(".pop-wrap").classList.remove("scroll");
+                }
+            });
+        }        
     },
 };
 

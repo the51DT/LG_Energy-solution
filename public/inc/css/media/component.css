@@ -41,4 +41,25 @@
     .textarea-box .textarea {height: 8.13rem;}
 
     /* selectbox */
+
+    /* popup */
+    .pop-wrap .pop-header .title {font-size: 1.125rem; line-height: 1.575rem;}
+    .pop-wrap .pop-content .desc {font-size: 0.875rem; line-height: 1.4rem;} 
+    .pop-wrap .pop-close {top: 1.88rem; right: 1.5rem; width: 1.5rem; height: 1.5rem;}
+    .pop-wrap .pop-footer > .btn-wrap button {font-size: 1rem; font-weight: 500; line-height: 1.4rem; height: 2.875rem; padding: 0.375rem 1.875rem;}
+    .pop-wrap .pop-footer > .btn-wrap .btn-cancel {min-width: 6.25rem;}
+    .pop-wrap .pop-footer > .btn-wrap .btn-confirm {min-width: 10.25rem;}
+    .pop-wrap .img-wrap {padding-bottom: 1.25rem;}
+    .pop-wrap .img-wrap > img,
+    .pop-wrap .img-wrap.ty-rect > img {height: 100%;}
+
+    .modal-pop.alert .pop-wrap {width: 18rem; max-height: 19.5625rem;}
+    .modal-pop.alert .pop-wrap .pop-content .title h3 {font-size: 1.125rem; line-height: 1.575rem;}
+    
+    .modal-pop.dialog .pop-wrap {min-width: 20rem; max-width: 20rem; padding: 1.88rem 1.5rem 1.25rem; max-height: 31rem;}
+    .modal-pop.dialog .pop-wrap .pop-header {padding-bottom: 1.25rem;}
+    .modal-pop.dialog .pop-wrap .pop-content .desc {font-size: 1rem; line-height: 1.6rem;}
+    .modal-pop.dialog .pop-wrap .pop-content .btn-wrap {padding-top: 1rem;}
+    .modal-pop.dialog .pop-footer > .btn-wrap .btn-cancel {width: 6.25rem;}
+    .modal-pop.dialog .pop-footer > .btn-wrap .btn-confirm {width: 8.25rem;}
 }

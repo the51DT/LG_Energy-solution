@@ -44,13 +44,31 @@
                   <button type="button" class="act-btn-sm btn-primary01" id="popupAlertBtn1" onclick="popUp.open('#popupAlert1','#popupAlertBtn1');">
                     popup alert
                   </button>
-              </div>              
+              </div>
+              <div class="btn-wrap">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupAlertBtn2" onclick="popUp.open('#popupAlert2','#popupAlertBtn2');">
+                    popup alert2
+                  </button>
+              </div>
             </section>
             <section class="guide-section">
               <p class="guide-title-h3">2. dialog popup - .dialog</p>                  
               <div class="btn-wrap">
                   <button type="button" class="act-btn-sm btn-primary01" id="popupDialogBtn1" onclick="popUp.open('#popupDialog1','#popupDialogBtn1');">
-                    popup dialog
+                    popup dialog - 버튼 1개 케이스
+                  </button>
+              </div>
+              <div class="btn-wrap">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupDialogBtn2" onclick="popUp.open('#popupDialog2','#popupDialogBtn2');">
+                    popup dialog - 버튼 2개 케이스
+                  </button>
+              </div>
+            </section>
+            <section class="guide-section">
+              <p class="guide-title-h3">3. full popup - .full</p>                  
+              <div class="btn-wrap">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupFullBtn1" onclick="popUp.open('#popupFull1','#popupFullBtn1');">
+                    popup full
                   </button>
               </div>
             </section>
@@ -61,163 +79,74 @@
         <!-- popupAlert1-->
         <div class="modal-pop alert" id="popupAlert1">
           <div class="pop-wrap">
-              <div class="pop-header">
-                  <h3>팝업 타이틀</h3>
-              </div>
               <div class="pop-content">
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
+                <div class="img-wrap">
+                  <img src="" alt="" onerror="this.onerror=null; this.src='../../public/inc/images/img/img_dummy_square.png';">
+                </div>
+                <div class="title">
+                  <h3>제목을 입력하세요</h3>
+                </div>
+                <p class="desc">LG에너지솔루션은 고객의 기대를 위해 끊임없이 노력하고 있습니다.</p>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-sm">Button</a>
+                </div>
               </div>
               <div class="pop-footer">
                 <div class="btn-wrap">
-                  <button type="button" class="act-btn-lg btn-primary01">확인</button>
+                  <div class="btn-group">
+                    <button type="button" class="act-btn-md btn-outline01 btn-cancel" onclick="popUp.close('#popupAlert1', '#popupAlertBtn1')">취소</button>
+                    <button type="button" class="act-btn-md btn-primary01 btn-confirm">확인</button>
+                  </div>
                 </div>
               </div>
-              <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+              <!-- <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> -->
           </div>
         </div>
 
-        <!-- popupDialog : confirm dialog(Maximum) -->
+        <!-- popupAlert2 : pop-header 존재하는 케이스 -->
+        <div class="modal-pop alert" id="popupAlert2">
+          <div class="pop-wrap">
+              <div class="pop-header">
+                <h3 class="title">제목을 입력하세요</h3>
+              </div>
+              <!-- <div class="pop-content">
+                <div class="img-wrap">
+                  <img src="" alt="" onerror="this.onerror=null; this.src='../../public/inc/images/img/img_dummy_square.png';">
+                </div>
+                <div class="title">
+                  <h3>제목을 입력하세요</h3>
+                </div>
+                <p class="desc">LG에너지솔루션은 고객의 기대를 위해 끊임없이 노력하고 있습니다.</p>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-sm">Button</a>
+                </div>
+              </div> -->
+              <div class="pop-footer">
+                <div class="btn-wrap">
+                  <div class="btn-group">
+                    <button type="button" class="act-btn-md btn-outline01 btn-cancel" onclick="popUp.close('#popupAlert2', '#popupAlertBtn2')">취소</button>
+                    <button type="button" class="act-btn-md btn-primary01 btn-confirm">확인</button>
+                  </div>
+                </div>
+              </div>
+              <!-- <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> -->
+          </div>
+        </div>
+
+        <!-- popupDialog : confirm dialog(Maximum) : button 1개 -->
         <div class="modal-pop dialog" id="popupDialog1">
           <div class="pop-wrap">
               <div class="pop-header">
-                  <h3>팝업 타이틀</h3>
+                  <h3 class="title">제목을 입력하세요</h3>
               </div>
               <div class="pop-content">
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
-                <p>내용을 입력해주세요</p>
+                <div class="img-wrap ty-rect">
+                  <img src="" alt="" onerror="this.onerror=null; this.src='../../public/inc/images/img/img_dummy_rectangle.png';">
+                </div>
+                <p class="desc">LG에너지솔루션은 고객의 기대를 뛰어넘는 제품 품질을 제공하기 위해 끊임없이 노력하고 있습니다. 철저한 품질경영시스템을 구축하고 모든 제조공정에서 품질과 안전성을 높이기 위한 활동을 전개해 나가고 있으며, 지속적인 개선 노력과 노하우를 공유해 임직원 및 협력회사가 함께 품질관리를 위한 협력을 강화해 나가고 있습니다.</p>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-lg">Button</a>
+                </div>
               </div>
               <div class="pop-footer">
                 <div class="btn-wrap">
@@ -227,6 +156,180 @@
               <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
           </div>
         </div>
+
+        <!-- popupDialog : confirm dialog(Maximum) : button 2개 -->
+        <div class="modal-pop dialog" id="popupDialog2">
+          <div class="pop-wrap">
+              <div class="pop-header">
+                  <h3 class="title">제목을 입력하세요</h3>
+              </div>
+              <div class="pop-content">
+                <div class="img-wrap ty-rect">
+                  <img src="" alt="" onerror="this.onerror=null; this.src='../../public/inc/images/img/img_dummy_rectangle.png';">
+                </div>
+                <p class="desc">LG에너지솔루션은 고객의 기대를 뛰어넘는 제품 품질을 제공하기 위해 끊임없이 노력하고 있습니다. 철저한 품질경영시스템을 구축하고 모든 제조공정에서 품질과 안전성을 높이기 위한 활동을 전개해 나가고 있으며, 지속적인 개선 노력과 노하우를 공유해 임직원 및 협력회사가 함께 품질관리를 위한 협력을 강화해 나가고 있습니다.</p>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-lg">Button</a>
+                </div>
+              </div>
+              <div class="pop-footer">
+                <div class="btn-wrap">
+                  <div class="btn-group">
+                    <button type="button" class="act-btn-lg btn-outline01 btn-cancel" onclick="popUp.close('#popupDialog2','#popupDialogBtn2')">취소</button>
+                    <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="popUp.close('#popupDialog2','#popupDialogBtn2');">확인</button>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog2','#popupDialogBtn2');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+          </div>
+        </div>
+
+        <!-- popup full : fullpage popup -->
+        <div class="modal-pop full" id="popupFull1">
+          <div class="pop-wrap">
+              <div class="pop-header">
+                  <h3 class="title">팝업 타이틀</h3>
+              </div>
+              <div class="pop-content">
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <!-- <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p>
+                <p>내용을 입력해주세요</p> -->
+              </div>
+              <div class="pop-footer">
+                <div class="btn-wrap">
+                  <button type="button" class="act-btn-md btn-primary01" onclick="popUp.close('#popupFull1','#popupFullBtn1');">확인</button>
+                </div>
+              </div>
+              <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupFull1','#popupFullBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+          </div>
+        </div>
+
+
 
         <script type="text/javascript" src="../../public/inc/js/jquery-3.7.1.slim.min.js"></script>
         <!-- <script type="text/javascript" src="../../public/inc/js/swiper.min.js"></script> -->
