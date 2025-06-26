@@ -233,8 +233,21 @@ var popUp = {
             });
         }
 
+        if (popEl.classList.contains("tooltip")) {
+            const rect = btn.getBoundingClientRect();
+            const btnHeight = btn.clientHeight;            
+            const tooltipPadding = 8;
+            const top = rect.top + window.scrollY;
+            const left = rect.left + rect.width + tooltipPadding + window.scrollX;
+
+            document.querySelector("body").classList.remove("noScroll");
+            popEl.style.position = "absolute";
+            popEl.style.top = `${top + btnHeight - 8}px`;
+            popEl.style.left = `${left - 74}px`;
+            popEl.style.zIndex = 100;
+        }
+
         popUp.scroll(pop);
-        // pubUi.setMetaViewport(pop);
     },
     close: function (pop, btn) {
         const popEl = document.querySelector(pop);
@@ -249,7 +262,9 @@ var popUp = {
             popEl.querySelector(".pop-wrap").removeAttribute("tabindex");
         }
 
-        document.querySelector(btn).focus();
+        if (!popEl.classList.contains("tooltip")) {
+            document.querySelector(btn).focus();
+        }
     },
     scroll: function (pop) {
         const popEl = document.querySelector(pop);

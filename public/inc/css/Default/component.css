@@ -275,3 +275,15 @@ table {border-collapse: collapse;}
 .modal-pop.full .pop-wrap > div {flex: 1 1 auto;}
 .modal-pop.full .pop-wrap .pop-content {padding-top:24px; height: calc(100% - 135px);}
 .modal-pop.full::before {background:#fff;}
+
+.modal-pop.tooltip {display: block; position: absolute; transition: top 0.3s ease, left 0.3s ease; right: revert; bottom: revert;}
+.modal-pop.tooltip::before {display: none;}
+.modal-pop.tooltip.open {margin: 0;}
+.modal-pop.tooltip .pop-wrap {max-height: 100%; height: auto; width: 100%; max-width: 36.25rem; padding: 1.25rem 1.87rem; border-radius: 0.5rem; border: 1px solid #d9d9d9; margin: 0; position: relative;}
+.modal-pop.tooltip .tooltip-arrow {position: relative; display: inline-block; width: 1.25rem; height: 0.75rem; z-index: 100; top: 6px; left: 1.87rem;}
+.modal-pop.tooltip .tooltip-arrow::before {content: ""; position: absolute; top:0; left: 0; width: 0; height: 0; border-left: 10px solid #d9d9d9; border-right: 10px solid #d9d9d9; border-bottom: 12px solid #fff;}
+
+.modal-pop.tooltip .pop-wrap .pop-close {top:1.25rem; right: 1.87rem; width: 1.5rem; height: 1.5rem;}
+.modal-pop.tooltip .pop-wrap .pop-header {padding-bottom: 1rem;}
+.modal-pop.tooltip .pop-wrap .pop-header .title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
+.modal-pop.tooltip .pop-wrap .pop-content .desc {font-size: 1.125rem; line-height: 1.8rem;}
