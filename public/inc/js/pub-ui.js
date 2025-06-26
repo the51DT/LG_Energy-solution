@@ -235,20 +235,21 @@ var popUp = {
         // pubUi.setMetaViewport(pop);
     },
     close: function (pop, btn) {
-        const popEl = document.querySelector(pop);
-
-        popEl.classList.remove("open");
-        popEl.removeAttribute("style");
-        popEl.querySelector(".pop-s").remove();
-        popEl.querySelector(".pop-e").remove();
-        popEl.querySelector(".pop-wrap").removeAttribute("tabindex");
+        const popEl = document.querySelector(pop);        
 
         if (document.querySelector(".modal-pop.open")) {
             document.querySelector("body").classList.remove("noScroll");
             //$('body').addClass('scroll');
+            popEl.classList.remove("open");
+            popEl.removeAttribute("style");
+            popEl.querySelector(".pop-s").remove();
+            popEl.querySelector(".pop-e").remove();
+            popEl.querySelector(".pop-wrap").removeAttribute("tabindex");
         }
 
         document.querySelector(btn).focus();
+
+        
     },
     scroll: function (pop) {
         const popEl = document.querySelector(pop);
