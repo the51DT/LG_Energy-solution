@@ -121,7 +121,15 @@ $(document).ready(function($) {
         }else if(cont_top05 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top06 - (page_h * 0.4)){
             $('.content-item05').addClass("scroll-on")
         }else if(cont_top06 - (page_h * 0.4) < nowScroll && nowScroll <= cont_top07 - (page_h * 0.4)){
+            if(!$('.content-item06').hasClass("scroll-on")){
+                setTimeout(function(){
+                    countUp02();
+                },500)
+            }
             $('.content-item06').addClass("scroll-on")
+            
+            
+            
         }
 
         // if(nowScroll )
@@ -194,7 +202,45 @@ $(document).ready(function($) {
         });
     }
     
-
+    function countUp02() {
+        var start = 0,
+        end6 = 10;
+        end7 = 14;
+        end8 = 9;
+        $({ val : start }).animate({ val : end6 }, {
+            duration: 1000,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count2-1").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count2-1").text(num);
+            }
+        });
+        $({ val : start }).animate({ val : end7 }, {
+            duration: 1000,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count2-2").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count2-2").text(num);
+            }
+        });
+        $({ val : start }).animate({ val : end8 }, {
+            duration: 1000,
+            step: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count2-3").text(num);
+            },
+            complete: function() {
+                var num = numberWithCommas(Math.floor(this.val));
+                $(".count2-3").text(num);
+            }
+        });
+    }
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
