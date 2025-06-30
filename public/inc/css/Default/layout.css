@@ -192,7 +192,7 @@ background: #FFF;overflow: hidden;position: relative;}
 .main_p .content-item06 .area1 p strong{font-size: var(--size-desktop-H3, 1.75rem);font-weight: 700;line-height: var(--line-height-desktop-H3, 2.625rem);display:block;}
 .main_p .content-item06 .area1 a.more{border-bottom: 1px solid var(--stroke-stroke-on-primary, #FFF);display: inline-flex;padding-bottom: 0.5rem;align-items: center;gap: 3.5rem;margin-top:3.25rem;}
 .main_p .content-item06 .area1 a.more:after{content:"";display:block;width: 1.01231rem;height: 1.01231rem;background:url(../../images/icon/Icon_more_wh.svg) no-repeat center;}
-.main_p .content-item06 .area2{display: flex;justify-content: space-between;flex-direction: column;width: 44.1875rem;height: 22.0625rem;padding-top:15.075rem;gap:2.25rem;}
+.main_p .content-item06 .area2{display: flex;justify-content: space-between;flex-direction: column;width: 44.1875rem;height: 22.0625rem;padding-top:22.5rem;gap:2.25rem;}
 .main_p .content-item06 .area2 > div{display:flex;justify-content: space-between;}
 .main_p .content-item06 .area2 > div p{color: var(--text-text-on-primary, #FFF);font-size: var(--size-desktop-B1, 1.125rem);font-weight: 600;line-height: var(--line-height-desktop-B1, 1.8rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0rem);text-indent: -5rem; padding-left:5rem;}
 .main_p .content-item06 .area2 > div p + p::before{content:"";display: block;;width: 0;height: 0.125rem;position: relative;left: -14.5125rem;top: 4.75rem;opacity: 0.2;background: var(--stroke-stroke-default-03, #C9CED1);}
