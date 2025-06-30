@@ -1,392 +1,314 @@
-// pubUi
+// pubUi.js (모듈 통합 버전)
 var pubUi = {
+    self: {},
+
     init: function () {
-        pubUi.settings();
-        pubUi.bindEvents();
-        // pubUi.exceptionStickyEvt();
-        pubUi.scrollToEvt();
-        pubUi.chkFileboxDisabled();
-        pubUi.fileboxInputEvt();
+        this.settings();
+        this.bindEvents();
+        this.scrollToEvt();
+        this.chkFileboxDisabled();
+        this.fileboxInputEvt();
 
-        form.init();
-        tabList.init();
-        acdItem.init();        
+        this.form.init();
+        this.tabList.init();
+        this.acdItem.init();
     },
-    settings: function(){
-        pubUi.self = this;
-        pubUi.self.tabCategory = document.querySelector(".tab-category");
-        pubUi.self.mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;        
-        pubUi.self.isPc = window.innerWidth >= 1440;
-        pubUi.self.isMobile = window.innerWidth <= 768;
 
-        pubUi.self.tabLists = document.querySelectorAll(".tab-wrap [role=tablist]");
+    settings: function () {
+        this.self = {};
+        this.self.mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+        this.self.isPc = window.innerWidth >= 1440;
+        this.self.isMobile = window.innerWidth <= 768;
 
-        pubUi.self.selectMenu = document.querySelectorAll(".select-menu");
-        pubUi.self.selectCate = document.querySelectorAll(".select-cate");
-        pubUi.self.selectCateBtn = document.querySelectorAll(".select-cate button");
-
+        this.self.tabCategory = document.querySelector(".tab-category");
+        this.self.tabLists = document.querySelectorAll(".tab-wrap [role=tablist]");
+        this.self.selectMenu = document.querySelectorAll(".select-menu");
+        this.self.selectCate = document.querySelectorAll(".select-cate");
+        this.self.selectCateBtn = document.querySelectorAll(".select-cate button");
     },
-    // bindEvents - 클릭이벤트 등 이벤트 핸들링 관련 함수
-    bindEvents: function () {        
-        pubUi.self.selectCateBtn.forEach((targetBtn) => {
-            targetBtn.addEventListener("click", function (e) {
+
+    bindEvents: function () {
+        this.self.selectCateBtn.forEach((targetBtn) => {
+            targetBtn.addEventListener("click", (e) => {
                 const currentTarget = e.currentTarget;
-
-                
-                if(!currentTarget.closest(".select-cate").classList.contains("disabled")){
-                    // 클릭한 타겟 selectbox 이외 다른 selectbox 모두 숨기기
-                    pubUi.self.selectCateBtn.forEach((otherTargetBtn) => {
-                        if (otherTargetBtn != currentTarget) {
+                if (!currentTarget.closest(".select-cate").classList.contains("disabled")) {
+                    this.self.selectCateBtn.forEach((otherTargetBtn) => {
+                        if (otherTargetBtn !== currentTarget) {
                             otherTargetBtn.classList.remove("active");
                             otherTargetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
                         }
                     });
 
-                    if (targetBtn.closest(".select-cate").querySelector(".select-menu").classList.contains("on")) {
-                        targetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
-                        targetBtn.classList.remove("active");
+                    const menu = currentTarget.closest(".select-cate").querySelector(".select-menu");
+                    if (menu.classList.contains("on")) {
+                        menu.classList.remove("on");
+                        currentTarget.classList.remove("active");
                     } else {
-                        targetBtn.closest(".select-cate").querySelector(".select-menu").classList.add("on");
-                        targetBtn.classList.add("active");
+                        menu.classList.add("on");
+                        currentTarget.classList.add("active");
                     }
-                }                             
+                }
             });
-        });        
+        });
 
-        pubUi.self.selectMenu.forEach((map) => {
+        this.self.selectMenu.forEach((map) => {
             const pageMapCate = map.querySelectorAll("li > a");
             pageMapCate.forEach((subCate) => {
-                subCate.addEventListener("click", function (e) {
-                    pageMapCate.forEach((otherBox) => {
-                        if (otherBox !== e.currentTarget) {
-                            otherBox.classList.remove("active");
-                        } else {
-                            otherBox.classList.add("active");
-                        } 
-                    });
+                subCate.addEventListener("click", (e) => {
+                    pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
+                    subCate.classList.add("active");
                     const subCateName = subCate.innerText;
-                    map.closest(".select-cate").querySelector("button").innerText = subCateName;
-                    map.closest(".select-cate").querySelector("button").classList.add("on");
-                    map.closest(".select-cate").querySelector("button").classList.remove("active");
+                    const button = map.closest(".select-cate").querySelector("button");
+                    button.innerText = subCateName;
+                    button.classList.add("on");
+                    button.classList.remove("active");
                     map.classList.remove("on");
                 });
             });
         });
-    },    
-    // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S
-    // sticky 붙었을경우 예외처리 클래스, 처리하려는 sticky 대상의 css의 top값이 꼭 -1px 이어야 해당 스크립트 적용됨
-    exceptionStickyEvt: function () {
-        const stickyEl = document.querySelector(".select-menu-wrap");
-        const observer = new IntersectionObserver(([e]) => e.target.classList.toggle("stuck", e.intersectionRatio < 1), {
-            threshold: [1],
-        });
-        observer.observe(stickyEl);
     },
+
     scrollToEvt: function (targetId) {
-        if (targetId !== undefined && targetId != null) {
+        if (targetId) {
             const targetContent = document.querySelector(targetId);
-            const targetOffsetY = targetContent.offsetTop;
-            const pageMapHeight = document.querySelector(".select-menu-wrap").clientHeight;
-            const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
-            const totalHeadHeight = pageMapHeight + contentHeadHeight;
-
-            document.querySelector("html > body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
+            const offsetTop = targetContent.offsetTop;
+            const totalHeight = document.querySelector(".select-menu-wrap").clientHeight + document.querySelector(".content-area-head-tab").clientHeight;
+            document.querySelector("html, body").scrollTo({ top: offsetTop - totalHeight, behavior: "smooth" });
         }
     },
-    chkFileboxDisabled: function() {
-        const filebox = document.querySelectorAll(".filebox");
 
-        filebox.forEach((box, index) => {
-            const fileUploadName = box.querySelector(".upload-name");
-            const fileAttachBtn = box.querySelector("input[type=file]");
-            const fileInputMsg = box.querySelector(".input-info");
-            if(fileUploadName.disabled == true) {
-                fileAttachBtn.classList.add("disabled");
-                fileInputMsg.classList.add("disabled");
-                fileAttachBtn.setAttribute("disabled", true);
-            } else {
-                fileAttachBtn.classList.remove("disabled");
-                fileInputMsg.classList.remove("disabled");
-                fileAttachBtn.removeAttribute("disabled");
-            }
-
-        })
-
+    chkFileboxDisabled: function () {
+        document.querySelectorAll(".filebox").forEach((box) => {
+            const nameField = box.querySelector(".upload-name");
+            const inputField = box.querySelector("input[type=file]");
+            const msg = box.querySelector(".input-info");
+            const disabled = nameField.disabled;
+            inputField.classList.toggle("disabled", disabled);
+            msg.classList.toggle("disabled", disabled);
+            inputField.disabled = disabled;
+        });
     },
-    fileboxInputEvt: function() {
-        // 파일 첨부 input 이벤트 리스너
-        // 파일 첨부 input의 change 이벤트를 감지하여 파일 이름을 표시
-        const fileInputs = document.querySelectorAll("input[type=file]");
-        const uploadName = document.querySelectorAll(".upload-name");
 
-        fileInputs.forEach(function (fileInput) {
-            
-            // fileInput.addEventListener("click", function (e) {
-            //     if(fileInput.classList.contains("disabled")) {
-            //         e.preventDefault();
-            //     }
-            // });
-            fileInput.addEventListener("change", function (e) {
-                const fileName = this.files[0]?.name || "파일첨부 (선택)";
-                e.target.closest(".input-wrap").querySelector(".upload-name").value = fileName;
-                e.target.closest(".input-wrap").querySelector(".upload-name").setAttribute("readonly", true);
-            });            
+    fileboxInputEvt: function () {
+        document.querySelectorAll("input[type=file]").forEach((input) => {
+            input.addEventListener("change", function () {
+                const name = this.files[0]?.name || "파일첨부 (선택)";
+                this.closest(".input-wrap").querySelector(".upload-name").value = name;
+            });
         });
 
-        // 파일 첨부 input을 클릭할 수 있는 label 요소에 이벤트 리스너 추가
-        // label 요소를 클릭하면 해당 input[type=file]을 클릭하도록 설정
-        uploadName.forEach((name) => {
+        document.querySelectorAll(".upload-name").forEach((name) => {
             name.addEventListener("click", function () {
-                const fileInput = this.closest(".input-wrap").querySelector("input[type=file]");
-                if (fileInput) {
-                    fileInput.click();
-                }
+                const input = this.closest(".input-wrap").querySelector("input[type=file]");
+                if (input) input.click();
             });
         });
     },
-};
-var form = {
-    init: function () {
-        form.bindEvents();
-    },
-    bindEvents: function () {
-        $(document).on("keydown keyup input", ".textarea-box .textarea", function (e) {
-            //12.19 수정 :: textarea 입력 폼 로직 변경으로 js 수정 : 입력시 역카운트처리
-            var target = e.currentTarget;
-            var textareaBox = target.closest(".textarea-box");
-            var textLength = target.value.length;
-            var maxLength = document.querySelector(".textarea-box .textarea").getAttribute("maxlength");
 
-            // err케이스일 때 예외처리, 입력시 카운트 노출, (개발 처리 필요할 것으로 판단되어 주석처리함)
-            // if (textareaBox.closest(".wrap-form-input").classList.contains("err")) {
-            //     textareaBox.querySelector(".textarea-bot").style.display = "none";
-            //     textareaBox.querySelector(".byte-check").style.display = "block";
-            //     if (textareaBox.querySelector(".byte-check .count").innerText == "1000") {
-            //         textareaBox.querySelector(".textarea-bot").style.display = "block";
-            //         textareaBox.querySelector(".byte-check").style.display = "none";
-            //     }
-            // }
-
-            if (textLength) {
-                textareaBox.classList.add("on");
-            } else {
-                textareaBox.classList.remove("on");
-            }
-
-            // 숫자 카운트 역카운트 처리 원할시 (입력가능한 글자수 카운트되도록 노출시키고 싶을 경우)
-            // 글자 수 체크간 0 보다 작은 경우 -1 이 나오는 오류 수정
-            // var textLengthCount = maxLength - textLength;
-            // textLengthCount = textLengthCount < 0 ? 0 : textLengthCount;
-            // //textarea 글자수 full 일 경우, count 컬러 변경(디자인 변경에 따른 스크립트 수정)
-            // if (textareaBox.querySelector(".byte-check .count").innerText == "0") {
-            //     textareaBox.classList.remove("on");
-            // }
-            
-
-            // 숫자 카운트 기본 처리 원할시 (입력한 글자수가 카운트되도록 노출시키고 싶을 경우)
-            var textLengthCount = textLength;
-            textLengthCount = textLength > 1000 ? 1000 : textLengthCount;
-            //textarea 글자수 full 일 경우, count 컬러 변경(디자인 변경에 따른 스크립트 수정)
-            if (textareaBox.querySelector(".byte-check .count").innerText == "1000") {
-                textareaBox.classList.remove("on");
-            }
-
-            textareaBox.querySelector(".byte-check .count").innerText = textLengthCount;
-
-            if (textareaBox.classList.contains("ty02")) form.textareaResize(this);
-        });
-    },
-    textareaResize: function (obj) {
-        obj.style.height = "auto";
-        obj.style.height = obj.scrollHeight + 2 + "px";
-    },
-};
-
-
-// pop_layer
-var popUp = {
-    open: function (pop, btn) {
-        document.querySelector("body").classList.add("noScroll");
-
-        const popEl = document.querySelector(pop);
-        const popS = document.createElement("div");
-        popS.className = "pop-s";
-        popS.setAttribute("tabindex", "0");
-        popEl.prepend(popS);
-
-        const popE = document.createElement("div");
-        popE.className = "pop-e";
-        popE.setAttribute("tabindex", "0");
-        popEl.append(popE);
-
-        popEl.querySelector(".pop-wrap").setAttribute("tabindex", "0");
-
-        popEl.classList.add("open");        
-
-        popEl.querySelector(".pop-s, .pop-e").addEventListener("focus", function () {
-            popEl.querySelector(".pop-wrap").focus();
-        });
-
-        if (popEl.querySelector("[data-action=close]") != null ) {
-            popEl.querySelector("[data-action=close]").addEventListener("click", () => {
-                popUp.close(pop, btn);
+    form: {
+        init() {
+            this.bindEvents();
+        },
+        bindEvents() {
+            $(document).on("input", ".textarea-box .textarea", function () {
+                const textarea = this;
+                const box = textarea.closest(".textarea-box");
+                const length = textarea.value.length;
+                const countEl = box.querySelector(".byte-check .count");
+                const max = parseInt(textarea.getAttribute("maxlength"), 10) || 1000;
+                countEl.innerText = Math.min(length, max);
+                box.classList.toggle("on", length > 0);
+                if (box.classList.contains("ty02")) pubUi.form.textareaResize(textarea);
             });
-        }
-
-        if (popEl.classList.contains("tooltip")) {
-            const rect = btn.getBoundingClientRect();
-            const btnHeight = btn.clientHeight;            
-            const tooltipPadding = 8;
-            const top = rect.top + window.scrollY;
-            const left = rect.left + rect.width + tooltipPadding + window.scrollX;
-
-            document.querySelector("body").classList.remove("noScroll");
-            popEl.style.position = "absolute";
-            popEl.style.top = `${top + btnHeight - 8}px`;
-            popEl.style.left = `${left - 74}px`;
-            popEl.style.zIndex = 100;
-        }
-
-        popUp.scroll(pop);
+        },
+        textareaResize(obj) {
+            obj.style.height = "auto";
+            obj.style.height = obj.scrollHeight + 2 + "px";
+        },
     },
-    close: function (pop, btn) {
-        const popEl = document.querySelector(pop);
 
-        if (document.querySelector(".modal-pop.open")) {
-            document.querySelector("body").classList.remove("noScroll");
-            //$('body').addClass('scroll');
-            popEl.classList.remove("open");
-            popEl.removeAttribute("style");
-            popEl.querySelector(".pop-s").remove();
-            popEl.querySelector(".pop-e").remove();
-            popEl.querySelector(".pop-wrap").removeAttribute("tabindex");
-        }
+    tabList: {
+        init() {
+            this.tab();
+            this.scroll();
+        },
+        tab() {
+            Array.from(pubUi.self.tabLists).forEach((tabList) => {
+                const tabs = tabList.querySelectorAll(".tab-category > li");
+                tabs.forEach((tab) => {
+                    tab.addEventListener("click", function () {
+                        const id = this.getAttribute("id");
+                        const contents = tabList.closest(".tab-wrap").querySelectorAll(".tab-content-box > .tab-content");
 
-        if (!popEl.classList.contains("tooltip")) {
-            document.querySelector(btn).focus();
-        }
-    },
-    scroll: function (pop) {
-        const popEl = document.querySelector(pop);
+                        tabs.forEach((t) => {
+                            t.classList.remove("on");
+                            t.querySelector("button").setAttribute("aria-selected", false);
+                        });
+                        contents.forEach((c) => {
+                            c.classList.remove("on");
+                            c.setAttribute("aria-expanded", false);
+                        });
 
-
-        if(popEl.querySelector(".pop-content")) {
-            var _scroll = popEl.querySelector(".pop-content").scrollTop;
-
-            if (1 < _scroll) {
-                popEl.querySelector(".pop-wrap").classList.add("scroll");
-            } else {
-                popEl.querySelector(".pop-wrap").classList.remove("scroll");
-            }
-
-            popEl.querySelector(".pop-content").addEventListener("scroll", function () {
-                var _scroll = popEl.querySelector(".pop-content").scrollTop;
-
-                if (1 < _scroll) {
-                    popEl.querySelector(".pop-wrap").classList.add("scroll");
-                } else {
-                    popEl.querySelector(".pop-wrap").classList.remove("scroll");
-                }
-            });
-        }        
-    },
-};
-
-// tab
-var tabList = {
-    init: function () {
-        tabList.tab();
-        tabList.scroll();
-    },
-    // 탭카테고리 제어 이벤트
-    tab: function () {
-        Array.from(pubUi.self.tabLists).forEach(function (tabList, index) {
-            const tabCategory = tabList.querySelectorAll(".tab-category > li");
-            tabCategory.forEach((tab, idx) => {
-                tab.addEventListener("click", function (e) {
-                    const target = e.currentTarget;
-                    const targetId = target.getAttribute("id");
-                    const tabContent = tabList.closest(".tab-wrap").querySelectorAll(".tab-content-box > .tab-content");                    
-
-                    tabCategory.forEach((otherTab) => {
-                        if (otherTab !== target) {
-                            otherTab.classList.remove("on");
-                            otherTab.querySelector("button").setAttribute("aria-selected", false);
-                        }
+                        document.querySelector(`#${id}`).classList.add("on");
+                        document.querySelector(`#${id} > button`).setAttribute("aria-selected", true);
+                        document.querySelector(`#${id}-content`).classList.add("on");
+                        document.querySelector(`#${id}-content`).setAttribute("aria-expanded", true);
                     });
-                    tabContent.forEach((tabCont) => {
-                        tabCont.classList.remove("on");
-                        tabCont.setAttribute("aria-expanded", false);
-                    });
-
-                    document.querySelector(`#${targetId}`).classList.add("on");
-                    document.querySelector(`#${targetId} > button`).setAttribute("aria-selected", true);
-                    document.querySelector(`#${targetId}-content`).classList.add("on");
-                    document.querySelector(`#${targetId}-content`).setAttribute("aria-expanded", true);
                 });
             });
-        });
-    },
-    scroll: function () {
-        Array.from(pubUi.self.tabLists).forEach(function (tabList, index) {
-            if (pubUi.self.isMobile || pubUi.self.mobileDevice) {
-                tabList.closest(".tab-cate-wrap").classList.add("scroll");
-            } else {
-                tabList.closest(".tab-cate-wrap").classList.remove("scroll");
-            }
-        });
-    },
-};
-
-// accordion
-var acdItem = {
-    init: function () {
-        acdItem.tab();
-    },
-    tab: function () {
-        $(document).on("click", ".acdItem [aria-expanded]", function (e) {
-            e.preventDefault();
-            var _this = $(this);
-            var _thisItem = _this.closest(".acdItem");
-
-            if (_this.attr("aria-expanded") == "true") {
-                _this.attr("aria-expanded", false);
-                _thisItem.find("[role=region]").slideUp();
-                _thisItem.removeClass("on");
-            } else {
-                _this.attr("aria-expanded", true);
-                _thisItem.find("[role=region]").slideDown();
-                _thisItem.addClass("on");
-
-                if (_thisItem.hasClass("tog")) {
+        },
+        scroll() {
+            pubUi.self.tabLists.forEach((tabList) => {
+                const wrap = tabList.closest(".tab-cate-wrap");
+                if (pubUi.self.isMobile || pubUi.self.mobileDevice) {
+                    wrap.classList.add("scroll");
                 } else {
-                    _thisItem.siblings(".acdItem:not(.tog)").find("[aria-expanded]").attr("aria-expanded", false);
-                    _thisItem.siblings(".acdItem:not(.tog)").find("[role=region]").slideUp();
-                    _thisItem.siblings(".acdItem:not(.tog)").removeClass("on");
+                    wrap.classList.remove("scroll");
                 }
+            });
+        },
+    },
+
+    acdItem: {
+        init() {
+            this.tab();
+        },
+        tab() {
+            $(document).on("click", ".acdItem [aria-expanded]", function (e) {
+                e.preventDefault();
+                const $this = $(this);
+                const item = $this.closest(".acdItem");
+                const expanded = $this.attr("aria-expanded") === "true";
+
+                $this.attr("aria-expanded", !expanded);
+                item.find("[role=region]").slideToggle();
+                item.toggleClass("on", !expanded);
+
+                if (!item.hasClass("tog")) {
+                    item.siblings(".acdItem:not(.tog)").find("[aria-expanded]").attr("aria-expanded", false);
+                    item.siblings(".acdItem:not(.tog)").find("[role=region]").slideUp();
+                    item.siblings(".acdItem:not(.tog)").removeClass("on");
+                }
+            });
+        },
+    },
+    popUp: {
+        open(pop, btn) {
+            const popEl = document.querySelector(pop);
+            document.body.classList.add("noScroll");
+
+            ["pop-s", "pop-e"].forEach((cls) => {
+                const div = document.createElement("div");
+                div.className = cls;
+                div.setAttribute("tabindex", "0");
+                cls === "pop-s" ? popEl.prepend(div) : popEl.append(div);
+            });
+
+            popEl.querySelector(".pop-wrap").setAttribute("tabindex", "0");
+            popEl.classList.add("open");
+
+            popEl.querySelectorAll(".pop-s, .pop-e").forEach((el) => {
+                el.addEventListener("focus", () => popEl.querySelector(".pop-wrap").focus());
+            });
+
+            const closeBtn = popEl.querySelector("[data-action=close]");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", () => pubUi.popUp.close(pop, btn));
             }
-        });
+
+            if (popEl.classList.contains("tooltip")) {
+                pubUi.popUp.setTooltipPosition(popEl, btn);
+            }
+
+            pubUi.popUp.scroll(pop);
+        },
+
+        close(pop, btn) {
+            const popEl = document.querySelector(pop);
+            document.body.classList.remove("noScroll");
+            popEl.classList.remove("open");
+            popEl.removeAttribute("style");
+            popEl.querySelector(".pop-s")?.remove();
+            popEl.querySelector(".pop-e")?.remove();
+            popEl.querySelector(".pop-wrap").removeAttribute("tabindex");
+            if (!popEl.classList.contains("tooltip")) {
+                document.querySelector(btn).focus();
+            }
+        },
+
+        scroll(pop) {
+            const popEl = document.querySelector(pop);
+            const content = popEl.querySelector(".pop-content");
+            if (!content) return;
+
+            const wrap = popEl.querySelector(".pop-wrap");
+            const toggleClass = () => wrap.classList.toggle("scroll", content.scrollTop > 1);
+            toggleClass();
+            content.addEventListener("scroll", toggleClass);
+        },
+
+        setTooltipPosition(popEl, btn) {
+            const padding = 8;
+            const arrow = popEl.querySelector(".tooltip-arrow");
+          
+            const btnRect = btn.getBoundingClientRect();
+            const popRect = popEl.getBoundingClientRect(); // 팝업 사이즈 고려
+          
+            const scrollY = window.scrollY;
+            const scrollX = window.scrollX;
+          
+            let top = 0;
+            let left = 0;
+          
+            document.body.classList.remove("noScroll");
+            popEl.style.position = "absolute";
+            popEl.style.zIndex = 100;
+          
+            // 툴팁 위치 조건별 분기
+            if (arrow.classList.contains("top")) {
+              // 상단 노출
+              top = btnRect.top + scrollY - popRect.height - padding;
+          
+              if (arrow.classList.contains("right")) {
+                left = btnRect.right + scrollX - popRect.width + btn.offsetWidth;
+                // console.log("상단, 우측");
+              } else {
+                left = btnRect.left + scrollX;
+                // console.log("상단, 좌측");
+              }
+            } else {
+              // 하단 노출
+              top = btnRect.bottom + scrollY + padding;
+          
+              if (arrow.classList.contains("right")) {
+                left = btnRect.right + scrollX - popRect.width + btn.offsetWidth;
+                // console.log("하단, 우측");
+              } else {
+                left = btnRect.left + scrollX;
+                // console.log("하단, 좌측");
+              }
+            }
+          
+            // 적용
+            popEl.style.top = `${top}px`;
+            popEl.style.left = `${left}px`;
+
+
+          }
     },
 };
-
 
 (function () {
-    setTimeout(function () {
-        pubUi.init();
-    }, 1000);
+    setTimeout(() => pubUi.init(), 1000);
 
-    // 리사이즈 대응
     let resizeTimer;
     window.addEventListener("resize", () => {
         if (resizeTimer) cancelAnimationFrame(resizeTimer);
         resizeTimer = requestAnimationFrame(() => {
-            if (!pubUi.self) return; // 안전성 보강
-
-            //전역 변수값 갱신
+            if (!pubUi.self) return;
             pubUi.self.isPc = window.innerWidth >= 1440;
             pubUi.self.isMobile = window.innerWidth <= 768;
-
-            tabList.scroll();
+            pubUi.tabList.scroll();
         });
     });
 })();

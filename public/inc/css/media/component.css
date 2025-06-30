@@ -62,4 +62,6 @@
     .modal-pop.dialog .pop-wrap .pop-content .btn-wrap {padding-top: 1rem;}
     .modal-pop.dialog .pop-footer > .btn-wrap .btn-cancel {width: 6.25rem;}
     .modal-pop.dialog .pop-footer > .btn-wrap .btn-confirm {width: 8.25rem;}
+
+    .modal-pop.tooltip { max-width: 90%; left: 5% !important; right: auto !important;}
 }

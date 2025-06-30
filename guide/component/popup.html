@@ -18,7 +18,7 @@
             <a href="#container">본문 바로가기</a>
         </div>
         <div class="guide-wrapper">
-          <div class="wrap">
+          <div class="wrap cyanogen">
             <section class="guide-section intro">
               <div class="guide-header">
                 <p class="guide-title-h3">Popup Component</p>
@@ -41,12 +41,12 @@
             <section class="guide-section">
               <p class="guide-title-h3">1. alert popup - .alert</p>                  
               <div class="btn-wrap">
-                  <button type="button" class="act-btn-sm btn-primary01" id="popupAlertBtn1" onclick="popUp.open('#popupAlert1','#popupAlertBtn1');">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupAlertBtn1" onclick="pubUi.popUp.open('#popupAlert1','#popupAlertBtn1');">
                     popup alert
                   </button>
               </div>
               <div class="btn-wrap">
-                  <button type="button" class="act-btn-sm btn-primary01" id="popupAlertBtn2" onclick="popUp.open('#popupAlert2','#popupAlertBtn2');">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupAlertBtn2" onclick="pubUi.popUp.open('#popupAlert2','#popupAlertBtn2');">
                     popup alert2
                   </button>
               </div>
@@ -54,12 +54,12 @@
             <section class="guide-section">
               <p class="guide-title-h3">2. dialog popup - .dialog</p>                  
               <div class="btn-wrap">
-                  <button type="button" class="act-btn-sm btn-primary01" id="popupDialogBtn1" onclick="popUp.open('#popupDialog1','#popupDialogBtn1');">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupDialogBtn1" onclick="pubUi.popUp.open('#popupDialog1','#popupDialogBtn1');">
                     popup dialog - 버튼 1개 케이스
                   </button>
               </div>
               <div class="btn-wrap">
-                  <button type="button" class="act-btn-sm btn-primary01" id="popupDialogBtn2" onclick="popUp.open('#popupDialog2','#popupDialogBtn2');">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupDialogBtn2" onclick="pubUi.popUp.open('#popupDialog2','#popupDialogBtn2');">
                     popup dialog - 버튼 2개 케이스
                   </button>
               </div>
@@ -67,7 +67,7 @@
             <section class="guide-section">
               <p class="guide-title-h3">3. full popup - .full</p>                  
               <div class="btn-wrap">
-                  <button type="button" class="act-btn-sm btn-primary01" id="popupFullBtn1" onclick="popUp.open('#popupFull1','#popupFullBtn1');">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupFullBtn1" onclick="pubUi.popUp.open('#popupFull1','#popupFullBtn1');">
                     popup full
                   </button>
               </div>
@@ -75,9 +75,24 @@
             <section class="guide-section">
               <p class="guide-title-h3">4. tooltip popup - .tooltip</p>                  
               <div class="btn-wrap">
-                  <button type="button" class="act-btn-sm btn-primary01" id="popupTooltipBtn1" onclick="popUp.open('#popupTooltip1',this);"> <!-- ★ tooltip일 경우는, 버튼 onclick="popUp.open()" 이벤트 실행시 후위 파라미터 this로 넘길 것 -->
-                    tooltip Layer popup
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupTooltipBtn1-1" onclick="pubUi.popUp.open('#popupTooltip1-1',this);"> <!-- ★ tooltip일 경우는, 버튼 onclick="pubUi.popUp.open()" 이벤트 실행시 후위 파라미터 this로 넘길 것 -->
+                    tooltip Layer popup - 하단 좌측 노출
                   </button>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="act-btn-sm btn-primary01" id="popupTooltipBtn1-2" onclick="pubUi.popUp.open('#popupTooltip1-2',this);"> <!-- ★ tooltip일 경우는, 버튼 onclick="pubUi.popUp.open()" 이벤트 실행시 후위 파라미터 this로 넘길 것 -->
+                  tooltip Layer popup - 하단 우측 노출
+                </button>
+              </div>
+              <div class="btn-wrap">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupTooltipBtn2-1" onclick="pubUi.popUp.open('#popupTooltip2-1',this);"> <!-- ★ tooltip일 경우는, 버튼 onclick="pubUi.popUp.open()" 이벤트 실행시 후위 파라미터 this로 넘길 것 -->
+                    tooltip Layer popup - 상단 좌측 노출
+                  </button>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="act-btn-sm btn-primary01" id="popupTooltipBtn2-2" onclick="pubUi.popUp.open('#popupTooltip2-2',this);"> <!-- ★ tooltip일 경우는, 버튼 onclick="pubUi.popUp.open()" 이벤트 실행시 후위 파라미터 this로 넘길 것 -->
+                  tooltip Layer popup - 상단 우측 노출
+                </button>
               </div>
             </section>
           </div> <!-- //wrap-->
@@ -102,12 +117,12 @@
               <div class="pop-footer">
                 <div class="btn-wrap">
                   <div class="btn-group">
-                    <button type="button" class="act-btn-md btn-outline01 btn-cancel" onclick="popUp.close('#popupAlert1', '#popupAlertBtn1')">취소</button>
+                    <button type="button" class="act-btn-md btn-outline01 btn-cancel" onclick="pubUi.popUp.close('#popupAlert1', '#popupAlertBtn1')">취소</button>
                     <button type="button" class="act-btn-md btn-primary01 btn-confirm">확인</button>
                   </div>
                 </div>
               </div>
-              <!-- <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> -->
+              <!-- <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> -->
           </div>
         </div>
 
@@ -132,12 +147,12 @@
               <div class="pop-footer">
                 <div class="btn-wrap">
                   <div class="btn-group">
-                    <button type="button" class="act-btn-md btn-outline01 btn-cancel" onclick="popUp.close('#popupAlert2', '#popupAlertBtn2')">취소</button>
+                    <button type="button" class="act-btn-md btn-outline01 btn-cancel" onclick="pubUi.popUp.close('#popupAlert2', '#popupAlertBtn2')">취소</button>
                     <button type="button" class="act-btn-md btn-primary01 btn-confirm">확인</button>
                   </div>
                 </div>
               </div>
-              <!-- <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> -->
+              <!-- <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> -->
           </div>
         </div>
 
@@ -158,10 +173,10 @@
               </div>
               <div class="pop-footer">
                 <div class="btn-wrap">
-                  <button type="button" class="act-btn-lg btn-primary01" onclick="popUp.close('#popupDialog1','#popupDialogBtn1');">확인</button>
+                  <button type="button" class="act-btn-lg btn-primary01" onclick="pubUi.popUp.close('#popupDialog1','#popupDialogBtn1');">확인</button>
                 </div>
               </div>
-              <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+              <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialog1','#popupDialogBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
           </div>
         </div>
 
@@ -183,12 +198,12 @@
               <div class="pop-footer">
                 <div class="btn-wrap">
                   <div class="btn-group">
-                    <button type="button" class="act-btn-lg btn-outline01 btn-cancel" onclick="popUp.close('#popupDialog2','#popupDialogBtn2')">취소</button>
-                    <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="popUp.close('#popupDialog2','#popupDialogBtn2');">확인</button>
+                    <button type="button" class="act-btn-lg btn-outline01 btn-cancel" onclick="pubUi.popUp.close('#popupDialog2','#popupDialogBtn2')">취소</button>
+                    <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="pubUi.popUp.close('#popupDialog2','#popupDialogBtn2');">확인</button>
                   </div>
                 </div>
               </div>
-              <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupDialog2','#popupDialogBtn2');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+              <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialog2','#popupDialogBtn2');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
           </div>
         </div>
 
@@ -330,16 +345,16 @@
               </div>
               <div class="pop-footer">
                 <div class="btn-wrap">
-                  <button type="button" class="act-btn-md btn-primary01" onclick="popUp.close('#popupFull1','#popupFullBtn1');">확인</button>
+                  <button type="button" class="act-btn-md btn-primary01" onclick="pubUi.popUp.close('#popupFull1','#popupFullBtn1');">확인</button>
                 </div>
               </div>
-              <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupFull1','#popupFullBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+              <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupFull1','#popupFullBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
           </div>
         </div>
 
         <!-- popup tooltip : tooltip Layer popup -->
-        <!-- 클릭한 영역 상단/하단 노출 / 툴팁 화살표 아이콘 left, right -->
-        <div class="modal-pop tooltip" id="popupTooltip1">          
+        <!-- 클릭한 영역 하단 노출 / 툴팁 화살표 위치 left(default) -->
+        <div class="modal-pop tooltip" id="popupTooltip1-1">          
           <div class="tooltip-arrow"></div>
           <div class="pop-wrap">              
               <div class="pop-header">
@@ -348,7 +363,49 @@
               <div class="pop-content">
                 <p class="desc">LG에너지솔루션은 고객의 기대를 뛰어넘는 제품 품질을 제공하기 위해 끊임없이 노력하고 있습니다. 철저한 품질경영시스템을 구축하고 모든 제조공정에서 품질과 안전성을 높이기 위한 활동을 전개해 나가고 있으며, 지속적인 개선 노력과 노하우를 공유해 임직원 및 협력회사가 함께 품질관리를 위한 협력을 강화해 나가고 있습니다.</p>
               </div>
-              <button type="button" class="pop-close" data-action="close" onclick="popUp.close('#popupTooltip1', '#popupTooltipBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
+              <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupTooltip1-1', '#popupTooltipBtn1-1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
+          </div>
+        </div>       
+
+        <!-- 클릭한 영역 하단 노출 / 툴팁 화살표 위치 right(right 클래스 추가 필요) -->
+        <div class="modal-pop tooltip" id="popupTooltip1-2">          
+          <div class="tooltip-arrow right"></div>
+          <div class="pop-wrap">              
+              <div class="pop-header">
+                  <h3 class="title">제목을 입력하세요</h3>
+              </div>
+              <div class="pop-content">
+                <p class="desc">LG에너지솔루션은 고객의 기대를 뛰어넘는 제품 품질을 제공하기 위해 끊임없이 노력하고 있습니다. 철저한 품질경영시스템을 구축하고 모든 제조공정에서 품질과 안전성을 높이기 위한 활동을 전개해 나가고 있으며, 지속적인 개선 노력과 노하우를 공유해 임직원 및 협력회사가 함께 품질관리를 위한 협력을 강화해 나가고 있습니다.</p>
+              </div>
+              <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupTooltip1-2', '#popupTooltipBtn1-2');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
+          </div>
+        </div>
+
+        <!-- 클릭한 영역 상단 노출 / 툴팁 화살표 위치 left : top 클래스 추가 필요 -->
+        <div class="modal-pop tooltip" id="popupTooltip2-1">          
+          <div class="tooltip-arrow top"></div>
+          <div class="pop-wrap">
+              <div class="pop-header">
+                  <h3 class="title">제목을 입력하세요</h3>
+              </div>
+              <div class="pop-content">
+                <p class="desc">LG에너지솔루션은 고객의 기대를 뛰어넘는 제품 품질을 제공하기 위해 끊임없이 노력하고 있습니다. 철저한 품질경영시스템을 구축하고 모든 제조공정에서 품질과 안전성을 높이기 위한 활동을 전개해 나가고 있으며, 지속적인 개선 노력과 노하우를 공유해 임직원 및 협력회사가 함께 품질관리를 위한 협력을 강화해 나가고 있습니다.</p>
+              </div>
+              <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupTooltip2-1', '#popupTooltipBtn1-1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
+          </div>
+        </div>
+
+        <!-- 클릭한 영역 상단 노출 / 툴팁 화살표 위치 right(top, right 클래스 추가 필요) -->
+        <div class="modal-pop tooltip" id="popupTooltip2-2">          
+          <div class="tooltip-arrow top right"></div>
+          <div class="pop-wrap">              
+              <div class="pop-header">
+                  <h3 class="title">제목을 입력하세요</h3>
+              </div>
+              <div class="pop-content">
+                <p class="desc">LG에너지솔루션은 고객의 기대를 뛰어넘는 제품 품질을 제공하기 위해 끊임없이 노력하고 있습니다. 철저한 품질경영시스템을 구축하고 모든 제조공정에서 품질과 안전성을 높이기 위한 활동을 전개해 나가고 있으며, 지속적인 개선 노력과 노하우를 공유해 임직원 및 협력회사가 함께 품질관리를 위한 협력을 강화해 나가고 있습니다.</p>
+              </div>
+              <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupTooltip2-2', '#popupTooltipBtn1-2');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
           </div>
         </div>
 
