@@ -162,6 +162,9 @@ ul.page-map > li > a:hover {color: #171819; font-weight: 600;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .img-box .img-title {margin-top:1.25rem;}
 .num-pop { animation: popIn 0.3s ease-out;}
 
+/* 지속가능경영 > 추진체계 */
+.cyanogen_sub3 .content-article {padding-bottom: 0;}
+
 @keyframes popIn {
     0% { transform: scale(1); }
     50% { transform: scale(1.25); }
