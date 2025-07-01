@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>LG에너지솔루션 | Component - pagination</title>
+    <link type="text/css" rel="stylesheet" href="../../guide/inc/css/shCoreDefault.css" />
+    <link type="text/css" rel="stylesheet" href="../../guide/inc/css/guide.css" />
+    <link type="text/css" rel="stylesheet" href="../../public/inc/css/swiper.min.css" />    
+    <link type="text/css" rel="stylesheet" href="../../public/inc/css/common.css" />
+    </head>
+
+    <body>
+        <div class="skip-navigation">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="guide-wrapper">
+          <div class="wrap cyanogen">
+            <section class="guide-section intro">
+              <div class="guide-header">
+                <p class="guide-title-h3">Pagination : 작업 진행중...</p>
+                <div class="btn-wrap">
+                  <a href="../ui-guide.html" class="txt-btn02 txt-btn-sm">Component 페이지로 돌아가기</a>
+                </div>
+              </div>
+              <ul class="guide-list">
+                <li>
+                  <p>페이지네이션 컴포넌트의 마크업은 paging-wrap 클래스로 묶은 후 작성합니다.</p>
+                </li>
+                <li>
+                  <p>
+                    type 클래스 추가시 paging에 추가하여 사용합니다.
+                  </p>
+                </li>
+              </ul>
+            </section>
+
+            <section class="guide-section">
+              <p class="guide-title-h3">1. pagination : 기본 타입</p>
+              <div class="paging-wrap">
+                <ul class="paging">
+                  <li class="arrow first"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                  <li class="arrow prev"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">...</a></li>
+                  <li><a href="#">30</a></li>
+                  <li class="arrow next"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                  <li class="arrow last"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                </ul>
+              </div>
+              <div class="paging-wrap">
+                <ul class="paging">
+                  <li class="arrow first"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_prev2.svg" alt="처음"></a></li>
+                  <li class="arrow prev"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_prev1.svg" alt="이전"></a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">...</a></li>
+                  <li class="active"><a href="#">30</a></li>
+                  <li class="arrow next"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_next1_disabled.svg" alt="다음"><span class="blind">다음</span></a></li>
+                  <li class="arrow last"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_next2_disabled.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="guide-section">
+              <p class="guide-title-h3">2. pagination : paging type2 (활성화시 원 형태)</p>
+              <div class="paging-wrap">
+                <ul class="paging type2">
+                  <li class="arrow first"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_prev2.svg" alt="처음"></a></li>
+                  <li class="arrow prev"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_prev1.svg" alt="이전"></a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li class="arrow next"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                  <li class="arrow last"><a href="#"><img src="../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                </ul>
+              </div>
+            </section>
+          </div> <!-- //wrap-->
+        </div> <!-- //guide-wrapper -->
+
+        <script type="text/javascript" src="../../public/inc/js/jquery-3.7.1.slim.min.js"></script>
+        <!-- <script type="text/javascript" src="../../public/inc/js/swiper.min.js"></script> -->
+        <!-- <script type="text/javascript" src="../../public/inc/js/plugins.js"></script> -->
+        <script type="text/javascript" src="../../public/inc/js/com-ui.js"></script>
+        <script type="text/javascript" src="../../public/inc/js/pub-ui.js"></script>
+    </body>
+</html>

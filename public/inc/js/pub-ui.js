@@ -1,4 +1,3 @@
-// pubUi.js (모듈 통합 버전)
 var pubUi = {
     self: {},
 
@@ -289,11 +288,9 @@ var pubUi = {
               }
             }
           
-            // 적용
+            // 위치값 적용
             popEl.style.top = `${top}px`;
             popEl.style.left = `${left}px`;
-
-
           }
     },
 };

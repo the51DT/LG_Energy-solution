@@ -780,9 +780,7 @@ nav .layout-list li:first-child a {
 
 /* guide-title font 크기 설정시 추가하여 사용 */
 [class^="guide-title"] {margin-bottom: 0.625rem;}
-[class^="guide-title"][class*="-h3"] {
-  font-size: 1.5rem; line-height: 2.25rem; font-weight: 600;
-}
+[class^="guide-title"][class*="-h3"] {font-size: 1.5rem; line-height: 2.25rem; font-weight: 600;}
 
 .guide-wrapper {padding:1rem;}
 .guide-header {display: flex; justify-content: space-between; align-items: center;}
