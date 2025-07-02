@@ -7,6 +7,7 @@ var pubUi = {
         this.scrollToEvt();
         this.chkFileboxDisabled();
         this.fileboxInputEvt();
+        this.exceptionStickyEvt();
 
         this.form.init();
         this.tabList.init();
@@ -20,7 +21,7 @@ var pubUi = {
         this.self.isMobile = window.innerWidth <= 768;
 
         this.self.tabCategory = document.querySelector(".tab-category");
-        this.self.tabLists = document.querySelectorAll(".tab-wrap [role=tablist]");
+        this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
         this.self.selectMenu = document.querySelectorAll(".select-menu");
         this.self.selectCate = document.querySelectorAll(".select-cate");
         this.self.selectCateBtn = document.querySelectorAll(".select-cate button");
@@ -65,6 +66,19 @@ var pubUi = {
                 });
             });
         });
+    },
+
+    // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S
+    // sticky 붙었을경우 예외처리 클래스, 처리하려는 sticky 대상의 css의 top값이 꼭 -1px 이어야 해당 스크립트 적용됨 : top -1px로 할수없어서 로직 변경필요함 (수정필요)
+    exceptionStickyEvt: function () {
+        const stickyEl = document.querySelector(".page-map-wrap");
+        const observer = new IntersectionObserver(([e]) => e.target.classList.toggle("stuck", e.intersectionRatio < 1), {
+            threshold: [1],
+        });
+        
+        observer.observe(stickyEl);
+
+        
     },
 
     scrollToEvt: function (targetId) {
@@ -159,7 +173,7 @@ var pubUi = {
         scroll() {
             pubUi.self.tabLists.forEach((tabList) => {
                 const wrap = tabList.closest(".tab-cate-wrap");
-                if (pubUi.self.isMobile || pubUi.self.mobileDevice) {
+                if (pubUi.self.isMobile) {
                     wrap.classList.add("scroll");
                 } else {
                     wrap.classList.remove("scroll");
@@ -249,49 +263,49 @@ var pubUi = {
         setTooltipPosition(popEl, btn) {
             const padding = 8;
             const arrow = popEl.querySelector(".tooltip-arrow");
-          
+
             const btnRect = btn.getBoundingClientRect();
             const popRect = popEl.getBoundingClientRect(); // 팝업 사이즈 고려
-          
+
             const scrollY = window.scrollY;
             const scrollX = window.scrollX;
-          
+
             let top = 0;
             let left = 0;
-          
+
             document.body.classList.remove("noScroll");
             popEl.style.position = "absolute";
             popEl.style.zIndex = 100;
-          
+
             // 툴팁 위치 조건별 분기
             if (arrow.classList.contains("top")) {
-              // 상단 노출
-              top = btnRect.top + scrollY - popRect.height - padding;
-          
-              if (arrow.classList.contains("right")) {
-                left = btnRect.right + scrollX - popRect.width + btn.offsetWidth;
-                // console.log("상단, 우측");
-              } else {
-                left = btnRect.left + scrollX;
-                // console.log("상단, 좌측");
-              }
+                // 상단 노출
+                top = btnRect.top + scrollY - popRect.height - padding;
+
+                if (arrow.classList.contains("right")) {
+                    left = btnRect.right + scrollX - popRect.width + btn.offsetWidth;
+                    // console.log("상단, 우측");
+                } else {
+                    left = btnRect.left + scrollX;
+                    // console.log("상단, 좌측");
+                }
             } else {
-              // 하단 노출
-              top = btnRect.bottom + scrollY + padding;
-          
-              if (arrow.classList.contains("right")) {
-                left = btnRect.right + scrollX - popRect.width + btn.offsetWidth;
-                // console.log("하단, 우측");
-              } else {
-                left = btnRect.left + scrollX;
-                // console.log("하단, 좌측");
-              }
+                // 하단 노출
+                top = btnRect.bottom + scrollY + padding;
+
+                if (arrow.classList.contains("right")) {
+                    left = btnRect.right + scrollX - popRect.width + btn.offsetWidth;
+                    // console.log("하단, 우측");
+                } else {
+                    left = btnRect.left + scrollX;
+                    // console.log("하단, 좌측");
+                }
             }
-          
+
             // 위치값 적용
             popEl.style.top = `${top}px`;
             popEl.style.left = `${left}px`;
-          }
+        },
     },
 };
 
@@ -307,5 +321,5 @@ var pubUi = {
             pubUi.self.isMobile = window.innerWidth <= 768;
             pubUi.tabList.scroll();
         });
-    });
+    });     
 })();

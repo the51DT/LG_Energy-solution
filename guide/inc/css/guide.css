@@ -707,9 +707,12 @@ nav .layout-list li:first-child a {
   padding: 15px 10px;
 }
 
-.section .ui-item > * {
+.section .ui-item {
   margin: 20px 0;
 }
+/* .section .ui-item > * {
+  margin: 20px 0;
+} */
 
 .section .cont-type .ui-item .guide-txt {
   margin-top: 15px;

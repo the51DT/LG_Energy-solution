@@ -1,0 +1,11 @@
+/* 지속가능경영(esgm) */
+.esgm .cont-area-info {padding-bottom: 11.25rem;}
+.esgm .content-item01 {max-width: 90rem; margin: 0 auto;}
+.content-box {display: flex; gap: 3.75rem; align-items: center; position: relative;}
+.content-box:not(:first-child) {margin-top: 3.75rem; border-top: 1px solid #d9d9d9;}
+.content-box:not(:first-child) .text-area {margin-top: 3.75rem;}
+.content-box .text-area .sub {font-size: 1.5rem; font-weight: 700; color:var(--colorElement-light-text-text-default01); line-height: 2.25rem;}
+.content-box .text-area .tit {font-size: 3.5rem; font-weight: 300; color:var(--colorElement-light-text-text-default01); line-height: 4.9rem; padding-top: 2rem;}
+.content-box .text-area .desc {font-size: 1.125rem; font-weight: 400; color: var(--colorElement-light-text-text-default02); line-height: 1.8rem; padding-top: 1.5rem;}
+.content-box .img-area {padding-top: 2.19rem;}
+.content-box .img-area img {min-width: 28.75rem; height: 17.5rem;}

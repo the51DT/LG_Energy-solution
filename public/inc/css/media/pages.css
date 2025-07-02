@@ -1,0 +1,13 @@
+@media screen and (max-width: 1023px) {
+ /* 지속가능경영(esgm) */
+.esgm .cont-area-intro > section:first-child {padding-top: 2rem;}
+.esgm .cont-area-info {padding-bottom: 4.75rem;}
+.content-box {flex-direction: column; gap: 1.5rem;}
+.content-box:not(:first-child) {margin-top: 2rem;}
+.content-box:not(:first-child) .text-area {margin-top: 2rem;}
+.content-box .text-area .sub {font-size: 1rem; font-weight: 600; color:var(--colorElement-light-text-text-primary); line-height: 1.5rem;}
+.content-box .text-area .tit {font-size: 1.5rem; font-weight: 500; color:var(--colorElement-light-text-text-default01); line-height: 2.1rem; padding-top: 0.5rem;}
+.content-box .text-area .desc {font-size: 1rem; font-weight: 400; color: var(--colorElement-light-text-text-default02); line-height: 1.5rem;}
+.content-box .img-area {padding-top: 0;}
+.content-box .img-area img {min-width: 20rem; height: auto;}
+}
