@@ -17,8 +17,8 @@ var pubUi = {
     settings: function () {
         this.self = {};
         this.self.mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-        this.self.isPc = window.innerWidth >= 1440;
-        this.self.isMobile = window.innerWidth <= 768;
+        this.self.isPc = window.innerWidth >= 1024;
+        this.self.isMobile = window.innerWidth <= 1023;
 
         this.self.tabCategory = document.querySelector(".tab-category");
         this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
@@ -68,17 +68,23 @@ var pubUi = {
         });
     },
 
-    // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S
-    // sticky 붙었을경우 예외처리 클래스, 처리하려는 sticky 대상의 css의 top값이 꼭 -1px 이어야 해당 스크립트 적용됨 : top -1px로 할수없어서 로직 변경필요함 (수정필요)
+    // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S    
     exceptionStickyEvt: function () {
-        const stickyEl = document.querySelector(".page-map-wrap");
-        const observer = new IntersectionObserver(([e]) => e.target.classList.toggle("stuck", e.intersectionRatio < 1), {
-            threshold: [1],
-        });
-        
-        observer.observe(stickyEl);
+        document.querySelector(".wrap.sub_p").addEventListener("scroll", (e) => {
+            const offsetTop = document.querySelector(".wrap.sub_p").scrollTop;
+            const stickyEl = document.querySelector(".page-map-wrap");
 
-        
+            if (!stickyEl) return;
+
+            // pc일때만 적용
+            if (pubUi.self.isPc) {
+                if (offsetTop > 400) {
+                    stickyEl.classList.add("stuck");
+                } else {
+                    stickyEl.classList.remove("stuck");
+                }
+            }
+        });        
     },
 
     scrollToEvt: function (targetId) {

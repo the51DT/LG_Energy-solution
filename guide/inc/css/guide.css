@@ -714,6 +714,10 @@ nav .layout-list li:first-child a {
   margin: 20px 0;
 } */
 
+.section .ui-item > .table-wrap:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .section .cont-type .ui-item .guide-txt {
   margin-top: 15px;
   font-size: 15px;

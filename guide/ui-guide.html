@@ -1082,7 +1082,7 @@
           <h2 class="guideTit">Table</h2>
           <div class="info">
             <div class="subSection">
-              <h3 class="guideSubTit">기본 타입</h3>
+              <h3 class="guideSubTit">테이블 타입 : 소스 내 주석으로 정리</h3>
               <div class="ui-item">
                 <!-- 기본 type -->
                 <div class="table-wrap">
@@ -1267,6 +1267,39 @@
                           <tr>                              
                               <td headers="column2">column2</td>
                               <td headers="column3">column3</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                </div>
+
+                <!-- 행병합 & height divider 없는 케이스 -->
+                <div class="table-wrap ty02">
+                  <table summary="테이블표에 대한 내용 요약 작성">
+                      <caption>테이블표에 대한 설명 작성</caption>
+                      <colgroup>
+                          <col width="33.33%">
+                          <col width="33.33%">
+                          <col width="33.33%">                          
+                      </colgroup>
+                      <thead> 
+                          <tr>
+                              <th id="column1" scope="col" class="nbdr">Column Header 1</th>
+                              <th id="column2" scope="col" class="nbdr">Column Header 2</th>
+                              <th id="column3" scope="col" class="nbdr">Column Header 3</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td headers="column1" scope="row" rowspan="3" class="nbdr">column1</td>
+                              <td headers="column2" rowspan="2" class="nbdr">column2</td>
+                              <td headers="column3" class="nbdr">column3</td>
+                          </tr>
+                          <tr>
+                              <td headers="column3" class="nbdr">column3</td>
+                          </tr>
+                          <tr>                              
+                              <td headers="column2" class="nbdr">column2</td>
+                              <td headers="column3" class="nbdr">column3</td>
                           </tr>
                       </tbody>
                   </table>
@@ -1601,7 +1634,7 @@
               </div>
             </div>
             <div class="subSection">
-              <h3 class="guideSubTit">type2 케이스 [ .cont-area-wrap.type2 ] : 박스 아이템 리스트 형태</h3>
+              <h3 class="guideSubTit">type2 케이스 [ .cont-area-wrap.type2 .box-container .box-list ] : 박스 아이템 리스트 형태</h3>
               <p>지속가능경영 > 추진체계 - 글로벌 파트너십 탭 사용중</p>
               <div class="ui-item">
                 <div class="cont-area-wrap type2">
