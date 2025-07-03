@@ -70,8 +70,8 @@ var pubUi = {
 
     // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S    
     exceptionStickyEvt: function () {
-        document.querySelector(".wrap.sub_p").addEventListener("scroll", (e) => {
-            const offsetTop = document.querySelector(".wrap.sub_p").scrollTop;
+        document.querySelector(".wrap").addEventListener("scroll", (e) => {
+            const offsetTop = document.querySelector(".wrap").scrollTop;
             const stickyEl = document.querySelector(".page-map-wrap");
 
             if (!stickyEl) return;

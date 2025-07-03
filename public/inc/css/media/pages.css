@@ -11,7 +11,7 @@
 .content-box .img-area {padding-top: 0;}
 .content-box .img-area img {min-width: 20rem; height: auto;}
 
-.cont-box-wrap .left-box {padding:0 1.25em;}
+.cont-box-wrap .left-box {padding:0 1.25em; background: url(../../images/img/esgm01_tab2_bg1_mo.png) no-repeat 100% 100% / contain; height: 100%; display:block;}
 .cont-box-wrap .left-box::before {display: none;}
 .cont-box-wrap .left-box .intro-desc {padding: 1.56rem 0 0;}
 .cont-box-wrap .left-box .sub-desc-wrap {width: 100%; color: var(--colorElement-light-text-text-default02); font-size: 1rem; line-height: 1.5rem; padding-top: 1.5rem;}
@@ -20,6 +20,7 @@
 .cont-box-wrap .right-box .keyword {font-size: 2.75rem; line-height: 3.85rem; text-align: center;}
 .cont-box-wrap .right-box::before {content: ""; display:block; background: url(../../images/img/brace_left.png) no-repeat center center / contain; position: absolute; top:0; left: 1.25rem; width: 1.5625rem; height: 3.875rem;}
 .cont-box-wrap .right-box::after {width: 1.5625rem; height: 3.875rem; background-image: url(../../images/img/brace_right_mo.png); top: 0; right: 1.25rem;}
+
 .keyword-cont {padding: 1.5rem 1.25rem 1.69rem;}
 .keyword-cont-list > li {border-radius: 1rem; background:rgba(255, 255, 255, 0.5); padding:1.25rem; backdrop-filter: blur(5.099999904632568px);}
 .keyword-cont-list > li .keyword-box {display: flex; flex-direction: column;}
@@ -28,9 +29,13 @@
 .keyword-cont-list > li .keyword-box .title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; margin-bottom: 0.5rem;}
 .keyword-cont-list > li .keyword-box .text-list-wrap .text-list > li {font-size: 1rem; font-weight: 400; line-height: 1.5rem;}
 .keyword-cont-list > li:not(:last-child) {margin-bottom: 1rem;}
+
 .table-container {padding:0 1.25rem;}
-.table-container .table-wrap table tr > td {padding: 0; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
-.table-container .table-title {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem; padding-bottom: 1rem;}
+.table-container .table-header {padding-bottom: 1rem;}
+.fina .table-container {padding-right: 0;}
+.table-header .table-title {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem;}
+.esgm .table-container .table-wrap table tr > td {padding: 0; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+
 .profile-info-box {display: block; padding: 1.5rem 0;}
 .profile-info-box .profile-img-area {display: none;}
 .profile-txt-area .profile-text .profile-info {gap: 0.75rem;}

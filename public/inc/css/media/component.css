@@ -54,7 +54,7 @@
 
     /* content */
     .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 2rem;}
-    .cont-area-wrap .cont-area-sect > section {padding-bottom: 3rem;}
+    .cont-area-wrap .cont-area-sect > section:not(:last-child) {padding-bottom: 3rem;}
     .cont-area-wrap .cont-area-info {padding: 0 1.25rem;}
     .cont-area-wrap .cont-area-intro .intro-desc {padding: 2.06rem 1.25rem 3.75rem; font-size: 1.25rem; font-weight: 700; line-height: 1.75rem;}
     
@@ -114,7 +114,7 @@
     .breadcrumb-wrap .left-area .btn-prev {width: 1.5rem; height: 1.5rem;}
     .breadcrumb-wrap .right-area {position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); margin-top: 0.19rem;}
     .content-area-head-tab {position: fixed; top: 49px; width: 100%;}
-    .sub_p .content-header {display: none;}
+    .wrap:not(.sub_p) .content-header {display: none;}
 
     
 }
