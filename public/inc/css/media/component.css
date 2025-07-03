@@ -52,6 +52,12 @@
     /* textarea */
     .textarea-box .textarea {height: 8.13rem;}
 
+    /* table */
+    .table-wrap table tbody > tr > th {font-size: 1rem; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
+    .table-wrap table tr > td {font-size: 1rem; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
+    .table-wrap table thead > tr > th {font-size: 1rem; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
+
+
     /* content */
     .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 2rem;}
     .cont-area-wrap .cont-area-sect > section:not(:last-child) {padding-bottom: 3rem;}
@@ -116,5 +122,7 @@
     .content-area-head-tab {position: fixed; top: 49px; width: 100%;}
     .wrap:not(.sub_p) .content-header {display: none;}
 
+    /* chart */
+    .chart-area {margin:0 1.25rem;}
     
 }
