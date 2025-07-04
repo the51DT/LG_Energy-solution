@@ -6,6 +6,7 @@
     overflow-y: auto;;    
 }
 
+.w100 {width: 100% !important; max-width: 100% !important; margin: 0 !important;}
 .noScroll {touch-action:none; -webkit-overflow-scrolling:none; overflow:hidden; overscroll-behavior:none;}
 .grid{position:relative;left:50%;transform: translateX(-50%);width:90rem;max-width:90rem;}
 .mo-only {display: none !important;}
