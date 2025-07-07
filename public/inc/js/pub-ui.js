@@ -7,11 +7,12 @@ var pubUi = {
         this.scrollToEvt();
         this.chkFileboxDisabled();
         this.fileboxInputEvt();
-        this.exceptionStickyEvt();
+        this.exceptionStickyEvt();        
 
         this.form.init();
         this.tabList.init();
         this.acdItem.init();
+
     },
 
     settings: function () {
@@ -25,6 +26,9 @@ var pubUi = {
         this.self.selectMenu = document.querySelectorAll(".select-menu");
         this.self.selectCate = document.querySelectorAll(".select-cate");
         this.self.selectCateBtn = document.querySelectorAll(".select-cate button");
+
+        // 글로벌 네트워크 
+        this.self.networkMap = document.querySelector(".map-conts-area");
     },
 
     bindEvents: function () {
@@ -66,6 +70,64 @@ var pubUi = {
                 });
             });
         });
+
+
+        if (this.self.networkMap != null && this.self.networkMap != "") {
+            const networkMapInfo = this.self.networkMap.querySelector(".map-info");
+            const mapInfoItem = networkMapInfo.querySelectorAll(".map-info-item > li > a");
+            const mapImg = this.self.networkMap.querySelector(".map-img");
+            const mapMarking = this.self.networkMap.querySelector(".map-img .active_img .active_mark");
+            const mapCloseBtn = networkMapInfo.querySelector(".btn-close > button");
+
+            let checkingInterval; // 깜빡임을 위한 인터벌 변수
+
+            mapInfoItem.forEach((item) => {
+                item.addEventListener("click", function (e) {
+                    mapInfoItem.forEach((otherItem) => {
+                        if (otherItem !== e.currentTarget) {
+                            otherItem.classList.remove("active");
+                        } else {
+                            e.currentTarget.classList.add("active");
+                        }
+                    });
+
+                    networkMapInfo.classList.add("on");
+                    mapImg.classList.add("on");
+                    mapMarking.style.display = "block";
+
+                    // 기존 깜빡임 인터벌 제거 (중복 방지)
+                    // if (checkingInterval) clearInterval(checkingInterval);
+
+                    // // 깜빡임 시작
+                    // checkingInterval = setInterval(() => {
+                    //     if (mapMarking.style.display === "block") {
+                    //         mapMarking.style.display = "none";
+                    //     } else {
+                    //         mapMarking.style.display = "block";
+                    //     }
+                    // }, 1000);
+                });
+            });
+
+            mapCloseBtn.addEventListener("click", function (e) {
+                const targetMap = e.currentTarget.closest(".map-info");
+                targetMap.classList.remove("on");
+                mapImg.classList.remove("on");
+                mapMarking.style.display = "none";
+                mapInfoItem.forEach((item) => {
+                    item.classList.remove("active");
+                });
+            });
+        }
+
+        // headerWrap.addEventListener("click", function () {
+        //     if (headerWrap.classList.contains("on")) {
+        //         headerWrap.classList.remove("on");
+        //     } else {
+        //         headerWrap.classList.add("on");
+        //     }
+        // });        
+
     },
 
     // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S    

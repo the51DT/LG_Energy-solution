@@ -45,5 +45,14 @@
 .profile-txt-area .profile-history {padding-top: 1rem;}
 .profile-txt-area .profile-history ul > li {font-size: 1rem; line-height: 1.5rem;}
 
+/* 글로벌네트워크 (netw) */
+.netw:not(.sub_p) .content-header {padding: 2rem 1.25rem 0.31rem; display: block;}
+.netw .content-area-head-tab {position: sticky;}
+.map-conts-area {display: block; padding: 1rem 1.25rem 0;}
+.map-conts-area .map-img {display: none;}
+.map-info {display: block;}
+.map-conts-area .map-info .map-info-list {display: none;}
+
+
 
 }

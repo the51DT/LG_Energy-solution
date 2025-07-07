@@ -108,11 +108,11 @@
                     <img src="../../inc/images/img/visual_netw01.png" alt="비주얼배너" />
                 </div>
                 <div class="page-map-wrap"> <!-- page-map-wrap -->
-                    <ul class="selectbox-wrap pc-only" role="listbox">
-                        <li role="option">
+                    <div class="selectbox-wrap pc-only" role="listbox">
+                        <div role="option">
                             <a href="../pages/cyanogen/cyanogen_main.html"><img src="../../inc/images/sample/icon_home.svg" alt="home" title="홈 이동" /></a>
-                        </li>
-                        <li class="select-cate" role="option">
+                        </div>
+                        <div class="select-cate" role="option">
                             <button type="button" aria-haspopup="listbox">회사소개</button>
                             <ul class="select-menu" role="listbox">
                                 <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
@@ -121,8 +121,8 @@
                                 <li><a href="javascript:;" role="option" tabindex="0">투자정보</a></li>
                                 <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
                             </ul>
-                        </li>
-                        <li class="select-cate" role="option">
+                        </div>
+                        <div class="select-cate" role="option">
                             <button type="button" aria-haspopup="listbox">글로벌 네트워크</button>
                             <ul class="select-menu" role="listbox">
                                 <li><a href="javascript:;" role="option" tabindex="0">소개</a></li>
@@ -131,8 +131,8 @@
                                 <li><a href="javascript:;" role="option" tabindex="0">뉴스룸</a></li>
                                 <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                     <div class="selectbox-wrap mo-only">
                         <div class="breadcrumb-wrap">
                             <div class="left-area">
@@ -149,202 +149,217 @@
                 <div class="content-header">
                     <div class="content-header-cont">
                         <div class="subp-tit-area">
-                            <h3 class="subp-tit">
-                                한국, 미국, 폴란드, 중국 등 주요 생산거점을 중심으로, <br>
+                            <!-- pc 문구 -->
+                            <h3 class="subp-tit pc-only">                                
+                                한국, 아메리카, 폴란드, 중국 등 주요 생산거점을 중심으로, <br>
                                 R&D, 판매거점 또한 세계적으로 확대해 하고 있습니다.
+                            </h3>
+                            <!-- mobile 문구 -->
+                            <h3 class="subp-tit mo-only">
+                                전 세계를 무대로 <br>
+                                활약하는 LG에너지솔루션을 <br>
+                                만나보세요
                             </h3>
                         </div>
                     </div>
                 </div>
                 <div class="content-area">
-                    <div class="content-area-head-tab">
-                        <ul class="tab-category">
-                            <li class="tab on" id="tab1"><button>전체</button></li>
-                            <li class="tab" id="tab2"><button>한국</button></li>
-                            <li class="tab" id="tab3"><button>아시아&middot;오세아니아</button></li>
-                            <li class="tab" id="tab4"><button>미국</button></li>
-                            <li class="tab" id="tab5"><button>유럽</button></li>
-                        </ul>
-                    </div>
-                    <!-- content-item01 -->
-                    <div class="content-item01 w100">
-                        <div class="tab-content-box">
-                            <div class="tab-content on" id="tab1-content">
-                                <div class="map-conts-area">
-                                    <div class="map-filter">
-                                        <ul class="map-filter-list">
-                                            <li class="filter-type1"><button type="button">본사</button></li>
-                                            <li class="filter-type2"><button type="button">R&D</button></li>
-                                            <li class="filter-type3"><button type="button">생산</button></li>
-                                            <li class="filter-type4"><button type="button">판매</button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="map-img">
-                                        <div class="default_img">
-                                            <img src="../../inc/images/sample/map/img_global_map.png" alt="gloabal_map" />
+                    <div class="tab-wrap">
+                        <div class="content-area-head-tab">
+                            <div class="tab-cate-wrap">
+                                <ul class="tab-category" role="tablist">
+                                    <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">전체</button></li>
+                                    <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">한국</button></li>
+                                    <li class="tab" id="tab3"><button role="tab" aria-selected="false" aria-controls="tab3-content">아시아&middot;오세아니아</button></li>
+                                    <li class="tab" id="tab4"><button role="tab" aria-selected="false" aria-controls="tab4-content">아메리카</button></li>
+                                    <li class="tab" id="tab5"><button role="tab" aria-selected="false" aria-controls="tab5-content">유럽</button></li>
+                                </ul>
+                            </div><!--//tab-cate-wrap-->
+                        </div>
+                        <!-- content-item01 -->
+                        <div class="content-item01 w100">
+                            <div class="tab-content-box">
+                                <div class="tab-content on" id="tab1-content">
+                                    <div class="map-conts-area">
+                                        <div class="map-filter">
+                                            <ul class="map-filter-list pc-only">
+                                                <li class="filter-type1"><button type="button">본사</button></li>
+                                                <li class="filter-type2"><button type="button">R&D</button></li>
+                                                <li class="filter-type3"><button type="button">생산</button></li>
+                                                <li class="filter-type4"><button type="button">판매</button></li>
+                                            </ul>
                                         </div>
-                                        <div class="active_img">
-                                            <img src="../../inc/images/sample/img_global_map_china.png" alt="china_map"/>
-                                            <div class="active_mark"><img src="../../inc/images/sample/icon_mark_red.svg" alt="map marking" /></div>
-                                        </div>
-                                    </div>
-                                    <div class="map-info">
-                                        <div class="map-info-list">
-                                            <div class="map-cate">
-                                                <button type="button">생산</button>                                                
-                                                <ul class="page-map">
-                                                    <li><a href="javascript:;" class="active">생산</a></li>
-                                                    <li><a href="javascript:;">본사</a></li>
-                                                    <li><a href="javascript:;">R&D</a></li>
-                                                    <li><a href="javascript:;">생산</a></li>
-                                                    <li><a href="javascript:;">판매</a></li>
-                                                </ul>
+                                        <div class="map-img">
+                                            <div class="default_img">
+                                                <img src="../../inc/images/sample/map/img_global_map.png" alt="gloabal_map" />
                                             </div>
+                                            <div class="active_img">
+                                                <img src="../../inc/images/sample/map/img_global_map_china.png" alt="china_map"/>
+                                                <div class="active_mark"><img src="../../inc/images/sample/icon_mark_red.svg" alt="map marking" /></div>
+                                            </div>
+                                        </div>
+                                        <div class="map-info">
+                                            <div class="map-info-list">
+                                                <div class="selectbox-wrap type2">
+                                                    <div class="select-cate">
+                                                        <button type="button">전체</button>
+                                                        <ul class="select-menu">
+                                                            <li><a href="javascript:;" class="active">전체</a></li>
+                                                            <li><a href="javascript:;">본사</a></li>
+                                                            <li><a href="javascript:;">R&D</a></li>
+                                                            <li><a href="javascript:;">생산</a></li>
+                                                            <li><a href="javascript:;">판매</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
 
-                                            <ul class="map-info-item">
-                                                <li><a href="javascript:;">Michigan, Inc.</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution Battery (Nanjing) Co., Ltd.</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution Michigan, Inc.</a></li>
-                                                <li><a href="javascript:;">Vertech, Inc</a></li>
-                                                <li><a href="javascript:;">Michigan, Inc.</a></li>
-                                                <li><a href="javascript:;">Japan Co., Ltd.</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution Michigan, Inc.</a></li>
-                                                <li><a href="javascript:;">Vertech, Inc</a></li>
-                                                <li><a href="javascript:;">Michigan, Inc.</a></li>
-                                                <li><a href="javascript:;">Japan Co., Ltd.</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution Michigan, Inc.</a></li>
-                                                <li><a href="javascript:;">Vertech, Inc</a></li>
-                                                <li><a href="javascript:;">Michigan, Inc.</a></li>
-                                                <li><a href="javascript:;">Japan Co., Ltd.</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution Michigan, Inc.</a></li>
-                                            </ul>                                             
-                                        </div>
-                                        <div class="map-info-content-box">                                            
-                                            <div class="info-content-head">
-                                                <ul class="sort">
-                                                    <li class="badge">생산</li>
-                                                    <li class="country">중국</li>
-                                                    <li class="year">2014</li>
-                                                </ul>
-                                                <h3 class="title">LG Energy Solution Battery (Nanjing) Co., Ltd.</h3>
+                                                <ul class="map-info-item">
+                                                    <li><a href="javascript:;">Michigan, Inc.</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution Battery (Nanjing) Co., Ltd.</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution Michigan, Inc.</a></li>
+                                                    <li><a href="javascript:;">Vertech, Inc</a></li>
+                                                    <li><a href="javascript:;">Michigan, Inc.</a></li>
+                                                    <li><a href="javascript:;">Japan Co., Ltd.</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution Michigan, Inc.</a></li>
+                                                    <li><a href="javascript:;">Vertech, Inc</a></li>
+                                                    <li><a href="javascript:;">Michigan, Inc.</a></li>
+                                                    <li><a href="javascript:;">Japan Co., Ltd.</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution Michigan, Inc.</a></li>
+                                                    <li><a href="javascript:;">Vertech, Inc</a></li>
+                                                    <li><a href="javascript:;">Michigan, Inc.</a></li>
+                                                    <li><a href="javascript:;">Japan Co., Ltd.</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution Michigan, Inc.</a></li>
+                                                </ul>                                             
                                             </div>
-                                            <div class="info-content-body">
-                                                <ul>
-                                                    <li>
-                                                        <img src="../../inc/images/sample/icon_address.svg" alt="" />
-                                                        <p>No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China</p>                                                        
-                                                    </li>
-                                                    <li>                                                        
-                                                        <img src="../../inc/images/sample/icon_phone.svg" alt="" />
-                                                        <p>+86-25-5878-2000</p>
-                                                    </li>
-                                                    <li>
-                                                        <img src="../../inc/images/sample/icon_package.svg" alt="" />
-                                                        <p>자동차 전지, 소형 전지, ESS</p>
-                                                    </li>                                                    
-                                                </ul>
-                                                <div class="img-area">
-                                                    <img src="../../inc/images/sample/map/img_popup_map_china.png" alt="" />
-                                                </div>
-                                                <div class="sns-area">
-                                                    <ul>
-                                                        <li><a href="#"><img src="../../inc/images/sample/icon_facebook.svg" alt="facebook"></a></li>
-                                                        <li><a href="#"><img src="../../inc/images/sample/icon_insta.svg" alt="instagram"></a></li>
-                                                        <li><a href="#"><img src="../../inc/images/sample/icon_youtube.svg" alt="youtube"></a></li>
+                                            <div class="map-info-content-box">                                            
+                                                <div class="info-content-head">
+                                                    <ul class="sort">
+                                                        <li class="badge">생산</li>
+                                                        <li class="country">중국</li>
+                                                        <li class="year">2014</li>
                                                     </ul>
+                                                    <h3 class="title">LG Energy Solution Battery (Nanjing) Co., Ltd.</h3>
                                                 </div>
-                                            </div>                                            
-                                        </div>
-                                        <div class="btn-close">
-                                            <button type="button"><img src="../../inc/images/sample/icon_close_btn.svg" alt="닫기 버튼"/></button>
+                                                <div class="info-content-body">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_address.svg" alt="" />
+                                                            <p>No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China</p>                                                        
+                                                        </li>
+                                                        <li>                                                        
+                                                            <img src="../../inc/images/sample/icon_phone.svg" alt="" />
+                                                            <p>+86-25-5878-2000</p>
+                                                        </li>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_package.svg" alt="" />
+                                                            <p>자동차 전지, 소형 전지, ESS</p>
+                                                        </li>                                                    
+                                                    </ul>
+                                                    <div class="img-area">
+                                                        <img src="../../inc/images/sample/map/img_popup_map_china.png" alt="" />
+                                                    </div>
+                                                    <div class="sns-area">
+                                                        <ul>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_facebook.svg" alt="facebook"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_insta.svg" alt="instagram"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_youtube.svg" alt="youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>                                            
+                                            </div>
+                                            <div class="btn-close">
+                                                <button type="button"><img src="../../inc/images/sample/icon_close_btn.svg" alt="닫기 버튼"/></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-content" id="tab2-content">
-                                <div class="map-conts-area">
-                                    <div class="map-img">
-                                        <div class="default_img">
-                                            <img src="../../inc/images/sample/map/img_global_map.png" alt="gloabal_map" />
-                                        </div>
-                                        <div class="active_img">
-                                            <img src="../../inc/images/sample/map/img_global_map_china.png" alt="china_map"/>
-                                        </div>
-                                    </div>
-                                    <div class="map-info">
-                                        <div class="map-info-list">
-                                            <div class="map-cate">
-                                                <button type="button">한국</button>                                                
-                                                <ul class="page-map">
-                                                    <li><a href="javascript:;">전체</a></li>
-                                                    <li><a href="javascript:;" class="active">한국</a></li>
-                                                    <li><a href="javascript:;">아시아&middot;오세아니아</a></li>
-                                                    <li><a href="javascript:;">미국</a></li>
-                                                    <li><a href="javascript:;">유럽</a></li>
-                                                </ul>
+                                <div class="tab-content" id="tab2-content">
+                                    <div class="map-conts-area">
+                                        <div class="map-img">
+                                            <div class="default_img">
+                                                <img src="../../inc/images/sample/map/img_global_map.png" alt="gloabal_map" />
                                             </div>
+                                            <div class="active_img">
+                                                <img src="../../inc/images/sample/map/img_global_map_china.png" alt="china_map"/>
+                                            </div>
+                                        </div>
+                                        <div class="map-info">
+                                            <div class="map-info-list">
+                                                <div class="selectbox-wrap type2">
+                                                    <div class="select-cate">
+                                                        <button type="button">전체</button>
+                                                        <ul class="select-menu">
+                                                            <li><a href="javascript:;" class="active">전체</a></li>
+                                                            <li><a href="javascript:;">본사</a></li>
+                                                            <li><a href="javascript:;">R&D</a></li>
+                                                            <li><a href="javascript:;">생산</a></li>
+                                                            <li><a href="javascript:;">판매</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
 
-                                            <ul class="map-info-item">
-                                                <li><a href="javascript:;">LG Energy Solution 한국지점 1</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution 한국지점 2</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution 한국지점 3</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution 한국지점 4</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution 한국지점 5</a></li>
-                                                <li><a href="javascript:;">LG Energy Solution 한국지점 6</a></li>
-                                            </ul>                                             
-                                        </div>
-                                        <div class="map-info-content-box">                                            
-                                            <div class="info-content-head">
-                                                <ul class="sort">
-                                                    <li class="badge">생산</li>
-                                                    <li class="country">중국</li>
-                                                    <li class="year">2014</li>
-                                                </ul>
-                                                <h3 class="title">LG Energy Solution Battery (Nanjing) Co., Ltd.</h3>
+                                                <ul class="map-info-item">
+                                                    <li><a href="javascript:;">LG Energy Solution 한국지점 1</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution 한국지점 2</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution 한국지점 3</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution 한국지점 4</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution 한국지점 5</a></li>
+                                                    <li><a href="javascript:;">LG Energy Solution 한국지점 6</a></li>
+                                                </ul>                                             
                                             </div>
-                                            <div class="info-content-body">
-                                                <ul>
-                                                    <li>
-                                                        <img src="../../inc/images/sample/icon_address.svg" alt="" />
-                                                        <p>No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China</p>                                                        
-                                                    </li>
-                                                    <li>                                                        
-                                                        <img src="../../inc/images/sample/icon_phone.svg" alt="" />
-                                                        <p>+86-25-5878-2000</p>
-                                                    </li>
-                                                    <li>
-                                                        <img src="../../inc/images/sample/icon_package.svg" alt="" />
-                                                        <p>자동차 전지, 소형 전지, ESS</p>
-                                                    </li>                                                    
-                                                </ul>
-                                                <div class="img-area">
-                                                    <img src="../../inc/images/sample/map/img_popup_map_china.png" alt="" />
-                                                </div>
-                                                <div class="sns-area">
-                                                    <ul>
-                                                        <li><a href="#"><img src="../../inc/images/sample/icon_facebook.svg" alt="facebook"></a></li>
-                                                        <li><a href="#"><img src="../../inc/images/sample/icon_insta.svg" alt="instagram"></a></li>
-                                                        <li><a href="#"><img src="../../inc/images/sample/icon_youtube.svg" alt="youtube"></a></li>
+                                            <div class="map-info-content-box">                                            
+                                                <div class="info-content-head">
+                                                    <ul class="sort">
+                                                        <li class="badge">생산</li>
+                                                        <li class="country">중국</li>
+                                                        <li class="year">2014</li>
                                                     </ul>
+                                                    <h3 class="title">LG Energy Solution Battery (Nanjing) Co., Ltd.</h3>
                                                 </div>
+                                                <div class="info-content-body">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_address.svg" alt="" />
+                                                            <p>No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China</p>                                                        
+                                                        </li>
+                                                        <li>                                                        
+                                                            <img src="../../inc/images/sample/icon_phone.svg" alt="" />
+                                                            <p>+86-25-5878-2000</p>
+                                                        </li>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_package.svg" alt="" />
+                                                            <p>자동차 전지, 소형 전지, ESS</p>
+                                                        </li>                                                    
+                                                    </ul>
+                                                    <div class="img-area">
+                                                        <img src="../../inc/images/sample/map/img_popup_map_china.png" alt="" />
+                                                    </div>
+                                                    <div class="sns-area">
+                                                        <ul>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_facebook.svg" alt="facebook"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_insta.svg" alt="instagram"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_youtube.svg" alt="youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn-close"><img src="../../inc/images/sample/icon_close_btn.svg" alt="닫기"></a>
                                             </div>
-                                            <a href="#" class="btn-close"><img src="../../inc/images/sample/icon_close_btn.svg" alt="닫기"></a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-content" id="tab3-content">
-                                아시아 오세아니아
-                            </div>
-                            <div class="tab-content" id="tab4-content">
-                                미국
-                            </div>
-                            <div class="tab-content" id="tab5-content">
-                                유럽
+                                <div class="tab-content" id="tab3-content">
+                                    아시아 오세아니아
+                                </div>
+                                <div class="tab-content" id="tab4-content">
+                                    아메리카
+                                </div>
+                                <div class="tab-content" id="tab5-content">
+                                    유럽
+                                </div>
                             </div>
                         </div>
+                        <!-- //content-item01 -->
                     </div>
-                    <!-- //content-item01 -->
                 </div>
             </section>
             <!-- // section -->
@@ -353,9 +368,54 @@
             </aside>
             <!-- footer -->
             <footer class="footer-wrap">
-                <!-- 추후 footer 작업 후 일괄 적용 예정 -->
                 <div class="footer-area">
-                    <img src="../../inc/images/sample/footer.png" alt="footer" />
+                <div class="footer-item01">
+                    <ul class="footer-site_map">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">정도경영 사이버신문고</a></li>
+                    <li><a href="#">협력사 상생고</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item02">
+                    <ul class="footer-site_map">
+                    <li>
+                        <!-- <p class="footer-site_map-tit">대표이사 김동영</p> -->
+                        <div class="footer-site_map-desc">
+                        <div class="footer-info">
+                            <p class="owner">대표이사 김동명</p>
+                            <address class="addr">07335 서울특별시 영등포구 여의대로 108</address>
+                            <a class="tel" href="tel:0237771114">02-3777-1114</a>                  
+                        </div>
+                        </div>              
+                    </li>
+                    </ul>
+                    <div class="selectbox-wrap type3">
+                    <div class="select-cate">
+                        <button type="button" aria-haspopup="listbox">Family Site</button>                                                
+                        <ul class="select-menu" role="listbox">
+                            <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
+                            <li><a href="javascript:;" role="option" tabindex="0">본사</a></li>
+                            <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
+                            <li><a href="javascript:;" role="option" tabindex="0">생산</a></li>
+                            <li><a href="javascript:;" role="option" tabindex="0">판매</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="footer-bottom">
+                <a class="footer-logo">
+                    <img src="../../inc/images/img/img_footer_logo.svg" alt="LG에너지솔루션" />
+                </a>
+                <ul class="footer-util">
+                    <li><a href="#"><img src="../../inc/images/icon/icon_circle-facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="../../inc/images/icon/icon_circle-in.svg" alt="in"></a></li>
+                    <li><a href="#"><img src="../../inc/images/icon/icon_circle-insta.svg" alt="instagram"></a></li>
+                    <li><a href="#"><img src="../../inc/images/icon/icon_circle-naver.svg" alt="naver"></a></li>
+                    <li><a href="#"><img src="../../inc/images/icon/icon_circle-youtube.svg" alt="youtube"></a></li>
+                    <li><a href="#"><img src="../../inc/images/icon/icon_circle-blog.svg" alt="blog"></a></li>
+                </ul>
                 </div>
             </footer>
             <!-- // footer -->

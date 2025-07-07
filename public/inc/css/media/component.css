@@ -47,10 +47,15 @@
     .accordion-list.type2 .accordion-btn {font-size: 1rem; font-weight: 600; line-height: 1.5rem;}
     .accordion-list.type2 .accordion-btn .acd-group .acd-icon {display: none;}
     
-
-
     /* textarea */
     .textarea-box .textarea {height: 8.13rem;}
+
+    /* selectbox */
+    .selectbox-wrap > div.select-cate > a, 
+    .selectbox-wrap > div.select-cate > button {font-size: 1rem; font-weight: 500; line-height: 1.4rem;}
+    .selectbox-wrap.type3 .select-cate > button {padding-top: 1rem;}
+    .selectbox-wrap.type3 > div button::before {top: 50%;}
+    .selectbox-wrap.type3 .select-cate::after {margin-top: 1rem;}
 
     /* table */
     .table-wrap table tbody > tr > th {font-size: 1rem; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
@@ -61,6 +66,7 @@
 
 
     /* content */
+    .content-wrap {padding-top: 3.125rem;}
     .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 2rem;}
     .cont-area-wrap .cont-area-sect > section:not(:last-child) {padding-bottom: 3rem;}
     .cont-area-wrap .cont-area-info {padding: 0 1.25rem;}
@@ -111,7 +117,7 @@
 
     .modal-pop.tooltip { max-width: 90%; left: 5% !important; right: auto !important;}
 
-    /* mobile - header & footer 제외 디자인 확정 후 추후 작업예정 */
+    /* mobile - header 제외 디자인 확정 후 추후 작업예정 */
     .header-wrap {display: none;}
     .content-header_bg {display: none;}
 
@@ -122,9 +128,20 @@
     .breadcrumb-wrap .left-area .btn-prev {width: 1.5rem; height: 1.5rem;}
     .breadcrumb-wrap .right-area {position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); margin-top: 0.19rem;}
     .content-area-head-tab {position: fixed; top: 49px; width: 100%;}
-    .wrap:not(.sub_p) .content-header {display: none;}
+    .wrap:not(.sub_p) .content-header {display: none; }
+    .wrap:not(.sub_p) .content-header .subp-tit {font-size: 1.125rem; line-height: 1.575rem;}
 
     /* chart */
     .chart-area {margin:0 1.25rem;}
+
+    /* footer - 추후 layout 옮길예정 (시안페이지의 css 중복방지하기위해 우선 component.css에 적용함) */
+    .footer-wrap {max-width: 100%; margin: 0 1.25rem; }
+    .footer-area {display: block; padding: 2.38rem 0 2rem;}
+    .footer-site_map {line-height: 1.4rem;}
+    .footer-site_map-desc {font-size: 0.875rem; line-height: 1.4rem; text-align: left; padding: 1.5rem 0;}
+    .footer-item02 {display: block;} 
+    .footer-bottom {display: block; padding-bottom: 0;}
+    .footer-util {padding: 1rem 0 2.25rem;}
+    .footer-logo img {width: 12.125rem; margin: 0; padding: 0;}
     
 }
