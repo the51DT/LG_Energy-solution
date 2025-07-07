@@ -66,7 +66,6 @@
 
 
     /* content */
-    .content-wrap {padding-top: 3.125rem;}
     .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 2rem;}
     .cont-area-wrap .cont-area-sect > section:not(:last-child) {padding-bottom: 3rem;}
     .cont-area-wrap .cont-area-info {padding: 0 1.25rem;}

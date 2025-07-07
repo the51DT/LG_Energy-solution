@@ -47,6 +47,7 @@
 
 /* 글로벌네트워크 (netw) */
 .netw:not(.sub_p) .content-header {padding: 2rem 1.25rem 0.31rem; display: block;}
+.netw .content-wrap {padding-top: 3.125rem;}
 .netw .content-area-head-tab {position: sticky;}
 .map-conts-area {display: block; padding: 1rem 1.25rem 0;}
 .map-conts-area .map-img {display: none;}
