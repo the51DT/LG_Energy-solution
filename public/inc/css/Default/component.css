@@ -223,8 +223,8 @@
 .selectbox-wrap .select-cate.error button {color: var(--colorElement-light-critical-critical-enabled);}
 .selectbox-wrap .select-cate.disabled button {color: var(--colorElement-light-text-text-disabled); }
 .selectbox-wrap .select-cate.disabled button::before {background-image: url(../../images/icon/icon_arrow_down_gr.svg);}
-.selectbox-wrap > div[role=option]:first-child {padding-left: 0; width: 1.5rem; height: 1.5rem; margin-top: 2px;}
-.selectbox-wrap > div[role=option]:first-child > a {width: 1.5rem; height: 1.5rem;} 
+.selectbox-wrap > div:not(.select-cate)[role=option]:first-child {padding-left: 0; width: 1.5rem; height: 1.5rem; margin-top: 2px;}
+.selectbox-wrap > div:not(.select-cate)[role=option]:first-child > a {width: 1.5rem; height: 1.5rem;} 
 .selectbox-wrap > div.select-cate {position: relative;}
 .selectbox-wrap > div.select-cate button {min-width: 37.5rem;}
 .selectbox-wrap > div.select-cate button::before {content: ''; display: block; width: 1.5rem; height: 1.5rem; background: url(../../images/icon/icon_arrow_down.svg) no-repeat center center / contain; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);}
