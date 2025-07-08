@@ -790,6 +790,7 @@ nav .layout-list li:first-child a {
 [class^="guide-title"][class*="-h3"] {font-size: 1.5rem; line-height: 2.25rem; font-weight: 600;}
 
 .guide-wrapper {padding:1rem;}
+.guide-content .selectbox-wrap {margin-top: 1rem;}
 .guide-header {display: flex; justify-content: space-between; align-items: center;}
 .guide-section.intro {border-bottom: 1px solid #ccc; padding-bottom: 24px;}
 .guide-section.intro [class^="guide-title"] {color: seagreen; }

@@ -112,7 +112,7 @@
                         <div role="option">
                             <a href="../pages/cyanogen/cyanogen_main.html"><img src="../../inc/images/sample/icon_home.svg" alt="home" title="홈 이동" /></a>
                         </div>
-                        <div class="select-cate" role="option">
+                        <div class="select-cate activeSelect" role="option">
                             <button type="button" aria-haspopup="listbox">회사소개</button>
                             <ul class="select-menu" role="listbox">
                                 <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
@@ -122,7 +122,7 @@
                                 <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
                             </ul>
                         </div>
-                        <div class="select-cate" role="option">
+                        <div class="select-cate activeSelect" role="option">
                             <button type="button" aria-haspopup="listbox">글로벌 네트워크</button>
                             <ul class="select-menu" role="listbox">
                                 <li><a href="javascript:;" role="option" tabindex="0">소개</a></li>
@@ -167,7 +167,7 @@
                     <div class="tab-wrap">
                         <div class="content-area-head-tab">
                             <div class="tab-cate-wrap">
-                                <ul class="tab-category" role="tablist">
+                                <ul class="tab-category activeTab" role="tablist">
                                     <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">전체</button></li>
                                     <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">한국</button></li>
                                     <li class="tab" id="tab3"><button role="tab" aria-selected="false" aria-controls="tab3-content">아시아&middot;오세아니아</button></li>
@@ -198,17 +198,17 @@
                                                 <div class="active_mark"><img src="../../inc/images/sample/icon_mark_red.svg" alt="map marking" /></div>
                                             </div>
                                         </div>
-                                        <div class="map-info">
+                                        <div class="map-info pc-only">
                                             <div class="map-info-list">
                                                 <div class="selectbox-wrap type2">
-                                                    <div class="select-cate">
+                                                    <div class="select-cate activeSelect">
                                                         <button type="button">전체</button>
-                                                        <ul class="select-menu">
-                                                            <li><a href="javascript:;" class="active">전체</a></li>
-                                                            <li><a href="javascript:;">본사</a></li>
-                                                            <li><a href="javascript:;">R&D</a></li>
-                                                            <li><a href="javascript:;">생산</a></li>
-                                                            <li><a href="javascript:;">판매</a></li>
+                                                        <ul class="select-menu" role="listbox">
+                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">본사</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0" >R&D</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">생산</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">판매</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -271,29 +271,116 @@
                                                 <button type="button"><img src="../../inc/images/sample/icon_close_btn.svg" alt="닫기 버튼"/></button>
                                             </div>
                                         </div>
+                                        <div class="map-info mo-only">
+                                            <!-- 모바일 filter -->
+                                            <div class="map-info-list">                                                
+                                                <div class="selectbox-wrap type2">
+                                                    <div class="select-cate activeSelect">
+                                                        <button type="button">전체</button>
+                                                        <ul class="select-menu" role="listbox">
+                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0" >본사</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">생산</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">판매</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div> <!--//map-info-list-->
+                                            <div class="map-info-content-box">                                            
+                                                <div class="info-content-head">
+                                                    <ul class="sort">
+                                                        <li class="badge">생산</li>
+                                                        <li class="country">중국</li>
+                                                        <li class="year">2014</li>
+                                                    </ul>
+                                                    <h3 class="title">LG Energy Solution Battery (Nanjing) Co., Ltd.</h3>
+                                                </div>
+                                                <div class="info-content-body">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_address.svg" alt="" />
+                                                            <p>No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China</p>                                                        
+                                                        </li>
+                                                        <li>                                                        
+                                                            <img src="../../inc/images/sample/icon_phone.svg" alt="" />
+                                                            <p>+86-25-5878-2000</p>
+                                                        </li>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_package.svg" alt="" />
+                                                            <p>자동차 전지, 소형 전지, ESS</p>
+                                                        </li>                                                    
+                                                    </ul>
+                                                    <div class="img-area">
+                                                        <img src="../../inc/images/sample/map/img_popup_map_china.png" alt="" />
+                                                    </div>
+                                                    <div class="sns-area">
+                                                        <ul>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_facebook.svg" alt="facebook"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_insta.svg" alt="instagram"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_youtube.svg" alt="youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn-close"><img src="../../inc/images/sample/icon_close_btn.svg" alt="닫기"></a>
+                                            </div>
+                                            <div class="map-info-content-box">                                            
+                                                <div class="info-content-head">
+                                                    <ul class="sort">
+                                                        <li class="badge">본사</li>
+                                                        <li class="country">중국</li>
+                                                        <li class="year">2015</li>
+                                                    </ul>
+                                                    <h3 class="title">LG Energy Solution Battery (Nanjing) Co., Ltd.</h3>
+                                                </div>
+                                                <div class="info-content-body">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_address.svg" alt="" />
+                                                            <p>No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China</p>                                                        
+                                                        </li>
+                                                        <li>                                                        
+                                                            <img src="../../inc/images/sample/icon_phone.svg" alt="" />
+                                                            <p>+86-25-5878-2000</p>
+                                                        </li>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_package.svg" alt="" />
+                                                            <p>자동차 전지, 소형 전지, ESS</p>
+                                                        </li>                                                    
+                                                    </ul>
+                                                    <div class="img-area">
+                                                        <img src="../../inc/images/sample/map/img_popup_map_china.png" alt="" />
+                                                    </div>
+                                                    <div class="sns-area">
+                                                        <ul>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_facebook.svg" alt="facebook"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_insta.svg" alt="instagram"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_youtube.svg" alt="youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn-close"><img src="../../inc/images/sample/icon_close_btn.svg" alt="닫기"></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tab-content" id="tab2-content">
                                     <div class="map-conts-area">
                                         <div class="map-img">
-                                            <div class="default_img">
-                                                <img src="../../inc/images/sample/map/img_global_map.png" alt="gloabal_map" />
-                                            </div>
-                                            <div class="active_img">
-                                                <img src="../../inc/images/sample/map/img_global_map_china.png" alt="china_map"/>
-                                            </div>
+                                            <!-- 구글맵 api 적용 -->
+                                            <div class="default_img" id="networkMap"></div>
                                         </div>
-                                        <div class="map-info">
+                                        <div class="map-info pc-only">
                                             <div class="map-info-list">
                                                 <div class="selectbox-wrap type2">
-                                                    <div class="select-cate">
+                                                    <div class="select-cate activeSelect">
                                                         <button type="button">전체</button>
-                                                        <ul class="select-menu">
-                                                            <li><a href="javascript:;" class="active">전체</a></li>
-                                                            <li><a href="javascript:;">본사</a></li>
-                                                            <li><a href="javascript:;">R&D</a></li>
-                                                            <li><a href="javascript:;">생산</a></li>
-                                                            <li><a href="javascript:;">판매</a></li>
+                                                        <ul class="select-menu" role="listbox">
+                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">본사</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">생산</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">판매</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -307,6 +394,45 @@
                                                     <li><a href="javascript:;">LG Energy Solution 한국지점 6</a></li>
                                                 </ul>                                             
                                             </div>
+                                            <div class="map-info-content-box">                                            
+                                                <div class="info-content-head">
+                                                    <ul class="sort">
+                                                        <li class="badge">생산</li>
+                                                        <li class="country">중국</li>
+                                                        <li class="year">2014</li>
+                                                    </ul>
+                                                    <h3 class="title">LG Energy Solution Battery (Nanjing) Co., Ltd.</h3>
+                                                </div>
+                                                <div class="info-content-body">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_address.svg" alt="" />
+                                                            <p>No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China</p>                                                        
+                                                        </li>
+                                                        <li>                                                        
+                                                            <img src="../../inc/images/sample/icon_phone.svg" alt="" />
+                                                            <p>+86-25-5878-2000</p>
+                                                        </li>
+                                                        <li>
+                                                            <img src="../../inc/images/sample/icon_package.svg" alt="" />
+                                                            <p>자동차 전지, 소형 전지, ESS</p>
+                                                        </li>                                                    
+                                                    </ul>
+                                                    <div class="img-area">
+                                                        <img src="../../inc/images/sample/map/img_popup_map_china.png" alt="" />
+                                                    </div>
+                                                    <div class="sns-area">
+                                                        <ul>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_facebook.svg" alt="facebook"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_insta.svg" alt="instagram"></a></li>
+                                                            <li><a href="#"><img src="../../inc/images/sample/icon_youtube.svg" alt="youtube"></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="btn-close"><img src="../../inc/images/sample/icon_close_btn.svg" alt="닫기"></a>
+                                            </div>
+                                        </div>
+                                        <div class="map-info mo-only">
                                             <div class="map-info-content-box">                                            
                                                 <div class="info-content-head">
                                                     <ul class="sort">
@@ -391,7 +517,7 @@
                     </li>
                     </ul>
                     <div class="selectbox-wrap type3">
-                    <div class="select-cate">
+                    <div class="select-cate activeSelect">
                         <button type="button" aria-haspopup="listbox">Family Site</button>                                                
                         <ul class="select-menu" role="listbox">
                             <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
@@ -420,10 +546,22 @@
             </footer>
             <!-- // footer -->
         </div>
-
         <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
-        <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>        
+        <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhgZSKIqZFQWMBr7b9NQO4zDe_3Np2Cw0&callback=networkMap"></script>
         <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
         <script type="text/javascript" src="../../inc/js/pub-ui.js"></script>
+
+        <script>
+            function myMap(){
+                var mapOptions = { 
+                        center:new google.maps.LatLng(51.508742, -0.120850)
+                };
+            
+                var map = new google.maps.Map( 
+                        document.getElementById("networkMap") 
+                        , mapOptions );
+            }
+        </script>
     </body>
 </html>

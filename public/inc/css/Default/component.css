@@ -251,9 +251,8 @@
 
 .selectbox-wrap.type3 .select-cate {padding: 0; flex-grow: 1;}
 .selectbox-wrap.type3 > div button,
-.selectbox-wrap.type3 > div a {min-width: 16.875rem;}
+.selectbox-wrap.type3 > div a {min-width: 16.875rem; color:var(--colorElement-light-text-text-default01); display: block;}
 .selectbox-wrap.type3 .select-cate::after {content: ''; width: 100%; height: 1px; background: var(--colorElement-light-stroke-stroke-default03); display: block; margin-top: 0.5rem;}
-.selectbox-wrap.type3 > div > a, .selectbox-wrap > div.select-cate > button {color:var(--colorElement-light-text-text-default01);}
 .selectbox-wrap.type3 > div button::before {top: calc(50% - 4px); right: 0rem;}
 
 .select-menu {padding: 1.5rem; width: calc(100% - 1.5rem); position: absolute; top:3rem; left:0; border-radius: 1rem; background: #fff; box-shadow: 0.625rem 1.25rem 2.5rem 0px rgba(16, 16, 16, 0.10); display:none; z-index:10;}

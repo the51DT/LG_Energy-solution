@@ -21,11 +21,13 @@ var pubUi = {
         this.self.isPc = window.innerWidth >= 1024;
         this.self.isMobile = window.innerWidth <= 1023;
 
-        this.self.tabCategory = document.querySelector(".tab-category");
+        this.self.tabCategory = document.querySelector(".activeTab");
         this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
-        this.self.selectMenu = document.querySelectorAll(".select-menu");
-        this.self.selectCate = document.querySelectorAll(".select-cate");
-        this.self.selectCateBtn = document.querySelectorAll(".select-cate button");
+        
+        this.self.selectCate = document.querySelectorAll(".select-cate.activeSelect");
+        this.self.selectCateBtn = document.querySelectorAll(".select-cate.activeSelect button");
+        this.self.selectMenu = document.querySelectorAll(".activeSelect .select-menu");
+        
 
         // 글로벌 네트워크 
         this.self.networkMap = document.querySelector(".map-conts-area");
@@ -119,34 +121,27 @@ var pubUi = {
                 });
             });
         }
-
-        // headerWrap.addEventListener("click", function () {
-        //     if (headerWrap.classList.contains("on")) {
-        //         headerWrap.classList.remove("on");
-        //     } else {
-        //         headerWrap.classList.add("on");
-        //     }
-        // });        
-
     },
 
     // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S    
-    exceptionStickyEvt: function () {
-        document.querySelector(".wrap").addEventListener("scroll", (e) => {
-            const offsetTop = document.querySelector(".wrap").scrollTop;
-            const stickyEl = document.querySelector(".page-map-wrap");
+    exceptionStickyEvt: function () {    
+        if (document.querySelector(".wrap")) {
+            document.querySelector(".wrap").addEventListener("scroll", (e) => {
+                const offsetTop = document.querySelector(".wrap").scrollTop;
+                const stickyEl = document.querySelector(".page-map-wrap");
 
-            if (!stickyEl) return;
+                if (!stickyEl) return;
 
-            // pc일때만 적용
-            if (pubUi.self.isPc) {
-                if (offsetTop > 400) {
-                    stickyEl.classList.add("stuck");
-                } else {
-                    stickyEl.classList.remove("stuck");
+                // pc일때만 적용
+                if (pubUi.self.isPc) {
+                    if (offsetTop > 400) {
+                        stickyEl.classList.add("stuck");
+                    } else {
+                        stickyEl.classList.remove("stuck");
+                    }
                 }
-            }
-        });        
+            });
+        }
     },
 
     scrollToEvt: function (targetId) {
@@ -215,7 +210,7 @@ var pubUi = {
         },
         tab() {
             Array.from(pubUi.self.tabLists).forEach((tabList) => {
-                const tabs = tabList.querySelectorAll(".tab-category > li");
+                const tabs = tabList.querySelectorAll(".activeTab > li");
                 tabs.forEach((tab) => {
                     tab.addEventListener("click", function () {
                         const id = this.getAttribute("id");
@@ -255,7 +250,7 @@ var pubUi = {
             this.tab();
         },
         tab() {
-            $(document).on("click", ".acdItem [aria-expanded]", function (e) {
+            $(document).on("click", ".acdItem .acd-btn", function (e) {
                 e.preventDefault();
                 const $this = $(this);
                 const item = $this.closest(".acdItem");
