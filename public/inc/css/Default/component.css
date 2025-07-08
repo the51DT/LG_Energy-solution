@@ -216,6 +216,7 @@
 .page-map-wrap.stuck::before {background:var(--colorElement-light-fill-fill-default04);}
 .page-map-wrap .selectbox-wrap {max-width: 90rem; margin: 0 auto;}
 .page-map-wrap .selectbox-wrap > div.select-cate {padding:0 1.5rem; }
+.page-map-wrap .selectbox-wrap > div:first-child {padding-left: 0;}
 .page-map-wrap .selectbox-wrap > div.select-cate button {min-width: 11.25rem;}
 .page-map-wrap .selectbox-wrap > div.select-cate:first-child button::before {display:none;}
 
