@@ -545,28 +545,9 @@
 </pre>
               </div>
             </div>
+            <!-- input - Default -->
             <div class="subSection">
-              <h3 class="guideSubTit">3. Title</h3>
-              <div class="ui-item">
-                <div class="wrap-form label-tit">
-                  <label for="username">
-                    <span>Title</span>
-                  </label>
-                </div>
-                <div class="wrap-form label-tit">
-                  <label for="username" class="required">
-                    <span>Title required</span>
-                  </label>
-                </div>
-              </div>
-              <div class="code">
-                <pre class="brush: js;">
-</pre>
-              </div>
-            </div>
-            <!--  -->
-            <div class="subSection">
-              <h3 class="guideSubTit">4. input - Default</h3>
+              <h3 class="guideSubTit">3. input - Default</h3>
               <div class="ui-item">                
                 <div class="wrap-form-input">                
                   <div class="input-wrap">
@@ -655,8 +636,9 @@
 </pre>
               </div>
             </div>
+            <!-- input - File Attatch -->
             <div class="subSection">
-              <h3 class="guideSubTit">5. input - File Attatch</h3>
+              <h3 class="guideSubTit">4. input - File Attatch</h3>
               <div class="ui-item">
                 <!-- 기본 케이스 -->
                 <div class="wrap-form-input filebox">
@@ -730,9 +712,9 @@
 </pre>
               </div>
             </div>
-            <!--  -->
+            <!-- textarea  -->
             <div class="subSection">
-              <h3 class="guideSubTit">6. textarea</h3>
+              <h3 class="guideSubTit">5. textarea</h3>
               <div class="ui-item">
                 <!-- normal 케이스 -->
                 <div class="wrap-form-input">
@@ -793,16 +775,16 @@
                 </pre>
               </div>
             </div>
-            <!--  -->
+            <!-- selectbox  -->
             <div class="subSection">
-              <h3 class="guideSubTit">7. selectbox option</h3>
+              <h3 class="guideSubTit">6. selectbox option</h3>
               <div class="ui-item">
                 <div class="page-map-wrap"> <!-- page-map-wrap -->
                     <div class="selectbox-wrap" role="listbox">
                         <div role="option">
                             <a href="/"><img src="../public/inc/images/sample/icon_home.svg" alt="home" title="홈 이동" /></a>
                         </div>
-                        <div class="select-cate" role="option">
+                        <div class="select-cate activeSelect" role="option">
                             <button type="button" aria-haspopup="listbox">회사소개</button>
                             <ul class="select-menu" role="listbox">
                                 <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
@@ -812,7 +794,7 @@
                                 <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
                             </ul>
                         </div>
-                        <div class="select-cate" role="option">
+                        <div class="select-cate activeSelect" role="option">
                             <button type="button" aria-haspopup="listbox">글로벌 네트워크</button>
                             <ul class="select-menu" role="listbox">
                                 <li><a href="javascript:;" role="option" tabindex="0">소개</a></li>
@@ -825,7 +807,7 @@
                     </div>
                 </div>                              
                 <div class="selectbox-wrap" role="listbox">
-                  <div class="select-cate" role="option">
+                  <div class="select-cate activeSelect" role="option">
                       <button type="button" aria-haspopup="listbox">글로벌 네트워크</button>
                       <ul class="select-menu" role="listbox">
                           <li><a href="javascript:;" role="option" tabindex="0">소개</a></li>
@@ -838,7 +820,7 @@
                 </div>
                 <!-- error -->
                 <div class="selectbox-wrap" role="listbox">
-                  <div class="select-cate error" role="option">
+                  <div class="select-cate activeSelect error" role="option">
                       <button type="button" aria-haspopup="listbox">글로벌 네트워크</button>
                       <ul class="select-menu" role="listbox">
                           <li><a href="javascript:;" role="option" tabindex="0">소개</a></li>
@@ -851,7 +833,7 @@
                 </div>
                 <!-- disabled -->
                 <div class="selectbox-wrap" role="listbox">
-                  <div class="select-cate disabled" role="option">
+                  <div class="select-cate activeSelect disabled" role="option">
                       <button type="button" aria-haspopup="listbox">글로벌 네트워크</button>
                       <ul class="select-menu" role="listbox">
                           <li><a href="javascript:;" role="option" tabindex="0">소개</a></li>
@@ -864,7 +846,7 @@
                 </div>
                 <!-- type2 -->
                 <div class="selectbox-wrap type2">
-                  <div class="select-cate">
+                  <div class="select-cate activeSelect">
                       <button type="button" aria-haspopup="listbox">전체</button>                                                
                       <ul class="select-menu" role="listbox">
                           <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
@@ -876,8 +858,8 @@
                   </div>
                 </div>
                 <!-- type3 -->
-                <div class="selectbox-wrap type2">
-                  <div class="select-cate">
+                <div class="selectbox-wrap type3">
+                  <div class="select-cate activeSelect">
                       <button type="button" aria-haspopup="listbox">전체</button>                                                
                       <ul class="select-menu" role="listbox">
                           <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
@@ -905,7 +887,7 @@
               <div class="ui-item">
                 <div class="tab-wrap">
                   <div class="tab-cate-wrap">
-                    <ul class="tab-category" role="tablist">
+                    <ul class="tab-category activeTab" role="tablist">
                       <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">비전 및 전략</button></li>
                       <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">거버넌스</button></li>
                       <li class="tab" id="tab3"><button role="tab" aria-selected="false" aria-controls="tab3-content">글로벌 파트너십</button></li>
@@ -928,7 +910,7 @@
                 </div>
                 <div class="tab-wrap">
                   <div class="tab-cate-wrap">
-                    <ul class="tab-category" role="tablist">
+                    <ul class="tab-category activeTab" role="tablist">
                       <li class="tab on" id="tab4"><button role="tab" aria-selected="true" aria-controls="tab4-content">Tab 4</button></li>
                       <li class="tab" id="tab5"><button role="tab" aria-selected="false" aria-controls="tab5-content">Tab 5</button></li>
                       <li class="tab" id="tab6"><button role="tab" aria-selected="false" aria-controls="tab6-content">Tab 6</button></li>
@@ -977,7 +959,7 @@
                   <div class="tab-wrap">
                       <div class="content-area-head-tab">                        
                         <div class="tab-cate-wrap">                            
-                            <ul class="tab-category" role="tablist">
+                            <ul class="tab-category activeTab" role="tablist">
                               <li class="tab on" id="tab10"><button role="tab" aria-selected="true" aria-controls="tab10-content">비전 및 전략</button></li>
                               <li class="tab" id="tab11"><button role="tab" aria-selected="false" aria-controls="tab11-content">거버넌스</button></li>
                               <li class="tab" id="tab12"><button role="tab" aria-selected="false" aria-controls="tab12-content">글로벌 파트너십</button></li>
