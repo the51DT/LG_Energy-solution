@@ -94,8 +94,8 @@ var pubUi = {
                     });
 
                     networkMapInfo.classList.add("on");
-                    mapImg.classList.add("on");
-                    mapMarking.style.display = "block";
+                    // mapImg.classList.add("on");
+                    // mapMarking.style.display = "block";
 
                     // 기존 깜빡임 인터벌 제거 (중복 방지)
                     // if (checkingInterval) clearInterval(checkingInterval);
@@ -114,8 +114,8 @@ var pubUi = {
             mapCloseBtn.addEventListener("click", function (e) {
                 const targetMap = e.currentTarget.closest(".map-info");
                 targetMap.classList.remove("on");
-                mapImg.classList.remove("on");
-                mapMarking.style.display = "none";
+                // mapImg.classList.remove("on");
+                // mapMarking.style.display = "none";
                 mapInfoItem.forEach((item) => {
                     item.classList.remove("active");
                 });
