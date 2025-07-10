@@ -318,7 +318,7 @@ ul.page-map{display:none;}
 .content-item02{background:#218927}
 .content-item03{background:#658733} */
 
-.wrap:not(.main_p) .content-header {max-width: 90rem; margin: 0 auto; padding:6.25rem 0 3.75rem;}
+.wrap:not(.main_p) .content-header {max-width: 90rem; margin: 0 auto; padding:6.25rem 0 4.25rem;}
 .wrap:not(.main_p) .content-header .subp-tit {color:#171819; font-size: 2rem; font-weight: 600; line-height: 3rem;}
 
 footer{border-top: 1px solid var(--stroke-stroke-default-04, #E1E7EA);background: var(--fill-fill-on-primary, #FFF);overflow: hidden;}
