@@ -142,46 +142,51 @@
                     </div>
                 </div>
                 <div class="news-content-area">
-                    <div class="search-result"> 
-                        <img src="../../../inc/images/icon/icon_head_search.svg" alt="">
-                        <input type="text">
-                        <button>
-                            <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="top-bar">
-                        <div class="total-count total-result">총 <span>32</span>개의 검색결과가 있습니다.</div>
-                    </div>
-                    <ul class="news-list">
-                        <li class="news-item">
-                            <div class="news-image-wrapper">
-                                <img src="../../../inc/images/img/newsroom01_cont1.png" class='news-image' alt="뉴스 이미지">
-                                <a href="../../../inc/images/img/newsroom01_cont1.png" download class="download-btn">
-                                    이미지<img src="../../../inc/images/icon/icon_arrow_download_wh.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="news-content">
-                                <span>2025.06.22</span>
-                                <div class="ellipsis news-title">LG에너지솔루션 R&D 글로벌 인재 찾아 유럽으로 ‘BTC in 프랑크푸르트’ 개최...</div>
-                                <p class="ellipsis2">LG에너지솔루션이 유럽 지역 글로벌 석·박사급 R&D 인재를 대상으로 채용 행사를 개최했다.<br/>
-                                    LG에너지솔루션은 21일(현지시간) 독일 프랑크푸르트에서 ‘BTC(Battery Tech Conference) in 프랑크푸르트’를 개최했다고 밝혔다.</p>
-                            </div>
-                        </li>
-                        <li class="news-item">
-                            <div class="news-image-wrapper">
-                                <img src="../../../inc/images/img/newsroom01_cont5.png" class='news-image' alt'="뉴스 이미지">
-                                <a href="../../../inc/images/img/newsroom01_cont5.png" download class="download-btn">
-                                    이미지<img src="../../../inc/images/icon/icon_arrow_download_wh.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="news-content">
-                                <span>2025.06.22</span>
-                                <div class="ellipsis news-title">LG에너지솔루션 배터리 팩·교환 스테이션 ‘국가 표준’ 획득 “국내 기업 중 처음…보조금 혜택 등 효과 기대”</div>
-                                <p class="ellipsis2">LG에너지솔루션이 국내 기업 중 처음으로 배터리 교환 스테이션(BSS·Battery Swapping Station) 보조금 지원 대상이 됐다. 환경부 등 정부가 추진 중인 전기 이륜차 보급사업 관련 표준 요건을 갖춘 ‘1호 기업’이 된 것이다.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="paging-wrap">
+                  <div class="search-result">
+                    <img src="../../../inc/images/icon/icon_head_search.svg" alt="검색 아이콘">
+                    
+                    <input type="text" id="news-search">
+                
+                    <button type="button" aria-label="검색어 초기화">
+                      <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="닫기 아이콘">
+                    </button>
+                  </div>
+                
+                  <div class="top-bar">
+                    <div class="total-count total-result" aria-label="검색 결과 총 32건">총 <span>32</span>개의 검색결과가 있습니다.</div>
+                  </div>
+                
+                  <ul class="news-list">
+                    <li class="news-item" role="article" aria-label="BTC in 프랑크푸르트 개최 뉴스">
+                      <div class="news-image-wrapper">
+                        <img src="../../../inc/images/img/newsroom01_cont1.png" class="news-image" alt="BTC in 프랑크푸르트 행사 이미지">
+                        <a href="../../../inc/images/img/newsroom01_cont1.png" download class="download-btn" aria-label="BTC in 프랑크푸르트 행사 이미지 다운로드">
+                          이미지 <img src="../../../inc/images/icon/icon_arrow_download_wh.svg" alt="다운로드 아이콘">
+                        </a>
+                      </div>
+                      <div class="news-content">
+                        <span aria-label="게시일">2025.06.22</span>
+                        <h2 class="ellipsis news-title">LG에너지솔루션 R&D 글로벌 인재 찾아 유럽으로 ‘BTC in 프랑크푸르트’ 개최...</h2>
+                        <p class="ellipsis2">LG에너지솔루션이 유럽 지역 글로벌 석·박사급 R&D 인재를 대상으로 채용 행사를 개최했다.<br/>
+                          LG에너지솔루션은 21일(현지시간) 독일 프랑크푸르트에서 ‘BTC(Battery Tech Conference) in 프랑크푸르트’를 개최했다고 밝혔다.</p>
+                      </div>
+                    </li>
+                
+                    <li class="news-item" role="article" aria-label="배터리 교환 스테이션 국가 표준 획득 뉴스">
+                      <div class="news-image-wrapper">
+                        <img src="../../../inc/images/img/newsroom01_cont5.png" class="news-image" alt="배터리 교환 스테이션 이미지">
+                        <a href="../../../inc/images/img/newsroom01_cont5.png" download class="download-btn" aria-label="배터리 교환 스테이션 이미지 다운로드">
+                          이미지 <img src="../../../inc/images/icon/icon_arrow_download_wh.svg" alt="다운로드 아이콘">
+                        </a>
+                      </div>
+                      <div class="news-content">
+                        <span aria-label="게시일">2025.06.22</span>
+                        <h2 class="ellipsis news-title">LG에너지솔루션 배터리 팩·교환 스테이션 ‘국가 표준’ 획득</h2>
+                        <p class="ellipsis2">LG에너지솔루션이 국내 기업 중 처음으로 배터리 교환 스테이션(BSS·Battery Swapping Station) 보조금 지원 대상이 됐다. 환경부 등 정부가 추진 중인 전기 이륜차 보급사업 관련 표준 요건을 갖춘 ‘1호 기업’이 된 것이다.</p>
+                      </div>
+                    </li>
+                  </ul>
+                      <div class="paging-wrap">
                         <ul class="paging">
                           <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
                           <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
