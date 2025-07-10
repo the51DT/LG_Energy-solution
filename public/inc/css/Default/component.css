@@ -131,7 +131,7 @@
 .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 5rem;}
 .cont-area-wrap .cont-area-sect > section {padding-bottom: 6.25rem;}
 .cont-area-wrap .cont-area-intro {text-align: left;}
-.cont-area-wrap .cont-area-intro .intro-desc {padding: 4.5rem 0 3.75rem; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); }
+.cont-area-wrap .cont-area-intro .intro-desc {padding: 5rem 0 3.75rem; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); }
 .cont-area-wrap.type2 .cont-area-sect > section:first-child {padding-top: 0;}
 .cont-area-wrap.type2 .cont-area-sect > section:last-of-type {padding-bottom: 11.25rem;}
 .cont-area-wrap.type2 .cont-area-sect > section {position: relative; text-align: left; padding-bottom: 0;}
