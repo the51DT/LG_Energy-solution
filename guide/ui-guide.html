@@ -999,6 +999,33 @@
                 </pre>
               </div>
             </div>
+            <div class="subSection">
+              <h3 class="guideSubTit">4. tab : vertical 클래스 : 수직형태의 tab 사용시, tab-wrap에 vertical 클래스 추가 필요</h3>
+              <div class="ui-item">
+                <div class="tab-wrap vertical"> <!-- 수직탭 사용시 vertical 클래스 추가 필요 -->
+                  <div class="tab-cate-wrap">
+                    <ul class="tab-category activeTab" role="tablist">
+                      <li class="tab on" id="tab1_1"><button role="tab" aria-selected="true" aria-controls="tab1_1-content">친환경 제품</button></li>
+                      <li class="tab" id="tab2_1"><button role="tab" aria-selected="false" aria-controls="tab2_1-content">제품 품질 및 안전</button></li>
+                    </ul>
+                  </div>
+                  <div class="tab-content-box">
+                    <div class="tab-content on" id="tab1_1-content">
+                      비전 및 전략 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                      컨텐츠 정보를 등록해주세요.
+                    </div>
+                    <div class="tab-content" id="tab2_1-content">
+                        거버넌스 컨텐츠 박스입니다. 등록된 정보가 없습니다. <br />
+                        컨텐츠 정보를 등록해주세요.
+                    </div>
+                  </div>
+              </div> <!-- //tab-wrap -->
+              </div>
+              <div class="code">
+                <pre class="brush: js;">
+                </pre>
+              </div>
+            </div>
           </div>
         </section>
         <!-- cont05 End -->
@@ -1761,7 +1788,7 @@
 </body>
 
 <script type="text/javascript" src="./inc/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../inc/js/swiper.min.js"></script>
+<!-- <script type="text/javascript" src="../inc/js/swiper.min.js"></script> -->
 <script type="text/javascript" src="./inc/js/shCore.js"></script>
 <script type="text/javascript" src="./inc/js/shBrushJScript.js"></script>
 <script type="text/javascript" src="./inc/js/guideUi.js"></script>
