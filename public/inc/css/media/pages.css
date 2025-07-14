@@ -102,6 +102,7 @@
 /* 뉴스룸 */
 .news-content-area {
     padding: 0px 20px;
+    margin-bottom: 100px;
 }
 
 .news .top-bar {
@@ -127,6 +128,9 @@
     flex-direction: column;
     gap: 16px;
 }
+.news-content-area .news-list{
+    margin-bottom: 2rem;
+}
 .news-content-area .news-list .news-item .news-image {
     width: 320px;
     height: 183px;
@@ -143,5 +147,18 @@
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 1rem;
+}
+.news-content-area .news-list .news-item {
+    padding: 32px 0;
+}
+.news-content-area .news-list .news-item .news-content > p {
+    font-size: 1rem;
+}
+.news .news-image-wrapper > a {
+    font-size: 13px;
+    padding: 8px 16px;
+}
+.news .news-image-wrapper > a > img {
+    width: 16px;
 }
 }
