@@ -46,6 +46,14 @@
 .profile-txt-area .profile-history ul > li {font-size: 1rem; line-height: 1.5rem;}
 
 /* 정도경영 (etmg) */
+.etmg .cont-area-wrap .cont-area-intro .intro-desc {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
+.etmg .cont-area-wrap .cont-area-intro .intro-desc > span {font-weight: 600;}
+.etmg .cont-area-wrap .cont-area-intro .intro-desc:has(+ .sub-desc-wrap) {padding-bottom: 1rem;}
+.etmg .cont-area-wrap .cont-area-intro .sub-desc-wrap {margin-bottom: 1.5rem; padding-inline: 1.25rem;}
+.etmg .cont-area-wrap .cont-area-intro .sub-desc-wrap .sub-tit {font-size: 1rem; line-height: 1.5rem;}
+.etmg .cont-area-wrap .cont-area-intro .sub-desc-wrap > .sub-tit + ul {margin-top: 2rem;}
+.etmg .cont-area-wrap .cont-area-intro .sub-desc-wrap > ul {gap: 1rem;}
+.etmg .cont-area-wrap .cont-area-intro .sub-desc-wrap .sub-desc {font-size: 0.875rem; line-height: 1.4rem;}
 .etmg #tab1-content .cont-area-wrap.type2 .cont-area-intro .intro-desc {padding: 1.5rem 1.25rem 3.5rem;}
 .etmg .info-text-area .subtit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
 .etmg .info-text-area .desc {font-size: 1rem; line-height: 1.5rem; margin-top: 1.5rem;}
@@ -53,6 +61,23 @@
 .etmg #tab1-content .cont-area-sect > section:first-child .img-area {margin-bottom: 3.5rem; padding-top: 0; padding-inline: 0;}
 .etmg .info-text-area +.img-area {margin: 1.5rem auto;}
 .etmg #tab1-content .cont-area-wrap.type2 .cont-area-sect > section:last-child .info-text-area + .img-area {margin-top: 2rem; margin-bottom: 0;}
+.etmg .accordion-list.type2 .accordion-btn {font-size: 1rem; line-height: 1.5rem;}
+.etmg .accordion-list.type2.on .accordion-btn {font-size: 1.25rem; line-height: 1.75rem;}
+.etmg .accordion-list.type2 .accordion-btn .acd-group .acd-num {font-size: 1rem; line-height: 1.5rem;}
+.etmg .accordion-list .accordion-content {margin-bottom: 0;}
+.etmg .accordion-list .accordion-content .acd-con-tit {font-size: 1rem; line-height: 1.5rem;}
+.etmg .acd-con-tit + .acd-desc-list {margin-top: 1.5rem;}
+.etmg .acd-desc-list > li {flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;}
+.etmg .acd-desc-list > li + li {padding-top: 0; border: none;}
+.etmg .acd-desc-list > li .acd-desc-num {width: auto; font-size: 1.125rem; line-height: 1.75rem;}
+.etmg .acd-desc-list > li .acd-desc-con {display: flex; flex-direction: column; gap: 0.5rem;}
+.etmg .acd-desc-list > li .acd-desc-con > li {font-size: 1rem; line-height: 1.5rem;}
+.etmg .accordion-list + .btn-wrap {margin-top: 3rem;}
+/* .etmg .icon-btn {display: flex; justify-content: space-between; align-items: center; width: 26.25rem; padding: 1.25rem 2.5rem; border-radius: 0.5625rem; font-size: 1.5rem; font-weight: 600; line-height: 1.925rem; color: var(--colorElement-light-text-text-default01);}
+.etmg .icon-btn .icon-area {display: flex; justify-content: center; align-items: center; width: 3rem; height: 3rem; border-radius: 100%;}
+.etmg .icon-btn.icon-white .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
+.etmg .icon-btn .icon-area::before {content: ""; display: block; width: 1.75rem; height: 1.75rem; background-position: center center; background-size: contain;}
+.etmg .icon-btn.icon-white.icon-download .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);} */
 .etmg #tab3-content .cont-area-wrap.type2 .cont-area-intro .intro-desc {padding: 2rem 1.25rem 1.63rem;}
 .etmg .desc-list-col2 {margin-top: 0; padding-bottom: 1.13rem;}
 .etmg .desc-list-col2 > li + li {margin-top: 2rem; padding-top: 2rem;}
