@@ -44,6 +44,8 @@
 .profile-txt-area .profile-text .date {font-size: 1rem; font-weight: 400; line-height: 1.5rem; padding-top: 0.5rem;}
 .profile-txt-area .profile-history {padding-top: 1rem;}
 .profile-txt-area .profile-history ul > li {font-size: 1rem; line-height: 1.5rem;}
+/* 지속가능경영 > 사회 */
+.bdr-box-wrap .list-container > li img.circle {width:30rem; height:15rem; ;}
 
 /* 정도경영 (etmg) */
 .etmg .cont-area-wrap .cont-area-intro .intro-desc {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
@@ -74,11 +76,6 @@
 .etmg .acd-desc-list > li .acd-desc-con {display: flex; flex-direction: column; gap: 0.5rem;}
 .etmg .acd-desc-list > li .acd-desc-con > li {font-size: 1rem; line-height: 1.5rem;}
 .etmg .accordion-list + .btn-wrap {margin-top: 3rem;}
-/* .etmg .icon-btn {display: flex; justify-content: space-between; align-items: center; width: 26.25rem; padding: 1.25rem 2.5rem; border-radius: 0.5625rem; font-size: 1.5rem; font-weight: 600; line-height: 1.925rem; color: var(--colorElement-light-text-text-default01);}
-.etmg .icon-btn .icon-area {display: flex; justify-content: center; align-items: center; width: 3rem; height: 3rem; border-radius: 100%;}
-.etmg .icon-btn.icon-white .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
-.etmg .icon-btn .icon-area::before {content: ""; display: block; width: 1.75rem; height: 1.75rem; background-position: center center; background-size: contain;}
-.etmg .icon-btn.icon-white.icon-download .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);} */
 .etmg #tab3-content .cont-area-wrap.type2 .cont-area-intro .intro-desc {padding: 2rem 1.25rem 1.63rem;}
 .etmg .desc-list-col2 {margin-top: 0; padding-bottom: 1.13rem;}
 .etmg .desc-list-col2 > li + li {margin-top: 2rem; padding-top: 2rem;}

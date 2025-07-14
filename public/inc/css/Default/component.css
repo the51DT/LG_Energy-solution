@@ -59,10 +59,13 @@ a[class^="act-btn"] {display: inline-flex; align-items: center;}
 [class^="act-btn"][class*="-sm"] {font-size: calc(18 / 16 * 1rem); line-height: calc(25.2 / 16 * 1rem); padding: calc(6 / 16 * 1rem) calc(24 / 16 * 1rem); height: calc(42 / 16 * 1rem);}
 [class^="act-btn"][class*="-md"] {font-size: calc(20 / 16 * 1rem); line-height: calc(22.4 / 16 * 1rem); padding: calc(6 / 16 * 1rem) calc(24 / 16 * 1rem); height: calc(56 / 16 * 1rem);}
 [class^="act-btn"][class*="-lg"] {font-size: calc(22 / 16 * 1rem); line-height: calc(30.8 / 16 * 1rem); padding: calc(6 / 16 * 1rem) calc(32 / 16 * 1rem); height: calc(64 / 16 * 1rem);}
+[class^="act-btn"][class*="-xl"] {font-size: calc(18 / 16 * 1rem); line-height: calc(28.8 / 16 * 1rem); padding: calc(20 / 16 * 1rem) calc(30 / 16 * 1rem); height: calc(96 / 16 * 1rem); font-weight: 600;}
 .btn-primary01 {background-color: var(--colorElement-light-fill-fill-default00);}
 .btn-primary01.disabled, .btn-primary01:disabled {background-color: var(--colorElement-light-fill-fill-disabled);}
 .btn-primary02 {background-color: var(--colorElement-light-fill-fill-primary);}
 .btn-primary02.disabled, .btn-primary02:disabled {background-color: #ADECF2;} /* 토큰키값으로 컬러코드 수정 필요 : (variables.scss)에 update 되어있지않아 추후 수정예정 */
+.btn-primary03 {font-size:1.125rem; font-weight: 600; line-height: 1.8rem; background-color: var(--colorElement-light-fill-fill-default00); border-radius: calc(9 / 16 * 1rem); color: #fff; padding: 0.75rem 4.75rem 0.75rem 1.25rem !important;}
+
 /* outline btn */
 .btn-outline01 {color:var(--colorElement-light-text-text-default01); border:1px solid var(--colorElement-light-stroke-stroke-default00);}
 .btn-outline01.disabled, .btn-outline01:disabled {border-color:var(--colorElement-light-stroke-stroke-disabled); color:var(--colorElement-light-text-text-disabled);}
@@ -70,6 +73,31 @@ a[class^="act-btn"] {display: inline-flex; align-items: center;}
 .btn-outline02.disabled, .btn-outline02:disabled {border-color:#ADECF2; color:var(--colorElement-light-primary-primary-disabled);} /* 토큰키값으로 컬러코드 수정 필요 : (variables.scss)에 update 되어있지않아 추후 수정예정 */
 .btn-outline03 {color:var(--colorElement-light-text-text-on-primary); border:1px solid var(--colorElement-light-stroke-stroke-on-primary);}
 .btn-outline03.disabled, .btn-outline03:disabled {border-color:var(--colorElement-light-stroke-stroke-default02); color:var(--colorElement-light-text-text-default03);} /* 토큰키값으로 컬러코드 수정 필요 : (variables.scss)에 update 되어있지않아 추후 수정예정  */
+
+/* icon btn */
+[class^="icon-btn"] {display: flex; justify-content: space-between; align-items: center; width: 15.625rem; min-width: 7.5rem; padding: 1.25rem 2.5rem; border-radius: 0.5625rem; font-size: 1.125rem; font-weight: 500; line-height: 1.575rem; color: var(--colorElement-light-text-text-default01); padding: 0.7rem 1.25rem 0.7rem 1.88rem;}
+[class^="icon-btn"][class*="-sm"] {font-weight: 600; width: 13.3125rem; padding: 0.75rem 1.5rem; }
+[class^="icon-btn"][class*="-md"] {font-size: 1.25rem; font-weight: 600; line-height: 1.4rem; width: 22.5rem;}
+[class^="icon-btn"][class*="-lg"] {font-size: 1.5rem; font-weight: 600; line-height: 1.925rem; width: 26.25rem;}
+[class^="icon-btn"]:hover {color: #fff; background: var(--colorElement-light-fill-fill-default00);}
+[class^="icon-btn"] .icon-area {display: flex; justify-content: center; align-items: center; width: 2.25rem; height: 2.25rem; border-radius: 100%;}
+[class^="icon-btn"][class*="-sm"] .icon-area {width: 2.25rem; height: 2.25rem;}
+[class^="icon-btn"][class*="-md"] .icon-area {width: 2.5rem; height: 2.5rem;}
+[class^="icon-btn"][class*="-lg"] .icon-area {width: 3rem; height: 3rem;}
+[class^="icon-btn"].icon-white .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
+[class^="icon-btn"].icon-gray .icon-area {background-color: var(--colorElement-light-fill-fill-default01);}
+[class^="icon-btn"] .icon-area::before {content: ""; display: block; width: 1.25rem; height: 1.25rem; background-position: center center; background-size: contain; background-image: url(../../images/icon/icon_download.svg);}
+[class^="icon-btn"][class*="-sm"] .icon-area::before {width: 1.25rem; height: 1.25rem;}
+[class^="icon-btn"][class*="-md"] .icon-area::before {width: 1.5rem; height: 1.5rem;}
+[class^="icon-btn"][class*="-lg"] .icon-area::before {width: 1.75rem; height: 1.75rem;}
+[class^="icon-btn"].icon-gray .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
+[class^="icon-btn"]:hover .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
+[class^="icon-btn"].icon-white .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
+[class^="icon-btn"].icon-white:hover .icon-area {background-color: #fff;}
+[class^="icon-btn"].icon-white:hover .icon-area::before {background-image: url(../../images/icon/icon_download.svg);}
+[class^="icon-btn"].icon-gray {border-color: var(--colorElement-light-stroke-stroke-default03); color: var(--colorElement-light-text-text-default02);}
+[class^="icon-btn"].icon-gray:hover {color: var(--colorElement-light-text-text-default01); background: var(--colorElement-light-fill-fill-default04);}
+[class^="icon-btn"].icon-gray:hover .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
 
 /* form */
 .wrap-form-box {display:flex; gap:calc(12 / 16 * 1rem);}
@@ -142,30 +170,44 @@ a[class^="act-btn"] {display: inline-flex; align-items: center;}
 .cont-area-wrap .cont-area-sect > .cont-tit {padding-bottom: 3.75rem; font-size: 2.5rem; font-weight: 600; line-height: 3.5rem;}
 .cont-area-wrap .sect-cont-main {position: relative;}
 .cont-area-wrap .sect-cont-main:not(:last-child)::after {content:""; display: block; width: 100%; height: 0.0625rem; margin: 6.25rem 0; background-color: var(--colorElement-light-stroke-stroke-default01);}
+.cont-area-wrap .sect-cont-main .main-text-wrap {padding-top:2rem;}
+.cont-area-wrap .sect-cont-main .main-text-wrap .article-content .desc {color: var(--colorElement-light-text-text-default01);}
+.cont-area-wrap .sect-cont-main .main-text-wrap + .btn-wrap {padding-top: 2.5rem;}
 .cont-area-wrap .article-tit {color:var(--colorElement-light-text-text-default01); font-weight: 600; line-height: 2.625rem; font-size: 1.75rem;}
-.cont-area-wrap .article-content .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color:var(--colorElement-light-fill-fill-default01);}
-.cont-area-wrap .sect-cont-sub .tit-group {display: flex; align-items: center; justify-content: space-between; padding-bottom: 3.75rem;}
+.cont-area-wrap .sect-cont-sub .tit-group {display: flex; align-items: center; justify-content: space-between;}
 .cont-area-wrap .sect-cont-sub .btn-wrap {display: flex; gap: 0.62rem;}
+.cont-area-wrap .sect-cont-sub .btn-wrap.w100 > [class^=btn-]  {width: 100%;}
+.cont-area-wrap .sect-cont-sub .btn-wrap.w100 > [class^=btn-] > a,
+.cont-area-wrap .sect-cont-sub .btn-wrap.w100 > [class^=btn-] > button  {width: 100%;}
 .cont-area-wrap .article-sub {margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.cont-area-wrap .tit-group .article-sub {margin-bottom: 0;}
+.cont-area-wrap .sect-cont-sub article:first-of-type {padding-top: 3.75rem;}
 .cont-area-wrap .sect-cont-sub article {position: relative;}
 .cont-area-wrap .sect-cont-sub article:not(:last-child)::after {content:""; display: block; width: 100%; height: 0.0625rem; margin: 3.75rem 0; background-color: var(--colorElement-light-stroke-stroke-default03);}
+.article-content .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color:var(--colorElement-light-text-text-default02);}
+.article-content .desc.fz-sm {font-size: 1rem; line-height: 1.6rem; }
 .box-content {margin-top: 3rem;}
 .box-content .box-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
 .box-content .bdr-box-info {margin-top: 1rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color:var(--colorElement-light-text-text-default02);}
 .bdr-box-wrap {padding: 2.5rem; border-radius: 0.625rem; border:4px solid var(--colorElement-light-stroke-stroke-default04); margin-top: 1rem;}
 .bdr-box-wrap.nbdr {padding: 1.87rem; border: 0; border-radius: 0.5rem; background: var(--colorElement-light-fill-fill-default04);}
+.bdr-box-wrap .info-wrap .title {font-size: 1rem; font-weight: 600; line-height: 1.6rem; color:var(--colorElement-light-text-text-default01); margin-bottom: 1rem; padding-left: 0.75rem; position: relative;}
+.bdr-box-wrap .info-wrap .title:before {content: ""; display: block; width: 0.25rem; height: 1rem; background: var(--colorElement-light-icon-icon-primary);  position: absolute; top:50%; left:0; transform: translateY(-50%)}
+.bdr-box-wrap .info-wrap .desc {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color:var(--colorElement-light-text-text-default02); padding-left: 0.62rem;}
 .bdr-box-wrap .list-container > li .list-title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; margin-bottom: 1rem;}
 .bdr-box-wrap .list-container > li .list-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; margin-bottom: 2.5rem; color: var(--colorElement-light-text-text-default02);}
 .bdr-box-wrap .list-container > li:not(:last-child)::after {content:""; display: block; width: 100%; height: 0.0625rem; background:var(--colorElement-light-stroke-stroke-default03); margin: 2.5rem 0;}
+.bdr-box-wrap .list-container > li .img-wrap {display: flex; justify-content: center;}
 
-
-
-/* .cont-area-wrap .cont-area-sect > article:not(:last-child) {padding-bottom: 7.5rem;}
-.cont-area-wrap .article-content > section {margin-top: 3.75rem;}
-.cont-area-wrap .article-content > section:last-child table {margin-bottom: 2.25rem;}
-.cont-area-wrap .article-content.box-case {padding-top: 0.75rem;} */
-
-
+.box-article {position: relative;}
+.box-article .img-wrap img {width: 32.5rem; height: 17.5rem;}
+.box-article .top-area {display: flex; gap: 3.5rem;}
+.box-article .text-wrap {padding-top: 2.63rem;}
+.box-article .text-wrap .box-title {font-size: 5rem; font-weight: 200; line-height: 5rem;}
+.box-article .text-wrap .box-sub {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; margin-top: 1.25rem;}
+.box-article .bott-area {padding-top: 3.75rem; position: relative; padding-left: 10.12rem;}
+.box-article .bott-area::before {content:""; width: 0.25rem; height: 20.625rem; background-color:var(--colorElement-light-stroke-stroke-primary); position:absolute; left: 7.38rem; top:-5rem; }
+.article-layout {padding: 5rem 0 11.25rem;}
 
 .cont-area-wrap.type2 .cont-area-sect > section:first-child {padding-top: 0;}
 .cont-area-wrap.type2 .cont-area-sect > section:last-of-type {padding-bottom: 11.25rem;}
