@@ -100,6 +100,8 @@
 .map-info-content-box .info-content-body .sns-area > ul > li > a {width: 100%; height: 100%;}
 
 /* 뉴스룸 */
+.news h3{font-size:2rem;font-weight:600;margin-top:0;margin-bottom:1rem}
+
 .news-content-area{padding:0 1.25rem;margin-bottom:6.25rem}
 .news-content-area .top-bar{flex-direction:column-reverse;align-items:flex-start;gap:1.5rem;margin-bottom:1rem}
 .news-content-area .top-bar .search-box{width:20rem}
@@ -116,7 +118,7 @@
 .news-content-area .news-list .news-item .news-image-wrapper>a{font-size:0.8125rem;padding:0.5rem 1rem}
 .news-content-area .news-list .news-item .news-image-wrapper>a>img{width:1rem}
 
-.news-content-area .search-result{display:flex;align-items:center;gap:1rem;justify-content:baseline;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid #C9CED1;width:auto}
+.news-content-area .search-result{display:flex;align-items:center;gap:1rem;justify-content:baseline;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid #C9CED1;width:auto; margin-top: 2rem;}
 .news-content-area .search-result>input{font-size:1.375rem;width:100%;font-weight:600}
 .news-content-area .search-result>img{width:1.75rem}
 .news-content-area .search-result>button>img{padding:0.41875rem;width:1.375rem}
