@@ -74,6 +74,20 @@ a[class^="act-btn"] {display: inline-flex; align-items: center;}
 .btn-outline03 {color:var(--colorElement-light-text-text-on-primary); border:1px solid var(--colorElement-light-stroke-stroke-on-primary);}
 .btn-outline03.disabled, .btn-outline03:disabled {border-color:var(--colorElement-light-stroke-stroke-default02); color:var(--colorElement-light-text-text-default03);} /* 토큰키값으로 컬러코드 수정 필요 : (variables.scss)에 update 되어있지않아 추후 수정예정  */
 
+/* outline btn / action btn (icon 존재케이스) */
+.btn-outline01.icon-btn,
+.btn-primary01.icon-btn {display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2.5rem; padding: 0.7rem 1.25rem 0.7rem 1.88rem;}
+.btn-outline01.icon-btn span,
+.btn-primary01.icon-btn span {margin-right: 0.5rem;}
+.btn-outline01.icon-btn .icon-area,
+.btn-primary01.icon-btn .icon-area {display: flex; justify-content: center; align-items: center; width: 1.125rem; height: 1.125rem; border-radius: 100%;}
+.btn-outline01.icon-btn .icon-area::before {content: ""; display: block; width: 1.125rem; height: 1.125rem; background-position: center center; background-size: contain; background-image: url(../../images/icon/icon_download.svg);}
+.btn-primary01.icon-btn .icon-area::before {content: ""; display: block; width: 1.125rem; height: 1.125rem; background-position: center center; background-size: contain; background-image: url(../../images/icon/icon_download_wh.svg);}
+.btn-outline01.icon-btn:hover {color: #fff; background: var(--colorElement-light-fill-fill-default00);}
+.btn-primary01.icon-btn:hover {color: #fff; background: var(--colorElement-light-fill-fill-default01);}
+.btn-outline01.icon-btn:hover .icon-area::before,
+.btn-primary01.icon-btn:hover .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
+
 /* icon btn */
 [class^="icon-btn"] {display: flex; justify-content: space-between; align-items: center; width: 15.625rem; min-width: 7.5rem; padding: 1.25rem 2.5rem; border-radius: 0.5625rem; font-size: 1.125rem; font-weight: 500; line-height: 1.575rem; color: var(--colorElement-light-text-text-default01); padding: 0.7rem 1.25rem 0.7rem 1.88rem;}
 [class^="icon-btn"][class*="-sm"] {font-size: 1.125rem; font-weight: 600; min-width: 13.3125rem; padding: 0.75rem 1.5rem; }
