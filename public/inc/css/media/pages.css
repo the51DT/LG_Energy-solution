@@ -47,6 +47,22 @@
 /* 지속가능경영 > 사회 */
 .bdr-box-wrap .list-container > li img.circle {width:30rem; height:15rem; ;}
 
+
+/* 재무정보 (disc) */
+.disc .history-list > li {flex-direction: column; gap: 0.5rem; padding-inline: 1.25rem;}
+.disc .history-list > li + li {margin-top: 2rem;}
+.disc .history-list > li::before {content: none;}
+.disc .history-year {width: auto; padding: 0; font-size: 1.25rem; line-height: 1.75rem;}
+.disc .history-desc > li {padding: 1.25rem; border-bottom: none; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.disc .history-desc > li + li {margin-top: 0.5rem;}
+.disc .history-desc > li > div {flex-direction: column; align-items: flex-start; gap: 0.25rem;}
+.disc .history-desc .history-date {width: auto; font-size: 0.875rem; line-height: 1.4rem;}
+.disc .history-desc .history-tit {font-size: 1.25rem; font-weight: 500; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01);}
+.disc .history-desc .history-btn {width: 2.5rem; height: 2.5rem; background-color: var(--colorElement-light-fill-fill-on-primary); background-size: 1.25rem 1.25rem;}
+.disc .history-list + .paging-wrap {margin-top: 2rem;}
+.disc .paging-wrap + .btn-wrap {margin-top: 3.75rem;}
+
+
 /* 정도경영 (etmg) */
 .etmg .cont-area-wrap .cont-area-intro .intro-desc {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
 .etmg .cont-area-wrap .cont-area-intro .intro-desc > span {font-weight: 600;}
