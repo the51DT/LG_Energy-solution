@@ -100,7 +100,7 @@ var pubUi = {
                     // 기존 깜빡임 인터벌 제거 (중복 방지)
                     // if (checkingInterval) clearInterval(checkingInterval);
 
-                    // // 깜빡임 시작
+                    // // 깜빡임 시작secondTab
                     // checkingInterval = setInterval(() => {
                     //     if (mapMarking.style.display === "block") {
                     //         mapMarking.style.display = "none";
@@ -240,12 +240,12 @@ var pubUi = {
                         }
             
                         // 3. 만약 하위 탭이 있다면, 첫 번째 하위 탭도 초기화 처리
-                        const verticalTab = content?.querySelector(".tab-wrap.vertical");
-                        if (verticalTab) {
-                            const verticalTabs = verticalTab.querySelectorAll(".tab-category > li");
-                            const verticalContents = verticalTab.querySelectorAll(".tab-content-box > .tab-content");
+                        const secondTab = content?.querySelector("[data-tab-type='secondTab']");
+                        if (secondTab) {
+                            const secondTabs = secondTab.querySelectorAll(".tab-category > li");
+                            const verticalContents = secondTab.querySelectorAll(".tab-content-box > .tab-content");
             
-                            verticalTabs.forEach((vt) => {
+                            secondTabs.forEach((vt) => {
                                 vt.classList.remove("on");
                                 vt.querySelector("button").setAttribute("aria-selected", false);
                             });
@@ -256,12 +256,12 @@ var pubUi = {
                             });
             
                             // 첫 번째 하위 탭 on 처리
-                            const firstVerticalTab = verticalTabs[0];
-                            const firstVerticalContentId = firstVerticalTab.getAttribute("id") + "-content";
-                            firstVerticalTab.classList.add("on");
-                            firstVerticalTab.querySelector("button").setAttribute("aria-selected", true);
+                            const firstsecondTab = secondTabs[0];
+                            const firstVerticalContentId = firstsecondTab.getAttribute("id") + "-content";
+                            firstsecondTab.classList.add("on");
+                            firstsecondTab.querySelector("button").setAttribute("aria-selected", true);
             
-                            const firstVerticalContent = verticalTab.querySelector(`#${firstVerticalContentId}`);
+                            const firstVerticalContent = secondTab.querySelector(`#${firstVerticalContentId}`);
                             if (firstVerticalContent) {
                                 firstVerticalContent.classList.add("on");
                                 firstVerticalContent.setAttribute("aria-expanded", true);
