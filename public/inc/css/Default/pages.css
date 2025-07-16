@@ -1,13 +1,21 @@
 /* 지속가능경영(esgm) */
 .esgm .cont-area-info {padding-bottom: 11.25rem;}
 .content-box {display: flex; gap: 3.75rem; align-items: center; position: relative;}
+.content-box.type2 {gap: 5rem;}
 .content-box:not(:first-child) {margin-top: 3.75rem; border-top: 1px solid #d9d9d9;}
 .content-box:not(:first-child) .text-area {margin-top: 3.75rem;}
 .content-box .text-area .sub {font-size: 1.5rem; font-weight: 700; color:var(--colorElement-light-text-text-default01); line-height: 2.25rem;}
 .content-box .text-area .tit {font-size: 3.5rem; font-weight: 300; color:var(--colorElement-light-text-text-default01); line-height: 4.9rem; padding-top: 2rem;}
 .content-box .text-area .desc {font-size: 1.125rem; font-weight: 400; color: var(--colorElement-light-text-text-default02); line-height: 1.8rem; padding-top: 1.5rem;}
+.content-box .text-area .intro-txt {font-size: 1.75rem; font-weight: 400; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
+.content-box .text-area .intro-sub {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01); margin-top: 2rem;}
 .content-box .img-area {padding-top: 2.19rem;}
 .content-box .img-area img {min-width: 28.75rem; height: 17.5rem;}
+.content-box.type2 > div {width: calc(50% - 5rem); flex-grow: 1;}
+.content-box.type2 .img-area {padding-top: 0;}
+.content-box.type2 .img-area img {width: 100%; height: 100%; object-fit: cover;}
+.content-box.type2 .text-area .desc {padding-top: 2rem;}
+.content-box.type2 .text-area .desc + .desc {padding-top: 1rem;}
 
 .cont-box-wrap .left-box {padding-left: 8.94rem; position: relative; display: flex; justify-content: flex-start; flex-direction: column;}
 .cont-box-wrap .left-box::before {content: ""; display:block; width: 6rem; height: 18.125rem; background: url(../../images/img/brace_left.png) no-repeat center center / contain; position: absolute; top:4.5rem; left:0;}
@@ -33,8 +41,16 @@
 /* 지속가능경영 > 사회 */
 .bdr-box-wrap .list-container > li img.circle {width:30rem; height:15rem; ;}
 
-/* 재무정보 */
-
+/* 재무정보 (fina) */
+.fina .box-container .content-box > li {padding: 1.88rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default04); background: #fff;}
+.fina .box-container .content-box > li .box-text-wrap {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.25rem;}
+.fina .box-container .content-box > li .box-text-wrap .box-title {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
+.fina .box-container .content-box > li .box-text-wrap .box-year {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.fina .box-container .content-box > li .box-item {display: flex; gap: 1.25rem; justify-content: center; align-items: center; text-align: center;}
+.fina .box-container .content-box > li .box-item > li {width: 15rem; height: auto; border-radius: 0.5rem; background: var(--colorElement-light-fill-fill-default04); padding: 2rem 0;}
+.fina .box-container .content-box > li .box-item > li .item-record {font-size: 2.5rem; font-weight: 600; line-height: 3.5rem; color: var(--colorElement-light-text-text-primary); margin-bottom: 0.5rem;}
+.fina .box-container .content-box > li .box-item > li .item-title {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.fina .box-container .content-box > li .box-item > li .item-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 
 /* 재무정보 (disc) */
 .disc .history-list > li {position: relative; display: flex; gap: 1.25rem;}
@@ -55,8 +71,6 @@
 .disc .history-list + .paging-wrap {margin-top: 3.75rem;}
 .disc .paging-wrap + .btn-wrap {margin-top: 6.25rem;}
 .disc .btn-wrap {display: flex; justify-content: center;}
-
-
 
 /* 정도경영 (etmg) */
 .etmg .cont-area-wrap .cont-area-intro .intro-desc {font-size: 1.75rem; line-height: 2.625rem;}
