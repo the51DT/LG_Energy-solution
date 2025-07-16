@@ -38,6 +38,7 @@
 .profile-txt-area .profile-text .date {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; padding-top: 0.62rem;}
 .profile-txt-area .profile-history {padding-top: 1.25rem;}
 .profile-txt-area .profile-history ul > li {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+
 /* 지속가능경영 > 사회 */
 .bdr-box-wrap .list-container>li img.circle{width:30rem;height:15rem}
 .article-box-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.875rem}
@@ -65,8 +66,23 @@
 .flex-wrap-sub img{width:11.25rem}
 .big-img-wrap {margin-top: 3rem;}
 .big-img-wrap img {margin-bottom: 1rem;}
-/* 재무정보 */
 
+/* 재무정보 (fina) */
+.fina .box-container .content-box > li {padding: 1.88rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default04); background: #fff;}
+.fina .box-container .content-box > li .box-text-wrap {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.25rem;}
+.fina .box-container .content-box > li .box-text-wrap .box-title {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
+.fina .box-container .content-box > li .box-text-wrap .box-year {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.fina .box-container .content-box > li .box-item {display: flex; gap: 1.25rem; justify-content: center; align-items: center; text-align: center;}
+.fina .box-container .content-box > li .box-item > li {width: 15rem; height: auto; border-radius: 0.5rem; background: var(--colorElement-light-fill-fill-default04); padding: 2rem 0;}
+.fina .box-container .content-box > li .box-item > li .item-record {font-size: 2.5rem; font-weight: 600; line-height: 3.5rem; color: var(--colorElement-light-text-text-primary); margin-bottom: 0.5rem;}
+.fina .box-container .content-box > li .box-item > li .item-title {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.fina .box-container .content-box > li .box-item > li .item-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+
+.gray-box-area > ul {display: flex; gap: 1rem; flex-direction: column;}
+.gray-box-area > ul > li {padding: 1.5rem 2.5rem; border-radius: 0.625rem; background-color: var(--colorElement-light-fill-fill-default04); width: 100%; height: auto;}
+.gray-box-area > ul > li .box-wrap {display: flex; justify-content: space-between;}
+.gray-box-area > ul > li .box-wrap .title {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.history-box {padding-top: 6.25rem;}
 
 /* 재무정보 (disc) */
 .disc .history-list > li {position: relative; display: flex; gap: 1.25rem;}

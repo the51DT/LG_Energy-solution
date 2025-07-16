@@ -210,7 +210,7 @@ var pubUi = {
         },
         tab() {            
             Array.from(pubUi.self.tabLists).forEach((tabList) => {
-                const tabs = tabList.querySelectorAll("li");
+                const tabs = tabList.querySelectorAll(".activeTab > li");
             
                 tabs.forEach((tab) => {
                     tab.addEventListener("click", function () {
