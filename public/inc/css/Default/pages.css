@@ -31,44 +31,32 @@
 .profile-txt-area .profile-history {padding-top: 1.25rem;}
 .profile-txt-area .profile-history ul > li {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 /* 지속가능경영 > 사회 */
-.bdr-box-wrap .list-container > li img.circle {width:30rem; height:15rem; ;}
-.article-box-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-.article-box {
-    border: 4px solid #E1E7EA;
-    border-radius: 10px;
-    display: flex;
-    padding: 40px;
-    flex-direction: column;
-    align-items: center;
-}
-.article-box img {
-    width: 160px;
-    margin: 30px 0;
-}
-.article-box span {
-    color: #171819;
-    font-size: 20px;
-}
-.article-box .intro-desc {
-    color: #171819;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: var(--line-height-desktop-B2, 25.6px);
-    letter-spacing: var(--letter-spacing-default, 0px);
-    border-bottom: 1px solid #C9CED1;
-    padding-bottom: 24px;
-    margin-bottom: 24px;
-}
-.article-box .text-wrap .desc {font-size: 1rem; font-weight: 400; color: var(--colorElement-light-text-text-default02); line-height:160%;}
-.tab2-btn {
-    width: auto;
-    gap: 20px;
-    margin-bottom: 24px;
-}
+.bdr-box-wrap .list-container>li img.circle{width:30rem;height:15rem}
+.article-box-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.875rem}
+.article-box{border:0.25rem solid #E1E7EA;border-radius:0.625rem;display:flex;padding:2.5rem;flex-direction:column;align-items:center}
+.article-box img{width:10rem;margin:1.875rem 0}
+.article-box span{color:#171819;font-size:1.25rem}
+.article-box .intro-desc{color:#171819;font-size:1rem;font-weight:500;line-height:1.6;letter-spacing:0;border-bottom:1px solid #C9CED1;padding-bottom:1.5rem;margin-bottom:1.5rem}
+.article-box .text-wrap .desc{font-size:1rem;font-weight:400;color:var(--colorElement-light-text-text-default02);line-height:160%}
+.tab2-btn{width:auto;gap:1.25rem;margin-bottom:1.5rem}
+.flex-wrap{display:flex;align-items:flex-start;gap:2.5rem}
+.flex-wrap .text-wrap{margin-top:1.5rem}
+.flex-wrap img{margin-top:1.5rem;width:25rem}
+.flex-wrap span{color:#555758;font-size:1rem}
+.content-tit{color:#171819;font-size:1.125rem;font-weight:500;margin-bottom:1.5rem;line-height:160%}
+.content-desc{color:#555758;font-size:1.125rem;font-weight:400;line-height:160%}
+.content-sub{font-weight:400;color:#555758;font-size:1rem; }
+.flex-content{margin-top:3.75rem;margin-bottom:3rem}
+.flex-list{display:flex;gap:2.5rem;justify-content:center;align-items:center}
+.flex-list img{width:9.375rem}
+.flex-list .text-list-wrap{background-color:#F3F5F7;padding:1.25rem;border-radius:0.5rem}
+.flex-list .text-list-wrap ul>p{font-size:1.125rem;font-weight:600;margin-bottom:1rem;color:#171819}
+.flex-list .text-list-wrap ul>li{width:22.5625rem;font-size:1rem;color:#555758;font-weight:400;line-height:160%}
+.sr-only{opacity:0%}
+.flex-wrap-sub{align-items:center}
+.flex-wrap-sub img{width:11.25rem}
+.big-img-wrap {margin-top: 3rem;}
+.big-img-wrap img {margin-bottom: 1rem;}
 /* 재무정보 */
 
 
