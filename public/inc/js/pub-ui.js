@@ -208,27 +208,65 @@ var pubUi = {
             this.tab();
             this.scroll();
         },
-        tab() {
+        tab() {            
             Array.from(pubUi.self.tabLists).forEach((tabList) => {
-                const tabs = tabList.querySelectorAll(".activeTab > li");
+                const tabs = tabList.querySelectorAll("li");
+            
                 tabs.forEach((tab) => {
                     tab.addEventListener("click", function () {
                         const id = this.getAttribute("id");
-                        const contents = tabList.closest(".tab-wrap").querySelectorAll(".tab-content-box > .tab-content");
-
+                        const tabWrap = tabList.closest(".tab-wrap");
+                        const contents = tabWrap.querySelectorAll(".tab-content-box > .tab-content");
+            
+                        // 1. 현재 탭 카테고리 탭들 초기화
                         tabs.forEach((t) => {
                             t.classList.remove("on");
                             t.querySelector("button").setAttribute("aria-selected", false);
                         });
+            
                         contents.forEach((c) => {
                             c.classList.remove("on");
                             c.setAttribute("aria-expanded", false);
                         });
-
-                        document.querySelector(`#${id}`).classList.add("on");
-                        document.querySelector(`#${id} > button`).setAttribute("aria-selected", true);
-                        document.querySelector(`#${id}-content`).classList.add("on");
-                        document.querySelector(`#${id}-content`).setAttribute("aria-expanded", true);
+            
+                        // 2. 현재 클릭한 탭 활성화
+                        tab.classList.add("on");
+                        tab.querySelector("button").setAttribute("aria-selected", true);
+            
+                        const content = tabWrap.querySelector(`#${id}-content`);
+                        if (content) {
+                            content.classList.add("on");
+                            content.setAttribute("aria-expanded", true);
+                        }
+            
+                        // 3. 만약 하위 탭이 있다면, 첫 번째 하위 탭도 초기화 처리
+                        const verticalTab = content?.querySelector(".tab-wrap.vertical");
+                        if (verticalTab) {
+                            const verticalTabs = verticalTab.querySelectorAll(".tab-category > li");
+                            const verticalContents = verticalTab.querySelectorAll(".tab-content-box > .tab-content");
+            
+                            verticalTabs.forEach((vt) => {
+                                vt.classList.remove("on");
+                                vt.querySelector("button").setAttribute("aria-selected", false);
+                            });
+            
+                            verticalContents.forEach((vc) => {
+                                vc.classList.remove("on");
+                                vc.setAttribute("aria-expanded", false);
+                            });
+            
+                            // 첫 번째 하위 탭 on 처리
+                            const firstVerticalTab = verticalTabs[0];
+                            const firstVerticalContentId = firstVerticalTab.getAttribute("id") + "-content";
+                            firstVerticalTab.classList.add("on");
+                            firstVerticalTab.querySelector("button").setAttribute("aria-selected", true);
+            
+                            const firstVerticalContent = verticalTab.querySelector(`#${firstVerticalContentId}`);
+                            if (firstVerticalContent) {
+                                firstVerticalContent.classList.add("on");
+                                firstVerticalContent.setAttribute("aria-expanded", true);
+                            }
+                        }
                     });
                 });
             });
