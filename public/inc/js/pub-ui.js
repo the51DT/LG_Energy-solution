@@ -25,7 +25,7 @@ var pubUi = {
         this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
         
         this.self.selectCate = document.querySelectorAll(".select-cate.activeSelect");
-        this.self.selectCateBtn = document.querySelectorAll(".select-cate.activeSelect button");
+        this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
         this.self.selectMenu = document.querySelectorAll(".activeSelect .select-menu");
         
 
@@ -56,7 +56,7 @@ var pubUi = {
                 }
             });
         });
-
+        
         this.self.selectMenu.forEach((map) => {
             const pageMapCate = map.querySelectorAll("li > a");
             pageMapCate.forEach((subCate) => {
@@ -65,9 +65,12 @@ var pubUi = {
                     subCate.classList.add("active");
                     const subCateName = subCate.innerText;
                     const button = map.closest(".select-cate").querySelector("button");
-                    button.innerText = subCateName;
+                    
+                    if(!subCate.closest(".lang-wrap")) {
+                        button.innerText = subCateName;
+                    }
                     button.classList.add("on");
-                    button.classList.remove("active");
+                    button.classList.remove("active");                                         
                     map.classList.remove("on");
                 });
             });
