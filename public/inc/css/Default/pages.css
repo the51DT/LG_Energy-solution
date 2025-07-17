@@ -67,7 +67,65 @@
 .big-img-wrap {margin-top: 3rem;}
 .big-img-wrap img {margin-bottom: 1rem;}
 
-/* 재무정보 (disc) */
+/* 주식정보 (stif) */
+.stif .stock-box {display: flex; flex-direction: column; gap: 2.5rem; width: 100%; padding: 3.75rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); color: var(--colorElement-light-text-text-default01);}
+.stif .stock-box .stock-tit {display: flex; justify-content: space-between; align-items: center;}
+.stif .stock-box .stock-tit .tit-wrap {display: flex; align-items: center; gap: 0.69rem;}
+.stif .stock-box .stock-tit .title {font-size: 1.75rem; font-weight: 700; line-height: 2.625rem;}
+.stif .stock-box .stock-tit .num {font-size: 1.5rem; font-weight: 400; line-height: 2.25rem;}
+.stif .stock-box .stock-tit .date {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default03);}
+.stif .stock-box .stock-info, .stif .stock-box .stock-info .info-wrap {display: flex; justify-content: space-between;}
+.stif .stock-box .stock-info .info-big {display: flex; justify-content: space-between; align-items: center; width: 41.74242%;}
+.stif .stock-box .stock-info .info-big > p {display: flex; align-items: center; gap: 1.25rem; font-size: 3.5rem; font-weight: 800; line-height: 4.9rem; letter-spacing: -0.03125rem;}
+.stif .stock-box .stock-info .info-big > p::before {width: 2rem; height: 2rem; background-repeat: no-repeat; background-size: cover; background-position: center;}
+.stif .stock-box .stock-info .info-big > p.up {color: var(--colorElement-light-critical-critical-enabled);}
+.stif .stock-box .stock-info .info-big > p.up::before {content: ""; background-image: url(../../images/icon/icon_stock_up.svg);}
+.stif .stock-box .stock-info .info-big > p.down {color: var(--colorElement-light-accent-success-enabled);}
+.stif .stock-box .stock-info .info-big > p.down::before {content: ""; background-image: url(../../images/icon/icon_stock_down.svg);}
+.stif .stock-box .stock-info .info-big > div {display: flex; flex-direction: column; gap: 0.94rem; width: 11.5625rem; flex-shrink: 0;}
+.stif .stock-box .stock-info .info-big > div > p {display: flex; justify-content: space-between; align-items: center; font-size: 1.25rem; font-weight: 600; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01)}
+.stif .stock-box .stock-info .info-big > div > p > span:last-child {display: flex; align-items: center; font-weight: 500;}
+.stif .stock-box .stock-info .info-big > div .up, .stif .stock-box .stock-info .info-big > div .plus {color: var(--colorElement-light-critical-critical-enabled);}
+.stif .stock-box .stock-info .info-big > div .down, .stif .stock-box .stock-info .info-big > div .minus {color: var(--colorElement-light-accent-success-enabled);}
+.stif .stock-box .stock-info .info-big > div .up, .stif .stock-box .stock-info .info-big > div .down {gap: 0.25rem;}
+.stif .stock-box .stock-info .info-big > div .up::before, .stif .stock-box .stock-info .info-big > div .down::before {content: ""; display: block; width: 1.125rem; height: 1.125rem; background-repeat: no-repeat; background-size: cover; background-position: center;}
+.stif .stock-box .stock-info .info-big > div .up::before {background-image: url(../../images/icon/icon_stock_up.svg);}
+.stif .stock-box .stock-info .info-big > div .down::before {background-image: url(../../images/icon/icon_stock_down.svg);}
+.stif .stock-box .stock-info .info-big > div .plus::before {content: "+";}
+.stif .stock-box .stock-info .info-big > div .minus::before {content: "-";}
+.stif .stock-box .stock-info .info-wrap {display: flex; justify-content: space-between; width: 49.39%;}
+.stif .stock-box .stock-info .info-wrap > div {display: flex; justify-content: flex-end; align-items: flex-end; width: calc(19.47852760736% + 1px); border-left: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.stif .stock-box .stock-info .info-wrap > div p {display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 0.75rem; font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.stif .stock-box .stock-info .info-wrap > div p span:last-child {font-weight: 500; color: var(--colorElement-light-text-text-default02);}
+.stif .stock-box .stock-info .info-wrap > div p span.up {color: var(--colorElement-light-critical-critical-enabled);}
+.stif .stock-box .stock-info .info-wrap > div p span.down {color: var(--colorElement-light-accent-success-enabled);}
+
+.stif .stock-chart .title-wrap {display: flex; justify-content: space-between; align-items: center;}
+.stif .stock-chart .title-wrap .title-text {display: flex; align-items: center; gap: 1rem; color: var(--colorElement-light-text-text-default01);}
+.stif .stock-chart .title-wrap .title-text .tit {font-size: 1.75rem; font-weight: 700; line-height: 2.625rem;}
+.stif .stock-chart .title-wrap .title-text .num {display: flex; align-items: center; font-size: 1.75rem; font-weight: 400; line-height: 2.625rem;}
+.stif .stock-chart .title-wrap .title-text .num.plus {color: var(--colorElement-light-critical-critical-enabled);}
+.stif .stock-chart .title-wrap .title-text .num.plus::before {content: "+";}
+.stif .stock-chart .title-wrap .title-text .num.minus {color: var(--colorElement-light-accent-success-enabled);}
+.stif .stock-chart .title-wrap .title-text .num.minus::before {content: "-";}
+.stif .stock-chart .title-wrap .title-text .date {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default03);}
+.stif .stock-chart .title-wrap .radio-wrap .radio {position: relative;}
+.stif .stock-chart .title-wrap .radio-wrap .radio > input {position: absolute;}
+.stif .stock-chart .title-wrap + .chart-wrap {margin-top: 2.5rem;}
+.stif .stock-chart .chart-wrap + .asterisk-text {margin-top: 2rem;}
+
+.stif .cont-box-wrap .left-box {min-height: 29.375rem; background-image: url(../../images/img/stif01_tab2_img.png); background-size: contain; background-position: right; background-repeat: no-repeat;}
+.stif .cont-box-wrap .left-box::before {top: 0;}
+.stif .cont-box-wrap .left-box .intro-desc {padding: 0; font-size: 1.75rem; font-weight: 600; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
+.stif .cont-box-wrap .left-box .sub-desc-wrap {padding-top: 2rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.stif .asterisk-text {display: flex; gap: 0.38rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.stif .asterisk-text::before {flex-shrink: 0; content: ""; display: block; margin: 0.55rem 0.19rem; width: 0.37894rem; height: 0.37894rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
+.stif .cont-box-wrap .right-box {padding-top: 0; padding-right: 4.88rem;}
+.stif .cont-box-wrap .right-box::after {top: 0.66rem;}
+.stif .cont-box-wrap .right-box .keyword {font-size: 7.3125rem; font-weight: 800; line-height: 11.25rem; letter-spacing: -0.125rem;}
+
+
+/* 공시정보 (disc) */
 .disc .history-list > li {position: relative; display: flex; gap: 1.25rem;}
 .disc .history-list > li + li {margin-top: 6.25rem;}
 .disc .history-list > li::before {content: ""; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 2px; background-color: #000;}
