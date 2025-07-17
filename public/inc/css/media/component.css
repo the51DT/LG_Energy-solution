@@ -19,11 +19,11 @@
     [class^="icon-btn"][class*="-lg"] {font-size: 1.125rem; width:20rem; line-height: 1.575rem; padding: 0.88rem 2.5rem; min-width: unset;}
     [class^="icon-btn"] .icon-area {width:1.75rem; height:1.75rem;}
     [class^="icon-btn"][class*="-sm"] .icon-area {width: 1.75rem; height: 1.75rem;}
-    [class^="icon-btn"][class*="-md"] .icon-area {width: 2.25rem; height: 2.25rem;}
+    [class^="icon-btn"][class*="-md"] .icon-area {width: 2rem; height: 2rem;}
     [class^="icon-btn"][class*="-lg"] .icon-area {width: 2.5rem; height: 2.5rem;}
     [class^="icon-btn"][class*="-sm"] .icon-area::before {width: 1.125rem; height: 1.125rem;}
-    [class^="icon-btn"][class*="-md"] .icon-area::before {width: 1.25rem; height: 1.25rem;}
-    [class^="icon-btn"][class*="-lg"] .icon-area::before {width: 1.5rem; height: 1.5rem;}
+    [class^="icon-btn"][class*="-md"] .icon-area::before {width: 1.125rem; height: 1.125rem;}
+    [class^="icon-btn"][class*="-lg"] .icon-area::before {width: 1.25rem; height: 1.25rem;}
     
 
 
@@ -43,7 +43,7 @@
 
     /* tab */    
     .content-area-head-tab .tab-category {max-width: 100%; margin: 0;}
-    .tab-category {gap: 1rem; height: 3.125rem; padding:0 20px;}
+    .tab-category {gap: 1.5rem; height: 3.125rem; padding:0 20px;}
     .tab-category > li button {font-size: 1.125rem; line-height: 1.6875rem; padding:0.75rem 0;}
     .tab-category > li.on button:after {height: 0.125rem; bottom: 1px;}
 
