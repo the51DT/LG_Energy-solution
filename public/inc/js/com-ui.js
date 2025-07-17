@@ -14,7 +14,7 @@ $(document).ready(function($) {
             }); 
             $(".header-wrap").removeClass("on").css("height", header_h + 1);;
             $(".gnb__tab-btn-wrap ul").removeClass("on").stop().slideUp(300);
-            if(eventParent.hisClass("scroll-on")){
+            if(eventParent.hasClass("scroll-on")){
                 $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI_wh.svg")
             }
         }else{

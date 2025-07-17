@@ -1,4 +1,21 @@
 @media screen and (max-width: 1023px) {
     .pc-only {display: none !important;}
     .mo-only {display: block !important;}    
+
+     /* mobile - header 임시 속성 적용 디자인 확정 후 추후 작업예정 */
+    .header-wrap {height: 3.25rem;}
+    .header-wrap .header-area,
+    .header-wrap .header-cont {height: 100%;}
+    .header-wrap .header-cont {padding: 0.87rem 1.25rem 0.87rem 1.17rem;}
+    .header-wrap .header-cont .ci > a {width: 132px; height: 21px; display: block;}
+    .header-wrap .header-cont .ci > img {width: 100%; height: 100%; object-fit: cover;}
+    .header-area.mo-only .utile-cont {gap: 1rem;}
+    .header-area.mo-only .utile-cont .utile-item {margin-top: -2px;}   
+    .lang-wrap .lang-button > img {width: 1.5rem; height: 1.5rem;}
+    .lang-wrap .lang-button.active .select-btn-right-icon {transform: translateY(-2px) rotate(-180deg);}
+    .lang-wrap .select-menu {padding: 1rem; width: 4.1875rem; top: 1.5rem; left: -12px;}
+    .lang-wrap .select-menu > li > a {font-size: 1rem; font-weight: 500; line-height: 1.5rem;}
+    .header-area.mo-only .search-btn {width: 1.5rem; height: 1.5rem;}
+    .header-area.mo-only .nav-btn {width: 1.5rem; height: 1.5rem; padding: 0}
+    .header-area.mo-only .nav-btn .x-icon {width: 100%; height: 100%;}
 }

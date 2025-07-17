@@ -19,7 +19,7 @@
         <div class="wrap esgm">            
             <!-- header -->
             <header class="header-wrap">
-              <div class="header-area">
+              <div class="header-area pc-only">
                 <div class="header-cont">
                   <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg" alt=""></a></h1>
                   <div class="sitemap-wrap">
@@ -99,6 +99,29 @@
                   </div>
                 </div>
               </div>
+              <div class="header-area mo-only">
+                <div class="header-cont">
+                    <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg" alt=""></a></h1>
+                    <div class="utile-wrap">
+                        <div class="utile-cont">
+                        <div class="utile-item">
+                            <button class="search-btn"></button>
+                        </div>
+                        <div class="utile-item03">
+                            <button class="nav-btn" title="메뉴 열기">
+                            <i class="x-icon">
+                                <span class="x-line"></span>
+                                <span class="x-line"></span>
+                            </i>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
             </header>
             <!-- //header -->
             <!-- section -->
@@ -132,14 +155,28 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="selectbox-wrap mo-only">
+                    <div class="selectbox-wrap mo-only" role="listbox">
                         <div class="breadcrumb-wrap">
-                            <div class="left-area">
-                                <a href="javascript:;" class="btn-prev" href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/icon/icon_arrow_left.svg" alt="" title="이전페이지 이동" /></a>
+                            <!-- 250717 수정 : breadcrumb 모바일 디자인 변경으로 인한 마크업 수정 -->
+                            <div class="select-cate activeSelect" role="option">
+                                <button type="button" aria-haspopup="listbox">지속가능경영</button>
+                                <ul class="select-menu" role="listbox">
+                                    <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">회사소개</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0"  class="active">지속가능경영</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">투자정보</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
+                                </ul>
                             </div>
-                            <h2 class="page-title">추진체계</h2>
-                            <div class="right-area">                               
-                                <span class="blind">우측 모바일 네비게이션 영역 - 필요시 해당 span 제거 후 사용할것 </span>
+                            <div class="select-cate activeSelect" role="option">
+                                <button type="button" aria-haspopup="listbox">추진체계</button>
+                                <ul class="select-menu" role="listbox">
+                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">추진체계</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">환경</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">사회</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">지배구조</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">성과 및 보고</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -931,28 +968,52 @@
                 </div>
                 <div class="footer-item02">
                     <ul class="footer-site_map">
-                    <li>
-                        <!-- <p class="footer-site_map-tit">대표이사 김동영</p> -->
-                        <div class="footer-site_map-desc">
-                        <div class="footer-info">
-                            <p class="owner">대표이사 김동명</p>
-                            <address class="addr">07335 서울특별시 영등포구 여의대로 108</address>
-                            <a class="tel" href="tel:0237771114">02-3777-1114</a>                  
-                        </div>
-                        </div>              
-                    </li>
+                        <li>
+                            <div class="footer-site_map-desc">
+                            <div class="footer-info">
+                                <p class="owner">대표이사 김동명</p>
+                                <address class="addr">07335 서울특별시 영등포구 여의대로 108</address>
+                                <a class="tel" href="tel:0237771114">02-3777-1114</a>                  
+                            </div>
+                            </div>              
+                        </li>
                     </ul>
+                    <!-- 250717 수정 : 패밀리사이트 디자인 변경으로 selectbox-wrap type3 케이스 수정 -->
                     <div class="selectbox-wrap type3">
-                    <div class="select-cate activeSelect">
-                        <button type="button" aria-haspopup="listbox">Family Site</button>                                                
-                        <ul class="select-menu" role="listbox">
-                            <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
-                            <li><a href="javascript:;" role="option" tabindex="0">본사</a></li>
-                            <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
-                            <li><a href="javascript:;" role="option" tabindex="0">생산</a></li>
-                            <li><a href="javascript:;" role="option" tabindex="0">판매</a></li>
-                        </ul>
-                    </div>
+                        <div class="select-cate activeSelect">
+                            <button type="button" aria-haspopup="listbox">Family Site</button>                                                
+                            <ul class="select-menu" role="listbox">
+                                <li>
+                                    <p class="cate-title">LG그룹</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">(주)LG</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG화학</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG화학</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="cate-title">패밀리사이트</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">배터리인사이드</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">ESS전지 사이트</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">미국법인</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">폴란드법인</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">디지털 가상전시관</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">오픈 이노베이션</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="cate-title">비즈니스</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">KOOROO</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">B-Lifecare</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">구매포탈시스템</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">파트너 보안 포탈</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">지급계좌등록시스템</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 </div>

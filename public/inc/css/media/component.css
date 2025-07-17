@@ -43,7 +43,7 @@
 
     /* tab */    
     .content-area-head-tab .tab-category {max-width: 100%; margin: 0;}
-    .tab-category {gap: 1.5rem; height: 3.125rem; padding:0 20px;}
+    .tab-category {gap: 1.5rem; height: 3.125rem; padding:0 1.25rem;}
     .tab-category > li button {font-size: 1.125rem; line-height: 1.6875rem; padding:0.75rem 0;}
     .tab-category > li.on button:after {height: 0.125rem; bottom: 1px;}
 
@@ -76,11 +76,12 @@
     .selectbox-wrap.type3 .select-cate > button {padding-top: 1rem;}
     .selectbox-wrap.type3 > div button::before {top: 50%;}
     .selectbox-wrap.type3 .select-cate::after {margin-top: 1rem;}
+    .selectbox-wrap.type3 .select-menu {bottom: 56px; max-height: 18rem;}
 
     /* table */
-    .table-wrap table tbody > tr > th {font-size: 1rem; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
-    .table-wrap table tr > td {font-size: 1rem; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
-    .table-wrap table thead > tr > th {font-size: 1rem; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
+    .table-wrap table tbody > tr > th {font-size: 0.875rem; font-weight: 600; line-height: 1.4rem; padding: 0.75rem 0.5rem;}
+    .table-wrap table tr > td {font-size: 0.875rem; font-weight:400; line-height: 1.4rem; padding: 0.75rem 0.5rem;}
+    .table-wrap table thead > tr > th {font-size: 1rem; font-weight: 600; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
     .table-notice-area {padding: 1rem 1.25rem 0;}
     .table-notice-area .text-list-wrap .text-list > li {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem;}
 
@@ -136,17 +137,24 @@
 
     .modal-pop.tooltip { max-width: 90%; left: 5% !important; right: auto !important;}
 
-    /* mobile - header 제외 디자인 확정 후 추후 작업예정 */
-    .header-wrap {display: none;}
     .content-header_bg {display: none;}
 
-    .page-map-wrap {padding: 0; position: fixed; top: 0; margin-top: 0;}
-    .breadcrumb-wrap {display:block; padding: 0.6875rem 1rem; position: relative;}
-    .breadcrumb-wrap .page-title {font-size: 1.125rem; font-weight: 600; line-height: 1.6875rem; text-align: center;}
-    .breadcrumb-wrap .left-area {position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); margin-top: 0.19rem;}
-    .breadcrumb-wrap .left-area .btn-prev {width: 1.5rem; height: 1.5rem;}
-    .breadcrumb-wrap .right-area {position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); margin-top: 0.19rem;}
-    .content-area-head-tab {position: fixed; top: 49px; width: 100%;}
+    .page-map-wrap {padding: 0; position: fixed; top: 0; margin-top: 0; padding-top: 3.25rem;}
+    .breadcrumb-wrap  > .select-cate:first-child {padding-left: 1.25rem;}
+    .breadcrumb-wrap  > .select-cate:last-child {padding-right: 1.25rem;}
+    .breadcrumb-wrap {display: flex; gap: 1.25rem; padding: 1rem 0; background: var(--colorElement-light-fill-fill-default04);}
+    .breadcrumb-wrap > .select-cate {width: calc(50% - 1.25rem); flex-grow: 1; }
+    
+    .breadcrumb-wrap > .select-cate button {font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01); position: relative; display: block; width: 100%; text-align: left; padding-right: 1.125rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+    .breadcrumb-wrap > .select-cate button::after {content:""; display: block; width: 1.125rem; height: 1.125rem; background:url(../../images/icon/icon_arrow_down_gr.svg) no-repeat center center / contain; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
+    .breadcrumb-wrap > .select-cate button.active::after {transform: translateY(-50%) rotate(-180deg);}
+    .breadcrumb-wrap .select-menu {width:  calc(50% - 1.8rem); top:100px; left: revert; padding: 1rem 1.25rem;}
+    .breadcrumb-wrap .select-menu > li:not(:last-child) {padding-bottom: 1rem;}
+    .breadcrumb-wrap .select-menu > li > a {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem;}
+
+
+    .content-area {padding-top: 3.625rem;}
+    .content-area-head-tab {position: fixed; top: calc(110 / 16 * 1rem); width: 100%;}
     .wrap:not(.sub_p) .content-header {display: none; }
     .wrap:not(.sub_p) .content-header .subp-tit {font-size: 1.125rem; line-height: 1.575rem;}
 
