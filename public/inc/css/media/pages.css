@@ -21,7 +21,7 @@
 .content-box.type2 .text-area .desc {padding-top: 1.5rem;}
 .content-box.type2 .text-area .desc + .desc {padding-top: 0.5rem;}
 
-.cont-box-wrap .left-box {padding:0 1.25em; background: url(../../images/img/esgm01_tab2_bg1_mo.png) no-repeat 100% 100% / contain; height: 100%; display:block;}
+.cont-box-wrap .left-box {padding:0 1.25rem; background: url(../../images/img/esgm01_tab2_bg1_mo.png) no-repeat 100% 100% / contain; height: 100%; display:block;}
 .cont-box-wrap .left-box::before {display: none;}
 .cont-box-wrap .left-box .intro-desc {padding: 1.56rem 0 0;}
 .cont-box-wrap .left-box .sub-desc-wrap {width: 100%; color: var(--colorElement-light-text-text-default02); font-size: 1rem; line-height: 1.5rem; padding-top: 1.5rem;}
