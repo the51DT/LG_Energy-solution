@@ -319,20 +319,21 @@ pathApp.initTotalCount = function () {
     });
 
     $checks.forEach(checkSpan => {
-      if (checkSpan.getAttribute("class") !== "comp icon-state") {
+      if (checkSpan.getAttribute("class") !== "icon-state comp") {
         count++;
       }
     });
 
     $guideChecks.forEach(guideCheckSpan => {
-      if (guideCheckSpan.getAttribute("class") !== "comp icon-state") {
+      console.log(guideCheckSpan.getAttribute("class"))
+      if (guideCheckSpan.getAttribute("class") !== "icon-state comp") {
         countG++;
       }
     });
 
     const filteredCount = sum - sumG + (sumMinus - sumMinusG) - (count - countG);
     const filteredSum = sum - sumG;
-    const percentage = filteredSum > 0 ? parseInt((filteredCount / filteredSum) * 100) : 0;
+    const percentage = filteredSum > 0 ? parseInt((filteredSum /filteredCount) * 100) : 0;
 
     const str = `
       <span>${filteredCount} / ${filteredSum} Pages</span>
@@ -358,7 +359,7 @@ pathApp.initSectionCount = function () {
 
   rows.forEach(row => {
     const checkSpan = row.querySelector(".check span");
-    const isComp = checkSpan && checkSpan.getAttribute("class") === "comp icon-state";
+    const isComp = checkSpan && checkSpan.getAttribute("class") === "icon-state comp";
 
     const isDep1 = row.querySelector("th")?.classList.contains("dep1");
 
