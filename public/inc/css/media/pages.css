@@ -80,19 +80,15 @@
 .stif .stock-box .stock-info .info-wrap > div p {gap: 0.25rem; font-size: 0.875rem; font-weight: 700; line-height: 1.4rem;}
 
 .stif .stock-chart {margin-inline: 1.28rem;}
-.stif .stock-chart .title-wrap {display: flex; justify-content: space-between; align-items: center;}
-.stif .stock-chart .title-wrap .title-text {display: flex; align-items: center; gap: 1rem; color: var(--colorElement-light-text-text-default01);}
-.stif .stock-chart .title-wrap .title-text .tit {font-size: 1.75rem; font-weight: 700; line-height: 2.625rem;}
-.stif .stock-chart .title-wrap .title-text .num {display: flex; align-items: center; font-size: 1.75rem; font-weight: 400; line-height: 2.625rem;}
-.stif .stock-chart .title-wrap .title-text .num.plus {color: var(--colorElement-light-critical-critical-enabled);}
-.stif .stock-chart .title-wrap .title-text .num.plus::before {content: "+";}
-.stif .stock-chart .title-wrap .title-text .num.minus {color: var(--colorElement-light-accent-success-enabled);}
-.stif .stock-chart .title-wrap .title-text .num.minus::before {content: "-";}
-.stif .stock-chart .title-wrap .title-text .date {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default03);}
-.stif .stock-chart .title-wrap .radio-wrap .radio {position: relative;}
-.stif .stock-chart .title-wrap .radio-wrap .radio > input {position: absolute;}
-.stif .stock-chart .title-wrap + .chart-wrap {margin-top: 2.5rem;}
-.stif .stock-chart .chart-wrap + .asterisk-text {margin-top: 2rem;}
+.stif .stock-chart .title-wrap {align-items: flex-start; flex-direction: column; gap: 2rem;}
+.stif .stock-chart .title-wrap .title-text {order: 1; flex-wrap: wrap; column-gap: 0.75rem; row-gap: 0;}
+.stif .stock-chart .title-wrap .title-text .tit {font-size: 1.125rem; line-height: 1.575rem;}
+.stif .stock-chart .title-wrap .title-text .num {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem;}
+.stif .stock-chart .title-wrap .title-text .date {font-size: 0.875rem; line-height: 1.4rem;}
+.stif .stock-chart .title-wrap .radio-wrap:only-child {margin-left: 0;}
+.stif .stock-chart .title-wrap .radio-wrap .wrap-form-box {flex-wrap: wrap;}
+.stif .stock-chart .title-wrap + .chart-wrap {margin-top: 2rem;}
+.stif .stock-table {margin-inline: 1.25rem;}
 
 .stif .cont-box-wrap:has(.left-box, .right-box) {display: flex; flex-direction: column-reverse; background-image: url(../../images/img/stif01_tab2_img_mo.png); background-repeat: no-repeat; background-size: contain; background-position: top 2.75rem right;}
 .stif .cont-box-wrap .left-box {min-height: unset; background-image: none;}
