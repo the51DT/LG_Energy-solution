@@ -18,9 +18,10 @@
         <div class="wrap news">            
             <!-- header -->
             <header class="header-wrap">
-              <div class="header-area">
+              <div class="header-area pc-only">
                 <div class="header-cont">
-                  <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg" alt=""></a></h1>
+                  <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg"
+                        alt=""></a></h1>
                   <div class="sitemap-wrap">
                     <nav class="nav-wrap">
                       <ul class="gnb__tab-btn-wrap">
@@ -34,7 +35,9 @@
                         <li class="depth01">
                           <a href="../cyanogen/cyanogen_sub1.html">회사소개</a>
                           <ul>
-                            <li class="depth02"><a href="#">소개</a></li>
+                            <li class="depth02">
+                              < href="#">소개</ a>
+                            </li>
                             <li class="depth02"><a href="#">정도경영</a></li>
                             <li class="depth02"><a href="../cyanogen/cyanogen_sub2.html">글로벌 네트워크</a></li>
                             <li class="depth02"><a href="#">뉴스룸</a></li>
@@ -98,40 +101,106 @@
                   </div>
                 </div>
               </div>
+              <div class="header-area mo-only">
+                <div class="header-cont">
+                  <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg" alt=""></a>
+                  </h1>
+                  <div class="utile-wrap">
+                    <div class="utile-cont">
+                      <div class="utile-item">
+                        <button class="search-btn"></button>
+                      </div>
+                      <div class="utile-item02">
+                        <div class="lang-wrap">
+                          <div class="select-cate activeSelect">
+                            <button class="lang-button" aria-haspopup="listbox"><img
+                                src="../../../inc/images/icon/icon_global_img.svg" alt="언어 선택"><i
+                                class="select-btn-right-icon"></i></button>
+                            <ul class="select-menu" role="listbox">
+                              <li><a href="javascript:;" role="option" tabindex="0" class="active">KOR</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">ENG</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">CHN</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">POL</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">GER</a></li>
+                            </ul>
+                          </div>
+                        </div><!-- //lang-wrap -->
+                      </div>
+                      <div class="utile-item03">
+                        <button class="nav-btn" title="메뉴 열기">
+                          <i class="x-icon">
+                            <span class="x-line"></span>
+                            <span class="x-line"></span>
+                          </i>
+                          <span class="line"></span>
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </header>
             <!-- //header -->
             <!-- section -->
             <section id="container" class="content-wrap">
-                <div class="content-header_bg">
-                    <img src="../../../inc/images/img/visual_newsroom01.png" alt="비주얼배너" />
+              <div class="content-header_bg">
+                <img src="../../../inc/images/img/visual_newsroom01.png" alt="비주얼배너" />
+              </div>
+              <div class="page-map-wrap"> <!-- page-map-wrap -->
+                <div class="selectbox-wrap pc-only" role="listbox">
+                  <div role="option" class="select-cate">
+                    <a href="/"><img src="../../../inc/images/sample/icon_home.svg" alt="home" title="홈 이동" /></a>
+                  </div>
+                  <div class="select-cate activeSelect" role="option">
+                    <button type="button" aria-haspopup="listbox">회사소개</button>
+                    <ul class="select-menu" role="listbox">
+                      <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
+                      <li><a href="javascript:;" role="option" tabindex="0" class="active">회사소개</a></li>
+                      <li><a href="javascript:;" role="option" tabindex="0">지속가능경영</a></li>
+                      <li><a href="javascript:;" role="option" tabindex="0">투자정보</a></li>
+                      <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
+                    </ul>
+                  </div>
+                  <div class="select-cate activeSelect" role="option">
+                    <button type="button" aria-haspopup="listbox">뉴스룸</button>
+                    <ul class="select-menu" role="listbox">
+                      <li><a href="javascript:;" role="option" tabindex="0">소개</a></li>
+                      <li><a href="javascript:;" role="option" tabindex="0">정도경영</a></li>
+                      <li><a href="javascript:;" role="option" tabindex="0">글로벌 네트워크</a></li>
+                      <li><a href="javascript:;" role="option" tabindex="0" class="active">뉴스룸</a></li>
+                      <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="page-map-wrap"> <!-- page-map-wrap -->
-                    <div class="selectbox-wrap" role="listbox">
-                        <div role="option" class="select-cate">
-                            <a href="/"><img src="../../../inc/images/sample/icon_home.svg" alt="home" title="홈 이동" /></a>
-                        </div>
-                        <div class="select-cate activeSelect" role="option">
-                            <button type="button" aria-haspopup="listbox">회사소개</button>
-                            <ul class="select-menu" role="listbox">
-                                <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0" class="active">회사소개</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">지속가능경영</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">투자정보</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
-                            </ul>
-                        </div>
-                        <div class="select-cate activeSelect" role="option">
-                            <button type="button" aria-haspopup="listbox">뉴스룸</button>
-                            <ul class="select-menu" role="listbox">
-                                <li><a href="javascript:;" role="option" tabindex="0">소개</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">정도경영</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">글로벌 네트워크</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0" class="active">뉴스룸</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
-                            </ul>
-                          </div>
-                    </div>
-                </div> 
+                <div class="selectbox-wrap mo-only" role="listbox">
+                  <div class="breadcrumb-wrap">
+                      <!-- 250717 수정 : breadcrumb 모바일 디자인 변경으로 인한 마크업 수정 -->
+                      <div class="select-cate activeSelect" role="option">
+                          <button type="button" aria-haspopup="listbox">투자정보</button>
+                          <ul class="select-menu" role="listbox">
+                              <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">회사소개</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">지속가능경영</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0" class="active">투자정보</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
+                          </ul>
+                      </div>
+                      <div class="select-cate activeSelect" role="option">
+                          <button type="button" aria-haspopup="listbox">재무정보</button>
+                          <ul class="select-menu" role="listbox">
+                              <li><a href="javascript:;" role="option" tabindex="0" class="active">재무정보</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">주식정보</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">공시정보</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">IR정보</a></li>
+                              <li><a href="javascript:;" role="option" tabindex="0">경영정보</a></li>
+                          </ul>
+                      </div>
+                      <!-- //250717 수정 : breadcrumb 모바일 디자인 변경으로 인한 마크업 수정 -->
+                  </div>                        
+              </div>
+              </div>
                 <div class="news-detail-area">
                   <div class="news-detail">
                     <span class="news-detail-tit">LG에너지솔루션 미국에서 ESS용 LFP 배터리 대규모 양산 돌입</span>

@@ -134,12 +134,25 @@
                     </div>
                     <div class="selectbox-wrap mo-only">
                         <div class="breadcrumb-wrap">
-                            <div class="left-area">
-                                <a href="javascript:;" class="btn-prev" href="../pages/cyanogen/cyanogen_main.html"><img src="../../../public/inc/images/icon/icon_arrow_left.svg" alt="" title="이전페이지 이동" /></a>
+                            <div class="select-cate activeSelect" role="option">
+                                <button type="button" aria-haspopup="listbox">투자정보</button>
+                                <ul class="select-menu" role="listbox">
+                                    <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">회사소개</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">지속가능경영</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">투자정보</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
+                                </ul>
                             </div>
-                            <h2 class="page-title">주식정보</h2>
-                            <div class="right-area">                               
-                                <span class="blind">우측 모바일 네비게이션 영역 - 필요시 해당 span 제거 후 사용할것 </span>
+                            <div class="select-cate activeSelect" role="option">
+                                <button type="button" aria-haspopup="listbox">재무정보</button>
+                                <ul class="select-menu" role="listbox">
+                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">재무정보</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">주식정보</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">공시정보</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">IR정보</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">경영정보</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -171,7 +184,146 @@
                                     <div class="cont-area-wrap">
                                         <div class="cont-area-sect">
                                             <section>
-                                                1
+                                                <div class="tab-wrap" data-tab-type="secondTab">
+                                                    <div class="tab-cate-wrap type2"> <!-- type2 -->
+                                                        <ul class="tab-category activeTab" role="tablist">
+                                                            <li class="tab on" id="tab1-1"><button role="tab" aria-selected="true" aria-controls="tab1-1-content">주가 그래프</button></li>
+                                                            <li class="tab" id="tab1-2"><button role="tab" aria-selected="false" aria-controls="tab1-2-content">최근거래</button></li>
+                                                            <li class="tab" id="tab1-3"><button role="tab" aria-selected="false" aria-controls="tab1-3-content">외국인매매</button></li>
+                                                            <li class="tab" id="tab1-4"><button role="tab" aria-selected="false" aria-controls="tab1-4-content">기간별 등락률</button></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-content-box">
+                                                        <div class="tab-content on" id="tab1-1-content">
+                                                            <div class="cont-area-wrap">
+                                                                <div class="cont-area-sect">
+                                                                    <section>
+                                                                        <div class="stock-box">
+                                                                            <div class="stock-tit">
+                                                                                <p class="tit-wrap"><span class="title">LG에너지솔루션</span><span class="num">(373220)</span></p>
+                                                                                <p class="date">2025.06.19<br class="mo-only"> 14:55 기준</p>
+                                                                            </div>
+                                                                            <div class="stock-info">
+                                                                                <div class="info-big">
+                                                                                    <p class="up">290,500</p>
+                                                                                    <div>
+                                                                                        <p><span>전일대비</span><span class="up">1,000</span></p>
+                                                                                        <p><span>등락률(%)</span><span class="plus">2.5%</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="info-wrap">
+                                                                                    <div>
+                                                                                        <p>
+                                                                                            <span>시가</span>
+                                                                                            <span class="up">293,500</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <p>
+                                                                                            <span>고가</span>
+                                                                                            <span class="up">294,000</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <p>
+                                                                                            <span>저가</span>
+                                                                                            <span class="down">290,500</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <p>
+                                                                                            <span>거래량</span>
+                                                                                            <span>290,500</span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </section>
+                                                                    <section>
+                                                                        <div class="stock-chart">
+                                                                            <div class="title-wrap">
+                                                                                <div class="title-text">
+                                                                                    <p class="tit">LG에너지솔루션 수익률</p>
+                                                                                    <p class="num plus">0.17%</p>
+                                                                                    <p class="date"><span>2025.06.19</span> 기준</p>
+                                                                                </div>
+                                                                                <div class="radio-wrap">
+                                                                                    <form> <!-- 라디오 버튼 초기값 checked 적용 안되는 문제로 인해, form 태그 추가함 -->
+                                                                                        <div class="wrap-form">
+                                                                                            <div class="wrap-form-box">
+                                                                                                <div class="radio">
+                                                                                                    <input type="radio" id="1day" name="chart-period" checked>
+                                                                                                    <label for="1day" class="radio-label">
+                                                                                                        <span class="custom-radio"></span>
+                                                                                                        <span class="txt">1일</span>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                                <div class="radio">
+                                                                                                    <input type="radio" id="5day" name="chart-period">
+                                                                                                    <label for="5day" class="radio-label">
+                                                                                                        <span class="custom-radio"></span>
+                                                                                                        <span class="txt">5일</span>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                                <div class="radio">
+                                                                                                    <input type="radio" id="1month" name="chart-period">
+                                                                                                    <label for="1month" class="radio-label">
+                                                                                                        <span class="custom-radio"></span>
+                                                                                                        <span class="txt">1개월</span>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                                <div class="radio">
+                                                                                                    <input type="radio" id="3month" name="chart-period">
+                                                                                                    <label for="3month" class="radio-label">
+                                                                                                        <span class="custom-radio"></span>
+                                                                                                        <span class="txt">3개월</span>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                                <div class="radio">
+                                                                                                    <input type="radio" id="6month" name="chart-period">
+                                                                                                    <label for="6month" class="radio-label">
+                                                                                                        <span class="custom-radio"></span>
+                                                                                                        <span class="txt">6개월</span>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                                <div class="radio">
+                                                                                                    <input type="radio" id="1year" name="chart-period">
+                                                                                                    <label for="1year" class="radio-label">
+                                                                                                        <span class="custom-radio"></span>
+                                                                                                        <span class="txt">1년</span>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                                <div class="radio">
+                                                                                                    <input type="radio" id="3year" name="chart-period">
+                                                                                                    <label for="3year" class="radio-label">
+                                                                                                        <span class="custom-radio"></span>
+                                                                                                        <span class="txt">3년</span>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </div>                  
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="chart-wrap" style="width: 100%; height: 300px; background-color: lightgray;">차트영역</div>
+                                                                            <p class="asterisk-text">당사는 2022년 1월 27일자로 상장되었으므로, 기간별 등락률의 경우 상장일자를 기준으로 계산됩니다.</p>
+                                                                        </div>
+                                                                    </section>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-content" id="tab1-2-content">
+                                                            
+                                                        </div>
+                                                        <div class="tab-content" id="tab1-3-content">
+                                                            
+                                                        </div>
+                                                        <div class="tab-content" id="tab1-4-content">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </section>
                                         </div>
                                     </div>
@@ -180,7 +332,46 @@
                                     <div class="cont-area-wrap">
                                         <div class="cont-area-sect">
                                             <section>
-                                                2
+                                                <div class="cont-box-wrap">
+                                                    <div class="left-box">
+                                                        <p class="intro-desc">
+                                                            주주환원 계획
+                                                        </p>
+                                                        <div class="sub-desc-wrap">
+                                                            <ul>
+                                                                <li>
+                                                                    <p class="sub-desc">
+                                                                        LG에너지솔루션은 <br class="mo-only">빠르게 성장하는 2차 전지 사업에서 글로벌 시장 선도 및 <br class="pc-only">
+                                                                        지속가능한 성장을 목표로 하고 있기에 당분간 증가하는 고객들의 수요에 대응하고자 <br class="pc-only">
+                                                                        대규모 투자 집행이 필수적으로 필요한 상황입니다.
+                                                                    </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="sub-desc">
+                                                                        이에 당사는 수익성 중심의 성장을 실현하고 안정적인 잉여현금흐름이 창출되는 시기에 <br class="pc-only">
+                                                                        경영실적, 투자 계획, 경영환경, 상법상 배당 재원 여부 등을 종합적으로 고려하여 <br class="pc-only">
+                                                                        주주환원정책을 시행할 수 있도록 검토할 계획입니다.
+                                                                    </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="sub-desc">
+                                                                        배당 여부는 당사의 정관에 의거하여 이사회 및 주주총회 결의를 통해 결정됩니다.
+                                                                    </p>
+                                                                    <span class="asterisk-text">당사 정관 제44조(주주배당금), 정관 제45조(중간배당)</span>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="sub-desc">
+                                                                        또한, 중장기적 주주환원 계획이 결정될 경우, 공시, 기업설명회, 주주서한,홈페이지 등 <br class="pc-only">
+                                                                        다양한 방법을 통해 주주에게 안내하겠습니다.
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="right-box">
+                                                        <div class="keyword">Shareholder Return</div>
+                                                    </div>
+                                                </div>
                                             </section>
                                         </div>
                                     </div>
