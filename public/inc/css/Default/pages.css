@@ -114,13 +114,13 @@
     color: #555758;
     margin-bottom: 0;
 }
-.ehs-wrap {
+.ehs-policy {
     background-color: #F3F5F7;
     padding: 40px;
     border-radius: 8px;
     margin-top: 24px;
 }
-.ehs-wrap li {
+.ehs-policy li {
     display: flex;
     gap: 10px;
     font-size: 1rem;
@@ -129,7 +129,7 @@
     align-items: center;
 }
 
-.ehs-wrap span {
+.ehs-policy span {
     font-size: 13px;
     font-weight: 600;
     display: flex;
@@ -143,6 +143,84 @@
     flex-shrink: 0; 
 }
 
+
+.ehs-system .system-wrap {
+    margin: 48px 0;
+}
+.ehs-system .system-wrap .text-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    row-gap: 62px;
+}
+
+.ehs-system .system-wrap .text-list li {
+    display: flex;
+    gap: 16px;
+    border-top: 1px solid #858889;
+    padding-top: 24px;
+}
+.ehs-system .system-wrap .text-list li > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555758;
+    line-height: 160%;
+}
+.ehs-system .system-wrap .text-list li > div > strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: #171819;
+}
+
+.ehs-system .system-wrap .text-list li span{
+    font-size: 40px;
+    color: #C9CED1;
+    font-weight: 700;
+}
+.ehs-system .img-wrap {
+    text-align: center;
+    margin-bottom: 48px;
+}
+.ehs-system .img-wrap img {
+    width: 595px;
+}
+.ehs-system .card-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+.ehs-system .card-wrap > div {
+    position: relative;
+    border: 1px solid #C9CED1;
+    border-radius: 8px;
+    padding: 30px;
+}
+.ehs-system .card-wrap > div img {
+    position: absolute;
+    width: 64px;
+    right: 30px;
+}
+.ehs-system .card-wrap > div span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #171819;
+}
+.ehs-system .card-wrap .text-list-wrap {
+    margin-top: 16px;
+}
+.ehs-system .card-wrap .text-list li {
+    font-size: 16px;
+    font-weight: 400;
+    flood-color: #555758;
+    line-height: 160%;
+}
+
+.cont-area-wrap .ehs-mgmt article:first-of-type {
+    padding-top: 0;
+}
 /* 재무정보 (disc) */
 .disc .history-list > li {position: relative; display: flex; gap: 1.25rem;}
 .disc .history-list > li + li {margin-top: 6.25rem;}
