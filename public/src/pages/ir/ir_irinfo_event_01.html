@@ -16,7 +16,7 @@
         <div class="skip-navigation">
             <a href="#container">본문 바로가기</a>
         </div>
-        <div class="wrap fina">
+        <div class="wrap irdt">
             
             <!-- header -->
             <header class="header-wrap">
@@ -244,271 +244,275 @@
                                         <div class="cont-area-sect">                                            
                                             <section>
                                                 <div class="cont-area-title">IR 행사</div>
-                                                <div class="evt-schedule-top">
-                                                    <div class="schedule-head">
-                                                        <h5 class="year">2025년</h5>
-                                                        <div class="sort-wrap">
-                                                            <div class="sort_01">일정/행사</div>
-                                                            <div class="sort_02">실적 설명회</div>
+                                                <div class="evt-schedule-wrap">
+                                                    <div class="evt-schedule-top">
+                                                        <div class="schedule-head">
+                                                            <h5 class="year">2025년</h5>
+                                                            <div class="sort-wrap">
+                                                                <div class="sort_01">일정/행사</div>
+                                                                <div class="sort_02">실적 설명회</div>
+                                                            </div>
                                                         </div>
+                                                        <!-- 
+                                                            * schedule-month 클래스 정의 
+                                                            당월 이벤트 없을 경우 : item 클래스에 not 클래스 추가 필요
+                                                            당월 이벤트 활성화 시 : item 클래스에 on 클래스 추가 필요
+                                                        -->
+                                                        <ul class="schedule-month">
+                                                            <li class="item">
+                                                                <a href="#">
+                                                                    <div class="month">1<span>월</span></div>
+                                                                    <div class="sort-wrap">
+                                                                        <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
+                                                                        <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item not"> <!-- not 클래스 : 이벤트 없을 경우 -->
+                                                                <a href="#">
+                                                                    <div class="month">2<span>월</span></div>
+                                                                    <div class="sort-wrap">
+                                                                        <!-- <div class="sort_01"></div>
+                                                                        <div class="sort_02"></div> -->
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item">
+                                                                <a href="#">
+                                                                    <div class="month">3<span>월</span></div>
+                                                                    <div class="sort-wrap">
+                                                                        <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
+                                                                        <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item">
+                                                                <a href="#">
+                                                                    <div class="month">4<span>월</span></div>
+                                                                    <div class="sort-wrap">
+                                                                        <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
+                                                                        <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item not">
+                                                                <a href="#">
+                                                                    <div class="month">5<span>월</span></div>
+                                                                    <div class="sort-wrap">
+                                                                        
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item">
+                                                                <a href="#">
+                                                                    <div class="month">6<span>월</span></div>
+                                                                    <div class="sort-wrap">
+                                                                        <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
+                                                                        <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item on">
+                                                                <a href="#">
+                                                                    <div class="month">7<span>월</span></div>
+                                                                    <div class="sort-wrap">
+                                                                        <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
+                                                                        <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item not">
+                                                                <a href="#">
+                                                                    <div class="month">8<span>월</span></div>
+                                                                    <div class="sort-wrap"></div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item not">
+                                                                <a href="#">
+                                                                    <div class="month">9<span>월</span></div>
+                                                                    <div class="sort-wrap"></div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item not">
+                                                                <a href="#">
+                                                                    <div class="month">10<span>월</span></div>
+                                                                    <div class="sort-wrap"></div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item not">
+                                                                <a href="#">
+                                                                    <div class="month">11<span>월</span></div>
+                                                                    <div class="sort-wrap"></div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="item not">
+                                                                <a href="#">
+                                                                    <div class="month">12<span>월</span></div>
+                                                                    <div class="sort-wrap"></div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                    <!-- 
-                                                        * schedule-month 클래스 정의 
-                                                        당월 이벤트 없을 경우 : item 클래스에 not 클래스 추가 필요
-                                                        당월 이벤트 활성화 시 : item 클래스에 on 클래스 추가 필요
-                                                     -->
-                                                    <ul class="schedule-month">
-                                                        <li class="item">
-                                                            <a href="#">
-                                                                <div class="month">1<span>월</span></div>
-                                                                <div class="sort-wrap">
-                                                                    <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
-                                                                    <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                    <div class="evt-schedule-bot">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="left-area">
+                                                                    <div class="date">
+                                                                        <p>7.25<span class="day">(금)</span></p>
+                                                                    </div>
                                                                 </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item not"> <!-- not 클래스 : 이벤트 없을 경우 -->
-                                                            <a href="#">
-                                                                <div class="month">2<span>월</span></div>
-                                                                <div class="sort-wrap">
-                                                                    <!-- <div class="sort_01"></div>
-                                                                    <div class="sort_02"></div> -->
+                                                                <div class="bar"></div>
+                                                                <div class="center-area">
+                                                                    <div class="act-btn-xs btn-badge _ctype08">실적 설명회</div>
+                                                                    <div class="title">2025년 2분기 실적설명회</div>
                                                                 </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item">
-                                                            <a href="#">
-                                                                <div class="month">3<span>월</span></div>
-                                                                <div class="sort-wrap">
-                                                                    <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
-                                                                    <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                                <div class="right-area">
+                                                                    <div class="place">LG 에너지솔루션 본사</div>
                                                                 </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item">
-                                                            <a href="#">
-                                                                <div class="month">4<span>월</span></div>
-                                                                <div class="sort-wrap">
-                                                                    <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
-                                                                    <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                            </li>
+                                                            <li> 
+                                                                <div class="left-area">
+                                                                    <div class="date">
+                                                                        <p>7.7<span class="day">(월)</span></p>
+                                                                        <em>~</em>
+                                                                        <p>7.11<span class="day">(금)</span></p>
+                                                                    </div>
                                                                 </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item not">
-                                                            <a href="#">
-                                                                <div class="month">5<span>월</span></div>
-                                                                <div class="sort-wrap">
-                                                                    
+                                                                <div class="bar"></div>
+                                                                <div class="center-area">
+                                                                    <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
+                                                                    <div class="title">다올투자증권 IR Non Deal Roadshow</div>
                                                                 </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item">
-                                                            <a href="#">
-                                                                <div class="month">6<span>월</span></div>
-                                                                <div class="sort-wrap">
-                                                                    <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
-                                                                    <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
+                                                                <div class="right-area">
+                                                                    <div class="place">서울 여의도, 광화문 등</div>
                                                                 </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item on">
-                                                            <a href="#">
-                                                                <div class="month">7<span>월</span></div>
-                                                                <div class="sort-wrap">
-                                                                    <div class="sort_01"></div> <!-- sort_01 : 일정/행사 -->
-                                                                    <div class="sort_02"></div> <!-- sort_02 : 실적 설명회 -->
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item not">
-                                                            <a href="#">
-                                                                <div class="month">8<span>월</span></div>
-                                                                <div class="sort-wrap"></div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item not">
-                                                            <a href="#">
-                                                                <div class="month">9<span>월</span></div>
-                                                                <div class="sort-wrap"></div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item not">
-                                                            <a href="#">
-                                                                <div class="month">10<span>월</span></div>
-                                                                <div class="sort-wrap"></div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item not">
-                                                            <a href="#">
-                                                                <div class="month">11<span>월</span></div>
-                                                                <div class="sort-wrap"></div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="item not">
-                                                            <a href="#">
-                                                                <div class="month">12<span>월</span></div>
-                                                                <div class="sort-wrap"></div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="evt-schedule-bot">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="left-area">
-                                                                <div class="date">
-                                                                    <p>7.25<span class="day">(금)</span></p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="bar"></div>
-                                                            <div class="center-area">
-                                                                <div class="act-btn-xs btn-badge _ctype08">실적 설명회</div>
-                                                                <div class="title">2025년 2분기 실적설명회</div>
-                                                            </div>
-                                                            <div class="right-area">
-                                                                <div class="place">LG 에너지솔루션 본사</div>
-                                                            </div>
-                                                        </li>
-                                                        <li> 
-                                                            <div class="left-area">
-                                                                <div class="date">
-                                                                    <p>7.7<span class="day">(월)</span></p>
-                                                                    <em>~</em>
-                                                                    <p>7.11<span class="day">(금)</span></p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="bar"></div>
-                                                            <div class="center-area">
-                                                                <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
-                                                                <div class="title">다올투자증권 IR Non Deal Roadshow</div>
-                                                            </div>
-                                                            <div class="right-area">
-                                                                <div class="place">서울 여의도, 광화문 등</div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                    
+                                                            </li>
+                                                        </ul>
+                                                        
+                                                    </div>
                                                 </div>
                                             </section>
                                             <section>
-                                                <div class="box-container">
-                                                    <div class="accord-content">
-                                                        <!-- <p class="accordion-title">2024년</p> -->
-                                                        <div class="accordion-list acdItem type2">
-                                                            <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
-                                                                <div class="acd-group">                                                            
-                                                                    <p class="acd-tit">2024년</p>
-                                                                </div>
-                                                            </a>
-                                                            <div class="acd-panel accordion-content" role="region">
-                                                                <div class="table-area">
-                                                                    <div class="table-wrap ty02">
-                                                                        <table summary="행사내용 일정 장소 테이블 표">
-                                                                            <caption>행사내용 / 일정 / 장소 테이블 정의 표</caption>
-                                                                            <colgroup>
-                                                                                <col width="48rem">
-                                                                                <col width="14.25rem">
-                                                                                <col width="16.75rem">
-                                                                            </colgroup>
-                                                                            <thead> 
-                                                                                <tr>
-                                                                                    <th id="column1" scope="col">행사내용</th>
-                                                                                    <th id="column2" scope="col">일정</th>
-                                                                                    <th id="column2" scope="col">장소</th>
-                                                                                </tr>
-                                                                            </thead>
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <th headers="column1" scope="row">
-                                                                                        <div class="btn-group">
-                                                                                            <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
-                                                                                            <strong class="title">모건스탠리 IR Conference</strong>
-                                                                                        </div>
-                                                                                    </th>
-                                                                                    <td headers="column2">2024.11.20 ~ 2024.11.21</td>
-                                                                                    <td headers="column3">싱가폴</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th headers="column1" scope="row">
-                                                                                        <div class="btn-group">
-                                                                                            <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
-                                                                                            <strong class="title">모건스탠리 IR Conference</strong>
-                                                                                        </div>
-                                                                                    </th>
-                                                                                    <td headers="column2">2024.11.20 ~ 2024.11.21</td>
-                                                                                    <td headers="column3">싱가폴</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th headers="column1" scope="row">
-                                                                                        <div class="btn-group">
-                                                                                            <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
-                                                                                            <strong class="title">모건스탠리 IR Conference</strong>
-                                                                                        </div>
-                                                                                    </th>
-                                                                                    <td headers="column2">2024.11.20 ~ 2024.11.21</td>
-                                                                                    <td headers="column3">싱가폴</td>
-                                                                                </tr>
-                                                                                
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div> <!-- //table-wrap -->
-                                                                    <div class="text-list-wrap">
-                                                                        <ul class="text-list ty02">
-                                                                            <li>* AA부터 B등급까지는+,- 부호를 부가하여 등급을 세분화합니다.</li>
-                                                                        </ul>
+                                                <div class="evt-schedule-past">
+                                                    <div class="box-container">
+                                                        <div class="accord-content">
+                                                            <!-- <p class="accordion-title">2024년</p> -->
+                                                            <div class="accordion-list acdItem type2">
+                                                                <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
+                                                                    <div class="acd-group">                                                            
+                                                                        <p class="acd-tit">2024년</p>
                                                                     </div>
-                                                                </div> <!-- //table-area -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="accordion-list acdItem type2">
-                                                            <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
-                                                                <div class="acd-group">                                                            
-                                                                    <p class="acd-tit">2023년</p>
+                                                                </a>
+                                                                <div class="acd-panel accordion-content" role="region">
+                                                                    <div class="table-area">
+                                                                        <div class="table-wrap ty02">
+                                                                            <table summary="행사내용 일정 장소 테이블 표">
+                                                                                <caption>행사내용 / 일정 / 장소 테이블 정의 표</caption>
+                                                                                <colgroup>
+                                                                                    <col width="48rem">
+                                                                                    <col width="14.25rem">
+                                                                                    <col width="16.75rem">
+                                                                                </colgroup>
+                                                                                <thead> 
+                                                                                    <tr>
+                                                                                        <th id="column1" scope="col">행사내용</th>
+                                                                                        <th id="column2" scope="col">일정</th>
+                                                                                        <th id="column2" scope="col">장소</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <th headers="column1" scope="row">
+                                                                                            <div class="btn-group">
+                                                                                                <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
+                                                                                                <strong class="title">모건스탠리 IR Conference</strong>
+                                                                                            </div>
+                                                                                        </th>
+                                                                                        <td headers="column2">2024.11.20 ~ 2024.11.21</td>
+                                                                                        <td headers="column3">싱가폴</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <th headers="column1" scope="row">
+                                                                                            <div class="btn-group">
+                                                                                                <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
+                                                                                                <strong class="title">모건스탠리 IR Conference</strong>
+                                                                                            </div>
+                                                                                        </th>
+                                                                                        <td headers="column2">2024.11.20 ~ 2024.11.21</td>
+                                                                                        <td headers="column3">싱가폴</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <th headers="column1" scope="row">
+                                                                                            <div class="btn-group">
+                                                                                                <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
+                                                                                                <strong class="title">모건스탠리 IR Conference</strong>
+                                                                                            </div>
+                                                                                        </th>
+                                                                                        <td headers="column2">2024.11.20 ~ 2024.11.21</td>
+                                                                                        <td headers="column3">싱가폴</td>
+                                                                                    </tr>
+                                                                                    
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div> <!-- //table-wrap -->
+                                                                        <div class="text-list-wrap">
+                                                                            <ul class="text-list ty02">
+                                                                                <li>* AA부터 B등급까지는+,- 부호를 부가하여 등급을 세분화합니다.</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div> <!-- //table-area -->
                                                                 </div>
-                                                            </a>
-                                                            <div class="acd-panel accordion-content" role="region">
-                                                                <div class="table-area">
-                                                                    <div class="table-wrap ty02">
-                                                                        <table summary="행사내용 일정 장소 테이블 표">
-                                                                            <caption>행사내용 / 일정 / 장소 테이블 정의 표</caption>
-                                                                            <colgroup>
-                                                                                <col width="48rem">
-                                                                                <col width="14.25rem">
-                                                                                <col width="16.75rem">
-                                                                            </colgroup>
-                                                                            <thead> 
-                                                                                <tr>
-                                                                                    <th id="column1" scope="col">행사내용</th>
-                                                                                    <th id="column2" scope="col">일정</th>
-                                                                                    <th id="column2" scope="col">장소</th>
-                                                                                </tr>
-                                                                            </thead>
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <th headers="column1" scope="row">
-                                                                                        <div class="btn-group">
-                                                                                            <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
-                                                                                            <strong class="title">모건스탠리 IR Conference</strong>
-                                                                                        </div>
-                                                                                    </th>
-                                                                                    <td headers="column2">2024.11.20 ~ 2024.11.21</td>
-                                                                                    <td headers="column3">싱가폴</td>
-                                                                                </tr>
-                                                                                
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div> <!-- //table-wrap -->
-                                                                    <div class="text-list-wrap">
-                                                                        <ul class="text-list ty02">
-                                                                            <li>* AA부터 B등급까지는+,- 부호를 부가하여 등급을 세분화합니다.</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div> <!-- //table-area -->
                                                             </div>
-                                                        </div>
-                                                        
-                                                    </div>                                                
-                                                </div> <!--//box-container -->
+                                                            <div class="accordion-list acdItem type2">
+                                                                <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
+                                                                    <div class="acd-group">                                                            
+                                                                        <p class="acd-tit">2023년</p>
+                                                                    </div>
+                                                                </a>
+                                                                <div class="acd-panel accordion-content" role="region">
+                                                                    <div class="table-area">
+                                                                        <div class="table-wrap ty02">
+                                                                            <table summary="행사내용 일정 장소 테이블 표">
+                                                                                <caption>행사내용 / 일정 / 장소 테이블 정의 표</caption>
+                                                                                <colgroup>
+                                                                                    <col width="48rem">
+                                                                                    <col width="14.25rem">
+                                                                                    <col width="16.75rem">
+                                                                                </colgroup>
+                                                                                <thead> 
+                                                                                    <tr>
+                                                                                        <th id="column1" scope="col">행사내용</th>
+                                                                                        <th id="column2" scope="col">일정</th>
+                                                                                        <th id="column2" scope="col">장소</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <th headers="column1" scope="row">
+                                                                                            <div class="btn-group">
+                                                                                                <div class="act-btn-xs btn-badge _ctype01">일정/행사</div>
+                                                                                                <strong class="title">모건스탠리 IR Conference</strong>
+                                                                                            </div>
+                                                                                        </th>
+                                                                                        <td headers="column2">2024.11.20 ~ 2024.11.21</td>
+                                                                                        <td headers="column3">싱가폴</td>
+                                                                                    </tr>
+                                                                                    
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div> <!-- //table-wrap -->
+                                                                        <div class="text-list-wrap">
+                                                                            <ul class="text-list ty02">
+                                                                                <li>* AA부터 B등급까지는+,- 부호를 부가하여 등급을 세분화합니다.</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div> <!-- //table-area -->
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>                                                
+                                                    </div> <!--//box-container -->
+                                                </div>
                                             </section>
                                         </div>
                                     </div>
