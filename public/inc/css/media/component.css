@@ -114,6 +114,8 @@
     .cont-area-wrap.type2 .box-container .box-list:not(:first-child)::before {content:''; width: 100%; height: 1px; background-color: var(--colorElement-light-stroke-stroke-default03); display: block; margin: 1.5rem 0;}
     .cont-area-wrap.type2 .cont-area-sect > section:not(:last-child) .box-container::after {margin: 2.5rem 0;}
 
+    .cont-area-title {font-size: 1.5rem; line-height: 2.1rem; margin-bottom: 1.25rem;}
+    .cont-area-title.type2 {margin-bottom: 2rem;}
 
 
     /* popup */
