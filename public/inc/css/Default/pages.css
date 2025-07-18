@@ -166,19 +166,26 @@
 .stif .stock-table .plus::before {content: "+";}
 .stif .stock-table .minus::before {content: "-";}
 .stif .stock-table .table-bg {font-weight: 600;}
-.stif .stock-sub-box {padding-inline: 3.75rem; width: 100%; border-radius: 0.626rem; background-color: var(--colorElement-light-fill-fill-default04);}
-.stif .stock-sub-box > div {display: flex; gap: 2.5rem; padding-block: 2.69rem;}
-.stif .stock-sub-box > div:last-child {border: none;}
-.stif .stock-sub-box > div .tit {width: 8.75rem; font-size: 1.75rem; font-weight: 700; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
-.stif .stock-sub-box > div .num {font-size: 2rem; font-weight: 600; line-height: 3rem;}
-
 .stif .stock-sub-table-wrap {display: flex; gap: 3.7rem;}
 .stif .stock-sub-table-wrap > div {width: 100%;}
 .stif .stock-sub-table-wrap .flex-col {display: flex; flex-direction: column; justify-content: space-between;}
 .stif .stock-sub-table-wrap .flex-row {display: flex; gap: 1.25rem;}
 .stif .stock-sub-table-wrap .flex-row > div {width: 100%;}
 .stif .stock-sub-table-wrap .flex-row .stock-table tr:first-child {border-top: 2px solid var(--colorElement-light-text-text-default01);}
-
+.stif .stock-sub-box {padding-inline: 3.75rem; width: 100%; border-radius: 0.626rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.stif .stock-sub-box > div {display: flex; gap: 2.5rem; padding-block: 2.69rem; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.stif .stock-sub-box > div:last-child {border: none;}
+.stif .stock-sub-box > div > p {display: flex; align-items: center; gap: 1.25rem;}
+.stif .stock-sub-box > div .plus {color: var(--colorElement-light-critical-critical-enabled);}
+.stif .stock-sub-box > div .minus {color: var(--colorElement-light-accent-success-enabled);}
+.stif .stock-sub-box > div .tit {width: 8.75rem; font-size: 1.75rem; font-weight: 700; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
+.stif .stock-sub-box > div .num {font-size: 2rem; font-weight: 600; line-height: 3rem;}
+.stif .stock-sub-box > div .compare {display: flex; align-items: center; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.stif .stock-sub-box > div .plus .compare::before, .stif .stock-sub-box > div .minus .compare::before {content: ""; display: inline-block; vertical-align: middle; margin-right: 0.25rem; width: 1.125rem; height: 1.125rem; background-repeat: no-repeat; background-size: cover; background-position: center;}
+.stif .stock-sub-box > div .plus .compare::before {background-image: url(../../images/icon/icon_stock_up.svg);}
+.stif .stock-sub-box > div .minus .compare::before {background-image: url(../../images/icon/icon_stock_down.svg);}
+.stif .stock-sub-box > div .plus .compare .percent::before {content: "+";}
+.stif .stock-sub-box > div .minus .compare .percent::before {content: "-";}
 .stif .cont-box-wrap .left-box {min-height: 29.375rem; background-image: url(../../images/img/stif01_tab2_img.png); background-size: contain; background-position: right; background-repeat: no-repeat;}
 .stif .cont-box-wrap .left-box::before {top: 0;}
 .stif .cont-box-wrap .left-box .intro-desc {padding: 0; font-size: 1.75rem; font-weight: 600; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}

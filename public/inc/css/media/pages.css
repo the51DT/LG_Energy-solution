@@ -88,8 +88,15 @@
 .stif .stock-chart .title-wrap .radio-wrap:only-child {margin-left: 0;}
 .stif .stock-chart .title-wrap .radio-wrap .wrap-form-box {flex-wrap: wrap;}
 .stif .stock-chart .title-wrap + .chart-wrap {margin-top: 2rem;}
-.stif .stock-table {margin-inline: 1.25rem;}
-
+.stif section > .stock-table {margin-inline: 1.25rem;}
+.stif .stock-sub-table-wrap {flex-direction: column; margin-inline: 1.25rem; gap: 2rem;}
+.stif .stock-sub-table-wrap .flex-col {gap: 2rem;}
+.stif .stock-sub-table-wrap .flex-row {flex-direction: column;}
+.stif .stock-sub-box {padding-inline: 1.25rem; border-radius: 0.5rem;}
+.stif .stock-sub-box > div {flex-direction: column; gap: 1.25rem; padding-block: 1.64rem;}
+.stif .stock-sub-box > div > p {gap: 0.75rem;}
+.stif .stock-sub-box > div .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
+.stif .stock-sub-box > div .num {font-size: 1.5rem; line-height: 2.1rem;}
 .stif .cont-box-wrap:has(.left-box, .right-box) {display: flex; flex-direction: column-reverse; background-image: url(../../images/img/stif01_tab2_img_mo.png); background-repeat: no-repeat; background-size: contain; background-position: top 2.75rem right;}
 .stif .cont-box-wrap .left-box {min-height: unset; background-image: none;}
 .stif .cont-box-wrap .left-box .intro-desc {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem;}
