@@ -261,7 +261,7 @@
 .schedule-head .sort-wrap [class^=sort]::before {position: absolute; top:50%; transform: translateY(-50%); left: 0;}
 .schedule-month .sort-wrap {width: 3.25rem; height: 0.5rem; display: inline-flex; justify-content: center; gap: 0.12rem;}
 .schedule-month .evt-schedule-top .schedule-month .item.on > a .sort-wrap li[class^=sort][class*=_01] {background: #ADECF2;}
-.evt-schedule-bot ul > li {padding: 2rem 2.5rem; background: var(--colorElement-light-fill-fill-default04); display: flex; align-items: center;}
+.evt-schedule-bot ul > li {padding: 2rem 2.5rem; background: var(--colorElement-light-fill-fill-default04); display: flex; align-items: center; border-radius: 0.625rem;}
 .evt-schedule-bot ul > li:not(:last-child) {margin-bottom: 1rem;}
 .evt-schedule-bot ul > li .left-area {min-width: 14.375rem; }
 .evt-schedule-bot ul > li .left-area .date {display: flex; align-items: center;}
@@ -276,6 +276,8 @@
 .btn-badge {border:1px solid var(--colorElement-light-stroke-stroke-default00); color: var(--colorElement-light-text-text-default01);}
 .btn-badge[class*=_ctype01] {border-color: #3EC2CF;}
 .btn-badge[class*=_ctype08] {border-color: #276EF2;}
+.evt-schedule-past .table-wrap tbody tr > th,
+.evt-schedule-past .table-wrap tbody tr > td {border-right: 0 !important;}
 
 /* 정도경영 (etmg) */
 .etmg .cont-area-wrap .cont-area-intro .intro-desc {font-size: 1.75rem; line-height: 2.625rem;}
