@@ -122,6 +122,26 @@
 .history-list + .paging-wrap {margin-top: 2rem;}
 .disc .paging-wrap + .btn-wrap {margin-top: 3.75rem;}
 
+
+/* IR자료 (irdt) */
+.irdt .cont-area-title {flex-direction: column; align-items: flex-start; gap: 0.5rem;}
+.irdt .cont-area-title .asterisk-text {font-size: 0.875rem; line-height: 1.4rem;}
+.irdt .cont-area-title .selectbox-wrap {margin-top: 0.75rem; width: 100%;}
+.irdt .history-list.type2 {margin-inline: 1.25rem;}
+.irdt .history-list.type2 > li {gap: 0.25rem; margin-top: 0; padding: 1rem 1.5rem; border: none; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.irdt .history-list.type2 > li + li {margin-top: 0.5rem;}
+.irdt .history-list.type2 > li:not(:first-child)::before {content: none;}
+.irdt .history-list.type2 .history-desc > li {padding: 0; border-radius: 0; background-color: unset;}
+.irdt .history-list.type2 .history-year {width: auto;}
+.irdt .history-list.type2 .history-tit {font-size: 1rem; line-height: 1.5rem;}
+.irdt .history-list.type2 .history-btn {position: absolute; top: 50%; right: 1.5rem; transform: translateY(-50%);}
+.history-btn-wrap {gap: 0.5rem;}
+.history-btn-wrap + .history-btn-wrap {margin-left: -0.13rem;}
+.history-btn-wrap > span  {font-size: 0.8125rem; font-weight: 500; line-height: 1.1375rem;}
+.history-btn-wrap .history-btn {width: 1.75rem; height: 1.75rem; background-size: 1rem 1rem;}
+.history-desc > li:has(.history-btn-wrap) {padding: 1rem 1.5rem;}
+.history-desc > li:has(.history-btn-wrap) .history-tit {font-size: 1rem; line-height: 1.5rem;}
+
 /* 재무정보 (fina) */
 .fina .box-container {padding: 0 1.25rem;}
 .fina .box-container .content-box {display: block;}

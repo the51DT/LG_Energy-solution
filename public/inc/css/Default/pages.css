@@ -198,8 +198,6 @@
 
 
 /* 공시정보 (disc) */
-
-/* 재무정보 (disc) */
 .history-list > li {position: relative; display: flex; gap: 1.25rem;}
 .history-list > li + li {margin-top: 6.25rem;}
 .history-list > li::before {content: ""; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 2px; background-color: #000;}
@@ -219,6 +217,24 @@
 .disc .paging-wrap + .btn-wrap {margin-top: 6.25rem;}
 .disc .btn-wrap {display: flex; justify-content: center;}
 
+
+/* IR자료 (irdt) */
+.irdt .cont-area-title {display: flex; align-items: center; gap: 1.25rem;}
+.irdt .cont-area-title .asterisk-text {display: flex; gap: 0.38rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); justify-self: flex-end;}
+.irdt .cont-area-title .asterisk-text::before {flex-shrink: 0; content: ""; display: inline-block; margin: 0.61rem 0.19rem; width: 0.37894rem; height: 0.39744rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
+.irdt .cont-area-title .selectbox-wrap {margin-left: auto; width: 20rem;}
+.irdt .cont-area-title .selectbox-wrap button {min-width: unset;}
+.history-list.type2 > li {margin-top: 0; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.history-list.type2 > li:not(:first-child)::before {content: none;}
+.history-list.type2 .history-desc > li {position: static; border: none;}
+.history-list.type2 .history-year {width: 6.375rem;}
+.history-btn-wrap {flex-grow: 0; flex-shrink: 1; display: flex; align-items: center; gap: 0.75rem; width: fit-content;}
+.history-btn-wrap + .history-btn-wrap {margin-left: 0.63rem;}
+.history-btn-wrap > span  {font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
+.history-btn-wrap:hover > span {color: var(--colorElement-light-text-text-default01);}
+.history-btn-wrap:hover .history-btn {background-color: var(--colorElement-light-fill-fill-default00);}
+.history-btn-wrap:hover .history-btn:has(.download) {background-image: url(../../images/icon/icon_download_wh.svg);}
+.history-btn-wrap:hover .history-btn:has(.link) {background-image: url(../../images/icon/icon_arrow_up_right_wh.svg);}
 
 /* 재무정보 (fina) */
 .fina .box-container .content-box > li {padding: 1.88rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default04); background: #fff;}
