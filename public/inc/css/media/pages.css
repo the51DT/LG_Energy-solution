@@ -124,6 +124,7 @@
 
 
 /* IR자료 (irdt) */
+.irdt .tab-cate-wrap.type2 .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 2rem;}
 .irdt .cont-area-title {flex-direction: column; align-items: flex-start; gap: 0.5rem;}
 .irdt .cont-area-title .asterisk-text {font-size: 0.875rem; line-height: 1.4rem;}
 .irdt .cont-area-title .selectbox-wrap {margin-top: 0.75rem; width: 100%;}
