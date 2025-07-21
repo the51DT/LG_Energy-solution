@@ -13,6 +13,8 @@ var pubUi = {
         this.tabList.init();
         this.acdItem.init();
 
+        this.evtScheduleLeft();
+
     },
 
     settings: function () {
@@ -122,6 +124,22 @@ var pubUi = {
                 mapInfoItem.forEach((item) => {
                     item.classList.remove("active");
                 });
+            });
+        }        
+    },
+    // IR정보 > IR행사 모바일일경우, 상단 schedule-month 스크롤 중앙 정렬 처리
+    evtScheduleLeft: function () {
+        // IR행사
+        let evtScheduleWrap = document.querySelector(".evt-schedule-wrap");        
+        
+        if (evtScheduleWrap != null) {
+            let evtScheduleMonth = evtScheduleWrap.querySelector(".schedule-month");
+            let evtScheduleMonthList = evtScheduleWrap.querySelectorAll(".schedule-month > li");
+            evtScheduleMonthList.forEach((month) => {
+                if (month.classList.contains("on")) {
+                    const monthOffsetLeft = month.offsetLeft / 1.5;
+                    evtScheduleMonth.scrollTo({ left: monthOffsetLeft, behavior: "smooth" });
+                }
             });
         }
     },
@@ -424,6 +442,7 @@ var pubUi = {
             pubUi.self.isPc = window.innerWidth >= 1440;
             pubUi.self.isMobile = window.innerWidth <= 768;
             pubUi.tabList.scroll();
+            pubUi.evtScheduleLeft();
         });
     });     
 })();

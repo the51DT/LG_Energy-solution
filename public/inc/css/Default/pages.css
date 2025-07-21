@@ -205,6 +205,7 @@
 .history-desc {flex-grow: 1;}
 .history-desc > li {position: relative; display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; padding: 1.88rem 2.5rem; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .history-desc > li > div {display: flex; align-items: center; gap: 1.25rem; flex-grow: 1;}
+.history-desc > li > .history-btn-group {justify-content: flex-end;}
 .history-desc .history-date {flex-shrink: 0; width: 3.8125rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 .history-desc .history-tit {flex-grow: 1; font-size: 1.25rem; font-weight: 500; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01); word-break: break-all;}
 .history-desc .history-btn {flex-shrink: 0; width: 2.875rem; height: 2.875rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-default04); background-position: center center; background-size: 1.5rem 1.5rem; background-repeat: no-repeat;}
@@ -213,6 +214,8 @@
 .history-desc .history-btn:has(.download):hover {background-image: url(../../images/icon/icon_download_wh.svg);}
 .history-desc .history-btn:has(.link) {background-image: url(../../images/icon/icon_arrow_up_right.svg);}
 .history-desc .history-btn:has(.link):hover {background-image: url(../../images/icon/icon_arrow_up_right_wh.svg);}
+.history-desc .history-btn:has(.sound) {background-image: url(../../images/icon/icon_sound_bk.svg);}
+.history-desc .history-btn:has(.sound):hover {background-image: url(../../images/icon/icon_sound_wh.svg);}
 .history-list + .paging-wrap {margin-top: 3.75rem;}
 .disc .paging-wrap + .btn-wrap {margin-top: 6.25rem;}
 .disc .btn-wrap {display: flex; justify-content: center;}
@@ -236,6 +239,7 @@
 .history-btn-wrap:hover .history-btn {background-color: var(--colorElement-light-fill-fill-default00);}
 .history-btn-wrap:hover .history-btn:has(.download) {background-image: url(../../images/icon/icon_download_wh.svg);}
 .history-btn-wrap:hover .history-btn:has(.link) {background-image: url(../../images/icon/icon_arrow_up_right_wh.svg);}
+.history-btn-wrap:hover .history-btn:has(.sound) {background-image: url(../../images/icon/icon_sound_wh.svg);}
 
 /* 재무정보 (fina) */
 .fina .box-container .content-box > li {padding: 1.88rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default04); background: #fff;}
