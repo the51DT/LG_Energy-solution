@@ -328,6 +328,9 @@ ul.page-map{display:none;}
 /* 컨텐츠 */
 .content-wrap{padding-top:6.25rem;}
 .wrap:not(.sub_p, .main_p) .content-item01 {max-width: 90rem; margin: 0 auto;}
+.wrap:not(.sub_p, .main_p) .content-item01.w100 section:not(.full-bg) {max-width: 90rem; margin: 0 auto;}
+.full-bg {background-color: var(--colorElement-light-fill-fill-default04);}
+.full-bg > div {max-width: 90rem; margin: 0 auto; padding-block: 6.25rem;}
 /* .content-item01{background:#000}
 .content-item02{background:#218927}
 .content-item03{background:#658733} */
