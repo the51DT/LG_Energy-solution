@@ -55,9 +55,9 @@
     .accordion-list .accordion-btn .acd-group .acd-icon {display: none;}
     
     .accordion-list .accordion-btn .acd-tit {font-size: 1rem; font-weight: 600; line-height: 1.5rem;}
-    .accordion-list .accordion-btn .sub-tit {font-size: 0.875rem; font-weight: 500; line-height: 1.4rem; color:var(--colorElement-light-text-text-default03); width: revert; padding-right: 0.16rem;}
+    .accordion-list .accordion-btn .sub-tit,
+    .accordion-list.on .accordion-btn .sub-tit {font-size: 0.875rem; font-weight: 500; line-height: 1.4rem; color:var(--colorElement-light-text-text-default03); width: revert; padding-right: 0.16rem;}
     .accordion-list.on .accordion-btn .acd-tit {font-weight: 600; font-size: 1.125rem; line-height: 1.75rem;}
-
 
     .accordion-list .accordion-content {margin-top: 1rem;  font-size: 1rem; line-height: 1.6rem;}    
     .accordion-list .accordion-content .table-wrap table tbody > tr > th,
@@ -70,6 +70,7 @@
     .accordion-list.type2 .accordion-content {margin-top: 1.5rem; margin-left: 0; margin-bottom: 0;}
     .accordion-list.type2.on .accordion-content  {padding-top: 0.5rem;}
     .accordion-list.type2 .accordion-btn {font-size: 1rem; font-weight: 600; line-height: 1.5rem;}
+    .accordion-list .accordion-content .sect-cont-sub article:not(:last-child)::after {margin: 2rem 0;}
     
 
     .accord-content .accordion-title {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem; padding-bottom: 1rem;}
@@ -95,6 +96,11 @@
     .table-container {padding: 0 1.25rem;}
     .table-container .table-header {padding-bottom: 1rem; }
     
+    /* text-list */
+    .cont-list li {font-size: 1rem; line-height: 1.5rem;}
+    .cont-list li > strong {min-width: 4.75rem;}
+    .cont-list li .noti-desc {padding-left: 1.12rem; font-size: 0.875rem; line-height: 1.4rem; font-weight: 400;}
+    .cont-list li .noti-desc::before {left: 0; top: 0; transform: revert;}
 
     /* content */
     .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 1.5rem;}
@@ -102,6 +108,12 @@
     .cont-area-wrap .cont-area-info {padding: 0 1.25rem;}
     .cont-area-wrap .cont-area-intro .intro-desc {padding: 2.06rem 1.25rem 3.75rem; font-size: 1.25rem; font-weight: 700; line-height: 1.75rem;}
     
+    .cont-area-wrap .tit-group {flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 1.25rem;}
+    .cont-area-wrap .btn-wrap {flex-direction: column; width: 100%;}
+    .cont-area-wrap .btn-wrap > a {width: 100%;}
+    .cont-area-wrap .tit-group > .btn-wrap > a {justify-content: space-between; border-radius: 0.5rem; padding: 0.5rem 1.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+
+
     .cont-area-wrap.type2 .cont-area-intro .intro-desc {padding: 1.56rem 1.25rem 3.75rem;}
     .cont-area-wrap.type2 .cont-area-sect > section {padding: 0 1.25rem;}
     .cont-area-wrap.type2 .cont-area-sect > section:last-of-type {padding-bottom: 4.75rem;}
@@ -120,7 +132,15 @@
     .cont-area-wrap.type2 .box-container .box-list > li .text-area {padding-top: 1rem;}
     .cont-area-wrap.type2 .box-container .box-list:not(:first-child) {margin-top: 0;}
     .cont-area-wrap.type2 .box-container .box-list:not(:first-child)::before {content:''; width: 100%; height: 1px; background-color: var(--colorElement-light-stroke-stroke-default03); display: block; margin: 1.5rem 0;}
+    .box-container:not(:first-child) .box-content {margin-top: 2rem;}
+    .box-container .box-content .bdr-box-wrap.nbdr {padding: 1.5rem 1.25rem;}
+    .bdr-box-wrap .box-head .title {font-size: 1.125rem; line-height: 1.575rem;}
+    .bdr-box-wrap .box-head .desc {font-size: 1rem; line-height: 1.5rem;}
+    .bdr-box-wrap .box-cont .text-wrap .title {font-size: 1rem; line-height: 1.5rem;}
+    .bdr-box-wrap .box-cont .text-wrap .desc {font-size: 0.875rem; line-height: 1.4rem;}
+    
     .cont-area-wrap.type2 .cont-area-sect > section:not(:last-child) .box-container::after {margin: 2.5rem 0;}
+    
 
     .cont-area-title {font-size: 1.5rem; line-height: 2.1rem; margin-bottom: 1.25rem;}
     .cont-area-title.type2 {margin-bottom: 2rem;}

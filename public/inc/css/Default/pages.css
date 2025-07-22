@@ -208,14 +208,14 @@
 .history-desc > li > .history-btn-group {justify-content: flex-end;}
 .history-desc .history-date {flex-shrink: 0; width: 3.8125rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 .history-desc .history-tit {flex-grow: 1; font-size: 1.25rem; font-weight: 500; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01); word-break: break-all;}
-.history-desc .history-btn {flex-shrink: 0; width: 2.875rem; height: 2.875rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-default04); background-position: center center; background-size: 1.5rem 1.5rem; background-repeat: no-repeat;}
-.history-desc .history-btn:hover {background-color: var(--colorElement-light-fill-fill-default00); background-image: url(../../images/icon/icon_download_wh.svg);}
-.history-desc .history-btn:has(.download) {background-image: url(../../images/icon/icon_download.svg);}
-.history-desc .history-btn:has(.download):hover {background-image: url(../../images/icon/icon_download_wh.svg);}
-.history-desc .history-btn:has(.link) {background-image: url(../../images/icon/icon_arrow_up_right.svg);}
-.history-desc .history-btn:has(.link):hover {background-image: url(../../images/icon/icon_arrow_up_right_wh.svg);}
-.history-desc .history-btn:has(.sound) {background-image: url(../../images/icon/icon_sound_bk.svg);}
-.history-desc .history-btn:has(.sound):hover {background-image: url(../../images/icon/icon_sound_wh.svg);}
+.history-btn {flex-shrink: 0; width: 2.875rem; height: 2.875rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-default04); background-position: center center; background-size: 1.5rem 1.5rem; background-repeat: no-repeat;}
+.history-btn:hover {background-color: var(--colorElement-light-fill-fill-default00); background-image: url(../../images/icon/icon_download_wh.svg);}
+.history-btn:has(.download) {background-image: url(../../images/icon/icon_download.svg);}
+.history-btn:has(.download):hover {background-image: url(../../images/icon/icon_download_wh.svg);}
+.history-btn:has(.link) {background-image: url(../../images/icon/icon_arrow_up_right.svg);}
+.history-btn:has(.link):hover {background-image: url(../../images/icon/icon_arrow_up_right_wh.svg);}
+.history-btn:has(.sound) {background-image: url(../../images/icon/icon_sound_bk.svg);}
+.history-btn:has(.sound):hover {background-image: url(../../images/icon/icon_sound_wh.svg);}
 .history-list + .paging-wrap {margin-top: 3.75rem;}
 .disc .paging-wrap + .btn-wrap {margin-top: 6.25rem;}
 .disc .btn-wrap {display: flex; justify-content: center;}
@@ -228,6 +228,7 @@
 .irdt .cont-area-title .asterisk-text::before {flex-shrink: 0; content: ""; display: inline-block; margin: 0.61rem 0.19rem; width: 0.37894rem; height: 0.39744rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
 .irdt .cont-area-title .selectbox-wrap {margin-left: auto; width: 20rem;}
 .irdt .cont-area-title .selectbox-wrap button {min-width: unset;}
+.irdt .accordion-content .table-area {padding-top: 3rem;}
 .history-list.type2 > li {margin-top: 0; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .history-list.type2 > li:not(:first-child)::before {content: none;}
 .history-list.type2 .history-desc > li {position: static; border: none;}
@@ -297,8 +298,10 @@
 .btn-badge {border:1px solid var(--colorElement-light-stroke-stroke-default00); color: var(--colorElement-light-text-text-default01);}
 .btn-badge[class*=_ctype01] {border-color: #3EC2CF;}
 .btn-badge[class*=_ctype08] {border-color: #276EF2;}
-.evt-schedule-past .table-wrap tbody tr > th,
-.evt-schedule-past .table-wrap tbody tr > td {border-right: 0 !important;}
+.table-area.nonebdr .table-wrap tbody tr > th,
+.table-area.nonebdr .table-wrap tbody tr > td {border-right: 0 !important;}
+.sub-cont-area.pc-only {margin-top: 2rem;}
+
 
 /* 정도경영 (etmg) */
 .etmg .cont-area-wrap .cont-area-intro .intro-desc {font-size: 1.75rem; line-height: 2.625rem;}
