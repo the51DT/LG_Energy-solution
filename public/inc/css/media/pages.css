@@ -151,7 +151,7 @@
 .history-desc > li > .history-btn-group > a:not(:last-child) {padding-right: 1.25rem;}
 .irdt .box-container {padding: 0 1.25rem;}
 .irdt .box-container .article-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
-
+.irdt .box-container .accordion-content .table-area {padding-top: 2.5rem;}
 
 
 /* 재무정보 (fina) */
@@ -360,4 +360,7 @@
 .news-detail-area .news-pagination-wrap .news-pagination-btn{padding:0.375rem}
 .news-detail-area .news-pagination-wrap .news-pagination-btn>img{width:1rem;height:1rem}
 .news-detail-area .view-btn-wrap{margin:0 1.25rem;margin-bottom:6.25rem}
+
+/* R&D */
+
 }
