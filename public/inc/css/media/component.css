@@ -171,7 +171,7 @@
 
     .content-header_bg {display: none;}
 
-    .page-map-wrap {padding: 0; position: fixed; top: 0; margin-top: 0; padding-top: 3.25rem;}
+    .page-map-wrap {padding: 0; position: fixed; top: 0; padding-top: 3.25rem;}
     .breadcrumb-wrap  > .select-cate:first-child {padding-left: 1.25rem;}
     .breadcrumb-wrap  > .select-cate:last-child {padding-right: 1.25rem;}
     .breadcrumb-wrap {display: flex; gap: 1.25rem; padding: 1rem 0; background: var(--colorElement-light-fill-fill-default04);}

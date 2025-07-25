@@ -396,7 +396,7 @@ a[class^="act-btn"] {display: inline-flex; align-items: center;}
 .textarea-box .byte-check .count-total::before {content:'/'; margin:0 0.25rem;}
 
 /* *** selectbox *** */
-.page-map-wrap {font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; padding: 1.5625rem 0; width: 100%; top:99px; background-color: #fff; margin-top: -80px; z-index: 50;}
+.page-map-wrap {font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; padding: 1.5625rem 0; width: 100%; top:99px; background-color: #fff; margin-top: 0; z-index: 50;}
 .page-map-wrap.stuck {background:var(--colorElement-light-fill-fill-default04); border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);} /* sticky 붙었을경우 예외처리 클래스 */
 .page-map-wrap.stuck::before {background:var(--colorElement-light-fill-fill-default04);}
 .page-map-wrap .selectbox-wrap {max-width: 90rem; margin: 0 auto;}
