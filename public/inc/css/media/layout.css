@@ -18,5 +18,7 @@
     .header-area.mo-only .search-btn {width: 1.5rem; height: 1.5rem;}
     .header-area.mo-only .nav-btn {width: 1.5rem; height: 1.5rem; padding: 0}
     .header-area.mo-only .nav-btn .x-icon {width: 100%; height: 100%;}
+    .cont-area-wrap .cont-area-sect > section.full-bg {margin-bottom: 6.25rem;}
+    .cont-area-wrap .cont-area-sect > section.full-bg:not(:last-child) {margin-bottom: 3rem;}
     .full-bg > div {padding: 2.5rem 1.25rem;}
 }
