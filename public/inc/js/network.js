@@ -3,8 +3,6 @@ const locations = [
         place: "본사",
         lat: 37.5266681,
         lng: 126.9271165,
-        latctr: 36.5,
-        lngctr: 127.5,
         address: "서울특별시 영등포구 여의대로 108",
         tel: "02-3777-1114",
         sort: "",
