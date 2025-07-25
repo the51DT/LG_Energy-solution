@@ -31,8 +31,7 @@ var pubUi = {
         this.self.selectMenu = document.querySelectorAll(".activeSelect .select-menu");
         
 
-        // 글로벌 네트워크 
-        this.self.networkMap = document.querySelector(".map-conts-area");
+        
     },
 
     bindEvents: function () {
@@ -76,56 +75,7 @@ var pubUi = {
                     map.classList.remove("on");
                 });
             });
-        });
-
-
-        if (this.self.networkMap != null && this.self.networkMap != "") {
-            const networkMapInfo = this.self.networkMap.querySelector(".map-info");
-            const mapInfoItem = networkMapInfo.querySelectorAll(".map-info-item > li > a");
-            const mapImg = this.self.networkMap.querySelector(".map-img");
-            const mapMarking = this.self.networkMap.querySelector(".map-img .active_img .active_mark");
-            const mapCloseBtn = networkMapInfo.querySelector(".btn-close > button");
-
-            let checkingInterval; // 깜빡임을 위한 인터벌 변수
-
-            mapInfoItem.forEach((item) => {
-                item.addEventListener("click", function (e) {
-                    mapInfoItem.forEach((otherItem) => {
-                        if (otherItem !== e.currentTarget) {
-                            otherItem.classList.remove("active");
-                        } else {
-                            e.currentTarget.classList.add("active");
-                        }
-                    });
-
-                    networkMapInfo.classList.add("on");
-                    // mapImg.classList.add("on");
-                    // mapMarking.style.display = "block";
-
-                    // 기존 깜빡임 인터벌 제거 (중복 방지)
-                    // if (checkingInterval) clearInterval(checkingInterval);
-
-                    // // 깜빡임 시작secondTab
-                    // checkingInterval = setInterval(() => {
-                    //     if (mapMarking.style.display === "block") {
-                    //         mapMarking.style.display = "none";
-                    //     } else {
-                    //         mapMarking.style.display = "block";
-                    //     }
-                    // }, 1000);
-                });
-            });
-
-            mapCloseBtn.addEventListener("click", function (e) {
-                const targetMap = e.currentTarget.closest(".map-info");
-                targetMap.classList.remove("on");
-                // mapImg.classList.remove("on");
-                // mapMarking.style.display = "none";
-                mapInfoItem.forEach((item) => {
-                    item.classList.remove("active");
-                });
-            });
-        }        
+        });        
     },
     // IR정보 > IR행사 모바일일경우, 상단 schedule-month 스크롤 중앙 정렬 처리
     evtScheduleLeft: function () {
