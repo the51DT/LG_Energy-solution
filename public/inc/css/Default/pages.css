@@ -367,15 +367,42 @@
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] {min-width: unset; width: 100%;}
 
 
-/* 회사소개 소개 CI (coci) */
-.coci .cont-area-wrap .cont-area-intro .intro-desc > span {font-weight: 400;}
-.coci .intro-img-desc {display: flex; justify-content: space-between;}
-.coci .intro-img-desc .desc {display: flex; flex-direction: column; gap: 1.5rem;}
-.coci .intro-img-desc .desc > p {font-size: 2rem; font-weight: 700; line-height: 3rem;}
-.coci .intro-img-desc .desc > p > span {font-weight: 400;}
-.coci .intro-img-desc .desc > span {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
-.coci .intro-img-desc .img-area {display: flex; justify-content: center; width: 42.5rem; padding: 4.5rem 0rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: var(--colorElement-light-fill-fill-on-primary);}
-.coci .intro-img-desc .img-area img {width: 10rem; aspect-ratio: 1;}
+/* 회사소개 소개 CI (comp) */
+.comp .intro-img-desc {display: flex; justify-content: space-between; color: var(--colorElement-light-text-text-default01);}
+.comp .intro-img-desc .desc {display: flex; flex-direction: column; gap: 1.5rem;}
+.comp .intro-img-desc .desc > p {font-size: 2rem; font-weight: 700; line-height: 3rem;}
+.comp .intro-img-desc .desc > p > span {font-weight: 400;}
+.comp .intro-img-desc .desc > span {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.comp .intro-img-desc .img-area {display: flex; justify-content: center; width: 42.5rem; padding: 4.5rem 0rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: var(--colorElement-light-fill-fill-on-primary);}
+.comp .intro-img-desc .img-area img {width: 10rem; height: auto; aspect-ratio: 1;}
+.comp .ci-cont {color:  var(--colorElement-light-text-text-default01);}
+.comp .ci-cont .ci-tit {font-size: 1.75rem; font-weight: 600; line-height: 2.625rem;}
+.comp .ci-cont .ci-text {font-size: 1.25rem; font-weight: 400; line-height: 1.875rem;}
+.comp .ci-cont .ci-tit + .ci-text {margin-top: 1.5rem;}
+.comp .ci-cont + .ci-logo-wrap {margin-top: 3rem;}
+.comp .ci-logo-wrap {display: flex; gap: 1.25rem;}
+.comp .ci-logo-wrap > div {width: 100%;}
+.comp .ci-logo-wrap .ci-logo-tit {font-size: 1.25rem; font-weight: 800; line-height: 1.875rem;}
+.comp .ci-logo-wrap .img-area {display: flex; justify-content: center; align-items: center; height: 12.5rem; border-radius: 0.625rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.comp .ci-logo-wrap .img-area > img {height: 3.5rem;}
+.comp .ci-logo-wrap .ci-logo-tit + .img-area {margin-top: 1rem;}
+.comp .ci-color-wrap {display: flex; gap: 1.25rem;}
+.comp .ci-color-wrap .ci-cont {flex-grow: 1;}
+.comp .ci-color-wrap > div:not(.ci-cont) {display: flex; gap: 1.25rem; padding-top: 4rem; width: 44.375rem;}
+.comp .ci-color-wrap .ci-color {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 12.5rem; padding: 1.5rem 2rem; color: var(--colorElement-light-text-text-on-primary); background-color: #C20137;}
+.comp .ci-color-wrap .ci-color.gray {background-color: #717172;}
+.comp .ci-color-wrap .ci-color .tit {font-size: 1.75rem; font-weight: 700; line-height: 2.625rem;}
+.comp .ci-color-wrap .ci-color .text {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.comp .ci-terms-wrap .ci-cont + .acdItem {margin-top: 3.75rem;}
+.comp .ci-terms-wrap .accordion-list.type2 .accordion-content {margin-left: 0;}
+.comp .ci-terms-wrap .terms-wrap {display: flex; flex-direction: column; gap: 2.5rem;}
+.comp .ci-terms-wrap .terms-wrap + .terms-wrap {margin-top: 3.75rem;}
+.comp .ci-terms-wrap .terms-tit {font-size: 1.5rem; font-weight: 500; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
+.comp .ci-terms-wrap .terms-list { font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.comp .ci-terms-wrap .terms-list > li {display: flex; flex-direction: column; gap: 1rem;}
+.comp .ci-terms-wrap .terms-list > li + li {margin-top: 2.5rem;}
+.comp .ci-terms-wrap .terms-list > li > ol {margin-left: 2.416rem;}
+.comp .ci-terms-wrap .terms-list > li > ol > li {list-style-type: decimal;}
 
 /* 글로벌네트워크 */
 .sort [class^=filter-][class*=type1] {background-color: #555758;}
