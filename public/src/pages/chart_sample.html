@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- <meta name="viewport" content="width=1920" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name=" format-detection" content="telephone=no" />
+    <title>LG에너지솔루션 - chart.js sample</title>
+    <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />        
+    <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div style="width: 100%; padding: 0 2.5rem;">
+        <canvas id="responsiveChart"></canvas>
+      </div>
+<script>
+var ctx = document.getElementById('responsiveChart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+       datasets: [
+            {
+                label: 'Bar Dataset',
+                data: [0, 20000, 40000, 60000, 74000],
+                // this dataset is drawn below
+                order: 3,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }, 
+            {
+                label: 'Bar Dataset',
+                data: [10500, 25000, 40050, 30000, 12000],
+                // this dataset is drawn below
+                order: 2
+            }, 
+            {
+                label: 'Line Dataset',
+                data: [11000, 30500, 21000, 40000, 15000],
+                type: 'line',
+                // this dataset is drawn on top
+                order: 1
+            },
+        ],
+       labels: ['January', 'February', 'March', 'April', 'May']
+   },
+   options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+    </script>
+</body>
+</html>
