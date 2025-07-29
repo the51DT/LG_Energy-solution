@@ -15,51 +15,80 @@
 <body>
     <div style="width: 100%; padding: 0 2.5rem;">
         <canvas id="responsiveChart"></canvas>
-      </div>
+    </div>
 <script>
-var ctx = document.getElementById('responsiveChart');
+var ctx = document.getElementById('responsiveChart').getContext('2d');
+
+let width, height, gradient;
+function getGradient(ctx, chartArea) {
+  const chartWidth = chartArea.right - chartArea.left;
+  const chartHeight = chartArea.bottom - chartArea.top;
+  if (!gradient || width !== chartWidth || height !== chartHeight) {
+    // Create the gradient because this is either the first render
+    // or the size of the chart has changed
+    width = chartWidth;
+    height = chartHeight;
+    gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+    gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
+    gradient.addColorStop(1, "rgba(221, 243, 245, 1)");
+  }
+
+  return gradient;
+}
+
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
        datasets: [
             {
-                label: 'Bar Dataset',
-                data: [0, 20000, 40000, 60000, 74000],
+                label: '부채총계',
+                data: [18000, 21000, 28000],
                 // this dataset is drawn below
-                order: 3,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
+                order: 1,
+                backgroundColor: '#0C9CAB',
+                maxBarThickness: 60,
+                categoryPercentage: 0.3,
+                barPercentage: 1,
             }, 
             {
-                label: 'Bar Dataset',
-                data: [10500, 25000, 40050, 30000, 12000],
+                label: '자본총계',
+                data: [18000, 21000, 28000],
                 // this dataset is drawn below
-                order: 2
+                order: 2,
+                backgroundColor: '#3EC2CF',
+                maxBarThickness: 60,
+                categoryPercentage: 0.3,
+                barPercentage: 1,
             }, 
             {
-                label: 'Line Dataset',
-                data: [11000, 30500, 21000, 40000, 15000],
+                label: '자산총계',
+                data: [22000, 47000, 63000,],
                 type: 'line',
                 // this dataset is drawn on top
-                order: 1
+                order: 3,
+                fill: true,
+                backgroundColor: function(context) {
+                    const chart = context.chart;
+                    const {ctx, chartArea} = chart;
+
+                    if (!chartArea) {
+                    // This case happens on initial chart load
+                    return;
+                    }
+                    return getGradient(ctx, chartArea);
+                },
+                borderColor: '#3EC2CF',
+                borderWidth: 2,
+                pointBackgroundColor: '#0C9CAB',
+                pointRadius: 5,
+                pointBorderColor: 'rgba(0, 0, 0, 0)',
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBorderColor: 'rgba(12, 156, 171, 0.2)',
+                pointHoverBorderWidth: 10,
             },
         ],
-       labels: ['January', 'February', 'March', 'April', 'May']
+       labels: ['2021', '2023', '2024',]
    },
    options: {
     scales: {
