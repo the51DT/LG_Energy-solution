@@ -180,14 +180,13 @@ var pubUi = {
                 button.classList.remove("active");
                 map.classList.remove("on");
             } else if (type === "tab") {
-                console.log("tab click event");
-                                
+                // console.log("tab click event");                                
                 pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
                 subCate.classList.add("active");
                 const subCateName = subCate.innerText;
+                const button = map.closest(".select-cate").querySelector("button");            
                 const selectedAriaControls = subCate.getAttribute("aria-controls");
-                console.log("selectedAriaControls: " + selectedAriaControls);
-                const button = map.closest(".select-cate").querySelector("button");
+                // console.log("selectedAriaControls: " + selectedAriaControls);
 
                 if (!subCate.closest(".lang-wrap")) {
                     button.innerText = subCateName;                    
