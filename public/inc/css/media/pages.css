@@ -365,7 +365,7 @@
 .news-content-area .news-list .news-item .news-content{gap:0}
 .news-content-area .news-list .news-item .news-content>span{font-size:0.875rem;margin-bottom:0.5rem}
 .news-content-area .news-list .news-item .news-content .news-title{font-size:1.125rem;line-height:1.75rem;margin-bottom:1rem;}
-.news-content-area .news-list .news-item .news-content .news-title:has(+ .pc  -only){margin-bottom:0;}
+.news-content-area .news-list .news-item .news-content .news-title:has(+ .pc-only){margin-bottom:0;}
 .news-content-area .news-list .news-item .news-content>p{font-size:1rem}
 .news-content-area .news-list .news-item .news-image-wrapper>a{font-size:0.8125rem;padding:0.5rem 1rem}
 .news-content-area .news-list .news-item .news-image-wrapper>a>img{width:1rem}
