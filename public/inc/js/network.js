@@ -8,6 +8,7 @@ const locations = [
         sort: "",
         type: "본사",
         country: "서울",
+        continent: "한국",
         year: "2020",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -26,6 +27,7 @@ const locations = [
         sort: "",
         type: "R&D",
         country: "서울",
+        continent: "한국",
         year: "2018",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -44,6 +46,7 @@ const locations = [
         sort: "",
         type: "R&D",
         country: "과천",
+        continent: "한국",
         year: "2018",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -62,6 +65,7 @@ const locations = [
         sort: "",
         type: "R&D",
         country: "대전",
+        continent: "한국",
         year: "1979",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -80,6 +84,7 @@ const locations = [
         sort: "",
         type: "R&D",
         country: "서초",
+        continent: "한국",
         year: "2025",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -98,6 +103,7 @@ const locations = [
         sort: "",
         type: "생산",
         country: "청주",
+        continent: "한국",
         year: "2024",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -116,6 +122,7 @@ const locations = [
         sort: "원통형, 파우치전지, ESS전지",
         type: "생산",
         country: "청주",
+        continent: "한국",
         year: "2024",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -134,6 +141,7 @@ const locations = [
         sort: "자동차 전지, 소형 전지, ESS",
         type: "생산",
         country: "중국",
+        continent: "아시아·오세아니아",
         year: "2014",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -152,6 +160,7 @@ const locations = [
         sort: "자동차 전지, 소형 전지, ESS",
         type: "생산",
         country: "중국",
+        continent: "아시아·오세아니아",
         year: "2018",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -170,6 +179,7 @@ const locations = [
         sort: "자동차 전지, 소형 전지, ESS",
         type: "생산",
         country: "중국",
+        continent: "아시아·오세아니아",
         year: "2003",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -188,6 +198,7 @@ const locations = [
         sort: "자동차 전지, 소형 전지, ESS",
         type: "판매",
         country: "일본",
+        continent: "아시아·오세아니아",
         year: "2024",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -206,6 +217,7 @@ const locations = [
         sort: "",
         type: "판매",
         country: "대만",
+        continent: "아시아·오세아니아",
         year: "2020",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -224,6 +236,7 @@ const locations = [
         sort: "",
         type: "판매",
         country: "인도",
+        continent: "아시아·오세아니아",
         year: "2023",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: true,
@@ -242,6 +255,7 @@ const locations = [
         sort: "자동차 전지",
         type: "생산",
         country: "인도네시아",
+        continent: "아시아·오세아니아",
         year: "2000",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -260,6 +274,7 @@ const locations = [
         sort: "",
         type: "판매",
         country: "호주",
+        continent: "아시아·오세아니아",
         year: "2017",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -278,6 +293,7 @@ const locations = [
         sort: "자동차 전지",
         type: "생산",
         country: "미국",
+        continent: "아메리카",
         year: "2000",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: true,
@@ -296,6 +312,7 @@ const locations = [
         sort: "소형 전지, ESS",
         type: "생산",
         country: "미국",
+        continent: "아메리카",
         year: "2020",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: true,
@@ -314,6 +331,7 @@ const locations = [
         sort: "",
         type: "판매",
         country: "미국",
+        continent: "아메리카",
         year: "2023",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: true,
@@ -332,6 +350,7 @@ const locations = [
         sort: "",
         type: "판매",
         country: "독일",
+        continent: "유럽",
         year: "2020",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
@@ -350,6 +369,7 @@ const locations = [
         sort: "자동차 전지",
         type: "생산",
         country: "폴란드",
+        continent: "유럽",
         year: "2016",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: true,
@@ -364,12 +384,88 @@ const locations = [
 let map; // 전역 map 객체
 let infowindow; // 인포윈도우 전역 선언 (중복 방지)
 
-let mapInfoContentPC = document.querySelector(".map-info.pc-only .map-info-content-box"); //element 생성 (pc만 우선 테스트용으로)
 let mapFilterList = document.querySelectorAll(".map-filter-list > li");
 let pcInfoBox = document.querySelector(".map-info.pc-only .map-info-content-box");
 let moInfoBox = document.querySelector(".map-info.mo-only .map-info-content-box");
 
-function initMap() {
+
+
+function bindEvents() {
+    // 글로벌 네트워크
+    let networkMap = document.querySelector(".map-conts-area");
+
+    if (networkMap != null && networkMap != "") {
+        const networkMapInfo = networkMap.querySelector(".map-info");
+        const mapInfoItem = networkMapInfo.querySelectorAll(".map-info-item > li > a");
+        const mapImg = networkMap.querySelector(".map-img");
+        const mapMarking = networkMap.querySelector(".map-img .active_img .active_mark");
+        const mapCloseBtn = networkMapInfo.querySelector(".btn-close > button");
+
+        let checkingInterval; // 깜빡임을 위한 인터벌 변수
+
+        mapInfoItem.forEach((item) => {
+            item.addEventListener("click", function (e) {
+                mapInfoItem.forEach((otherItem) => {
+                    if (otherItem !== e.currentTarget) {
+                        otherItem.classList.remove("active");
+                    } else {
+                        e.currentTarget.classList.add("active");
+                    }
+                });
+
+                networkMapInfo.classList.add("on");
+                // mapImg.classList.add("on");
+                // mapMarking.style.display = "block";
+
+                // 기존 깜빡임 인터벌 제거 (중복 방지)
+                // if (checkingInterval) clearInterval(checkingInterval);
+
+                // // 깜빡임 시작secondTab
+                // checkingInterval = setInterval(() => {
+                //     if (mapMarking.style.display === "block") {
+                //         mapMarking.style.display = "none";
+                //     } else {
+                //         mapMarking.style.display = "block";
+                //     }
+                // }, 1000);
+            });
+        });
+
+        mapCloseBtn.addEventListener("click", function (e) {
+            const targetMap = e.currentTarget.closest(".map-info");
+            const targetContinent = targetMap.querySelector(".map-info-content-box").dataset.continent;
+            // console.log(targetContinent);
+
+            targetMap.classList.remove("on");
+
+            // mapImg.classList.remove("on");
+            // mapMarking.style.display = "none";
+            mapInfoItem.forEach((item) => {
+                item.classList.remove("active");
+            });
+
+            if (targetContinent == "한국") {
+                map.setCenter({ lat: 36.5, lng: 127.5 });
+                map.setZoom(5);
+            } else if (targetContinent == "아시아·오세아니아") {
+                map.setCenter({ lat: 34.0479, lng: 100.6197 });
+                map.setZoom(3);
+            } else if (targetContinent == "아메리카") {
+                map.setCenter({ lat: 39.63935570747691, lng: -101.3754683869087 });
+                map.setZoom(4);
+            } else if (targetContinent == "유럽") {
+                map.setCenter({ lat: 54.526, lng: 15.2551 });
+                map.setZoom(5.5);
+            } else {
+                map.setCenter({ lat: 37.5266681, lng: 126.9271165 });
+                map.setZoom(2);
+            }
+        });
+    }
+
+}
+
+function initMap() {    
     const styledMapType = new google.maps.StyledMapType([
         {
             featureType: "poi",
@@ -405,7 +501,7 @@ function initMap() {
 
         marker.addListener("click", () => {
             map.setCenter(marker.getPosition());
-            map.setZoom(18);
+            map.setZoom(15);
 
             // 마커클릭시, 노출되는 infowindow
             // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
@@ -413,6 +509,8 @@ function initMap() {
             // infowindow.open(map, marker);
         });
     });
+
+    bindEvents();
 }
 
 let markers = []; // 모든 마커 저장
@@ -509,10 +607,17 @@ function updateInfoList(filtered) {
                 html += "</div>";
 
                 // 3. PC + Mobile info 영역 모두 갱신
-                if (pcInfoBox) pcInfoBox.innerHTML = html;
-                if (moInfoBox) moInfoBox.innerHTML = html;
+                if (pcInfoBox) {
+                    pcInfoBox.dataset.continent = targetLocation.continent;
+                    pcInfoBox.innerHTML = html;
+                }
+                if (moInfoBox) {
+                    moInfoBox.dataset.continent = targetLocation.continent;
+                    moInfoBox.innerHTML = html;
+                }
+                
             } else {
-                console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
+                // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
 
                 let html = "";
 
@@ -544,6 +649,17 @@ mapFilterList.forEach((button) => {
                 title: loc.place,
             });
             markers.push(marker);
+            
+
+            marker.addListener("click", () => {
+                map.setCenter(marker.getPosition());
+                map.setZoom(15);
+
+                // 마커클릭시, 노출되는 infowindow
+                // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
+                // infowindow.setContent(`<strong>${location.place}</strong>`);
+                // infowindow.open(map, marker);
+            });
         });
 
         updateInfoList(filtered);
@@ -557,6 +673,8 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
         tab.classList.add("on");
 
         const tabId = tab.id;
+        const tabContryText = document.querySelector(`#${tabId} > button`).innerText;
+
         let regionFilter = [];
 
         switch (tabId) {
@@ -579,11 +697,29 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
         let filtered = [];
         if (regionFilter.length > 0) {
             filtered = locations.filter((loc) => regionFilter.includes(loc.country));
+            
+            if (tabContryText == "한국") {
+                map.setCenter({ lat: 36.5, lng: 127.5 });
+                map.setZoom(5);
+            } else if (tabContryText == "아시아·오세아니아") {
+                map.setCenter({ lat: 34.0479, lng: 100.6197 });
+                map.setZoom(3);
+            } else if (tabContryText == "아메리카") {
+                map.setCenter({ lat: 39.63935570747691, lng: -101.3754683869087 });
+                map.setZoom(4);
+            } else if (tabContryText == "유럽") {
+                map.setCenter({ lat: 54.526, lng: 15.2551 });
+                map.setZoom(5.5);
+            } else if (tabContryText == "전체") {
+                map.setCenter({ lat: 37.5266681, lng: 126.9271165 });
+                map.setZoom(2);
+            }
         } else {
             filtered = locations;
         }
 
         clearMarkers();
+
         filtered.forEach((loc) => {
             const marker = new google.maps.Marker({
                 map: map,
@@ -592,11 +728,23 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
                 title: loc.place,
             });
             markers.push(marker);
+
+            marker.addListener("click", () => {
+                map.setCenter(marker.getPosition());
+                map.setZoom(15);
+
+                // 마커클릭시, 노출되는 infowindow
+                // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
+                // infowindow.setContent(`<strong>${location.place}</strong>`);
+                // infowindow.open(map, marker);
+            });
         });
 
         updateInfoList(filtered);
+        //initMap(); // 추가
     });
 });
+
 // li 클릭 → 지도 이동
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".map-info-item li").forEach(function (li) {
@@ -611,7 +759,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (targetLocation) {
                 const targetLatLng = new google.maps.LatLng(targetLocation.lat, targetLocation.lng);
                 map.setCenter(targetLatLng);
-                map.setZoom(18);
+                map.setZoom(15);
 
                 // 리스트 내 place 클릭시, 노출되는 infowindow
                 // infowindow.setContent(`<strong>${targetLocation.place}</strong>`);
@@ -680,7 +828,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (pcInfoBox) pcInfoBox.innerHTML = html;
                 if (moInfoBox) moInfoBox.innerHTML = html;
             } else {
-                console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
+                // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
 
                 let html = "";
 
@@ -722,6 +870,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: loc.place,
                 });
                 markers.push(marker);
+
+                marker.addListener("click", () => {
+                    map.setCenter(marker.getPosition());
+                    map.setZoom(15);
+
+                    // 마커클릭시, 노출되는 infowindow
+                    // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
+                    // infowindow.setContent(`<strong>${location.place}</strong>`);
+                    // infowindow.open(map, marker);
+                });
             });
 
             // 4. 리스트도 업데이트

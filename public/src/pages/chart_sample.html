@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- <meta name="viewport" content="width=1920" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name=" format-detection" content="telephone=no" />
+    <title>LG에너지솔루션 - chart.js sample</title>
+    <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+    <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />        
+    <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div style="width: 100%; padding: 0 2.5rem;">
+        <canvas id="responsiveChart"></canvas>
+    </div>
+<script>
+var ctx = document.getElementById('responsiveChart').getContext('2d');
+
+let width, height, gradient;
+function getGradient(ctx, chartArea) {
+  const chartWidth = chartArea.right - chartArea.left;
+  const chartHeight = chartArea.bottom - chartArea.top;
+  if (!gradient || width !== chartWidth || height !== chartHeight) {
+    // Create the gradient because this is either the first render
+    // or the size of the chart has changed
+    width = chartWidth;
+    height = chartHeight;
+    gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+    gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
+    gradient.addColorStop(1, "rgba(221, 243, 245, 1)");
+  }
+
+  return gradient;
+}
+
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+       datasets: [
+            {
+                label: '부채총계',
+                data: [18000, 21000, 28000],
+                // this dataset is drawn below
+                order: 1,
+                backgroundColor: '#0C9CAB',
+                maxBarThickness: 60,
+                categoryPercentage: 0.3,
+                barPercentage: 1,
+            }, 
+            {
+                label: '자본총계',
+                data: [18000, 21000, 28000],
+                // this dataset is drawn below
+                order: 2,
+                backgroundColor: '#3EC2CF',
+                maxBarThickness: 60,
+                categoryPercentage: 0.3,
+                barPercentage: 1,
+            }, 
+            {
+                label: '자산총계',
+                data: [22000, 47000, 63000,],
+                type: 'line',
+                // this dataset is drawn on top
+                order: 3,
+                fill: true,
+                backgroundColor: function(context) {
+                    const chart = context.chart;
+                    const {ctx, chartArea} = chart;
+
+                    if (!chartArea) {
+                    // This case happens on initial chart load
+                    return;
+                    }
+                    return getGradient(ctx, chartArea);
+                },
+                borderColor: '#3EC2CF',
+                borderWidth: 2,
+                pointBackgroundColor: '#0C9CAB',
+                pointRadius: 5,
+                pointBorderColor: 'rgba(0, 0, 0, 0)',
+                pointBorderWidth: 5,
+                pointHoverRadius: 5,
+                pointHoverBorderColor: 'rgba(12, 156, 171, 0.2)',
+                pointHoverBorderWidth: 10,
+            },
+        ],
+       labels: ['2021', '2023', '2024',]
+   },
+   options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+    </script>
+</body>
+</html>
