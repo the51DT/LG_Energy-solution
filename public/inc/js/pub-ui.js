@@ -88,75 +88,79 @@ var pubUi = {
             });
         });
         
-        this.self.wrap.addEventListener("scroll", function (el) {
-            const historyWrap = document.querySelector(".history-wrap");
-            const aside = document.querySelector(".wrap aside");
-            const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
-            
+        if(!this.self.wrap) {
+            return;
+        } else {
+            this.self.wrap.addEventListener("scroll", function (el) {
+                const historyWrap = document.querySelector(".history-wrap");
+                const aside = document.querySelector(".wrap aside");
+                const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
+                
 
-            // 스크롤 이벤트 처리
-            const nowScroll = el.target.scrollTop;
-            const page_h = window.innerHeight * 0.3;
-            // console.log("body scroll event");
-            // console.log("nowScroll : " + nowScroll);
-            // aside 표시/숨김 처리
-            if (nowScroll > page_h) {
-                aside && aside.style.display !== "block" && pubUi.fadeIn(aside, 500);
-            } else {
-                aside && (aside.style.display = "none");
-            }
-
-            // aside 클릭 시 스크롤 최상단 이동
-            if (aside) {
-                aside.onclick = function () {
-                    el.target.scrollTo({ top: 0, behavior: "smooth" });
-                };
-            }
-
-            // history-wrap 처리
-            if (historyWrap && historyWrap.classList.contains("each-view")) {
-                const historyViewY = historyWrap.offsetTop - 140;
-
-                if (nowScroll > 0 && !historyWrap.getAttribute("data-scrolling")) {
-                    document.body.scrollTo({ top: historyViewY, behavior: "smooth" });
-                    historyWrap.setAttribute("data-scrolling", "true");
-                    document.body.style.overflow = "hidden";
-                    // console.log("scrollDown !!!");
-                }
-            }
-
-            targetContentItem.forEach((item, idx) => {
-                const itemTop = item.offsetTop - 152; // - 600; // 아이템의 상단 위치 - 600                
-                const itemHeight = item.clientHeight;
-                const itemBottom = itemTop + itemHeight;
-
-                const itemDataBg = item.dataset.bgtype;
-                // console.log("itemDataBg : " + itemDataBg);
-
-                // 현재 스크롤 위치가 아이템 영역에 들어왔는지 확인
-                if (nowScroll >= itemTop && nowScroll < itemBottom) {
-                    // 해당 아이템에 on 클래스 추가
-                    item.classList.add("on");
-                    // 다른 아이템에서 on 클래스 제거
-                    targetContentItem.forEach((otherItem, otherIdx) => {
-                        if (otherIdx !== idx) {
-                            otherItem.classList.remove("on");
-                        }
-                    });
-
-                    if (itemDataBg === "dark" && item.classList.contains("on")) {
-                        // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
-                        item.style.color = "#fff";
-                    }
+                // 스크롤 이벤트 처리
+                const nowScroll = el.target.scrollTop;
+                const page_h = window.innerHeight * 0.3;
+                // console.log("body scroll event");
+                // console.log("nowScroll : " + nowScroll);
+                // aside 표시/숨김 처리
+                if (nowScroll > page_h) {
+                    aside && aside.style.display !== "block" && pubUi.fadeIn(aside, 500);
                 } else {
-                    item.classList.remove("on");
-                    if (itemDataBg === "dark") {
-                        // 값 초기화
-                        item.style.color = "revert";
+                    aside && (aside.style.display = "none");
+                }
+
+                // aside 클릭 시 스크롤 최상단 이동
+                if (aside) {
+                    aside.onclick = function () {
+                        el.target.scrollTo({ top: 0, behavior: "smooth" });
+                    };
+                }
+
+                // history-wrap 처리
+                if (historyWrap && historyWrap.classList.contains("each-view")) {
+                    const historyViewY = historyWrap.offsetTop - 140;
+
+                    if (nowScroll > 0 && !historyWrap.getAttribute("data-scrolling")) {
+                        document.body.scrollTo({ top: historyViewY, behavior: "smooth" });
+                        historyWrap.setAttribute("data-scrolling", "true");
+                        document.body.style.overflow = "hidden";
+                        // console.log("scrollDown !!!");
                     }
                 }
+
+                targetContentItem.forEach((item, idx) => {
+                    const itemTop = item.offsetTop - 152; // - 600; // 아이템의 상단 위치 - 600                
+                    const itemHeight = item.clientHeight;
+                    const itemBottom = itemTop + itemHeight;
+
+                    const itemDataBg = item.dataset.bgtype;
+                    // console.log("itemDataBg : " + itemDataBg);
+
+                    // 현재 스크롤 위치가 아이템 영역에 들어왔는지 확인
+                    if (nowScroll >= itemTop && nowScroll < itemBottom) {
+                        // 해당 아이템에 on 클래스 추가
+                        item.classList.add("on");
+                        // 다른 아이템에서 on 클래스 제거
+                        targetContentItem.forEach((otherItem, otherIdx) => {
+                            if (otherIdx !== idx) {
+                                otherItem.classList.remove("on");
+                            }
+                        });
+
+                        if (itemDataBg === "dark" && item.classList.contains("on")) {
+                            // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
+                            item.style.color = "#fff";
+                        }
+                    } else {
+                        item.classList.remove("on");
+                        if (itemDataBg === "dark") {
+                            // 값 초기화
+                            item.style.color = "revert";
+                        }
+                    }
+                });
             });
-        });
+        }
     },
     // fadeIn 함수: 요소를 서서히 나타나게 하는 함수
     fadeIn: function (element, duration) {

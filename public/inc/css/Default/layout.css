@@ -340,7 +340,7 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 
 /* .page-map-wrap .selectbox-wrap > div.select-cate:first-child button::before {display:none;} */
 /* ul.page-map{display:none;} */
-.content-area-head-tab {position:sticky; top:calc(52 / 16 * 1rem);background-color:#fff; z-index: 50;}
+.content-area-head-tab {position:sticky; top:calc(52 / 16 * 1rem);background-color:#fff; z-index: 40;}
 
 .lang-wrap {position: relative;}
 .lang-wrap .lang-button {line-height: 1; color: var(--colorElement-light-text-text-default01);}
