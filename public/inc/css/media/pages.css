@@ -11,7 +11,7 @@
 }
 
 /* 모바일 사이즈 css */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1279px) {
  /* 지속가능경영(esgm) */
 .esgm .cont-area-sect > section:first-child {padding-top: 2rem;}
 .esgm .cont-area-info {padding-bottom: 4.75rem;}
@@ -198,7 +198,7 @@
 .evt-schedule-top {padding-bottom: 3rem;}
 .evt-schedule-top .schedule-head {margin-bottom: 1rem; padding: 0 1.28rem;}
 .evt-schedule-top .schedule-head .year {font-size: 1.375rem; line-height: 1.925rem;}
-.evt-schedule-top .schedule-month {overflow-x: scroll;}
+.evt-schedule-top .schedule-month {overflow-x: scroll; margin: 0 1.25rem;}
 .evt-schedule-top .schedule-month .item > a {width: 3.75rem; height: 3.75rem; border-radius: 0.5rem;}
 .evt-schedule-top .schedule-month .item > a .month {font-size: 1.375rem; line-height: 1.925rem;}
 .evt-schedule-top .schedule-month .item > a .month span {font-size: 0.875rem; line-height: 1.4rem; padding-left: 0;}
@@ -349,7 +349,7 @@
 .map-info-content-box .info-content-body .sns-area > ul > li > a {width: 100%; height: 100%;}
 
 /* 뉴스룸 */
-.news h3{font-size:2rem;font-weight:600;margin-top:0;margin-bottom:1rem}
+.news h3{font-size:2rem;font-weight:600;margin-top:2rem;margin-bottom:1rem}
 
 .news-content-area{padding:0 1.25rem;margin-bottom:6.25rem}
 .news-content-area .top-bar{flex-direction:column-reverse;align-items:flex-start;gap:1.5rem;margin-bottom:1rem}
@@ -369,6 +369,7 @@
 
 .news-content-area .search-result{display:flex;align-items:center;gap:1rem;justify-content:baseline;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid #C9CED1;width:auto; margin-top: 2rem;}
 .news-content-area .search-result>input{font-size:1.375rem;width:100%;font-weight:600}
+.news-content-area .search-result>input::placeholder {font-size: 1.375rem;}
 .news-content-area .search-result>img{width:1.75rem}
 .news-content-area .search-result>button>img{padding:0.41875rem;width:1.375rem}
 .news-content-area .top-bar .total-result{border-bottom:0;margin-bottom:0;padding-bottom:0}
@@ -396,5 +397,29 @@
 .news-detail-area .view-btn-wrap{margin:0 1.25rem;margin-bottom:6.25rem}
 
 /* R&D */
+
+/* FAQ */
+.faq h3 {margin-top: 1.5rem; margin-bottom: 0;}
+.faq .tab-content-box {padding: 1.5rem 0 2rem; margin-top: 1.5rem;}
+.faq .paging-wrap {padding-bottom: 6rem;}
+.faq .content-area {padding-top: 0;}
+.faq .head-area,
+.faq .content-area .tab-content{max-width: revert; width: 100%; padding: 0 1.25rem;}
+.faq .tab-cate-wrap {padding: 0 0 0 1.25rem;}
+
+.faq .tab-cate-wrap .tab-category {padding: 0; height: auto; gap: 0.5rem;}
+.faq .tab-cate-wrap .tab-category > li button {padding: 0.53rem 1.5rem;} 
+.faq .tab-cate-wrap .tab-category > li:last-child {padding-right: 1.25rem;}
+.faq .news-content-area .search-result {border-bottom: 0; margin: 0; padding:2.16rem 0;}
+.faq .news-content-area .search-result>img {width: 2rem;}
+.faq .news-content-area .search-result>input {font-size: 1.25rem;}
+.faq .news-content-area .search-result>input::placeholder {font-size: 1.25rem; line-height: 1.925rem;}
+.faq .desc-wrap > button {margin-top: 1.5rem;}
+.paging-wrap > .paging.mo-only {display: flex !important; justify-content: center;}
+.paging-wrap > .paging.mo-only > li:not(.arrow) a  {width: 1.875rem; height: auto;}
+.paging-wrap > .paging.mo-only > li a {font-size: 1rem; font-weight: 600; line-height: 1.5rem; margin: 0.125rem 0;}
+.paging-wrap > .paging.mo-only > li a > img {width: 1.5rem; height: 1.5rem;}
+.paging-wrap > .paging.mo-only > li.arrow.prev {margin-right: 1rem;}
+.paging-wrap > .paging.mo-only > li.arrow.next {margin-left: 1rem;}
 
 }

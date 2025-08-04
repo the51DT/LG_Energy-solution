@@ -14,6 +14,10 @@ var pubUi = {
         this.acdItem.init();
 
         this.evtScheduleLeft();
+        
+        this.scrollToEvt();
+        this.historyMotionEvt();
+        this.historyViewEvt();
 
     },
 
@@ -30,6 +34,13 @@ var pubUi = {
         this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
         this.self.selectMenu = document.querySelectorAll(".activeSelect .select-menu");
         
+        /* content-item */
+        this.self.pcOnly = document.querySelector(".pc-only");
+        this.self.moOnly = document.querySelector(".mo-only");
+        this.self.wrap = document.querySelector(".wrap");
+        this.self.contentItem = document.querySelectorAll("[class^=content-item]");
+
+        // console.log(this.self.contentItem);
 
         
     },
@@ -75,7 +86,95 @@ var pubUi = {
                     map.classList.remove("on");
                 });
             });
-        });        
+        });
+        
+        this.self.wrap.addEventListener("scroll", function (el) {
+            const historyWrap = document.querySelector(".history-wrap");
+            const aside = document.querySelector(".wrap aside");
+            const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
+            
+
+            // 스크롤 이벤트 처리
+            const nowScroll = el.target.scrollTop;
+            const page_h = window.innerHeight * 0.3;
+            // console.log("body scroll event");
+            // console.log("nowScroll : " + nowScroll);
+            // aside 표시/숨김 처리
+            if (nowScroll > page_h) {
+                aside && aside.style.display !== "block" && pubUi.fadeIn(aside, 500);
+            } else {
+                aside && (aside.style.display = "none");
+            }
+
+            // aside 클릭 시 스크롤 최상단 이동
+            if (aside) {
+                aside.onclick = function () {
+                    el.target.scrollTo({ top: 0, behavior: "smooth" });
+                };
+            }
+
+            // history-wrap 처리
+            if (historyWrap && historyWrap.classList.contains("each-view")) {
+                const historyViewY = historyWrap.offsetTop - 140;
+
+                if (nowScroll > 0 && !historyWrap.getAttribute("data-scrolling")) {
+                    document.body.scrollTo({ top: historyViewY, behavior: "smooth" });
+                    historyWrap.setAttribute("data-scrolling", "true");
+                    document.body.style.overflow = "hidden";
+                    // console.log("scrollDown !!!");
+                }
+            }
+
+            targetContentItem.forEach((item, idx) => {
+                const itemTop = item.offsetTop - 152; // - 600; // 아이템의 상단 위치 - 600                
+                const itemHeight = item.clientHeight;
+                const itemBottom = itemTop + itemHeight;
+
+                const itemDataBg = item.dataset.bgtype;
+                // console.log("itemDataBg : " + itemDataBg);
+
+                // 현재 스크롤 위치가 아이템 영역에 들어왔는지 확인
+                if (nowScroll >= itemTop && nowScroll < itemBottom) {
+                    // 해당 아이템에 on 클래스 추가
+                    item.classList.add("on");
+                    // 다른 아이템에서 on 클래스 제거
+                    targetContentItem.forEach((otherItem, otherIdx) => {
+                        if (otherIdx !== idx) {
+                            otherItem.classList.remove("on");
+                        }
+                    });
+
+                    if (itemDataBg === "dark" && item.classList.contains("on")) {
+                        // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
+                        item.style.color = "#fff";
+                    }
+                } else {
+                    item.classList.remove("on");
+                    if (itemDataBg === "dark") {
+                        // 값 초기화
+                        item.style.color = "revert";
+                    }
+                }
+            });
+        });
+    },
+    // fadeIn 함수: 요소를 서서히 나타나게 하는 함수
+    fadeIn: function (element, duration) {
+        element.style.opacity = 0;
+        element.style.display = "block";
+
+        let start = null;
+        function animate(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const opacity = Math.min(progress / duration, 1);
+            element.style.opacity = opacity;
+            if (progress < duration) {
+                requestAnimationFrame(animate);
+            }
+        }
+
+        requestAnimationFrame(animate);
     },
     // IR정보 > IR행사 모바일일경우, 상단 schedule-month 스크롤 중앙 정렬 처리
     evtScheduleLeft: function () {
@@ -118,10 +217,14 @@ var pubUi = {
     scrollToEvt: function (targetId) {
         if (targetId) {
             const targetContent = document.querySelector(targetId);
-            const offsetTop = targetContent.offsetTop;
-            const totalHeight = document.querySelector(".select-menu-wrap").clientHeight + document.querySelector(".content-area-head-tab").clientHeight;
-            document.querySelector("html, body").scrollTo({ top: offsetTop - totalHeight, behavior: "smooth" });
+            const targetOffsetY = targetContent.offsetTop;
+            const pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
+            const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
+            const totalHeadHeight = pageMapHeight + contentHeadHeight;
+
+            document.querySelector("body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
         }
+        
     },
 
     chkFileboxDisabled: function () {
@@ -151,6 +254,355 @@ var pubUi = {
             });
         });
     },
+
+    historyMotionEvt: function(){
+        // NodeList를 일반 배열로 변환하여 배열 메서드(map, find 등) 사용 가능하도록 처리
+        const leftItems = Array.from(document.querySelectorAll(".left-area .year-container .item"));
+        const rightItems = Array.from(document.querySelectorAll(".right-area .year-container .item"));
+        const yearTermLinks = Array.from(document.querySelectorAll(".year-term-container .year-item-list > a"));
+        const historyContArea = document.querySelector(".history-cont-wrap"); // 스크롤 이벤트 타겟 영역
+
+        const yearClickIndex = {}; // 연도 구간별 클릭 인덱스 기억
+        let lastClickedRange = null; // 마지막 클릭한 연도 구간
+        let isFirstClick = true; // 최초 클릭인지 여부
+
+        // "2000~2018" 형식 문자열 → {start: 2000, end: 2018} 객체로 변환
+        function parseYearRange(rangeStr) {
+            const [start, end] = rangeStr.split("~").map((s) => parseInt(s.trim(), 10));
+            return { start, end };
+        }
+
+        // 특정 연도가 주어진 범위 안에 포함되는지 확인
+        function isInRange(year, start, end) {
+            return year >= start && year <= end;
+        }
+
+        // 특정 연도 구간에 해당하는 leftItems 필터링
+        function getMatchingItems(rangeStr) {
+            const { start, end } = parseYearRange(rangeStr);
+            return leftItems.filter((item) => {
+                const year = parseInt(item.dataset.year, 10);
+                return isInRange(year, start, end);
+            });
+        }
+
+        // 현재 인덱스 기준 다음 연도 인덱스 찾기
+        function findNextGlobalIndex(currentIndex) {
+            const next = currentIndex + 1;
+            return next < leftItems.length ? next : null;
+        }
+
+        // 숫자 카운트 애니메이션 함수 (숫자 증가 + pop 효과)
+        function animateNumber(el, target, duration = 800) {
+            let start = parseInt(el.innerText, 10);
+            if (isNaN(start)) start = 0;
+            if (start === target) start = target - 1;
+
+            const frameRate = 1000 / 60;
+            const totalFrames = Math.round(duration / frameRate);
+            let frame = 0;
+
+            const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+            const counter = setInterval(() => {
+                frame++;
+                const progress = easeOut(frame / totalFrames);
+                const current = Math.round(start + (target - start) * progress);
+                el.innerText = current.toString().padStart(2, "0");
+
+                if (frame === 1) {
+                    el.classList.add("num-pop");
+                    setTimeout(() => el.classList.remove("num-pop"), 300);
+                }
+
+                if (frame >= totalFrames) {
+                    clearInterval(counter);
+                    el.innerText = target.toString().padStart(2, "0");
+                }
+            }, frameRate);
+        }
+
+        // 공통 연도 전환 처리 (좌우 영역 + 숫자 애니메이션 + 상태 클래스 제어 포함)
+        function activateYearByIndex(index) {
+            const left = leftItems[index];
+            const right = rightItems[index];
+
+            // right-area item의 bullet 초기화 후 모션 동작후 생성되게하기 위함
+            document.querySelector(".right-area .year-item-list").classList.remove("on");
+            setTimeout(function () {
+                document.querySelector(".right-area .year-item-list").classList.add("on");
+            }, 500);
+
+            // 좌우 모든 아이템에서 상태 초기화
+            leftItems.forEach((item) => item.classList.remove("active", "prev", "next"));
+            rightItems.forEach((item) => {
+                item.classList.remove("active", "prev", "next");
+                item.style.display = "none";
+            });
+
+            // 현재 인덱스 항목 활성화 + 양 옆 prev/next 클래스 추가
+            left.classList.add("active");
+            right.classList.add("active");
+
+            if (leftItems[index - 1]) leftItems[index - 1].classList.add("prev");
+            if (leftItems[index + 1]) leftItems[index + 1].classList.add("next");
+            if (rightItems[index - 1]) rightItems[index - 1].classList.add("prev");
+            if (rightItems[index + 1]) rightItems[index + 1].classList.add("next");
+
+            // right 영역 표시/숨김 처리
+            rightItems.forEach((item) => {
+                const show = item.classList.contains("active") || item.classList.contains("prev") || item.classList.contains("next");
+                item.style.display = show ? "" : "none";
+            });
+
+            // 연도 숫자 처리 (슬라이드 애니메이션)
+            const yearText = left.dataset.year;
+            const firstSpan = left.closest(".year-item-list").querySelector(".year .first");
+            const secondSpan = left.closest(".year-item-list").querySelector(".year .second");
+
+            if (firstSpan && secondSpan) {
+                const yearFirst = parseInt(yearText.slice(0, 2), 10);
+                const yearSecond = parseInt(yearText.slice(2, 4), 10);
+
+                const currentFirst = parseInt(firstSpan.innerText, 10);
+                const currentSecond = parseInt(secondSpan.innerText, 10);
+
+                if (currentFirst !== yearFirst) {
+                    animateNumber(firstSpan, yearFirst);
+                    setTimeout(() => {
+                        if (currentSecond !== yearSecond) {
+                            animateNumber(secondSpan, yearSecond);
+                        }
+                    }, 300);
+                } else if (currentSecond !== yearSecond) {
+                    animateNumber(secondSpan, yearSecond);
+                }
+            }
+
+            // 연도 구간 탭(on) 처리
+            const activeYear = parseInt(left.dataset.year, 10);
+            yearTermLinks.forEach((link) => {
+                const { start, end } = parseYearRange(link.dataset.year);
+                const li = link.closest(".year-item-list");
+                li.classList.toggle("on", isInRange(activeYear, start, end));
+            });
+        }
+
+        // 연도 탭 클릭 이벤트 처리
+        yearTermLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+                const rangeStr = this.dataset.year;
+
+                if (lastClickedRange !== rangeStr) {
+                    yearClickIndex[rangeStr] = 0;
+                    lastClickedRange = rangeStr;
+                }
+
+                const matches = getMatchingItems(rangeStr);
+                let rangeIdx = yearClickIndex[rangeStr] || 0;
+
+                // 최초 클릭 시 기존 active가 동일하면 다음 인덱스로 강제 이동
+                if (isFirstClick && matches.length > 0) {
+                    const activeLeft = document.querySelector(".left-area .item.active");
+                    const matchLeft = matches[rangeIdx];
+
+                    if (activeLeft === matchLeft) {
+                        activeLeft.classList.remove("active");
+                        const year = activeLeft.dataset.year;
+                        const activeRight = rightItems.find((item) => item.dataset.year === year);
+                        if (activeRight) activeRight.classList.remove("active");
+
+                        rangeIdx++;
+                        yearClickIndex[rangeStr] = rangeIdx;
+                    }
+
+                    isFirstClick = false;
+                }
+
+                let globalIndex = null;
+
+                if (rangeIdx < matches.length) {
+                    globalIndex = leftItems.findIndex((item) => item === matches[rangeIdx]);
+                    yearClickIndex[rangeStr]++;
+                } else {
+                    const currentActive = document.querySelector(".left-area .item.active");
+                    const currentIdx = currentActive ? leftItems.findIndex((item) => item === currentActive) : -1;
+                    const nextIdx = findNextGlobalIndex(currentIdx);
+                    if (nextIdx !== null) {
+                        globalIndex = nextIdx;
+                        const nextYear = parseInt(leftItems[nextIdx].dataset.year, 10);
+                        const nextRange = yearTermLinks.find((link) => {
+                            const { start, end } = parseYearRange(link.dataset.year);
+                            return isInRange(nextYear, start, end);
+                        });
+                        if (nextRange) {
+                            lastClickedRange = nextRange.dataset.year;
+                            yearClickIndex[lastClickedRange] = getMatchingItems(lastClickedRange).findIndex((item) => parseInt(item.dataset.year, 10) === nextYear) + 1;
+                        }
+                    }
+                }
+
+                if (globalIndex !== null && leftItems[globalIndex]) {
+                    activateYearByIndex(globalIndex);
+                }
+            });
+        });
+
+        // history-cont-wrap 내 스크롤 휠 이벤트 처리 (스크롤로 연도 이동)
+        // as-is
+        // if(historyContArea) {
+        //     historyContArea.addEventListener("wheel", (e) => {
+        //         const deltaY = e.deltaY;
+        //         const isScrollingDown = deltaY > 0;
+        //         const isScrollingUp = deltaY < 0;
+
+        //         const currentActive = document.querySelector(".left-area .item.active");
+        //         const currentIdx = leftItems.findIndex((item) => item === currentActive);
+
+        //         const atFirst = currentIdx === 0;
+        //         const atLast = currentIdx === leftItems.length - 1;
+
+        //         const historyView = document.querySelector(".history-wrap.each-view");
+        //         const historyViewY = historyView.offsetTop - 140;
+
+        //         // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
+        //         const allowExternalScroll = (isScrollingDown && atLast) || (!isScrollingDown && atFirst);
+
+        //         // 🔒 외부 스크롤 차단
+        //         if (!allowExternalScroll) {
+        //             e.preventDefault();
+        //             // document.querySelector("body").style.overflow = "hidden";
+        //         } else {
+        //             document.querySelector("body").style.overflow = "auto";
+
+        //             setTimeout(function(){
+        //                 if (isScrollingUp) {
+        //                     console.log("scrollUp !!");
+        //                     document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+        //                 }
+        //             },1000)
+        //         }
+
+        //         // 연도 전환 처리
+        //         const nextIdx = isScrollingDown
+        //             ? Math.min(currentIdx + 1, leftItems.length - 1)
+        //             : Math.max(currentIdx - 1, 0);
+
+        //         if (nextIdx !== currentIdx) {
+        //             activateYearByIndex(nextIdx);
+        //         }
+        //     }, { passive: false });
+        // }
+
+        // to-be mac os 대응
+        if(historyContArea) {
+            let isHandlingScroll = false;
+
+            // 터치 시작 위치 저장 (iOS 터치 대응용) - ios는 휠이벤트 인식하지못해, touchpad기반이라 다른 이벤트 조건 처리되도록 예외처리 필요하다고하여 소스 수정하였음.
+            historyContArea.addEventListener("touchstart", (e) => { 
+                handleCustomScroll.touchStartY = e.touches[0].clientY; 
+                }, { passive: true }
+            );
+
+            // 다양한 이벤트 리스너 등록
+            ["wheel", "mousewheel", "DOMMouseScroll", "touchmove"].forEach((eventType) => {
+                historyContArea.addEventListener(eventType, handleCustomScroll, { passive: false });
+            });
+
+            function handleCustomScroll(e) {
+                // ✅ 중복 실행 방지
+                if (isHandlingScroll) return;
+
+                // ✅ 스크롤 방향 추출
+                let deltaY = 0;
+
+                if (e.type === "touchmove") {
+                    if (typeof handleCustomScroll.touchStartY === "number") {
+                        deltaY = handleCustomScroll.touchStartY - e.touches[0].clientY;
+                    }
+                } else {
+                    deltaY = e.deltaY || -e.wheelDelta || e.detail || 0;
+                }
+
+                const isScrollingDown = deltaY > 5;
+                const isScrollingUp = deltaY < -5;
+
+                if (!isScrollingDown && !isScrollingUp) return;
+
+                isHandlingScroll = true; // 🔒 debounce
+
+                // ✅ 기존 로직 그대로 유지
+                const currentActive = document.querySelector(".left-area .item.active");
+                const currentIdx = leftItems.findIndex((item) => item === currentActive);
+
+                const atFirst = currentIdx === 0;
+                const atLast = currentIdx === leftItems.length - 1;
+
+                const historyView = document.querySelector(".history-wrap.each-view");
+                const historyViewY = historyView.offsetTop - 140;
+
+                // 외부 스크롤 허용 조건
+                const allowExternalScroll = (isScrollingDown && atLast) || (isScrollingUp && atFirst);
+
+                if (!allowExternalScroll) {
+                    e.preventDefault();
+                    // document.querySelector("body").style.overflow = "hidden";                    
+                } else {                    
+                    if (isScrollingUp) {
+                        // console.log("scrollUp !!!");
+                        document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+                        
+                        setTimeout(function(){
+                            historyView.removeAttribute("data-scrolling");
+                            document.querySelector("body").style.overflow = "auto";
+                        },1000)
+                    }                    
+                }
+
+                // 연도 전환 처리
+                const nextIdx = isScrollingDown ? Math.min(currentIdx + 1, leftItems.length - 1) : Math.max(currentIdx - 1, 0);
+
+                if (nextIdx !== currentIdx) {
+                    activateYearByIndex(nextIdx);
+                }
+
+                // ✅ debounce 해제 (500ms 후)
+                setTimeout(() => {
+                    isHandlingScroll = false;
+                }, 500);
+            }
+        }
+
+    },
+    historyViewEvt: function(){
+
+        if(document.querySelector(".history-wrap") != null) {
+            const allView = document.querySelector("#allView");
+            const eachView = document.querySelector("#eachView");
+            const showAllBtn = document.querySelector("button[onclick*='#allView']");
+            const backToEachBtn = document.querySelector("button[onclick*='#eachView']");
+            
+            // 한눈에 보기 클릭 시 팝업 표시
+            showAllBtn.addEventListener("click", () => {
+                allView.classList.add("active");
+                eachView.style.display = "none";
+            });
+
+            // 하나씩 보기 클릭 시 팝업 숨기기
+            backToEachBtn.addEventListener("click", () => {
+                // console.log("eachView")
+                allView.classList.remove("active");
+                setTimeout(() => {
+                    eachView.style.display = "block";
+                }, 400); // transition 시간만큼 기다림
+
+                setTimeout(function () {
+                    pubUi.scrollToEvt("#eachView");
+                }, 1000);
+            });     
+        }
+    },
+
 
     form: {
         init() {

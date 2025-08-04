@@ -202,11 +202,262 @@
                                     </div>
                                 </div>
                                 <div class="tab-content" id="tab3-content">
-                                    <div class="cont-area-wrap">
-                                        <div class="cont-area-sect">
-                                            <section>
-                                                연혁
-                                            </section>
+                                    <div class="history-wrap each-view" id="eachView">
+                                        <div class="history-cont-wrap">
+                                            <div class="left-area">
+                                                <div class="year-container">
+                                                    <ul class="year-item-list on">
+                                                        <div class="year"><span class="first">19</span><span class="second">47</span></div>
+                                                        <!-- 1947~1999-->
+                                                        <li class="item active" data-year="1947">                                                        
+                                                            <div class="desc">대한민국 <strong>배터리의 역사</strong>가<br/>본격적으로 시작되다</div>
+                                                        </li>
+                                                        <li class="item" data-year="1992">                                                        
+                                                            <div class="desc">대한민국 <strong>배터리의 역사</strong>가<br/>본격적으로 시작되다 1992</div>
+                                                        </li>
+                                                        <!-- 2000~2018 -->
+                                                        <li class="item" data-year="2000">
+                                                            <div class="desc"><strong>국내에서 세계로</strong>확장해<br/>나아가는 LG의 배터리</div>
+                                                        </li>
+                                                        <!-- 2020~2022 -->
+                                                        <li class="item" data-year="2020">
+                                                            <div class="desc"><strong>국내에서 세계로</strong>확장해<br/>나아가는 LG의 배터리 2020</div>
+                                                        </li>
+                                                        <!-- 2023~2025 -->
+                                                        <li class="item" data-year="2023">
+                                                            <div class="desc"><strong>국내에서 세계로</strong>확장해<br/>나아가는 LG의 배터리 2023</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <ul class="year-term-container">
+                                                    <li class="year-item-list on"><a href="javascript:;" data-year="1947~1999">1947~1999</a></li>
+                                                    <li class="year-item-list"><a href="javascript:;" data-year="2000~2018">2000~2018</a></li>
+                                                    <li class="year-item-list"><a href="javascript:;" data-year="2020~2022">2020~2022</a></li>
+                                                    <li class="year-item-list"><a href="javascript:;" data-year="2023~2025">2023~2025</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="center-line-area">
+                                                <div class="right-area">
+                                                    <div class="year-container">
+                                                        <ul class="year-item-list on">
+                                                            <!-- 1947~1999-->
+                                                            <li class="item active" data-year="1947">
+                                                                <div class="img-box">
+                                                                    <img src="../../../inc/images/sample/history_img_1947.png" alt="1947">
+                                                                    <p class="img-title">락희화학공업사 창립 (LG그룹 시작)</p>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item next" data-year="1992">
+                                                                <div class="img-box">
+                                                                    <img src="../../../inc/images/sample/history_img_1992.png" alt="1992">
+                                                                    <p class="img-title">리튬이온배터리 연구착수</p>
+                                                                </div>                                                            
+                                                            </li>
+                                                            <li class="item next" data-year="2000">
+                                                                <div class="img-box">
+                                                                    <img src="../../../inc/images/sample/history_img_2000.png" alt="2000">
+                                                                    <p class="img-title">미국 연구법인 설립</p>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item next" data-year="2020">                                                        
+                                                                <div class="img-box">
+                                                                    <img src="../../../inc/images/sample/history_img_1947.png" alt="2020">
+                                                                    <p class="img-title">미국 연구법인 설립</p>
+                                                                </div>
+                                                            </li>
+                                                            <li class="item next" data-year="2023">
+                                                                <div class="img-box">
+                                                                    <img src="../../../inc/images/sample/history_img_1947.png" alt="2023">
+                                                                    <p class="img-title">미국 연구법인 설립</p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-area">
+                                            <button type="button" onclick="pubUi.historyViewEvt('#allView')">한눈에 보기</button>
+                                        </div>
+                                    </div>
+                                    <!-- (한눈에 보기) 레이어팝업 형식으로 노출되도록 변경 -->
+                                    <div class="history-container" id="allView">
+                                        <div class="history-wrap all-view">
+                                            <div class="history-cont-wrap">
+                                                <div class="year-container">
+                                                    <ul class="year-item-list">
+                                                        <li class="year-item">
+                                                            <div class="year-info-box">
+                                                                <div class="year-title">1947 - 1999</div>
+                                                                <ul class="sub-list">
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">1947</p>
+                                                                            <p class="desc">락희화학공업사 창립(LG그룹 시작)</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">1992</p>
+                                                                            <p class="desc">리튬이온배터리 연구착수</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">1996</p>
+                                                                            <p class="desc">리튬이온배터리 개발시작</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">1999</p>
+                                                                            <p class="desc">리튬이온배터리 원통형 양산</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="img-box">
+                                                                <img src="../../../inc/images/sample/history_img_1947.png" alt="1947 - 1999">
+                                                                <p class="img-title">대한민국 <strong>배터리의 역사</strong>가 본격적으로 시작되다</p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="year-item">
+                                                            <div class="year-info-box">
+                                                                <div class="year-title">2000 - 2018</div>
+                                                                <ul class="sub-list">
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2000</p>
+                                                                            <p class="desc">미국 연구법인 설립</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2004</p>
+                                                                            <p class="desc">중국 난징공장 준공</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2009</p>
+                                                                            <p class="desc">세계 최초, 양산형 전기차 (GM Volt) 배터리 공급</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2012</p>
+                                                                            <p class="desc">미국 전기차배터리 공장 준공</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2013</p>
+                                                                            <p class="desc">세계 최초 미래형 배터리 (Stepped, Curved, Wire Battery) 개발</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2017</p>
+                                                                            <p class="desc">폴란드 전기차배터리 공장 준공</p>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2018</p>
+                                                                            <p class="desc">세계 최초 Freeform 배터리 개발</p>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="img-box">
+                                                                <img src="../../../inc/images/sample/img_history_02.png" alt="2000 - 2018">
+                                                                <p class="img-title">국내에서 <strong>세계로 확장</strong>해 나아가는 LG의 배터리</p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="year-item">
+                                                            <div class="year-info-box">
+                                                                <div class="year-title">2020 - 2022</div>
+                                                                <ul class="sub-list">
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2020</p>
+                                                                            <div class="desc-group">
+                                                                                <p class="desc">LG에너지솔루션 출범</p>
+                                                                                <p class="desc">GM과 전기차 배터리 합작법인  ‘얼티엄셀즈’ 설립</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2021</p>
+                                                                            <div class="desc-group">
+                                                                                <p class="desc">배터리 업계 최초 RE100, EV100 동시 가입</p>
+                                                                                <p class="desc">현대자동차그룹, 인도네시아 배터리셀 합작공장 착공</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2022</p>
+                                                                            <div class="desc-group">
+                                                                                <p class="desc">GM과 전기차 배터리 제3합작공장 설립</p>
+                                                                                <p class="desc">유가증권시장(KOSPI) 상장</p>
+                                                                                <p class="desc">스텔란티스와 전기차 배터리 합작법인 'Nextstar Energy' 설립</p>
+                                                                            </div>                                                                   
+                                                                        </div>
+                                                                    </li>                                                           
+                                                                </ul>
+                                                            </div>
+                                                            <div class="img-box">
+                                                                <img src="../../../inc/images/sample/img_history_03.png" alt="2020 - 2022">
+                                                                <p class="img-title">새로운 <strong>에너지의 시대</strong> 그 첫 걸음을 내딛다</p>
+                                                            </div>
+                                                        </li>
+                                                        <li class="year-item">
+                                                            <div class="year-info-box">
+                                                                <div class="year-title">2023 - 2025</div>
+                                                                <ul class="sub-list">
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2023</p>
+                                                                            <div class="desc-group">
+                                                                                <p class="desc">포드-코치와 '튀르키예 배터리 합작법인 설립' MOU 체결</p>
+                                                                                <p class="desc">LG에너지솔루션-혼다 합작공장 기공식</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2024</p>
+                                                                            <div class="desc-group">
+                                                                                <p class="desc">사내독립기업(CIC) ‘쿠루(KooRoo)’ 배터리 교환 사업 본격화</p>
+                                                                                <p class="desc">美 리비안(Rivian)에 차세대 원통형 ‘4695’ 배터리 공급</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="sub-list-info">
+                                                                            <p class="title">2025</p>
+                                                                            <div class="desc-group">
+                                                                                <p class="desc">美 태양광 전기차에 배터리 공급</p>
+                                                                                <p class="desc">LG에너지솔루션 배터리 팩·교환 스테이션 ‘국가 표준’ 획득</p>
+                                                                                <p class="desc">얼티엄셀즈 3기 최종 인수</p>
+                                                                            </div>                                                                   
+                                                                        </div>
+                                                                    </li>                                                           
+                                                                </ul>
+                                                            </div>
+                                                            <div class="img-box">
+                                                                <img src="../../../inc/images/sample/img_history_04.png" alt="2023 - 2025">
+                                                                <p class="img-title">미래로 뻗어나가는 지속 가능한 <strong>에너지의 여정</strong></p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="btn-area">
+                                                <button type="button" onclick="pubUi.historyViewEvt('#eachView')">하나씩 보기</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -488,6 +739,7 @@
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
         <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+        <!-- <script type="text/javascript" src="../../../inc/js/sample-ui.js"></script> -->
         <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
     </body>
 </html>

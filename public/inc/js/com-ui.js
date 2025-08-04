@@ -2,9 +2,11 @@ $(document).ready(function($) {
     var eventbtn = $(".nav-btn"),
         eventCont = $(".nav-wrap"),
         eventParent = $(".header-wrap"),
+        searchBtn = $(".search-btn"),
+        headerSearch = $(".header-search");
         header_h = eventParent.height();
         max_h = [];
-    eventbtn.on("click", function () {
+        eventbtn.on("click", function () {
         eventParent.find(".header-cont").height();
         // alert(Math.max.apply(null, max_h))
         if($(this).hasClass("on")){
@@ -14,6 +16,31 @@ $(document).ready(function($) {
             }); 
             $(".header-wrap").removeClass("on").css("height", header_h + 1);;
             $(".gnb__tab-btn-wrap ul").removeClass("on").stop().slideUp(300);
+            if(eventParent.hasClass("scroll-on")){
+                $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI_wh.svg")
+            }
+        }else{
+            eventCont.find(".gnb__tab-btn-wrap ul").each(function (e) {
+                max_h[e] = parseInt($(this).height()+(16 * 0.88 * 4));
+            });  
+            $(this).addClass("on");
+            $(".header-wrap").addClass("on").css("height", header_h + Math.max.apply(null, max_h) + 16 * 5.88);
+            $(".gnb__tab-btn-wrap ul").addClass("on").stop().slideDown(300);
+            $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI.svg")
+        };
+    });
+
+        searchBtn.on("click", function () {
+        eventParent.find(".header-cont").height();
+        // alert(Math.max.apply(null, max_h))
+        if($(this).hasClass("on")){
+            $(this).removeClass("on")
+            eventCont.find(".gnb__tab-btn-wrap ul").each(function (e) {
+                max_h[e] = parseInt($(this).height());
+            }); 
+            $(".header-wrap").removeClass("on").css("height", header_h + 1);;
+            $(".gnb__tab-btn-wrap ul").removeClass("on").stop().slideUp(300);
+            headerSearch.show();
             if(eventParent.hasClass("scroll-on")){
                 $(".main_p .ci").find("img").attr("src","../../../inc/images/symbol/CI_wh.svg")
             }
