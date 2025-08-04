@@ -6,7 +6,7 @@
         <!-- <meta name="viewport" content="width=1920" /> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name=" format-detection" content="telephone=no" />
-        <title>LG에너지솔루션 - 투자정보_IR자료</title>
+        <title>LG에너지솔루션 - 레이아웃_Tab-case</title>
         <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
         <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />        
         <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
@@ -195,38 +195,16 @@
                         </div>
                         <div class="select-cate activeSelect" role="option">
                             <button type="button" aria-haspopup="listbox">회사개요</button>
-                            <ul class="select-menu" role="listbox">
-                                <li><a href="javascript:;" role="option" tabindex="0" class="active">회사개요</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">비전</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">연혁</a></li>
-                                <li><a href="javascript:;" role="option" tabindex="0">CI</a></li>
+                            <!-- PC 탭케이스일 경우, select-menu에 caseTab추가 필요, 하위 카테고리에 탭관련 속성 추가 필요 
+                             [ex] role="tab" aria-selected="true" aria-controls="tab1-content" -->
+                            <ul class="select-menu caseTab" role="listbox">
+                                <li><a href="javascript:;" tabindex="0" class="active" role="tab" aria-selected="true" aria-controls="tab1-content">회사개요</a></li>
+                                <li><a href="javascript:;" tabindex="0" role="tab" aria-selected="false" aria-controls="tab2-content">비전</a></li>
+                                <li><a href="javascript:;" tabindex="0" role="tab" aria-selected="false" aria-controls="tab3-content">연혁</a></li>
+                                <li><a href="javascript:;" tabindex="0" role="tab" aria-selected="false" aria-controls="tab4-content">CI</a></li>
                             </ul>
                         </div>
                     </div>
-                    <!-- <div class="selectbox-wrap mo-only" role="listbox">
-                        <div class="breadcrumb-wrap">
-                            <div class="select-cate activeSelect" role="option">
-                                <button type="button" aria-haspopup="listbox">투자정보</button>
-                                <ul class="select-menu" role="listbox">
-                                    <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">회사소개</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">지속가능경영</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">투자정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
-                                </ul>
-                            </div>
-                            <div class="select-cate activeSelect" role="option">
-                                <button type="button" aria-haspopup="listbox">IR자료</button>
-                                <ul class="select-menu" role="listbox">
-                                    <li><a href="javascript:;" role="option" tabindex="0">재무정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">주식정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">공시정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">IR정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">IR자료</a></li>
-                                </ul>
-                            </div>
-                        </div>                        
-                    </div> -->
                 </div> <!--//page-map-wrap -->
                 <!-- <div class="content-header">
                     <div class="content-header-cont">
@@ -238,106 +216,193 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="content-area">                    
+                <div class="content-area">
                     <div class="pc-only">
-                        <div class="content-item01 on"> <!-- on 클래스 유무에 따라 scroll 시 효과 적용 -->
-                            <div class="content-wrap"> <!-- max-width:90rem (default)-->
-                                <h2 class="title-h1">회사개요</h2> <!-- title-h1 (페이지타이틀) -->
-                                <div class="content-sect">
-                                    <div class="flex-box">
-                                        <div class="left-area">
-                                            <p class="sub-title">
-                                                <strong>더 나은 세상</strong>을 위해<br/>
-                                                에너지에 대한 <strong>다양한 솔루션을 제공</strong>합니다.
-                                            </p>
-                                            <div class="btn-wrap" style="margin-top:5rem;"> <!-- 버튼영역 임시 style 속성, 작업시는 page.css에서 처리 필요 -->
-                                                <button type="button" class="icon-btn-md icon-white icon-download btn-outline01">
-                                                    <span>Button Name</span>
-                                                    <div class="icon-area"></div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="right-area">
-                                            <p class="sub-title">
-                                                우측 영역
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- //content-item01 -->
-                        <div class="content-item02" data-bgtype="dark" style="background-color:#555;"> <!-- data-bgtype : 배경타입 지정 (dark -> 컬러:흰색 / 스크롤시 해당영역 도달하면 배경타입에 맞게 컬러 적용되도록 스크립트 처리 예정)-->
-                            <div class="content-wrap">
-                                <h2 class="title-h2">사업영역</h2> <!-- title-h2 (서브타이틀)-->
-                                <div class="content-sect">
-                                    <div class="flex-box">
-                                        <div class="left-area">
-                                            <p class="sub-title">
-                                                좌측 영역
-                                            </p>
-                                        </div>
-                                        <div class="sect-box">
-                                            <p class="sub-title">Advanced Automotive Battery</p>
-                                            <h2 class="title-h1">자동차전지</h2>
-                                            <p class="info-desc">세계 최고의 배터리 기술력과 강력한 글로벌 생산능력으로, 전기차 대중화와 함께 미래 모빌리티 혁신을 이끌어갑니다.</p>
-                                            <div class="info-box">
-                                                <p class="desc">
-                                                    LG에너지솔루션은 전기차, 하이브리드차, 수소전지차 등 다양한 자동차에 최적화된 배터리를 개발하고 있습니다. <br/>
-                                                    전 세계 완성차 업체와 협력하여 차세대 전기차 시장을 선도하고 있습니다.
-                                                </p>
-                                                <p class="desc">
-                                                    LG에너지솔루션은 전기차, 하이브리드차, 수소전지차 등 다양한 자동차에 최적화된 배터리를 개발하고 있습니다. <br/>
-                                                    전 세계 완성차 업체와 협력하여 차세대 전기차 시장을 선도하고 있습니다.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- //content-item02 -->
-                        <div class="content-item03">
-                            <div class="content-wrap">
-                                <article> <!-- article 태그 : article:not(:last-child) margin-bottom:7.5rem -->
-                                    <h2 class="title-h2">폼펙터</h2> <!-- title-h2 (서브타이틀)-->
-                                    <div class="content-sect">
-                                        <div class="accord-cont-wrap">
-                                            <div class="accordion-list type2 acdItem">
-                                                <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
-                                                    <div class="acd-group">
-                                                        <p class="sub-tit">서브타이틀</p>
-                                                        <p class="acd-tit">아코디언 타이틀</p>
+                        <div class="tab-content-box">
+                            <div class="tab-content on" id="tab1-content">
+                                <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                                    <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                        <h2 class="title-h1">회사개요</h2> <!-- title-h1 (페이지타이틀) -->
+                                        <div class="content-sect">
+                                            <div class="flex-box">
+                                                <div class="left-area">
+                                                    <p class="sub-title">
+                                                        <strong>더 나은 세상</strong>을 위해<br/>
+                                                        에너지에 대한 <strong>다양한 솔루션을 제공</strong>합니다.
+                                                    </p>
+                                                    <div class="btn-wrap" style="margin-top:5rem;"> <!-- 버튼영역 임시 style 속성, 작업시는 page.css에서 처리 필요 -->
+                                                        <button type="button" class="icon-btn-md icon-white icon-download btn-outline01">
+                                                            <span>Button Name</span>
+                                                            <div class="icon-area"></div>
+                                                        </button>
                                                     </div>
-                                                </a>
-                                                <div class="acd-panel accordion-content" role="region">
-                                                    LG에너지솔루션이 제조하는 리튬이온배터리 셀은 오직 산업용 고객 (e.g. 배터리 팩 제조사, 시스템 제조사 등)에만 판매됩니다. LG에너지솔루션은 리튬 이온 배터리 셀/팩의 취급으로 인한 사고 예방 및 안전한 제품 사용을 위해 개인 소비자에게는 리튬이온배터리 셀 (i.e. 18650, 단전지)을 판매하지 않습니다.전자상거래를 통해 유통되는 LG에너지솔루션의 리튬이온배터리 셀을 구매하지 마시기를 바랍니다. 자세한 내용은 홈페이지에 게시된 ‘리튬이온배터리 안전가이드’를 참고해주시기 바랍니다.
+                                                </div>
+                                                <div class="right-area">
+                                                    <p class="sub-title">
+                                                        우측 영역
+                                                    </p>
                                                 </div>
                                             </div>
-                                            <div class="accordion-list type2 acdItem">
-                                                <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
-                                                    <div class="acd-group">
-                                                        <p class="sub-tit">서브타이틀</p>
-                                                        <p class="acd-tit">아코디언 타이틀</p>
-                                                    </div>
-                                                </a>
-                                                <div class="acd-panel accordion-content" role="region">
-                                                    <div class="desc-wrap">
-                                                        <p class="desc">LG에너지솔루션이 제조하는 리튬이온배터리 셀은 오직 산업용 고객 (e.g. 배터리 팩 제조사, 시스템 제조사 등)에만 판매됩니다.</p>
-                                                        <p class="desc">LG에너지솔루션은 리튬 이온 배터리 셀/팩의 취급으로 인한 사고 예방 및 안전한 제품 사용을 위해 개인 소비자에게는 리튬이온배터리 셀 (i.e. 18650, 단전지)을 판매하지 않습니다.</p>
-                                                        <p class="desc">전자상거래를 통해 유통되는 LG에너지솔루션의 리튬이온배터리 셀을 구매하지 마시기를 바랍니다. 자세한 내용은 홈페이지에 게시된 ‘리튬이온배터리 안전가이드’를 참고해주시기 바랍니다.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- //content-item01 -->
+                                <div class="content-item02" data-bgtype="dark" style="background-color:#555;"> <!-- data-bgtype : 배경타입 지정 (dark -> 컬러:흰색 / 스크롤시 해당영역 도달하면 배경타입에 맞게 컬러 적용되도록 스크립트 처리 예정)-->
+                                    <div class="content-wrap">
+                                        <h2 class="title-h2">사업영역</h2> <!-- title-h2 (서브타이틀)-->
+                                        <div class="content-sect">
+                                            <div class="flex-box">
+                                                <div class="left-area">
+                                                    <p class="sub-title">
+                                                        좌측 영역
+                                                    </p>
+                                                </div>
+                                                <div class="sect-box">
+                                                    <p class="sub-title">Advanced Automotive Battery</p>
+                                                    <h2 class="title-h1">자동차전지</h2>
+                                                    <p class="info-desc">세계 최고의 배터리 기술력과 강력한 글로벌 생산능력으로, 전기차 대중화와 함께 미래 모빌리티 혁신을 이끌어갑니다.</p>
+                                                    <div class="info-box">
+                                                        <p class="desc">
+                                                            LG에너지솔루션은 전기차, 하이브리드차, 수소전지차 등 다양한 자동차에 최적화된 배터리를 개발하고 있습니다. <br/>
+                                                            전 세계 완성차 업체와 협력하여 차세대 전기차 시장을 선도하고 있습니다.
+                                                        </p>
+                                                        <p class="desc">
+                                                            LG에너지솔루션은 전기차, 하이브리드차, 수소전지차 등 다양한 자동차에 최적화된 배터리를 개발하고 있습니다. <br/>
+                                                            전 세계 완성차 업체와 협력하여 차세대 전기차 시장을 선도하고 있습니다.
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> <!--//accord-cont-wrap -->
+                                        </div>
                                     </div>
-                                </article>
-                                <article>
-                                    <h2 class="title-h2">서비스 소개</h2> <!-- title-h2 (서브타이틀)-->
-                                    <div class="content-sect">
-                                        서비스 소개 내용
+                                </div><!-- //content-item02 -->
+                                <div class="content-item03">
+                                    <div class="content-wrap">
+                                        <article> <!-- article 태그 : article:not(:last-child) margin-bottom:7.5rem -->
+                                            <h2 class="title-h2">폼펙터</h2> <!-- title-h2 (서브타이틀)-->
+                                            <div class="content-sect">
+                                                <div class="accord-cont-wrap">
+                                                    <div class="accordion-list type2 acdItem">
+                                                        <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
+                                                            <div class="acd-group">
+                                                                <p class="sub-tit">서브타이틀</p>
+                                                                <p class="acd-tit">아코디언 타이틀</p>
+                                                            </div>
+                                                        </a>
+                                                        <div class="acd-panel accordion-content" role="region">
+                                                            LG에너지솔루션이 제조하는 리튬이온배터리 셀은 오직 산업용 고객 (e.g. 배터리 팩 제조사, 시스템 제조사 등)에만 판매됩니다. LG에너지솔루션은 리튬 이온 배터리 셀/팩의 취급으로 인한 사고 예방 및 안전한 제품 사용을 위해 개인 소비자에게는 리튬이온배터리 셀 (i.e. 18650, 단전지)을 판매하지 않습니다.전자상거래를 통해 유통되는 LG에너지솔루션의 리튬이온배터리 셀을 구매하지 마시기를 바랍니다. 자세한 내용은 홈페이지에 게시된 ‘리튬이온배터리 안전가이드’를 참고해주시기 바랍니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-list type2 acdItem">
+                                                        <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
+                                                            <div class="acd-group">
+                                                                <p class="sub-tit">서브타이틀</p>
+                                                                <p class="acd-tit">아코디언 타이틀</p>
+                                                            </div>
+                                                        </a>
+                                                        <div class="acd-panel accordion-content" role="region">
+                                                            <div class="desc-wrap">
+                                                                <p class="desc">LG에너지솔루션이 제조하는 리튬이온배터리 셀은 오직 산업용 고객 (e.g. 배터리 팩 제조사, 시스템 제조사 등)에만 판매됩니다.</p>
+                                                                <p class="desc">LG에너지솔루션은 리튬 이온 배터리 셀/팩의 취급으로 인한 사고 예방 및 안전한 제품 사용을 위해 개인 소비자에게는 리튬이온배터리 셀 (i.e. 18650, 단전지)을 판매하지 않습니다.</p>
+                                                                <p class="desc">전자상거래를 통해 유통되는 LG에너지솔루션의 리튬이온배터리 셀을 구매하지 마시기를 바랍니다. 자세한 내용은 홈페이지에 게시된 ‘리튬이온배터리 안전가이드’를 참고해주시기 바랍니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!--//accord-cont-wrap -->
+                                            </div>
+                                        </article>
+                                        <article>
+                                            <h2 class="title-h2">서비스 소개</h2> <!-- title-h2 (서브타이틀)-->
+                                            <div class="content-sect">
+                                                서비스 소개 내용
+                                            </div>
+                                        </article>
                                     </div>
-                                </article>
-                            </div>
-                        </div><!-- //content-item03 -->
+                                </div><!-- //content-item03 -->
+                            </div><!-- //tab-content -->
+
+                            <div class="tab-content" id="tab2-content">
+                                <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                                    <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                        <h2 class="title-h1">비전</h2> <!-- title-h1 (페이지타이틀) -->
+                                        <div class="content-sect">
+                                            탭2컨텐츠
+                                        </div>
+                                    </div>
+                                </div><!-- //content-item01 -->
+                                <div class="content-item02" data-bgtype="dark" style="background-color:#555;"> <!-- data-bgtype : 배경타입 지정 (dark -> 컬러:흰색 / 스크롤시 해당영역 도달하면 배경타입에 맞게 컬러 적용되도록 스크립트 처리 예정)-->
+                                    <div class="content-wrap">
+                                        <h2 class="title-h2">사업영역</h2> <!-- title-h2 (서브타이틀)-->
+                                        <div class="content-sect">
+                                            <div class="flex-box">
+                                                <div class="left-area">
+                                                    <p class="sub-title">
+                                                        좌측 영역
+                                                    </p>
+                                                </div>
+                                                <div class="sect-box">
+                                                    <p class="sub-title">Advanced Automotive Battery</p>
+                                                    <h2 class="title-h1">자동차전지</h2>
+                                                    <p class="info-desc">세계 최고의 배터리 기술력과 강력한 글로벌 생산능력으로, 전기차 대중화와 함께 미래 모빌리티 혁신을 이끌어갑니다.</p>
+                                                    <div class="info-box">
+                                                        <p class="desc">
+                                                            LG에너지솔루션은 전기차, 하이브리드차, 수소전지차 등 다양한 자동차에 최적화된 배터리를 개발하고 있습니다. <br/>
+                                                            전 세계 완성차 업체와 협력하여 차세대 전기차 시장을 선도하고 있습니다.
+                                                        </p>
+                                                        <p class="desc">
+                                                            LG에너지솔루션은 전기차, 하이브리드차, 수소전지차 등 다양한 자동차에 최적화된 배터리를 개발하고 있습니다. <br/>
+                                                            전 세계 완성차 업체와 협력하여 차세대 전기차 시장을 선도하고 있습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- //content-item02 -->
+                                <div class="content-item03">
+                                    <div class="content-wrap">
+                                        <article> <!-- article 태그 : article:not(:last-child) margin-bottom:7.5rem -->
+                                            <h2 class="title-h2">폼펙터</h2> <!-- title-h2 (서브타이틀)-->
+                                            <div class="content-sect">
+                                                <div class="accord-cont-wrap">
+                                                    <div class="accordion-list type2 acdItem">
+                                                        <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
+                                                            <div class="acd-group">
+                                                                <p class="sub-tit">서브타이틀</p>
+                                                                <p class="acd-tit">아코디언 타이틀</p>
+                                                            </div>
+                                                        </a>
+                                                        <div class="acd-panel accordion-content" role="region">
+                                                            LG에너지솔루션이 제조하는 리튬이온배터리 셀은 오직 산업용 고객 (e.g. 배터리 팩 제조사, 시스템 제조사 등)에만 판매됩니다. LG에너지솔루션은 리튬 이온 배터리 셀/팩의 취급으로 인한 사고 예방 및 안전한 제품 사용을 위해 개인 소비자에게는 리튬이온배터리 셀 (i.e. 18650, 단전지)을 판매하지 않습니다.전자상거래를 통해 유통되는 LG에너지솔루션의 리튬이온배터리 셀을 구매하지 마시기를 바랍니다. 자세한 내용은 홈페이지에 게시된 ‘리튬이온배터리 안전가이드’를 참고해주시기 바랍니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-list type2 acdItem">
+                                                        <a href="javascript:void(0);" role="button" aria-expanded="false" class="acd-btn accordion-btn">
+                                                            <div class="acd-group">
+                                                                <p class="sub-tit">서브타이틀</p>
+                                                                <p class="acd-tit">아코디언 타이틀</p>
+                                                            </div>
+                                                        </a>
+                                                        <div class="acd-panel accordion-content" role="region">
+                                                            <div class="desc-wrap">
+                                                                <p class="desc">LG에너지솔루션이 제조하는 리튬이온배터리 셀은 오직 산업용 고객 (e.g. 배터리 팩 제조사, 시스템 제조사 등)에만 판매됩니다.</p>
+                                                                <p class="desc">LG에너지솔루션은 리튬 이온 배터리 셀/팩의 취급으로 인한 사고 예방 및 안전한 제품 사용을 위해 개인 소비자에게는 리튬이온배터리 셀 (i.e. 18650, 단전지)을 판매하지 않습니다.</p>
+                                                                <p class="desc">전자상거래를 통해 유통되는 LG에너지솔루션의 리튬이온배터리 셀을 구매하지 마시기를 바랍니다. 자세한 내용은 홈페이지에 게시된 ‘리튬이온배터리 안전가이드’를 참고해주시기 바랍니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!--//accord-cont-wrap -->
+                                            </div>
+                                        </article>
+                                        <article>
+                                            <h2 class="title-h2">서비스 소개</h2> <!-- title-h2 (서브타이틀)-->
+                                            <div class="content-sect">
+                                                서비스 소개 내용
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div><!-- //content-item03 -->
+                            </div><!-- //tab-content -->
+                        </div>
                     </div> <!-- //pc-only -->
                     <div class="mo-only">
                         <div class="cont-head-wrap">
