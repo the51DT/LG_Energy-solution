@@ -311,6 +311,8 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 .content-header_text {position: absolute; bottom: 8.56rem; left: 50%; transform: translateX(-50%);}
 
 [class^="content-item"] {padding: 7.5rem 0; width: 100%;}
+[class^="content-item"] + [class^="content-item"] {opacity: 0; transition: opacity 0.5s;}
+[class^="content-item"] + [class^="content-item"].active {opacity: 1;}
 [class^="content-item"] article:not(:last-child) {margin-bottom: 7.5rem;}
 [class^="content-item"] + [class^="content-item"]:last-child {padding-bottom: 15rem;}
 [class^="content-item"] .content-wrap {max-width: 90rem; margin: 0 auto;}

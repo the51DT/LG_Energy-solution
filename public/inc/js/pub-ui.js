@@ -7,34 +7,34 @@ var pubUi = {
         this.scrollToEvt();
         this.chkFileboxDisabled();
         this.fileboxInputEvt();
-        this.exceptionStickyEvt();        
+        this.exceptionStickyEvt();
 
         this.form.init();
         this.tabList.init();
         this.acdItem.init();
 
         this.evtScheduleLeft();
-        
+
         this.scrollToEvt();
         this.historyMotionEvt();
         this.historyViewEvt();
-
+        this.mobileDeviceChk();
     },
 
     settings: function () {
         this.self = {};
         this.self.mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-        this.self.isPc = window.innerWidth >= 1024;
-        this.self.isMobile = window.innerWidth <= 1023;
+        this.self.isPc = window.innerWidth >= 1280;
+        this.self.isMobile = window.innerWidth <= 1279;
 
         this.self.tabCategory = document.querySelector(".activeTab");
         this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
-        
+
         this.self.selectCate = document.querySelectorAll(".select-cate.activeSelect");
         this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
         this.self.selectMenu = document.querySelectorAll(".activeSelect .select-menu");
         this.self.selectMenuTab = document.querySelectorAll(".select-menu.caseTab");
-        
+
         /* content-item */
         this.self.pcOnly = document.querySelector(".pc-only");
         this.self.moOnly = document.querySelector(".mo-only");
@@ -42,13 +42,10 @@ var pubUi = {
         this.self.contentItem = document.querySelectorAll("[class^=content-item]");
 
         // console.log(this.self.contentItem);
-
-        
     },
 
     bindEvents: function () {
         // selectbox 탭형식 이벤트 처리 (PC)
-        
 
         this.self.selectCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", (e) => {
@@ -82,21 +79,18 @@ var pubUi = {
                         pubUi.selectMenuClickEvt("tab", pageMapCate, map, subCate);
                     } else {
                         pubUi.selectMenuClickEvt("default", pageMapCate, map, subCate);
-                    }            
+                    }
                 });
             });
-            
         });
 
-        
-        if(!this.self.wrap) {
+        if (!this.self.wrap) {
             return;
         } else {
             this.self.wrap.addEventListener("scroll", function (el) {
                 const historyWrap = document.querySelector(".history-wrap");
                 const aside = document.querySelector(".wrap aside");
                 const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
-                
 
                 // 스크롤 이벤트 처리
                 const nowScroll = el.target.scrollTop;
@@ -130,7 +124,13 @@ var pubUi = {
                 }
 
                 targetContentItem.forEach((item, idx) => {
-                    const itemTop = item.offsetTop - 152; // - 600; // 아이템의 상단 위치 - 600                
+                    let itemTop = "";
+                    if (document.querySelector(".wrap").classList.contains("mobile")) {
+                        itemTop = item.offsetTop - 152;
+                    } else {
+                        itemTop = item.offsetTop - 600;
+                    }
+                    
                     const itemHeight = item.clientHeight;
                     const itemBottom = itemTop + itemHeight;
 
@@ -164,48 +164,47 @@ var pubUi = {
         }
     },
     selectMenuClickEvt: function (type, pageMapCate, map, subCate) {
-        
-            if (type == "default") {
-                console.log("default click event");
-                
-                pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
-                subCate.classList.add("active");
-                const subCateName = subCate.innerText;
-                const button = map.closest(".select-cate").querySelector("button");
+        if (type == "default") {
+            // console.log("default click event");
 
-                if (!subCate.closest(".lang-wrap")) {
-                    button.innerText = subCateName;
-                }
-                button.classList.add("on");
-                button.classList.remove("active");
-                map.classList.remove("on");
-            } else if (type === "tab") {
-                // console.log("tab click event");                                
-                pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
-                subCate.classList.add("active");
-                const subCateName = subCate.innerText;
-                const button = map.closest(".select-cate").querySelector("button");            
-                const selectedAriaControls = subCate.getAttribute("aria-controls");
-                // console.log("selectedAriaControls: " + selectedAriaControls);
+            pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
+            subCate.classList.add("active");
+            const subCateName = subCate.innerText;
+            const button = map.closest(".select-cate").querySelector("button");
 
-                if (!subCate.closest(".lang-wrap")) {
-                    button.innerText = subCateName;                    
-                }
-
-                if(selectedAriaControls) {
-                    const tabContent = document.querySelector(`#${selectedAriaControls}`);
-                    if (tabContent) {
-                        // 모든 탭 콘텐츠 숨김 처리
-                        const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .pc-only .tab-content");
-                        allTabContents.forEach((content) => content.classList.remove("on"));
-                        // 선택한 탭 콘텐츠 표시
-                        tabContent.classList.add("on");
-                    }
-                }
-                button.classList.add("on");
-                button.classList.remove("active");
-                map.classList.remove("on");
+            if (!subCate.closest(".lang-wrap")) {
+                button.innerText = subCateName;
             }
+            button.classList.add("on");
+            button.classList.remove("active");
+            map.classList.remove("on");
+        } else if (type === "tab") {
+            // console.log("tab click event");
+            pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
+            subCate.classList.add("active");
+            const subCateName = subCate.innerText;
+            const button = map.closest(".select-cate").querySelector("button");
+            const selectedAriaControls = subCate.getAttribute("aria-controls");
+            // console.log("selectedAriaControls: " + selectedAriaControls);
+
+            if (!subCate.closest(".lang-wrap")) {
+                button.innerText = subCateName;
+            }
+
+            if (selectedAriaControls) {
+                const tabContent = document.querySelector(`#${selectedAriaControls}`);
+                if (tabContent) {
+                    // 모든 탭 콘텐츠 숨김 처리
+                    const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .pc-only .tab-content");
+                    allTabContents.forEach((content) => content.classList.remove("on"));
+                    // 선택한 탭 콘텐츠 표시
+                    tabContent.classList.add("on");
+                }
+            }
+            button.classList.add("on");
+            button.classList.remove("active");
+            map.classList.remove("on");
+        }
     },
     // fadeIn 함수: 요소를 서서히 나타나게 하는 함수
     fadeIn: function (element, duration) {
@@ -228,8 +227,8 @@ var pubUi = {
     // IR정보 > IR행사 모바일일경우, 상단 schedule-month 스크롤 중앙 정렬 처리
     evtScheduleLeft: function () {
         // IR행사
-        let evtScheduleWrap = document.querySelector(".evt-schedule-wrap");        
-        
+        let evtScheduleWrap = document.querySelector(".evt-schedule-wrap");
+
         if (evtScheduleWrap != null) {
             let evtScheduleMonth = evtScheduleWrap.querySelector(".schedule-month");
             let evtScheduleMonthList = evtScheduleWrap.querySelectorAll(".schedule-month > li");
@@ -242,8 +241,8 @@ var pubUi = {
         }
     },
 
-    // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S    
-    exceptionStickyEvt: function () {    
+    // sticky 대상 sticky 상태일경우, stuck 클래스를 통한 css 제어 처리 - S
+    exceptionStickyEvt: function () {
         if (document.querySelector(".wrap")) {
             document.querySelector(".wrap").addEventListener("scroll", (e) => {
                 const offsetTop = document.querySelector(".wrap").scrollTop;
@@ -273,7 +272,6 @@ var pubUi = {
 
             document.querySelector("body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
         }
-        
     },
 
     chkFileboxDisabled: function () {
@@ -304,7 +302,7 @@ var pubUi = {
         });
     },
 
-    historyMotionEvt: function(){
+    historyMotionEvt: function () {
         // NodeList를 일반 배열로 변환하여 배열 메서드(map, find 등) 사용 가능하도록 처리
         const leftItems = Array.from(document.querySelectorAll(".left-area .year-container .item"));
         const rightItems = Array.from(document.querySelectorAll(".right-area .year-container .item"));
@@ -544,13 +542,16 @@ var pubUi = {
         // }
 
         // to-be mac os 대응
-        if(historyContArea) {
+        if (historyContArea) {
             let isHandlingScroll = false;
 
             // 터치 시작 위치 저장 (iOS 터치 대응용) - ios는 휠이벤트 인식하지못해, touchpad기반이라 다른 이벤트 조건 처리되도록 예외처리 필요하다고하여 소스 수정하였음.
-            historyContArea.addEventListener("touchstart", (e) => { 
-                handleCustomScroll.touchStartY = e.touches[0].clientY; 
-                }, { passive: true }
+            historyContArea.addEventListener(
+                "touchstart",
+                (e) => {
+                    handleCustomScroll.touchStartY = e.touches[0].clientY;
+                },
+                { passive: true }
             );
 
             // 다양한 이벤트 리스너 등록
@@ -595,17 +596,17 @@ var pubUi = {
 
                 if (!allowExternalScroll) {
                     e.preventDefault();
-                    // document.querySelector("body").style.overflow = "hidden";                    
-                } else {                    
+                    // document.querySelector("body").style.overflow = "hidden";
+                } else {
                     if (isScrollingUp) {
                         // console.log("scrollUp !!!");
                         document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
-                        
-                        setTimeout(function(){
+
+                        setTimeout(function () {
                             historyView.removeAttribute("data-scrolling");
                             document.querySelector("body").style.overflow = "auto";
-                        },1000)
-                    }                    
+                        }, 1000);
+                    }
                 }
 
                 // 연도 전환 처리
@@ -621,16 +622,28 @@ var pubUi = {
                 }, 500);
             }
         }
-
     },
-    historyViewEvt: function(){
-
-        if(document.querySelector(".history-wrap") != null) {
+    //모바일 체크함수 추가
+    mobileDeviceChk: function () {
+        if (this.self.isMobile || this.self.mobileDevice) {
+            if (this.self.wrap.classList.contains("pc")) {
+                this.self.wrap.classList.remove("pc");
+            } 
+            this.self.wrap.classList.add("mobile");
+        } else {
+            if (this.self.wrap.classList.contains("mobile")) {
+                this.self.wrap.classList.remove("mobile");
+            }
+            this.self.wrap.classList.add("pc");
+        }
+    },
+    historyViewEvt: function () {
+        if (document.querySelector(".history-wrap") != null) {
             const allView = document.querySelector("#allView");
             const eachView = document.querySelector("#eachView");
             const showAllBtn = document.querySelector("button[onclick*='#allView']");
             const backToEachBtn = document.querySelector("button[onclick*='#eachView']");
-            
+
             // 한눈에 보기 클릭 시 팝업 표시
             showAllBtn.addEventListener("click", () => {
                 allView.classList.add("active");
@@ -648,10 +661,9 @@ var pubUi = {
                 setTimeout(function () {
                     pubUi.scrollToEvt("#eachView");
                 }, 1000);
-            });     
+            });
         }
     },
-
 
     form: {
         init() {
@@ -680,59 +692,59 @@ var pubUi = {
             this.tab();
             this.scroll();
         },
-        tab() {            
+        tab() {
             Array.from(pubUi.self.tabLists).forEach((tabList) => {
                 const tabs = tabList.querySelectorAll(".activeTab > li");
-            
+
                 tabs.forEach((tab) => {
                     tab.addEventListener("click", function () {
                         const id = this.getAttribute("id");
                         const tabWrap = tabList.closest(".tab-wrap");
                         const contents = tabWrap.querySelectorAll(".tab-content-box > .tab-content");
-            
+
                         // 1. 현재 탭 카테고리 탭들 초기화
                         tabs.forEach((t) => {
                             t.classList.remove("on");
                             t.querySelector("button").setAttribute("aria-selected", false);
                         });
-            
+
                         contents.forEach((c) => {
                             c.classList.remove("on");
                             c.setAttribute("aria-expanded", false);
                         });
-            
+
                         // 2. 현재 클릭한 탭 활성화
                         tab.classList.add("on");
                         tab.querySelector("button").setAttribute("aria-selected", true);
-            
+
                         const content = tabWrap.querySelector(`#${id}-content`);
                         if (content) {
                             content.classList.add("on");
                             content.setAttribute("aria-expanded", true);
                         }
-            
+
                         // 3. 만약 하위 탭이 있다면, 첫 번째 하위 탭도 초기화 처리
                         const secondTab = content?.querySelector("[data-tab-type='secondTab']");
                         if (secondTab) {
                             const secondTabs = secondTab.querySelectorAll(".tab-category > li");
                             const verticalContents = secondTab.querySelectorAll(".tab-content-box > .tab-content");
-            
+
                             secondTabs.forEach((vt) => {
                                 vt.classList.remove("on");
                                 vt.querySelector("button").setAttribute("aria-selected", false);
                             });
-            
+
                             verticalContents.forEach((vc) => {
                                 vc.classList.remove("on");
                                 vc.setAttribute("aria-expanded", false);
                             });
-            
+
                             // 첫 번째 하위 탭 on 처리
                             const firstsecondTab = secondTabs[0];
                             const firstVerticalContentId = firstsecondTab.getAttribute("id") + "-content";
                             firstsecondTab.classList.add("on");
                             firstsecondTab.querySelector("button").setAttribute("aria-selected", true);
-            
+
                             const firstVerticalContent = secondTab.querySelector(`#${firstVerticalContentId}`);
                             if (firstVerticalContent) {
                                 firstVerticalContent.classList.add("on");
@@ -890,10 +902,11 @@ var pubUi = {
         if (resizeTimer) cancelAnimationFrame(resizeTimer);
         resizeTimer = requestAnimationFrame(() => {
             if (!pubUi.self) return;
-            pubUi.self.isPc = window.innerWidth >= 1440;
-            pubUi.self.isMobile = window.innerWidth <= 768;
+            pubUi.self.isPc = window.innerWidth >= 1280;
+            pubUi.self.isMobile = window.innerWidth <= 1279;
             pubUi.tabList.scroll();
             pubUi.evtScheduleLeft();
+            pubUi.mobileDeviceChk(); //모바일 체크함수 추가
         });
     });     
 })();
