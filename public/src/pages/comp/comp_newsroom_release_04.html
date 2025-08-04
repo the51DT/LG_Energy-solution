@@ -146,13 +146,16 @@
             <!-- section -->
             <section id="container" class="content-wrap">
               <div class="content-header_bg">
-                <img src="../../../inc/images/img/visual_newsroom01.png" alt="비주얼배너" />
-              </div>
+                <img src="../../../inc/images/img/visual_company01.png" alt="비주얼배너" />
+                <div class="content-header_text">
+                    <p class="title-intro">
+                        미래를 밝히는 LG에너지솔루션,<br/>
+                        에너지로 세상의 움직임을 이끌어 갑니다.
+                    </p>
+                </div>
+            </div>
               <div class="page-map-wrap"> <!-- page-map-wrap -->
                 <div class="selectbox-wrap pc-only" role="listbox">
-                  <div role="option" class="select-cate">
-                    <a href="/"><img src="../../../inc/images/sample/icon_home.svg" alt="home" title="홈 이동" /></a>
-                  </div>
                   <div class="select-cate activeSelect" role="option">
                     <button type="button" aria-haspopup="listbox">회사소개</button>
                     <ul class="select-menu" role="listbox">
@@ -174,9 +177,8 @@
                     </ul>
                   </div>
                 </div>
-                <div class="selectbox-wrap mo-only" role="listbox">
+                <!-- <div class="selectbox-wrap mo-only" role="listbox">
                   <div class="breadcrumb-wrap">
-                      <!-- 250717 수정 : breadcrumb 모바일 디자인 변경으로 인한 마크업 수정 -->
                       <div class="select-cate activeSelect" role="option">
                           <button type="button" aria-haspopup="listbox">투자정보</button>
                           <ul class="select-menu" role="listbox">
@@ -197,18 +199,20 @@
                               <li><a href="javascript:;" role="option" tabindex="0">경영정보</a></li>
                           </ul>
                       </div>
-                      <!-- //250717 수정 : breadcrumb 모바일 디자인 변경으로 인한 마크업 수정 -->
                   </div>                        
-              </div>
+              </div> -->
               </div>
                 <div class="news-detail-area">
                   <div class="news-detail">
                     <span class="news-detail-tit">LG에너지솔루션 미국에서 ESS용 LFP 배터리 대규모 양산 돌입</span>
                     <div class="news-info">
                       <span>2025.06.22</span>
-                      <button>
+                      <button class="pc-only">
                         <img src="../../../inc/images/icon/icon_link.svg" alt="링크 복사">
                         URL 복사
+                      </button>
+                      <button class="mo-only">
+                        <img src="../../../inc/images/icon/icon_link.svg" alt="링크 복사">
                       </button>
                     </div>
                     <div class="text-list-wrap">
@@ -220,9 +224,13 @@
                       </ul>
                     </div>
                     <div class="news-image-wrapper">
+                      <!-- 추후 페이지네이션 추가해야함 -->
                       <img src="../../../inc/images/img/newsroom02_cont1.png" class='news-image' alt="뉴스 이미지">
-                      <a href="../../../inc/images/img/newsroom02_cont1.png" download class="download-btn">
+                      <a href="../../../inc/images/img/newsroom02_cont1.png" download class="download-btn pc-only">
                           이미지<img src="../../../inc/images/icon/icon_arrow_download_wh.svg" alt="이미지 다운로드">
+                      </a>
+                      <a href="../../../inc/images/img/newsroom02_cont1.png" download class="download-btn mo-only">
+                          전체 이미지<img src="../../../inc/images/icon/icon_arrow_download_wh.svg" alt="이미지 다운로드">
                       </a>
                   </div>
                   <!-- 페이지네이션 -->
@@ -273,6 +281,7 @@
                     <div class="view-btn-wrap">
                       <button class="view-list-btn">
                           전체 목록보기
+                          <img src="../../../inc/images/icon/icon_arrow_right2.svg" class="mo-only">
                       </button>
                     </div>
                 </div>
