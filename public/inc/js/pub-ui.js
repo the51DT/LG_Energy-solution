@@ -33,6 +33,7 @@ var pubUi = {
         this.self.selectCate = document.querySelectorAll(".select-cate.activeSelect");
         this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
         this.self.selectMenu = document.querySelectorAll(".activeSelect .select-menu");
+        this.self.selectMenuTab = document.querySelectorAll(".select-menu.caseTab");
         
         /* content-item */
         this.self.pcOnly = document.querySelector(".pc-only");
@@ -46,6 +47,9 @@ var pubUi = {
     },
 
     bindEvents: function () {
+        // selectbox 탭형식 이벤트 처리 (PC)
+        
+
         this.self.selectCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", (e) => {
                 const currentTarget = e.currentTarget;
@@ -68,95 +72,140 @@ var pubUi = {
                 }
             });
         });
-        
+
         this.self.selectMenu.forEach((map) => {
-            const pageMapCate = map.querySelectorAll("li > a");
+            let pageMapCate = map.querySelectorAll("li > a");
+
             pageMapCate.forEach((subCate) => {
                 subCate.addEventListener("click", (e) => {
-                    pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
-                    subCate.classList.add("active");
-                    const subCateName = subCate.innerText;
-                    const button = map.closest(".select-cate").querySelector("button");
-                    
-                    if(!subCate.closest(".lang-wrap")) {
-                        button.innerText = subCateName;
-                    }
-                    button.classList.add("on");
-                    button.classList.remove("active");                                         
-                    map.classList.remove("on");
+                    if (map.classList.contains("caseTab")) {
+                        pubUi.selectMenuClickEvt("tab", pageMapCate, map, subCate);
+                    } else {
+                        pubUi.selectMenuClickEvt("default", pageMapCate, map, subCate);
+                    }            
                 });
             });
-        });
-        
-        this.self.wrap.addEventListener("scroll", function (el) {
-            const historyWrap = document.querySelector(".history-wrap");
-            const aside = document.querySelector(".wrap aside");
-            const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
             
-
-            // 스크롤 이벤트 처리
-            const nowScroll = el.target.scrollTop;
-            const page_h = window.innerHeight * 0.3;
-            // console.log("body scroll event");
-            // console.log("nowScroll : " + nowScroll);
-            // aside 표시/숨김 처리
-            if (nowScroll > page_h) {
-                aside && aside.style.display !== "block" && pubUi.fadeIn(aside, 500);
-            } else {
-                aside && (aside.style.display = "none");
-            }
-
-            // aside 클릭 시 스크롤 최상단 이동
-            if (aside) {
-                aside.onclick = function () {
-                    el.target.scrollTo({ top: 0, behavior: "smooth" });
-                };
-            }
-
-            // history-wrap 처리
-            if (historyWrap && historyWrap.classList.contains("each-view")) {
-                const historyViewY = historyWrap.offsetTop - 140;
-
-                if (nowScroll > 0 && !historyWrap.getAttribute("data-scrolling")) {
-                    document.body.scrollTo({ top: historyViewY, behavior: "smooth" });
-                    historyWrap.setAttribute("data-scrolling", "true");
-                    document.body.style.overflow = "hidden";
-                    // console.log("scrollDown !!!");
-                }
-            }
-
-            targetContentItem.forEach((item, idx) => {
-                const itemTop = item.offsetTop - 152; // - 600; // 아이템의 상단 위치 - 600                
-                const itemHeight = item.clientHeight;
-                const itemBottom = itemTop + itemHeight;
-
-                const itemDataBg = item.dataset.bgtype;
-                // console.log("itemDataBg : " + itemDataBg);
-
-                // 현재 스크롤 위치가 아이템 영역에 들어왔는지 확인
-                if (nowScroll >= itemTop && nowScroll < itemBottom) {
-                    // 해당 아이템에 on 클래스 추가
-                    item.classList.add("on");
-                    // 다른 아이템에서 on 클래스 제거
-                    targetContentItem.forEach((otherItem, otherIdx) => {
-                        if (otherIdx !== idx) {
-                            otherItem.classList.remove("on");
-                        }
-                    });
-
-                    if (itemDataBg === "dark" && item.classList.contains("on")) {
-                        // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
-                        item.style.color = "#fff";
-                    }
-                } else {
-                    item.classList.remove("on");
-                    if (itemDataBg === "dark") {
-                        // 값 초기화
-                        item.style.color = "revert";
-                    }
-                }
-            });
         });
+
+        
+        if(!this.self.wrap) {
+            return;
+        } else {
+            this.self.wrap.addEventListener("scroll", function (el) {
+                const historyWrap = document.querySelector(".history-wrap");
+                const aside = document.querySelector(".wrap aside");
+                const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
+                
+
+                // 스크롤 이벤트 처리
+                const nowScroll = el.target.scrollTop;
+                const page_h = window.innerHeight * 0.3;
+                // console.log("body scroll event");
+                // console.log("nowScroll : " + nowScroll);
+                // aside 표시/숨김 처리
+                if (nowScroll > page_h) {
+                    aside && aside.style.display !== "block" && pubUi.fadeIn(aside, 500);
+                } else {
+                    aside && (aside.style.display = "none");
+                }
+
+                // aside 클릭 시 스크롤 최상단 이동
+                if (aside) {
+                    aside.onclick = function () {
+                        el.target.scrollTo({ top: 0, behavior: "smooth" });
+                    };
+                }
+
+                // history-wrap 처리
+                if (historyWrap && historyWrap.classList.contains("each-view")) {
+                    const historyViewY = historyWrap.offsetTop - 140;
+
+                    if (nowScroll > 0 && !historyWrap.getAttribute("data-scrolling")) {
+                        document.body.scrollTo({ top: historyViewY, behavior: "smooth" });
+                        historyWrap.setAttribute("data-scrolling", "true");
+                        document.body.style.overflow = "hidden";
+                        // console.log("scrollDown !!!");
+                    }
+                }
+
+                targetContentItem.forEach((item, idx) => {
+                    const itemTop = item.offsetTop - 152; // - 600; // 아이템의 상단 위치 - 600                
+                    const itemHeight = item.clientHeight;
+                    const itemBottom = itemTop + itemHeight;
+
+                    const itemDataBg = item.dataset.bgtype;
+                    // console.log("itemDataBg : " + itemDataBg);
+
+                    // 현재 스크롤 위치가 아이템 영역에 들어왔는지 확인
+                    if (nowScroll >= itemTop && nowScroll < itemBottom) {
+                        // 해당 아이템에 active 클래스 추가
+                        item.classList.add("active");
+                        // 다른 아이템에서 active 클래스 제거
+                        targetContentItem.forEach((otherItem, otherIdx) => {
+                            if (otherIdx !== idx) {
+                                otherItem.classList.remove("active");
+                            }
+                        });
+
+                        if (itemDataBg === "dark" && item.classList.contains("active")) {
+                            // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
+                            item.style.color = "#fff";
+                        }
+                    } else {
+                        item.classList.remove("active");
+                        if (itemDataBg === "dark") {
+                            // 값 초기화
+                            item.style.color = "revert";
+                        }
+                    }
+                });
+            });
+        }
+    },
+    selectMenuClickEvt: function (type, pageMapCate, map, subCate) {
+        
+            if (type == "default") {
+                console.log("default click event");
+                
+                pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
+                subCate.classList.add("active");
+                const subCateName = subCate.innerText;
+                const button = map.closest(".select-cate").querySelector("button");
+
+                if (!subCate.closest(".lang-wrap")) {
+                    button.innerText = subCateName;
+                }
+                button.classList.add("on");
+                button.classList.remove("active");
+                map.classList.remove("on");
+            } else if (type === "tab") {
+                // console.log("tab click event");                                
+                pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
+                subCate.classList.add("active");
+                const subCateName = subCate.innerText;
+                const button = map.closest(".select-cate").querySelector("button");            
+                const selectedAriaControls = subCate.getAttribute("aria-controls");
+                // console.log("selectedAriaControls: " + selectedAriaControls);
+
+                if (!subCate.closest(".lang-wrap")) {
+                    button.innerText = subCateName;                    
+                }
+
+                if(selectedAriaControls) {
+                    const tabContent = document.querySelector(`#${selectedAriaControls}`);
+                    if (tabContent) {
+                        // 모든 탭 콘텐츠 숨김 처리
+                        const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .pc-only .tab-content");
+                        allTabContents.forEach((content) => content.classList.remove("on"));
+                        // 선택한 탭 콘텐츠 표시
+                        tabContent.classList.add("on");
+                    }
+                }
+                button.classList.add("on");
+                button.classList.remove("active");
+                map.classList.remove("on");
+            }
     },
     // fadeIn 함수: 요소를 서서히 나타나게 하는 함수
     fadeIn: function (element, duration) {

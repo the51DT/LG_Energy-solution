@@ -55,30 +55,26 @@
     .tab-cate-wrap.new .tab-content-box .tab-content {font-size: 1rem; font-weight: 500; line-height: 1.6rem;}
 
     /* accordion */
-    .accordion-list {padding: 1.5rem 0;}
-    .accordion-list .accordion-btn {font-size: 1.125rem; line-height: 1.6rem; white-space:wrap; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+    .accordion-list {padding: 1.5rem 1.25rem; border-radius: 0;}
+    .accordion-list.on {padding: 1.5rem 1.25rem;}
+    .accordion-list:not(:last-child) {margin-bottom: 0.25rem;}
     .accordion-list .accordion-btn:after {width: 1.5rem; height: 1.5rem;}
-    .accordion-list .accordion-btn .acd-group {display: flex; align-items: center; gap: 0.5rem;}
+    .accordion-list .accordion-btn .acd-group {flex-direction: column; align-items: flex-start; gap: 0.25rem;}
     .accordion-list .accordion-btn .acd-group .acd-icon {display: none;}
     
-    .accordion-list .accordion-btn .acd-tit {font-size: 1rem; font-weight: 600; line-height: 1.5rem;}
+    .accordion-list .accordion-btn .acd-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
     .accordion-list .accordion-btn .sub-tit,
-    .accordion-list.on .accordion-btn .sub-tit {font-size: 0.875rem; font-weight: 500; line-height: 1.4rem; color:var(--colorElement-light-text-text-default03); width: revert; padding-right: 0.16rem;}
-    .accordion-list.on .accordion-btn .acd-tit {font-weight: 600; font-size: 1.125rem; line-height: 1.75rem;}
+    .accordion-list.on .accordion-btn .sub-tit {font-size: 1rem; font-weight: 600; line-height: 1.6rem; color:var(--colorElement-light-text-text-default03); width: revert; padding-right: 0;}
+    .accordion-list.on .accordion-btn .acd-tit {font-weight: 700; font-size: 1.25rem; line-height: 1.875rem;}
 
-    .accordion-list .accordion-content {margin-top: 1rem;  font-size: 1rem; line-height: 1.6rem;}    
-    .accordion-list .accordion-content .desc-wrap > .desc {font-size: 1rem; line-height: 1.5rem;}
-    .accordion-list .accordion-content .desc-wrap > .desc:not(:last-child) {margin-bottom: 0.75rem;}
+    .accordion-list .accordion-content {margin-top: 1.5rem;  font-size: 1rem; line-height: 1.6rem; padding: 1.5rem 1.25rem; border-radius: 0.25rem;}
+    .accordion-list .accordion-content .desc-wrap > .desc {font-size: 0.875rem; line-height: 1.3125rem;}
 
     .accordion-list .accordion-content .table-wrap table tbody > tr > th,
     .accordion-list .accordion-content .table-wrap table tbody > tr > td {font-size: 0.875rem; line-height: 1.4rem; white-space: pre;}
 
-    .accordion-list.type2 {padding: 1.5rem 0; border-top: 1px solid var(--colorElement-light-stroke-stroke-default01);}
-    .accordion-list.type2.on {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}    
-    .accordion-list.type2:last-child {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default01);}
-    .accordion-list.type2.on:last-child {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
-    .accordion-list.type2 .accordion-content {margin-top: 1.5rem; margin-left: 0; margin-bottom: 0;}
-    .accordion-list.type2.on .accordion-content  {padding-top: 0.5rem;}
+    
+    .accordion-list.type2 .accordion-content {margin-left: 0; margin-bottom: 0;}
     .accordion-list.type2 .accordion-btn {font-size: 1rem; font-weight: 600; line-height: 1.5rem;}
     .accordion-list .accordion-content .sect-cont-sub article:not(:last-child)::after {margin: 2rem 0;}
 
