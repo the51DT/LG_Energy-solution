@@ -364,7 +364,8 @@
 .news-content-area .news-list .news-item .news-image{width:100%;height:auto;aspect-ratio:320/183}
 .news-content-area .news-list .news-item .news-content{gap:0}
 .news-content-area .news-list .news-item .news-content>span{font-size:0.875rem;margin-bottom:0.5rem}
-.news-content-area .news-list .news-item .news-content .news-title{font-size:1.125rem;line-height:1.75rem;margin-bottom:0;}
+.news-content-area .news-list .news-item .news-content .news-title{font-size:1.125rem;line-height:1.75rem;margin-bottom:1rem;}
+.news-content-area .news-list .news-item .news-content .news-title:has(+ .pc  -only){margin-bottom:0;}
 .news-content-area .news-list .news-item .news-content>p{font-size:1rem}
 .news-content-area .news-list .news-item .news-image-wrapper>a{font-size:0.8125rem;padding:0.5rem 1rem}
 .news-content-area .news-list .news-item .news-image-wrapper>a>img{width:1rem}
@@ -375,7 +376,7 @@
 .news-content-area .search-result>img{width:1.75rem}
 .news-content-area .search-result>button>img{padding:0.41875rem;width:1.375rem}
 .news-content-area .top-bar .total-result{border-bottom:0;margin-bottom:0;padding-bottom:0}
-.news-content-area .top-bar .no-result{padding:5rem 0;margin-bottom:1rem}
+.news-content-area .top-bar .no-result{padding:4rem 0;margin-bottom:1rem}
 .news .view-list-btn{width:100%;justify-content:center;font-size:1rem;padding:0.6875rem}
 .news .view-list-btn>img{width:0.8125rem}
 .news-detail-area{padding:0;background-color:#fff}
@@ -386,9 +387,9 @@
 .news-detail-area .news-detail .news-info button { padding: 0.5rem; }
 .news-detail-area .news-detail .news-info button > img { width: 1.25rem; }
 .news-detail-area .news-detail .news-info img { width: 1rem; }
-.news-detail-area .news-detail .news-info span { font-size: 1rem; font-weight: 500; }
+.news-detail-area .news-detail .news-info span { font-size: 0.875rem; font-weight: 500; }
 .news-detail-area .text-list-wrap { padding: 1rem; }
-.news-detail-area .text-list-wrap .text-list > li { font-size: 0.875rem; line-height: 160%; }
+.news-detail-area .text-list-wrap .text-list > li { font-size: 0.875rem; line-height: 150%; }
 .news-detail-area .text-list-wrap .text-list > li::before { top: 30%; }
 .news-detail-area .news-image-wrapper { width: 100%; position: relative; display: flex; align-items: flex-end; flex-direction: column; }
 .news-detail-area .news-image-wrapper img { height: 100%; }
