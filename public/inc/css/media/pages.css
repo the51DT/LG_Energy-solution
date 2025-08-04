@@ -352,14 +352,15 @@
 .news h3{font-size:2rem;font-weight:600;margin-top:2rem;margin-bottom:1rem}
 
 .news-content-area{padding:0 1.25rem;margin-bottom:6.25rem; margin-top: 5.25rem;}
-.news-content-area .top-bar{flex-direction:column-reverse;align-items:flex-start;gap:1.5rem;margin-bottom:1rem}
-.news-content-area .top-bar .search-box{width:20rem}
-.news-content-area .top-bar .search-box>button{width:2.125rem;padding:0.5rem}
-.news-content-area .top-bar .search-box>input{width:17.5rem}
+.news-content-area .top-bar{flex-direction:column-reverse;align-items:flex-start;gap:1.5rem;margin-bottom:1rem; width: 100%;}
+.news-content-area .top-bar .mo-only {width: 100%;}
+.news-content-area .top-bar .search-box{width:100%; box-sizing: border-box;}
+.news-content-area .top-bar .search-box>button{width:2.5rem;padding:0.5rem}
+.news-content-area .top-bar .search-box>input{width: 100%; flex: 1; }
 .news-content-area .top-bar .total-count{font-size:1rem}
 .news-content-area .news-list{margin-bottom:2rem}
 .news-content-area .news-list .news-item{display:flex;flex-direction:column;gap:1rem;padding:2rem 0}
-.news-content-area .news-list .news-item .news-image{width:20rem;height:11.4375rem;aspect-ratio:320/183}
+.news-content-area .news-list .news-item .news-image{width:100%;height:auto;aspect-ratio:320/183}
 .news-content-area .news-list .news-item .news-content{gap:0}
 .news-content-area .news-list .news-item .news-content>span{font-size:0.875rem;margin-bottom:0.5rem}
 .news-content-area .news-list .news-item .news-content .news-title{font-size:1.125rem;line-height:1.75rem;margin-bottom:1rem}
