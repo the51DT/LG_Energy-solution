@@ -20,6 +20,7 @@
     [class^="content-item"] {padding: 3rem 0;}
     [class^="content-item"] article:not(:last-child) {margin-bottom: 4rem;}
     [class^="content-item"] + [class^="content-item"]:last-child {padding-bottom: 6.25rem;}
+    [class^="content-item"]:only-child {padding-bottom: 6.25rem;}
     
     [class^="content-item"][class*="01"] {}
     [class^="content-item"] .content-wrap {max-width: 100%; padding: 0 1.25rem;}
