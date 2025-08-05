@@ -49,7 +49,7 @@
 
     .tab-cate-wrap.new:before {display:none;}
     .tab-cate-wrap.new .tab-category {gap: 0.25rem; height: fit-content;} 
-    .tab-cate-wrap.new .tab-category > li button {width: 6.875rem; padding: 0.625rem 1rem; border-radius: 0.125rem; background: #F3F5F7; font-size: 1rem; line-height: 1.6rem; font-weight: 500; color: #555758; white-space: nowrap;}
+    .tab-cate-wrap.new .tab-category > li button {width:100%; min-width: 6.875rem; padding: 0.625rem 1rem; border-radius: 0.125rem; background: #F3F5F7; font-size: 1rem; line-height: 1.6rem; font-weight: 500; color: #555758; white-space: nowrap;}
     .tab-cate-wrap.new .tab-category > li.on button  {color:#fff; background: #171819;}
     .tab-cate-wrap.new .tab-category > li.on button:after {display: none;}
     .tab-cate-wrap.new .tab-content-box .tab-content {font-size: 1rem; font-weight: 500; line-height: 1.6rem;}
@@ -100,12 +100,6 @@
     .selectbox-wrap.type3 > div button::before {top: 50%;}
     .selectbox-wrap.type3 .select-cate::after {margin-top: 1rem;}
     .selectbox-wrap.type3 .select-menu {bottom: 56px; max-height: 18rem;}
-    
-    .tab-cate-wrap.new:before {display:none;}
-    .tab-cate-wrap.new .tab-category {gap: 0.25rem; height: fit-content;} 
-    .tab-cate-wrap.new .tab-category > li button {width: 6.875rem; padding: 0.625rem 1rem; border-radius: 0.125rem; background: #F3F5F7; font-size: 1rem; line-height: 1.6rem; font-weight: 500; color: #555758; white-space: nowrap;}
-    .tab-cate-wrap.new .tab-category > li.on button  {color:#fff; background: #171819;}
-    .tab-cate-wrap.new .tab-category > li.on button:after {display: none;}
 
     /* table */
     .table-wrap table tbody > tr > th {font-size: 0.875rem; font-weight: 600; line-height: 1.4rem; padding: 0.75rem 0.5rem;}
