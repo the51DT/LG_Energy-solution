@@ -301,6 +301,7 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 [class^="content-item"] + [class^="content-item"].active {opacity: 1;}
 [class^="content-item"] article:not(:last-child) {margin-bottom: 7.5rem;}
 [class^="content-item"] + [class^="content-item"]:last-child {padding-bottom: 15rem;}
+[class^="content-item"]:only-child {padding-bottom: 15rem;}
 [class^="content-item"] .content-wrap {max-width: 90rem; margin: 0 auto;}
 [class^="content-item"] .content-sect {padding-top: 2.5rem;}
 [class^="content-item"] article .content-sect {padding-top: 1.875rem;}
