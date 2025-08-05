@@ -434,7 +434,8 @@
 .map-conts-area .map-img.on .active_img{opacity:1;}
 .map-conts-area .map-img.on .active_img img{transform: scale(1.2);}
 .map-conts-area .map-img.on .default_img{display: none;}
-.map-conts-area .map-info .map-info-list {width: 33rem; height: 53.75rem; padding: 2.5rem 0; text-align: left; overflow-y: auto; position:absolute; background:#fff; top:0; right:0; transition: 0.5s linear; z-index:10;}
+.map-conts-area .map-info .map-info-list {width: 33rem; height: 53.75rem; padding: 2.5rem 0 0; text-align: left; overflow-y: auto; overflow-x: hidden; position:absolute; background:#fff; top:0; right:0; transition: 0.5s linear; z-index:10; border-right: 1px solid #c9ced1;}
+
 
 .map-filter {position:absolute; left:2rem; bottom: 2rem; z-index:10;}
 .map-filter .map-filter-list {display: flex; text-align:left; flex-direction: column; gap: 0.625rem; align-items: center;}
@@ -450,7 +451,7 @@
 .map-info {display: flex; position: relative;}
 .map-info .map-info-list .selectbox-wrap.type2 {margin:0 2.5rem;}
 .map-info .map-info-list .selectbox-wrap.type2 .select-cate > button {max-width: 28rem; min-width: 28rem;}
-.map-info .map-info-list .select-cate .select-menu {top:4.375rem; width: 100%; max-width: 28rem;}
+.map-info .map-info-list .selectbox-wrap.type2 .select-cate .select-menu {width: 100%; max-width: 28rem;}
 
 
 .map-info .map-info-list .map-info-item {margin-top: 1rem;}
@@ -459,7 +460,7 @@
 .map-info .map-info-list .map-info-item > li > a:hover,
 .map-info .map-info-list .map-info-item > li > a:active,
 .map-info .map-info-list .map-info-item > li > a.active {background-color:#3ec2cf; color:#fff;}
-.map-info .map-info-content-box {position:absolute; top:0; right:0; width:26.25rem; height:53.75rem; padding:2.5rem; background:#fff; box-shadow: -0.25rem 0px 1.25rem 0px rgba(0, 0, 0, 0.10); backdrop-filter: blur(3px); opacity:0; transition:opacity 0.5s linear;}
+.map-info .map-info-content-box {position:absolute; top:0; right:0; width:26.25rem; height:62.5rem; padding:2.5rem; background:#fff; box-shadow: -4px 0px 20px 0px rgba(0, 0, 0, 0.10); backdrop-filter: blur(3px); opacity:0; transition:opacity 0.5s linear;}
 .map-info .btn-close button {width:1.75rem; height:1.75rem; position:absolute; right: 2.5rem; top:2.5rem;}
 .map-info.on .map-info-content-box {right:0; opacity:1; transition:opacity 0.5s linear;}
 .map-info.on .map-info-list {right:26.25rem; transition: 0.5s linear;} /* right:41rem 이면, 스크롤바 숨겨진상태로 노출됨 */
@@ -657,6 +658,11 @@
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .img-box img {width: 29.125rem; height:17.5rem; border-radius:1.5rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .img-box .img-title {margin-top:1.25rem;}
 .num-pop { animation: popIn 0.3s ease-out;}
+
+
+/* 글로벌 네트워크 */
+.netw .tab-category {max-width: 90rem; margin: 0 auto;}
+.wrap:not(.main_p).netw :has(.content-header) .content-area [class^="content-item"]:first-child {padding-top: 0;}
 
 @keyframes popIn {
     0% { transform: scale(1); }
