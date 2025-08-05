@@ -199,6 +199,8 @@
     .wrap .content-wrap {padding-top: 3.25rem;}
     .wrap .content-wrap .content-area { padding-top: 3.625rem;}            
     .wrap .content-wrap:has(.content-header) .content-area { padding-top: 0;}
+    .wrap .content-wrap:not(:has(.content-header)) .content-area {padding-top: 0;}
+
     /* .content-area-head-tab {position: fixed; top: calc(110 / 16 * 1rem); width: 100%;} */
     /* .wrap:not(.sub_p) .content-header {display: none; }
     .wrap:not(.sub_p) .content-header .subp-tit {font-size: 1.125rem; line-height: 1.575rem;} */

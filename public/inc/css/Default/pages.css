@@ -540,11 +540,10 @@
 /* R&D */
 .rnd .cont-area-intro .article-content {margin-top: 2rem;}
 .rnd .cont-area-wrap.type2 .cont-area-sect > section:last-of-type {padding-bottom: 0;}
-.rnd-content {margin: 6.25rem auto !important;}
 .rnd-content .img-wrap  {max-width: 69.5rem; margin: 0 auto;}
 .rnd-content .img-wrap img {width: 100%; height: 100%; object-fit: cover;}
-.rnd-content .graph-wrap {display: flex; gap: 1.88rem; justify-content: center;}
-.cont-area-sect section:last-of-type .rnd-content {margin-bottom: 0 !important;}
+.rnd-content .graph-wrap {display: flex; gap: 1.25rem; justify-content: center;}
+.cont-area-sect section .rnd-content {margin-top: 5rem;}
 .rnd .nbdr-box-wrap .cont-box-wrap {display: flex; justify-content: space-between; align-items: flex-end; padding: 1.25rem 0;}
 .rnd .nbdr-box-wrap .cont-box-wrap > div {flex-grow: 1;}
 .rnd .nbdr-box-wrap .text-area .cate-group {display: flex; gap: 5rem;}

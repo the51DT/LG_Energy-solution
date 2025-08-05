@@ -211,11 +211,11 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .wrap-form-input.filebox .input-wrap.type2 .input-box:active {border: none; color: var(--colorElement-light-text-text-default01); background-color: transparent;}
 
 /* content */
-.cont-area-wrap .cont-area-sect {text-align: left;}
+.cont-area-wrap .cont-area-sect {text-align: left; }
 .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 5rem;}
 .cont-area-wrap .cont-area-sect > section {padding-bottom: 6.25rem;}
 .cont-area-wrap .cont-area-intro {text-align: left;}
-.cont-area-wrap .cont-area-intro .intro-desc {padding: 5rem 0 3.75rem; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); }
+.cont-area-wrap .cont-area-intro .intro-desc {padding: 2.5rem 0 5rem; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); }
 .cont-area-wrap .cont-area-intro .intro-desc.ty-light {font-weight: 400; font-size: 1.75rem; line-height: 2.625rem; padding-bottom: 0 !important;}
 .cont-area-wrap .cont-area-intro .intro-desc.ty-light strong {font-weight: 600;}
 .cont-area-wrap .cont-area-sect > .cont-tit {padding-bottom: 3.75rem; font-size: 2.5rem; font-weight: 600; line-height: 3.5rem;}
