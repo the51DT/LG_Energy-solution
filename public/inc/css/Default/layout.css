@@ -303,6 +303,7 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 [class^="content-item"] .content-wrap {max-width: 90rem; margin: 0 auto;}
 [class^="content-item"] .content-sect {padding-top: 2.5rem;}
 [class^="content-item"] article .content-sect {padding-top: 1.875rem;}
+[class^="content-item"].bg-gray {background-color: var(--colorElement-light-fill-fill-default04);}
 
 
 .title-h1 {font-size: 2.75rem; font-weight: 700; line-height: 3.5rem;}
