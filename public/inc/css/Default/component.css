@@ -304,13 +304,10 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .box-container:not(:first-child) .box-content {margin-top: 6.25rem;}
 .step-box-wrap {padding-top: 3rem;}
 .step-box-wrap .step-box {display: flex; gap: 6.25rem; justify-content: center; text-align: center;}
-
 .step-box-wrap .step-box > li .img-wrap {content:""; width: 6rem; height: 6rem; display: block; border-radius: 3rem; background: var(--colorElement-light-fill-fill-primary); margin: 0 auto 2rem;}
 .step-box-wrap .step-box > li .img-wrap > img {width: 100%; height: 100px; object-fit: cover;}
-
 .step-box-wrap .step-box > li .text {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.5rem;}
 .step-box-wrap .step-box > li .sub {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
-
 .cont-area-title {font-size: 2.5rem; font-weight: 600; line-height: 3.5rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 2.5rem;}
 .cont-area-title.type2 {margin-bottom: 3.75rem;}
 
@@ -321,9 +318,6 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .sect-box .info-box {padding-top: 2.5rem;}
 .sect-box .info-box .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 .sect-box .info-box .desc:not(:last-child) {margin-bottom: 1.25rem;}
-
-
-
 
 /* tab */
 .tab-cate-wrap {position: relative;}
