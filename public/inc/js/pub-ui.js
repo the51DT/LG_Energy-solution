@@ -46,7 +46,6 @@ var pubUi = {
 
     bindEvents: function () {
         // selectbox 탭형식 이벤트 처리 (PC)
-
         this.self.selectCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", (e) => {
                 const currentTarget = e.currentTarget;
@@ -193,13 +192,46 @@ var pubUi = {
 
             if (selectedAriaControls) {
                 const tabContent = document.querySelector(`#${selectedAriaControls}`);
+                
                 if (tabContent) {
                     // 모든 탭 콘텐츠 숨김 처리
                     const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .pc-only .tab-content");
                     allTabContents.forEach((content) => content.classList.remove("on"));
                     // 선택한 탭 콘텐츠 표시
                     tabContent.classList.add("on");
+                    tabContent.setAttribute("aria-expanded", true);
                 }
+
+                // 선택한 selectbox에 하위 탭이 있다면(data-tab-type='secondTab'), 첫 번째 하위 탭 on 처리
+                const secondTab = tabContent?.querySelector("[data-tab-type='secondTab']");
+                if (secondTab) {
+                    const secondTabs = secondTab.querySelectorAll(".tab-category > li");
+                    const verticalContents = secondTab.querySelectorAll(".tab-content-box > .tab-content");
+
+                    secondTabs.forEach((vt) => {
+                        vt.classList.remove("on");
+                        vt.querySelector("button").setAttribute("aria-selected", false);
+                    });
+
+                    verticalContents.forEach((vc) => {
+                        vc.classList.remove("on");
+                        vc.setAttribute("aria-expanded", false);
+                    });
+
+                    // 첫 번째 하위 탭 on 처리
+                    const firstsecondTab = secondTabs[0];
+                    const firstVerticalContentId = firstsecondTab.getAttribute("id") + "-content";
+                    
+                    firstsecondTab.classList.add("on");
+                    firstsecondTab.querySelector("button").setAttribute("aria-selected", true);
+
+                    const firstVerticalContent = secondTab.querySelector(`#${firstVerticalContentId}`);
+                    if (firstVerticalContent) {
+                        firstVerticalContent.classList.add("on");
+                        firstVerticalContent.setAttribute("aria-expanded", true);
+                    }
+                }
+                
             }
             button.classList.add("on");
             button.classList.remove("active");
