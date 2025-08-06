@@ -346,7 +346,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .tab-wrap.vertical .tab-category > li.on button:after {display: none;}
 .tab-wrap.vertical .tab-content-box {flex-grow: 1;} 
 
-.tab-cate-wrap.full-line::before {width: calc(100vw - var(--scrollbar-width)); left: 50%; transform: translateX(-50%); box-sizing: border-box;}
+.tab-cate-wrap.full-line::before {width: calc(100vw - var(--scrollbar-width)); left: 50%; transform: translateX(-50%);}
 
 
 /* accordion */
