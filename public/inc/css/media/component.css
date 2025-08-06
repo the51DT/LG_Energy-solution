@@ -189,7 +189,7 @@
     .breadcrumb-wrap .select-menu > li:not(:last-child) {padding-bottom: 1rem;}
     .breadcrumb-wrap .select-menu > li > a {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem;}
 
-    .wrap .content-wrap { padding-top: 3.625rem;}            
+    .wrap #container { padding-top: 3.625rem;}            
     .wrap .content-wrap:has(.content-header) .content-area { padding-top: 0;}
     .wrap .content-wrap:not(:has(.content-header)) .content-area {padding-top: 0;}
 
