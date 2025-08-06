@@ -1,11 +1,8 @@
 @media screen and (max-width: 1470px) {
     .header-cont{padding: 1.25rem 2rem;}
-    [class^="content-item"] .content-wrap {
-        max-width: 100%;
-        padding: 0 2rem;
-    }
+    [class^="content-item"] .content-wrap {max-width: 100%; padding: 0 2rem;}
+    .wrap:not(.main_p) .content-header {padding-left: 2rem; padding-right: 2rem;}
     .footer-wrap .footer-area {margin: 0 2rem;}
-    
 }
 
 
@@ -13,18 +10,23 @@
     .pc-only {display: none !important;}
     .mo-only {display: block !important;}    
 
+    .wrap:not(.main_p) .content-header {max-width: 100%; padding: 2rem 1.25rem;}
+    .wrap:not(.main_p) :has(.content-header) .content-area [class^="content-item"]:first-child {padding-top: 0;}
+    
     .content-header_bg {display: none;}
     .content-header .title-h1  {margin-bottom: 2rem;}
-    .content-header .subp-tit {font-size: 1.125rem; line-height: 1.75rem;}
+    .content-header .subp-tit {font-size: 1.125rem; line-height: 1.75rem;}    
 
     [class^="content-item"] {padding: 3rem 0;}
     [class^="content-item"] article:not(:last-child) {margin-bottom: 4rem;}
     [class^="content-item"] + [class^="content-item"]:last-child {padding-bottom: 6.25rem;}
+    [class^="content-item"]:only-child {padding-bottom: 6.25rem;}
     
     [class^="content-item"][class*="01"] {}
     [class^="content-item"] .content-wrap {max-width: 100%; padding: 0 1.25rem;}
     [class^="content-item"] .content-sect {padding-top: 1rem;}
     [class^="content-item"] article .content-sect {padding-top: 1rem;}
+    .content-area-head-tab {top: calc(52 / 16 * 1rem);}
     
     .title-h1 {font-size: 1.875rem; line-height: 2.275rem;}
     .title-h2 {font-size: 1.5rem; line-height: 2.0625rem;} 

@@ -5,6 +5,7 @@
     height:100%;
     overflow-y: auto;;    
 }
+.wrap.pc {position: relative;}
 
 .w100 {width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important;}
 .noScroll {touch-action:none; -webkit-overflow-scrolling:none; overflow:hidden; overscroll-behavior:none;}
@@ -300,10 +301,12 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 [class^="content-item"] + [class^="content-item"].active {opacity: 1;}
 [class^="content-item"] article:not(:last-child) {margin-bottom: 7.5rem;}
 [class^="content-item"] + [class^="content-item"]:last-child {padding-bottom: 15rem;}
+[class^="content-item"]:only-child {padding-bottom: 15rem;}
 [class^="content-item"] .content-wrap {max-width: 90rem; margin: 0 auto;}
 [class^="content-item"] .content-sect {padding-top: 2.5rem;}
 [class^="content-item"] article .content-sect {padding-top: 1.875rem;}
 [class^="content-item"].bg-gray {background-color: var(--colorElement-light-fill-fill-default04);}
+[class^="content-item"].full-bg {margin-bottom: 0;}
 
 
 .title-h1 {font-size: 2.75rem; font-weight: 700; line-height: 3.5rem;}
@@ -316,12 +319,13 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 
 
 
-.page-map-wrap {position:sticky; font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; width: 100%; top:99px; background-color: #fff; margin-top: 0; z-index: 50;}
+.page-map-wrap {position:sticky; font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; width: 100%; top:0; background-color: #fff; margin-top: 0; z-index: 50;} /* top:99px */
 .page-map-wrap.stuck {} /* sticky 붙었을경우 예외처리 클래스, 필요시 사용(기존 회색배경 디자인 변경으로 제거함) */
+.page-map-wrap .selectbox-wrap {gap: 1.88rem; padding-top: 1.88rem; height: 5rem;}
 .page-map-wrap .selectbox-wrap > div.select-cate::after {content:""; width: 100%; height: 0.125rem; background: #1f1f3c; display: block; position: absolute; bottom: 0;}
-.page-map-wrap .selectbox-wrap > div.select-cate button { padding:0 0 1rem; width: 18.625rem;}
+.page-map-wrap .selectbox-wrap > div.select-cate button {padding:0 0 1rem; width: 18.625rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
 .page-map-wrap .selectbox-wrap > div.select-cate button::before {width: 0.59281rem; height: 0.44513rem; right: 0; background: url(../../images/icon/icon_arrow_down2.svg) no-repeat center center / contain; right: 0; top: 12px;}
-.content-area-head-tab {position:sticky; top:calc(52 / 16 * 1rem);background-color:#fff; z-index: 40;}
+.content-area-head-tab {position:sticky; top:calc(80 / 16 * 1rem);background-color:#fff; z-index: 40;}
 
 .lang-wrap {position: relative;}
 .lang-wrap .lang-button {line-height: 1; color: var(--colorElement-light-text-text-default01);}
@@ -352,8 +356,11 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 /* 컨텐츠 */
 /* .wrap:not(.sub_p, .main_p) .content-item01 {max-width: 90rem; margin: 0 auto;}*/
 .wrap:not(.sub_p, .main_p) .content-item01.w100 section:not(.full-bg) {max-width: 90rem; margin: 0 auto;} 
-.full-bg {background-color: var(--colorElement-light-fill-fill-default04); padding: 0 !important; margin-bottom: 6.25rem;}
-.full-bg > div {max-width: 90rem; margin: 0 auto; padding-block: 6.25rem;}
+.full {padding: 0 !important; margin: 0 !important;}
+.full > div {max-width: 90rem; margin: 0 auto;}
+.full-bg {background-color: var(--colorElement-light-fill-fill-default04); padding: 0 !important; margin-bottom: 7.5rem;}
+.full-bg > div {max-width: 90rem; margin: 0 auto; padding-block: 7.5rem;}
+
 /* .content-item01{background:#000}
 .content-item02{background:#218927}
 .content-item03{background:#658733} */
@@ -361,3 +368,4 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 .wrap:not(.main_p) .content-header {max-width: 90rem; margin: 0 auto; padding:7.5rem 0 5rem;}
 .wrap:not(.main_p) .content-header .subp-tit {color:#171819; font-size: 1.5rem; font-weight: 400; line-height: 2.25rem;}
 .wrap:not(.main_p) .content-header .subp-tit strong{font-weight: 600;}
+.wrap:not(.main_p) :has(.content-header) .content-area [class^="content-item"]:first-child {padding-top: 2.5rem;}

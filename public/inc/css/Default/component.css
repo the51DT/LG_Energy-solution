@@ -211,11 +211,11 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .wrap-form-input.filebox .input-wrap.type2 .input-box:active {border: none; color: var(--colorElement-light-text-text-default01); background-color: transparent;}
 
 /* content */
-.cont-area-wrap .cont-area-sect {text-align: left;}
+.cont-area-wrap .cont-area-sect {text-align: left; }
 .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 5rem;}
 .cont-area-wrap .cont-area-sect > section {padding-bottom: 6.25rem;}
 .cont-area-wrap .cont-area-intro {text-align: left;}
-.cont-area-wrap .cont-area-intro .intro-desc {padding: 5rem 0 3.75rem; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); }
+.cont-area-wrap .cont-area-intro .intro-desc {padding: 2.5rem 0 5rem; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); }
 .cont-area-wrap .cont-area-intro .intro-desc.ty-light {font-weight: 400; font-size: 1.75rem; line-height: 2.625rem; padding-bottom: 0 !important;}
 .cont-area-wrap .cont-area-intro .intro-desc.ty-light strong {font-weight: 600;}
 .cont-area-wrap .cont-area-sect > .cont-tit {padding-bottom: 3.75rem; font-size: 2.5rem; font-weight: 600; line-height: 3.5rem;}
@@ -324,7 +324,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .tab-cate-wrap:before {content: ''; display: block; width: 100%; height: 1px; background: var(--colorElement-light-stroke-stroke-default03); position: absolute; bottom: 0; left: 0;}
 .tab-cate-wrap.scroll {overflow-x: auto; overflow-y: hidden; white-space: nowrap; display: inline-flex; width: 100%; -ms-overflow-style: none; scrollbar-width: none;}
 .tab-cate-wrap.scroll::after {content:''; display:inline-block; width: 2.375rem; height: 3.1875rem; background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 111.9%); position:absolute; right:0; top:0;}
-.tab-category {overflow-x:auto; overflow-y: hidden; display: flex; align-items: center; gap: 60px; height: 70px; position: relative;} 
+.tab-category {overflow-x:auto; overflow-y: hidden; display: flex; align-items: center; gap: 60px; height: 3.875rem; position: relative;} 
 .tab-category > li button {font-size: 1.25rem; line-height: 1.875rem; font-weight: 500; color: #707273; position:relative; padding:1.25rem 0; white-space: nowrap;}
 .tab-category > li.on button  {color:var(--colorElement-light-text-text-default01); font-weight: 600;}
 .tab-category > li.on button:after {content: ''; height: 0.25rem; width: 100%; display:inline-block; background-color:#121212; position: absolute; bottom:0; left:0;}
@@ -412,7 +412,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 /* *** selectbox *** */
 
 
-.selectbox-wrap {width: 100%; display:flex; justify-content: center; align-items: flex-end; padding-top: 1.88rem; gap: 1.88rem; height: 5rem;}
+.selectbox-wrap {width: 100%; display:flex; justify-content: center; align-items: flex-end;}
 .selectbox-wrap > div:first-child {padding-left: 0;}
 .selectbox-wrap > div.select-cate { position: relative;}
 .selectbox-wrap > div.select-cate button::before {content: ''; display: block; width: 1.5rem; height: 1.5rem; background: url(../../images/icon/icon_arrow_down.svg) no-repeat center center / contain; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);}
@@ -436,16 +436,18 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 
 .selectbox-wrap.type2 {display:block;}
 .selectbox-wrap.type2 .select-cate {position: relative; width: 100%;}
-.selectbox-wrap.type2 .select-cate > button {width: 100%; height: 4rem; border-radius: 0.5rem; padding:1rem 1.5rem; border:1px solid var(--colorElement-light-stroke-stroke-default03); font-size: 1.25rem; font-weight: 400; line-height: 1.875rem; text-align: left; color:#555758; position: relative;}
+.selectbox-wrap.type2 .select-cate > button {width: 100%; height: 4rem; border-radius: 0.5rem; padding:1rem 1.5rem; border:1px solid var(--colorElement-light-stroke-stroke-default03); font-size: 1.25rem; font-weight: 400; line-height: 2rem; text-align: left; color:#555758; position: relative;}
+.selectbox-wrap.type2 .select-cate > button.on {font-size: 1.25rem; font-weight: 600;}
 .selectbox-wrap.type2 .select-cate > button:after {content: ''; display: block; width: 1.5rem; height: 1.5rem; background: url(../../images/icon/icon_arrow_down.svg) no-repeat center center / contain; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);}
 .selectbox-wrap.type2 .select-cate > button.active:after {transform: translateY(-50%) rotate(180deg)}
-.selectbox-wrap.type2 .select-menu {padding:0; border:1px solid var(--colorElement-light-stroke-stroke-default03);}
+.selectbox-wrap.type2 .select-cate .select-menu {padding:0; border:1px solid var(--colorElement-light-stroke-stroke-default03); background: #fff; border-radius: 0 0 0.5rem 0.5rem; border-top: 0; top: 4rem;}
+.selectbox-wrap.type2 .select-cate > button.active {border-radius: 0.5rem 0.5rem 0 0;}
 .selectbox-wrap.type2 .select-menu > li:not(:last-child) {padding-bottom:0;}
-.selectbox-wrap.type2 .select-menu > li:first-child a:hover{border-radius: 1rem 1rem 0 0;}
-.selectbox-wrap.type2 .select-menu > li:last-child a:hover {border-radius: 0 0 1rem 1rem;}
-.selectbox-wrap.type2 .select-menu > li > a:hover {background-color:var(--colorElement-light-fill-fill-default04);}
-.selectbox-wrap.type2 .select-menu > li > a {position: relative; padding:0.9rem 1.5rem;}
-.selectbox-wrap.type2 .select-menu > li > a.active:after {content:''; display:inline-block; width:1.5rem; height:1.5rem; background:url(../../images/icon/icon_check_bl.svg) no-repeat center center / contain; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);}
+/* .selectbox-wrap.type2 .select-menu > li:first-child a:hover{border-radius: 1rem 1rem 0 0;}
+.selectbox-wrap.type2 .select-menu > li:last-child a:hover {border-radius: 0 0 1rem 1rem;} */
+.selectbox-wrap.type2 .select-menu > li > a {position: relative; padding:0.9rem 1.5rem; color: #555758; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.selectbox-wrap.type2 .select-menu > li > a:hover {background-color:var(--colorElement-light-fill-fill-default04); color: var(--colorElement-light-text-text-default01);}
+
 
 .selectbox-wrap.type3 .select-cate {padding: 0; flex-grow: 1;}
 .selectbox-wrap.type3 > div button,
@@ -502,7 +504,7 @@ table {border-collapse: collapse;}
 .modal-pop {visibility: hidden; position: fixed; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 100;}
 .modal-pop.open {visibility: visible; margin: 0 1.2rem;}
 .modal-pop.open::before {opacity: 1;}
-.modal-pop::before {content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--colorElement-light-fill-fill-default01); width:100%; height: 100%; opacity: 0;} 
+.modal-pop::before {content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.70); width:100%; height: 100%; opacity: 0;} 
 .modal-pop.open .pop-wrap {opacity: 1;}
 
 .pop-wrap {position: relative; display:flex; flex-direction: column; width:100vw; max-width: 100%; max-height: 38.7rem; overflow: hidden; z-index: 10; transition: opacity 0.5s linear; opacity: 0; border-radius: 1.5rem; background: #fff; margin: 0 auto; overflow: hidden;}

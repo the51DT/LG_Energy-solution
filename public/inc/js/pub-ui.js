@@ -246,7 +246,8 @@ var pubUi = {
         if (document.querySelector(".wrap")) {
             document.querySelector(".wrap").addEventListener("scroll", (e) => {
                 const offsetTop = document.querySelector(".wrap").scrollTop;
-                const stickyEl = document.querySelector(".page-map-wrap");
+                const stickyEl = document.querySelector(".page-map-wrap");                
+                const pageContentTab = document.querySelector(".content-area-head-tab");
 
                 if (!stickyEl) return;
 
@@ -254,8 +255,19 @@ var pubUi = {
                 if (pubUi.self.isPc) {
                     if (offsetTop > 400) {
                         stickyEl.classList.add("stuck");
+
+                        // 글로벌 네트워크 페이지 content-area-head-tab 예외처리 할 경우 주석 해제 (미확정)
+                        // if(document.querySelector(".wrap").classList.contains("netw") && stickyEl.classList.contains("stuck")) {
+                        //     stickyEl.style.display = "none"; // netw 페이지에서는 sticky bar를 숨김 처리
+                        //     pageContentTab.style.top = 0;
+                        // }
                     } else {
                         stickyEl.classList.remove("stuck");
+                        // 글로벌 네트워크 페이지 content-area-head-tab 예외처리 할 경우 주석 해제 (미확정)
+                        // if (document.querySelector(".wrap").classList.contains("netw")) {
+                        //     stickyEl.style.display = "block"; // netw 페이지에서는 sticky bar 초기화
+                        //     pageContentTab.style.top = "revert";
+                        // }
                     }
                 }
             });
