@@ -19,6 +19,8 @@ var pubUi = {
         this.historyMotionEvt();
         this.historyViewEvt();
         this.mobileDeviceChk();
+
+        this.setScrollWidth();
     },
 
     settings: function () {
@@ -706,6 +708,21 @@ var pubUi = {
                     pubUi.scrollToEvt("#eachView");
                 }, 1000);
             });
+        }
+    },
+    setScrollWidth: function () {
+        const apply = () => {
+            const scrollEl = document.querySelector(".wrap");
+            const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+            const scrollbarWidthPx = scrollEl.offsetWidth - scrollEl.clientWidth;
+            const scrollbarWidthRem = scrollbarWidthPx / remInPx;
+            document.documentElement.style.setProperty("--scrollbar-width", `${scrollbarWidthRem}rem`);
+        };
+    
+        if (document.readyState === "complete") {
+            apply();
+        } else {
+            window.addEventListener("load", apply);
         }
     },
 

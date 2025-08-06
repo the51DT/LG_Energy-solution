@@ -326,7 +326,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .tab-cate-wrap.scroll {overflow-x: auto; overflow-y: hidden; white-space: nowrap; display: inline-flex; width: 100%; -ms-overflow-style: none; scrollbar-width: none;}
 .tab-cate-wrap.scroll::after {content:''; display:inline-block; width: 2.375rem; height: 3.1875rem; background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 111.9%); position:absolute; right:0; top:0;}
 .tab-category {overflow-x:auto; overflow-y: hidden; display: flex; align-items: center; gap: 60px; height: 3.875rem; position: relative;} 
-.tab-category > li button {font-size: 1.25rem; line-height: 1.875rem; font-weight: 500; color: #707273; position:relative; padding:1.25rem 0; white-space: nowrap;}
+.tab-category > li button {font-size: 1.25rem; line-height: 1.875rem; font-weight: 500; color: #707273; position:relative; padding:1rem 0.62rem; white-space: nowrap;}
 .tab-category > li.on button  {color:var(--colorElement-light-text-text-default01); font-weight: 600;}
 .tab-category > li.on button:after {content: ''; height: 0.25rem; width: 100%; display:inline-block; background-color:#121212; position: absolute; bottom:0; left:0;}
 .tab-content-box .tab-content {display: none; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
@@ -353,6 +353,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .tab-wrap.vertical .tab-category > li.on button:after {display: none;}
 .tab-wrap.vertical .tab-content-box {flex-grow: 1;} 
 
+.tab-cate-wrap.full-line::before {width: calc(100vw - var(--scrollbar-width)); left: 50%; transform: translateX(-50%);}
 
 
 /* accordion */
