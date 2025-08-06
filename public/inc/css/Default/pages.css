@@ -583,6 +583,24 @@
 .rnd .step-box-wrap .step-box > li:nth-child(2) .img-wrap > img {width:2.4075rem; height: auto;}
 .rnd .step-box-wrap .step-box > li:nth-child(3) .img-wrap > img {width:3.6875rem; height: auto;}
 
+/* 다운로드 */
+.download .search-box-wrap { width: 100%; height: 13rem; display: flex; justify-content: center; align-items: center; }
+.download .search-box { display: flex; justify-content: flex-start; background-color: transparent; width: 28.75rem; height: 3rem; border-radius: 999px; padding: 1rem 1rem 1rem 2rem; align-items: center; gap: 2.5rem; }
+.download .search-box > input { font-size: 2rem; line-height: 3rem; }
+.download .search-box>input::placeholder { font-size: 2rem; line-height: 3rem; color: #B4B8BA; }
+.download .search-box img { width: 3rem; height: 3rem; }
+.download-list .checkbox { padding-left: 2.5rem; }
+.download-list>li { position: relative; display: flex; gap: 2.5rem; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03); }
+.download-list>li+li { margin-top: 6.25rem; }
+.download-list>li::before { content: ""; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 2px; background-color: #000; }
+.download-desc { flex-grow: 1; }
+.download-desc .tab-cont-name { font-size: 1rem; line-height: 1.5625rem; color: #555758;}
+.download-desc .download-tit { font-size: 1.25rem; line-height: 2rem; color: #171819;}
+.download-desc>li { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 2.5rem; padding: 1.88rem 2.5rem; }
+.download-desc>li>div { display: flex; align-items: center; gap: 1.25rem; flex-grow: 1; }
+.download-desc>li>.download-btn-group { justify-content: flex-end; }
+.download-list+.paging-wrap { margin-top: 3.75rem; }
+
 /* FAQ */
 .faq .tab-content-box {padding: 3.75rem 0; background-color: var(--colorElement-light-fill-fill-default04); margin-top: 2.5rem;}
 .faq .paging-wrap {margin-top: 0; background: var(--colorElement-light-fill-fill-default04);}
