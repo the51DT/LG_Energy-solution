@@ -413,8 +413,9 @@
 /* R&D */
 
 /* FAQ */
+.faq [class^="content-item"] {padding-bottom: 0;}
 .faq h3 {margin-top: 1.5rem; margin-bottom: 0;}
-.faq .tab-content-box {padding: 1.5rem 0 2rem; margin-top: 1.5rem;}
+.faq .tab-content-box {padding: 1.5rem 0 2rem;}
 .faq .paging-wrap {padding-bottom: 6rem;}
 .faq .content-area {padding-top: 0;}
 .faq .head-area,

@@ -79,7 +79,6 @@
     .accordion-list .accordion-content .sect-cont-sub article:not(:last-child)::after {margin: 2rem 0;}
 
     .accordion-list.type3 {padding: 1.25rem; border-radius: 1rem;}
-    .accordion-list.type3.on {border: 2px solid var(--colorElement-light-primary-primary-enabled);}
     .accordion-list.type3:not(:last-child) {margin-bottom: 0.62rem;}
     .accordion-list.type3 .accordion-btn .acd-group {gap: 0.25rem;}
     .accordion-list.type3 .accordion-content {margin-top: 2rem; margin-bottom: 0.75rem; margin-left: 0;}
