@@ -576,7 +576,7 @@
 
 /* FAQ */
 .faq .tab-content-box {padding: 3.75rem 0; background-color: var(--colorElement-light-fill-fill-default04); margin-top: 2.5rem;}
-.faq .paging-wrap {margin-top: 0; background: var(--colorElement-light-fill-fill-default04); padding-bottom: 15rem;}
+.faq .paging-wrap {margin-top: 0; background: var(--colorElement-light-fill-fill-default04);}
 .faq .head-area,
 .faq .tab-cate-wrap, 
 .faq .content-area .tab-content{max-width: 90rem; margin: 0 auto;}
