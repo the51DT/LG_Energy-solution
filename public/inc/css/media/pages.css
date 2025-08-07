@@ -333,11 +333,11 @@
 
 /* 글로벌네트워크 (netw) */
 .netw .content-area-head-tab {position: sticky;}
-.netw .tab-category {max-width: 100%;}
+.netw .tab-category {max-width: 100%; margin: 0;}
 
 .map-conts-area {display: block; padding: 1.5rem 1.25rem 0; background: var(--colorElement-light-fill-fill-default04);}
 .map-conts-area .map-img {display: none;}
-.map-conts-area .map-info .map-info-list {position: static; width: 100%; height: 100%; background: none; overflow: revert; padding:0 0 1rem;}
+.map-conts-area .map-info .map-info-list {position: static; width: 100%; height: 100%; background: none; overflow: revert; padding:0 0 1rem; border-right: 0;}
 
 .map-info .map-info-list .selectbox-wrap.type2 {margin: 0; padding-top: 0; height: auto;}
 .map-info .map-info-list .selectbox-wrap.type2 .select-cate > button {min-width: 100%; max-width: 100%; background-color: #fff;}
