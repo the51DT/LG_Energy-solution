@@ -43,7 +43,9 @@
 
     /* tab */    
     .content-area-head-tab .tab-category {max-width: 100%; margin: 0;}
-    .tab-category {gap: 1.5rem; height: 3.125rem; padding:0 1.25rem;}
+    .tab-category {gap: 1.5rem; height:fit-content; height:100%; padding:0 1.25rem;}
+    .tab-cate-wrap.type2 .tab-category,
+    .tab-cate-wrap.type3 .tab-category {height:fit-content; height: 100%;}
     .tab-category > li button {font-size: 1.125rem; line-height: 1.6875rem; padding:0.75rem 0;}
     .tab-category > li.on button:after {height: 0.125rem;}
 
@@ -72,7 +74,6 @@
     .accordion-list .accordion-content .sect-cont-sub article:not(:last-child)::after {margin: 2rem 0;}
 
     .accordion-list.type3 {padding: 1.25rem; border-radius: 1rem;}
-    .accordion-list.type3.on {border: 2px solid var(--colorElement-light-primary-primary-enabled);}
     .accordion-list.type3:not(:last-child) {margin-bottom: 0.62rem;}
     .accordion-list.type3 .accordion-btn .acd-group {gap: 0.25rem;}
     .accordion-list.type3 .accordion-content {margin-top: 2rem; margin-bottom: 0.75rem; margin-left: 0;}
