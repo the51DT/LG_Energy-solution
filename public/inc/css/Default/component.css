@@ -390,7 +390,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .accordion-list.type2.on .accordion-btn:after {background-image:url(../../images/icon/icon_accord_minus.svg);}
 
 .accordion-list.type3 {border-radius: 1rem; background: #fff;}
-
+.accordion-list.type3.on {border: 2px solid var(--colorElement-light-primary-primary-enabled);}
 .accordion-list.type3:not(:last-child) {margin-bottom: 1.25rem;}
 .accordion-list.type3 .accordion-btn .acd-group {gap: 2.5rem;}
 .accordion-list.type3 .accordion-btn .sub-tit {padding-right: 0; width: revert;}
