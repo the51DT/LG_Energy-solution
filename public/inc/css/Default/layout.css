@@ -375,4 +375,4 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 .wrap:not(.main_p) .content-header {max-width: 90rem; margin: 0 auto; padding:7.5rem 0 5rem;}
 .wrap:not(.main_p) .content-header .subp-tit {color:#171819; font-size: 1.5rem; font-weight: 400; line-height: 2.25rem;}
 .wrap:not(.main_p) .content-header .subp-tit strong{font-weight: 600;}
-.wrap:not(.main_p) :has(.content-header) .content-area [class^="content-item"]:first-child {padding-top: 2.5rem;}
+/* .wrap:not(.main_p) :has(.content-header) .content-area [class^="content-item"]:first-child {padding-top: 2.5rem;} */

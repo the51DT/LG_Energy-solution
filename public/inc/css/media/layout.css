@@ -10,8 +10,8 @@
     .pc-only {display: none !important;}
     .mo-only {display: block !important;}    
 
-    .wrap:not(.main_p) .content-header {max-width: 100%; padding: 2rem 1.25rem;}
-    .wrap:not(.main_p) :has(.content-header) .content-area [class^="content-item"]:first-child {padding-top: 0;}
+    .wrap:not(.main_p) .content-header {max-width: 100%; padding: 2rem 1.25rem 1.5rem;}
+    /* .wrap:not(.main_p) :has(.content-header) .content-area [class^="content-item"]:first-child {padding-top: 0;} */
     
     .content-header_bg {display: none;}
     .content-header .title-h1  {margin-bottom: 2rem;}
