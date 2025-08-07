@@ -205,5 +205,13 @@
     /* search */
     .header-wrap .header-search {overflow: hidden; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 2.12rem 1.25rem; height: 6.25rem;}
 
-    
+    /* pagination */
+    .paging-wrap .paging > li a {font-size: 1rem; line-height: 1.6rem; font-weight: 600;}
+    .paging-wrap .paging > li:not(.arrow) a { width: 1.875rem; height: 1.875rem;}
+    .paging-wrap .paging > li.arrow a {margin-top: 0.12rem;}
+    .paging-wrap .paging > li.arrow.prev {margin-right: 0.5rem;}
+    .paging-wrap .paging > li.arrow.next {margin-left: 0.5rem;}
+    .paging-wrap .paging > li.arrow.first {margin-right: -0.25rem;}
+    .paging-wrap .paging > li.arrow.last {margin-left: -0.25rem;}
+    .paging-wrap .paging > li a > img {width: 1.5rem; height: 1.5rem;}
 }
