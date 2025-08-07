@@ -356,14 +356,14 @@
 .map-info-content-box .info-content-body .sns-area > ul > li > a {width: 100%; height: 100%;}
 
 /* 뉴스룸 */
-.news h3{font-size:1.875rem;font-weight:700;margin: 2rem 0;}
+.news h3{font-size:1.875rem;font-weight:700;margin: 2rem 0 1.5rem;}
 
-.news-content-area{padding:0 1.25rem;margin-bottom:6.25rem; margin-top: 5.25rem;}
+.news-content-area{padding:0 1.25rem;margin-bottom:6.25rem; }
 .news-content-area .top-bar{flex-direction:column-reverse;align-items:flex-start;gap:1.5rem;margin-bottom:1rem; width: 100%;}
 .news-content-area .top-bar .mo-only {width: 100%;}
-.news-content-area .top-bar .search-box{width:100%; box-sizing: border-box; padding: 1rem 1rem 1rem 1.5rem;}
+.news-content-area .top-bar .search-box{width:100%; box-sizing: border-box; padding: 1rem 1rem 1rem 1.5rem; height: 3.625rem;}
 .news-content-area .top-bar .search-box>button{width:2.5rem;padding:0.5rem}
-.news-content-area .top-bar .search-box>input{width: 100%; flex: 1; }
+.news-content-area .top-bar .search-box > input{width: 100%; flex: 1; font-size: 1rem;}
 .news-content-area .top-bar .search-box > input::placeholder {font-size: 1rem;}
 .news-content-area .top-bar .total-count{font-size:1rem}
 .news-content-area .news-list{margin-bottom:2rem}
@@ -387,7 +387,7 @@
 .news .view-list-btn{width:100%;justify-content:center;font-size:1rem;padding:0.6875rem}
 .news .view-list-btn>img{width:0.8125rem}
 .news-detail-area{padding:0;background-color:#fff}
-.news-detail-area .news-detail {margin-top: 5.25rem;}
+.news-detail-area .news-detail {margin-top: 2rem;}
 .news-detail-area .news-detail .news-detail-tit{font-size:1.25rem;line-height:150%; font-weight: 700;}
 .news-detail-area .news-detail{padding:0 1.25rem;gap:1rem;margin-bottom:1.5rem}
 .news-detail-area .news-detail .news-info{padding-bottom:1rem;border-bottom:2px solid #555758}
