@@ -19,9 +19,9 @@
         <div class="wrap disc">
             <!-- header -->
             <header class="header-wrap">
-                <div class="header-area">
+                <div class="header-area pc-only">
                     <div class="header-cont">
-                        <h1 class="ci"><a href="../pages/cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg" alt=""></a></h1>
+                        <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg" alt=""></a></h1>
                         <div class="sitemap-wrap">
                             <nav class="nav-wrap">
                             <ul class="gnb__tab-btn-wrap">
@@ -33,19 +33,19 @@
                                 </ul>
                                 </li>
                                 <li class="depth01">
-                                <a href="./cyanogen_sub1.html">회사소개</a>
+                                <a href="../cyanogen/cyanogen_sub1.html">회사소개</a>
                                 <ul>
                                     <li class="depth02"><a href="#">소개</a></li>
                                     <li class="depth02"><a href="#">정도경영</a></li>
-                                    <li class="depth02"><a href="./cyanogen_sub2.html">글로벌 네트워크</a></li>
+                                    <li class="depth02"><a href="../cyanogen/cyanogen_sub2.html">글로벌 네트워크</a></li>
                                     <li class="depth02"><a href="#">뉴스룸</a></li>
                                     <li class="depth02"><a href="#">R&D</a></li>
                                 </ul>
                                 </li>
                                 <li class="depth01">
-                                <a href="./esgm01.html">지속가능경영</a>
+                                <a href="../sust/sust_sys_strategy_01.html">지속가능경영</a>
                                 <ul>
-                                    <li class="depth02"><a href="./esgm01.html">추진체계</a></li>
+                                    <li class="depth02"><a href="../sust/sust_sys_strategy_01.html">추진체계</a></li>
                                     <li class="depth02"><a href="#">환경</a></li>
                                     <li class="depth02"><a href="#">사회</a></li>
                                     <li class="depth02"><a href="#">지배구조</a></li>
@@ -53,13 +53,13 @@
                                 </ul>
                                 </li>
                                 <li class="depth01">
-                                <a href="./fina01.html">투자정보</a>
+                                <a href="../ir/ir_fin_sheet_01.html">투자정보</a>
                                 <ul>
-                                    <li class="depth02"><a href="./fina01.html">재무정보</a></li>
+                                    <li class="depth02"><a href="../ir/ir_fin_sheet_01.html">재무정보</a></li>
                                     <li class="depth02"><a href="#">주식정보</a></li>
                                     <li class="depth02"><a href="#">공시정보</a></li>
-                                    <li class="depth02"><a href="#">IR정보</a></li>
-                                    <li class="depth02"><a href="#">경영정보</a></li>
+                                    <li class="depth02"><a href="../ir/ir_irinfo_event_01.html">IR정보</a></li>
+                                    <li class="depth02"><a href="../ir/ir_irdata_report_01.html" class="active">IR자료</a></li>
                                 </ul>
                                 </li>
                                 <li class="depth01">
@@ -77,12 +77,66 @@
                         </div>
                         <div class="utile-wrap">
                             <div class="utile-cont">
+                                <!-- 250717 수정 : 고객지원 / 언어선택 디자인 변경 -->
+                                <div class="util-item-cs">
+                                    <img class="icon-cs" src="../../../inc/images/icon/icon_msg_chat.svg" alt="고객지원">
+                                    <a href="#" class="menu-title">고객지원</a>
+                                </div>
+                                <div class="utile-item">
+                                    <div class="lang-wrap">
+                                        <div class="select-cate activeSelect">
+                                            <button class="lang-button" aria-haspopup="listbox"><img src="../../../inc/images/icon/icon_global_img.svg" alt="언어 선택"><i class="select-btn-right-icon"></i></button>
+                                            <ul class="select-menu" role="listbox">
+                                                <li><a href="javascript:;" role="option" tabindex="0" class="active">KR</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">EN</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">CN</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">PL</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">DE</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- //lang-wrap -->
+                                </div>                                
+                                <div class="utile-item02">
+                                    <button class="search-btn"></button>
+                                </div>
+                                <!-- //250717 수정 : 고객지원 / 언어선택 디자인 변경 -->
+                                <div class="utile-item03">
+                                    <button class="nav-btn" title="메뉴 열기">
+                                        <i class="x-icon">
+                                            <span class="x-line"></span>
+                                            <span class="x-line"></span>
+                                        </i>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 250717 수정 : mobile 임시 헤더 추가 : 메뉴 펼쳤을때 마크업 추가 작업 필요 -->
+                <div class="header-area mo-only">
+                    <div class="header-cont">
+                        <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg" alt=""></a></h1>
+                        <div class="utile-wrap">
+                            <div class="utile-cont">
                             <div class="utile-item">
                                 <button class="search-btn"></button>
                             </div>
                             <div class="utile-item02">
-                                <button class="lang-button">KOR<i class="select-btn-right-icon"></i></button>
-                                <div></div>
+                                <div class="lang-wrap">
+                                    <div class="select-cate activeSelect">
+                                        <button class="lang-button" aria-haspopup="listbox"><img src="../../../inc/images/icon/icon_global_img.svg" alt="언어 선택"><i class="select-btn-right-icon"></i></button>
+                                        <ul class="select-menu" role="listbox">
+                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">KR</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0">EN</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0">CN</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0">PL</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0">DE</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!-- //lang-wrap -->
                             </div>
                             <div class="utile-item03">
                                 <button class="nav-btn" title="메뉴 열기">
@@ -99,18 +153,25 @@
                         </div>
                     </div>
                 </div>
+                <!-- //250717 수정 : mobile 임시 헤더 추가 : 메뉴 펼쳤을때 마크업 추가 작업 필요 -->
             </header>
             <!-- //header -->
             <!-- section -->
             <section id="container" class="content-wrap">
                 <div class="content-header_bg">
                     <img src="../../../inc/images/img/visual_disc01.png" alt="비주얼배너" />
+                    <div class="content-header_text">
+                        <p class="title-intro">
+                            정직하게 공개하고, 책임 있게 응답합니다.<br>
+                            <strong>LG에너지솔루션의 모든 공시는 신뢰의 기록</strong>입니다.
+                        </p>
+                    </div>
                 </div>
                 <div class="page-map-wrap"> <!-- page-map-wrap -->
                     <div class="selectbox-wrap pc-only" role="listbox">
-                        <div role="option" class="select-cate">
-                            <a href="../pages/cyanogen/cyanogen_main.html"><img src="../../../inc/images/icon/icon_home.svg" alt="home" title="홈 이동" /></a>
-                        </div>
+                        <!-- <div role="option" class="select-cate">
+                            <a href="../cyanogen/cyanogen_main.html"><img src="../../inc/images/icon/icon_home.svg" alt="home" title="홈 이동" /></a>
+                        </div> -->
                         <div class="select-cate activeSelect" role="option">
                             <button type="button" aria-haspopup="listbox">투자정보</button>
                             <ul class="select-menu" role="listbox">
@@ -131,46 +192,268 @@
                                 <li><a href="javascript:;" role="option" tabindex="0">IR자료</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="selectbox-wrap mo-only">
-                        <div class="breadcrumb-wrap">
-                            <div class="left-area">
-                                <a href="javascript:;" class="btn-prev" href="../pages/cyanogen/cyanogen_main.html"><img src="../../../public/inc/images/icon/icon_arrow_left.svg" alt="" title="이전페이지 이동" /></a>
-                            </div>
-                            <h2 class="page-title">공시정보</h2>
-                            <div class="right-area">                               
-                                <span class="blind">우측 모바일 네비게이션 영역 - 필요시 해당 span 제거 후 사용할것 </span>
-                            </div>
+                        <div class="select-cate activeSelect" role="option">
+                            <button type="button" aria-haspopup="listbox">전자공고</button>
+                            <!-- ★ PC 탭케이스일 경우, select-menu에 caseTab추가 필요, 하위 카테고리에 탭관련 속성 추가 필요 
+                            [ex] role="tab" aria-selected="true" aria-controls="tab1-content" -->
+                            <ul class="select-menu caseTab" role="listbox">
+                                <li><a href="javascript:;" tabindex="0" class="active" role="tab" aria-selected="true" aria-controls="tab1-content">전자공고</a></li>
+                                <li><a href="javascript:;" tabindex="0" role="tab" aria-selected="false" aria-controls="tab2-content">공시자료</a></li>
+                            </ul>
                         </div>
                     </div>
-                    
-                </div>
-                <div class="content-header">
-                    <div class="content-header-cont">
-                        <div class="subp-tit-area">
-                            <h3 class="subp-tit">
-                                정직하게 공개하고, 책임 있게 응답합니다.<br>
-                                LG에너지솔루션의 모든 공시는 신뢰의 기록입니다.
-                            </h3>
-                        </div>
-                    </div>
-                </div>
+                </div> <!--//page-map-wrap -->
                 <div class="content-area">
-                    <div class="tab-wrap">
-                        <div class="content-area-head-tab">
-                            <div class="tab-cate-wrap">
-                                <ul class="tab-category activeTab" role="tablist">
-                                    <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">전자공고</button></li>
-                                    <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">공시자료</button></li>
-                                </ul>
-                            </div><!--//tab-cate-wrap-->
-                        </div><!-- //content-area-head-tab-->
-                        <div class="content-item01">
+                    <div class="pc-only">
+                        <div class="tab-content-box">
+                            <div class="tab-content on" id="tab1-content">
+                                <div class="content-item01">
+                                    <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                        <h2 class="title-h1">전자공고</h2> <!-- title-h1 (페이지타이틀) -->
+                                        <div class="content-sect">
+                                            <ul class="history-list">
+                                                <li>
+                                                    <p class="history-year">2025</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">03.20</span>
+                                                                <span class="history-tit">제 5기 결산공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2024</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">12.31</span>
+                                                                <span class="history-tit">외부감사인 선임 공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">03.25</span>
+                                                                <span class="history-tit">제4기 결산공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2023</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">03.24</span>
+                                                                <span class="history-tit">제3기 결산공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2022</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">03.23</span>
+                                                                <span class="history-tit">제2기 결산공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">01.18</span>
+                                                                <span class="history-tit">유가증권시장 상장 주식공모 청약 안내</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2021</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.05</span>
+                                                                <span class="history-tit">명의개서대리인 선임 공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">04.28</span>
+                                                                <span class="history-tit">전자증권공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">04.05</span>
+                                                                <span class="history-tit">제1기 결산공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">03.05</span>
+                                                                <span class="history-tit">외부감사인 선임 공고</span>
+                                                            </div>
+                                                            <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <div class="paging-wrap">
+                                                <ul class="paging">
+                                                    <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                    <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">...</a></li>
+                                                    <li><a href="#">30</a></li>
+                                                    <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                    <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <a href="https://www.lgensol.com/assets/file/LGES_Disclosure%20Regulations.pdf" target="_blank" class="icon-btn-lg icon-white icon-download btn-outline01">
+                                                    <span>공시정보관리규정</span>
+                                                    <div class="icon-area"><span class="blind">PDF열기</span></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="tab2-content">
+                                <div class="content-item01">
+                                    <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                        <h2 class="title-h1">공시자료</h2> <!-- title-h1 (페이지타이틀) -->
+                                        <div class="content-sect">
+                                            <ul class="history-list">
+                                                <li>
+                                                    <p class="history-year">2025</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">06.30</span>
+                                                                <span class="history-tit">지속가능경영보고서등관련사항(자율공시)</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">06.16</span>
+                                                                <span class="history-tit">단일판매ㆍ공급계약체결</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.30</span>
+                                                                <span class="history-tit">기업지배구조보고서공시</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.30</span>
+                                                                <span class="history-tit">대규모기업집단현황공시[연1회공시및1/4분기용(개별회사)]</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.23</span>
+                                                                <span class="history-tit">임원ㆍ주요주주특정증권등소유상황보고서</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.21</span>
+                                                                <span class="history-tit">주식등의대량보유상황보고서(일반)</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.16</span>
+                                                                <span class="history-tit">임원ㆍ주요주주특정증권등거래계획보고서</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.15</span>
+                                                                <span class="history-tit">풍문또는보도에대한해명(미확정)</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.15</span>
+                                                                <span class="history-tit">분기보고서 (2025.03)</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-date">05.08</span>
+                                                                <span class="history-tit">[기재정정]유형자산취득결정(종속회사의주요경영사항)</span>
+                                                            </div>
+                                                            <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <div class="paging-wrap">
+                                                <ul class="paging">
+                                                    <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                    <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">...</a></li>
+                                                    <li><a href="#">30</a></li>
+                                                    <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                    <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mo-only">
+                        <div class="cont-head-wrap">
+                            <h2 class="title-h1">공시정보</h2> <!-- title-h1 (페이지타이틀) -->
+                        </div>
+                        <div class="tab-wrap">
+                            <div class="content-area-head-tab">
+                                <div class="tab-cate-wrap new">                            
+                                    <ul class="tab-category activeTab" role="tablist">
+                                        <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">전자공고</button></li>
+                                        <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">공시자료</button></li>
+                                    </ul>
+                                </div><!--//tab-cate-wrap-->
+                            </div><!-- //content-area-head-tab --> 
                             <div class="tab-content-box">
                                 <div class="tab-content on" id="tab1-content">
-                                    <div class="cont-area-wrap">
-                                        <div class="cont-area-sect">
-                                            <section>
+                                    <div class="content-item01">
+                                        <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                            <div class="content-sect">
                                                 <ul class="history-list">
                                                     <li>
                                                         <p class="history-year">2025</p>
@@ -228,7 +511,7 @@
                                                             <li>
                                                                 <div>
                                                                     <span class="history-date">01.18</span>
-                                                                    <span class="history-tit">유가증권시장 상장 주식공모 청약 안내</span>
+                                                                    <span class="history-tit">유가증권시장 상장 주식공모 <br class="mo-only">청약 안내</span>
                                                                 </div>
                                                                 <a href="#" class="history-btn"><span class="blind download">다운로드</span></a>
                                                             </li>
@@ -275,10 +558,8 @@
                                                         <li class="active"><a href="#">1</a></li>
                                                         <li><a href="#">2</a></li>
                                                         <li><a href="#">3</a></li>
-                                                        <li><a href="#">4</a></li>
-                                                        <li><a href="#">5</a></li>
                                                         <li><a href="#">...</a></li>
-                                                        <li><a href="#">30</a></li>
+                                                        <li><a href="#">20</a></li>
                                                         <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
                                                         <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
                                                     </ul>
@@ -289,14 +570,14 @@
                                                         <div class="icon-area"><span class="blind">PDF열기</span></div>
                                                     </a>
                                                 </div>
-                                            </section>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tab-content" id="tab2-content">
-                                    <div class="cont-area-wrap">
-                                        <div class="cont-area-sect">
-                                            <section>
+                                    <div class="content-item01">
+                                        <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                            <div class="content-sect">
                                                 <ul class="history-list">
                                                     <li>
                                                         <p class="history-year">2025</p>
@@ -304,7 +585,7 @@
                                                             <li>
                                                                 <div>
                                                                     <span class="history-date">06.30</span>
-                                                                    <span class="history-tit">지속가능경영보고서등관련사항(자율공시)</span>
+                                                                    <span class="history-tit">지속가능경영보고서등관련사항<br  class="mo-only">(자율공시)</span>
                                                                 </div>
                                                                 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
                                                             </li>
@@ -325,28 +606,28 @@
                                                             <li>
                                                                 <div>
                                                                     <span class="history-date">05.30</span>
-                                                                    <span class="history-tit">대규모기업집단현황공시[연1회공시및1/4분기용(개별회사)]</span>
+                                                                    <span class="history-tit">대규모기업집단현황공시[연1회<br class="mo-only">공시및1/4분기용(개별회사)]</span>
                                                                 </div>
                                                                 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
                                                             </li>
                                                             <li>
                                                                 <div>
                                                                     <span class="history-date">05.23</span>
-                                                                    <span class="history-tit">임원ㆍ주요주주특정증권등소유상황보고서</span>
+                                                                    <span class="history-tit">임원ㆍ주요주주특정증권등소유<br class="mo-only">상황보고서</span>
                                                                 </div>
                                                                 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
                                                             </li>
                                                             <li>
                                                                 <div>
                                                                     <span class="history-date">05.21</span>
-                                                                    <span class="history-tit">주식등의대량보유상황보고서(일반)</span>
+                                                                    <span class="history-tit">주식등의대량보유상황보고서<br class="mo-only">(일반)</span>
                                                                 </div>
                                                                 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
                                                             </li>
                                                             <li>
                                                                 <div>
                                                                     <span class="history-date">05.16</span>
-                                                                    <span class="history-tit">임원ㆍ주요주주특정증권등거래계획보고서</span>
+                                                                    <span class="history-tit">임원ㆍ주요주주특정증권등거래계<br class="mo-only">획보고서</span>
                                                                 </div>
                                                                 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
                                                             </li>
@@ -367,7 +648,7 @@
                                                             <li>
                                                                 <div>
                                                                     <span class="history-date">05.08</span>
-                                                                    <span class="history-tit">[기재정정]유형자산취득결정(종속회사의주요경영사항)</span>
+                                                                    <span class="history-tit">[기재정정]유형자산취득결정<br class="mo-only">(종속회사의주요경영사항)</span>
                                                                 </div>
                                                                 <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250516000400" target="_blank" class="history-btn"><span class="blind link">새 탭에서 열기</span></a>
                                                             </li>
@@ -381,21 +662,19 @@
                                                         <li class="active"><a href="#">1</a></li>
                                                         <li><a href="#">2</a></li>
                                                         <li><a href="#">3</a></li>
-                                                        <li><a href="#">4</a></li>
-                                                        <li><a href="#">5</a></li>
                                                         <li><a href="#">...</a></li>
-                                                        <li><a href="#">30</a></li>
+                                                        <li><a href="#">20</a></li>
                                                         <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
                                                         <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
                                                     </ul>
                                                 </div>
-                                            </section>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- //tab-content-box -->
-                        </div><!-- //content-item01 -->       
-                    </div>                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- // section -->

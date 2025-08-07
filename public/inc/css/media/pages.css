@@ -123,18 +123,20 @@
 
 
 /* 공시정보 (disc) */
-.history-list > li {flex-direction: column; gap: 0.5rem; padding-inline: 1.25rem;}
+.disc .content-item01:has(.content-sect > .history-list) {padding-top: 2rem;}
+.disc .content-sect:has(.history-list) {padding-top: 0;}
+.history-list > li {flex-direction: column; gap: 0.5rem;}
 .history-list > li + li {margin-top: 2rem;}
 .history-list > li::before {content: none;}
-.history-year {width: auto; padding: 0; font-size: 1.25rem; line-height: 1.75rem;}
-.history-desc > li {padding: 1.25rem; border-bottom: none; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.history-year {width: auto; padding: 0; font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.history-desc > li {padding: 1.5rem 1.25rem; border-bottom: none; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
 .history-desc > li + li {margin-top: 0.5rem;}
 .history-desc > li > div {flex-direction: column; align-items: flex-start; gap: 0.25rem;}
-.history-desc .history-date {width: auto; font-size: 0.875rem; line-height: 1.4rem;}
-.history-desc .history-tit {font-size: 1.25rem; font-weight: 500; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01);}
+.history-desc .history-date {width: auto; font-size: 0.875rem; line-height: 1.3125rem;}
+.history-desc .history-tit {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
 .history-btn {width: 2.5rem; height: 2.5rem; background-color: var(--colorElement-light-fill-fill-on-primary); background-size: 1.25rem 1.25rem;}
 .history-list + .paging-wrap {margin-top: 2rem;}
-.disc .paging-wrap + .btn-wrap {margin-top: 3.75rem;}
+.disc .paging-wrap + .btn-wrap {margin-top: 3.5rem;}
 
 
 /* IR자료 (irdt) */
