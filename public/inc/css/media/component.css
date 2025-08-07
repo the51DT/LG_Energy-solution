@@ -45,14 +45,7 @@
     .content-area-head-tab .tab-category {max-width: 100%; margin: 0;}
     .tab-category {gap: 1.5rem; height: 3.125rem; padding:0 1.25rem;}
     .tab-category > li button {font-size: 1.125rem; line-height: 1.6875rem; padding:0.75rem 0;}
-    .tab-category > li.on button:after {height: 0.125rem; bottom: 1px;}
-
-    .tab-cate-wrap.new:before {display:none;}
-    .tab-cate-wrap.new .tab-category {gap: 0.25rem; height: fit-content;} 
-    .tab-cate-wrap.new .tab-category > li button {width:100%; min-width: 6.875rem; padding: 0.625rem 1rem; border-radius: 0.125rem; background: #F3F5F7; font-size: 1rem; line-height: 1.6rem; font-weight: 500; color: #555758; white-space: nowrap;}
-    .tab-cate-wrap.new .tab-category > li.on button  {color:#fff; background: #171819;}
-    .tab-cate-wrap.new .tab-category > li.on button:after {display: none;}
-    .tab-cate-wrap.new .tab-content-box .tab-content {font-size: 1rem; font-weight: 500; line-height: 1.6rem;}
+    .tab-category > li.on button:after {height: 0.125rem;}
 
     /* accordion */
     .accordion-list {padding: 1.5rem 1.25rem; border-radius: 0;}
@@ -196,13 +189,13 @@
     .breadcrumb-wrap .select-menu > li:not(:last-child) {padding-bottom: 1rem;}
     .breadcrumb-wrap .select-menu > li > a {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem;}
 
-    
-    .wrap .content-wrap .content-area { padding-top: 3.625rem;}            
+    .wrap #container { padding-top: 3.625rem;}            
     .wrap .content-wrap:has(.content-header) .content-area { padding-top: 0;}
-    /* .wrap .content-wrap:not(:has(.content-header)) .content-area {padding-top: 0;} */
+    .wrap .content-wrap:not(:has(.content-header)) .content-area {padding-top: 0;}
 
     /* .content-area-head-tab {position: fixed; top: calc(110 / 16 * 1rem); width: 100%;} */
     /* .wrap:not(.sub_p) .content-header {display: none; }
+    
     .wrap:not(.sub_p) .content-header .subp-tit {font-size: 1.125rem; line-height: 1.575rem;} */
 
     /* chart */
