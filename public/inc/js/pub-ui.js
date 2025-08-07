@@ -184,24 +184,46 @@ var pubUi = {
             pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
             subCate.classList.add("active");
             const subCateName = subCate.innerText;
-            const button = map.closest(".select-cate").querySelector("button");
-            const selectedAriaControls = subCate.getAttribute("aria-controls");
-            // console.log("selectedAriaControls: " + selectedAriaControls);
+            
+            const selectedAriaCtrl = subCate.getAttribute("aria-controls");
+            
+            const button = map.closest(".select-cate").querySelector("button");            
 
             if (!subCate.closest(".lang-wrap")) {
                 button.innerText = subCateName;
             }
 
-            if (selectedAriaControls) {
-                const tabContent = document.querySelector(`#${selectedAriaControls}`);
+            if (selectedAriaCtrl) {
+                const tabContent = document.querySelector(`#${selectedAriaCtrl}`);
+                const tabContentMo = document.querySelector(`.mo-only #${selectedAriaCtrl}`);
+                const selectedTabName = selectedAriaCtrl.replace("-content", "");
+                const selectedTab = document.querySelector(`#${selectedTabName}`);
                 
-                if (tabContent) {
+                console.log(selectedAriaCtrl, selectedTabName, selectedTab);
+
+
+
+                if (tabContent || tabContentMo) {
                     // 모든 탭 콘텐츠 숨김 처리
                     const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .pc-only .tab-content");
+                    const allTabContentsMo = map.closest(".content-wrap").querySelectorAll(".content-area .mo-only .tab-content");
                     allTabContents.forEach((content) => content.classList.remove("on"));
+                    allTabContentsMo.forEach((content) => content.classList.remove("on"));
                     // 선택한 탭 콘텐츠 표시
                     tabContent.classList.add("on");
                     tabContent.setAttribute("aria-expanded", true);
+                    tabContentMo.classList.add("on");
+                    tabContentMo.setAttribute("aria-expanded", true);
+                }
+                // 선택한 selectbox와 맞는 mobile 탭 활성화
+                if(selectedTab) {                    
+                    const allTabMo = map.closest(".content-wrap").querySelectorAll(".content-area .mo-only .tab-cate-wrap.new .tab-category .tab");
+                    allTabMo.forEach(tabs => { 
+                        tabs.classList.remove("on"); 
+                        tabs.querySelector("button").setAttribute("aria-selected", false);
+                    })
+                    selectedTab.classList.add("on");
+                    selectedTab.querySelector("button").setAttribute("aria-selected", true);
                 }
 
                 // 선택한 selectbox에 하위 탭이 있다면(data-tab-type='secondTab'), 첫 번째 하위 탭 on 처리
