@@ -362,8 +362,9 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 .full-bg {background-color: var(--colorElement-light-fill-fill-default04); padding: 0 !important; margin-bottom: 7.5rem;}
 
 .full-bg > div {max-width: 90rem; margin: 0 auto; padding-block: 7.5rem;}
-.bg-gray {background-color: var(--colorElement-light-fill-fill-default04);}
-.bg-darkgray {background-color: var(--colorElement-light-fill-fill-default01);}
+.bg-gray {background-color: var(--colorElement-light-fill-fill-default04) !important;}
+.bg-darkgray {background-color: var(--colorElement-light-fill-fill-default01) !important;}
+.bg-white {background-color: #fff !important;}
 
 
 .content-wrap.w100 .tab-category {max-width: 90rem; margin: 0 auto;}

@@ -1,6 +1,6 @@
 @media screen and (max-width: 1470px) {
     .header-cont{padding: 1.25rem 2rem;}
-    [class^="content-item"] .content-wrap {max-width: 100%; padding: 0 2rem;}
+    [class^="content-item"] .content-wrap {max-width: 100%; padding-left: 2rem; padding-right: 2rem;}
     .wrap:not(.main_p) .content-header {padding-left: 2rem; padding-right: 2rem;}
     .footer-wrap .footer-area {margin: 0 2rem;}
 }

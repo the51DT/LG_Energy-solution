@@ -181,6 +181,8 @@ var pubUi = {
             button.classList.remove("active");
             map.classList.remove("on");
         } else if (type === "tab") {
+            document.querySelector(".wrap").scrollTo({ top: 0, behavior: "smooth" }); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
+
             // console.log("tab click event");
             pageMapCate.forEach((otherBox) => {
                 //selectbox 카테고리 값 초기화
@@ -793,7 +795,9 @@ var pubUi = {
                             const tabContPcBox = document.querySelector(".pc-only .tab-content-box");
                             const selectedTabCateMenu = tabCatePc.querySelector(`[aria-controls=${id}-content]`);
                             const selectedTabContPc = tabContPcBox.querySelector(`#${id}-content`);
-                            
+
+                            document.querySelector(".wrap").scrollTo({ top: 0, behavior: "smooth" }); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가                           
+
                             tabCatePc.querySelectorAll("li").forEach((list) => {
                                 list.querySelector("a").setAttribute("aria-selected", false);
                                 list.querySelector("a").classList.remove("active");
@@ -807,6 +811,13 @@ var pubUi = {
                             selectedTabCateMenu.setAttribute("aria-selected", true);
                             tabCatePcWrapBtn.classList.add("on");
                             tabCatePcWrapBtn.innerText = selectedTabCateMenu.innerText;
+                            
+                            // scrollTo 작업중
+                            // let tabCatePcWrapBtnOn = "";                            
+                            // if(tabCatePcWrapBtn.classList.contains("on")) {
+                            //     tabCatePcWrapBtnOn = tabCatePcWrapBtn;
+                            //     pubUi.tabList.scrollTo(tabCatePcWrapBtnOn);
+                            // }
 
                             selectedTabContPc.classList.add("on");
                             selectedTabContPc.setAttribute("aria-expanded", true);
@@ -876,6 +887,13 @@ var pubUi = {
                 }
             });
         },
+        // scrollTo 작업중
+        // scrollTo(el) {
+        //     const tabCatePcWrapBtnOnLeft = el.clientWidth;
+        //     console.log(tabCatePcWrapBtnOnLeft);
+
+        //     document.querySelector(".tab-cate-wrap.new").scrollTo({ left: tabCatePcWrapBtnOnLeft, behavior: "smooth" });
+        // },
     },
 
     acdItem: {
