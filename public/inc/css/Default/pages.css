@@ -46,7 +46,7 @@
 .esgm .sub-title-lg { font-size: 1.75rem; font-weight: 600; color: #171819; }
 .esgm .sub-title-sm { font-size: 1.25rem; font-weight: 600; color: #171819; }
 .esgm .desc { font-size: 1.125rem; line-height: 1.8rem; color: #171819; font-weight: 400; }
-.esgm a{ color: #33B0C6; text-decoration: underline; font-weight: 600; }
+.esgm p > a{ color: #33B0C6; text-decoration: underline; font-weight: 600; }
 .esgm .content .img-wrap { text-align: center; }
 .esgm .content .img-wrap > img { width: 80%; }
 .esgm .content .desc { margin-top: 1.875rem; margin-bottom: 2.5rem; }
