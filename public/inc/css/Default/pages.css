@@ -613,7 +613,7 @@
 .faq .news-content-area {margin-bottom: 0;}
 .faq .news-content-area .search-result>input {font-size: 2.5rem;}
 .faq .news-content-area .search-result>input::placeholder {font-size: 2.5rem; line-height: 3.5rem;}
-.faq .desc-wrap > button {margin-top: 2.5rem;}
+.faq .desc-wrap > a {margin-top: 2.5rem;}
 .faq .paging-wrap {padding-bottom: 15rem;}
 
 /* 연혁 */

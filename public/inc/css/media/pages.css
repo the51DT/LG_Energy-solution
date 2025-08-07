@@ -429,7 +429,7 @@
 .faq .news-content-area .search-result>img {width: 2rem;}
 .faq .news-content-area .search-result>input {font-size: 1.25rem;}
 .faq .news-content-area .search-result>input::placeholder {font-size: 1.25rem; line-height: 1.925rem;}
-.faq .desc-wrap > button {margin-top: 1.5rem;}
+.faq .desc-wrap > a {margin-top: 1.5rem;}
 .paging-wrap > .paging.mo-only {display: flex !important; justify-content: center;}
 .paging-wrap > .paging.mo-only > li:not(.arrow) a  {width: 1.875rem; height: auto;}
 .paging-wrap > .paging.mo-only > li a {font-size: 1rem; font-weight: 600; line-height: 1.5rem; margin: 0.125rem 0;}
