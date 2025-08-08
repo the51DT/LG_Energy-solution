@@ -800,7 +800,12 @@
     font-size: 1.25rem;
     height: 4.5rem;
     padding: 0 2.5rem;
+    line-height: 1;
 }
+.cont .cont-btn-wrap > button > a {
+    margin-left: 0.5rem;
+}
+
 .cont .cont-btn-wrap > button:active {
     background-color: #fff;
     border: 1px solid #33B0C6;
@@ -811,76 +816,125 @@
     gap: 0.625rem;
     display: flex;
 }
-.cont .btn-wrap .btn-primary01 {
-}
+
+
 .cont .act-btn-md > img {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-/* 숫자 + 인터랙션 관련 코드 */
-.cont .stepper-wrapper {
-    position: relative;
-    padding: 0;
+.cont .sub-cont-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
-
-.cont .stepper-line,
-.cont .stepper-line-active {
-    position: absolute;
-    left: -2.85rem;  
-    width: 2px;
-    z-index: 1;
+.cont .sub-cont-wrap .sub-list {
+    border: 1px solid #c9ced1;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-
-.cont .stepper-line {
-    background-color: #E1E7EA;
-    transition: height 0.2s ease;
-}
-
-.cont .faq-list {
-    position: relative;
-    z-index: 2; 
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    counter-reset: step-counter;
-}
-
-.cont .accordion-list {
-    position: relative;
-    counter-increment: step-counter; 
-}
-
-.cont .accordion-list::before {
-    content: counter(step-counter); 
-    position: absolute;
-    z-index: 3; 
-    left: -5.625rem; 
-    
-    background-color: #E1E7EA;
-    border-radius: 50%;
-    
-    width: 3.75rem;
-    height: 3.75rem;
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #858889;
-
+.cont .sub-cont-wrap .sub-list > li {
+    font-size: 1.125rem;
+    color: #171819;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+    line-height: 1;
+    cursor: pointer;
+}
+.cont .sub-cont-wrap .sub-list > li > span {
+    color: #33B0C6;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-right: 1rem;
+}
+.cont .sub-cont-wrap .sub-list > li > p:hover {
+    text-decoration: underline;
+}
+.cont .sub-cont-wrap .sub-list .list-alret {
+    display: flex;
+    gap: 0.5rem;
+    border-top: 1px solid #E1E7EA;
+    margin-top: 0.875rem;
+    padding-top: 1.875rem;
+}
+.cont .sub-cont-wrap .sub-list .list-alret > img {
+    width: 1.25rem;
+}
+.cont .sub-cont-wrap .sub-list .list-alret > p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #171819;
+}
+.cont .sub-cont-wrap > p {
+    font-size: 1.25rem;
+    color: #171819;
+    font-weight: 400;
+}
+.cont .sub-cont-wrap > p > strong {
+    font-weight: 600;
 }
 
-.cont .accordion-list.on::before,
-.cont .accordion-list.completed::before { 
-    background-color: #33B0C6;
-    color: #fff;
+.cont .sub-cont-wrap .wrap-form-input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.75rem;
+    row-gap: 1.25rem;
+}
+.cont .sub-cont-wrap .wrap-form-input.filebox {
+    display: contents;
+}
+.cont .sub-cont-wrap .wrap-form-input .input-wrap {
+    display:grid;
+    grid-template-columns: 9.375rem 1fr;
+    /* gap: 1.25rem; */
+}
+.cont .sub-cont-wrap .wrap-form-input .input-wrap:last-child {
+    gap: 0;
+}
+.cont .sub-cont-wrap .wrap-form-input .input-wrap .email-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+.cont .sub-cont-wrap .wrap-form-input .input-wrap > label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #171819;
+    margin-right: 1.25rem;
+}
+.cont .sub-cont-wrap .wrap-form-input .input-wrap > label > span {
+    color: #33B0C6;
+    font-size: 1.125rem;
+    margin-left: 0.25rem;
+}
+.cont .required-field-text {
+    color: #33B0C6;
+    font-size: 1rem;
 }
 
-.cont .accordion-list.on::before {
-    width: 4rem;
-    height: 4rem;
-    left: -6.125rem; 
+.cont .sub-cont-wrap .wrap-form-input .input-wrap.textarea-box {
+    align-items: flex-start;
+}
+.cont .sub-cont-wrap .wrap-form-input .input-wrap.textarea-box .textarea {
+    height: 16.25rem;
+}
+.cont .selectbox-wrap > div.select-cate > button {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #555758;
+    padding: 0.625rem 0;
 }
 
+/* 숫자 + 인터랙션 관련 코드 */
+.cont .stepper-wrapper { position: relative; padding: 0; }
+.cont .stepper-line, .cont .stepper-line-active { position: absolute; left: -2.85rem; width: 2px; z-index: 1; }
+.cont .stepper-line { background-color: #E1E7EA; transition: height 0.2s ease; }
+.cont .faq-list { position: relative; z-index: 2; list-style: none; padding: 0; margin: 0; counter-reset: step-counter; }
+.cont .accordion-list { position: relative; counter-increment: step-counter; }
+.cont .accordion-list::before { content: counter(step-counter); position: absolute; z-index: 3; left: -5.625rem; background-color: #E1E7EA; border-radius: 50%; width: 3.75rem; height: 3.75rem; font-size: 1.75rem; font-weight: 600; color: #858889; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+.cont .accordion-list.on::before, .cont .accordion-list.completed::before { background-color: #33B0C6; color: #fff; }
+.cont .accordion-list.on::before { width: 4rem; height: 4rem; left: -6.125rem; }
