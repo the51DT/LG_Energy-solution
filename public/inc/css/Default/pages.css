@@ -632,10 +632,12 @@
 
 /* 다운로드 */
 .download .search-box-wrap { width: 100%; height: 13rem; display: flex; justify-content: center; align-items: center; }
-.download .search-box { display: flex; justify-content: flex-start; background-color: transparent; width: 28.75rem; height: 3rem; border-radius: 999px; padding: 1rem 1rem 1rem 2rem; align-items: center; gap: 2.5rem; }
-.download .search-box > input { font-size: 2rem; line-height: 3rem; }
-.download .search-box>input::placeholder { font-size: 2rem; line-height: 3rem; color: #B4B8BA; }
-.download .search-box img { width: 3rem; height: 3rem; }
+.download .search-box { position: relative; display: flex; justify-content: flex-start; align-items: center; gap: 2.5rem; width: 37.5rem; background-color: transparent; height: 3rem; border-radius: 999px; padding: 1rem 1rem 1rem 2rem; }
+.download .search-box input { font-size: 2rem; line-height: 3rem; }
+.download .search-box input::placeholder { font-size: 2rem; line-height: 3rem; color: #B4B8BA; }
+.download .search-box .btn-search img { width: 3rem; height: 3rem; }
+.download .search-box .btn-search-reset { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; padding: .25rem; background-color: #B4B8BA; border-radius: 50%; }
+.download .search-box .btn-search-reset img { width: .75rem; height: .75rem; object-fit: contain; }
 .download-list .checkbox { padding-left: 2.5rem; }
 .download-list>li { position: relative; display: flex; gap: 2.5rem; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03); }
 .download-list>li:first-child:before { content: ""; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 2px; background-color: #000; }
@@ -646,13 +648,12 @@
 .download-desc>li>div { display: flex; align-items: center; gap: 1.25rem; flex-grow: 1; }
 .download-desc>li>.download-btn-group { justify-content: flex-end; }
 .download-list+.paging-wrap { margin-top: 3.75rem; }
-.download .btm-btn-area {display: flex; justify-content: center; margin-top: 3.75rem;} 
+.download .btm-btn {display: flex; justify-content: center; margin-top: 3.75rem;} 
 .download .btn-outline01:disabled .icon-area {background-color: #C9CED1;}
-.download .content-wrap>.tab-wrap {position: relative;}
-
-.download #tab5-content .tab-cate-wrap { position: absolute; left: 49rem; top: 0;}
+.download #tab5-content .cont-area-wrap .cont-area-sect > section { padding-top: 2.5rem; }
+.download #tab5-content .tab-cate-wrap { margin-top: 1.88rem; }
 .download #tab5-content .tab-cate-wrap::before {display: none;}
-.download #tab5-content .tab-category {gap: 1.88rem; height: 3rem;}
+.download #tab5-content .tab-category {gap: 1.88rem; height: fit-content;}
 .download #tab5-content .tab-category > li button { border: none; padding: 0; color:#858889; font-size: 1.125rem; line-height: 2rem;}
 .download #tab5-content .tab-category > li.on button { background-color: transparent; color: #171819;}
 .download #tab5-content .tab-category > li.on button:after {display: none;}
@@ -662,6 +663,9 @@
 .btn-download:hover { background-color: var(--colorElement-light-stroke-stroke-primary); color: #fff; }
 .btn-download:hover .icon-download {background-image: url(../../images/icon/icon_download_wh.svg);}
 
+.download .no-result-wrap { display: flex; align-items: center; justify-content: center; margin-top: 2.5rem; padding: 12.5rem; border-top: 2px solid #000; border-bottom: 1px solid #C9CED1;}
+.download .no-result-wrap .no-result { text-align: center; font-size: 1.25rem; font-weight: 500; line-height: 2rem;}
+.download .no-result-wrap .no-result>span {color: #33B0C6;}
 
 /* FAQ */
 .faq [class^="content-item"] {padding-bottom: 0;}
