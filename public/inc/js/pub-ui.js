@@ -31,6 +31,7 @@ var pubUi = {
 
         this.self.tabCategory = document.querySelector(".activeTab");
         this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
+        this.self.tabListsMo = document.querySelectorAll(".mo-only .tab-cate-wrap.new [role=tablist]")
 
         this.self.selectCate = document.querySelectorAll(".select-cate.activeSelect");
         this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
@@ -180,14 +181,20 @@ var pubUi = {
             button.classList.remove("active");
             map.classList.remove("on");
         } else if (type === "tab") {
+            document.querySelector(".wrap").scrollTo({ top: 0, behavior: "smooth" }); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
+
             // console.log("tab click event");
-            pageMapCate.forEach((otherBox) => otherBox.classList.remove("active"));
+            pageMapCate.forEach((otherBox) => {
+                //selectbox 카테고리 값 초기화
+                otherBox.classList.remove("active");
+                otherBox.setAttribute("aria-selected", false);
+            });
+            //선택한 selectbox 카테고리, active & aria-selected true 처리
             subCate.classList.add("active");
+            subCate.setAttribute("aria-selected", true);
             const subCateName = subCate.innerText;
-            
             const selectedAriaCtrl = subCate.getAttribute("aria-controls");
-            
-            const button = map.closest(".select-cate").querySelector("button");            
+            const button = map.closest(".select-cate").querySelector("button");
 
             if (!subCate.closest(".lang-wrap")) {
                 button.innerText = subCateName;
@@ -198,17 +205,21 @@ var pubUi = {
                 const tabContentMo = document.querySelector(`.mo-only #${selectedAriaCtrl}`);
                 const selectedTabName = selectedAriaCtrl.replace("-content", "");
                 const selectedTab = document.querySelector(`#${selectedTabName}`);
-                
-                console.log(selectedAriaCtrl, selectedTabName, selectedTab);
 
-
+                // console.log(selectedAriaCtrl, selectedTabName, selectedTab);
 
                 if (tabContent || tabContentMo) {
                     // 모든 탭 콘텐츠 숨김 처리
                     const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .pc-only .tab-content");
                     const allTabContentsMo = map.closest(".content-wrap").querySelectorAll(".content-area .mo-only .tab-content");
-                    allTabContents.forEach((content) => content.classList.remove("on"));
-                    allTabContentsMo.forEach((content) => content.classList.remove("on"));
+                    allTabContents.forEach((content) => {
+                        content.classList.remove("on");
+                        content.setAttribute("aria-expanded", false);
+                    });
+                    allTabContentsMo.forEach((content) => {
+                        content.classList.remove("on");
+                        content.setAttribute("aria-expanded", false);
+                    });
                     // 선택한 탭 콘텐츠 표시
                     tabContent.classList.add("on");
                     tabContent.setAttribute("aria-expanded", true);
@@ -216,12 +227,12 @@ var pubUi = {
                     tabContentMo.setAttribute("aria-expanded", true);
                 }
                 // 선택한 selectbox와 맞는 mobile 탭 활성화
-                if(selectedTab) {                    
+                if (selectedTab) {
                     const allTabMo = map.closest(".content-wrap").querySelectorAll(".content-area .mo-only .tab-cate-wrap.new .tab-category .tab");
-                    allTabMo.forEach(tabs => { 
-                        tabs.classList.remove("on"); 
+                    allTabMo.forEach((tabs) => {
+                        tabs.classList.remove("on");
                         tabs.querySelector("button").setAttribute("aria-selected", false);
-                    })
+                    });
                     selectedTab.classList.add("on");
                     selectedTab.querySelector("button").setAttribute("aria-selected", true);
                 }
@@ -245,7 +256,7 @@ var pubUi = {
                     // 첫 번째 하위 탭 on 처리
                     const firstsecondTab = secondTabs[0];
                     const firstVerticalContentId = firstsecondTab.getAttribute("id") + "-content";
-                    
+
                     firstsecondTab.classList.add("on");
                     firstsecondTab.querySelector("button").setAttribute("aria-selected", true);
 
@@ -255,7 +266,6 @@ var pubUi = {
                         firstVerticalContent.setAttribute("aria-expanded", true);
                     }
                 }
-                
             }
             button.classList.add("on");
             button.classList.remove("active");
@@ -311,19 +321,8 @@ var pubUi = {
                 if (pubUi.self.isPc) {
                     if (offsetTop > 400) {
                         stickyEl.classList.add("stuck");
-
-                        // 글로벌 네트워크 페이지 content-area-head-tab 예외처리 할 경우 주석 해제 (미확정)
-                        // if(document.querySelector(".wrap").classList.contains("netw") && stickyEl.classList.contains("stuck")) {
-                        //     stickyEl.style.display = "none"; // netw 페이지에서는 sticky bar를 숨김 처리
-                        //     pageContentTab.style.top = 0;
-                        // }
                     } else {
                         stickyEl.classList.remove("stuck");
-                        // 글로벌 네트워크 페이지 content-area-head-tab 예외처리 할 경우 주석 해제 (미확정)
-                        // if (document.querySelector(".wrap").classList.contains("netw")) {
-                        //     stickyEl.style.display = "block"; // netw 페이지에서는 sticky bar 초기화
-                        //     pageContentTab.style.top = "revert";
-                        // }
                     }
                 }
             });
@@ -776,14 +775,53 @@ var pubUi = {
             this.scroll();
         },
         tab() {
+            //공통
             Array.from(pubUi.self.tabLists).forEach((tabList) => {
-                const tabs = tabList.querySelectorAll(".activeTab > li");
+                const tabs = tabList.querySelectorAll(".activeTab > li");                
 
                 tabs.forEach((tab) => {
                     tab.addEventListener("click", function () {
                         const id = this.getAttribute("id");
                         const tabWrap = tabList.closest(".tab-wrap");
                         const contents = tabWrap.querySelectorAll(".tab-content-box > .tab-content");
+                        const tabCateMo = tabWrap.querySelector(".tab-cate-wrap.new");                        
+                        
+                        //모바일 탭 카테고리 선택시, pc selectbox caseTab도 동일한 선택영역 지정되도록 기능 추가 - S
+                        if(tabCateMo) {
+                            /* pc - breadcrumb[selectbox caseTab / tab-content] */
+                            const tabCatePc = document.querySelector(".select-menu.caseTab");
+                            const tabCatePcWrapBtn = tabCatePc.closest(".select-cate").querySelector("button");
+                            const tabContPc = document.querySelectorAll(".pc-only .tab-content-box .tab-content");
+                            const tabContPcBox = document.querySelector(".pc-only .tab-content-box");
+                            const selectedTabCateMenu = tabCatePc.querySelector(`[aria-controls=${id}-content]`);
+                            const selectedTabContPc = tabContPcBox.querySelector(`#${id}-content`);
+
+                            document.querySelector(".wrap").scrollTo({ top: 0, behavior: "smooth" }); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가                           
+
+                            tabCatePc.querySelectorAll("li").forEach((list) => {
+                                list.querySelector("a").setAttribute("aria-selected", false);
+                                list.querySelector("a").classList.remove("active");
+                            });
+                            tabContPc.forEach((cont) => {
+                                cont.setAttribute("aria-expanded", false);
+                                cont.classList.remove("on");
+                            });
+
+                            selectedTabCateMenu.classList.add("active");
+                            selectedTabCateMenu.setAttribute("aria-selected", true);
+                            tabCatePcWrapBtn.classList.add("on");
+                            tabCatePcWrapBtn.innerText = selectedTabCateMenu.innerText;
+                            
+                            // scrollTo 작업중
+                            // let tabCatePcWrapBtnOn = "";                            
+                            // if(tabCatePcWrapBtn.classList.contains("on")) {
+                            //     tabCatePcWrapBtnOn = tabCatePcWrapBtn;
+                            //     pubUi.tabList.scrollTo(tabCatePcWrapBtnOn);
+                            // }
+
+                            selectedTabContPc.classList.add("on");
+                            selectedTabContPc.setAttribute("aria-expanded", true);
+                        }
 
                         // 1. 현재 탭 카테고리 탭들 초기화
                         tabs.forEach((t) => {
@@ -837,6 +875,7 @@ var pubUi = {
                     });
                 });
             });
+            
         },
         scroll() {
             pubUi.self.tabLists.forEach((tabList) => {
@@ -848,6 +887,13 @@ var pubUi = {
                 }
             });
         },
+        // scrollTo 작업중
+        // scrollTo(el) {
+        //     const tabCatePcWrapBtnOnLeft = el.clientWidth;
+        //     console.log(tabCatePcWrapBtnOnLeft);
+
+        //     document.querySelector(".tab-cate-wrap.new").scrollTo({ left: tabCatePcWrapBtnOnLeft, behavior: "smooth" });
+        // },
     },
 
     acdItem: {
