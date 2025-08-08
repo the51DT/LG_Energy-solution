@@ -230,7 +230,7 @@
 .history-list > li {position: relative; display: flex; gap: 1.25rem;}
 .history-list > li + li {margin-top: 7.5rem;}
 .history-list > li::before {content: ""; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 2px; background-color: #000;}
-.history-year {flex-shrink: 0; width: 13.9375rem; padding: 2rem 0 2rem 1.25rem; font-size: 1.75rem; font-weight: 700; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
+.history-year {flex-shrink: 0; width: 14rem; padding: 2rem 0 2rem 1.25rem; font-size: 1.75rem; font-weight: 700; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
 .history-desc {flex-grow: 1;}
 .history-desc > li {position: relative; display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; padding: 1.88rem 2.5rem; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .history-desc > li > div {display: flex; align-items: center; gap: 1.25rem; flex-grow: 1;}
@@ -238,8 +238,7 @@
 .history-desc .history-date {flex-shrink: 0; width: 3.8125rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 .history-desc .history-tit {flex-grow: 1; font-size: 1.25rem; font-weight: 500; line-height: 2rem; color: var(--colorElement-light-text-text-default01); word-break: break-all;}
 .history-btn {flex-shrink: 0; width: 2.875rem; height: 2.875rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-default04); background-position: center center; background-size: 1.5rem 1.5rem; background-repeat: no-repeat;}
-.history-btn:hover {background-color: var(--colorElement-light-fill-fill-default00); background-image: url(../../images/icon/icon_download_wh.svg);}
-.history-btn.primary:hover {background-color: var(--colorElement-light-fill-fill-primary);}
+.history-btn:hover {background-color: var(--colorElement-light-fill-fill-primary); background-image: url(../../images/icon/icon_download_wh.svg);}
 .history-btn:has(.download) {background-image: url(../../images/icon/icon_download.svg);}
 .history-btn:has(.download):hover {background-image: url(../../images/icon/icon_download_wh.svg);}
 .history-btn:has(.link) {background-image: url(../../images/icon/icon_arrow_up_right.svg);}
@@ -268,7 +267,7 @@
 .history-btn-wrap + .history-btn-wrap {margin-left: 0.63rem;}
 .history-btn-wrap > span  {font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
 .history-btn-wrap:hover > span {color: var(--colorElement-light-text-text-default01);}
-.history-btn-wrap:hover .history-btn {background-color: var(--colorElement-light-fill-fill-default00);}
+.history-btn-wrap:hover .history-btn {background-color: var(--colorElement-light-fill-fill-primary);}
 .history-btn-wrap:hover .history-btn:has(.download) {background-image: url(../../images/icon/icon_download_wh.svg);}
 .history-btn-wrap:hover .history-btn:has(.link) {background-image: url(../../images/icon/icon_arrow_up_right_wh.svg);}
 .history-btn-wrap:hover .history-btn:has(.sound) {background-image: url(../../images/icon/icon_sound_wh.svg);}
@@ -305,46 +304,66 @@
 
 
 /* IR행사 */
-.evt-schedule-top {padding-bottom: 6.25rem;}
-.evt-schedule-top .schedule-head {display: flex; justify-content: space-between; margin-bottom: 2rem;}
-.evt-schedule-top .schedule-head .year {font-size: 1.75rem; font-weight: 600; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
-.evt-schedule-top .schedule-month {display: flex; gap: 0.62rem; align-items: center;}
+.evt-schedule-top {padding-bottom: 5rem;}
+.evt-schedule-top .schedule-head {display: flex; justify-content: space-between; margin-bottom: 1.88rem;}
+.evt-schedule-top .schedule-head .year {font-size: 2rem; font-weight: 700; line-height: 3rem; color: var(--colorElement-light-text-text-default01);}
+.evt-schedule-top .schedule-month {display: flex; gap: 0.63rem; align-items: center;}
 .evt-schedule-top .schedule-month .item {flex-grow: 1;}
-.evt-schedule-top .schedule-month .item > a {width: 6.7614rem; height: 6.5rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.evt-schedule-top .schedule-month .item > a {width: 6.76136rem; height: 6.5rem; border-radius: 0.625rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); display: flex; justify-content: center; align-items: center; flex-direction: column;}
 .evt-schedule-top .schedule-month .item > a .month {font-size: 2rem; font-weight: 600; line-height: 3rem; color: var(--colorElement-light-text-text-default02); text-align: center;}
 .evt-schedule-top .schedule-month .item > a .month span {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default03); padding-left:  0.25rem;}
-.evt-schedule-top .schedule-month .item.on > a {width: 8rem; height: 8rem; background: var(--colorElement-light-fill-fill-primary); border-color: var(--colorElement-light-fill-fill-primary);}
+.evt-schedule-top .schedule-month .item.on > a {width: 8.75rem; height: 8.75rem; background: var(--colorElement-light-fill-fill-primary); border-color: var(--colorElement-light-fill-fill-primary);}
 .evt-schedule-top .schedule-month .item.on > a .month {font-size: 3.5rem; font-weight: 500; line-height: 4.9rem; color:#fff;}
-.evt-schedule-top .schedule-month .item.on > a .month span {font-size: 1.5rem; font-weight: 400; line-height: 2.25rem; color:#fff;}
+.evt-schedule-top .schedule-month .item.on > a .month span {font-size: 1.5rem; font-weight: 400; line-height: 2.25rem; color:#fff; padding-left: 0;}
 .evt-schedule-top .schedule-month .item.not > a {background: var(--colorElement-light-fill-fill-default04); border-color: #f3f5f7;}
 .evt-schedule-top .schedule-month .item.not > a .month {color:var(--colorElement-light-text-text-disabled);}
 .evt-schedule-top .schedule-month .item.not > a .month span {color:var(--colorElement-light-text-text-default04);}
 .sort-wrap [class^=sort]::before {border-radius: 100%; width: 0.5rem; height: 0.5rem; display: block; content:"";}
 .sort-wrap [class^=sort][class*=_01]::before {background: #3EC2CF;}
 .sort-wrap [class^=sort][class*=_02]::before {background: #276EF2;}
+.evt-schedule-top .schedule-month .item.on .sort-wrap [class^=sort][class*=_01]::before {background: #ADECF2;}
 .schedule-head .sort-wrap {display: flex; align-items:center; gap: 1.5rem;}
-.schedule-head .sort-wrap [class^=sort] {padding-left: 1.25rem; position: relative; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.schedule-head .sort-wrap [class^=sort] {padding-left: 1.25rem; position: relative; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .schedule-head .sort-wrap [class^=sort]::before {position: absolute; top:50%; transform: translateY(-50%); left: 0;}
 .schedule-month .sort-wrap {width: 3.25rem; height: 0.5rem; display: inline-flex; justify-content: center; gap: 0.12rem;}
 .schedule-month .evt-schedule-top .schedule-month .item.on > a .sort-wrap li[class^=sort][class*=_01] {background: #ADECF2;}
-.evt-schedule-bot ul > li {padding: 2rem 2.5rem; background: var(--colorElement-light-fill-fill-default04); display: flex; align-items: center; border-radius: 0.625rem;}
-.evt-schedule-bot ul > li:not(:last-child) {margin-bottom: 1rem;}
+.evt-schedule-bot {padding-bottom: 7.5rem;}
+.evt-schedule-bot ul {border-top: 2px solid var(--colorElement-light-stroke-stroke-default00);}
+.evt-schedule-bot ul > li {padding: 1.88rem 2.5rem; display: flex; align-items: center; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .evt-schedule-bot ul > li .left-area {min-width: 14.375rem; }
 .evt-schedule-bot ul > li .left-area .date {display: flex; align-items: center;}
 .evt-schedule-bot ul > li .left-area .date p {font-size: 2rem; font-weight: 400; line-height: 3rem; color: var(--colorElement-light-text-text-default02);}
-.evt-schedule-bot ul > li .left-area .date p .day {font-size: 1rem; line-height: 1.6rem;}
-.evt-schedule-bot ul > li .left-area .date em {font-size: 1.25rem; font-weight: 400; line-height: 1.875rem; padding: 0 0.25rem;}
+.evt-schedule-bot ul > li .left-area .date p .day {font-size: 1rem; line-height: 1.6rem; display: inline-block;}
+.evt-schedule-bot ul > li .left-area .date em {font-size: 1.25rem; font-weight: 400; line-height: 2rem; padding: 0 0.25rem;}
 .evt-schedule-bot ul > li .bar {width: 0.0625rem; height: 2.5rem; background: var(--colorElement-light-stroke-stroke-default03);  margin: 0 2.5rem;}
 .evt-schedule-bot ul > li .center-area {display: flex; align-items: center; gap: 0.75rem; width: 100%; max-width: 53.6875rem;}
-.evt-schedule-bot ul > li .center-area .title {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.evt-schedule-bot ul > li .center-area .title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
 .evt-schedule-bot ul > li .right-area {text-align: right; min-width: 9.4375rem; margin-left: 2.5rem;}
 .evt-schedule-bot ul > li .right-area .place {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); white-space:nowrap;}
+.irif .accord-content .accordion-list:first-of-type {border: none;}
+.evt-schedule-past .table-wrap table thead > tr > th {font-size: 1.125rem; line-height: 1.8rem;}
+.evt-schedule-past .table-wrap table tbody > tr > th {font-size: 1.125rem; line-height: 1.8rem;}
 .btn-badge {border:1px solid var(--colorElement-light-stroke-stroke-default00); color: var(--colorElement-light-text-text-default01);}
 .btn-badge[class*=_ctype01] {border-color: #3EC2CF;}
 .btn-badge[class*=_ctype08] {border-color: #276EF2;}
 .table-area.nonebdr .table-wrap tbody tr > th,
 .table-area.nonebdr .table-wrap tbody tr > td {border-right: 0 !important;}
+.irif .btn-badge {padding: 0.25rem 1rem; min-width: unset; font-size: 0.875rem; font-weight: 600; line-height: 1.4rem; height: auto;}
+.irif .evt-schedule-past .btn-badge {width: 6rem;}
 .sub-cont-area.pc-only {margin-top: 2rem;}
+.irif .cont-area-title .selectbox-wrap {margin-left: auto; width: 20rem;}
+.irif .cont-area-title .selectbox-wrap button {min-width: unset;}
+.irif .cont-area-title {margin-bottom: 1.88rem;}
+.irif .history-year {font-size: 1.75rem; font-weight: 700; line-height: 2.625rem;}
+.irif .box-container:not(:first-child) .box-content {margin-top: 7.5rem;}
+.irif .bdr-box-wrap {margin-top: 0; padding: 0; background: none;}
+.irif .bdr-box-wrap .box-head {color: var(--colorElement-light-text-text-default01);}
+.irif .bdr-box-wrap .box-head .title {font-size: 2rem; line-height: 3rem;}
+.irif .bdr-box-wrap .box-head .desc {line-height: 2rem;}
+.irif .box-cont {margin-top: 1.88rem; padding: 2.5rem; border-radius: 1rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.irif .box-cont::before {content: none;}
+.irif .bdr-box-wrap .box-cont .text-wrap .title {color: var(--colorElement-light-text-text-default01);}
+.irif .sect-cont-sub
 
 
 /* 정도경영 (etmg) */
