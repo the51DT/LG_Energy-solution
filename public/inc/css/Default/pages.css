@@ -718,3 +718,141 @@
     50% { transform: scale(1.25); }
     100% { transform: scale(1); }
 }
+
+/* 문의하기 */
+.cont .content-item01 {
+    background-color: #F3F5F7;
+    padding: 5rem 15rem 15rem 15rem; 
+} 
+
+.wrap.cont .content-header {
+    padding: 13.75rem 0 3.75rem;
+}
+.cont .content-header .title-h1 {
+    margin-bottom: 1.25rem;
+}
+.wrap.cont .content-header .subp-tit {
+    font-size: 1.25rem;
+    color: #555758;
+}
+.cont .accordion-list.type3.on {
+    border: none;
+}
+.cont .accordion-list.type3 .accordion-content {
+    padding: 0;
+    margin: 0;
+}
+.cont .accordion-list {
+    padding: 1.875rem 3.75rem;
+}
+.cont .accordion-list.on {
+    padding: 1.875rem 3.75rem 3.75rem;
+    display: flex;
+    flex-direction: column;
+}
+.cont .accordion-list .accordion-btn .acd-tit {
+    font-size: 1.5rem;
+}
+.cont .accordion-list.on .accordion-content {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.cont .cont-btn-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.625rem;
+    margin-top: 2.5rem;
+}
+.cont .cont-btn-wrap > button {
+    background-color: #f3f5f7;
+    border-radius: 0.5rem;
+    color: #858889;
+    font-weight: 600;
+    font-size: 1.25rem;
+    height: 4.5rem;
+    padding: 0 2.5rem;
+}
+.cont .cont-btn-wrap > button:active {
+    background-color: #fff;
+    border: 1px solid #33B0C6;
+     color: #33B0C6;
+}
+.cont .btn-wrap {
+    justify-content: flex-end;
+    gap: 0.625rem;
+    display: flex;
+}
+.cont .btn-wrap .btn-primary01 {
+}
+.cont .act-btn-md > img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* 숫자 + 인터랙션 관련 코드 */
+.cont .stepper-wrapper {
+    position: relative;
+    padding: 0;
+}
+
+.cont .stepper-line,
+.cont .stepper-line-active {
+    position: absolute;
+    left: -2.85rem;  
+    width: 2px;
+    z-index: 1;
+}
+
+.cont .stepper-line {
+    background-color: #E1E7EA;
+    transition: height 0.2s ease;
+}
+
+.cont .faq-list {
+    position: relative;
+    z-index: 2; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step-counter;
+}
+
+.cont .accordion-list {
+    position: relative;
+    counter-increment: step-counter; 
+}
+
+.cont .accordion-list::before {
+    content: counter(step-counter); 
+    position: absolute;
+    z-index: 3; 
+    left: -5.625rem; 
+    
+    background-color: #E1E7EA;
+    border-radius: 50%;
+    
+    width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #858889;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.cont .accordion-list.on::before,
+.cont .accordion-list.completed::before { 
+    background-color: #33B0C6;
+    color: #fff;
+}
+
+.cont .accordion-list.on::before {
+    width: 4rem;
+    height: 4rem;
+    left: -6.125rem; 
+}
+
