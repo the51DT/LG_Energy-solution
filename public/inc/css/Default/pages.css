@@ -168,6 +168,7 @@
 .stif .stock-box .stock-info .info-wrap > div p span.up {color: var(--colorElement-light-critical-critical-enabled);}
 .stif .stock-box .stock-info .info-wrap > div p span.down {color: var(--colorElement-light-accent-success-enabled);}
 
+.chart-container {overflow-x: scroll;}
 .stif .stock-chart .title-wrap {display: flex; justify-content: space-between; align-items: center;}
 .stif .stock-chart .title-wrap .title-text {display: flex; align-items: center; gap: 1rem; color: var(--colorElement-light-text-text-default01);}
 .stif .stock-chart .title-wrap .title-text .tit {font-size: 2rem; font-weight: 700; line-height: 3rem;}
