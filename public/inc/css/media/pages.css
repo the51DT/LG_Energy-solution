@@ -171,33 +171,50 @@
 
 
 /* 재무정보 (fina) */
-.fina .box-container {padding: 0 1.25rem;}
+.fina [class^="content-item"]:has(.content-sect:first-child) {padding-top: 0;}
+.fina .content-sect:not(:has(.tab-wrap)) {padding-top: 2rem;}
+.fina .box-container + .box-container {padding-top: 3.5rem;}
+.fina .box-container {padding: 0;}
 .fina .box-container .content-box {display: block;}
-.fina .box-container .content-box > li {padding: 1.5rem 1.25rem; border-radius: 0.5rem;}
-.fina .box-container .content-box > li:not(:first-child) {margin-top: 1.5rem;}
-.fina .box-container .content-box > li .box-text-wrap {margin-bottom: 1rem;}
-.fina .box-container .content-box > li .box-text-wrap .box-title {font-size: 1.125rem; line-height: 1.75rem;}
-.fina .box-container .content-box > li .box-text-wrap .box-year {font-size: 0.875rem; line-height: 1.4rem;}
+.fina .box-container .content-box.type2 .img-area {margin-right: -1.25rem; width: calc(100% + 1.25rem);}
+.fina .box-container .content-box.type2 .img-area + .text-area .intro-txt {font-size: 1.25rem; line-height: 1.875rem;}
+.fina .box-container .content-box .text-area .intro-txt strong {font-weight: 700;}
+.fina .box-container .content-box .text-area .intro-txt {font-size: 1.5rem; line-height: 2.0625rem;}
+.fina .box-container .content-box .text-area .intro-sub {margin-top: 2rem; font-size: 1.25rem; font-weight: 700; line-height: 1.875rem;}
+.fina .box-container .content-box.type2 .text-area .desc {padding-top: 1.5rem; line-height: 1.6rem;}
+.fina .box-container .content-box.type2 .text-area .desc + .desc {padding-top: 1rem;}
+.fina .box-container .content-box + .history-list {padding-top: 3.5rem;}
+.fina .history-desc > li {padding: 1.25rem;}
+.fina .history-desc .history-tit {font-weight: 600;}
+.fina .history-desc > li + li {margin-top: 1rem;}
+.fina .box-container .content-box > li {padding: 0; border-radius: 0; border: none;}
+.fina .box-container .content-box > li:not(:first-child) {margin-top: 3rem;}
+.fina .box-container .content-box > li .box-text-wrap {margin-bottom: 1rem; align-items: center;}
+.fina .box-container .content-box > li .box-text-wrap .box-title {font-size: 1.25rem; font-weight: 700; line-height: 1.875rem;}
+.fina .box-container .content-box > li .box-text-wrap .box-year {font-size: 1rem; line-height: 1.6rem;}
 .fina .box-container .content-box > li .box-item {flex-direction: column;  gap: 0.5rem;}
 .fina .box-container .content-box > li .box-item > li {display:flex; width:100%; height: auto;  padding: 1.5rem 1.25rem; gap: 1.25rem; align-items: center;}
-.fina .box-container .content-box > li .box-item > li .item-record {margin-bottom: 0; min-width: 4.5rem; font-size: 1.5rem; line-height: 2.1rem;}
-.fina .box-container .content-box > li .box-item > li .item-text-wrap {text-align: left;}
+.fina .box-container .content-box > li .box-item > li .item-record {margin-bottom: 0; min-width: 4.5rem; font-size: 1.5rem; line-height: 2.0625rem;}
+.fina .box-container .content-box > li .box-item > li .item-text-wrap {position: relative; padding-left: 1.25rem; text-align: left;}
+.fina .box-container .content-box > li .box-item > li .item-text-wrap::before {content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); display: block; width: 0.0625rem; height: 2.75rem; background-color: var(--colorElement-light-stroke-stroke-default03);}
 .fina .box-container .content-box > li .box-item > li .item-title {font-size: 1rem; line-height: 1.5rem;}
 .fina .box-container .content-box > li .box-item > li .item-desc {font-size: 1rem; line-height: 1.5rem;}
 .fina .table-container {padding: 0;}
 .fina .table-container .table-header {border-bottom: 0; padding: 0 1.25rem 1rem;}
 .fina .table-container .table-wrap {padding: 0 1.25rem; }
 .fina .table-header .table-title {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem;}
+.fina .accord-content .accordion-title {font-size: 1.5rem; line-height: 2.0625rem; padding-bottom: 1.5rem;}
+.fina .accord-content .accordion-list {margin-inline: -1.25rem;}
+.fina .accordion-list .accordion-content .table-wrap table tbody > tr > th, .accordion-list .accordion-content .table-wrap table tbody > tr > td {line-height: 1.3125rem; white-space: normal;}
 
-
-.gray-box-area > ul {display: block; border-radius: 0.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); background:var(--colorElement-light-fill-fill-default04); padding: 1.75rem 1.5rem; margin-top: 2rem;}
+.gray-box-area > ul {display: block; border-radius: 0.5rem;background:var(--colorElement-light-fill-fill-default04); padding: 1.5rem; margin-top: 1.5rem;}
 .gray-box-area > ul > li {padding: 0; border-radius: 0; background-color: var(--colorElement-light-fill-fill-default04); width: 100%; height: auto;}
 .gray-box-area > ul > li:not(:last-child)::after {content:""; display:block; width: 100%; height: 0.0625rem; background: var(--colorElement-light-stroke-stroke-default04); margin: 1.75rem 0;}
 .gray-box-area > ul > li .box-wrap {align-items: center;}
 .gray-box-area > ul > li .box-wrap:has(> .btn-group) {align-items: flex-start;}
 .gray-box-area > ul > li .box-wrap .btn-group {flex-direction: column;}
 .gray-box-area > ul > li .box-wrap a.icon-btn {width: 7.75rem; justify-content: center; background-color: #fff; height: 2.375rem;}
-.gray-box-area > ul > li .box-wrap .title {font-size: 1rem; line-height: 1.5rem;}
+.gray-box-area > ul > li .box-wrap .title {font-size: 1rem; line-height: 1.6rem;}
 
 .history-box {padding-top: 3rem;}
 .history-box .history-list > li{padding-inline: 0;}
