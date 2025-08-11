@@ -854,6 +854,6 @@
 .cont .stepper-line { background-color: #E1E7EA; transition: height 0.2s ease; }
 .cont .faq-list { position: relative; z-index: 2; list-style: none; padding: 0; margin: 0; counter-reset: step-counter; }
 .cont .accordion-list { position: relative; counter-increment: step-counter; }
-.cont .accordion-list::before { content: counter(step-counter); position: absolute; z-index: 3; left: -5.625rem; background-color: #E1E7EA; border-radius: 50%; width: 3.75rem; height: 3.75rem; font-size: 1.75rem; font-weight: 600; color: #858889; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+.cont .accordion-list::before { content: counter(step-counter); position: absolute; z-index: 3; left: -5.625rem; background-color: #E1E7EA; border-radius: 50%; width: 3.75rem; height: 3.75rem; font-size: 1.75rem; font-weight: 600; color: #858889; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; top: 0; margin-top: 1.125rem;}
 .cont .accordion-list.on::before, .cont .accordion-list.completed::before { background-color: #33B0C6; color: #fff; }
 .cont .accordion-list.on::before { width: 4rem; height: 4rem; left: -6.125rem; }
