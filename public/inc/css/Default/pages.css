@@ -363,7 +363,18 @@
 .irif .box-cont {margin-top: 1.88rem; padding: 2.5rem; border-radius: 1rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .irif .box-cont::before {content: none;}
 .irif .bdr-box-wrap .box-cont .text-wrap .title {color: var(--colorElement-light-text-text-default01);}
-.irif .sect-cont-sub
+.irif .agm-info-list > li {padding-bottom: 2.5rem; position: relative;}
+.irif .agm-info-list > li + li {padding-top: 2.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+.irif .agm-info-list > li .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.irif .agm-info-list > li .tit + .info {margin-top: 1.25rem;}
+.irif .agm-info-list > li .info {display: flex; gap: 1.25rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;color: var(--colorElement-light-text-text-default02);}
+.irif .agm-info-list > li .info .info-tit {width: 5.75rem; flex-shrink: 0; font-weight: 600;}
+.irif .agm-info-list > li .info .info-text {display: flex; gap: 1.25rem;}
+.irif .agm-info-list > li .info + .info {margin-top: 0.5rem;}
+.irif .asterisk-text {display: flex; gap: 0.38rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); justify-self: flex-end;}
+.irif .asterisk-text::before {flex-shrink: 0; content: ""; display: inline-block; margin: 0.61rem 0.19rem; width: 0.37894rem; height: 0.39744rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
+.irif .agm-info-list > li .btn-wrap {position: absolute; right: 0; top: 2.5rem; display: flex; gap: 1.88rem;}
+.irif .agm-info-list > li .btn-wrap .history-btn-wrap + .history-btn-wrap {margin: 0;}
 
 
 /* 정도경영 (etmg) */

@@ -228,10 +228,14 @@
 
 
 /* IR행사 */
+.irif [class^="content-item"][class*="01"] {padding-top: 2rem;}
+.irif [class^="content-item"] .content-sect {padding-top: 0;}
+.irif [class^="content-item"]:has(.selectbox-wrap) {padding-top: 1.5rem;}
+
 .evt-schedule-top {padding-bottom: 3rem;}
-.evt-schedule-top .schedule-head {margin-bottom: 1rem; padding: 0 1.28rem;}
+.evt-schedule-top .schedule-head {margin-bottom: 1.5rem;}
 .evt-schedule-top .schedule-head .year {font-size: 1.375rem; line-height: 1.925rem;}
-.evt-schedule-top .schedule-month {overflow-x: scroll; margin: 0 1.25rem;}
+.evt-schedule-top .schedule-month {overflow-x: scroll; margin: 0 -1.25rem; padding-inline: 1.25rem;}
 .evt-schedule-top .schedule-month .item > a {width: 3.75rem; height: 3.75rem; border-radius: 0.5rem;}
 .evt-schedule-top .schedule-month .item > a .month {font-size: 1.375rem; line-height: 1.925rem;}
 .evt-schedule-top .schedule-month .item > a .month span {font-size: 0.875rem; line-height: 1.4rem; padding-left: 0;}
@@ -242,23 +246,22 @@
 .schedule-head .sort-wrap {gap: 0.75rem;}
 .schedule-head .sort-wrap [class^=sort] {padding-left: 0.75rem; font-size: 0.875rem; line-height: 1.4rem;}
 
-.evt-schedule-bot {padding: 0 1.25rem;}
-.evt-schedule-bot ul > li {padding: 1.25rem; border-radius: 0.5rem; display: inline-block; width: 100%; position: relative;}
+.evt-schedule-bot {padding-bottom: 3.5rem;}
+.evt-schedule-bot ul > li {padding: 1.5rem 0.5rem; border-radius: 0.5rem; display: inline-block; width: 100%; position: relative;}
 
-.evt-schedule-bot ul > li .left-area {min-width: 100%; }
+.evt-schedule-bot ul > li .left-area {min-width: 100%; margin-bottom: 1rem;}
 .evt-schedule-bot ul > li .left-area .date {display: inline-flex;}
-.evt-schedule-bot ul > li .left-area .date p {font-size: 1.5rem; line-height: 2.1rem;}
-.evt-schedule-bot ul > li .left-area .date p .day {font-size: 1rem; line-height: 1.6rem;}
+.evt-schedule-bot ul > li .left-area .date p {font-size: 1.5rem; line-height: 2.0625rem;}
+.evt-schedule-bot ul > li .left-area .date p .day {font-size: 0.875rem; line-height: 1.3125rem;}
 .evt-schedule-bot ul > li .left-area .date em {font-size: 0.875rem; line-height: 1.4rem; padding: 0; margin: 0 0.25rem;}
 
-.evt-schedule-bot ul > li .bar {width: 100%; height: 0.0625rem; margin: 1.25rem 0;}
-.evt-schedule-bot ul > li .btn-badge {position: absolute; top: 1.25rem; right: 1.25rem; font-size: 0.75rem; line-height: 1rem; font-weight: 600; margin-top: 0.3rem;}
+.evt-schedule-bot ul > li .bar {display: none;}
+.evt-schedule-bot ul > li .btn-badge {position: absolute; top: 1.5rem; right: 1.25rem; height: auto; font-size: 0.75rem; line-height: 1.2rem; font-weight: 600; margin-top: 0.31rem; padding: 0.13rem 0.63rem;}
 .evt-schedule-bot ul > li .center-area {display: block; max-width: 100%;}
 .evt-schedule-bot ul > li .center-area .title {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 0.5rem;}
 .evt-schedule-bot ul > li .right-area {text-align: left; min-width: 100%; width: 100%; margin-left: 0;}
-.evt-schedule-bot ul > li .right-area .place {font-size: 0.875rem; line-height: 1.4rem;}
+.evt-schedule-bot ul > li .right-area .place {font-size: 0.875rem; line-height: 1.3125rem;}
 
-.evt-schedule-past {padding: 0 1.25rem;}
 .evt-schedule-past .table-area {border-top: 2px solid #000;}
 .evt-schedule-past .table-area .table-wrap colgroup {display: none;}
 .evt-schedule-past .table-area .table-wrap thead {display: none;}
@@ -271,6 +274,29 @@
 .evt-schedule-past .table-area .table-wrap tbody td {font-size: 1rem; font-weight: 400; line-height: 1.5rem; color: var(--colorElement-light-text-text-default02);}
 .evt-schedule-past .table-area .table-wrap .btn-group {flex-direction: column; align-items: flex-start; gap: 0.5rem;}
 .evt-schedule-past .table-area .table-wrap .btn-group .title {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem; margin-bottom: 0.5rem;}
+
+.irif .cont-area-title {margin-bottom: 2rem;}
+.irif .history-year {font-size: 1.25rem; line-height: 1.875rem;}
+.irif .history-desc > li {gap: 1rem;}
+.irif .history-desc > li:has(.history-btn-wrap) .history-tit {font-weight: 600; line-height: 1.6rem;}
+.irif .acdItem {margin-inline: -1.25rem;}
+.irif .agm-info-list > li {padding-bottom: 2rem;}
+.irif .agm-info-list > li + li {padding-top: 2rem;}
+.irif .agm-info-list > li .tit + .info {margin-top: 1rem;}
+.irif .agm-info-list > li .info {gap: 0.5rem; font-size: 1rem; line-height: 1.6rem;}
+.irif .agm-info-list > li .info .info-tit {width: 4.75rem;}
+.irif .agm-info-list > li .info .info-text {display: inline;}
+.irif .agm-info-list > li .btn-wrap {position: static; flex-direction: column; gap: 0.5rem; margin-top: 1.5rem;}
+.irif .agm-info-list > li .btn-wrap .history-btn-wrap {width: 100%; padding: 1rem 1.5rem; border-radius: 0.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+.irif .agm-info-list > li .btn-wrap .history-btn-wrap .history-btn {background-color: var(--colorElement-light-fill-fill-default04);}
+.irif .box-container:not(:first-child) .box-content {margin-top: 3rem;}
+.irif .box-container .box-content .bdr-box-wrap.nbdr {padding: 0;}
+.irif .bdr-box-wrap .box-head .title {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.irif .bdr-box-wrap .box-head .desc {line-height: 1.6rem;}
+.irif .box-cont {margin-top: 1.5rem; padding: 1.5rem 1.25rem;}
+.irif .evt-schedule-past .btn-badge {padding: 0.13rem 0.62rem; width: auto; height: auto; font-size: 0.75rem; line-height: 1.2rem;}
+.irif .asterisk-text {gap: 0; font-size: 0.875rem; line-height: 1.3125rem;}
+.irif .asterisk-text::before {content: "*\00a0"; display: block; margin: 0; width: auto; height: auto; background-image: none;}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1rem;}
