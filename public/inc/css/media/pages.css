@@ -486,7 +486,7 @@
 .download-list>li { align-items: center; gap: 1rem; }
 .download-list .checkbox { display: flex; align-items: center; padding-left: 0; }
 .download-desc>li { gap: .75rem; padding: 1.25rem 0;}
-.download-desc>li .desc-tit-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: .25rem;}
+.download-desc>li .desc-tit-wrap { flex-direction: column; align-items: flex-start; gap: .25rem;}
 .download-desc .tab-cont-name { font-size: 0.875rem; line-height: 1.3125rem; }
 .download-desc .download-tit { font-size: 1rem; line-height: 1.6rem; }
 .download .btm-btn-area {display: flex; flex-direction: column-reverse;}
