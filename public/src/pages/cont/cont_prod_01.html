@@ -863,16 +863,13 @@
         </script> -->
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                // 1. 모바일 환경의 요소들을 선택합니다.
                 const steps = document.querySelectorAll('.mo-only .faq-list > div');
                 const indicators = document.querySelectorAll('.mo-only .step-indicator .step');
                 const indicatorItems = document.querySelectorAll('.mo-only .step-indicator > *'); // 숫자, 화살표 모두 선택
                 const totalSteps = steps.length;
                 let currentStep = 0;
             
-                // 2. 특정 단계와 인디케이터를 제어하는 함수를 수정합니다.
                 function showStep(stepIndex) {
-                    // --- 단계(div) 활성화 로직 (기존과 동일) ---
                     steps.forEach((step, index) => {
                         step.style.display = 'none';
                         if (index === stepIndex) {
@@ -880,21 +877,16 @@
                         }
                     });
             
-                    // --- 인디케이터 활성화 및 표시 로직 (수정됨) ---
-                    const lastVisibleItemIndex = stepIndex * 2; // 현재 단계에 해당하는 마지막 아이템의 인덱스 계산 (예: 3단계는 인덱스 4)
+                    const lastVisibleItemIndex = stepIndex * 2; 
             
-                    // 숫자와 화살표를 모두 제어
                     indicatorItems.forEach((item, index) => {
-                        // 현재 단계보다 뒤에 있는 아이템들은 숨김
                         if (index > lastVisibleItemIndex) {
                             item.style.display = 'none';
                         } else {
-                            // 현재 단계까지의 아이템들은 보여줌
-                            item.style.display = ''; // CSS 기본값으로 복원
+                            item.style.display = ''; 
                         }
                     });
                     
-                    // 현재 단계의 숫자만 'active' 클래스 적용
                     indicators.forEach((indicator, index) => {
                         indicator.classList.remove('active');
                         if (index === stepIndex) {
@@ -903,7 +895,6 @@
                     });
                 }
             
-                // 3. 버튼 이벤트 리스너 (기존과 동일)
                 steps.forEach((step, index) => {
                     const buttons = step.querySelectorAll('button');
                     buttons.forEach(button => {
@@ -928,7 +919,6 @@
                     });
                 });
             
-                // 4. 페이지 첫 로드 시 첫 단계 활성화 (기존과 동일)
                 showStep(currentStep);
             });
             </script>
