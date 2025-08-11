@@ -540,13 +540,13 @@ table {border-collapse: collapse;}
 .cont-list li .noti-desc::before {content: "*"; display: inline-block; position: absolute; top:50%; left:1.25rem; transform: translateY(-50%);}
 
 /* popup */
-.modal-pop {visibility: hidden; position: fixed; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 100;}
+.modal-pop:not(.toast) {visibility: hidden; position: fixed; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 100;}
 .modal-pop.open {visibility: visible; margin: 0 1.2rem;}
 .modal-pop.open::before {opacity: 1;}
-.modal-pop::before {content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.70); width:100%; height: 100%; opacity: 0;} 
+.modal-pop:not(.toast)::before {content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.70); width:100%; height: 100%; opacity: 0;} 
 .modal-pop.open .pop-wrap {opacity: 1;}
 
-.pop-wrap {position: relative; display:flex; flex-direction: column; width:100vw; max-width: 100%; max-height: 38.7rem; overflow: hidden; z-index: 10; transition: opacity 0.5s linear; opacity: 0; border-radius: 1.5rem; background: #fff; margin: 0 auto; overflow: hidden;}
+.modal-pop:not(.toast) .pop-wrap {position: relative; display:flex; flex-direction: column; width:100vw; max-width: 100%; max-height: 38.7rem; overflow: hidden; z-index: 10; transition: opacity 0.5s linear; opacity: 0; border-radius: 1.5rem; background: #fff; margin: 0 auto; overflow: hidden;}
 .pop-wrap .pop-header .title {color: var(--colorElement-light-text-text-default01); font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
 .pop-wrap .pop-content {overflow-y: auto;} /* height: 100dvh;  */
 .pop-wrap .pop-footer {padding-top: 2.5rem;}
@@ -603,6 +603,8 @@ table {border-collapse: collapse;}
 /* 위쪽 꼬리 */
 .tooltip-arrow.top::before {transform: rotate(180deg); top: auto; bottom: 0; }
 .tooltip-arrow.top::after {transform: rotate(180deg); top: auto; bottom: -1px;}
+.modal-pop.toast {opacity: 0; transition: 1s;}
+.modal-pop.toast .pop-content {padding: 0.625rem 1rem; border-radius: 0.25rem; background: #555758; color: #fff; position: fixed; top: 52px; right: 1.25rem; font-size: 1rem; font-weight: 500; line-height: 1.6rem; z-index: 9999;  max-width: 20.1rem;}
 
 /* pagination */
 .paging-wrap {display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;}

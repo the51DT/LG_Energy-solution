@@ -969,32 +969,60 @@ var pubUi = {
     popUp: {
         open(pop, btn) {
             const popEl = document.querySelector(pop);
-            document.body.classList.add("noScroll");
+            const toastPopBtn = document.querySelector(btn)
 
-            ["pop-s", "pop-e"].forEach((cls) => {
-                const div = document.createElement("div");
-                div.className = cls;
-                div.setAttribute("tabindex", "0");
-                cls === "pop-s" ? popEl.prepend(div) : popEl.append(div);
-            });
+            if (popEl != null && (popEl).classList.contains("toast")) {
+                const targetBtnTop = toastPopBtn.offsetTop;
+                const targetBtnTopTotal = targetBtnTop + toastPopBtn.clientHeight;                
 
-            popEl.querySelector(".pop-wrap").setAttribute("tabindex", "0");
-            popEl.classList.add("open");
+                console.log(targetBtnTopTotal);
+                popEl.style.opacity = "1";
 
-            popEl.querySelectorAll(".pop-s, .pop-e").forEach((el) => {
-                el.addEventListener("focus", () => popEl.querySelector(".pop-wrap").focus());
-            });
+                if(document.querySelector(".wrap").classList.contains("mobile")) {
+                    popEl.querySelector(".pop-content").style.top = `${targetBtnTopTotal + 10}px`;
+                    popEl.querySelector(".pop-content").style.transform = "revert";
+                    popEl.querySelector(".pop-content").style.maxWidth = "20.1rem";
+                    popEl.querySelector(".pop-content").style.left = "revert";
+                    popEl.querySelector(".pop-content").style.right = "1.25rem";
+                } else {
+                    popEl.querySelector(".pop-content").style.top = "80%";
+                    popEl.querySelector(".pop-content").style.maxWidth = "880px";
+                    popEl.querySelector(".pop-content").style.transform = "translateX(-50%)";
+                    popEl.querySelector(".pop-content").style.left = "50%";
+                    popEl.querySelector(".pop-content").style.right = "revert";
+                }
+                setTimeout(() => {
+                    popEl.style.opacity = "0"
+                    popEl.querySelector(".pop-content").style.top = "revert";
+                }, 2000);
+            } else {
+                document.body.classList.add("noScroll");
 
-            const closeBtn = popEl.querySelector("[data-action=close]");
-            if (closeBtn) {
-                closeBtn.addEventListener("click", () => pubUi.popUp.close(pop, btn));
+                ["pop-s", "pop-e"].forEach((cls) => {
+                    const div = document.createElement("div");
+                    div.className = cls;
+                    div.setAttribute("tabindex", "0");
+                    cls === "pop-s" ? popEl.prepend(div) : popEl.append(div);
+                });
+
+                popEl.querySelector(".pop-wrap").setAttribute("tabindex", "0");
+                popEl.classList.add("open");
+
+                popEl.querySelectorAll(".pop-s, .pop-e").forEach((el) => {
+                    el.addEventListener("focus", () => popEl.querySelector(".pop-wrap").focus());
+                });
+
+                const closeBtn = popEl.querySelector("[data-action=close]");
+                if (closeBtn) {
+                    closeBtn.addEventListener("click", () => pubUi.popUp.close(pop, btn));
+                }
+
+                if (popEl.classList.contains("tooltip")) {
+                    pubUi.popUp.setTooltipPosition(popEl, btn);
+                }
+
+                pubUi.popUp.scroll(pop);
             }
-
-            if (popEl.classList.contains("tooltip")) {
-                pubUi.popUp.setTooltipPosition(popEl, btn);
-            }
-
-            pubUi.popUp.scroll(pop);
         },
 
         close(pop, btn) {
