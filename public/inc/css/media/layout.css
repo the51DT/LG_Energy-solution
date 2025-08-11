@@ -4,7 +4,7 @@
 .wrap:not(.main_p) .content-header {padding-left: 2rem; padding-right: 2rem;}
 .footer-wrap .footer-area {margin: 0 2rem;}
 
-
+.wrap{max-width: 1279px;margin:0 auto;}
 
 .pc-only {display: none !important;}
 .mo-only {display: block !important;}    
@@ -34,7 +34,7 @@
 .flex-box {display: block;}
 .cont-head-wrap {padding: 0 1.25rem; margin-top:2rem; margin-bottom: 1.5rem;}
 
-.header-wrap {height: 3.25rem;}
+.header-wrap {height: 3.25rem;max-width: 1279px;margin:0 auto;}
 .header-wrap .header-area,
 .header-wrap .header-cont {height: 100%;}
 .header-cont > .ci {width: 8.2755rem; height: auto;}
