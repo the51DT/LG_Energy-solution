@@ -1,5 +1,5 @@
 /* 중간사이즈 1400 css 필요 시 */
-@media screen and (max-width: 1400px) {
+
 /* 주식정보 (stif) - 중간사이즈 깨져서 임의로 일부영역 모바일 디자인으로 적용 */
 .stif .stock-box {gap: 1.25rem; margin: 0 1.25rem; padding: 2rem 1.25rem; width: auto;}
 .stif .stock-box .stock-info {flex-direction: column; gap: 2rem;}
@@ -8,11 +8,11 @@
 .stif .stock-box .stock-info .info-big > div > p {gap: 1rem;}
 .stif .stock-box .stock-info .info-wrap {padding-top: 2rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); width: 100%}
 .stif .stock-box .stock-info .info-wrap > div {width: 100%; justify-content: center; border: none;}
-}
+
 
 /* 모바일 사이즈 css */
-@media screen and (max-width: 1279px) {
- /* 지속가능경영(esgm) */
+
+/* 지속가능경영(esgm) */
 .esgm .cont-area-sect > section:first-child {padding-top: 2rem;}
 .esgm .cont-area-info {padding-bottom: 4.75rem;}
 .esgm .table-container .table-wrap table tr > td {padding: 0; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
@@ -578,4 +578,3 @@
 .cont .step-indicator .step { width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #E1E7EA; color: #858889; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 0.875rem; }
 .cont .step-indicator .step.active { width: 2.25rem; height: 2.25rem; font-size: 1.125rem; font-weight: 600; background-color: #33B0C6; color: #fff; }
 .cont .step-indicator .arrow { width: 0.875rem; height: 0.875rem; }
-}

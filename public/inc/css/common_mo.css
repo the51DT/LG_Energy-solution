@@ -11,3 +11,8 @@
 @import url("./Default/layout.css");
 @import url("./Default/component.css");
 @import url("./Default/pages.css");
+
+/* page mobile*/
+@import url("./media/layout.css");
+@import url("./media/component.css");
+@import url("./media/pages.css");
