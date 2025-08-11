@@ -58,8 +58,8 @@ pathApp.setUrl = function () {
     if (link !== "") {
       const anchor = document.createElement("a");
       anchor.href = "../public/src/pages/" + link;
-      // anchor.target = "_blank";
-      // anchor.rel = "noopener";
+      anchor.target = "_blank";
+      anchor.rel = "noopener";
       anchor.textContent = link;
 
       // 기존 span 내용을 비우고 a 태그 삽입
