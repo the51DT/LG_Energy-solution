@@ -502,131 +502,43 @@
 
 .download .no-result-wrap { padding: 6.25rem 0; }
 .download .no-result-wrap .no-result { font-size: 1rem; line-height: 1.6rem; }
-}
 
 /* 문의하기 */
-.cont .faq-list {
-    background-color: #F3F5F7;
-    padding: 0 1.25rem 6.25rem !important;
-}
-.wrap.cont .content-header .subp-tit {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6rem;
-    color: #171819; 
-}
-
-.cont .acd-tit {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #171819;
-    line-height: 1.875rem;
-}
-.cont .btn-wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.cont .btn-wrap > button {
-    padding: 0.375rem 2rem;
-}
-.cont .btn-wrap > button > img {
-    width: 1.25rem;
-    height: 1.25rem;
-}
-.cont .cont-btn-wrap {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin-top: 1rem;
-}
-
-.cont .cont-btn-wrap > button {
-    background-color: #fff;
-    height: 3.75rem;
-    padding: 0;
-    font-size: 1rem;
-}
-.cont .cont-btn-wrap > button img {
-    width: 1.125rem;
-}
-
-.cont .sub-btn-wrap  {
-    display: flex;
-    flex-direction: column;
-}
-.cont .sub-cont-wrap {
-    background-color: #fff;
-    padding: 2rem 1.25rem;
-    border-radius: 0.25rem;
-}
-.cont .sub-cont-wrap > p {
-    font-size: 1rem;
-}
-.cont .sub-cont-wrap .sub-list {
-    border-radius: 0.5rem;
-    padding: 1.5rem 1.25rem;
-}
-.cont .sub-cont-wrap .sub-list > li {
-    align-items: flex-start;
-    font-size: 1rem;
-    line-height: 1.6rem;
-}
-.cont .sub-cont-wrap .sub-list .list-alret {
-    align-items: flex-start;
-}
-.cont .sub-cont-wrap .sub-list .list-alret > p{
-    font-size: 1rem;
-    line-height: 1.6rem;
-}
-
-.cont .required-field-text {
-    display: block;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-}
-
-.cont .sub-cont-wrap .wrap-form-input {
-    display: flex;
-    row-gap: 2rem;
-}
-
-.cont .sub-cont-wrap .wrap-form-input .input-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+.cont .faq-list { background-color: #F3F5F7; padding: 0 1.25rem 6.25rem !important; }
+.wrap.cont .content-header .subp-tit { font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #171819; }
+.cont .acd-tit { font-size: 1.25rem; font-weight: 600; color: #171819; line-height: 1.875rem; }
+.cont .btn-wrap { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 2.5rem; }
+.cont .btn-wrap > button { padding: 0.375rem 2rem; }
+.cont .btn-wrap > button > img { width: 1.25rem; height: 1.25rem; }
+.cont .cont-btn-wrap { grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 1rem; }
+.cont .cont-btn-wrap > button { background-color: #fff; height: 3.75rem; padding: 0; font-size: 1rem; }
+.cont .cont-btn-wrap > button img { width: 1.125rem; }
+.cont .sub-btn-wrap { display: flex; flex-direction: column; }
+.cont .sub-cont-wrap { background-color: #fff; padding: 2rem 1.25rem; border-radius: 0.25rem; gap: 2rem; }
+.cont .sub-cont-wrap > p { font-size: 1rem; }
+.cont .sub-cont-wrap .sub-list { border-radius: 0.5rem; padding: 1.5rem 1.25rem; }
+.cont .sub-cont-wrap .sub-list > li { align-items: flex-start; font-size: 1rem; line-height: 1.6rem; }
+.cont .sub-cont-wrap .sub-list .list-alret { align-items: flex-start; }
+.cont .sub-cont-wrap .sub-list .list-alret > p { font-size: 1rem; line-height: 1.6rem; }
+.cont .required-field-text { display: block; font-size: 0.875rem; margin-top: 0.25rem; margin-bottom: 1rem; }
+.cont .sub-cont-wrap .wrap-form-input { display: flex; row-gap: 2rem; }
+.cont .sub-cont-wrap .wrap-form-input .input-wrap { display: flex; flex-direction: column; align-items: flex-start; }
+.cont .sub-cont-wrap .wrap-form-input .input-wrap > label { font-size: 1rem; margin-right: 0.25rem; }
+.cont .selectbox-wrap.type3 .select-cate { height: 3.5rem; }
+.cont .selectbox-wrap.type3 .select-cate::after { }
+.cont .selectbox-wrap > div.select-cate > button { padding: 0.9375rem 0; }
+.cont .sub-cont-wrap .wrap-form-input .input-wrap.textarea-box { gap: 0.5rem; }
+.cont .wrap-form-input.filebox .btn-file-attach { top: 3rem; }
+.cont .consent-title { margin-bottom: 1rem; }
+.cont .consent-cont-wrap { background-color: transparent; padding: 0; gap: 1rem; }
+.cont .sub-cont-wrap .terms-wrap { background-color: #FFF; padding: 2rem 1.25rem; margin: 0; }
+.cont .sub-cont-wrap .terms-wrap .text-list > li > strong { color: #555758; font-size: 1rem; display: flex; }
+.cont .sub-cont-wrap .terms-wrap .text-list > li > strong > span { font-weight: 600; }
+.cont .sub-cont-wrap .terms-wrap .text-list > li > p { font-size: 1rem; margin-left: 1.25rem; line-height: 1.6rem; }
+.cont .sub-cont-wrap .terms-wrap .text-list span { font-size: 0.875rem; display: flex; line-height: 1.3125rem; }
+.cont .sub-cont-wrap .terms-wrap .text-list span > span { display: block; }
 /* 숫자 인터랙션 */
-.cont .step-indicator {
-    display: flex;
-    align-items: center;
-    padding: 2rem 1.25rem 1.5rem;
-    background-color: #F3F5F7;
-    gap: 0.25rem; 
-}
-
-.cont .step-indicator .step {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background-color: #E1E7EA; 
-    color: #858889;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 0.875rem;
-}
-
-.cont .step-indicator .step.active {
-    width: 2.25rem;
-    height: 2.25rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-    background-color: #33B0C6; 
-    color: #fff; 
-}
-
-.cont .step-indicator .arrow {
-    width: 0.875rem;
-    height: 0.875rem;
-}
+.cont .step-indicator { display: flex; align-items: center; padding: 2rem 1.25rem 1.5rem; background-color: #F3F5F7; gap: 0.25rem; }
+.cont .step-indicator .step { width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #E1E7EA; color: #858889; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 0.875rem; }
+.cont .step-indicator .step.active { width: 2.25rem; height: 2.25rem; font-size: 1.125rem; font-weight: 600; background-color: #33B0C6; color: #fff; }
+.cont .step-indicator .arrow { width: 0.875rem; height: 0.875rem; }
