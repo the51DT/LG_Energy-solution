@@ -277,17 +277,27 @@
 
 /* IR자료 (irdt) */
 .irdt .tab-content .tab-content .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 4rem;}
-.irdt .cont-area-title {display: flex; align-items: center; gap: 1.25rem;}
-.irdt .cont-area-title .asterisk-text {display: flex; gap: 0.38rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); justify-self: flex-end;}
+.irdt .cont-area-title {display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.25rem;}
+.irdt .cont-area-title .asterisk-text {margin-left: auto; display: flex; gap: 0.38rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); justify-self: flex-end;}
 .irdt .cont-area-title .asterisk-text::before {flex-shrink: 0; content: ""; display: inline-block; margin: 0.61rem 0.19rem; width: 0.37894rem; height: 0.39744rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
-.irdt .cont-area-title .selectbox-wrap {margin-left: auto; width: 20rem;}
+.irdt .cont-area-title .selectbox-wrap {width: 20rem;}
 .irdt .cont-area-title .selectbox-wrap button {min-width: unset;}
+.irdt .cont-area-title:has(> .selectbox-wrap) {margin-bottom: 2.5rem;}
 .irdt .box-container .accordion-content .table-area {padding-top: 3rem;}
 .irdt .box-container .accordion-content .table-area:first-of-type {padding-top: 0;}
+.irdt .paging-wrap + .history-list.type3 {margin-top: 7.5rem;}
 .history-list.type2 > li {margin-top: 0; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .history-list.type2 > li:not(:first-child)::before {content: none;}
 .history-list.type2 .history-desc > li {position: static; border: none;}
-.history-list.type2 .history-year {width: 6.375rem;}
+.history-list.type2 .history-year {width: 6.375rem; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; padding: 2.19rem 0 2.19rem 1.25rem;}
+.history-list.type3 > li {align-items: center; gap: 2.5rem; padding: 1.875rem 2.5rem; border-radius: 0.5rem; background-color: #EAF3F8;}
+.history-list.type3 > li::before {content: none;}
+.history-list.type3 > li + li {margin-top: 1.25rem;}
+.history-list.type3 .history-desc > li {border: none; padding: 0;}
+.history-list.type3 .history-year {padding: 0; width: auto; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
+.history-list.type3 .history-desc .history-tit {font-size: 1.25rem; line-height: 2rem;}
+.history-list.type3 .history-btn {background-color: var(--colorElement-light-fill-fill-on-primary);}
+.history-list.type3 .history-btn:hover {background-color: var(--colorElement-light-fill-fill-primary);}
 .history-btn-wrap {flex-grow: 0; flex-shrink: 1; display: flex; align-items: center; gap: 0.75rem; width: fit-content;}
 .history-btn-wrap + .history-btn-wrap {margin-left: 0.63rem;}
 .history-btn-wrap > span  {font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
