@@ -160,13 +160,23 @@
             <!-- section -->
             <section id="container" class="content-wrap">
                 <div class="content-header_bg">
-                    <img src="../../../inc/images/img/visual_fina01.png" alt="비주얼배너" />
+                    <div class="visual-video">
+                        <video src="../../../inc/images/video/visual_company01.mp4" poster="../../../inc/images/img/visual_company01.png" autoplay muted playsinline loop>
+                            <!-- 비디오 영상 소리 정보 존재시 내용 입력 (접근성 처리용) -->
+                        </video>
+                    </div>
+                    <div class="content-header_text">
+                        <p class="title-intro">
+                            투자의 근거가 되는 모든 순간,<br/>
+                            <strong>정보에 이해를 담아 투자자의 선택을 돕습니다.</strong>
+                        </p>
+                    </div>
                 </div>
                 <div class="page-map-wrap"> <!-- page-map-wrap -->
                     <div class="selectbox-wrap pc-only" role="listbox">
-                        <div role="option" class="select-cate">
+                        <!-- <div role="option" class="select-cate">
                             <a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/icon/icon_home.svg" alt="home" title="홈 이동" /></a>
-                        </div>
+                        </div> -->
                         <div class="select-cate activeSelect" role="option">
                             <button type="button" aria-haspopup="listbox">투자정보</button>
                             <ul class="select-menu" role="listbox">
@@ -187,64 +197,596 @@
                                 <li><a href="javascript:;" role="option" tabindex="0" class="active">IR자료</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="selectbox-wrap mo-only" role="listbox">
-                        <div class="breadcrumb-wrap">
-                            <!-- 250717 수정 : breadcrumb 모바일 디자인 변경으로 인한 마크업 수정 -->
-                            <div class="select-cate activeSelect" role="option">
-                                <button type="button" aria-haspopup="listbox">투자정보</button>
-                                <ul class="select-menu" role="listbox">
-                                    <li><a href="javascript:;" role="option" tabindex="0">사업영역</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">회사소개</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">지속가능경영</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">투자정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">채용정보</a></li>
-                                </ul>
-                            </div>
-                            <div class="select-cate activeSelect" role="option">
-                                <button type="button" aria-haspopup="listbox">IR자료</button>
-                                <ul class="select-menu" role="listbox">
-                                    <li><a href="javascript:;" role="option" tabindex="0">재무정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">주식정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">공시정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0">IR정보</a></li>
-                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">IR자료</a></li>
-                                </ul>
-                            </div>
-                            <!-- //250717 수정 : breadcrumb 모바일 디자인 변경으로 인한 마크업 수정 -->
-                        </div>                        
-                    </div>
-                    
-                </div>
-                <div class="content-header">
-                    <div class="content-header-cont">
-                        <div class="subp-tit-area">
-                            <h3 class="subp-tit">
-                                정직하게 공개하고, 책임 있게 응답합니다.<br>
-                                LG에너지솔루션의 모든 공시는 신뢰의 기록입니다.
-                            </h3>
+                        <div class="select-cate activeSelect" role="option">
+                            <button type="button" aria-haspopup="listbox">사업보고서</button>
+                            <!-- ★ PC 탭케이스일 경우, select-menu에 caseTab추가 필요, 하위 카테고리에 탭관련 속성 추가 필요 
+                            [ex] role="tab" aria-selected="true" aria-controls="tab1-content" -->
+                            <ul class="select-menu caseTab" role="listbox">
+                                <li><a href="javascript:;" tabindex="0" class="active" role="tab" aria-selected="true" aria-controls="tab1-content">사업보고서</a></li>
+                                <li><a href="javascript:;" tabindex="0" role="tab" aria-selected="false" aria-controls="tab2-content">영업보고서</a></li>
+                                <li><a href="javascript:;" tabindex="0" role="tab" aria-selected="false" aria-controls="tab3-content">감사보고서</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
+                </div> <!--//page-map-wrap -->
                 <div class="content-area">
-                    <div class="tab-wrap">
-                        <div class="content-area-head-tab">
-                            <div class="tab-cate-wrap">
-                                <ul class="tab-category activeTab" role="tablist">
-                                    <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">사업보고서</button></li>
-                                    <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">영업보고서</button></li>
-                                    <li class="tab" id="tab3"><button role="tab" aria-selected="false" aria-controls="tab3-content">감사보고서</button></li>
-                                    <li class="tab" id="tab4"><button role="tab" aria-selected="false" aria-controls="tab4-content">기업가치 제고 계획</button></li>
-                                </ul>
-                            </div><!--//tab-cate-wrap-->
-                        </div><!-- //content-area-head-tab-->
-                        <div class="content-item01">
+                    <div class="pc-only">
+                        <div class="tab-content-box">
+                            <div class="tab-content on" id="tab1-content">
+                                <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                                    <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                        <h2 class="title-h1">사업보고서</h2> <!-- title-h1 (페이지타이틀) -->
+                                        <div class="content-sect">
+                                            <div class="cont-area-title">
+                                                <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
+                                            </div>
+                                            <ul class="history-list type2">
+                                                <li>
+                                                    <p class="history-year">2025</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">사업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Annual_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2024</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">사업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Annual_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2023</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">사업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Annual_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2022</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">사업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Annual_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2021</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">사업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Annual_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <div class="paging-wrap">
+                                                <ul class="paging">
+                                                    <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                    <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">...</a></li>
+                                                    <li><a href="#">30</a></li>
+                                                    <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                    <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <ul class="history-list type3">
+                                                <li>
+                                                    <p class="history-year">2025</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">기업가치 제고 계획</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/assets/file/LG_Energy_Soltuion_Valueup_Plan_KOR.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2024</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">기업가치 제고 계획</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/assets/file/LG_Energy_Soltuion_Valueup_Plan_KOR.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="tab2-content">
+                                <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                                    <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                        <h2 class="title-h1">영업보고서</h2> <!-- title-h1 (페이지타이틀) -->
+                                        <div class="content-sect">
+                                            <div class="cont-area-title">
+                                                <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
+                                            </div>
+                                            <ul class="history-list type2">
+                                                <li>
+                                                    <p class="history-year">2025</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">영업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2024</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">영업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2023</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">영업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2022</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">영업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="history-year">2021</p>
+                                                    <ul class="history-desc">
+                                                        <li>
+                                                            <div>
+                                                                <span class="history-tit">영업보고서</span>
+                                                            </div>
+                                                            <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <div class="paging-wrap">
+                                                <ul class="paging">
+                                                    <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                    <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">...</a></li>
+                                                    <li><a href="#">30</a></li>
+                                                    <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                    <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="tab3-content">
+                                <div class="content-item01"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                                    <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                        <h2 class="title-h1">감사보고서</h2> <!-- title-h1 (페이지타이틀) -->
+                                        <div class="content-sect">
+                                            <div class="tab-wrap" data-tab-type="secondTab">
+                                                <div class="tab-cate-wrap full-line">
+                                                    <ul class="tab-category activeTab" role="tablist">
+                                                        <li class="tab on" id="tab3-1"><button role="tab" aria-selected="true" aria-controls="tab3-1-content">연결재무재표</button></li>
+                                                        <li class="tab" id="tab3-2"><button role="tab" aria-selected="false" aria-controls="tab3-2-content">별도재무제표</button></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-content-box">
+                                                    <div class="tab-content on" id="tab3-1-content">
+                                                        <div class="content-wrap">
+                                                            <div class="content-sect">
+                                                                <div class="cont-area-title">
+                                                                    <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
+                                                                    <div class="selectbox-wrap type2">
+                                                                        <div class="select-cate activeSelect">
+                                                                            <button type="button" aria-haspopup="listbox">전체</button>
+                                                                                <ul class="select-menu" role="listbox">
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2025</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2024</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2023</a></li>
+                                                                                </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <ul class="history-list">
+                                                                    <li>
+                                                                        <p class="history-year">2025</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="history-year">2024</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="history-year">2023</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="paging-wrap">
+                                                                    <ul class="paging">
+                                                                        <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                        <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                        <li class="active"><a href="#">1</a></li>
+                                                                        <li><a href="#">2</a></li>
+                                                                        <li><a href="#">3</a></li>
+                                                                        <li><a href="#">4</a></li>
+                                                                        <li><a href="#">5</a></li>
+                                                                        <li><a href="#">...</a></li>
+                                                                        <li><a href="#">30</a></li>
+                                                                        <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                        <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-content" id="tab3-2-content">
+                                                        <div class="content-wrap">
+                                                            <div class="content-sect">
+                                                                <div class="cont-area-title">
+                                                                    <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
+                                                                    <div class="selectbox-wrap type2">
+                                                                        <div class="select-cate activeSelect">
+                                                                            <button type="button" aria-haspopup="listbox">전체</button>
+                                                                                <ul class="select-menu" role="listbox">
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2025</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2024</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2023</a></li>
+                                                                                </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <ul class="history-list">
+                                                                    <li>
+                                                                        <p class="history-year">2025</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="history-year">2024</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="history-year">2023</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="paging-wrap">
+                                                                    <ul class="paging">
+                                                                        <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                        <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                        <li class="active"><a href="#">1</a></li>
+                                                                        <li><a href="#">2</a></li>
+                                                                        <li><a href="#">3</a></li>
+                                                                        <li><a href="#">4</a></li>
+                                                                        <li><a href="#">5</a></li>
+                                                                        <li><a href="#">...</a></li>
+                                                                        <li><a href="#">30</a></li>
+                                                                        <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                        <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mo-only">
+                        <div class="cont-head-wrap">
+                            <h2 class="title-h1">IR자료</h2> <!-- title-h1 (페이지타이틀) -->
+                        </div>
+                        <div class="tab-wrap">
+                            <div class="content-area-head-tab">
+                                <div class="tab-cate-wrap new">                            
+                                    <ul class="tab-category activeTab" role="tablist">
+                                        <li class="tab on" id="tab1"><button role="tab" aria-selected="true" aria-controls="tab1-content">사업보고서</button></li>
+                                        <li class="tab" id="tab2"><button role="tab" aria-selected="false" aria-controls="tab2-content">영업보고서</button></li>
+                                        <li class="tab" id="tab3"><button role="tab" aria-selected="false" aria-controls="tab3-content">감사보고서</button></li>
+                                    </ul>                            
+                                </div><!--//tab-cate-wrap-->                                                
+                            </div><!-- //content-area-head-tab --> 
+                            
                             <div class="tab-content-box">
                                 <div class="tab-content on" id="tab1-content">
-                                    <div class="cont-area-wrap">
-                                        <div class="cont-area-sect">
-                                            <section>
-                                                <div class="cont-area-title">사업보고서<span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span></div>
+                                    <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                                        <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                            <div class="content-sect">
+                                                <div class="cont-area-title">
+                                                    <h2 class="title-h2">사업보고서</h2>
+                                                    <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
+                                                </div>
                                                 <ul class="history-list type2">
                                                     <li>
                                                         <p class="history-year">2025</p>
@@ -309,467 +851,24 @@
                                                         <li class="active"><a href="#">1</a></li>
                                                         <li><a href="#">2</a></li>
                                                         <li><a href="#">3</a></li>
-                                                        <li><a href="#">4</a></li>
-                                                        <li><a href="#">5</a></li>
                                                         <li><a href="#">...</a></li>
                                                         <li><a href="#">30</a></li>
                                                         <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
                                                         <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
                                                     </ul>
                                                 </div>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-content" id="tab2-content">
-                                    <div class="cont-area-wrap">
-                                        <div class="cont-area-sect">
-                                            <section>
-                                                <div class="cont-area-title">영업보고서<span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span></div>
-                                                <ul class="history-list type2">
+                                                <ul class="history-list type3">
                                                     <li>
                                                         <p class="history-year">2025</p>
                                                         <ul class="history-desc">
                                                             <li>
                                                                 <div>
-                                                                    <span class="history-tit">영업보고서</span>
+                                                                    <span class="history-tit">기업가치 제고 계획</span>
                                                                 </div>
-                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                                <a href="https://www.lgensol.com/assets/file/LG_Energy_Soltuion_Valueup_Plan_KOR.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li>
-                                                        <p class="history-year">2024</p>
-                                                        <ul class="history-desc">
-                                                            <li>
-                                                                <div>
-                                                                    <span class="history-tit">영업보고서</span>
-                                                                </div>
-                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p class="history-year">2023</p>
-                                                        <ul class="history-desc">
-                                                            <li>
-                                                                <div>
-                                                                    <span class="history-tit">영업보고서</span>
-                                                                </div>
-                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p class="history-year">2022</p>
-                                                        <ul class="history-desc">
-                                                            <li>
-                                                                <div>
-                                                                    <span class="history-tit">영업보고서</span>
-                                                                </div>
-                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p class="history-year">2021</p>
-                                                        <ul class="history-desc">
-                                                            <li>
-                                                                <div>
-                                                                    <span class="history-tit">영업보고서</span>
-                                                                </div>
-                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <div class="paging-wrap">
-                                                    <ul class="paging">
-                                                        <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                        <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li><a href="#">2</a></li>
-                                                        <li><a href="#">3</a></li>
-                                                        <li><a href="#">4</a></li>
-                                                        <li><a href="#">5</a></li>
-                                                        <li><a href="#">...</a></li>
-                                                        <li><a href="#">30</a></li>
-                                                        <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                        <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-content" id="tab3-content">
-                                    <div class="cont-area-wrap">
-                                        <div class="cont-area-sect">
-                                            <section>
-                                                <div class="tab-wrap" data-tab-type="secondTab">
-                                                    <div class="tab-cate-wrap type2"> <!-- type2 -->
-                                                        <ul class="tab-category activeTab" role="tablist">
-                                                            <li class="tab on" id="tab1-1"><button role="tab" aria-selected="true" aria-controls="tab1-1-content">연결재무제표</button></li>
-                                                            <li class="tab" id="tab1-2"><button role="tab" aria-selected="false" aria-controls="tab1-2-content">별도재무제표</button></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="tab-content-box">
-                                                        <div class="tab-content on" id="tab1-1-content">
-                                                            <div class="cont-area-wrap">
-                                                                <div class="cont-area-sect">
-                                                                    <section>
-                                                                        <div class="cont-area-title">
-                                                                            연결재무제표
-                                                                            <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
-                                                                            <div class="selectbox-wrap type2">
-                                                                                <div class="select-cate activeSelect">
-                                                                                    <button type="button" aria-haspopup="listbox">전체</button>
-                                                                                        <ul class="select-menu" role="listbox">
-                                                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
-                                                                                            <li><a href="javascript:;" role="option" tabindex="0">2025</a></li>
-                                                                                            <li><a href="javascript:;" role="option" tabindex="0">2024</a></li>
-                                                                                            <li><a href="javascript:;" role="option" tabindex="0">2023</a></li>
-                                                                                        </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <ul class="history-list">
-                                                                            <li>
-                                                                                <p class="history-year">2025</p>
-                                                                                <ul class="history-desc">
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </li>
-                                                                            <li>
-                                                                                <p class="history-year">2024</p>
-                                                                                <ul class="history-desc">
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </li>
-                                                                            <li>
-                                                                                <p class="history-year">2023</p>
-                                                                                <ul class="history-desc">
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </li>
-                                                                        </ul>
-                                                                        <div class="paging-wrap">
-                                                                            <ul class="paging">
-                                                                                <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                                                <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                                                <li class="active"><a href="#">1</a></li>
-                                                                                <li><a href="#">2</a></li>
-                                                                                <li><a href="#">3</a></li>
-                                                                                <li><a href="#">4</a></li>
-                                                                                <li><a href="#">5</a></li>
-                                                                                <li><a href="#">...</a></li>
-                                                                                <li><a href="#">30</a></li>
-                                                                                <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                                                <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </section>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="tab-content on" id="tab1-2-content">
-                                                            <div class="cont-area-wrap">
-                                                                <div class="cont-area-sect">
-                                                                    <section>
-                                                                        <div class="cont-area-title">
-                                                                            별도재무제표
-                                                                            <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
-                                                                            <div class="selectbox-wrap type2">
-                                                                                <div class="select-cate activeSelect">
-                                                                                    <button type="button" aria-haspopup="listbox">전체</button>
-                                                                                        <ul class="select-menu" role="listbox">
-                                                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
-                                                                                            <li><a href="javascript:;" role="option" tabindex="0">2025</a></li>
-                                                                                            <li><a href="javascript:;" role="option" tabindex="0">2024</a></li>
-                                                                                            <li><a href="javascript:;" role="option" tabindex="0">2023</a></li>
-                                                                                        </ul>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <ul class="history-list">
-                                                                            <li>
-                                                                                <p class="history-year">2025</p>
-                                                                                <ul class="history-desc">
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </li>
-                                                                            <li>
-                                                                                <p class="history-year">2024</p>
-                                                                                <ul class="history-desc">
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </li>
-                                                                            <li>
-                                                                                <p class="history-year">2023</p>
-                                                                                <ul class="history-desc">
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <div>
-                                                                                            <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
-                                                                                        </div>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
-                                                                                            <span>KOR</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                        <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
-                                                                                            <span>ENG</span>
-                                                                                            <div class="history-btn"><span class="blind download">다운로드</span></div>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </li>
-                                                                        </ul>
-                                                                        <div class="paging-wrap">
-                                                                            <ul class="paging">
-                                                                                <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                                                <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                                                <li class="active"><a href="#">1</a></li>
-                                                                                <li><a href="#">2</a></li>
-                                                                                <li><a href="#">3</a></li>
-                                                                                <li><a href="#">4</a></li>
-                                                                                <li><a href="#">5</a></li>
-                                                                                <li><a href="#">...</a></li>
-                                                                                <li><a href="#">30</a></li>
-                                                                                <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                                                <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </section>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-content" id="tab4-content">
-                                    <div class="cont-area-wrap">
-                                        <div class="cont-area-sect">
-                                            <section>
-                                                <div class="cont-area-title">기업가치 제고 계획<span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span></div>
-                                                <ul class="history-list type2">
                                                     <li>
                                                         <p class="history-year">2024</p>
                                                         <ul class="history-desc">
@@ -782,6 +881,75 @@
                                                         </ul>
                                                     </li>
                                                 </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="tab2-content">
+                                    <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                                        <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                            <div class="content-sect">
+                                                <div class="cont-area-title">
+                                                    <h2 class="title-h2">영업보고서</h2>
+                                                    <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
+                                                </div>
+                                                <ul class="history-list type2">
+                                                    <li>
+                                                        <p class="history-year">2025</p>
+                                                        <ul class="history-desc">
+                                                            <li>
+                                                                <div>
+                                                                    <span class="history-tit">영업보고서</span>
+                                                                </div>
+                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p class="history-year">2024</p>
+                                                        <ul class="history-desc">
+                                                            <li>
+                                                                <div>
+                                                                    <span class="history-tit">영업보고서</span>
+                                                                </div>
+                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p class="history-year">2023</p>
+                                                        <ul class="history-desc">
+                                                            <li>
+                                                                <div>
+                                                                    <span class="history-tit">영업보고서</span>
+                                                                </div>
+                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p class="history-year">2022</p>
+                                                        <ul class="history-desc">
+                                                            <li>
+                                                                <div>
+                                                                    <span class="history-tit">영업보고서</span>
+                                                                </div>
+                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p class="history-year">2021</p>
+                                                        <ul class="history-desc">
+                                                            <li>
+                                                                <div>
+                                                                    <span class="history-tit">영업보고서</span>
+                                                                </div>
+                                                                <a href="https://www.lgensol.com/upload/file/business-report/2024_LGES_Business_Report.pdf" target="_blank" class="history-btn"><span class="blind download">PDF 새 창에서 열기</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
                                                 <div class="paging-wrap">
                                                     <ul class="paging">
                                                         <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
@@ -789,20 +957,370 @@
                                                         <li class="active"><a href="#">1</a></li>
                                                         <li><a href="#">2</a></li>
                                                         <li><a href="#">3</a></li>
-                                                        <li><a href="#">4</a></li>
-                                                        <li><a href="#">5</a></li>
                                                         <li><a href="#">...</a></li>
                                                         <li><a href="#">30</a></li>
                                                         <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
                                                         <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
                                                     </ul>
                                                 </div>
-                                            </section>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- //tab-content-box -->
-                        </div><!-- //content-item01 -->
+                                <div class="tab-content" id="tab3-content">
+                                    <div class="content-item01"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                                        <div class="content-sect">
+                                            <div class="tab-wrap" data-tab-type="secondTab">
+                                                <div class="tab-cate-wrap full-line">
+                                                    <ul class="tab-category activeTab" role="tablist">
+                                                        <li class="tab on" id="tab3-1"><button role="tab" aria-selected="true" aria-controls="tab3-1-content">연결재무재표</button></li>
+                                                        <li class="tab" id="tab3-2"><button role="tab" aria-selected="false" aria-controls="tab3-2-content">별도재무제표</button></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-content-box">
+                                                    <div class="tab-content on" id="tab3-1-content">
+                                                        <div class="content-wrap">
+                                                            <div class="content-sect">
+                                                                <div class="cont-area-title">
+                                                                    <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
+                                                                    <div class="selectbox-wrap type2">
+                                                                        <div class="select-cate activeSelect">
+                                                                            <button type="button" aria-haspopup="listbox">전체</button>
+                                                                                <ul class="select-menu" role="listbox">
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2025</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2024</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2023</a></li>
+                                                                                </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <ul class="history-list">
+                                                                    <li>
+                                                                        <p class="history-year">2025</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="history-year">2024</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="history-year">2023</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_CONFS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="paging-wrap">
+                                                                    <ul class="paging">
+                                                                        <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                        <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                        <li class="active"><a href="#">1</a></li>
+                                                                        <li><a href="#">2</a></li>
+                                                                        <li><a href="#">3</a></li>
+                                                                        <li><a href="#">4</a></li>
+                                                                        <li><a href="#">5</a></li>
+                                                                        <li><a href="#">...</a></li>
+                                                                        <li><a href="#">30</a></li>
+                                                                        <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                        <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-content" id="tab3-2-content">
+                                                        <div class="content-wrap">
+                                                            <div class="content-sect">
+                                                                <div class="cont-area-title">
+                                                                    <span class="asterisk-text">2020년부터 K-IFRS를 반영하여 재무제표를 작성하였습니다.</span>
+                                                                    <div class="selectbox-wrap type2">
+                                                                        <div class="select-cate activeSelect">
+                                                                            <button type="button" aria-haspopup="listbox">전체</button>
+                                                                                <ul class="select-menu" role="listbox">
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2025</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2024</a></li>
+                                                                                    <li><a href="javascript:;" role="option" tabindex="0">2023</a></li>
+                                                                                </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <ul class="history-list">
+                                                                    <li>
+                                                                        <p class="history-year">2025</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="history-year">2024</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="history-year">2023</p>
+                                                                        <ul class="history-desc">
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">1분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">2분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">3분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div>
+                                                                                    <span class="history-tit">4분기 <br class="mo-only">검토보고서</span>
+                                                                                </div>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_kr.pdf" target="_blank" class="history-btn-wrap">
+                                                                                    <span>KOR</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                                <a href="https://www.lgensol.com/upload/file/audit-report/2025_1Q_LGES_Audit_Report_FS_en.pdf" target="_blank"  class="history-btn-wrap">
+                                                                                    <span>ENG</span>
+                                                                                    <div class="history-btn"><span class="blind download">다운로드</span></div>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="paging-wrap">
+                                                                    <ul class="paging">
+                                                                        <li class="arrow first"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                        <li class="arrow prev"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                        <li class="active"><a href="#">1</a></li>
+                                                                        <li><a href="#">2</a></li>
+                                                                        <li><a href="#">3</a></li>
+                                                                        <li><a href="#">...</a></li>
+                                                                        <li><a href="#">30</a></li>
+                                                                        <li class="arrow next"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                        <li class="arrow last"><a href="#"><img src="../../../../public/inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
