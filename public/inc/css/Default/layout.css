@@ -294,9 +294,12 @@ li.depth02 a {display: block;position: relative;width: max-content;text-align: c
 
 /* 디자인 레이아웃 재작업 - 0731 */
 .content-header_bg {position: relative; color: #fff; text-align: center; height: 30rem; }
+.content-header_bg .visual-video {width: 100%; height: 30rem;} 
+.content-header_bg video {width: 100%; height: 100%; object-fit: fill;}
 .content-header_bg img {width: 100%; height: 100%;  object-fit: cover;}
 .content-header_text {position: absolute; bottom: 8.56rem; left: 50%; transform: translateX(-50%);}
 .content-header .title-h1  {margin-bottom: 2.5rem;}
+
 
 [class^="content-item"] {padding: 7.5rem 0; width: 100%;}
 [class^="content-item"] + [class^="content-item"] {opacity: 0; transition: opacity 0.5s;}
