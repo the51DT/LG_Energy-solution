@@ -11,6 +11,7 @@ var pubUi = {
         this.form.init();
         this.tabList.init();
         this.acdItem.init();
+        this.swiperUi.init();
 
         this.evtScheduleLeft();
         this.historyMotionEvt();
@@ -41,7 +42,8 @@ var pubUi = {
         this.self.wrap = document.querySelector(".wrap");
         this.self.contentItem = document.querySelectorAll("[class^=content-item]");
 
-        // console.log(this.self.contentItem);
+        /* search */
+        this.self.searchResult = document.querySelectorAll(".searchEvt");
     },
 
     bindEvents: function () {
@@ -161,6 +163,37 @@ var pubUi = {
                 });
             });
         }
+
+        if (!this.self.searchResult) {
+            return;
+        } else {
+            pubUi.searchTextDelEvt(this.self.searchResult)
+        }
+    },
+    searchTextDelEvt: function(el) {
+        el.forEach((searchR) => {
+            let searchInput = searchR.querySelector("input");
+            let searchDelBtn = searchR.querySelector(".btn-delete");
+
+            searchInput.addEventListener("input", function () {
+                if (searchInput.value != "") {
+                    if (searchDelBtn.classList.contains("btn-search-reset")) {
+                        searchDelBtn.style.display = "flex";
+                    } else {
+                        searchDelBtn.style.display = "block";
+                    }
+                } else {
+                    searchDelBtn.style.display = "none";
+                }
+            });
+
+            searchDelBtn.addEventListener("click", function () {
+                if (searchInput.value != "") {
+                    searchInput.value = "";
+                    searchDelBtn.style.display = "none";
+                }
+            });
+        });
     },
     selectMenuClickEvt: function (type, pageMapCate, map, subCate) {
         if (type == "default") {
@@ -1035,6 +1068,31 @@ var pubUi = {
             popEl.style.left = `${left}px`;
         },
     },
+    swiperUi: {
+        init(){
+          this.type01Swiper();  
+        },
+        // swiper default 타입 : type01Swiper
+        type01Swiper() {
+            const targetSwiper = document.querySelectorAll(".type01Swiper");
+
+            if(targetSwiper) {
+                //newsroom 상세 사용중
+                var swiper1 = new Swiper(".type01Swiper", {
+                    pagination: {
+                        el: ".swiper-pagination",
+                        type: "fraction",
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            } else {
+                return;
+            }
+        },
+    }
 };
 
 (function () {

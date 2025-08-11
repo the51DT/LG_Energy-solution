@@ -425,7 +425,6 @@
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] {min-width: unset; width: 100%; height: 3.25rem; padding-inline: 1.88rem 1.25rem; font-size: 1.125rem; font-weight: 500; line-height: 1.575rem;}
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] .icon-area {width: fit-content;}
 
-
 /* 회사소개 소개 CI (comp) */
 .comp .intro-img-desc {display: flex; justify-content: space-between; color: var(--colorElement-light-text-text-default01);}
 .comp .intro-img-desc .desc {display: flex; flex-direction: column; gap: 1.5rem;}
@@ -462,6 +461,14 @@
 .comp .ci-terms-wrap .terms-list > li + li {margin-top: 2.5rem;}
 .comp .ci-terms-wrap .terms-list > li > ol {margin-left: 2.416rem;}
 .comp .ci-terms-wrap .terms-list > li > ol > li {list-style-type: decimal;}
+
+.comp .comp-btn-area .btn-wrap {display: inline-block; margin-top: 5rem}
+.comp .right-area .table-wrap.tb-list tbody tr > td {text-align: right;}
+.comp .right-area .table-wrap.tb-list .tb-list-sub .listbox {justify-content: flex-end;}
+.comp .right-area .table-wrap.tb-list table tbody > tr:first-of-type > th,
+ .table-wrap.tb-list table tbody > tr:first-of-type > td {border-top: 0;}
+.comp .right-area .table-wrap table tr > th,
+.comp .right-area .table-wrap table tr > td {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
 
 /* 글로벌네트워크 */
 .sort [class^=filter-][class*=type1] {background-color: #555758;}
@@ -528,8 +535,6 @@
 
 /* 뉴스룸 */
 .news .news-image-wrapper { position: relative; width: fit-content;}
-.news .news-image-wrapper > a {font-size: 1rem; position: absolute; bottom: 0; right: 0; display: flex; gap: 0.625rem; color: #fff; font-weight: 600; padding: 0.625rem 1.25rem; background-color: rgba(0, 0, 0, 0.80); align-items: center; }
-.news .news-image-wrapper > a > img { width: 1.25rem; height: 1.25rem; }
 .news .view-list-btn{display:flex;font-size:1.25rem;margin:0 auto;gap:0.75rem;border:1px solid #171819;padding:1rem 2rem;border-radius:100px; font-weight: 500;}
 .news .view-list-btn>img{width:1.5rem}
 .news h3{font-size: 2.75rem;font-weight:700;margin-top:5rem;margin-bottom:3.75rem}
