@@ -244,16 +244,15 @@ var pubUi = {
         }
     },
     secondTabChk: function (secondTab, type) {
-        if(type === "reset") {
-            
+        if (type === "reset") {
             const secondTabAll = document.querySelectorAll(".tab-wrap[data-tab-type=secondTab");
-            secondTabAll.forEach(secondTab => {
+            secondTabAll.forEach((secondTab) => {
                 const secondTabCategory = secondTab.querySelectorAll(".tab-category > .tab");
-                secondTabCategory.forEach(tabs => {
-                    tabs.classList.remove("on");                    
-                })
+                secondTabCategory.forEach((tabs) => {
+                    tabs.classList.remove("on");
+                });
                 secondTabCategory[0].classList.add("on");
-            })
+            });
         } else {
             if (secondTab) {
                 const secondTabs = secondTab.querySelectorAll(".tab-category > li");
@@ -283,7 +282,6 @@ var pubUi = {
                 }
             }
         }
-        
     },
     // fadeIn 함수: 요소를 서서히 나타나게 하는 함수
     fadeIn: function (element, duration) {
@@ -341,29 +339,43 @@ var pubUi = {
             });
         }
     },
+    //scrollToEvt 파라미터 인자정보
+    //scrollToEvt("대상엘리멘트(target)", "스크롤타입(type)", "값(value)") 
+    //페이지에서 사용하는 scrolToEvt 예외적으로 적용 원할 시, 파라미터 전달값 기본방식과 다르게 전달주어야함
+    // ex) 예외처리시 - scrollToEvt(targetElement, "page(type)", "처리하려는 페이지정보(value)")
+    scrollToEvt: function (target, type, value) {
+        // value 파라미터 빈값이거나, undefined일때 0으로 초기화
+        if (value == "" || value == undefined) {
+            value = 0;
+        }
 
-    scrollToEvt: function (target, type, value) {    
-        if(type === "left") { // 가로 스크롤 이동 type
+        if (type === "left") {
+            // 가로 스크롤 이동 type
             document.querySelector(target).scrollTo({ left: value, behavior: "smooth" });
-        } else if(type === "top") { //세로 스크롤 이동 type
-            // if (target) {
-            //     const targetContent = document.querySelector(target);
-            //     const targetOffsetY = targetContent.offsetTop;
-            //     const pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
-            //     const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
-            //     const totalHeadHeight = pageMapHeight + contentHeadHeight;
-
-            //     document.querySelector("body").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
-            // }
-            if (value == "" || value == undefined) {
-                document.querySelector(target).scrollTo({ top: 0, behavior: "smooth" });                
-            } else {
-                document.querySelector(target).scrollTo({ top: value, behavior: "smooth" });
+        } else if (type === "top") {
+            //세로 스크롤 이동 type
+            document.querySelector(target).scrollTo({ top: value, behavior: "smooth" });
+        } else if (type === "page") {
+            // page별 예외처리 필요할 경우
+            switch (value) {
+                // history 연혁 페이지
+                case "history":
+                    if (target) {
+                        console.log(value);
+                        const targetContent = document.querySelector(target);
+                        const targetOffsetY = targetContent.offsetTop;
+                        const pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
+                        const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
+                        const totalHeadHeight = pageMapHeight + contentHeadHeight;
+                        document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
+                    }
+                    break;
+                default:
+                    console.log("에러!, type,value값 확인 필요, 현재 type, value 값? " + type, value);
             }
-            
         } else {
-            console.log("type 에러!, type값 확인 필요, 현재 type 값? " + type)
-        }        
+            console.log("type 에러!, type값 확인 필요, 현재 type 값? " + type);
+        }
     },
 
     chkFileboxDisabled: function () {
@@ -717,8 +729,7 @@ var pubUi = {
     },
     //모바일 체크함수 추가
     mobileDeviceChk: function () {
-
-        if(!this.self.wrap) {
+        if (!this.self.wrap) {
             return;
         } else {
             if (this.self.isMobile || this.self.mobileDevice) {
@@ -734,7 +745,7 @@ var pubUi = {
                 }
                 this.self.wrap.classList.add("pc");
             }
-        }        
+        }
     },
     historyViewEvt: function () {
         if (document.querySelector(".history-wrap") != null) {
@@ -758,7 +769,7 @@ var pubUi = {
                 }, 400); // transition 시간만큼 기다림
 
                 setTimeout(function () {
-                    pubUi.scrollToEvt("#eachView");
+                    pubUi.scrollToEvt("#eachView", "page", "history"); //페이지에서 사용하는 scrolToEvt사용 원할 시, 파라미터 전달값 : targetElement, "page(type)", "처리하려는 페이지 (value)"
                 }, 1000);
             });
         }
@@ -828,7 +839,7 @@ var pubUi = {
                             const selectedTabCateMenu = tabCatePc.querySelector(`[aria-controls=${id}-content]`);
                             const selectedTabContPc = tabContPcBox.querySelector(`#${id}-content`);
 
-                            pubUi.scrollToEvt(".wrap", "top") //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가 
+                            pubUi.scrollToEvt(".wrap", "top"); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
 
                             tabCatePc.querySelectorAll("li").forEach((list) => {
                                 list.querySelector("a").setAttribute("aria-selected", false);
@@ -874,17 +885,15 @@ var pubUi = {
                         pubUi.secondTabChk(secondTab);
 
                         // scrollTo 작업중 0808 ~
-                        if(this.closest(".tab-cate-wrap").classList.contains("new")) {
+                        if (this.closest(".tab-cate-wrap").classList.contains("new")) {
                             const tabOnLeftValue = document.querySelector(`#${id}`).offsetLeft;
                             setTimeout(() => {
                                 requestAnimationFrame(() => {
-                                    pubUi.scrollToEvt(".tab-cate-wrap.new .tab-category", "left" ,tabOnLeftValue);
+                                    pubUi.scrollToEvt(".tab-cate-wrap.new .tab-category", "left", tabOnLeftValue);
                                 });
                             }, 0);
                         }
                         // console.log(tabOnLeftValue);
-                        
-                        
                     });
                 });
             });
