@@ -277,17 +277,27 @@
 
 /* IR자료 (irdt) */
 .irdt .tab-content .tab-content .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 4rem;}
-.irdt .cont-area-title {display: flex; align-items: center; gap: 1.25rem;}
-.irdt .cont-area-title .asterisk-text {display: flex; gap: 0.38rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); justify-self: flex-end;}
+.irdt .cont-area-title {display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.25rem;}
+.irdt .cont-area-title .asterisk-text {margin-left: auto; display: flex; gap: 0.38rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); justify-self: flex-end;}
 .irdt .cont-area-title .asterisk-text::before {flex-shrink: 0; content: ""; display: inline-block; margin: 0.61rem 0.19rem; width: 0.37894rem; height: 0.39744rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
-.irdt .cont-area-title .selectbox-wrap {margin-left: auto; width: 20rem;}
+.irdt .cont-area-title .selectbox-wrap {width: 20rem;}
 .irdt .cont-area-title .selectbox-wrap button {min-width: unset;}
+.irdt .cont-area-title:has(> .selectbox-wrap) {margin-bottom: 2.5rem;}
 .irdt .box-container .accordion-content .table-area {padding-top: 3rem;}
 .irdt .box-container .accordion-content .table-area:first-of-type {padding-top: 0;}
+.irdt .paging-wrap + .history-list.type3 {margin-top: 7.5rem;}
 .history-list.type2 > li {margin-top: 0; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .history-list.type2 > li:not(:first-child)::before {content: none;}
 .history-list.type2 .history-desc > li {position: static; border: none;}
-.history-list.type2 .history-year {width: 6.375rem;}
+.history-list.type2 .history-year {width: 6.375rem; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; padding: 2.19rem 0 2.19rem 1.25rem;}
+.history-list.type3 > li {align-items: center; gap: 2.5rem; padding: 1.875rem 2.5rem; border-radius: 0.5rem; background-color: #EAF3F8;}
+.history-list.type3 > li::before {content: none;}
+.history-list.type3 > li + li {margin-top: 1.25rem;}
+.history-list.type3 .history-desc > li {border: none; padding: 0;}
+.history-list.type3 .history-year {padding: 0; width: auto; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
+.history-list.type3 .history-desc .history-tit {font-size: 1.25rem; line-height: 2rem;}
+.history-list.type3 .history-btn {background-color: var(--colorElement-light-fill-fill-on-primary);}
+.history-list.type3 .history-btn:hover {background-color: var(--colorElement-light-fill-fill-primary);}
 .history-btn-wrap {flex-grow: 0; flex-shrink: 1; display: flex; align-items: center; gap: 0.75rem; width: fit-content;}
 .history-btn-wrap + .history-btn-wrap {margin-left: 0.63rem;}
 .history-btn-wrap > span  {font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
@@ -461,7 +471,6 @@
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] {min-width: unset; width: 100%; height: 3.25rem; padding-inline: 1.88rem 1.25rem; font-size: 1.125rem; font-weight: 500; line-height: 1.575rem;}
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] .icon-area {width: fit-content;}
 
-
 /* 회사소개 소개 CI (comp) */
 .comp .intro-img-desc {display: flex; justify-content: space-between; color: var(--colorElement-light-text-text-default01);}
 .comp .intro-img-desc .desc {display: flex; flex-direction: column; gap: 1.5rem;}
@@ -498,6 +507,14 @@
 .comp .ci-terms-wrap .terms-list > li + li {margin-top: 2.5rem;}
 .comp .ci-terms-wrap .terms-list > li > ol {margin-left: 2.416rem;}
 .comp .ci-terms-wrap .terms-list > li > ol > li {list-style-type: decimal;}
+
+.comp .comp-btn-area .btn-wrap {display: inline-block; margin-top: 5rem}
+.comp .right-area .table-wrap.tb-list tbody tr > td {text-align: right;}
+.comp .right-area .table-wrap.tb-list .tb-list-sub .listbox {justify-content: flex-end;}
+.comp .right-area .table-wrap.tb-list table tbody > tr:first-of-type > th,
+ .table-wrap.tb-list table tbody > tr:first-of-type > td {border-top: 0;}
+.comp .right-area .table-wrap table tr > th,
+.comp .right-area .table-wrap table tr > td {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
 
 /* 글로벌네트워크 */
 .sort [class^=filter-][class*=type1] {background-color: #555758;}
@@ -564,8 +581,6 @@
 
 /* 뉴스룸 */
 .news .news-image-wrapper { position: relative; width: fit-content;}
-.news .news-image-wrapper > a {font-size: 1rem; position: absolute; bottom: 0; right: 0; display: flex; gap: 0.625rem; color: #fff; font-weight: 600; padding: 0.625rem 1.25rem; background-color: rgba(0, 0, 0, 0.80); align-items: center; }
-.news .news-image-wrapper > a > img { width: 1.25rem; height: 1.25rem; }
 .news .view-list-btn{display:flex;font-size:1.25rem;margin:0 auto;gap:0.75rem;border:1px solid #171819;padding:1rem 2rem;border-radius:100px; font-weight: 500;}
 .news .view-list-btn>img{width:1.5rem}
 .news h3{font-size: 2.75rem;font-weight:700;margin-top:5rem;margin-bottom:3.75rem}
@@ -597,7 +612,7 @@
 .news-content-area .search-result>button{background-color:#B4B8BA;border-radius:999px;}
 .news-content-area .search-result>button>img{padding:0.641rem}
 .news-detail-area{background-color:#F3F5F7;padding:5rem 0 15rem}
-.news-detail-area .news-detail{background-color:#fff;max-width:90rem;margin:0 auto;display:flex;padding:6.25rem;flex-direction:column;align-items:flex-start;gap:3.75rem;margin-bottom:3.75rem}
+.news-detail-area .news-detail{background-color:#fff;max-width:90rem;margin:0 auto;display:flex;padding:6.25rem;flex-direction:column;align-items:flex-start;gap:3rem;margin-bottom:2.5rem}
 .news-detail-area .news-detail .news-detail-tit{color:#171819;font-size:2.5rem;font-weight:600}
 .news-detail-area .news-detail .news-info{width:100%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #555758;padding-bottom:2.5rem}
 .news-detail-area .news-detail .news-info button{padding:0.8125rem;border:1px solid #B4B8BA;border-radius:999px; display: flex; align-items: center; gap: 10px; color: #555758; font-size: 1rem; font-weight: 500;}
@@ -869,9 +884,34 @@
 .cont .accordion-list::before { content: counter(step-counter); position: absolute; z-index: 3; left: -5.625rem; background-color: #E1E7EA; border-radius: 50%; width: 3.75rem; height: 3.75rem; font-size: 1.75rem; font-weight: 600; color: #858889; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; top: 0; margin-top: 1.125rem; }
 .cont .accordion-list.on::before, .cont .accordion-list.completed::before { background-color: #33B0C6; color: #fff; }
 .cont .accordion-list.on::before { width: 4rem; height: 4rem; left: -6.125rem; }
+
 .cont .custom-alert-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 1000; }
 .cont .custom-alert-box { background-color: #fff; padding: 2rem 1.5rem 1.5rem 1.5rem; border-radius: 1rem; text-align: center; width: 22.5rem; }
 .cont .custom-alert-box > h2 { font-size: 1.25rem; font-weight: 600; color: #171819; }
 .cont .custom-alert-message { font-size: 1rem; margin: 1.5rem 0 2rem 0; line-height: 1.6rem; color: #555758; }
 .cont .custom-alert-confirm { background-color: #171819; color: #fff; border-radius: 6.25rem; padding: 0.875rem 0; font-size: 1.25rem; font-weight: 500; width: 100%; cursor: pointer; }
 .cont .btn-wrap > button:disabled { background-color: #E1E7EA !important; border-color: #E1E7EA !important; color: #fff !important; cursor: not-allowed; }
+
+/* 서비스 - 전력 중개 */
+.serv-trading .page-map-wrap {margin-top: 6.25rem;}
+.serv-trading .content-sect { display: flex; gap: 8.8rem; padding-top: 0; }
+.serv-trading .content-item02 {background-color: #F3F5F7;}
+.serv-trading .content-item04 {background-color: #EAF3F8;}
+.serv-trading .content-item01 .content-sect { padding-top: 2.5rem; }
+.serv-trading .content-sect .title-list { display: flex; flex-direction: column; width: 13.9rem;}
+.serv-trading .content-sect .title-list>li>a { padding: .5rem 0; font-size: 1.125rem; line-height: 1.8rem; color: #555758; }
+.serv-trading .content-sect .title-list>li>a.on { color: #171819; font-weight: 600; }
+.serv-trading .content-sect .cont-area-wrap { width: calc(100% - 16.4rem); }
+.serv-trading .article-content .article-desc { padding: 1.88rem 0; font-size: 1.25rem; line-height: 2rem; }
+.adv-wrap { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.88rem;}
+.adv-wrap .adv-box { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem; width: calc(33.33% - 1rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem; }
+.adv-wrap .adv-box .adv-img {width: 7.5rem; height: 7.5rem;}
+.adv-wrap .adv-box .adv-tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; text-align: center; }
+.adv-wrap .adv-box .adv-desc { font-size: 1rem; line-height: 1.6rem; color: #555758; text-align: center; }
+.serv-trading .service-wrap { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.serv-trading .service-wrap .service-box { width: calc(50% - 1rem); padding: 2.5rem 2.5rem 3.75rem; border: 2px solid #E1E7EA; border-radius: 1rem; background-color: #fff; }
+.serv-trading .service-wrap .service-tit-wrap {display: flex; align-items: center; gap: 0.625rem; padding-bottom: 1.25rem; border-bottom: 1px solid #C9CED1; }
+.serv-trading .service-wrap .service-tit-wrap>img {width: 5rem; height: 5rem;}
+.serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
+.serv-trading .service-wrap .service-desc { padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758; }
+

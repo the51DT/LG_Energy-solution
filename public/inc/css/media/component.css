@@ -52,17 +52,20 @@
     .tab-cate-wrap.full-line .tab-category:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) > li button {width: 100%;}
 
     /* accordion */
-    .accordion-list {padding: 1.5rem 1.25rem; border-radius: 0;}
-    .accordion-list.on {padding: 1.5rem 1.25rem;}
+    .accordion-list {padding: 0; border-radius: 0;}
+    .accordion-list .accordion-btn {padding: 1.5rem 3rem 1.5rem 1.25rem;}    
+    .accordion-list.on {padding-bottom: 1.5rem;}
+    .accordion-list.on .accordion-btn {padding: 1.5rem 1.25rem 0 1.25rem; }
     .accordion-list:not(:last-child) {margin-bottom: 0.25rem;}
-    .accordion-list .accordion-btn:after {width: 1.5rem; height: 1.5rem;}
-    .accordion-list .accordion-btn .acd-group {flex-direction: column; align-items: flex-start; gap: 0.25rem;}
+    .accordion-list .accordion-content {margin: 1.5rem 1.25rem 0;}
+    .accordion-list .accordion-btn:after {width: 1.5rem; height: 1.5rem; right: 1.25rem;}
+    .accordion-list .accordion-btn .acd-group {flex-direction: column; align-items: flex-start; gap: 0.25rem;} 
     .accordion-list .accordion-btn .acd-group .acd-icon {display: none;}
     
     .accordion-list .accordion-btn .acd-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
     .accordion-list .accordion-btn .sub-tit,
     .accordion-list.on .accordion-btn .sub-tit {font-size: 1rem; font-weight: 600; line-height: 1.6rem; color:var(--colorElement-light-text-text-default03); width: revert; padding-right: 0;}
-    .accordion-list.on .accordion-btn .acd-tit {font-weight: 700; font-size: 1.25rem; line-height: 1.875rem;}
+    .accordion-list.on .accordion-btn .acd-tit {font-weight: 700; font-size: 1.25rem; line-height: 1.875rem; padding-right: 1.7rem;}
 
     .accordion-list .accordion-content {margin-top: 1.5rem;  font-size: 1rem; line-height: 1.6rem; padding: 1.5rem 1.25rem; border-radius: 0.25rem;}
     .accordion-list .accordion-content .desc-wrap > .desc {font-size: 0.875rem; line-height: 1.3125rem;}
@@ -70,15 +73,14 @@
     .accordion-list .accordion-content .table-wrap table tbody > tr > th,
     .accordion-list .accordion-content .table-wrap table tbody > tr > td {font-size: 0.875rem; line-height: 1.4rem; white-space: pre;}
 
-    
-    .accordion-list.type2 .accordion-content {margin-left: 0; margin-bottom: 0;}
     .accordion-list.type2 .accordion-btn {font-size: 1rem; font-weight: 600; line-height: 1.5rem;}
     .accordion-list .accordion-content .sect-cont-sub article:not(:last-child)::after {margin: 2rem 0;}
 
-    .accordion-list.type3 {padding: 1.25rem; border-radius: 1rem;}
-    .accordion-list.type3:not(:last-child) {margin-bottom: 0.62rem;}
+    .accordion-list.type3 {border-radius: 1rem;}
+    .accordion-list.type3.on {padding-bottom: 2rem;}
+    .accordion-list.type3:not(:last-child) {margin-bottom: 0.5rem;}
     .accordion-list.type3 .accordion-btn .acd-group {gap: 0.25rem;}
-    .accordion-list.type3 .accordion-content {margin-top: 2rem; margin-bottom: 0.75rem; margin-left: 0;}
+    .accordion-list.type3 .accordion-content {margin-bottom: 0.75rem; margin: 1.5rem 1.25rem 0;}
 
     .accord-content .accordion-title {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem; padding-bottom: 1rem;}
     .accord-content .table-area .text-list-wrap {margin-top: 1rem;}
@@ -216,4 +218,13 @@
     .paging-wrap .paging > li.arrow.first {margin-right: -0.25rem;}
     .paging-wrap .paging > li.arrow.last {margin-left: -0.25rem;}
     .paging-wrap .paging > li a > img {width: 1.5rem; height: 1.5rem;}
+    
+    /* swiper.js */
+    .swiper-pagination {font-size: 1rem; line-height: 1.6rem; min-height: 2.2rem;}
+    .swiper-wrapper .swiper-slide img {width: 100%; height: 100%; object-fit: cover;}
+    .swiper .swiper-paging-wrap {margin: 0; padding: 0; height: 2rem; display: block; margin-top: 1.5rem; padding-top: 0;}
+    .swiper-button-prev {width: 2rem; height: 2rem;}
+    .swiper-button-next {width: 2rem; height: 2rem;}
+    .swiper-download-btn.mo-only { display: flex !important; position: relative; margin-top: 1rem; width: fit-content; background-color: #171819; font-size: 0.8125rem; position:absolute; bottom: -55px;}
+    
 }
