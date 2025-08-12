@@ -2,14 +2,15 @@
 
 .skip-navigation{display: none;}
 
-html,body{
+html,body {
     overflow-x: auto;
 }
 .wrap.cyanogen,
 .wrap {
-    height:100%;
+    height:100%;    
+    overflow-x: hidden;
+    overflow-y: auto;    
     min-width: 1280px;
-    overflow-y: auto;;    
 }
 .wrap.pc {position: relative;}
 
