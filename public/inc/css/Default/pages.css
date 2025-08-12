@@ -435,26 +435,26 @@
 .post-list > li .post-date .count {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-primary);}
 .post-grid {display: grid; gap: 1.25rem; grid-template-columns: repeat(3, 1fr);}
 .post-grid > li {display: flex; flex-direction: column; justify-content: space-between; min-height: 25rem; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); color: var(--colorElement-light-text-text-default01);}
-.top-wrap .tit-wrap {display: flex; justify-content: space-between; align-items: center;}
-.top-wrap .tit-wrap .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
-.top-wrap .tit-wrap .sub-tit {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-text-text-primary);}
-.top-wrap .tit-wrap + .desc-wrap {margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
-.top-wrap .desc-wrap .desc-tit {font-size: 1.25rem; font-weight: 500; line-height: 2rem;}
-.top-wrap .desc-wrap .desc-text {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
-.top-wrap .desc-wrap .desc-tit + .desc-text {margin-top: 0.5rem;}
-.bottom-wrap {display: flex; flex-direction: column; gap: 1.88rem;}
-.bottom-wrap .sns-wrap {display: flex; gap: 0.5rem;}
-.bottom-wrap .sns-link {display: flex; justify-content: center; align-items: center; width: 2.125rem; height: 2.125rem; border-radius: 4rem; background-color: var(--colorElement-light-fill-fill-default02);}
-.bottom-wrap .sns-link::before {content: ""; display: block; width: 1.25rem; height: 1.25rem; background-size: contain; background-repeat: no-repeat; background-position: center;}
-.bottom-wrap .sns-link.home::before {background-image: url(../../images/icon/icon_home_wh.svg);}
-.bottom-wrap .sns-link.youtube::before {background-image: url(../../images/icon/icon_youtube_wh.svg);}
-.bottom-wrap .sns-link.facebook::before {background-image: url(../../images/icon/icon_facebook_wh.svg);}
-.bottom-wrap .sns-link.instagram::before {background-image: url(../../images/icon/icon_insta_wh.svg);}
-.bottom-wrap .sns-link.linkedin::before {background-image: url(../../images/icon/icon_linkedin_wh.svg);}
-.bottom-wrap .sns-link.blog::before {background-image: url(../../images/icon/icon_blog_wh.svg);}
-.bottom-wrap .link-wrap {display: flex; gap: 0.62rem;}
-.bottom-wrap .link-wrap .link-btn {display: flex; justify-content: space-between; align-items: center; width: calc(50% - (0.62rem / 2)); padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: var(--colorElement-light-fill-fill-on-primary); font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
-.bottom-wrap .link-wrap .link-btn[target="_blank"] .icon-area {display: block; width: 1.75rem; height: 1.75rem; background-position: center; background-size: 1.25rem 1.25rem; background-repeat: no-repeat; background-image: url(../../images/icon/icon_link_external_bl.svg);}
+.post-grid > li .top-wrap .tit-wrap {display: flex; justify-content: space-between; align-items: center;}
+.post-grid > li .top-wrap .tit-wrap .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
+.post-grid > li .top-wrap .tit-wrap .sub-tit {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-text-text-primary);}
+.post-grid > li .top-wrap .tit-wrap + .desc-wrap {margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.post-grid > li .top-wrap .desc-wrap .desc-tit {font-size: 1.25rem; font-weight: 500; line-height: 2rem;}
+.post-grid > li .top-wrap .desc-wrap .desc-text {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.post-grid > li .top-wrap .desc-wrap .desc-tit + .desc-text {margin-top: 0.5rem;}
+.post-grid > li .bottom-wrap {display: flex; flex-direction: column; gap: 1.88rem;}
+.post-grid > li .bottom-wrap .sns-wrap {display: flex; gap: 0.5rem;}
+.post-grid > li .bottom-wrap .sns-link {display: flex; justify-content: center; align-items: center; width: 2.125rem; height: 2.125rem; border-radius: 4rem; background-color: var(--colorElement-light-fill-fill-default02);}
+.post-grid > li .bottom-wrap .sns-link::before {content: ""; display: block; width: 1.25rem; height: 1.25rem; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.post-grid > li .bottom-wrap .sns-link.home::before {background-image: url(../../images/icon/icon_home_wh.svg);}
+.post-grid > li .bottom-wrap .sns-link.youtube::before {background-image: url(../../images/icon/icon_youtube_wh.svg);}
+.post-grid > li .bottom-wrap .sns-link.facebook::before {background-image: url(../../images/icon/icon_facebook_wh.svg);}
+.post-grid > li .bottom-wrap .sns-link.instagram::before {background-image: url(../../images/icon/icon_insta_wh.svg);}
+.post-grid > li .bottom-wrap .sns-link.linkedin::before {background-image: url(../../images/icon/icon_linkedin_wh.svg);}
+.post-grid > li .bottom-wrap .sns-link.blog::before {background-image: url(../../images/icon/icon_blog_wh.svg);}
+.post-grid > li .bottom-wrap .link-wrap {display: flex; gap: 0.62rem;}
+.post-grid > li .bottom-wrap .link-wrap .link-btn {display: flex; justify-content: space-between; align-items: center; width: calc(50% - (0.62rem / 2)); padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: var(--colorElement-light-fill-fill-on-primary); font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
+.post-grid > li .bottom-wrap .link-wrap .link-btn[target="_blank"] .icon-area {display: block; width: 1.75rem; height: 1.75rem; background-position: center; background-size: 1.25rem 1.25rem; background-repeat: no-repeat; background-image: url(../../images/icon/icon_link_external_bl.svg);}
 
 
 /* 정도경영 (etmg) */
