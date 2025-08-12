@@ -182,9 +182,7 @@
                         <div class="content-item01 active">
                             <div class="content-wrap">
                                 <div class="stepper-wrapper">
-                                    <div class="stepper-line" id="stepper-line-bg"></div>
-                                    <div class="stepper-line-active" id="stepper-active-line"></div>
-                                    <ol class="faq-list" style="padding: 1rem;">
+                                    <ol class="faq-list">
                                         <div class="accordion-list acdItem type3">
                                             <a href="javascript:void(0);" role="button" aria-expanded="false"
                                                 class="acd-btn accordion-btn">
@@ -196,23 +194,25 @@
                                             </a>
                                             <div class="acd-panel accordion-content" role="region">
                                                 <div class="cont-btn-wrap">
-                                                    <button type="button">제품</button>
-                                                    <button type="button">서비스</button>
-                                                    <button type="button">투자정보</button>
-                                                    <button type="button">미디어</button>
-                                                    <button type="button">기술</button>
-                                                    <button type="button">채용</button>
-                                                    <button type="button">지속가능경영</button>
-                                                    <button type="button">협력사 등록
-                                                        <a href="#">
-                                                            <img
-                                                                src="../../../inc/images/icon/icon_link_external_gr.svg">
+                                                    <button type="button" class="btn">제품</button> <!-- 선택시 class="active" 추가됨 -->
+                                                    <button type="button" class="btn">서비스</button>
+                                                    <button type="button" class="btn">투자정보</button>
+                                                    <button type="button" class="btn">미디어</button>
+                                                    <button type="button" class="btn">기술</button>
+                                                    <button type="button" class="btn">채용</button>
+                                                    <button type="button" class="btn">지속가능경영</button>
+                                                    <div class="btn" type="button">
+                                                        <a href="https://procurement-les.singlex.com/supplierWelcome/idea-proposal.html" target="_blank" title="협력사 등록 페이지 새창 이동">
+                                                            협력사 등록
+                                                            <div class="img-wrap">
+                                                                <img src="../../../inc/images/icon/icon_link_external_gr.svg" alt="">
+                                                            </div>
                                                         </a>
-                                                    </button>
-                                                    <button type="button">기타</button>
+                                                    </div>
+                                                    <button type="button" class="btn">기타</button>
                                                 </div>
                                                 <div class="btn-wrap">
-                                                    <button type="button" class="act-btn-md btn-primary01">
+                                                    <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
                                                         다음
                                                         <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
                                                     </button>
@@ -230,37 +230,47 @@
                                             </a>
                                             <div class="acd-panel accordion-content" role="region">
                                                 <div class="cont-btn-wrap">
-                                                    <button type="button">제품 자료</button>
-                                                    <button type="button">제품 카탈로그</button>
-                                                    <button type="button">제품 구매</button>
-                                                    <button type="button">제품 견적</button>
-                                                    <button type="button">제품 기술</button>
-                                                    <button type="button">제품 AS</button>
-                                                    <button type="button">ESS 관련 민원 (국내)</button>
-                                                    <button type="button">최종제품 (EV, 전기자전거)</button>
+                                                    <button type="button" class="btn">제품 자료</button>
+                                                    <button type="button" class="btn">제품 카탈로그</button>
+                                                    <button type="button" class="btn">제품 구매</button>
+                                                    <button type="button" class="btn">제품 견적</button>
+                                                    <button type="button" class="btn">제품 기술</button>
+                                                    <button type="button" class="btn">제품 AS</button>
+                                                    <button type="button" class="btn">ESS 관련 민원 (국내)</button>
+                                                    <button type="button" class="btn">최종제품 (EV, 전기자전거)</button>
                                                 </div>
                                                 <div class="sub-cont-wrap">
                                                     <p><strong>[제품 > 제품 자료]</strong> 에 대해 이런 질문을 많이 해요!</p>
                                                     <ul class="sub-list">
                                                         <li>
-                                                            <span>Q</span>
-                                                            <p>MSDS 및 UL 인증서 등을 받고 싶습니다.</p>
+                                                            <a href="#" target="_blank">
+                                                                <span>Q</span>
+                                                                <p>MSDS 및 UL 인증서 등을 받고 싶습니다.</p>
+                                                            </a>
                                                         </li>
                                                         <li>
-                                                            <span>Q</span>
-                                                            <p>개인 사용 및 샘플 구입 등을 목적으로 배터리 셀을 구매할 수 있나요?</p>
+                                                            <a href="#" target="_blank">
+                                                                <span>Q</span>
+                                                                <p>개인 사용 및 샘플 구입 등을 목적으로 배터리 셀을 구매할 수 있나요?</p>
+                                                            </a>
                                                         </li>
                                                         <li>
-                                                            <span>Q</span>
-                                                            <p>배터리 셀을 소량 구매하고 싶은데 어떻게 해야하나요?</p>
+                                                            <a href="#" target="_blank">
+                                                                <span>Q</span>
+                                                                <p>배터리 셀을 소량 구매하고 싶은데 어떻게 해야하나요?</p>
+                                                            </a>
                                                         </li>
                                                         <li>
-                                                            <span>Q</span>
-                                                            <p>대량 구매 시 가격 할인이 있나요?</p>
+                                                            <a href="#" target="_blank">
+                                                                <span>Q</span>
+                                                                <p>대량 구매 시 가격 할인이 있나요?</p>
+                                                            </a>
                                                         </li>
                                                         <li>
-                                                            <span>Q</span>
-                                                            <p>원하는 사양으로 맞춤 제작이 가능한가요?</p>
+                                                            <a href="#" target="_blank">
+                                                                <span>Q</span>
+                                                                <p>원하는 사양으로 맞춤 제작이 가능한가요?</p>
+                                                            </a>
                                                         </li>
                                                         <div class="list-alret">
                                                             <img src="../../../inc/images/icon/icon_info_fill_mint.svg">
@@ -269,11 +279,11 @@
                                                     </ul>
                                                 </div>
                                                 <div class="btn-wrap">
-                                                    <button type="button" class="act-btn-md btn-outline01">
+                                                    <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
                                                         이전
                                                     </button>
-                                                    <button type="button" class="act-btn-md btn-primary01">
+                                                    <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
                                                         다음
                                                         <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
                                                     </button>
@@ -291,47 +301,67 @@
                                             </a>
                                             <div class="acd-panel accordion-content" role="region">
                                                 <span class="required-field-text">* 필수 입력 항목입니다.</span>
-                                                <div class="selection-wrap">
-                                                    <p>적용 애플리케이션</p>
-                                                    <div class="cont-btn-wrap">
-                                                        <button type="button">전기차</button>
-                                                        <button type="button">전기 중장비</button>
-                                                        <button type="button">전기 트럭</button>
-                                                        <button type="button">전기 버스</button>
-                                                        <button type="button">전동 카트</button>
-                                                        <button type="button">IT 기기</button>
-                                                        <button type="button">전동 공구</button>
-                                                        <button type="button">LEV</button>
-                                                        <button type="button">로봇</button>
-                                                        <button type="button">선박</button>
-                                                        <button type="button">항공</button>
-                                                        <button type="button">전력망</button>
-                                                        <button type="button">UPS</button>
-                                                        <button type="button">C&I</button>
-                                                        <button type="button">기타</button>
+                                                <div class="sub-cont-wrap">
+                                                    <div class="wrap-form-input">
+                                                        <div class="input-wrap selectbox-wrap type3 development-status-input-wrap">
+                                                            <label>적용 애플리케이션</label>
+                                                            <div class="select-cate activeSelect">
+                                                                <button type="button" aria-haspopup="listbox">개발 현황을 선택해주세요.</button>
+                                                                <ul class="select-menu" role="listbox">
+                                                                    <li><a href="javascript:;" role="option"
+                                                                            tabindex="0" class="active">개발 현황을 선택해주세요.</a>
+                                                                    </li>
+                                                                    <li><a href="javascript:;" role="option"
+                                                                            tabindex="0">Republic of Korea</a></li>
+                                                                    <li><a href="javascript:;" role="option"
+                                                                            tabindex="0">Republic of Korea</a></li>
+                                                                    <li><a href="javascript:;" role="option"
+                                                                            tabindex="0">Republic of Korea</a></li>
+                                                                    <li><a href="javascript:;" role="option"
+                                                                            tabindex="0">Republic of Korea</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    <!-- <div class="cont-btn-wrap">
+                                                        <button type="button" class="btn">전기차</button>
+                                                        <button type="button" class="btn">전기 중장비</button>
+                                                        <button type="button" class="btn">전기 트럭</button>
+                                                        <button type="button" class="btn">전기 버스</button>
+                                                        <button type="button" class="btn">전동 카트</button>
+                                                        <button type="button" class="btn">IT 기기</button>
+                                                        <button type="button" class="btn">전동 공구</button>
+                                                        <button type="button" class="btn">LEV</button>
+                                                        <button type="button" class="btn">로봇</button>
+                                                        <button type="button" class="btn">선박</button>
+                                                        <button type="button" class="btn">항공</button>
+                                                        <button type="button" class="btn">전력망</button>
+                                                        <button type="button" class="btn">UPS</button>
+                                                        <button type="button" class="btn">C&I</button>
+                                                        <button type="button" class="btn">기타</button>
+                                                    </div> -->
                                                     </div>
                                                 </div>
                                                 <div class="selection-wrap">
                                                     <p>폼펙터</p>
                                                     <div class="cont-btn-wrap">
-                                                        <button type="button">원통형 전지</button>
-                                                        <button type="button">파우치 전지</button>
+                                                        <button type="button" class="btn">원통형 전지</button>
+                                                        <button type="button" class="btn">파우치 전지</button>
                                                     </div>
                                                 </div>
                                                 <div class="selection-wrap">
                                                     <p>소재</p>
                                                     <div class="cont-btn-wrap">
-                                                        <button type="button">NCM</button>
-                                                        <button type="button">LFP</button>
+                                                        <button type="button" class="btn">NCM</button>
+                                                        <button type="button" class="btn">LFP</button>
 
                                                     </div>
                                                 </div>
                                                 <div class="selection-wrap">
                                                     <p>형태</p>
                                                     <div class="cont-btn-wrap">
-                                                        <button type="button">셀</button>
-                                                        <button type="button">모듈</button>
-                                                        <button type="button">팩</button>
+                                                        <button type="button" class="btn">셀</button>
+                                                        <button type="button" class="btn">모듈</button>
+                                                        <button type="button" class="btn">팩</button>
                                                     </div>
                                                 </div>
                                                 <div class="sub-cont-wrap">
@@ -390,7 +420,6 @@
                                                                             tabindex="0">Republic of Korea</a></li>
                                                                 </ul>
                                                             </div>
-                                                            <div></div>
                                                         </div>
                                                         <div class="input-wrap selectbox-wrap type3">
                                                             <label for="website-input">타겟 시장(지역) </label>
@@ -430,11 +459,11 @@
                                                     </div>
                                                 </div>
                                                 <div class="btn-wrap">
-                                                    <button type="button" class="act-btn-md btn-outline01">
+                                                    <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
                                                         이전
                                                     </button>
-                                                    <button type="button" class="act-btn-md btn-primary01">
+                                                    <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
                                                         다음
                                                         <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
                                                     </button>
@@ -506,11 +535,11 @@
                                                     </div>
                                                 </div>
                                                 <div class="btn-wrap">
-                                                    <button type="button" class="act-btn-md btn-outline01">
+                                                    <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
                                                         이전
                                                     </button>
-                                                    <button type="button" class="act-btn-md btn-primary01">
+                                                    <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
                                                         다음
                                                         <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
                                                     </button>
@@ -557,11 +586,11 @@
                                                     </div>
                                                 </div>
                                                 <div class="btn-wrap">
-                                                    <button type="button" class="act-btn-md btn-outline01">
+                                                    <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
                                                         이전
                                                     </button>
-                                                    <button type="button" class="act-btn-md btn-primary01">
+                                                    <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
                                                         다음
                                                         <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
                                                     </button>
@@ -621,281 +650,18 @@
                                                     </div>
                                                 </div>
                                                 <div class="btn-wrap">
-                                                    <button type="button" class="act-btn-md btn-outline01">
+                                                    <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
                                                         이전
                                                     </button>
-                                                    <button type="button" class="act-btn-md btn-primary01">문의하기</button>
+                                                    <button type="button" class="act-btn-md btn-primary01 btn-step-accept disabled">문의하기</button>
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </ol>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mo-only">
-                    <div class="tab-content-box">
-                        <div class="content-wrap">
-                            <div class="step-indicator">
-                                <span class="step">1</span>
-                                <span class="arrow">
-                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                </span>
-                                <span class="step">2</span>
-                                <span class="arrow">
-                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                </span>
-                                <span class="step">3</span>
-                                <span class="arrow">
-                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                </span>
-                                <span class="step">4</span>
-                                <span class="arrow">
-                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                </span>
-                                <span class="step">5</span>
-                            </div>
-                            <ol class="faq-list" style="padding: 1rem;">
-                                <div>
-                                    <div class="acd-group">
-                                        <div class="align-group">
-                                            <p class="acd-tit">문의하시고 싶은 카테고리를<br> 선택해주세요.</p>
-                                        </div>
-                                    </div>
-                                    <div class="acd-panel accordion-content" role="region">
-                                        <div class="cont-btn-wrap">
-                                            <button type="button">제품</button>
-                                            <button type="button">서비스</button>
-                                            <button type="button">투자정보</button>
-                                            <button type="button">미디어</button>
-                                            <button type="button">기술</button>
-                                            <button type="button">채용</button>
-                                            <button type="button">지속가능경영</button>
-                                            <button type="button">협력사 등록
-                                                <a href="#">
-                                                    <img src="../../../inc/images/icon/icon_link_external_gr.svg">
-                                                </a>
-                                            </button>
-                                            <button type="button">기타</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="acd-group">
-                                        <div class="align-group">
-                                            <p class="acd-tit">세부 카테고리를 선택해주세요.</p>
-                                        </div>
-                                    </div>
-                                    <div class="acd-panel accordion-content" role="region">
-                                        <div class="cont-btn-wrap sub-btn-wrap">
-                                            <button type="button">제품 자료</button>
-                                            <button type="button">제품 카탈로그</button>
-                                            <button type="button">제품 구매</button>
-                                            <button type="button">제품 견적</button>
-                                            <button type="button">제품 기술</button>
-                                            <button type="button">제품 AS</button>
-                                            <button type="button">ESS 관련 민원 (국내)</button>
-                                            <button type="button">최종제품 (EV, 전기자전거)</button>
-                                        </div>
-                                        <div class="sub-cont-wrap">
-                                            <p><strong>[제품 > 제품 자료]</strong> 에 대해 이런 질문을 많이 해요!</p>
-                                            <ul class="sub-list">
-                                                <li>
-                                                    <span>Q</span>
-                                                    <p>MSDS 및 UL 인증서 등을 받고 싶습니다.</p>
-                                                </li>
-                                                <li>
-                                                    <span>Q</span>
-                                                    <p>개인 사용 및 샘플 구입 등을 목적으로 배터리 셀을 구매할 수 있나요?</p>
-                                                </li>
-                                                <li>
-                                                    <span>Q</span>
-                                                    <p>배터리 셀을 소량 구매하고 싶은데 어떻게 해야하나요?</p>
-                                                </li>
-                                                <li>
-                                                    <span>Q</span>
-                                                    <p>대량 구매 시 가격 할인이 있나요?</p>
-                                                </li>
-                                                <li>
-                                                    <span>Q</span>
-                                                    <p>원하는 사양으로 맞춤 제작이 가능한가요?</p>
-                                                </li>
-                                                <div class="list-alret">
-                                                    <img src="../../../inc/images/icon/icon_info_fill_mint.svg">
-                                                    <p>찾으시는 답변이 없으면 ‘다음’을 눌러주세요!</p>
-                                                </div>
-                                            </ul>
-                                            <div class="btn-wrap">
-                                                <button type="button" class="act-btn-md btn-outline01">
-                                                    <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                    이전
-                                                </button>
-                                                <button type="button" class="act-btn-md btn-primary01">
-                                                    다음
-                                                    <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="acd-group">
-                                        <div class="align-group">
-                                            <p class="acd-tit">고객님의 정보를 남겨주세요.</p>
-                                        </div>
-                                    </div>
-                                    <div class="acd-panel accordion-content" role="region">
-                                        <span class="required-field-text">* 필수 입력 항목입니다.</span>
-                                        <div class="sub-cont-wrap">
-                                            <div class="wrap-form-input">
-                                                <div class="input-wrap">
-                                                    <label for="user-input">이름<span>*</span></label>
-                                                    <input type="text" id="user-input" class="input-box" placeholder="이름을 입력해 주세요.">
-                                                    <button class="btn-input-del" title="입력 내용 삭제"></button>
-                                                </div>
-                                                <div class="input-wrap">
-                                                    <label for="email-input">이메일<span>*</span></label>
-                                                    <div class="email-input-wrap">
-                                                        <input type="email" id="email-input" class="input-box" placeholder="예 : solutionpartner">@
-                                                        <input type="email" id="email-input" class="input-box" placeholder="예 : lgensol.com">
-                                                        <button class="btn-input-del" title="입력 내용 삭제"></button>
-                                                    </div>
-                                                </div>
-                                                <div class="input-wrap">
-                                                    <label for="company-input">회사명<span>*</span></label>
-                                                    <input type="text" id="company-input" class="input-box" placeholder="회사명을 입력해 주세요.">
-                                                    <button class="btn-input-del" title="입력 내용 삭제"></button>
-                                                </div>
-                                                <div class="input-wrap">
-                                                    <label for="website-input">홈페이지<span>*</span></label>
-                                                    <input type="text" id="website-input" class="input-box" placeholder="홈페이지 주소를 입력해 주세요.">
-                                                    <button class="btn-input-del" title="입력 내용 삭제"></button>
-                                                </div>
-                                                <div class="input-wrap selectbox-wrap type3">
-                                                    <label for="website-input">회사 위치(국가)<span>*</span></label>
-                                                    <div class="select-cate activeSelect">
-                                                        <button type="button" aria-haspopup="listbox">국가를 선택해주세요.</button>
-                                                        <ul class="select-menu" role="listbox">
-                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">국가를 선택해주세요.</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Republic of Korea</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Republic of Korea</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Republic of Korea</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Republic of Korea</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="btn-wrap">
-                                            <button type="button" class="act-btn-md btn-outline01">
-                                                <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                이전
-                                            </button>
-                                            <button type="button" class="act-btn-md btn-primary01">
-                                                다음
-                                                <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="acd-group">
-                                        <div class="align-group">
-                                            <p class="acd-tit">문의내용을 작성해주세요.</p>
-                                        </div>
-                                    </div>
-                                    <div class="acd-panel accordion-content" role="region">
-                                        <span class="required-field-text">* 필수 입력 항목입니다.</span>
-                                        <div class="sub-cont-wrap">
-                                            <div class="wrap-form-input filebox">
-                                                <div class="input-wrap">
-                                                    <label for="title-input">제목<span>*</span></label>
-                                                    <input type="text" id="title-input" class="input-box" placeholder="제목을 입력해 주세요.">
-                                                    <button class="btn-input-del" title="입력 내용 삭제"></button>
-                                                </div>
-                                                <div class="input-wrap textarea-box">
-                                                    <label for="cont-input">문의내용<span>*</span></label>
-                                                    <textarea id="cont-input" class="textarea" placeholder="내용을 입력해주세요." maxlength="1000"></textarea>
-                                                </div>
-                                                <div class="input-wrap">
-                                                    <label for="file-input">첨부파일</label>
-                                                    <input id="file-input" class="input-box upload-name" value="첨부하실 파일이 있으시면 ‘파일첨부’로 등록해 주세요." placeholder="첨부하실 파일이 있으시면 ‘파일찾기’로 등록해 주세요.">
-                                                    <div class="btn-wrap">
-                                                        <label for="file1" class="act-btn-xs btn-outline01 btn-file-attach">파일찾기</label>
-                                                        <input type="file" id="file1" style="display: none;">
-                                                    </div>
-                                                </div>
-                                                <div class="input-info on"> <span class="msg"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="btn-wrap">
-                                            <button type="button" class="act-btn-md btn-outline01">
-                                                <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                이전
-                                            </button>
-                                            <button type="button" class="act-btn-md btn-primary01">
-                                                다음
-                                                <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="acd-group">
-                                        <div class="align-group">
-                                            <p class="acd-tit consent-title">개인정보 수집, 이용, 제공 등의 동의</p>
-                                        </div>
-                                    </div>
-                                    <div class="acd-panel accordion-content" role="region">
-                                        <div class="sub-cont-wrap consent-cont-wrap">
-                                            <div class="text-list-wrap terms-wrap">
-                                                <ol class="text-list">
-                                                    <li>
-                                                        <strong><span>1.</span>개인정보 수집 및 이용 목적</strong>
-                                                        <p>㈜LG에너지솔루션의 문의하기 서비스를 통해 수집된 고객의 각종 질문 및 요청사항 관련 상담 </p>
-                                                    </li>
-                                                    <li>
-                                                        <strong><span>2.</span>개인정보 수집 항목</strong>
-                                                        <p>이름, 이메일, 회사명, 홈페이지 주소, 문의내용, 회사 소재 대륙과 국가, 서비스 이용기록(접속일시), 접속 IP 정보, 통신내용</p>
-                                                        <span><span>*</span>통신내용은 고객상담실 상담사와 통화 시, 고객의 권리보장과 서비스품질 향상을 위해 녹음됩니다.
-                                                        </span>
-                                                    </li>
-                                                    <li>
-                                                        <strong><span>3.</span>개인정보 보유 및 이용 기간</strong>
-                                                        <p>가. 보존항목 : 이름, 이메일, 연락처</p>
-                                                        <p>나. 보존이유 : 동일인의 과거 문의내용 이력확인</p>
-                                                        <p>다. 보존 기간 : 문의처리 완료일로부터 3개월</p>
-                                                    </li>
-                                                    <span><span>*</span>개인정보 수집, 이용, 제공 등의 동의를 거부하실 수 있으나, 동의하지 않으실 경우 문의하기 서비스를 이용하실 수 없습니다.</span>
-                                                </ol>
-                                            </div>
-                                            <div class="wrap-form">
-                                                <div class="wrap-form-box">
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" class="checkbox" id="checkbox-5" name="checkbox-5">
-                                                        <label for="checkbox-5" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                            <span class="txt">
-                                                                본인은 ㈜LG에너지솔루션이 위와 같이 개인정보를 수집ㆍ이용하는 것에 동의합니다.
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="btn-wrap">
-                                            <button type="button" class="act-btn-md btn-outline01">
-                                                <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                이전
-                                            </button>
-                                            <button type="button" class="act-btn-md btn-primary01">문의하기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ol>
                         </div>
                     </div>
                 </div>
@@ -1032,9 +798,10 @@
             }); 
         </script> -->
     <!-- 로직 코드 임시 -->
-        <!-- <script>
+        <script>
             document.addEventListener('DOMContentLoaded', function () {
-            
+                
+                // 완료팝업 - S 
                 const alertOverlay = document.getElementById('custom-alert-overlay');
                 const alertConfirm = document.getElementById('custom-alert-confirm');
             
@@ -1048,8 +815,9 @@
                         window.location.href = '/';
                     });
                 }
+                // 완료팝업 - E 
             
-                const pcSteps = document.querySelectorAll('.pc-only .accordion-list.acdItem');
+                const pcSteps = document.querySelectorAll('.pc-only .stepper-wrapper  .accordion-list');
                 if (pcSteps.length > 0) {
                     let currentPcStep = 0;
                     let pcMaxStepReached = 0;
@@ -1059,8 +827,8 @@
             
                     const pcStepElements = Array.from(pcSteps).map(step => ({
                         categoryBtns: step.querySelectorAll('.cont-btn-wrap button'),
-                        nextBtn: step.querySelector('.btn-primary01'),
-                        requiredInputs: step.querySelectorAll('input[type="text"][id], input[type="email"][id], textarea[id]'),
+                        nextBtn: step.querySelector('.btn-step-next'),
+                        // requiredInputs: step.querySelectorAll('input[type="text"][id], input[type="email"][id], textarea[id]'),
                         consentCheckbox: step.querySelector('input[type="checkbox"][id="checkbox-5"]'),
                         subContWrap: step.querySelector('.sub-cont-wrap'),
                         stepEl: step
@@ -1068,100 +836,100 @@
             
                     let pcSelectedButtons = new Array(pcSteps.length).fill(null);
             
-                    function clearPcStepData(fromIndex) {
-                        for (let i = fromIndex; i < pcSteps.length; i++) {
-                            pcStepElements[i].requiredInputs.forEach(input => input.value = '');
-                            if (pcStepElements[i].consentCheckbox) pcStepElements[i].consentCheckbox.checked = false;
-                            if (pcSelectedButtons[i]) {
-                                pcSelectedButtons[i].classList.remove('active');
-                                pcSelectedButtons[i] = null;
-                            }
-                            if(i === QUOTE_INFO_STEP_INDEX){
-                                pcStepElements[i].stepEl.querySelectorAll('.selection-wrap .cont-btn-wrap button.active').forEach(btn => btn.classList.remove('active'));
-                            }
-                        }
-                        if (pcStepElements[1] && pcStepElements[1].subContWrap) {
-                            pcStepElements[1].subContWrap.style.display = 'none';
-                        }
-                    }
+                    // function clearPcStepData(fromIndex) {
+                    //     for (let i = fromIndex; i < pcSteps.length; i++) {
+                    //         pcStepElements[i].requiredInputs.forEach(input => input.value = '');
+                    //         if (pcStepElements[i].consentCheckbox) pcStepElements[i].consentCheckbox.checked = false;
+                    //         if (pcSelectedButtons[i]) {
+                    //             pcSelectedButtons[i].classList.remove('active');
+                    //             pcSelectedButtons[i] = null;
+                    //         }
+                    //         if(i === QUOTE_INFO_STEP_INDEX){
+                    //             pcStepElements[i].stepEl.querySelectorAll('.selection-wrap .cont-btn-wrap button.active').forEach(btn => btn.classList.remove('active'));
+                    //         }
+                    //     }
+                    //     if (pcStepElements[1] && pcStepElements[1].subContWrap) {
+                    //         pcStepElements[1].subContWrap.style.display = 'none';
+                    //     }
+                    // }
             
-                    function updateAllPcButtonStates() {
-                        pcStepElements.forEach((step, index) => {
-                            if (!step.nextBtn) return;
-                            let isDisabled = true;
-                            if (index === 0 || index === 1) {
-                                isDisabled = pcSelectedButtons[index] === null;
-                            } else if (index === QUOTE_INFO_STEP_INDEX) {
-                                const selections = step.stepEl.querySelectorAll('.selection-wrap .cont-btn-wrap button.active');
-                                const requiredInput = step.stepEl.querySelector('#quantity-input');
-                                isDisabled = !(selections.length >= 4 && requiredInput && requiredInput.value.trim() !== '');
-                            } else if (index === CUSTOMER_INFO_STEP_INDEX || index === 4) {
-                                isDisabled = !Array.from(step.requiredInputs).every(input => input.value.trim() !== '');
-                            } else if (index === 5 && step.consentCheckbox) {
-                                isDisabled = !step.consentCheckbox.checked;
-                            }
-                            step.nextBtn.disabled = isDisabled;
-                        });
-                    }
+                    // function updateAllPcButtonStates() {
+                    //     pcStepElements.forEach((step, index) => {
+                    //         if (!step.nextBtn) return;
+                    //         let isDisabled = true;
+                    //         if (index === 0 || index === 1) {
+                    //             isDisabled = pcSelectedButtons[index] === null;
+                    //         } else if (index === QUOTE_INFO_STEP_INDEX) {
+                    //             const selections = step.stepEl.querySelectorAll('.selection-wrap .cont-btn-wrap button.active');
+                    //             const requiredInput = step.stepEl.querySelector('#quantity-input');
+                    //             isDisabled = !(selections.length >= 4 && requiredInput && requiredInput.value.trim() !== '');
+                    //         } else if (index === CUSTOMER_INFO_STEP_INDEX || index === 4) {
+                    //             isDisabled = !Array.from(step.requiredInputs).every(input => input.value.trim() !== '');
+                    //         } else if (index === 5 && step.consentCheckbox) {
+                    //             isDisabled = !step.consentCheckbox.checked;
+                    //         }
+                    //         step.nextBtn.disabled = isDisabled;
+                    //     });
+                    // }
                     
-                    const quoteStep = pcStepElements[QUOTE_INFO_STEP_INDEX];
-                    if(quoteStep){
-                        const selectionGroups = quoteStep.stepEl.querySelectorAll('.selection-wrap');
-                        selectionGroups.forEach(group => {
-                            const buttons = group.querySelectorAll('.cont-btn-wrap button');
-                            buttons.forEach(button => button.addEventListener('click', function(){
-                                buttons.forEach(btn => btn.classList.remove('active'));
-                                this.classList.add('active');
-                                updateAllPcButtonStates();
-                            }));
-                        });
-                        const requiredInput = quoteStep.stepEl.querySelector('#quantity-input');
-                        if(requiredInput) requiredInput.addEventListener('input', updateAllPcButtonStates);
-                    }
+                    // const quoteStep = pcStepElements[QUOTE_INFO_STEP_INDEX];
+                    // if(quoteStep){
+                    //     const selectionGroups = quoteStep.stepEl.querySelectorAll('.selection-wrap');
+                    //     selectionGroups.forEach(group => {
+                    //         const buttons = group.querySelectorAll('.cont-btn-wrap button');
+                    //         buttons.forEach(button => button.addEventListener('click', function(){
+                    //             buttons.forEach(btn => btn.classList.remove('active'));
+                    //             this.classList.add('active');
+                    //             updateAllPcButtonStates();
+                    //         }));
+                    //     });
+                    //     const requiredInput = quoteStep.stepEl.querySelector('#quantity-input');
+                    //     if(requiredInput) requiredInput.addEventListener('input', updateAllPcButtonStates);
+                    // }
             
                     pcStepElements.forEach((step, index) => {
                         if (index < 2) {
                             step.categoryBtns.forEach(button => button.addEventListener('click', function() {
                                 if (pcSelectedButtons[index] !== this) {
                                     if (pcSelectedButtons[index]) pcSelectedButtons[index].classList.remove('active');
-                                    this.classList.add('active');
+                                    this.classList.add('active');                                    
                                     pcSelectedButtons[index] = this;
-                                    clearPcStepData(index + 1);
                                     pcMaxStepReached = index;
                                     if (index === 1 && step.subContWrap) step.subContWrap.style.display = 'flex';
+                                    step.nextBtn.classList.remove("disabled");
                                 }
-                                updateAllPcButtonStates();
+                                // updateAllPcButtonStates();
                             }));
                         }
-                        if (index === CUSTOMER_INFO_STEP_INDEX || index === 4) step.requiredInputs.forEach(input => input.addEventListener('input', updateAllPcButtonStates));
-                        if (index === 5 && step.consentCheckbox) step.consentCheckbox.addEventListener('change', updateAllPcButtonStates);
+                        // if (index === CUSTOMER_INFO_STEP_INDEX || index === 4) step.requiredInputs.forEach(input => input.addEventListener('input', updateAllPcButtonStates));
+                        // if (index === 5 && step.consentCheckbox) step.consentCheckbox.addEventListener('change', updateAllPcButtonStates);
                     });
             
-                    function updatePcAccordionState() {
-                        pcMaxStepReached = Math.max(pcMaxStepReached, currentPcStep);
-                        pcSteps.forEach((step, index) => {
-                            const acdBtn = step.querySelector('.acd-btn');
+                    // function updatePcAccordionState() {
+                    //     pcMaxStepReached = Math.max(pcMaxStepReached, currentPcStep);
+                    //     pcSteps.forEach((step, index) => {
+                    //         const acdBtn = step.querySelector('.acd-btn');
                             
-                            if (index <= pcMaxStepReached) step.style.display = 'block';
-                            else step.style.display = 'none';
+                    //         if (index <= pcMaxStepReached) step.style.display = 'block';
+                    //         else step.style.display = 'none';
             
-                            const isQuoteSelected = pcSelectedButtons[1]?.textContent.trim() === '제품 견적';
-                            if (index === QUOTE_INFO_STEP_INDEX && !isQuoteSelected) step.style.display = 'none';
-                            if (index === CUSTOMER_INFO_STEP_INDEX && isQuoteSelected) step.style.display = 'none';
+                    //         const isQuoteSelected = pcSelectedButtons[1]?.textContent.trim() === '제품 견적';
+                    //         if (index === QUOTE_INFO_STEP_INDEX && !isQuoteSelected) step.style.display = 'none';
+                    //         if (index === CUSTOMER_INFO_STEP_INDEX && isQuoteSelected) step.style.display = 'none';
             
-                            if (index === currentPcStep) {
-                                step.classList.add('on');
-                                if (acdBtn) acdBtn.setAttribute('aria-expanded', 'true');
-                            } else {
-                                step.classList.remove('on');
-                                if (acdBtn) acdBtn.setAttribute('aria-expanded', 'false');
-                            }
-                        });
-                    }
+                    //         if (index === currentPcStep) {
+                    //             step.classList.add('on');
+                    //             if (acdBtn) acdBtn.setAttribute('aria-expanded', 'true');
+                    //         } else {
+                    //             step.classList.remove('on');
+                    //             if (acdBtn) acdBtn.setAttribute('aria-expanded', 'false');
+                    //         }
+                    //     });
+                    // }
                     
                     pcSteps.forEach((step, index) => {
-                        const nextButton = step.querySelector('.btn-primary01');
-                        const prevButton = step.querySelector('.btn-outline01');
+                        const nextButton = step.querySelector('.btn-step-next');
+                        const prevButton = step.querySelector('.btn-step-prev');
             
                         if (nextButton) nextButton.addEventListener('click', function() {
                             if (this.disabled) return;
@@ -1174,7 +942,7 @@
                                 nextStep = 4;
                             }
                             currentPcStep = nextStep;
-                            updatePcAccordionState();
+                            // updatePcAccordionState();
                         });
             
                         if (prevButton) prevButton.addEventListener('click', function() {
@@ -1188,156 +956,17 @@
                                 clearPcStepData(currentPcStep);
                                 currentPcStep = prevStep;
                                 pcMaxStepReached = currentPcStep;
-                                updatePcAccordionState();
+                                // updatePcAccordionState();
                             }
                         });
                     });
                     
-                    pcSteps.forEach(step => step.style.display = 'none');
-                    updatePcAccordionState();
-                    updateAllPcButtonStates();
-                }
-            
-                const mobileSteps = document.querySelectorAll('.mo-only .faq-list > div');
-                if (mobileSteps.length > 0) {
-                    let currentMobileStep = 0;
-                    const QUOTE_STEP_INDEX_MO = 2;
-                    const INFO_STEP_INDEX_MO = 3;
-            
-                    const mobileStepElements = Array.from(mobileSteps).map(step => ({
-                        categoryBtns: step.querySelectorAll('.cont-btn-wrap button'),
-                        nextBtn: step.querySelector('.btn-primary01'),
-                        prevBtn: step.querySelector('.btn-outline01'),
-                        requiredInputs: step.querySelectorAll('input[type="text"][id], input[type="email"][id], textarea[id]'),
-                        consentCheckbox: step.querySelector('input[type="checkbox"][id="checkbox-5"]'),
-                        subContWrap: step.querySelector('.sub-cont-wrap'),
-                        stepEl: step
-                    }));
-            
-                    let mobileSelectedButton = null;
-            
-                    function clearMobileStepData(fromIndex) {
-                        for (let i = fromIndex; i < mobileSteps.length; i++) {
-                            mobileStepElements[i].requiredInputs.forEach(input => input.value = '');
-                             if (mobileStepElements[i].consentCheckbox) mobileStepElements[i].consentCheckbox.checked = false;
-                             if(i === QUOTE_STEP_INDEX_MO){
-                                mobileStepElements[i].stepEl.querySelectorAll('.selection-wrap .cont-btn-wrap button.active').forEach(btn => btn.classList.remove('active'));
-                            }
-                        }
-                    }
-            
-                    function updateAllMobileButtonStates() {
-                        mobileStepElements.forEach((step, index) => {
-                            if (!step.nextBtn) return;
-                            let isDisabled = true;
-                            if (index === 1) {
-                                isDisabled = mobileSelectedButton === null;
-                            } else if (index === QUOTE_STEP_INDEX_MO) {
-                                const selections = step.stepEl.querySelectorAll('.selection-wrap .cont-btn-wrap button.active');
-                                const requiredInput = step.stepEl.querySelector('#quantity-input');
-                                isDisabled = !(selections.length >= 4 && requiredInput && requiredInput.value.trim() !== '');
-                            } else if (index === INFO_STEP_INDEX_MO || index === 4) {
-                                isDisabled = !Array.from(step.requiredInputs).every(input => input.value.trim() !== '');
-                            } else if (index === 5 && step.consentCheckbox) {
-                                isDisabled = !step.consentCheckbox.checked;
-                            }
-                            step.nextBtn.disabled = isDisabled;
-                        });
-                    }
-                    
-                    const mobileQuoteStep = mobileStepElements[QUOTE_STEP_INDEX_MO];
-                    if(mobileQuoteStep){
-                         const selectionGroups = mobileQuoteStep.stepEl.querySelectorAll('.selection-wrap');
-                        selectionGroups.forEach(group => {
-                            const buttons = group.querySelectorAll('.cont-btn-wrap button');
-                            buttons.forEach(button => button.addEventListener('click', function(){
-                                buttons.forEach(btn => btn.classList.remove('active'));
-                                this.classList.add('active');
-                                updateAllMobileButtonStates();
-                            }));
-                        });
-                        const requiredInput = mobileQuoteStep.stepEl.querySelector('#quantity-input');
-                        if(requiredInput) requiredInput.addEventListener('input', updateAllMobileButtonStates);
-                    }
-            
-                    mobileStepElements.forEach((step, index) => {
-                        if (index === 0) {
-                            step.categoryBtns.forEach(button => button.addEventListener('click', () => {
-                                currentMobileStep++;
-                                showMobileStep(currentMobileStep);
-                            }));
-                        }
-                        if (index === 1) {
-                            step.categoryBtns.forEach(button => button.addEventListener('click', function() {
-                                if (mobileSelectedButton !== this) {
-                                     if (mobileSelectedButton) mobileSelectedButton.classList.remove('active');
-                                    this.classList.add('active');
-                                    mobileSelectedButton = this;
-                                    clearMobileStepData(index + 1);
-                                    if (step.subContWrap) step.subContWrap.style.display = 'flex';
-                                }
-                                updateAllMobileButtonStates();
-                            }));
-                        }
-                        if (index === INFO_STEP_INDEX_MO || index === 4) step.requiredInputs.forEach(input => input.addEventListener('input', updateAllMobileButtonStates));
-                        if (index === 5 && step.consentCheckbox) step.consentCheckbox.addEventListener('change', updateAllMobileButtonStates);
-            
-                        if (step.nextBtn) step.nextBtn.addEventListener('click', function() {
-                            if (this.disabled) return;
-                            if (index === mobileSteps.length - 1) {
-                                 showCustomAlert();
-                                return;
-                            }
-                            
-                            let nextStep = currentMobileStep + 1;
-                            if (index === 1) {
-                                nextStep = (mobileSelectedButton.textContent.trim() === '제품 견적') ? QUOTE_STEP_INDEX_MO : INFO_STEP_INDEX_MO;
-                            } else if(index === QUOTE_STEP_INDEX_MO){
-                                nextStep = 4;
-                            }
-                            currentMobileStep = nextStep;
-                            showMobileStep(currentMobileStep);
-                        });
-            
-                        if (step.prevBtn) step.prevBtn.addEventListener('click', () => {
-                            let prevStep = currentMobileStep - 1;
-                            if(currentMobileStep === INFO_STEP_INDEX_MO){
-                                prevStep = 1;
-                            } else if(currentMobileStep === 4 && mobileSelectedButton?.textContent.trim() === '제품 견적'){
-                                prevStep = QUOTE_STEP_INDEX_MO;
-                            }
-                            currentMobileStep = prevStep;
-                            showMobileStep(currentMobileStep);
-                        });
-                    });
-            
-                    const indicators = document.querySelectorAll('.mo-only .step-indicator .step');
-                    const indicatorItems = document.querySelectorAll('.mo-only .step-indicator > *');
-            
-                    function showMobileStep(stepIndex) {
-                        mobileSteps.forEach((step, index) => {
-                            step.style.display = (index === stepIndex) ? 'block' : 'none';
-                        });
-                        const lastVisibleItemIndex = stepIndex * 2;
-                        indicatorItems.forEach((item, index) => {
-                            item.style.display = (index > lastVisibleItemIndex) ? 'none' : '';
-                        });
-                        indicators.forEach((indicator, index) => {
-                            indicator.classList.remove('active');
-                            if (index === stepIndex) indicator.classList.add('active');
-                        });
-            
-                        const step2 = mobileStepElements[1];
-                        if (step2 && step2.subContWrap) {
-                            step2.subContWrap.style.display = mobileSelectedButton ? 'flex' : 'none';
-                        }
-                    }
-                    
-                    showMobileStep(currentMobileStep);
-                    updateAllMobileButtonStates();
+                    // pcSteps.forEach(step => step.style.display = 'none');
+                    // updatePcAccordionState();
+                    // updateAllPcButtonStates();
                 }
             });
-            </script> -->
+        </script>
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
     <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
     <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
