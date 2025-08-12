@@ -310,6 +310,33 @@
 .irif .asterisk-text {gap: 0; font-size: 0.875rem; line-height: 1.3125rem;}
 .irif .asterisk-text::before {content: "*\00a0"; display: block; margin: 0; width: auto; height: auto; background-image: none;}
 
+/* 채용공고 (rcpt) */
+.rcpt .content-sect.bg-gray {margin-top: 1.5rem; padding-top: 2rem;}
+.rcpt .content-wrap > .post-list + .paging-wrap {margin-top: 2rem;}
+.rcpt .content-wrap > .paging-wrap + .btn-wrap {margin-top: 3.5rem;}
+.rcpt .content-wrap > .btn-wrap {flex-direction: column; align-items: center; gap: 0.5rem;}
+
+.post-list {gap: 0.5rem;}
+.post-list > li {padding: 1.25rem; border-radius: 0.5rem; flex-direction: column; align-items: flex-start; gap: 0.5rem;}
+.post-list > li .post-info {gap: 0.25rem;}
+.post-list > li .post-tag {font-size: 0.875rem; line-height: 1.3125rem;}
+.post-list > li .post-tit {font-size: 1.125rem; line-height: 1.75rem;}
+.post-list > li .post-date {justify-content: space-between; gap: 0; width: 100%;}
+.post-list > li .post-date .limit, .post-list > li .post-date .count {font-size: 0.875rem; line-height: 1.3125rem;}
+.post-grid {grid-template-columns: 1fr; gap: 0.5rem;}
+.post-grid > li {gap: 1.5rem; padding: 1.25rem; border-radius: 0.5rem; min-height: unset;}
+.post-grid > li .top-wrap .tit-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
+.post-grid > li .top-wrap .tit-wrap .sub-tit {font-size: 0.875rem; line-height: 1.3125rem;}
+.post-grid > li .top-wrap .tit-wrap + .desc-wrap {margin-top: 1rem; padding-top: 1rem;}
+.post-grid > li .top-wrap .desc-wrap .desc-tit {font-size: 1rem; line-height: 1.6rem;}
+.post-grid > li .top-wrap .desc-wrap .desc-text {font-size: 0.875rem; line-height: 1.3125rem;}
+.post-grid > li .top-wrap .desc-wrap .desc-tit + .desc-text {margin-top: 0.25rem;}
+.post-grid > li .bottom-wrap {gap: 1rem;}
+.post-grid > li .bottom-wrap .link-wrap {gap: 0.5rem;}
+.post-grid > li .bottom-wrap .link-wrap .link-btn {width: calc(50% - (0.5rem / 2)); height: 3rem; padding: 0.38rem 1rem; font-size: 0.875rem; line-height: 1.225rem;}
+.post-grid > li .bottom-wrap .link-wrap .link-btn[target="_blank"] .icon-area {width: 1.25rem; height: 1.25rem; background-size: 1.25rem 1.25rem;}
+
+
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1rem;}
 .etmg .content-sect > .img-area {max-width: 20rem; width: 100%; margin-inline: auto; padding-inline: 0; margin-top: 2rem;}
