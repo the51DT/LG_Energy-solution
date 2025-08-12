@@ -78,8 +78,9 @@
 .accordion-list.type3 {border-radius: 1rem;}
 .accordion-list.type3.on {padding-bottom: 2rem;}
 .accordion-list.type3:not(:last-child) {margin-bottom: 0.5rem;}
-.accordion-list.type3 .accordion-btn .acd-group {gap: 0.25rem;}
+.accordion-list.type3 .accordion-btn .acd-group {gap: 1rem; flex-direction: row;}
 .accordion-list.type3 .accordion-content {margin-bottom: 0.75rem; margin: 1.5rem 1.25rem 0;}
+.accordion-list.type3 .accordion-btn .acd-group .acd-icon {display: block;}
 
 .accord-content .accordion-title {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem; padding-bottom: 1rem;}
 .accord-content .table-area .text-list-wrap {margin-top: 1rem;}
