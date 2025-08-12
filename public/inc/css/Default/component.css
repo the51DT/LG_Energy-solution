@@ -363,9 +363,12 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 
 .tab-cate-wrap.new:before {display:none;}
 .tab-cate-wrap.new .tab-category {gap: 0.25rem; height: fit-content;} 
-.tab-cate-wrap.new .tab-category > li button {width:100%; min-width: 6.875rem; padding: 0.625rem 1rem; border-radius: 0.125rem; background: #F3F5F7; font-size: 1rem; line-height: 1.6rem; font-weight: 500; color: #555758; white-space: nowrap;}
-.tab-cate-wrap.new .tab-category > li.on button  {color:#fff; background: #171819;}
-.tab-cate-wrap.new .tab-category > li.on button:after {display: none;}
+.tab-cate-wrap.new .tab-category > li > a,
+.tab-cate-wrap.new .tab-category > li button {width:100%; min-width: 6.875rem; padding: 0.625rem 1rem; border-radius: 0.125rem; background: #F3F5F7; font-size: 1rem; line-height: 1.6rem; font-weight: 500; color: #555758; white-space: nowrap; text-align: center;}
+.tab-cate-wrap.new .tab-category > li.on button,
+.tab-cate-wrap.new .tab-category > li.on > a  {color:#fff; background: #171819;}
+.tab-cate-wrap.new .tab-category > li.on button:after,
+.tab-cate-wrap.new .tab-category > li.on > a:after {display: none;}
 .tab-cate-wrap.new .tab-content-box .tab-content {font-size: 1rem; font-weight: 500; line-height: 1.6rem;}
 .tab-cate-wrap.new:has(.tab-category > li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li)::after {content: none;}
 .tab-cate-wrap.new .tab-category:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) {width: 100%; gap: 0.44rem;}
@@ -436,8 +439,6 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .textarea-box .byte-check .count-total::before {content:'/'; margin:0 0.25rem;}
 
 /* *** selectbox *** */
-
-
 .selectbox-wrap {width: 100%; display:flex; justify-content: center; align-items: flex-end;}
 .selectbox-wrap > div:first-child {padding-left: 0;}
 .selectbox-wrap > div.select-cate { position: relative;}
