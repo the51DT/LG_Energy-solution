@@ -119,7 +119,7 @@
 .stif .cont-box-wrap .right-box::before, .stif .cont-box-wrap .right-box::after {top: 50%; transform: translateY(-50%);}
 .stif .cont-box-wrap .right-box::before  {left: 0;}
 .stif .cont-box-wrap .right-box::after {right: 0;}
-.stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
+.stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; padding-inline: 2.5rem; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
 
 
 /* 공시정보 (disc) */
@@ -247,6 +247,7 @@
 .evt-schedule-top .schedule-head {margin-bottom: 1.5rem;}
 .evt-schedule-top .schedule-head .year {font-size: 1.375rem; line-height: 1.925rem;}
 .evt-schedule-top .schedule-month {overflow-x: scroll; margin: 0 -1.25rem; padding-inline: 1.25rem;}
+.evt-schedule-top .schedule-month .item {display: flex; justify-content: center;}
 .evt-schedule-top .schedule-month .item > a {width: 3.75rem; height: 3.75rem; border-radius: 0.5rem;}
 .evt-schedule-top .schedule-month .item > a .month {font-size: 1.375rem; line-height: 1.925rem;}
 .evt-schedule-top .schedule-month .item > a .month span {font-size: 0.875rem; line-height: 1.4rem; padding-left: 0;}

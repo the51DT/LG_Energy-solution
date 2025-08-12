@@ -413,7 +413,6 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 
 .accord-content .accordion-title {padding-bottom: 2rem; font-size: 1.75rem; font-weight: 600; line-height: 2.625rem;}
 .accord-content .accordion-list:first-of-type {border-top: 1px solid var(--colorElement-light-stroke-stroke-default00);}
-.accord-content .accordion-list .accordion-content { margin-left: 0;}
 .accord-content .table-area .text-list-wrap {margin-top: 2rem;}
 .accord-content .table-area .text-list-wrap .text-list li {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 
