@@ -412,6 +412,51 @@
 .irif .agm-info-list > li .btn-wrap .history-btn-wrap + .history-btn-wrap {margin: 0;}
 
 
+/* 채용공고 (rcpt) */
+.rcpt [class^="content-item"]:has(.content-sect.bg-gray) {padding-bottom: 0;}
+.rcpt .content-sect.bg-gray {margin-top: 2.5rem; padding-block: 5rem 7.5rem;}
+.rcpt .content-wrap > .post-list + .paging-wrap {margin-top: 3.75rem;}
+.rcpt .content-wrap > .paging-wrap + .btn-wrap {margin-top: 5rem;}
+.rcpt .content-wrap > .btn-wrap {display: flex; justify-content: center; gap: 1.25rem;}
+
+.post-list {display: flex; flex-direction: column; gap: 1.25rem;}
+.post-list > li {display: flex; justify-content: space-between; align-items: center; gap: 2.5rem; padding: 1.88rem 3.75rem; border-radius: 1rem; background-color: #fff;}
+.post-list > li .post-info {display: flex; flex-direction: column; gap: 0.5rem; flex-grow: 1;}
+.post-list > li .post-tag {display: flex; gap: 0.5rem; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
+.post-list > li .post-tag .type.ent {color: var(--colorElement-light-secondary-secondary-enabled);}
+.post-list > li .post-tag .type.exp {color: var(--colorElement-light-success-success-enabled);}
+.post-list > li .post-tag .type.sch {color: var(--colorElement-light-accent-success-enabled);}
+.post-list > li .post-tag .type.prog {color: var(--colorElement-light-thirdary-thirdary-enabled);}
+.post-list > li .post-tag .category {position: relative; font-weight: 500; padding-left: 0.5rem; color: var(--colorElement-light-text-text-default02);}
+.post-list > li .post-tag .category::before {content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); display: block; width: 1px; height: 1rem; background-color: var(--colorElement-light-stroke-stroke-default03);}
+.post-list > li .post-tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
+.post-list > li .post-date {display: flex; align-items: center; flex-grow: 0; flex-shrink: 0; gap: 2.5rem;}
+.post-list > li .post-date .limit {display: flex; gap: 0.5rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.post-list > li .post-date .count {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-primary);}
+.post-grid {display: grid; gap: 1.25rem; grid-template-columns: repeat(3, 1fr);}
+.post-grid > li {display: flex; flex-direction: column; justify-content: space-between; min-height: 25rem; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); color: var(--colorElement-light-text-text-default01);}
+.top-wrap .tit-wrap {display: flex; justify-content: space-between; align-items: center;}
+.top-wrap .tit-wrap .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
+.top-wrap .tit-wrap .sub-tit {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-text-text-primary);}
+.top-wrap .tit-wrap + .desc-wrap {margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.top-wrap .desc-wrap .desc-tit {font-size: 1.25rem; font-weight: 500; line-height: 2rem;}
+.top-wrap .desc-wrap .desc-text {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.top-wrap .desc-wrap .desc-tit + .desc-text {margin-top: 0.5rem;}
+.bottom-wrap {display: flex; flex-direction: column; gap: 1.88rem;}
+.bottom-wrap .sns-wrap {display: flex; gap: 0.5rem;}
+.bottom-wrap .sns-link {display: flex; justify-content: center; align-items: center; width: 2.125rem; height: 2.125rem; border-radius: 4rem; background-color: var(--colorElement-light-fill-fill-default02);}
+.bottom-wrap .sns-link::before {content: ""; display: block; width: 1.25rem; height: 1.25rem; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.bottom-wrap .sns-link.home::before {background-image: url(../../images/icon/icon_home_wh.svg);}
+.bottom-wrap .sns-link.youtube::before {background-image: url(../../images/icon/icon_youtube_wh.svg);}
+.bottom-wrap .sns-link.facebook::before {background-image: url(../../images/icon/icon_facebook_wh.svg);}
+.bottom-wrap .sns-link.instagram::before {background-image: url(../../images/icon/icon_insta_wh.svg);}
+.bottom-wrap .sns-link.linkedin::before {background-image: url(../../images/icon/icon_linkedin_wh.svg);}
+.bottom-wrap .sns-link.blog::before {background-image: url(../../images/icon/icon_blog_wh.svg);}
+.bottom-wrap .link-wrap {display: flex; gap: 0.62rem;}
+.bottom-wrap .link-wrap .link-btn {display: flex; justify-content: space-between; align-items: center; width: calc(50% - (0.62rem / 2)); padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: var(--colorElement-light-fill-fill-on-primary); font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
+.bottom-wrap .link-wrap .link-btn[target="_blank"] .icon-area {display: block; width: 1.75rem; height: 1.75rem; background-position: center; background-size: 1.25rem 1.25rem; background-repeat: no-repeat; background-image: url(../../images/icon/icon_link_external_bl.svg);}
+
+
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
 .etmg .content-sect > .img-area {padding-inline: 7.2rem; margin-top: 3.75rem;}
