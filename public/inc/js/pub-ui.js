@@ -1105,7 +1105,7 @@ var pubUi = {
         type01Swiper() {
             const targetSwiper = document.querySelectorAll(".type01Swiper");
 
-            if(targetSwiper) {
+            if(targetSwiper.length > 0) {
                 //newsroom 상세 사용중
                 var swiper1 = new Swiper(".type01Swiper", {
                     pagination: {
