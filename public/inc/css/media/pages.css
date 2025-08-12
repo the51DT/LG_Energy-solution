@@ -119,7 +119,7 @@
 .stif .cont-box-wrap .right-box::before, .stif .cont-box-wrap .right-box::after {top: 50%; transform: translateY(-50%);}
 .stif .cont-box-wrap .right-box::before  {left: 0;}
 .stif .cont-box-wrap .right-box::after {right: 0;}
-.stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
+.stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; padding-inline: 2.5rem; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
 
 
 /* 공시정보 (disc) */
@@ -247,6 +247,7 @@
 .evt-schedule-top .schedule-head {margin-bottom: 1.5rem;}
 .evt-schedule-top .schedule-head .year {font-size: 1.375rem; line-height: 1.925rem;}
 .evt-schedule-top .schedule-month {overflow-x: scroll; margin: 0 -1.25rem; padding-inline: 1.25rem;}
+.evt-schedule-top .schedule-month .item {display: flex; justify-content: center;}
 .evt-schedule-top .schedule-month .item > a {width: 3.75rem; height: 3.75rem; border-radius: 0.5rem;}
 .evt-schedule-top .schedule-month .item > a .month {font-size: 1.375rem; line-height: 1.925rem;}
 .evt-schedule-top .schedule-month .item > a .month span {font-size: 0.875rem; line-height: 1.4rem; padding-left: 0;}
@@ -492,7 +493,7 @@
 .faq .content-area .tab-content{max-width: revert; width: 100%; padding: 0 1.25rem;}
 .faq .tab-cate-wrap {padding: 0 0 0 1.25rem;}
 
-.faq .tab-cate-wrap .tab-category {padding: 0; height: auto; gap: 0.5rem;}
+.faq .tab-cate-wrap .tab-category {padding: 0; height: auto; gap: 0.5rem; margin: 0;}
 .faq .tab-cate-wrap .tab-category > li button {padding: 0.53rem 1.5rem;} 
 .faq .tab-cate-wrap .tab-category > li:last-child {padding-right: 1.25rem;}
 .faq .news-content-area .search-result {border-bottom: 0; margin: 0; padding:2.16rem 0;}
@@ -500,6 +501,8 @@
 .faq .news-content-area .search-result>input {font-size: 1.25rem;}
 .faq .news-content-area .search-result>input::placeholder {font-size: 1.25rem; line-height: 1.925rem;}
 .faq .desc-wrap > a {margin-top: 1.5rem;}
+.faq .no-result-wrap .no-result { font-size: 1rem; line-height: 1.6rem; padding: 5rem 0; }
+.faq .no-result-wrap>button { width: 20rem; margin: 1.5rem 0 6.25rem; }
 .paging-wrap > .paging.mo-only {display: flex !important; justify-content: center;}
 .paging-wrap > .paging.mo-only > li:not(.arrow) a  {width: 1.875rem; height: auto;}
 .paging-wrap > .paging.mo-only > li a {font-size: 1rem; font-weight: 600; line-height: 1.5rem; margin: 0.125rem 0;}
@@ -532,7 +535,7 @@
 .download #tab5-content .tab-category { gap: 1rem; }
 .download #tab5-content .tab-category > li button { font-size: 1rem; line-height: 1.4rem;}
 .download #tab5-content .cont-area-wrap .cont-area-sect > section { padding-top: 1.5rem; }
-
+.download .paging-wrap { margin-top: 2.5rem; }
 .btn-download { flex-direction: column; gap: 0; width: 3.375rem; height: auto; padding: 0.5rem 0.75rem;}
 .btn-download .btn-download-txt { font-size: 0.8125rem; line-height: 1.1375rem; }
 .btn-download .icon-download { width: 1.125rem; height: 1.125rem; }
