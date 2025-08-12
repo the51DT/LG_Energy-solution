@@ -939,8 +939,8 @@
 .rctt .core-link-wrap { display: flex; background-image: url(../../images/img/rctt_bg.png); background-size: cover; background-position: center; height: 8.75rem; border-radius: 1rem; align-items: center; justify-content: space-between; padding: 3.0625rem 7.5rem 3.0625rem 3.75rem; color: #fff; margin-bottom: 5rem; }
 .rctt .core-link-wrap > p { font-size: 1.75rem; font-weight: 400; }
 .rctt .core-link-wrap > p > strong { font-weight: 600; }
-.rctt .core-link-wrap > a { display: flex; align-items: center; gap: 1.25rem; font-weight: 600; font-size: 1.25rem; }
-.rctt .core-link-wrap > a > img { width: 2.25rem; background-color: #fff; border-radius: 100%; padding: 0.5rem; }
+.rctt .core-link-wrap a { display: flex; align-items: center; gap: 1.25rem; font-weight: 600; font-size: 1.25rem; }
+.rctt .core-link-wrap a > img { width: 2.25rem; background-color: #fff; border-radius: 100%; padding: 0.5rem; }
 .rctt .btn-wrap { display: flex; justify-content: center; gap: 2.5rem; }
 .rctt .btn-wrap button { width: 26.25rem; height: 5.5rem; }
 .rctt .btn-wrap [class^="icon-btn"][class*="-sm"] { font-size: 1.375rem; padding: 1.25rem 2.5rem; }
