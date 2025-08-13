@@ -170,257 +170,261 @@
     <section id="container" class="content-wrap">
         <div class="content-area download-content-area">
             <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
-            <div class="content-wrap"> <!-- max-width:90rem (default)-->
-                <h2 class="title-h1 pc-only">다운로드</h2> <!-- title-h1 (페이지타이틀) -->
-                <div class="search-box-wrap">
-                    <div class="search-box searchEvt">
-                        <button type="button" class="btn-search" aria-label="검색" class="btn-search">
-                            <img src="../../../inc/images/icon/icon_head_search.svg" alt="검색 아이콘">
-                        </button>
-                        <input type="text" id="download-search" placeholder="검색어를 입력해 주세요.">
-                        <button type="button" class="btn-search-reset btn-delete" aria-label="검색어 초기화">
-                            <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="삭제 아이콘">
-                        </button>
-                    </div>
-                </div>
-                <div class="tab-wrap tab-download">
-                    <div class="tab-cate-wrap type3"> <!-- type3 -->
-                        <ul class="tab-category activeTab" role="tablist">
-                            <li class="tab on" id="tab1"><button role="tab" aria-selected="true"
-                                aria-controls="tab1-content">전체</button>
-                            </li>
-                            <li class="tab" id="tab2"><button role="tab" aria-selected="false"
-                                aria-controls="tab2-content">사업영역</button>
-                            </li>
-                            <li class="tab" id="tab3"><button role="tab" aria-selected="false"
-                                aria-controls="tab3-content">회사소개</button>
-                            </li>
-                            <li class="tab" id="tab4"><button role="tab" aria-selected="false"
-                                aria-controls="tab4-content">지속가능경영</button>
-                            </li>
-                            <li class="tab" id="tab5"><button role="tab" aria-selected="false"
-                                aria-controls="tab5-content">투자정보</button></li>
-                            </li>
-                            <li class="tab" id="tab6"><button role="tab" aria-selected="false"
-                                aria-controls="tab6-content">인재채용</button></li>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-content-box">
-                        <!-- 검색결과없음 -->
-                        <div class="no-result-wrap" style="display: none;">
-                            <p class="no-result">
-                                총 <span>0</span>개의 검색결과가 있습니다.<br />
-                                다른 키워드로 다시 검색해 주세요.
-                            </p>
+                <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                    <h2 class="title-h1 pc-only">다운로드</h2> <!-- title-h1 (페이지타이틀) -->
+                    <div class="search-box-wrap">
+                        <div class="search-box searchEvt">
+                            <button type="button" class="btn-search" aria-label="검색" class="btn-search">
+                                <img src="../../../inc/images/icon/icon_head_search.svg" alt="검색 아이콘">
+                            </button>
+                            <input type="text" id="download-search" placeholder="검색어를 입력해 주세요.">
+                            <button type="button" class="btn-search-reset btn-delete" aria-label="검색어 초기화">
+                                <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="삭제 아이콘">
+                            </button>
                         </div>
-                        <!-- 전체탭 -->
-                        <div class="tab-content on" id="tab1-content">
-                            <div class="cont-area-wrap">
-                                <div class="cont-area-sect">
-                                    <section>
-                                        <ul class="download-list">
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-1" name="checkbox-1">
-                                                    <label for="checkbox-1" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 사업영역 </p>
-                                                            <span class="download-tit">1865 카탈로그</span> 
-                                                        </div>
-                                                        <a href="#" class="btn-download" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-2" name="checkbox-2">
-                                                    <label for="checkbox-2" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 사업영역 </p>
-                                                            <span class="download-tit">2170 카탈로그</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-3" name="checkbox-3">
-                                                    <label for="checkbox-3" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 회사소개 </p>
-                                                            <span class="download-tit">회사소개서</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-4" name="checkbox-4">
-                                                    <label for="checkbox-4" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 회사소개 </p>
-                                                            <span class="download-tit">회사 로고 CI</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-5" name="checkbox-5">
-                                                    <label for="checkbox-5" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 지속가능경영 </p>
-                                                            <span class="download-tit">글로벌 환경정책</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-6" name="checkbox-6">
-                                                    <label for="checkbox-6" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 지속가능경영 </p>
-                                                            <span class="download-tit">협력사 행동규범</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-7" name="checkbox-7">
-                                                    <label for="checkbox-7" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 투자정보 </p>
-                                                            <span class="download-tit">ESG 채권 관리체계</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-8" name="checkbox-8">
-                                                    <label for="checkbox-8" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 투자정보 </p>
-                                                            <span class="download-tit">전자공고 공시정보관리 규정</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-9" name="checkbox-9">
-                                                    <label for="checkbox-9" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 투자정보 </p>
-                                                            <span class="download-tit">2024 사업보고서</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="checkbox-10" name="checkbox-10">
-                                                    <label for="checkbox-10" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                    </label>
-                                                </div>
-                                                <ul class="download-desc">
-                                                    <li>
-                                                        <div class="desc-tit-wrap">
-                                                            <p class="tab-cont-name"> 인재정보 </p>
-                                                            <span class="download-tit">2024년 영업보고서</span>
-                                                        </div>
-                                                        <a href="#" class="btn-download disabled" download>
-                                                            <span class="btn-download-txt">PDF</span>
-                                                            <span class="icon-download"></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
+                    </div>
+                    <div class="tab-wrap tab-download">
+                        <div class="tab-cate-wrap type3"> <!-- type3 -->
+                            <ul class="tab-category activeTab" role="tablist">
+                                <li class="tab on" id="tab1"><button role="tab" aria-selected="true"
+                                    aria-controls="tab1-content">전체</button>
+                                </li>
+                                <li class="tab" id="tab2"><button role="tab" aria-selected="false"
+                                    aria-controls="tab2-content">사업영역</button>
+                                </li>
+                                <li class="tab" id="tab3"><button role="tab" aria-selected="false"
+                                    aria-controls="tab3-content">회사소개</button>
+                                </li>
+                                <li class="tab" id="tab4"><button role="tab" aria-selected="false"
+                                    aria-controls="tab4-content">지속가능경영</button>
+                                </li>
+                                <li class="tab" id="tab5"><button role="tab" aria-selected="false"
+                                    aria-controls="tab5-content">투자정보</button></li>
+                                </li>
+                                <li class="tab" id="tab6"><button role="tab" aria-selected="false"
+                                    aria-controls="tab6-content">인재채용</button></li>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content-box">
+                            <!-- 검색결과없음 -->
+                            <div class="total-wrap result-total-wrap" style="display: none;"><p class="total">총 <span>32</span>의 검색결과가 있습니다.</p></div>
+                            <div class="no-result-wrap" style="display: none;">
+                                <p class="no-result">
+                                    총 <span>0</span>개의 검색결과가 있습니다.<br />
+                                    다른 키워드로 다시 검색해 주세요.
+                                </p>
+                                <button type="button" class="act-btn-md btn-outline01">전체 목록보기</button>
+                            </div>
+                            <!-- 전체탭 -->
+                            <div class="tab-content on" id="tab1-content">
+                                <div class="cont-area-wrap">
+                                    <div class="total-wrap">
+                                        <p class="total">총 <span>201</span>건</p>
+                                    </div>
+                                    <div class="cont-area-sect">
+                                        <section>
+                                            <ul class="download-list">
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-1" name="checkbox-1">
+                                                        <label for="checkbox-1" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 사업영역 </p>
+                                                                <span class="download-tit">1865 카탈로그</span> 
+                                                            </div>
+                                                            <a href="#" class="btn-download" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
+                                                        <label for="checkbox-2" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 사업영역 </p>
+                                                                <span class="download-tit">2170 카탈로그</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-3" name="checkbox-3">
+                                                        <label for="checkbox-3" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 회사소개 </p>
+                                                                <span class="download-tit">회사소개서</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-4" name="checkbox-4">
+                                                        <label for="checkbox-4" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 회사소개 </p>
+                                                                <span class="download-tit">회사 로고 CI</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-5" name="checkbox-5">
+                                                        <label for="checkbox-5" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                <span class="download-tit">글로벌 환경정책</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-6" name="checkbox-6">
+                                                        <label for="checkbox-6" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                <span class="download-tit">협력사 행동규범</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-7" name="checkbox-7">
+                                                        <label for="checkbox-7" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 투자정보 </p>
+                                                                <span class="download-tit">ESG 채권 관리체계</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-8" name="checkbox-8">
+                                                        <label for="checkbox-8" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 투자정보 </p>
+                                                                <span class="download-tit">전자공고 공시정보관리 규정</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-9" name="checkbox-9">
+                                                        <label for="checkbox-9" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 투자정보 </p>
+                                                                <span class="download-tit">2024 사업보고서</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="checkbox-10" name="checkbox-10">
+                                                        <label for="checkbox-10" class="checkbox-label">
+                                                            <span class="custom-checkbox"></span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="download-desc">
+                                                        <li>
+                                                            <div class="desc-tit-wrap">
+                                                                <p class="tab-cont-name"> 인재정보 </p>
+                                                                <span class="download-tit">2024년 영업보고서</span>
+                                                            </div>
+                                                            <a href="#" class="btn-download disabled" download>
+                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="icon-download"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
                                             </ul>
                                             <div class="btm-btn-area">
                                                 <div class="paging-wrap">
@@ -452,8 +456,11 @@
                             <!-- 사업영역탭 -->
                             <div class="tab-content" id="tab2-content">
                                 <div class="cont-area-wrap">
+                                    <div class="total-wrap">
+                                        <p class="total">총 <span>201</span>건</p>
+                                    </div>
                                     <div class="cont-area-sect">
-                                            <section>
+                                        <section>
                                             <ul class="download-list">
                                                 <li>
                                                     <div class="checkbox">
@@ -619,6 +626,9 @@
                             <!-- 회사소개탭 -->
                             <div class="tab-content" id="tab3-content">
                                 <div class="cont-area-wrap">
+                                    <div class="total-wrap">
+                                        <p class="total">총 <span>201</span>건</p>
+                                    </div>
                                     <div class="cont-area-sect">
                                         <section>
                                             <ul class="download-list">
@@ -865,6 +875,9 @@
                             <!-- 지속가능경영탭 -->
                             <div class="tab-content" id="tab4-content">
                                 <div class="cont-area-wrap">
+                                    <div class="total-wrap">
+                                        <p class="total">총 <span>201</span>건</p>
+                                    </div>
                                     <div class="cont-area-sect">
                                         <section>
                                             <ul class="download-list">
@@ -1136,6 +1149,9 @@
                                             <!-- 투자정보-재무정보 -->
                                             <div class="tab-content" id="tab5_1-content">
                                                 <div class="cont-area-wrap">
+                                                    <div class="total-wrap">
+                                                        <p class="total">총 <span>201</span>건</p>
+                                                    </div>
                                                     <div class="cont-area-sect">
                                                         <section>
                                                             <ul class="download-list">
@@ -1382,6 +1398,7 @@
                                             <!-- 투자정보-주식정보 -->
                                             <div class="tab-content" id="tab5_2-content">
                                                 <div class="cont-area-wrap">
+                                                    <div class="total-wrap"><p class="total">총 <span>201</span>건</p></div>
                                                     <div class="cont-area-sect">
                                                         <section>
                                                             <ul class="download-list">
@@ -1628,6 +1645,7 @@
                                             <!-- 투자정보-공시정보 -->
                                             <div class="tab-content" id="tab5_3-content">
                                                 <div class="cont-area-wrap">
+                                                    <div class="total-wrap"><p class="total">총 <span>201</span>건</p></div>
                                                     <div class="cont-area-sect">
                                                         <section>
                                                             <ul class="download-list">
@@ -1874,6 +1892,7 @@
                                             <!-- 투자정보-IR정보 -->
                                             <div class="tab-content" id="tab5_4-content">
                                                 <div class="cont-area-wrap">
+                                                    <div class="total-wrap"><p class="total">총 <span>201</span>건</p></div>
                                                     <div class="cont-area-sect">
                                                         <section>
                                                             <ul class="download-list">
@@ -2120,6 +2139,7 @@
                                             <!-- 투자정보-IR자료 -->
                                             <div class="tab-content" id="tab5_5-content">
                                                 <div class="cont-area-wrap">
+                                                    <div class="total-wrap"><p class="total">총 <span>201</span>건</p></div>
                                                     <div class="cont-area-sect">
                                                         <section>
                                                             <ul class="download-list">
@@ -2370,6 +2390,7 @@
                             <!-- 인재채용탭 -->
                             <div class="tab-content" id="tab6-content">
                                 <div class="cont-area-wrap">
+                                    <div class="total-wrap"><p class="total">총 <span>201</span>건</p></div>
                                     <div class="cont-area-sect">
                                         <section>
                                             <ul class="download-list">
@@ -2617,9 +2638,6 @@
                     </div>
                 </div>
             </div><!-- //content-item01 -->
-
-
-
         </div>
     </section>
     <!-- // section -->
