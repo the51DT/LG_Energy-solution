@@ -1,11 +1,9 @@
 const LGEnSol = {
     
     headerEvent:function(){
-        const eventBtn = document.querySelectorAll(".parent-event_btn"),
-        eventCont = document.querySelector(".nav-wrap"),
+        const eventCont = document.querySelector(".pc-only .nav-wrap"),
+        MoEventCont = document.querySelector(".mo-only .nav-wrap"),
         eventParent = document.querySelector(".parent-event"),
-        searchBtn = document.querySelector(".search-btn"),
-        headerSearch = document.querySelector(".header-search"),
         header_h = eventParent.offsetHeight;
         let maxCount = 0,
         maxheight = 0;
@@ -73,17 +71,23 @@ const LGEnSol = {
             });
         }
         function event(){
-            eventCont.addEventListener("mouseenter", function () {
+            if(eventCont){
+                eventCont.addEventListener("mouseenter", function () {
                 setEvent();
-            });
-            eventCont.addEventListener("mouseleave", function () {
-                clearEvent();
-            });
+                });
+                eventCont.addEventListener("mouseleave", function () {
+                    clearEvent();
+                });
+            }
             
+            if(MoEventCont){
+                
+            }
             document.addEventListener("click", function(e) {
                 const isInside = Array.from(document.querySelectorAll(".search-reset"))
                     .some(reset => reset.contains(e.target));
                 if (!isInside) {
+                    
                     pubUi.popUp.close('.header_search-area', '.header_search-btn');
                 }
             });
