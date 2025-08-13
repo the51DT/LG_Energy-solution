@@ -337,6 +337,58 @@
 .post-grid > li .bottom-wrap .link-wrap .link-btn[target="_blank"] .icon-area {width: 1.25rem; height: 1.25rem; background-size: 1.25rem 1.25rem;}
 
 
+/* 채용정보 (rcif) */
+.rcif .tab-cate-wrap.full-line .tab > button {font-size: 1rem; line-height: 1.4rem; padding-block: 0.91rem;}
+.rcif #tab1-content .tab-cate-wrap.full-line .tab-category {width: 100%; gap: 1rem; justify-content: space-between;}
+.rcif #tab1-content .tab-cate-wrap.full-line.scroll::after {content: none;}
+.rcif #tab1-content .tab-cate-wrap.full-line .tab {width: 100%;}
+.rcif #tab1-content .tab-cate-wrap.full-line .tab > button {width: 100%;}
+.rcif .tab-content > .content-sect.bg-gray {padding-block: 2rem 3rem;}
+.rcif [class^="content-item"]:has(> .content-sect.bg-gray) > .content-sect.bg-gray {margin-top: 1.5rem; padding-block: 2rem 6.31rem;}
+.rcif .type-notice {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem;}
+.rcif .process-list {padding-inline: 0; gap: 1rem;}
+.rcif .process-list > li {padding: 1rem 1.25rem; flex-direction: column; gap: 1rem;}
+.rcif .process-list > li .process-step {padding-left: 1.5rem; font-size: 0.875rem; line-height: 1.3125rem;}
+.rcif .process-list > li .process-step::before {left: -6px;}
+.rcif .process-list > li .process-step::after {left: 0;}
+.rcif .process-list > li .text-list-wrap .process-tit {font-size: 1rem; line-height: 1.6rem; margin-bottom: 0.5rem;}
+.rcif .process-list > li .text-list-wrap .text-list {font-size: 0.875rem; line-height: 1.3125rem;}
+.rcif .process-list > li .text-list-wrap .text-list li + li,
+.rcif .process-list > li .text-list-wrap .text-list + .asterisk-text {margin-top: 0.25rem;}
+.rcif .process-list > li .text-list-wrap .asterisk-text {gap: 0.38rem;}
+.rcif .process-list > li .text-list-wrap .asterisk-text::before {flex-shrink: 0; content: ""; display: block; margin: 0.46rem 0.19rem; width: 0.37894rem; height: 0.39744rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
+.rcif .btn-wrap {flex-direction: column; gap: 0.5rem;}
+.rcif .process-list + .btn-wrap {margin-top: 3rem;}
+.rcif .accordion-list .accordion-btn .acd-group {flex-direction: row; align-items: center; gap: 1rem;}
+.rcif .accordion-list .accordion-btn .acd-tit {font-size: 1rem; line-height: 1.6rem;}
+.rcif .accordion-list.type2 .accordion-btn {padding: 1.5rem 3.75rem 1.5rem 1.25rem;}
+.rcif .accordion-list.type2 .accordion-btn .acd-group .acd-icon {display: block; font-size: 1.5rem; font-weight: 700; line-height: 2.0625rem;}
+.rcif .accordion-list.on .accordion-btn:after {transform: translateY(-50%);}
+.rcif .accordion-list.on .accordion-btn .acd-tit {font-size: 1.125rem; line-height: 1.75rem;}
+.rcif .accordion-list .accordion-content {margin-inline: 1.25rem; margin-top: 0;}
+.rcif .accordion-list .accordion-content .desc {font-size: 1rem; line-height: 1.6rem;}
+.rcif .accordion-list .accordion-content .btn-wrap {margin-top: 1.5rem; width: fit-content;}
+.rcif .acc-list-tit {font-size: 1.5rem; line-height: 2.0625rem; margin-bottom: 1.5rem;}
+.rcif .acc-wrap {margin-inline: -1.25rem;}
+.rcif .acc-wrap + .btn-wrap {margin-top: 2rem;}
+.rcif .acc-wrap + .btn-wrap [class^="act-btn"][class*="-sm"] {width: fit-content; margin-inline: auto;}
+.rcif .job-list {grid-template-columns: 1fr; gap: 1rem;}
+.rcif .job-list > li {padding: 1rem 1.25rem; border-radius: 0.5rem;}
+.rcif .job-list > li .job-tit {gap: 0.25rem; padding-bottom: 1rem;}
+.rcif .job-list > li .job-tit > img {width: 3.75rem; height: 3.75rem;}
+.rcif .job-list > li .job-tit > p {font-size: 1.125rem; line-height: 1.75rem;}
+.rcif .job-list > li .text-list-wrap {padding-top: 1rem; font-size: 0.875rem; line-height: 1.3125rem;}
+.rcif .text-list-wrap .text-list > li::before {top: 0.44rem; left: 0.25rem;}
+.rcif .job-list + .btn-wrap:not(:has([class^="act-btn"][class*="-md"])) {margin-top: 3rem;}
+.rcif .job-list + .btn-wrap:has([class^="act-btn"][class*="-md"]) {margin-top: 2rem;}
+.rcif [class^="act-btn"][class*="-md"] {justify-content: center; gap: 0.25rem;}
+.rcif .btn-wrap + .btn-wrap {margin-top: 3rem;}
+.rcif .job-story {grid-template-columns: 1fr; gap: 1rem;}
+.rcif .job-story > li > a {padding: 1rem 1.25rem; gap: 1rem;}
+.rcif .job-story > li > a .tit {font-size: 1rem; line-height: 1.6rem;}
+.rcif .job-story + .paging-wrap {margin-top: 2rem;}
+
+
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1rem;}
 .etmg .content-sect > .img-area {max-width: 20rem; width: 100%; margin-inline: auto; padding-inline: 0; margin-top: 2rem;}

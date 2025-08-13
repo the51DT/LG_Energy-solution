@@ -373,13 +373,14 @@
   <!-- <script type="text/javascript" src="../../../inc/js/com-ui.js"></script> -->
   <script>
     $(document).ready(function($) {
-    eventCont = $(".nav-wrap"),
-    eventParent = $(".header-wrap"),
-    searchBtn = $(".search-btn"),
-    headerSearch = $(".header-search");
-    header_h = eventParent.height();
-    max_h = [];
-    eventbtn.on("click", function () {
+      gnbBtn = $(".nav-btn"),
+      eventCont = $(".nav-wrap"),
+      eventParent = $(".header-wrap"),
+      searchBtn = $(".search-btn"),
+      headerSearch = $(".header-search");
+      header_h = eventParent.height();
+      max_h = [];
+    gnbBtn.on("click", function () {
         eventParent.find(".header-cont").height();
         // alert(Math.max.apply(null, max_h))
         if($(this).hasClass("on")){
