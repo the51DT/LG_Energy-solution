@@ -369,6 +369,7 @@
 .rcif .accordion-list .accordion-content .desc {font-size: 1rem; line-height: 1.6rem;}
 .rcif .accordion-list .accordion-content .btn-wrap {margin-top: 1.5rem;}
 .rcif .acc-wrap + .btn-wrap {margin-top: 2rem;}
+.rcif .acc-wrap + .btn-wrap [class^="act-btn"][class*="-sm"] {width: fit-content; margin-inline: auto;}
 .rcif .job-list {grid-template-columns: 1fr; gap: 1rem;}
 .rcif .job-list > li {padding: 1rem 1.25rem; border-radius: 0.5rem;}
 .rcif .job-list > li .job-tit {gap: 0.25rem; padding-bottom: 1rem;}
