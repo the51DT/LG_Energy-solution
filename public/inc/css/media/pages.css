@@ -663,16 +663,15 @@
 
 /* 인사원칙 */
 .rchr .title-h2 { font-size: 1.5rem; }
-.rchr .title-h3 { font-size: 1.25rem; line-height: 1.875rem; font-weight: 700; }
+.rchr .title-h3, .rchr .content-wrap .title-h3 { font-size: 1.25rem; line-height: 1.875rem; font-weight: 700; margin-bottom: 0; }
 .rchr .title-h3 > span { color: #33B0C6; margin-left: 0.5rem; }
 .rchr .subp-tit-area > p:first-child { font-size: 1.125rem; font-weight: 400; line-height: 1.75rem; }
-.rchr .subp-tit-area > p:last-child { font-size: 1rem; line-height: 1.6rem; }
+.rchr .subp-tit-area > p:last-child, .rchr .sect-box > div > p, .rchr .content-wrap > p { font-size: 1rem; line-height: 1.6rem; }
 .rchr .sect-box { display: flex; flex-direction: column; margin-right: 0; }
 .rchr .sect-box > div { text-align: center; margin: 0; padding: 2.5rem 2.5rem; }
 .rchr .sect-box > div:nth-of-type(3), .rchr .sect-box > div:nth-of-type(5) { margin: -1.8rem 0 0 0; }
 .rchr .sect-box > div:nth-of-type(2) { background-color: #fff; border: 1px solid #E1E7EA; padding-top: 2rem; }
 .rchr .sect-box > div > span { font-size: 1.125rem; }
-.rchr .sect-box > div > p { font-size: 1rem; line-height: 1.6rem; }
 .rchr .sect-box > div > p.desc { font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem; }
 .rchr .sect-box > p.sub-title { font-size: 1.25rem; color: #171819; font-weight: 600; margin: 2rem 0 1rem 0; display: flex; width: 100%; align-items: center; }
 .rchr .sect-box > p.sub-title:first-child { margin-top: 0; }
@@ -692,3 +691,15 @@
 .rchr .grid-cont-wrap > div > div > img { width: 3.75rem; }
 .rchr .grid-cont-wrap > div > div > span { font-size: 1rem; line-height: 1.6rem; }
 .rchr #tab1-content .content-item03 article:last-child .grid-cont-wrap > div > div { border: none; margin-bottom: 0.65rem; padding-bottom: 0; }
+.rchr .content-wrap .sub-title { font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 0.65rem; margin-top: 1.5rem;}
+.rchr .program-cont-wrap { flex-direction: column; margin-top: 1.5rem; gap: 1rem; }
+.rchr .program-cont-wrap > div { padding: 1.5rem; }
+.rchr .program-cont-wrap > div .program-tit-wrap { margin-bottom: 1.5rem; padding-bottom: 1.5rem; gap: 1rem; }
+.rchr .program-cont-wrap > div .program-tit-wrap > img { width: 5rem; }
+.rchr .program-cont-wrap > div .program-tit-wrap span { font-size: 1.125rem; line-height: 1.75rem; }
+.rchr .program-cont-wrap > div .program-tit-wrap p { font-size: 0.875rem; line-height: 1.3125rem; }
+.rchr .program-cont-wrap > div > p > strong { width: 4.5rem; }
+.rchr .program-cont-wrap > div > p, .rchr .program-cont-wrap .text-list > li { font-size: 0.875rem; line-height: 1.3125rem; margin-bottom: 0.25rem; }
+.rchr .program-cont-wrap .program-tag-wrap { flex-direction: column; margin-top: 1rem; }
+.rchr .program-cont-wrap .program-tag-wrap > p { font-size: 0.875rem; line-height: 1.3125rem; padding: 0.375rem 1.25rem; }
+.rchr .grid-cont-wrap > div > p > strong { font-size: 1rem; color: #171819; font-weight: 500; }
