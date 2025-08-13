@@ -137,6 +137,8 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 [class^="icon-btn"].icon-white .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
 [class^="icon-btn"].icon-white:hover .icon-area {background-color: #fff;}
 [class^="icon-btn"].icon-white:hover .icon-area::before {background-image: url(../../images/icon/icon_download.svg);}
+[class^="icon-btn"].icon-cs .icon-area::before {background-image: url(../../images/icon/icon_cs_wh.svg);}
+[class^="icon-btn"].icon-cs:hover .icon-area::before {background-image: url(../../images/icon/icon_cs.svg);}
 [class^="icon-btn"].icon-gray {border-color: var(--colorElement-light-stroke-stroke-default03); color: var(--colorElement-light-text-text-default02);}
 [class^="icon-btn"].icon-gray:hover {color: var(--colorElement-light-text-text-default01); background: var(--colorElement-light-fill-fill-default04);}
 [class^="icon-btn"].icon-gray:hover .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
@@ -546,6 +548,9 @@ table {border-collapse: collapse;}
 .cont-list li > p {font-weight: 400;}
 .cont-list li .noti-desc {position: relative; padding-left: 2.37rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;  color: var(--colorElement-light-text-text-default02);}
 .cont-list li .noti-desc::before {content: "*"; display: inline-block; position: absolute; top:50%; left:1.25rem; transform: translateY(-50%);}
+
+.asterisk-text {display: flex; gap: 0.38rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.asterisk-text::before {flex-shrink: 0; content: ""; display: block; margin: 0.55rem 0.19rem; width: 0.37894rem; height: 0.37894rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
 
 /* popup */
 .modal-pop:not(.toast) {visibility: hidden; position: fixed; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 100;}

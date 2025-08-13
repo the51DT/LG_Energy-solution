@@ -549,7 +549,7 @@
 .download .search-box .btn-search-reset img { width: .5rem; height: .5rem; }
 .download .tab-category { padding-left: 0; }
 .tab-cate-wrap.type3 .tab-category > li button { align-items: center; height: 2.5rem; padding: .375rem 1.5rem; font-size: 1rem; line-height: 1.4rem; }
-
+.download .cont-area-wrap .cont-area-sect > section {padding-top: 1rem;}
 .download-list>li { align-items: center; gap: 1rem; }
 .download-list .checkbox { display: flex; align-items: center; padding-left: 0; }
 .download-desc>li { gap: .75rem; padding: 1.25rem 0;}
@@ -558,7 +558,6 @@
 .download-desc .download-tit { font-size: 1rem; line-height: 1.6rem; }
 .download .btm-btn-area {display: flex; flex-direction: column-reverse;}
 .download .btm-btn { margin-top: 2rem; }
-.download #tab5-content .tab-cate-wrap { margin-top: 1.25rem; }
 .download #tab5-content .tab-category { gap: 1rem; }
 .download #tab5-content .tab-category > li button { font-size: 1rem; line-height: 1.4rem;}
 .download #tab5-content .cont-area-wrap .cont-area-sect > section { padding-top: 1.5rem; }
@@ -567,8 +566,11 @@
 .btn-download .btn-download-txt { font-size: 0.8125rem; line-height: 1.1375rem; }
 .btn-download .icon-download { width: 1.125rem; height: 1.125rem; }
 
-.download .no-result-wrap { padding: 6.25rem 0; }
-.download .no-result-wrap .no-result { font-size: 1rem; line-height: 1.6rem; }
+.download .no-result-wrap .no-result { padding: 6.25rem 0; font-size: 1rem; line-height: 1.6rem; }
+.download .no-result-wrap>button { width: 20rem; margin: 1.5rem 0 6.25rem; }
+
+.download .total-wrap {margin-top: 1.25rem;}
+.download .total-wrap .total {font-size: 1rem; line-height: 1.6rem;}
 
 /* 문의하기 */
 .wrap.cont .content-header .subp-tit { font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #171819; }
@@ -638,3 +640,24 @@
 .rctt .btn-wrap [class^="icon-btn"][class*="-sm"] { font-size: 1.125rem; padding: 1.25rem 2.5rem; }
 .rctt .btn-wrap [class^="icon-btn"][class*="-sm"] .icon-area { width: 2.25rem; height: 2.25rem; }
 .rctt .btn-wrap [class^="icon-btn"][class*="-sm"] .icon-area::before { width: 1.25rem; height: 1.25rem; }
+
+/* 서비스 - 전력 중개 */
+.serv-trading .cont-head-wrap {margin-bottom: 0;}
+.serv-trading .tab-cate-wrap {margin-top: 1.5rem;}
+.serv-trading .tab-cate-wrap.new .tab-category {padding: 0;}
+
+.serv-trading .content-item01 .content-sect {padding-top: 2rem;}
+.serv-trading .content-sect .cont-area-wrap {width: 100%;}
+.serv-trading .cont-area-wrap .article-tit {font-size: 1.25rem; line-height: 1.875rem;}
+.serv-trading .article-content .article-desc {padding: 1.5rem 0; font-size: 1rem; line-height: 1.6rem;}
+.adv-wrap, .serv-trading .service-wrap {gap: 1rem; margin-top: 1rem;}
+.adv-wrap .adv-box {width: 100%; padding: 1.5rem; gap: 0;}
+.adv-wrap .adv-box .adv-img {width: 5rem; height: 5rem;}
+.adv-wrap .adv-box .adv-tit {margin: 1rem 0 .5rem; font-size: 1.125rem; line-height: 1.75rem;}
+.adv-wrap .adv-box .adv-desc {font-size: .875rem; line-height: 1.3125rem;}
+.serv-trading .service-wrap .service-box {width: 100%; padding: 1.5rem;}
+.serv-trading .service-wrap .service-tit-wrap {flex-direction: column; gap: 1rem; padding-bottom: 1rem;}
+.serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
+.serv-trading .service-wrap .service-desc {padding-top: 1rem; font-size: .875rem; line-height: 1.3125rem; text-align: center;}
+.serv-trading .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 9.25rem;}
+
