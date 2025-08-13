@@ -455,7 +455,63 @@
 .post-grid > li .bottom-wrap .link-wrap {display: flex; gap: 0.62rem;}
 .post-grid > li .bottom-wrap .link-wrap .link-btn {display: flex; justify-content: space-between; align-items: center; width: calc(50% - (0.62rem / 2)); padding: 0.75rem 1.5rem; border-radius: 0.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: var(--colorElement-light-fill-fill-on-primary); font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
 .post-grid > li .bottom-wrap .link-wrap .link-btn[target="_blank"] .icon-area {display: block; width: 1.75rem; height: 1.75rem; background-position: center; background-size: 1.25rem 1.25rem; background-repeat: no-repeat; background-image: url(../../images/icon/icon_link_external_bl.svg);}
+.post-grid > li .bottom-wrap .link-wrap .link-btn:hover {background-color: var(--colorElement-light-fill-fill-default00); color: var(--colorElement-light-text-text-on-primary);}
+.post-grid > li .bottom-wrap .link-wrap .link-btn[target="_blank"]:hover .icon-area {background-image: url(../../images/icon/icon_link_external.svg);}
 
+
+/* 채용정보 (rcif) */
+.rcif .tab-content > .content-sect.bg-gray {padding-block: 5rem 7.5rem;}
+.rcif .tab-content > .content-wrap .content-sect {padding-top: 7.5rem;}
+.rcif [class^="content-item"]:has(.tab-content > .content-sect.bg-gray),
+.rcif [class^="content-item"]:has(> .content-sect.bg-gray) {padding-bottom: 0;}
+.rcif [class^="content-item"]:not(:has(.tab-content > .content-sect.bg-gray)) .content-sect {padding-top: 0;}
+.rcif [class^="content-item"]:has(> .content-sect.bg-gray) > .content-sect.bg-gray {margin-top: 5rem; padding-block: 5rem 15rem;}
+.rcif .type-notice {font-size: 1.5rem; font-weight: 400; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.25rem;}
+.rcif .type-notice strong {font-weight: 600;}
+.rcif .process-box {display: flex; justify-content: space-between; align-items: center; padding: 2.5rem; border-radius: 18.3687rem; background-color: var(--colorElement-light-fill-fill-primary); margin-bottom: 3.75rem;}
+.rcif .process-box > li:not(.bar) {width: 15rem; height: 15rem; padding: 2.75rem 2.875rem; border-radius: 8.6875rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
+.rcif .process-box > li:not(.bar) .process-step {display: flex; flex-direction: column; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-disabled);}
+.rcif .process-box > li:not(.bar) .process-step > span {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-primary);}
+.rcif .process-box > li:not(.bar) .process-tit {margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.rcif .process-box > li:not(.bar) .process-desc {margin-top: 0.5rem; font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
+.rcif .process-box > li.bar {width: 2.5rem; height: 2.5rem; background-image: url(../../images/icon/icon_link_arrow.svg); background-position: center; background-repeat: no-repeat; background-size: 2rem 2rem;}
+.rcif .asterisk-text {color: var(--colorElement-light-text-text-default03);}
+.rcif .process-list {display: flex; flex-direction: column; gap: 1.25rem; padding-inline: 5rem;}
+.rcif .process-list > li {display: flex; gap: 7.5rem; padding: 1.875rem; border-radius: 1rem; background-color: #fff;}
+.rcif .process-list > li .process-step {position: relative; flex-shrink: 0; height: fit-content; padding-left: 2.37rem; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-primary);}
+.rcif .process-list > li .process-step::before {content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); display: block; width: 0.5rem; height: 0.5rem;border: 6px solid rgba(62, 194, 207, 0.30); border-radius: 100%;}
+.rcif .process-list > li .process-step::after {content: ""; position: absolute; left: 6px; top: 50%; transform: translateY(-50%); display: block; width: 0.5rem; height: 0.5rem; background-color: var(--colorElement-light-fill-fill-primary); border-radius: 100%;}
+.rcif .process-list > li .text-list-wrap .process-tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.25rem;}
+.rcif .process-list > li .text-list-wrap .text-list {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.rcif .process-list > li .text-list-wrap .text-list li > strong {font-weight: 600;}
+.rcif .process-list > li .text-list-wrap .text-list li + li {margin-top: 0.63rem;}
+.rcif .process-list > li .text-list-wrap .text-list + .asterisk-text {margin-top: 0.63rem;}
+.rcif .process-list + .btn-wrap {margin-top: 5rem;}
+.rcif .btn-wrap {display: flex; justify-content: center; gap: 1.25rem;}
+.rcif .acc-list-tit {font-size: 2rem; font-weight: 700; line-height: 3rem; margin-bottom: 1.25rem;}
+.rcif .accordion-list .accordion-btn .acd-group {gap: 1.25rem;}
+.rcif .accordion-list.type2 .accordion-btn .acd-group .acd-icon {font-size: 1.75rem; font-weight: 600; line-height: 2.625rem; width: auto;}
+.rcif .accordion-list.on .accordion-btn .acd-tit {font-size: 1.25rem; line-height: 2rem;}
+.rcif .accordion-list .accordion-content {margin-inline: 5.25rem; padding: 0; padding-bottom: 1.25rem; background-color: unset;}
+.rcif .accordion-list .accordion-content .btn-wrap {justify-content: flex-start; margin-top: 2.5rem;}
+.rcif .acc-wrap + .btn-wrap {margin-top: 3.75rem;}
+.rcif .job-list {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;}
+.rcif .job-list > li {padding: 1.88rem 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.rcif .job-list > li .job-tit {display: flex; gap: 0.62rem; align-items: center; padding-bottom: 0.62rem; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.rcif .job-list > li .job-tit > img {flex-shrink: 0; width: 5rem; height: 5rem; object-fit: contain;}
+.rcif .job-list > li .job-tit > p {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
+.rcif .job-list > li .text-list-wrap {padding-top: 1.875rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.rcif .job-list > li .text-list-wrap .text-list > li::before {left: 0.25rem; top: 0.69rem; transform: translate(0, 0);}
+.rcif .job-list + .btn-wrap {margin-top: 5rem;}
+.rcif .job-story {display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;}
+.rcif .job-story > li > a {width: 100%; height: 100%; padding: 1.875rem; display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.rcif .job-story > li > a:hover {outline: 2px solid var(--colorElement-light-stroke-stroke-primary);}
+.rcif .job-story > li > a .tit {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.rcif .job-story > li > a .thum-wrap {position: relative; width: 100%; height: auto; aspect-ratio: 285 / 160;}
+.rcif .job-story > li > a .thum-wrap > img {width: 100%; height: 100%; object-fit: cover;}
+.rcif .job-story > li > a .thum-wrap::before {content: ""; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);}
+.rcif .job-story > li > a .thum-wrap::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 2.5rem; height: 2.5rem; background-image: url(../../images/icon/icon_play.svg); background-size: 2.5rem 2.5rem; background-repeat: no-repeat; background-position: center;}
+.rcif .job-story + .paging-wrap {margin-top: 3.75rem;}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
