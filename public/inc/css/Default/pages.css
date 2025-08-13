@@ -1190,3 +1190,17 @@
 .rcct .detail-desc-wrap p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
 .rcct .tag-wrap { display: flex; justify-content: flex-end; gap: 0.63rem; margin-top: 1.88rem; }
 .rcct .tag-wrap > p { font-size: 1.125rem; color: #555758; font-weight: 500; line-height: 1.8rem; padding: 0.625rem 1.875rem; background-color: #f3f5f7; border-radius: 62rem; }
+.rcct .communication-cont-wrap { display: flex; flex-direction: column; gap: 1.25rem; }
+.rcct .communication-cont-detail { display: flex; gap: 2.5rem; }
+.rcct .communication-cont-detail > div { flex: 1; }
+.rcct .chart-header { display: flex; justify-content: space-between; align-items: center; }
+.rcct .chart-content > img { width: 100%; height: 100%; object-fit: contain; }
+.rcct .chart-title { font-weight: 600; }
+.rcct .chart-unit { color: #858889; }
+.rcct .communication-cont-wrap .detail-tit-wrap > span { color: #33B0C6; }
+.rcct .evaluation-wrap { display: flex; align-items: center; }
+.rcct .evaluation-wrap > div { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; padding: 2.5rem; gap: 1.88rem; border-right: 1px solid #C9CED1; }
+.rcct .evaluation-wrap > div:last-child { border: none; }
+.rcct .evaluation-wrap > div img { height: 11.25rem; width: max-content; }
+.rcct .evaluation-wrap > div p { font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; }
+.rcct .evaluation-tit { border-bottom: none; padding: 0; }

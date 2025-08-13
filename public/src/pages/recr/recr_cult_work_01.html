@@ -20,59 +20,72 @@
     <div class="wrap rcct"> <!-- wrap에 화면id(id) 관련 클래스 추가하여 사용 -->
 
         <!-- header -->
-        <header class="header-wrap">
+        <header class="header-wrap parent-event">
             <div class="header-area pc-only">
                 <div class="header-cont">
-                    <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img
-                                src="../../../inc/images/symbol/CI.svg"></a></h1>
+                    <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/CI.svg"
+                                alt=""></a>
+                    </h1>
                     <div class="sitemap-wrap">
-                        <nav class="nav-wrap">
+                        <nav class="nav-wrap ">
                             <ul class="gnb__tab-btn-wrap">
                                 <li class="depth01">
-                                    <a href="#">사업영역</a>
+                                    <button class="parent-event_btn">제품</button>
                                     <ul>
-                                        <li class="depth02"><a href="#">제품</a></li>
-                                        <li class="depth02"><a href="#">서비스</a></li>
+                                        <li class="depth02"><a href="#">사업별 솔루션</a></li>
+                                        <li class="depth02"><a href="#">폼펙터</a></li>
+                                        <li class="depth02"><a href="#">소재</a></li>
                                     </ul>
                                 </li>
                                 <li class="depth01">
-                                    <a href="../cyanogen/cyanogen_sub1.html">회사소개</a>
+                                    <button class="parent-event_btn">서비스</button>
                                     <ul>
-                                        <li class="depth02"><a href="#">소개</a></li>
+                                        <li class="depth02"><a href="#">B.around</a></li>
+                                        <li class="depth02"><a href="#">B-Lifecare</a></li>
+                                        <li class="depth02"><a href="#">B-Once</a></li>
+                                        <li class="depth02"><a href="#">KooRoo</a></li>
+                                        <li class="depth02"><a href="#">전력중개</a></li>
+                                        <li class="depth02"><a href="#">ESS SI</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth01">
+                                    <button class="parent-event_btn">회사정보</button>
+                                    <ul>
+                                        <li class="depth02"><a href="#">회사소개</a></li>
                                         <li class="depth02"><a href="#">정도경영</a></li>
-                                        <li class="depth02"><a href="../cyanogen/cyanogen_sub2.html">글로벌 네트워크</a></li>
-                                        <li class="depth02"><a href="#">뉴스룸</a></li>
+                                        <li class="depth02"><a href="#">사업장</a></li>
                                         <li class="depth02"><a href="#">R&D</a></li>
+                                        <li class="depth02"><a href="#">뉴스룸</a></li>
                                     </ul>
                                 </li>
                                 <li class="depth01">
-                                    <a href="../sust/sust_sys_strategy_01.html">지속가능경영</a>
+                                    <button class="parent-event_btn">지속가능경영</button>
                                     <ul>
                                         <li class="depth02"><a href="../sust/sust_sys_strategy_01.html">추진체계</a></li>
                                         <li class="depth02"><a href="#">환경</a></li>
                                         <li class="depth02"><a href="#">사회</a></li>
                                         <li class="depth02"><a href="#">지배구조</a></li>
-                                        <li class="depth02"><a href="#">성과</a></li>
+                                        <li class="depth02"><a href="#">성과 및 보고</a></li>
                                     </ul>
                                 </li>
                                 <li class="depth01">
-                                    <a href="../ir/ir_fin_sheet_01.html">투자정보</a>
+                                    <button class="parent-event_btn">투자정보</button>
                                     <ul>
-                                        <li class="depth02"><a href="../ir/ir_fin_sheet_01.html">재무정보</a></li>
+                                        <li class="depth02"><a href="#">재무정보</a></li>
                                         <li class="depth02"><a href="#">주식정보</a></li>
                                         <li class="depth02"><a href="#">공시정보</a></li>
-                                        <li class="depth02"><a href="../ir/ir_irinfo_event_01.html">IR정보</a></li>
-                                        <li class="depth02"><a href="../ir/ir_irdata_report_01.html">IR자료</a></li>
+                                        <li class="depth02"><a href="#">IR정보</a></li>
+                                        <li class="depth02"><a href="#">IR자료</a></li>
                                     </ul>
                                 </li>
                                 <li class="depth01">
-                                    <a href="#">채용정보</a>
+                                    <button class="parent-event_btn">인재채용</button>
                                     <ul>
                                         <li class="depth02"><a href="#">인재상</a></li>
                                         <li class="depth02"><a href="#">인사제도</a></li>
+                                        <li class="depth02"><a href="#">조직문화</a></li>
                                         <li class="depth02"><a href="#">채용정보</a></li>
-                                        <li class="depth02"><a href="#" class="active">채용공고</a></li>
-                                        <li class="depth02"><a href="#">회사생활</a></li>
+                                        <li class="depth02"><a href="#">채용공고</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -83,7 +96,17 @@
                             <!-- 250717 수정 : 고객지원 / 언어선택 디자인 변경 -->
                             <div class="util-item-cs">
                                 <img class="icon-cs" src="../../../inc/images/icon/icon_msg_chat.svg" alt="고객지원">
-                                <a href="#" class="menu-title">고객지원</a>
+                                <button class="menu-title"
+                                    onclick="pubUi.popUp.open('.cs-cont','.menu-title');">고객지원</button>
+                                <div class="cs-cont">
+                                    <div class="pop-wrap">
+                                        <a href="" class="cs-item">다운로드</a>
+                                        <a href="" class="cs-item">문의하기</a>
+                                        <a href="" class="cs-item">FAQ</a>
+                                        <button class="cs-close"
+                                            onclick="pubUi.popUp.close('.cs-cont','.menu-title');"></button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="utile-item">
                                 <div class="lang-wrap">
@@ -103,11 +126,13 @@
                                 </div><!-- //lang-wrap -->
                             </div>
                             <div class="utile-item02">
-                                <button class="search-btn"></button>
+                                <button class="search-btn header_search-btn search-reset"
+                                    onclick="pubUi.popUp.open('.header_search-area','.header_search-btn');"></button>
                             </div>
                             <!-- //250717 수정 : 고객지원 / 언어선택 디자인 변경 -->
                             <div class="utile-item03">
-                                <button class="nav-btn" title="메뉴 열기">
+                                <button class="nav-btn" title="메뉴 열기"
+                                    onclick="pubUi.popUp.open('.sitemap_pop-wrap','.nav-btn');">
                                     <i class="x-icon">
                                         <span class="x-line"></span>
                                         <span class="x-line"></span>
@@ -121,50 +146,258 @@
                     </div>
                 </div>
             </div>
-            <!-- 250717 수정 : mobile 임시 헤더 추가 : 메뉴 펼쳤을때 마크업 추가 작업 필요 -->
-            <div class="header-area mo-only">
-                <div class="header-cont">
-                    <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img
-                                src="../../../inc/images/symbol/CI.svg"></a></h1>
-                    <div class="utile-wrap">
-                        <div class="utile-cont">
-                            <div class="utile-item">
-                                <button class="search-btn"></button>
-                            </div>
-                            <div class="utile-item02">
-                                <div class="lang-wrap">
-                                    <div class="select-cate activeSelect">
-                                        <button class="lang-button" aria-haspopup="listbox"><img
-                                                src="../../../inc/images/icon/icon_global_img.svg" alt="언어 선택"><i
-                                                class="select-btn-right-icon"></i></button>
-                                        <ul class="select-menu" role="listbox">
-                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">KR</a>
-                                            </li>
-                                            <li><a href="javascript:;" role="option" tabindex="0">EN</a></li>
-                                            <li><a href="javascript:;" role="option" tabindex="0">CN</a></li>
-                                            <li><a href="javascript:;" role="option" tabindex="0">PL</a></li>
-                                            <li><a href="javascript:;" role="option" tabindex="0">DE</a></li>
-                                        </ul>
-                                    </div>
-                                </div><!-- //lang-wrap -->
-                            </div>
-                            <div class="utile-item03">
-                                <button class="nav-btn" title="메뉴 열기">
-                                    <i class="x-icon">
-                                        <span class="x-line"></span>
-                                        <span class="x-line"></span>
-                                    </i>
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //250717 수정 : mobile 임시 헤더 추가 : 메뉴 펼쳤을때 마크업 추가 작업 필요 -->
         </header>
+        <div class="header_search-area target-header_search search-reset">
+            <div class="pop-wrap">
+                <!-- 엔터 클릭시 검색 -->
+                <div class="search-result searchEvt pc-only">
+                    <img src="../../../inc/images/icon/icon_head_search.svg" alt="">
+                    <input type="text" placeholder="검색어를 입력해 주세요.">
+                    <button aria-label="삭제" class="btn-delete" style="display: none;">
+                        <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="sitemap_pop-wrap">
+            <div class="pop-wrap">
+                <div class="sitemap_pop-header">
+                    <a class="sitemap_pop-ci" href="#"><img src="../../../inc/images/symbol/CI_wh.svg" alt=""></a>
+                </div>
+                <ul class="sitemap-area">
+                    <li class="depth01">
+                        <a href="#">제품</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">사업별 솔루션</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">승용 EV</a></li>
+                                    <li class="depth03"><a href="#">상용 EV</a></li>
+                                    <li class="depth03"><a href="#">LEV</a></li>
+                                    <li class="depth03"><a href="#">ESS</a></li>
+                                    <li class="depth03"><a href="#">스마트기기</a></li>
+                                    <li class="depth03"><a href="#">파워툴</a></li>
+                                    <li class="depth03"><a href="#">중장비</a></li>
+                                    <li class="depth03"><a href="#">로봇</a></li>
+                                    <li class="depth03"><a href="#">미래모빌리티</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">폼펙터</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">원통형</a></li>
+                                    <li class="depth03"><a href="#">파우치형</a></li>
+                                    <li class="depth03"><a href="#">각형</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">소재</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">NCM 배터리</a></li>
+                                    <li class="depth03"><a href="#">LFP 배터리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+                        <a href="#">서비스</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">B.around</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">B-Lifecare</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">B-Once</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">KooRoo</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">전력중개</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">ESS SI</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+                        <a href="#">회사정보</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">회사소개</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">회사개요</a></li>
+                                    <li class="depth03"><a href="#">비전</a></li>
+                                    <li class="depth03"><a href="#">연혁</a></li>
+                                    <li class="depth03"><a href="#">CI</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">정도경영</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">정도경영 소개</a></li>
+                                    <li class="depth03"><a href="#">윤리규범</a></li>
+                                    <li class="depth03"><a href="#">정도경영 프로그램</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">사업장</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">R&D</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">R&D 현황</a></li>
+                                    <li class="depth03"><a href="#">R&D 분야</a></li>
+                                    <li class="depth03"><a href="#">차세대 전지</a></li>
+                                    <li class="depth03"><a href="#">오픈 이노베이션</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">뉴스룸</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+                        <a href="#">지속가능경영</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="../sust/sust_sys_strategy_01.html">추진체계</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">비전 및 전략</a></li>
+                                    <li class="depth03"><a href="#">거버넌스</a></li>
+                                    <li class="depth03"><a href="#">글로벌 파트너십</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">환경</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">환경경영z</a></li>
+                                    <li class="depth03"><a href="#">기후행동z</a></li>
+                                    <li class="depth03"><a href="#">자원선순환z</a></li>
+                                    <li class="depth03"><a href="#">환경영향 관리z</a></li>
+                                    <li class="depth03"><a href="#">생물다양성 관리z</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">사회</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">밸류체인 ESG경영</a></li>
+                                    <li class="depth03"><a href="#">동반성장</a></li>
+                                    <li class="depth03"><a href="#">제품책임</a></li>
+                                    <li class="depth03"><a href="#">안전보건 관리</a></li>
+                                    <li class="depth03"><a href="#">인권경영</a></li>
+                                    <li class="depth03"><a href="#">사회공헌</a></li>
+                                    <li class="depth03"><a href="#">정보보안</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">지배구조</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">이사회</a></li>
+                                    <li class="depth03"><a href="#">위원회</a></li>
+                                    <li class="depth03"><a href="#">준법경영</a></li>
+                                    <li class="depth03"><a href="#">위기관리</a></li>
+                                    <li class="depth03"><a href="#">윤리경영</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">성과 및 보고</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">보고서</a></li>
+                                    <li class="depth03"><a href="#">평가</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+                        <a href="#">투자정보</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">재무정보</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">재무상태표</a></li>
+                                    <li class="depth03"><a href="#">손익계산서</a></li>
+                                    <li class="depth03"><a href="#">현금흐름도</a></li>
+                                    <li class="depth03"><a href="#">신용등급</a></li>
+                                    <li class="depth03"><a href="#">ESG 채권</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">주식정보</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">주가정보</a></li>
+                                    <li class="depth03"><a href="#">주주환원</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">공시정보</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">전자공고</a></li>
+                                    <li class="depth03"><a href="#">공시자료</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">IR정보</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">IR 행사</a></li>
+                                    <li class="depth03"><a href="#">실적발표</a></li>
+                                    <li class="depth03"><a href="#">주주총회</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">IR자료</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">사업보고서</a></li>
+                                    <li class="depth03"><a href="#">영업보고서</a></li>
+                                    <li class="depth03"><a href="#">감사보고서</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+                        <a href="#">인재채용</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">인재상</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">인사제도</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">인사원칙</a></li>
+                                    <li class="depth03"><a href="#">인재육성</a></li>
+                                    <li class="depth03"><a href="#">복리후생</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">조직문화</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">일하는 방식</a></li>
+                                    <li class="depth03"><a href="#">소통문화</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">채용정보</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">채용절차</a></li>
+                                    <li class="depth03"><a href="#">직무소개</a></li>
+                                    <li class="depth03"><a href="#">채용 스토리</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">채용공고</a>
+                                <ul>
+                                    <li class="depth03"><a href="#"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="sitemap-close" onclick="pubUi.popUp.close('.sitemap_pop-wrap','.nav-btn');"><img
+                        src="../../../inc/images/icon/icon_close-md_wh.svg" alt=""></button>
+            </div>
+        </div>
         <!-- //header -->
         <!-- section -->
         <section id="container" class="content-wrap">
@@ -229,6 +462,10 @@
                             <div class="content-header">
                                 <div class="content-header-cont">
                                     <h2 class="title-h1">일하는 방식</h2>
+                                    <h3 class="subp-tit">
+                                        성장 · 도전 · 실행 · 협업하는 힘으로 성과를 만드는<br>
+                                        엔솔러의 <strong> 일하는 방식 7가지</strong>
+                                    </h3>
                                 </div>
                             </div>
                             <div class="content-item01 ful bg-gray" data-bgtype="gray">
@@ -407,27 +644,31 @@
                                                 <div class="system-cont-detail">
                                                     <div class="detail-tit-wrap">
                                                         <span>01</span>
-                                                        <p>직원경험 서베이이</p>
+                                                        <p>직원경험 서베이</p>
                                                     </div>
-                                                    <div class="detail-desc-wrap">
-                                                        <p>LG에너지솔루션은 구성원이 일하는 과정에서 핵심가치 실천수준을 높이고, 몰입 저해요인을
-                                                            관리함으로써 긍정적인 직원경험을 확대하고 직원몰입 및 조직성과를 높이기 위해 국내·외
-                                                            사무기술직 전 임직원을 대상으로 연 2회 서베이를 실시하고 있습니다.</p>
-                                                        <p>본 서베이를 통해 구성원이 일하는 과정에서 핵심가치를 얼마나 적용하고 있는지 실천수준을 점검하고,
-                                                            몰입을 저해하는 요인들을 규명하여, 집중적으로 개선 합니다.</p>
-                                                        <p>
-                                                            서베이 결과는 각 조직의 부문담당급 이상 리더와 주니어보드에게 리포트 형태로 제공되며, 리더 주도의
-                                                            개선활동을 추진함으로써 단위 조직별 변화관리를 실행합니다. 또한 개선지원이 요구되는 조직의 경우,
-                                                            이슈 해결과 Workrule 수립 중심의 조직개발 프로그램 및 리더 코칭 등 맞춤형 Intervention을
-                                                            실시하고 있습니다.
-                                                        </p>
-                                                    </div>
-                                                    <div class="detail-desc-wrap">
-                                                        <div>
-                                                            <p>핵심가치 실천지수 긍정 응답률 (2024~2025)</p>
-                                                            <p>[단위:%]</p>
+                                                    <div class="communication-cont-detail">
+                                                        <div class="detail-desc-wrap text-content">
+                                                            <p>LG에너지솔루션은 구성원이 일하는 과정에서 핵심가치 실천수준을 높이고, 몰입 저해요인을
+                                                                관리함으로써 긍정적인 직원경험을 확대하고 직원몰입 및 조직성과를 높이기 위해 국내·외
+                                                                사무기술직 전 임직원을 대상으로 연 2회 서베이를 실시하고 있습니다.</p>
+                                                            <p>본 서베이를 통해 구성원이 일하는 과정에서 핵심가치를 얼마나 적용하고 있는지 실천수준을 점검하고,
+                                                                몰입을 저해하는 요인들을 규명하여, 집중적으로 개선 합니다.</p>
+                                                            <p>
+                                                                서베이 결과는 각 조직의 부문담당급 이상 리더와 주니어보드에게 리포트 형태로 제공되며, 리더 주도의
+                                                                개선활동을 추진함으로써 단위 조직별 변화관리를 실행합니다. 또한 개선지원이 요구되는 조직의 경우,
+                                                                이슈 해결과 Workrule 수립 중심의 조직개발 프로그램 및 리더 코칭 등 맞춤형
+                                                                Intervention을
+                                                                실시하고 있습니다.
+                                                            </p>
                                                         </div>
-                                                        <img src="../../../inc/images/img/rcct_tab2_img1.png" alt="2024년 상반기 78% 2024년 하반기 87% 2025년 상반기 78%">
+                                                        <div class="detail-desc-wrap chart-content">
+                                                            <div class="chart-header">
+                                                                <p class="chart-title">핵심가치 실천지수 긍정 응답률 (2024~2025)</p>
+                                                                <p class="chart-unit">[단위:%]</p>
+                                                            </div>
+                                                            <img src="../../../inc/images/img/rcct_tab2_img1.png"
+                                                                alt="2024년 상반기 78% 2024년 하반기 87% 2025년 상반기 78%">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -438,10 +679,13 @@
                                                         <p>CEO 임직원 소통채널 운영 EnTalk</p>
                                                     </div>
                                                     <div class="detail-desc-wrap">
-                                                        <p>LLG에너지솔루션은 2021년 11월에 국내외 임직원들과 CEO가 직접 소통할 수 있는 핫라인 채널인 'EnTalk(엔톡)'을 개설하였으며, 2024년 1월부터 2025년 6월까지 총 386 건의 
+                                                        <p>LLG에너지솔루션은 2021년 11월에 국내외 임직원들과 CEO가 직접 소통할 수 있는 핫라인 채널인
+                                                            'EnTalk(엔톡)'을 개설하였으며, 2024년 1월부터 2025년 6월까지 총 386 건의
                                                             개선 아이디어가 게시되며 활발히 운영 중 입니다.</p>
                                                         <p>
-                                                            2024년에는 대표적으로 ʻ난임 관련 비급여 의료비 지급 기준 확대’, ʻ에너지플랜트 주택자금 운영 기준 확대’, ʻ에너지플랜트 – 대전 기술연구원 간 근무지 이동 시 전임여비 및 공가 지원’, ʻ과천 R&D 캠퍼스 근무자의 
+                                                            2024년에는 대표적으로 ʻ난임 관련 비급여 의료비 지급 기준 확대’, ʻ에너지플랜트 주택자금 운영 기준
+                                                            확대’, ʻ에너지플랜트 – 대전 기술연구원 간 근무지 이동 시 전임여비 및 공가 지원’, ʻ과천 R&D
+                                                            캠퍼스 근무자의
                                                             주차공간 추가 확보’ 등 일과 가정의 양립과 구성원 근무 만족도 향상을 위한 개선이 다수 이루어졌습니다.
                                                         </p>
                                                     </div>
@@ -454,39 +698,39 @@
                                                         <p>칭찬 격려 프로그램 ʻThank you, ENSOL’</p>
                                                     </div>
                                                     <div class="detail-desc-wrap">
-                                                        <p>LG에너지솔루션은 구성원이 일하는 과정에서 핵심가치 실천수준을 높이고, 몰입 저해요인을
-                                                            관리함으로써 긍정적인 직원경험을 확대하고 직원몰입 및 조직성과를 높이기 위해 국내·외
-                                                            사무기술직 전 임직원을 대상으로 연 2회 서베이를 실시하고 있습니다.</p>
-                                                        <p>본 서베이를 통해 구성원이 일하는 과정에서 핵심가치를 얼마나 적용하고 있는지 실천수준을 점검하고,
-                                                            몰입을 저해하는 요인들을 규명하여, 집중적으로 개선 합니다.</p>
+                                                        <p>ʻThank you, ENSOL’은 기존 회사 내 임직원 칭찬과 격려 공유 목적으로
+                                                            운영되던 ʻLGENergy’ 시스템을 확대 개편하여 2023년 10월에 새롭게 출범한 플랫폼입니다. </p>
                                                         <p>
-                                                            서베이 결과는 각 조직의 부문담당급 이상 리더와 주니어보드에게 리포트 형태로 제공되며, 리더 주도의
-                                                            개선활동을 추진함으로써 단위 조직별 변화관리를 실행합니다. 또한 개선지원이 요구되는 조직의 경우,
-                                                            이슈 해결과 Workrule 수립 중심의 조직개발 프로그램 및 리더 코칭 등 맞춤형 Intervention을
-                                                            실시하고 있습니다.
+                                                            ʻThank you, ENSOL’ 플랫폼에서 전 임직원은 매년 12개의 Energy(에너지)를
+                                                            부여받고, 다른 구성원에게 고마움의 메시지와 함께 Energy를 보낼 수 있으며, 본인이 받은 Energy는
+                                                            추후에 정산받을 수 있습니다.
+                                                            국내 뿐만 아니라 전 세계 법인들도(중국, 폴란드, 미국, 독일 등) 동일한 플랫폼을 활용 중입니다.
+                                                            2024년 한 해 동안 전사 임직원들은 총 23만 여 개의 메시지를 주고받으며 감사를 표현하는 문화를
+                                                            확산하고 있습니다.
                                                         </p>
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
-                                            <div class="system-cont">
+                                            <div class="system-cont ">
                                                 <div class="system-cont-detail">
-                                                    <div class="detail-tit-wrap">
-                                                        <span>02</span>
-                                                        <p>이 일을 통해 나는 무엇을 배우고 있는지 그 의미를 찾습니다.</p>
+                                                    <div class="detail-tit-wrap evaluation-tit">
+                                                        <span>04</span>
+                                                        <p>외부 평가 및 인증</p>
                                                     </div>
-                                                    <div class="detail-desc-wrap">
-                                                        <p>LG에너지솔루션은 구성원이 일하는 과정에서 핵심가치 실천수준을 높이고, 몰입 저해요인을
-                                                            관리함으로써 긍정적인 직원경험을 확대하고 직원몰입 및 조직성과를 높이기 위해 국내·외
-                                                            사무기술직 전 임직원을 대상으로 연 2회 서베이를 실시하고 있습니다.</p>
-                                                        <p>본 서베이를 통해 구성원이 일하는 과정에서 핵심가치를 얼마나 적용하고 있는지 실천수준을 점검하고,
-                                                            몰입을 저해하는 요인들을 규명하여, 집중적으로 개선 합니다.</p>
-                                                        <p>
-                                                            서베이 결과는 각 조직의 부문담당급 이상 리더와 주니어보드에게 리포트 형태로 제공되며, 리더 주도의
-                                                            개선활동을 추진함으로써 단위 조직별 변화관리를 실행합니다. 또한 개선지원이 요구되는 조직의 경우,
-                                                            이슈 해결과 Workrule 수립 중심의 조직개발 프로그램 및 리더 코칭 등 맞춤형 Intervention을
-                                                            실시하고 있습니다.
-                                                        </p>
+                                                    <div class="evaluation-wrap">
+                                                        <div>
+                                                            <img src="../../../inc/images/img/rcct_tab2_img2.png">
+                                                            <p>‘대한민국 일하기 좋은기업’ 선정</p>
+                                                        </div>
+                                                        <div>
+                                                            <img src="../../../inc/images/img/rcct_tab2_img3.png">
+                                                            <p>‘가족친화기업 대외인증‘ 취득</p>
+                                                        </div>
+                                                        <div>
+                                                            <img src="../../../inc/images/img/rcct_tab2_img4.png">
+                                                            <p>‘2030 일자리 으뜸기업‘ 선정</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
