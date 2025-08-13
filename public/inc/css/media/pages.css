@@ -549,7 +549,7 @@
 .download .search-box .btn-search-reset img { width: .5rem; height: .5rem; }
 .download .tab-category { padding-left: 0; }
 .tab-cate-wrap.type3 .tab-category > li button { align-items: center; height: 2.5rem; padding: .375rem 1.5rem; font-size: 1rem; line-height: 1.4rem; }
-
+.download .cont-area-wrap .cont-area-sect > section {padding-top: 1rem;}
 .download-list>li { align-items: center; gap: 1rem; }
 .download-list .checkbox { display: flex; align-items: center; padding-left: 0; }
 .download-desc>li { gap: .75rem; padding: 1.25rem 0;}
@@ -558,7 +558,6 @@
 .download-desc .download-tit { font-size: 1rem; line-height: 1.6rem; }
 .download .btm-btn-area {display: flex; flex-direction: column-reverse;}
 .download .btm-btn { margin-top: 2rem; }
-.download #tab5-content .tab-cate-wrap { margin-top: 1.25rem; }
 .download #tab5-content .tab-category { gap: 1rem; }
 .download #tab5-content .tab-category > li button { font-size: 1rem; line-height: 1.4rem;}
 .download #tab5-content .cont-area-wrap .cont-area-sect > section { padding-top: 1.5rem; }
@@ -567,8 +566,11 @@
 .btn-download .btn-download-txt { font-size: 0.8125rem; line-height: 1.1375rem; }
 .btn-download .icon-download { width: 1.125rem; height: 1.125rem; }
 
-.download .no-result-wrap { padding: 6.25rem 0; }
-.download .no-result-wrap .no-result { font-size: 1rem; line-height: 1.6rem; }
+.download .no-result-wrap .no-result { padding: 6.25rem 0; font-size: 1rem; line-height: 1.6rem; }
+.download .no-result-wrap>button { width: 20rem; margin: 1.5rem 0 6.25rem; }
+
+.download .total-wrap {margin-top: 1.25rem;}
+.download .total-wrap .total {font-size: 1rem; line-height: 1.6rem;}
 
 /* 문의하기 */
 .cont .faq-list { background-color: #F3F5F7; padding: 0 1.25rem 6.25rem !important; }

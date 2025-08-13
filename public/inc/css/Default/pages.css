@@ -748,7 +748,7 @@
 .download-list+.paging-wrap { margin-top: 3.75rem; }
 .download .btm-btn {display: flex; justify-content: center; margin-top: 3.75rem;} 
 .download .btn-outline01:disabled .icon-area {background-color: #C9CED1;}
-.download #tab5-content .cont-area-wrap .cont-area-sect > section { padding-top: 2.5rem; }
+.download .cont-area-wrap .cont-area-sect > section {padding-top: 1.88rem;}
 .download #tab5-content .tab-cate-wrap { margin-top: 1.88rem; }
 .download #tab5-content .tab-cate-wrap::before {display: none;}
 .download #tab5-content .tab-category {gap: 1.88rem; height: fit-content;}
@@ -761,9 +761,14 @@
 .btn-download:hover { background-color: var(--colorElement-light-stroke-stroke-primary); color: #fff; }
 .btn-download:hover .icon-download {background-image: url(../../images/icon/icon_download_wh.svg);}
 
-.download .no-result-wrap { display: flex; align-items: center; justify-content: center; margin-top: 2.5rem; padding: 12.5rem; border-top: 2px solid #000; border-bottom: 1px solid #C9CED1;}
-.download .no-result-wrap .no-result { text-align: center; font-size: 1.25rem; font-weight: 500; line-height: 2rem;}
+.download .no-result-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 2.5rem; }
+.download .no-result-wrap .no-result {width: 100%; padding: 12.5rem 0; text-align: center; font-size: 1.25rem; font-weight: 500; line-height: 2rem; border-top: 2px solid #000; border-bottom: 1px solid #C9CED1;}
 .download .no-result-wrap .no-result>span {color: #33B0C6;}
+.download .no-result-wrap>button { display: inline-flex; align-items: center; justify-content: center; gap: .75rem; margin: 2.5rem 0 15rem;}
+.download .no-result-wrap>button::after { content: ''; display: inline-block; width: 1.5rem; height: 1.5rem; background: url(../../images/icon/icon_arrow_right_bl2.svg) center/contain no-repeat; }
+.download .total-wrap { margin-top: 3.75rem; }
+.download .total-wrap .total { font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
+.download .total-wrap .total> span { color: #33B0C6; }
 
 /* FAQ */
 .faq [class^="content-item"] {padding-bottom: 0;}
@@ -782,8 +787,6 @@
 .faq .no-result-wrap { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 2.5rem;}
 .faq .no-result-wrap .no-result { width: 100%; font-size: 1.25rem; font-weight: 500; line-height: 2rem; text-align: center; padding: 15rem 0; background-color: #F3F5F7; }
 .faq .no-result-wrap .no-result>span {color: #33B0C6;}
-.faq .no-result-wrap>button { display: inline-flex; align-items: center; justify-content: center; gap: .75rem; margin: 2.5rem 0 15rem;}
-.faq .no-result-wrap>button::after { content: ''; display: inline-block; width: 1.5rem; height: 1.5rem; background: url(../../images/icon/icon_arrow_right_bl2.svg) center/contain no-repeat; }
 
 /* 연혁 */
 .history-wrap {max-width:90rem; margin:0 auto; position:relative;}
@@ -978,9 +981,15 @@
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {display: flex; flex-direction: column; align-items: center; margin-top: 5rem;}
-
-
-
+.serv-baround .brand-info .brand-logo {width: 40.6875rem;}
+.serv-baround .info-wrap {display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; width: 100%;}
+.serv-baround .info-wrap .info-box {display: flex; flex-direction: column; padding: 2.5rem; width: 16.3rem; border: 2px solid #E1E7EA; border-radius: 1rem; text-align: center;}
+.serv-baround .info-wrap .info-box .highlight {color: #33B0C6;}
+.serv-baround .info-wrap .info-box .highlight.green {color: #00983F;}
+.serv-baround .info-wrap .info-tit {display: flex; flex-direction: column; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(133, 136, 137, .25);}
+.serv-baround .info-wrap .info-tit>span {font-size: 1.25rem; line-height: 2rem; font-weight: 600}
+.serv-baround .info-wrap .info-tit .highlight {font-size: 1.75rem; line-height: 2.625rem; font-weight: 700;}
+.serv-baround .info-wrap .info-desc {padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem;}
 
 /* 인재상 */
 .rctt [class^="content-item"] { padding: 0 0 15rem 0; }
