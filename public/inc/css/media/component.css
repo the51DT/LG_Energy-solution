@@ -157,6 +157,8 @@
 .cont-area-title {font-size: 1.5rem; line-height: 2.1rem; margin-bottom: 1.25rem;}
 .cont-area-title.type2 {margin-bottom: 2rem;}
 
+.asterisk-text {gap: 0; font-size: 0.875rem; line-height: 1.3125rem;}
+.asterisk-text::before {content: "*\00a0"; display: block; margin: 0; width: auto; height: auto; background-image: none;}
 
 /* popup */
 .pop-wrap .pop-header .title {font-size: 1.125rem; line-height: 1.575rem;}
