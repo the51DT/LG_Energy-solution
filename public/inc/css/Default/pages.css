@@ -1027,7 +1027,22 @@
 .rchr .grid-cont-wrap > div { border: 2px solid #e1e7ea; padding: 2.5rem; border-radius: 1rem; display: grid; grid-template-columns: 5rem 1fr; gap: 0.62rem; }
 .rchr .grid-cont-wrap > div > img { width: 5rem; }
 .rchr .grid-cont-wrap > div > div { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; }
-.rchr .grid-cont-wrap > div > div > span { color: #171819; font-size: 1.25rem; font-weight: 600; }
+.rchr .grid-cont-wrap > div > div > span { color: #171819; font-size: 1.25rem; font-weight: 600; line-height: 1; }
 .rchr .grid-cont-wrap > div > div > span > span { font-size: 1.125rem; font-weight: 400; }
 .rchr .grid-cont-wrap > div > div > p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
 .rchr #tab1-content .content-item03 article:last-child .grid-cont-wrap { display: flex; }
+.rchr .program-cont-wrap { display: flex; gap: 1.25rem; margin-top: 2.5rem; }
+.rchr .program-cont-wrap > div { background-color: #fff; padding: 2.5rem; border: 2px solid #e1e7ea; border-radius: 1rem; }
+.rchr .program-cont-wrap > div > p, .rchr .program-cont-wrap .text-list > li { font-size: 1rem; line-height: 1.6rem; display: flex; color: #555758; font-weight: 400; margin-bottom: 0.62rem; }
+.rchr .program-cont-wrap > div > p > strong { width: 5rem; display: block; color: #171819; font-weight: 600; }
+.rchr .program-cont-wrap > div .program-tit-wrap { display: flex; gap: 1.88rem; margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #C9CED1; align-items: center; }
+.rchr .program-cont-wrap > div .program-tit-wrap > img { width: 7.5rem; }
+.rchr .program-cont-wrap > div .program-tit-wrap span { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.65rem; }
+.rchr .program-cont-wrap > div .program-tit-wrap p { font-size: 1.125rem; font-weight: 500; }
+.rchr .program-cont-wrap .program-tag-wrap { display: flex; gap: 0.5rem; margin-top: 1.88rem; }
+.rchr .program-cont-wrap > div:nth-child(3) .program-tag-wrap { flex-direction: column; }
+.rchr .program-cont-wrap .program-tag-wrap > p { font-size: 1rem; font-weight: 400; line-height: 1.6rem; background: #f3f5f7; border-radius: 62rem; padding: 0.375rem 1.25rem; width: fit-content; }
+.rchr .content-wrap .title-h3 { font-size: 2rem; font-weight: 700; margin-bottom: 2.5rem; }
+.rchr .content-wrap .sub-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.25rem; }
+.rchr .content-wrap > p { font-size: 1.125rem; font-weight: 400; }
+.rchr .grid-cont-wrap > div > div > p > strong { font-size: 1.125rem; font-weight: 500; color: #171819; line-height: 1.8rem; }
