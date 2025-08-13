@@ -167,10 +167,10 @@ var pubUi = {
         if (!this.self.searchResult) {
             return;
         } else {
-            pubUi.searchTextDelEvt(this.self.searchResult)
+            pubUi.searchTextDelEvt(this.self.searchResult);
         }
     },
-    searchTextDelEvt: function(el) {
+    searchTextDelEvt: function (el) {
         el.forEach((searchR) => {
             let searchInput = searchR.querySelector("input");
             let searchDelBtn = searchR.querySelector(".btn-delete");
@@ -229,7 +229,7 @@ var pubUi = {
             if (!subCate.closest(".lang-wrap")) {
                 button.innerText = subCateName;
             }
-            
+
             if (selectedAriaCtrl) {
                 const tabContent = document.querySelector(`#${selectedAriaCtrl}`);
                 // const tabContentMo = document.querySelector(`.mo-only #${selectedAriaCtrl}`);
@@ -239,7 +239,8 @@ var pubUi = {
                 // console.log(selectedAriaCtrl, selectedTabName, selectedTab);
 
                 // [pc <-> mobile] selectbox -> tab으로 전환시, 또는 그반대전환시 선택값 active 처리 (08.12 수정 mobile, pc 파일 분리로 인해 불필요해져 주석처리하였음)
-                if (tabContent) { // || tabContentMo
+                if (tabContent) {
+                    // || tabContentMo
                     // 모든 탭 콘텐츠 숨김 처리
                     const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .pc-only .tab-content");
                     // const allTabContentsMo = map.closest(".content-wrap").querySelectorAll(".content-area .mo-only .tab-content");
@@ -374,7 +375,7 @@ var pubUi = {
         }
     },
     //scrollToEvt 파라미터 인자정보
-    //scrollToEvt("대상엘리멘트(target)", "스크롤타입(type)", "값(value)") 
+    //scrollToEvt("대상엘리멘트(target)", "스크롤타입(type)", "값(value)")
     //페이지에서 사용하는 scrolToEvt 예외적으로 적용 원할 시, 파라미터 전달값 기본방식과 다르게 전달주어야함
     // ex) 예외처리시 - scrollToEvt(targetElement, "page(type)", "처리하려는 페이지정보(value)")
     scrollToEvt: function (target, type, value) {
@@ -839,6 +840,27 @@ var pubUi = {
                 box.classList.toggle("on", length > 0);
                 if (box.classList.contains("ty02")) pubUi.form.textareaResize(textarea);
             });
+
+            // const inputBox = document.querySelectorAll(".wrap-form-input input.input-box");
+            // const inputBoxDelBtn = document.querySelectorAll(".wrap-form-input input-wrap .btn-input-del");
+
+            // inputBox.forEach((el) => {
+            //     el.addEventListener("input", function (e) {
+            //         if (e.target != "") {
+            //             e.target.closest(".input-wrap").classList.add("on");
+            //         } else {
+            //             e.target.closest(".input-wrap").classList.remove("on");
+            //         }
+            //     });
+            // });
+
+            // inputBoxDelBtn.forEach(el => {
+            //     el.addEventListener("click", function(){
+            //         console.log(el.currentTarget);
+            //         el.currentTarget.closest(".input-wrap").classList.remove("on");
+            //     })
+                
+            // })
         },
         textareaResize(obj) {
             obj.style.height = "auto";
@@ -970,16 +992,20 @@ var pubUi = {
     popUp: {
         open(pop, btn) {
             const popEl = document.querySelector(pop);
-            const toastPopBtn = document.querySelector(btn)
+            const popElType = popEl.getAttribute("class");
+            if (popElType === "modal-pop tooltip") {
+                console.log("툴팁", popElType);
+            }
 
-            if (popEl != null && (popEl).classList.contains("toast")) {
-                const targetBtnTop = toastPopBtn.offsetTop;
-                const targetBtnTopTotal = targetBtnTop + toastPopBtn.clientHeight;                
+            if (popEl != null && popEl.classList.contains("toast")) {
+                const popBtn = document.querySelector(btn);
+                const targetBtnTop = popBtn.offsetTop;
+                const targetBtnTopTotal = targetBtnTop + popBtn.clientHeight;
 
                 console.log(targetBtnTopTotal);
                 popEl.style.opacity = "1";
 
-                if(document.querySelector(".wrap").classList.contains("mobile")) {
+                if (document.querySelector(".wrap").classList.contains("mobile")) {
                     popEl.querySelector(".pop-content").style.top = `${targetBtnTopTotal + 10}px`;
                     popEl.querySelector(".pop-content").style.transform = "revert";
                     popEl.querySelector(".pop-content").style.maxWidth = "20.1rem";
@@ -993,7 +1019,7 @@ var pubUi = {
                     popEl.querySelector(".pop-content").style.right = "revert";
                 }
                 setTimeout(() => {
-                    popEl.style.opacity = "0"
+                    popEl.style.opacity = "0";
                     popEl.querySelector(".pop-content").style.top = "revert";
                 }, 2000);
             } else {
@@ -1098,14 +1124,14 @@ var pubUi = {
         },
     },
     swiperUi: {
-        init(){
-          this.type01Swiper();  
+        init() {
+            this.type01Swiper();
         },
         // swiper default 타입 : type01Swiper
         type01Swiper() {
             const targetSwiper = document.querySelectorAll(".type01Swiper");
 
-            if(targetSwiper.length > 0) {
+            if (targetSwiper.length > 0) {
                 //newsroom 상세 사용중
                 var swiper1 = new Swiper(".type01Swiper", {
                     pagination: {
@@ -1121,7 +1147,7 @@ var pubUi = {
                 return;
             }
         },
-    }
+    },
 };
 
 (function () {
@@ -1136,7 +1162,7 @@ var pubUi = {
             pubUi.self.isMobile = window.innerWidth <= 1279;
             pubUi.tabList.scroll();
             pubUi.evtScheduleLeft();
-            pubUi.mobileDeviceChk(); //모바일 체크함수 추가        
+            pubUi.mobileDeviceChk(); //모바일 체크함수 추가
         });
-    });     
+    });
 })();

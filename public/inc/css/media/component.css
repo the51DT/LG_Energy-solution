@@ -200,6 +200,11 @@
 .wrap .content-wrap:has(.content-header) .content-area { padding-top: 0;}
 .wrap .content-wrap:not(:has(.content-header)) .content-area {padding-top: 0;}
 
+/* calendar */
+.calendar-wrap {width: 100%;}
+.calendar-wrap .calendar-btn {max-width: 100%;}
+.calendar-wrap .calendar-btn .title {font-size: 1rem;}
+
 /* .content-area-head-tab {position: fixed; top: calc(110 / 16 * 1rem); width: 100%;} */
 /* .wrap:not(.sub_p) .content-header {display: none; }
 

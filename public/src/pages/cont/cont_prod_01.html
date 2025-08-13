@@ -295,7 +295,7 @@
                                                 class="acd-btn accordion-btn">
                                                 <div class="acd-group">
                                                     <div class="align-group">
-                                                        <p class="acd-tit">상세 정보를 선택해주세요.</p>
+                                                        <p class="acd-tit">상세 정보를 선택, 작성해주세요.</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -353,47 +353,39 @@
                                                         </div>
                                                         <!-- ESS 항목 선택 시 세부 항목에 대한 필수 선택 안내 메세지 출력 문구 -->
                                                         <p><span class="ico-info"></span>ESS는 상세 항목 선택이 필수입니다.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="sub-cont-wrap">
+                                                    </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap notGrid">
                                                             <p class="label">폼펙터</p>
-                                                            <div class="cont-btn-wrap flex-wrap">
+                                                            <div class="cont-btn-wrap multi-btn flex-wrap">
                                                                 <button type="button" class="btn">원통형 전지</button>
                                                                 <button type="button" class="btn">파우치 전지</button>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>                                                
-                                                <div class="sub-cont-wrap">
+                                                    </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap notGrid">
                                                             <p class="label">소재</p>
-                                                            <div class="cont-btn-wrap flex-wrap">
+                                                            <div class="cont-btn-wrap multi-btn flex-wrap">
                                                                 <button type="button" class="btn">NCM</button>
                                                                 <button type="button" class="btn">LFP</button>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="sub-cont-wrap">
+                                                    </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap notGrid">
                                                             <p class="label">형태</p>
-                                                            <div class="cont-btn-wrap flex-wrap">
+                                                            <div class="cont-btn-wrap multi-btn flex-wrap">
                                                                 <button type="button" class="btn">셀</button>
                                                                 <button type="button" class="btn">모듈</button>
                                                                 <button type="button" class="btn">팩</button>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="sub-cont-wrap">
+                                                    </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input flex-type">
                                                         <div class="input-wrap">
-                                                            <label for="quantity-input">수요물량(연간)<span>*</span></label>
-                                                            <div class="quantity-input-wrap">
+                                                            <label for="quantity-input">수요 물량(연간)<span>*</span></label>
+                                                            <div class="quantity-input-wrap input-wrap">
                                                                 <input type="number" id="quantity-input" class="input-box"
                                                                     placeholder="숫자를 입력해주세요.">
                                                                 <button class="btn-input-del" title="입력 내용 삭제"></button>                                                                
@@ -419,13 +411,11 @@
                                                         </div>
                                                         <p><span class="ico-info"></span>배터리는 오직 배터리 팩 제조사 또는 시스템 통합 사업자에게만 판매 될 수 있습니다.<br>
                                                         개인 소비자가 배터리는 취급할 수 없으며, 개별 시장에서 개인 소비자에게 판매될 수 없습니다.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="sub-cont-wrap">
+                                                    </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input flex-type">
                                                         <div class="input-wrap">
                                                             <label for="performance-input">요구 성능</label>
-                                                            <div class="performance-input-wrap">
+                                                            <div class="performance-input-wrap input-wrap">
                                                                 <input type="text" id="performance-input" class="input-box"
                                                                     placeholder="요구 성능을 입력해주세요.">
                                                                 <button class="btn-input-del" title="입력 내용 삭제"></button>                                                                
@@ -448,8 +438,6 @@
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
-                                                </div>
-                                                <div class="sub-cont-wrap">
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap selectbox-wrap type3 ">
                                                             <label for="develop-detail">개발 현황</label>
@@ -469,12 +457,10 @@
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
-                                                </div>
-                                                <!-- 공급 예상 시기 : 캘린더 컴포넌트 퍼블리싱 작업 후 해당 부분 보완하여 추후 전달예정(확정 늦게되어 추가 작업필요) -->
-                                                <div class="sub-cont-wrap">
+                                                    <!-- 공급 예상 시기 : 캘린더 컴포넌트 퍼블리싱 작업 후 해당 부분 보완하여 추후 전달예정(확정 늦게되어 추가 작업필요) -->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
-                                                            <label for="supply-input">공급 예상 시기</label>
+                                                            <label for="supply-input">공급 예상 시기</label>                                                            
                                                             <div class="supply-input-wrap">
                                                                 <div class="calendar-wrap">                                                                    
                                                                     <button type="button" class="calendar-btn" id="supply-input">
@@ -484,8 +470,6 @@
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
-                                                </div>                                                
-                                                <div class="sub-cont-wrap">
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
                                                             <label for="supply-battery-input">배터리 공급 업체<br/> 유무</label>
@@ -509,8 +493,6 @@
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
-                                                </div>
-                                                <div class="sub-cont-wrap">
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
                                                             <label for="lges-trade-input">LG에너지솔루션<br/>거래 여부</label>
@@ -534,8 +516,6 @@
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
-                                                </div>
-                                                <div class="sub-cont-wrap">
                                                     <div class="wrap-form-input"> 
                                                         <div class="input-wrap selectbox-wrap type3">
                                                             <label for="website-nation">타겟 시장(지역) </label>
@@ -728,7 +708,7 @@
                                                             <div class="textarea-box">
                                                                 <textarea id="cont-input" class="textarea"
                                                                     placeholder="내용을 입력해주세요." maxlength="1000"></textarea>
-                                                                <p class="byte-check"><span class="count">8</span><span class="count-total">1,000</span></p>
+                                                                <p class="byte-check"><span class="count">0</span><span class="count-total">1,000</span></p>
                                                             </div>
                                                         </div>
                                                         <div class="input-wrap">
@@ -908,101 +888,8 @@
             </div>
         </div>
     </div>
-    
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-                
-            const pcSteps = document.querySelectorAll('.pc-only .stepper-wrapper  .accordion-list');
-            if (pcSteps.length > 0) {
-                let currentPcStep = 0;
-                let pcMaxStepReached = 0;
-                
-                const QUOTE_INFO_STEP_INDEX = 2;
-                const CUSTOMER_INFO_STEP_INDEX = 3;
-        
-                const pcStepElements = Array.from(pcSteps).map(step => ({
-                    categoryBtns: step.querySelectorAll('.cont-btn-wrap .btn'),
-                    nextBtn: step.querySelector('.btn-step-next'),
-                    // requiredInputs: step.querySelectorAll('input[type="text"][id], input[type="email"][id], textarea[id]'),
-                    consentCheckbox: step.querySelector('input[type="checkbox"][id="checkbox-5"]'),
-                    subContWrap: step.querySelector('.sub-cont-wrap'),
-                    stepEl: step
-                }));
-        
-                let pcSelectedButtons = new Array(pcSteps.length).fill(null);
-        
-                // function clearPcStepData(fromIndex) {
-                //     for (let i = fromIndex; i < pcSteps.length; i++) {
-                //         pcStepElements[i].requiredInputs.forEach(input => input.value = '');
-                //         if (pcStepElements[i].consentCheckbox) pcStepElements[i].consentCheckbox.checked = false;
-                //         if (pcSelectedButtons[i]) {
-                //             pcSelectedButtons[i].classList.remove('active');
-                //             pcSelectedButtons[i] = null;
-                //         }
-                //         if(i === QUOTE_INFO_STEP_INDEX){
-                //             pcStepElements[i].stepEl.querySelectorAll('.selection-wrap .cont-btn-wrap button.active').forEach(btn => btn.classList.remove('active'));
-                //         }
-                //     }
-                //     if (pcStepElements[1] && pcStepElements[1].subContWrap) {
-                //         pcStepElements[1].subContWrap.style.display = 'none';
-                //     }
-                // }
-        
-                // function updateAllPcButtonStates() {
-                //     pcStepElements.forEach((step, index) => {
-                //         if (!step.nextBtn) return;
-                //         let isDisabled = true;
-                //         if (index === 0 || index === 1) {
-                //             isDisabled = pcSelectedButtons[index] === null;
-                //         } else if (index === QUOTE_INFO_STEP_INDEX) {
-                //             const selections = step.stepEl.querySelectorAll('.selection-wrap .cont-btn-wrap button.active');
-                //             const requiredInput = step.stepEl.querySelector('#quantity-input');
-                //             isDisabled = !(selections.length >= 4 && requiredInput && requiredInput.value.trim() !== '');
-                //         } else if (index === CUSTOMER_INFO_STEP_INDEX || index === 4) {
-                //             isDisabled = !Array.from(step.requiredInputs).every(input => input.value.trim() !== '');
-                //         } else if (index === 5 && step.consentCheckbox) {
-                //             isDisabled = !step.consentCheckbox.checked;
-                //         }
-                //         step.nextBtn.disabled = isDisabled;
-                //     });
-                // }
-                
-                // const quoteStep = pcStepElements[QUOTE_INFO_STEP_INDEX];
-                // if(quoteStep){
-                //     const selectionGroups = quoteStep.stepEl.querySelectorAll('.selection-wrap');
-                //     selectionGroups.forEach(group => {
-                //         const buttons = group.querySelectorAll('.cont-btn-wrap button');
-                //         buttons.forEach(button => button.addEventListener('click', function(){
-                //             buttons.forEach(btn => btn.classList.remove('active'));
-                //             this.classList.add('active');
-                //             updateAllPcButtonStates();
-                //         }));
-                //     });
-                //     const requiredInput = quoteStep.stepEl.querySelector('#quantity-input');
-                //     if(requiredInput) requiredInput.addEventListener('input', updateAllPcButtonStates);
-                // }
-        
-                pcStepElements.forEach((step, index) => {
-                    
-                    step.categoryBtns.forEach(button => button.addEventListener('click', function() {
-                        if (pcSelectedButtons[index] !== this) {
-                            if (pcSelectedButtons[index]) pcSelectedButtons[index].classList.remove('active');
-                            this.classList.add('active');                                    
-                            pcSelectedButtons[index] = this;
-                            pcMaxStepReached = index;
-                            if (index === 1 && step.subContWrap) step.subContWrap.style.display = 'flex';
-                            step.nextBtn.classList.remove("disabled");
-                        }
-                        // updateAllPcButtonStates();
-                    }));
-                    // if (index === CUSTOMER_INFO_STEP_INDEX || index === 4) step.requiredInputs.forEach(input => input.addEventListener('input', updateAllPcButtonStates));
-                    // if (index === 5 && step.consentCheckbox) step.consentCheckbox.addEventListener('change', updateAllPcButtonStates);
-                });
-            }
-        });
-    </script>
-        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+
+    <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
     <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
     <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
     <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
