@@ -484,6 +484,7 @@
 .rcif .process-list > li .text-list-wrap .process-tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.25rem;}
 .rcif .process-list > li .text-list-wrap .text-list {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .rcif .process-list > li .text-list-wrap .text-list li > strong {font-weight: 600;}
+.rcif .process-list > li .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0;}
 .rcif .process-list > li .text-list-wrap .text-list li + li {margin-top: 0.63rem;}
 .rcif .process-list > li .text-list-wrap .text-list + .asterisk-text {margin-top: 0.63rem;}
 .rcif .process-list + .btn-wrap {margin-top: 5rem;}
@@ -493,6 +494,7 @@
 .rcif .accordion-list.type2 .accordion-btn .acd-group .acd-icon {font-size: 1.75rem; font-weight: 600; line-height: 2.625rem; width: auto;}
 .rcif .accordion-list.on .accordion-btn .acd-tit {font-size: 1.25rem; line-height: 2rem;}
 .rcif .accordion-list .accordion-content {margin-inline: 5.25rem; padding: 0; padding-bottom: 1.25rem; background-color: unset;}
+.rcif .accordion-list .accordion-content .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .rcif .accordion-list .accordion-content .btn-wrap {justify-content: flex-start; margin-top: 2.5rem;}
 .rcif .acc-wrap + .btn-wrap {margin-top: 3.75rem;}
 .rcif .job-list {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;}
@@ -501,7 +503,7 @@
 .rcif .job-list > li .job-tit > img {flex-shrink: 0; width: 5rem; height: 5rem; object-fit: contain;}
 .rcif .job-list > li .job-tit > p {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
 .rcif .job-list > li .text-list-wrap {padding-top: 1.875rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
-.rcif .job-list > li .text-list-wrap .text-list > li::before {left: 0.25rem; top: 0.69rem; transform: translate(0, 0);}
+.rcif .text-list-wrap .text-list > li::before {left: 0.25rem; top: 0.69rem; transform: translate(0, 0);}
 .rcif .job-list + .btn-wrap {margin-top: 5rem;}
 .rcif .job-story {display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;}
 .rcif .job-story > li > a {width: 100%; height: 100%; padding: 1.875rem; display: flex; flex-direction: column; justify-content: space-between; gap: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
