@@ -115,6 +115,10 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .btn-primary01.icon-btn.icon-link:hover {background: #fff; color: var(--colorElement-light-text-text-default01);}
 .btn-outline01.icon-btn.icon-link:hover .icon-area::before,
 .btn-primary01.icon-btn.icon-link:hover .icon-area::before {background-image: url(../../images/icon/icon_arrow_right2.svg);}
+.btn-outline01.icon-btn.icon-plus .icon-area::before,
+.btn-primary01.icon-btn.icon-plus .icon-area::before  {background-image: url(../../images/icon/icon_plus.svg);}
+.btn-outline01.icon-btn.icon-plus:hover .icon-area::before,
+.btn-primary01.icon-btn.icon-plus:hover .icon-area::before {background-image: url(../../images/icon/icon_plus_wh.svg);}
 
 /* icon btn */
 [class^="icon-btn"] {display: flex; justify-content: space-between; align-items: center; width: 15.625rem; min-width: 7.5rem; border-radius: 0.625rem; font-size: 1.125rem; font-weight: 500; line-height: 1.575rem; height: 3.25rem; color: var(--colorElement-light-text-text-default01); padding: 0.7rem 1.25rem 0.8rem 1.88rem;}
