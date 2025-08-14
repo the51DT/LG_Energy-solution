@@ -856,7 +856,9 @@
 .faq .no-result-wrap { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 2.5rem;}
 .faq .no-result-wrap .no-result { width: 100%; font-size: 1.25rem; font-weight: 500; line-height: 2rem; text-align: center; padding: 15rem 0; background-color: #F3F5F7; }
 .faq .no-result-wrap .no-result>span {color: #33B0C6;}
-
+.faq .total-wrap { margin: 3.75rem 0 1.88rem; }
+.faq .total-wrap .total { font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
+.faq .total-wrap .total> span { color: #33B0C6; }
 /* 연혁 */
 .history-wrap {max-width:90rem; margin:0 auto; position:relative;}
 .history-wrap .btn-area {position: absolute; bottom:0; left:50%; transform: translateX(-50%);}
@@ -1053,9 +1055,9 @@
 .serv-trading .service-wrap .service-tit-wrap>img {width: 5rem; height: 5rem;}
 .serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
 .serv-trading .service-wrap .service-desc { padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758; }
-.serv-trading .service-btn-wrap { display: flex; gap: 1.25rem; justify-content: center; margin-top: 7.5rem; }
-.serv-trading .service-btn-wrap > button {background-color: #fff;}
-.serv-trading .service-btn-wrap > button:hover {background-color: var(--colorElement-light-fill-fill-default00);}
+.service .service-btn-wrap { display: flex; gap: 1.25rem; justify-content: center; margin-top: 7.5rem; }
+.service .service-btn-wrap > button {background-color: #fff;}
+.service .service-btn-wrap > button:hover {background-color: var(--colorElement-light-fill-fill-default00);}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {display: flex; flex-direction: column; align-items: center; margin-top: 5rem;}
@@ -1080,14 +1082,14 @@
 .serv-baround .text-list-wrap .list-tit + .text-list {margin-top: .62rem;}
 .serv-baround .text-list-wrap .text-list>li {font-size: 1rem; line-height: 1.6rem; color: #555758;}
 .e4w-wrap {display: flex; gap: 1.25rem;}
-.e4w-wrap .e4w-box {border-radius: 1rem; width: 50%;}
-.e4w-wrap .e4w-box .e4w-top {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem; background-color: #33B0C6; border-radius: 1rem 1rem 0 0;}
-.e4w-wrap .e4w-box .e4w-top .top-logo {display: inline-flex; align-items: center; justify-content: center; width: 11.25rem; height: 11.25rem; background-color: #fff; border-radius: 50%;}
-.e4w-wrap .e4w-box .e4w-top .top-logo .b-lifecare {width: 9.3125rem; height: 2.5rem;}
-.e4w-wrap .e4w-box .e4w-top .top-logo .b-once {width: 8.63413rem; height: 2rem;}
-.e4w-wrap .e4w-box .e4w-top .top-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #fff; text-align: center;}
-.e4w-wrap .e4w-box .e4w-btm {display: flex; flex-direction: column; justify-content: space-between; height: 20.5rem; padding: 2.5rem; background-color: #fff; border-radius: 0 0 1rem 1rem;}
-.e4w-wrap .e4w-box .e4w-btm .text-list-wrap + .text-list-wrap {padding-top: 1.88rem;}
+.e4w-box {border-radius: 1rem; width: 50%;}
+.e4w-box .e4w-top {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem; background-color: #33B0C6; border-radius: 1rem 1rem 0 0;}
+.e4w-box .e4w-top .top-logo {display: inline-flex; align-items: center; justify-content: center; width: 11.25rem; height: 11.25rem; background-color: #fff; border-radius: 50%;}
+.e4w-box .e4w-top .top-logo .b-lifecare {width: 9.3125rem; height: 2.5rem;}
+.e4w-box .e4w-top .top-logo .b-once {width: 8.63413rem; height: 2rem;}
+.e4w-box .e4w-top .top-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #fff; text-align: center;}
+.e4w-box .e4w-btm {display: flex; flex-direction: column; justify-content: space-between; height: 20.5rem; padding: 2.5rem; background-color: #fff; border-radius: 0 0 1rem 1rem;}
+.e4w-box .e4w-btm .asterisk-text {padding-top: 1.88rem;}
 .serv-baround .btm-btn {text-align: right;}
 .serv-baround .btm-btn .txt-btn01 {font-size: .875rem; line-height: 1.225rem; padding-right: 1.5rem;}
 .serv-baround .btm-btn .txt-btn01::after {width: 1.25rem; height: 1.25rem;}
@@ -1104,7 +1106,10 @@
 .e2w-box .e2w-right .btm-wrap .btm-btn {margin-top: 1.25rem;}
 
 .bmts-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem;} 
-
+.bmts-wrap .bmts-box {display: flex; flex-direction: column; align-items: center; gap: 1.88rem; width: calc(50% - .9rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem;}
+.bmts-wrap .bmts-box>img {width: 7.5rem; height: 7.5rem;}
+.bmts-wrap .bmts-box .bmts-tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819}
+.bmts-wrap .bmts-box .bmts-desc {padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758;}
 
 /* 인재상 */
 .rctt [class^="content-item"] { padding: 0 0 15rem 0; }
