@@ -516,14 +516,10 @@
 .rcif .job-story + .paging-wrap {margin-top: 3.75rem;}
 
 /* 폼펙터 (.pfom) */
-.pfom [class^="content-item"] .content-wrap {padding-left: 22.81rem;}
-.pfom .title-tab {display: flex; max-width: 90rem; margin: 0 auto; padding-top: 7.5rem;}
-.pfom .title-tab .title-h1 {width: 22.8125rem;}
-.pfom .title-tab .tab-cate-wrap.new .tab button {width: 12.5rem; font-size: 1.25rem; line-height: 1.75rem;}
-.pfom .tab-content:has(> .side-sticky) {height: auto;}
-.pfom .side-sticky {position: sticky; top: 5rem; height: fit-content; width: calc(100vw - var(--scrollbar-width));  margin-inline: auto;}
-.pfom .side-sticky .side-list {position: absolute; top: 7.5rem; left: 50%; transform: translate(-50%); max-width: 90rem; width: 100%; pointer-events: none;}
-.pfom .side-sticky .side-list > li {width: fit-content; pointer-events: all;}
+.pfom .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.pfom .title-h2 + .title-desc {margin-top: 1.25rem;}
+.pfom .prod-visual-wrap {display: flex; flex-direction: column; gap: 5rem; padding-top: 5rem;}
+.pfom .prod-visual {margin-right: -15rem;}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
