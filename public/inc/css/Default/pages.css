@@ -1224,3 +1224,34 @@
 .rcct .evaluation-tit { border-bottom: none; padding: 0; }
 
 /* 서비스 > B-once */
+.serv-bonce .article-img { padding: 2.6875rem 12.53125rem; margin: 5rem 0; }
+.serv-bonce .article-btn-wrap { display: flex; justify-content: center; gap: 0.62rem; margin-bottom: 5rem; }
+.serv-bonce .article-btn-wrap > a { display: flex; gap: 0.62rem; padding: 0.75rem 1.25rem; border: 1px solid #c9ced1; border-radius: 0.5625rem; align-items: center; justify-content: center; width: 16.25rem; }
+.serv-bonce .article-btn-wrap > a > img { width: 1.5rem; }
+.serv-bonce .article-btn-wrap > a > p { color: #555758; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
+.serv-bonce .adv-explain { font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
+.serv-bonce .adv-wrap { margin-top: 1.25rem; }
+.serv-bonce .type-wrap { display: flex; flex-direction: column; gap: 5rem; margin-top: 5rem; }
+.serv-bonce .type-tit { font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; margin-bottom: 1.25rem; }
+.serv-bonce .type-desc { font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-bottom: 2.5rem; }
+.serv-bonce .type-box { background-color: #fff; padding: 2.5rem; border-radius: 1rem; }
+.serv-bonce .type-box-sub { display: flex; background-color: #F3F5F7; border-radius: 0.5rem; padding: 1.88rem; align-items: center; gap: 1.88rem; }
+.serv-bonce .type-box-sub > img { width: 33.25rem; flex: 1; }
+.serv-bonce .type-explain { display: flex; flex-direction: column; gap: 0.62rem; }
+.serv-bonce .type-explain > p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; display: flex; gap: 0.62rem; }
+.serv-bonce .type-explain > p > span { display: block; width: 3.75rem; color: #33B0C6; font-weight: 600; }
+.serv-bonce .type-img-wrap { text-align: center; }
+.serv-bonce .quickscan-img { margin-bottom: 2.5rem; }
+.serv-bonce .quickscan-img img { width: 38.8rem; }
+.serv-bonce .powerscan-img { margin: 2.5rem 0; }
+.serv-bonce .powerscan-img img { width: 55rem; }
+.serv-bonce .scan-img { text-align: center; margin-top: 2.5rem; margin-bottom: 5rem; }
+.serv-bonce .scan-img img { width: 53.4rem; }
+.serv-bonce .ucd-wrap { display: flex; flex-direction: column; gap: 5rem; }
+.serv-bonce .ucd-tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; margin-bottom: 1.25rem; display: block; }
+.serv-bonce .ucd-box-wrap { display: flex; gap: 1.25rem; }
+.serv-bonce .ucd-box { flex: 1; background-color: #f3f5f7; padding: 2.5rem; display: flex; gap: 0.65rem; border-radius: 1rem; }
+.serv-bonce .ucd-box > span { color: #33B0C6; font-size: 1.25rem; font-weight: 800; line-height: 2rem; width: 3.375rem; }
+.serv-bonce .ucd-desc-wrap { display: flex; gap: 0.62rem; flex-direction: column; }
+.serv-bonce .ucd-desc-wrap p:first-child { color: #171819; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
+.serv-bonce .ucd-desc-wrap p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
