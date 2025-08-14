@@ -515,6 +515,25 @@
 .rcif .job-story > li > a .thum-wrap::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 2.5rem; height: 2.5rem; background-image: url(../../images/icon/icon_play.svg); background-size: 2.5rem 2.5rem; background-repeat: no-repeat; background-position: center;}
 .rcif .job-story + .paging-wrap {margin-top: 3.75rem;}
 
+/* 산업별 솔루션 (pind) */
+.pind [class^="content-item"]:only-child {padding-bottom: 11.25rem;}
+.pind [class^="content-item"] .content-sect {padding-top: 6.25rem;}
+.pind .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem;}
+.pind .indus-list {display: flex; gap: 1.1875rem;}
+.pind .indus-list > li {width: 100%; height: 18.75rem; display: flex; flex-direction: column; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.pind .indus-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem; margin-left: 1.875rem;}
+.pind .indus-list > li > img {width: 14.88656rem; height: 8.97375rem; margin: auto 2.05rem 2.77rem auto;}
+.pind .indus-list + .indus-box {margin-top: 2.5rem;}
+.pind .indus-box {display: flex; justify-content: space-between; padding: 2.5rem; border-radius: 1rem; border: 2px solid #9988DF; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.pind .indus-box .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.pind .indus-box > ul {display: flex; gap: 2.5rem;}
+.pind .indus-box > ul > li {position: relative; width: 8.125rem; text-align: center;}
+.pind .indus-box > ul > li + li::before {content: ""; position: absolute; left: -1.25rem; display: block; width: 1px; height: 100%; background-color: var(--colorElement-light-stroke-stroke-default04);}
+.pind .indus-box > ul > li > img {width: 3.5rem; height: 3.5rem; margin-bottom: 0.75rem;}
+.pind .indus-box > ul > li > p {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-secondary-secondary-enabled);}
+.pind .indus-bottom {position: relative; margin-top: 5rem;}
+.pind .indus-bottom::before {content: ""; position: absolute; top: -12.31rem; left: 50%; transform: translateX(-50%); display: block; height: 41.375rem; width: calc(100vw - var(--scrollbar-width)); background-color: var(--colorElement-light-fill-fill-default04); z-index: -1;}
+
 /* 폼펙터 (.pfom) */
 .pfom .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .title-h2 + .title-desc {margin-top: 1.25rem;}
