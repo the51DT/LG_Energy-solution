@@ -1126,6 +1126,7 @@ var pubUi = {
     swiperUi: {
         init() {
             this.type01Swiper();
+            this.bAroundMoSwiper();
         },
         // swiper default 타입 : type01Swiper
         type01Swiper() {
@@ -1141,6 +1142,22 @@ var pubUi = {
                     navigation: {
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
+                    },
+                });
+            } else {
+                return;
+            }
+        },
+        bAroundMoSwiper() {
+            const targetSwiper = document.querySelectorAll(".baround-swiper");
+
+            if (targetSwiper.length > 0) {
+                //newsroom 상세 사용중
+                var swiper2 = new Swiper(".baround-swiper", {
+                    pagination: {
+                        el: ".swiper-pagination",
+                        type: "bullets",
+                        clickable: true,
                     },
                 });
             } else {

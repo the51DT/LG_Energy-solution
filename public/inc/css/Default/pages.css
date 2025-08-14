@@ -515,15 +515,30 @@
 .rcif .job-story > li > a .thum-wrap::after {content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 2.5rem; height: 2.5rem; background-image: url(../../images/icon/icon_play.svg); background-size: 2.5rem 2.5rem; background-repeat: no-repeat; background-position: center;}
 .rcif .job-story + .paging-wrap {margin-top: 3.75rem;}
 
+/* 산업별 솔루션 (pind) */
+.pind [class^="content-item"]:only-child {padding-bottom: 11.25rem;}
+.pind [class^="content-item"] .content-sect {padding-top: 6.25rem;}
+.pind .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem;}
+.pind .indus-list {display: flex; gap: 1.1875rem;}
+.pind .indus-list > li {width: 100%; height: 18.75rem; display: flex; flex-direction: column; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.pind .indus-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem; margin-left: 1.875rem;}
+.pind .indus-list > li > img {width: 14.88656rem; height: 8.97375rem; margin: auto 2.05rem 2.77rem auto;}
+.pind .indus-list + .indus-box {margin-top: 2.5rem;}
+.pind .indus-box {display: flex; justify-content: space-between; padding: 2.5rem; border-radius: 1rem; border: 2px solid #9988DF; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.pind .indus-box .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.pind .indus-box > ul {display: flex; gap: 2.5rem;}
+.pind .indus-box > ul > li {position: relative; width: 8.125rem; text-align: center;}
+.pind .indus-box > ul > li + li::before {content: ""; position: absolute; left: -1.25rem; display: block; width: 1px; height: 100%; background-color: var(--colorElement-light-stroke-stroke-default04);}
+.pind .indus-box > ul > li > img {width: 3.5rem; height: 3.5rem; margin-bottom: 0.75rem;}
+.pind .indus-box > ul > li > p {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-secondary-secondary-enabled);}
+.pind .indus-bottom {position: relative; margin-top: 5rem;}
+.pind .indus-bottom::before {content: ""; position: absolute; top: -12.31rem; left: 50%; transform: translateX(-50%); display: block; height: 41.375rem; width: calc(100vw - var(--scrollbar-width)); background-color: var(--colorElement-light-fill-fill-default04); z-index: -1;}
+
 /* 폼펙터 (.pfom) */
-.pfom [class^="content-item"] .content-wrap {padding-left: 22.81rem;}
-.pfom .title-tab {display: flex; max-width: 90rem; margin: 0 auto; padding-top: 7.5rem;}
-.pfom .title-tab .title-h1 {width: 22.8125rem;}
-.pfom .title-tab .tab-cate-wrap.new .tab button {width: 12.5rem; font-size: 1.25rem; line-height: 1.75rem;}
-.pfom .tab-content:has(> .side-sticky) {height: auto;}
-.pfom .side-sticky {position: sticky; top: 5rem; height: fit-content; width: calc(100vw - var(--scrollbar-width));  margin-inline: auto;}
-.pfom .side-sticky .side-list {position: absolute; top: 7.5rem; left: 50%; transform: translate(-50%); max-width: 90rem; width: 100%; pointer-events: none;}
-.pfom .side-sticky .side-list > li {width: fit-content; pointer-events: all;}
+.pfom .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.pfom .title-h2 + .title-desc {margin-top: 1.25rem;}
+.pfom .prod-visual-wrap {display: flex; flex-direction: column; gap: 5rem; padding-top: 5rem;}
+.pfom .prod-visual {margin-right: -15rem;}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
@@ -856,7 +871,9 @@
 .faq .no-result-wrap { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 2.5rem;}
 .faq .no-result-wrap .no-result { width: 100%; font-size: 1.25rem; font-weight: 500; line-height: 2rem; text-align: center; padding: 15rem 0; background-color: #F3F5F7; }
 .faq .no-result-wrap .no-result>span {color: #33B0C6;}
-
+.faq .total-wrap { margin: 3.75rem 0 1.88rem; }
+.faq .total-wrap .total { font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
+.faq .total-wrap .total> span { color: #33B0C6; }
 /* 연혁 */
 .history-wrap {max-width:90rem; margin:0 auto; position:relative;}
 .history-wrap .btn-area {position: absolute; bottom:0; left:50%; transform: translateX(-50%);}
@@ -1036,12 +1053,7 @@
 .serv-trading .page-map-wrap {margin-top: 6.25rem;}
 .serv-trading .content-item02 {background-color: #F3F5F7;}
 .serv-trading .content-item04 {background-color: #EAF3F8;}
-.service .content-item01 .content-sect { padding-top: 2.5rem; }
-.service .content-sect { display: flex; gap: 8.8rem; padding-top: 0; }
-.service .content-sect .title-list { display: flex; flex-direction: column; width: 13.9rem;}
-.service .content-sect .title-list>li>a { padding: .5rem 0; font-size: 1.125rem; line-height: 1.8rem; color: #555758; }
-.service .content-sect .title-list>li>a.on { color: #171819; font-weight: 600; }
-.service .content-sect .cont-area-wrap { width: calc(100% - 16.4rem); }
+.service .content-item01 .content-sect { padding-top: 0; }
 .service .article-content .article-desc { padding: 1.88rem 0; font-size: 1.25rem; line-height: 2rem; }
 .adv-wrap, .serv-trading .service-wrap { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.88rem;}
 .adv-wrap .adv-box { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem; width: calc(33.33% - 1rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem; }
@@ -1053,9 +1065,9 @@
 .serv-trading .service-wrap .service-tit-wrap>img {width: 5rem; height: 5rem;}
 .serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
 .serv-trading .service-wrap .service-desc { padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758; }
-.serv-trading .service-btn-wrap { display: flex; gap: 1.25rem; justify-content: center; margin-top: 7.5rem; }
-.serv-trading .service-btn-wrap > button {background-color: #fff;}
-.serv-trading .service-btn-wrap > button:hover {background-color: var(--colorElement-light-fill-fill-default00);}
+.service .service-btn-wrap { display: flex; gap: 1.25rem; justify-content: center; margin-top: 7.5rem; }
+.service .service-btn-wrap > button {background-color: #fff;}
+.service .service-btn-wrap > button:hover {background-color: var(--colorElement-light-fill-fill-default00);}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {display: flex; flex-direction: column; align-items: center; margin-top: 5rem;}
@@ -1080,14 +1092,14 @@
 .serv-baround .text-list-wrap .list-tit + .text-list {margin-top: .62rem;}
 .serv-baround .text-list-wrap .text-list>li {font-size: 1rem; line-height: 1.6rem; color: #555758;}
 .e4w-wrap {display: flex; gap: 1.25rem;}
-.e4w-wrap .e4w-box {border-radius: 1rem; width: 50%;}
-.e4w-wrap .e4w-box .e4w-top {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem; background-color: #33B0C6; border-radius: 1rem 1rem 0 0;}
-.e4w-wrap .e4w-box .e4w-top .top-logo {display: inline-flex; align-items: center; justify-content: center; width: 11.25rem; height: 11.25rem; background-color: #fff; border-radius: 50%;}
-.e4w-wrap .e4w-box .e4w-top .top-logo .b-lifecare {width: 9.3125rem; height: 2.5rem;}
-.e4w-wrap .e4w-box .e4w-top .top-logo .b-once {width: 8.63413rem; height: 2rem;}
-.e4w-wrap .e4w-box .e4w-top .top-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #fff; text-align: center;}
-.e4w-wrap .e4w-box .e4w-btm {display: flex; flex-direction: column; justify-content: space-between; height: 20.5rem; padding: 2.5rem; background-color: #fff; border-radius: 0 0 1rem 1rem;}
-.e4w-wrap .e4w-box .e4w-btm .text-list-wrap + .text-list-wrap {padding-top: 1.88rem;}
+.e4w-box {border-radius: 1rem; width: 50%;}
+.e4w-box .e4w-top {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem; background-color: #33B0C6; border-radius: 1rem 1rem 0 0;}
+.e4w-box .e4w-top .top-logo {display: inline-flex; align-items: center; justify-content: center; width: 11.25rem; height: 11.25rem; background-color: #fff; border-radius: 50%;}
+.e4w-box .e4w-top .top-logo .b-lifecare {width: 9.3125rem; height: 2.5rem;}
+.e4w-box .e4w-top .top-logo .b-once {width: 8.63413rem; height: 2rem;}
+.e4w-box .e4w-top .top-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #fff; text-align: center;}
+.e4w-box .e4w-btm {display: flex; flex-direction: column; justify-content: space-between; height: 20.5rem; padding: 2.5rem; background-color: #fff; border-radius: 0 0 1rem 1rem;}
+.e4w-box .e4w-btm .asterisk-text {padding-top: 1.88rem;}
 .serv-baround .btm-btn {text-align: right;}
 .serv-baround .btm-btn .txt-btn01 {font-size: .875rem; line-height: 1.225rem; padding-right: 1.5rem;}
 .serv-baround .btm-btn .txt-btn01::after {width: 1.25rem; height: 1.25rem;}
@@ -1104,7 +1116,10 @@
 .e2w-box .e2w-right .btm-wrap .btm-btn {margin-top: 1.25rem;}
 
 .bmts-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem;} 
-
+.bmts-box {display: flex; flex-direction: column; align-items: center; gap: 1.88rem; width: calc(50% - .9rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem;}
+.bmts-box>img {width: 7.5rem; height: 7.5rem;}
+.bmts-box .bmts-tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819}
+.bmts-box .bmts-desc {padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758;}
 
 /* 인재상 */
 .rctt [class^="content-item"] { padding: 0 0 15rem 0; }
@@ -1217,3 +1232,36 @@
 .rcct .evaluation-wrap > div img { height: 11.25rem; width: max-content; }
 .rcct .evaluation-wrap > div p { font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; }
 .rcct .evaluation-tit { border-bottom: none; padding: 0; }
+
+/* 서비스 > B-once */
+.serv-bonce .article-img { padding: 2.6875rem 12.53125rem; margin: 5rem 0; }
+.serv-bonce .article-btn-wrap { display: flex; justify-content: center; gap: 0.62rem; margin-bottom: 5rem; }
+.serv-bonce .article-btn-wrap > a { display: flex; gap: 0.62rem; padding: 0.75rem 1.25rem; border: 1px solid #c9ced1; border-radius: 0.5625rem; align-items: center; justify-content: center; width: 16.25rem; }
+.serv-bonce .article-btn-wrap > a > img { width: 1.5rem; }
+.serv-bonce .article-btn-wrap > a > p { color: #555758; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
+.serv-bonce .adv-explain { font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
+.serv-bonce .adv-wrap { margin-top: 1.25rem; }
+.serv-bonce .type-wrap { display: flex; flex-direction: column; gap: 5rem; margin-top: 5rem; }
+.serv-bonce .type-tit { font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; margin-bottom: 1.25rem; }
+.serv-bonce .type-desc { font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-bottom: 2.5rem; }
+.serv-bonce .type-box { background-color: #fff; padding: 2.5rem; border-radius: 1rem; }
+.serv-bonce .type-box-sub { display: flex; background-color: #F3F5F7; border-radius: 0.5rem; padding: 1.88rem; align-items: center; gap: 1.88rem; }
+.serv-bonce .type-box-sub > img { width: 33.25rem; flex: 1; }
+.serv-bonce .type-explain { display: flex; flex-direction: column; gap: 0.62rem; }
+.serv-bonce .type-explain > p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; display: flex; gap: 0.62rem; }
+.serv-bonce .type-explain > p > span { display: block; width: 3.75rem; color: #33B0C6; font-weight: 600; }
+.serv-bonce .type-img-wrap { text-align: center; }
+.serv-bonce .quickscan-img { margin-bottom: 2.5rem; }
+.serv-bonce .quickscan-img img { width: 38.8rem; }
+.serv-bonce .powerscan-img { margin: 2.5rem 0; }
+.serv-bonce .powerscan-img img { width: 55rem; }
+.serv-bonce .scan-img { text-align: center; margin-top: 2.5rem; margin-bottom: 5rem; }
+.serv-bonce .scan-img img { width: 53.4rem; }
+.serv-bonce .ucd-wrap { display: flex; flex-direction: column; gap: 5rem; }
+.serv-bonce .ucd-tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; margin-bottom: 1.25rem; display: block; }
+.serv-bonce .ucd-box-wrap { display: flex; gap: 1.25rem; }
+.serv-bonce .ucd-box { flex: 1; background-color: #f3f5f7; padding: 2.5rem; display: flex; gap: 0.65rem; border-radius: 1rem; }
+.serv-bonce .ucd-box > span { color: #33B0C6; font-size: 1.25rem; font-weight: 800; line-height: 2rem; width: 3.375rem; }
+.serv-bonce .ucd-desc-wrap { display: flex; gap: 0.62rem; flex-direction: column; }
+.serv-bonce .ucd-desc-wrap p:first-child { color: #171819; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
+.serv-bonce .ucd-desc-wrap p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
