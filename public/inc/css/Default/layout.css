@@ -13,6 +13,7 @@ html,body {
     min-width: 1280px;
 }
 .wrap.pc {position: relative;}
+.wrap:has(.sticky-area) {scroll-behavior: smooth;}
 
 .w100 {width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important;}
 .noScroll {touch-action:none; -webkit-overflow-scrolling:none; overflow:hidden; overscroll-behavior:none;}
@@ -430,7 +431,7 @@ aside > img{cursor: pointer;}
 .sticky-area-tit {display: grid; grid-template-columns: 22.8125rem 1fr; max-width: 90rem; margin: 0 auto; padding-top: 7.5rem;}
 .sticky-area-tit .tab-cate-wrap.new .tab-category:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) > li {width: fit-content;}
 .sticky-area-tit .tab-cate-wrap.new .tab button {width: 12.5rem; height: 3.5rem; padding: 0.375rem 2.5rem; border-radius: 0.25rem; font-size: 1.25rem; line-height: 1.75rem;}
-.sticky-area {height: auto; scroll-behavior: smooth;}
+.sticky-area {height: auto;}
 .sticky-area [class^="content-item"]:nth-of-type(2) {padding-top: 5rem;}
 .sticky-area [class^="content-item"] .content-wrap {padding-left: 22.81rem;}
 .sticky-area .side-sticky {position: sticky; top: 5rem; height: fit-content; width: calc(100vw - var(--scrollbar-width));  margin-inline: auto;}
