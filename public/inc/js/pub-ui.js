@@ -12,12 +12,12 @@ var pubUi = {
         this.tabList.init();
         this.acdItem.init();
         this.swiperUi.init();
+        this.calendarUi.init();
 
         this.evtScheduleLeft();
         this.historyMotionEvt();
         this.historyViewEvt();
         this.mobileDeviceChk();
-
         this.setScrollWidth();
     },
 
@@ -859,7 +859,7 @@ var pubUi = {
             //         console.log(el.currentTarget);
             //         el.currentTarget.closest(".input-wrap").classList.remove("on");
             //     })
-                
+
             // })
         },
         textareaResize(obj) {
@@ -1146,6 +1146,161 @@ var pubUi = {
             } else {
                 return;
             }
+        },
+    },
+    calendarUi: {
+        toDay: new Date(),
+        nowDate: new Date(),
+        targetBtn: null,
+
+        init() {
+            this.bindEvents();
+        },
+
+        bindEvents() {
+            document.body.addEventListener("click", (e) => {
+                const calendarEl = document.querySelector(".scriptCalendar");
+
+                // 캘린더 버튼 클릭
+                const btn = e.target.closest(".calendar-btn");
+                if (btn) {
+                    this.targetBtn = btn;
+                    this.buildCalendar();
+                    calendarEl.style.display = "block";
+                    return;
+                }
+
+                // 이전달 버튼
+                if (e.target.closest("#btnPrevCalendar")) {
+                    this.prevCalendar();
+                    return;
+                }
+
+                // 다음달 버튼
+                if (e.target.closest("#nextNextCalendar")) {
+                    this.nextCalendar();
+                    return;
+                }
+
+                // 날짜 셀 클릭
+                const dayCell = e.target.closest(".scriptCalendar > tbody.box-day td");
+                if (dayCell) {
+                    const calendarID = dayCell.closest(".scriptCalendar").id;
+                    const targetId = calendarID.replace("Calendar", "");
+                    this.outputCalendar(targetId, dayCell);
+                    return;
+                }
+
+                // 바깥 클릭 시 닫기
+                if (calendarEl.style.display === "block" && !e.target.closest(".scriptCalendar") && !e.target.closest(".calendar-btn")) {
+                    calendarEl.style.display = "none";
+                }
+            });
+        },
+
+        outputCalendar(targetId, targetDay) {
+            const targetCalBtn = document.querySelector(`#${targetId}`);
+            const targetCalendar = document.querySelector(`#${targetId}Calendar`);
+            const selectedYear = targetCalendar.querySelector("#calYear").innerText;
+            const selectedMonth = targetCalendar.querySelector("#calMonth").innerText;
+            const selectedDay = targetDay.innerText;
+            const selectedDate = `${selectedYear}-${selectedMonth}-${selectedDay}`;
+
+            targetCalBtn.querySelector(".title").innerText = selectedDate;
+            targetCalBtn.querySelector(".title").classList.add("on");
+
+            document.querySelector(".scriptCalendar").style.display = "none";
+        },
+
+        prevCalendar() {
+            this.toDay = new Date(this.toDay.getFullYear(), this.toDay.getMonth() - 1, this.toDay.getDate());
+            this.buildCalendar();
+        },
+
+        nextCalendar() {
+            this.toDay = new Date(this.toDay.getFullYear(), this.toDay.getMonth() + 1, this.toDay.getDate());
+            this.buildCalendar();
+        },
+
+        buildCalendar() {
+            const doMonth = new Date(this.toDay.getFullYear(), this.toDay.getMonth(), 1);
+            const lastDate = new Date(this.toDay.getFullYear(), this.toDay.getMonth() + 1, 0);
+            const tbCalendar = document.querySelector(".scriptCalendar > tbody.box-day");
+
+            document.getElementById("calYear").innerText = this.toDay.getFullYear();
+            document.getElementById("calMonth").innerText = this.autoLeftPad(this.toDay.getMonth() + 1, 2);
+
+            while (tbCalendar.rows.length > 0) {
+                tbCalendar.deleteRow(tbCalendar.rows.length - 1);
+            }
+
+            let row = tbCalendar.insertRow();
+            let dom = 1;
+            const daysLength = Math.ceil((doMonth.getDay() + lastDate.getDate()) / 7) * 7 - doMonth.getDay();
+
+            for (let day = 1 - doMonth.getDay(); daysLength >= day; day++) {
+                let column = row.insertCell();
+
+                if (Math.sign(day) === 1 && lastDate.getDate() >= day) {
+                    column.innerText = this.autoLeftPad(day, 2);
+                    if (dom % 7 === 1) column.style.color = "#FF4D4D";
+                    if (dom % 7 === 0) {
+                        column.style.color = "#4D4DFF";
+                        row = tbCalendar.insertRow();
+                    }
+                } else {
+                    let exceptDay = new Date(doMonth.getFullYear(), doMonth.getMonth(), day);
+                    column.innerText = this.autoLeftPad(exceptDay.getDate(), 2);
+                    column.style.color = "#A9A9A9";
+                }
+
+                // 색상, 클릭 이벤트 설정
+                this.setDayCellStyle(column, day, lastDate);
+
+                dom++;
+            }
+        },
+
+        setDayCellStyle(column, day, lastDate) {
+            if (this.toDay.getFullYear() === this.nowDate.getFullYear()) {
+                if (this.toDay.getMonth() === this.nowDate.getMonth()) {
+                    if (this.nowDate.getDate() > day && Math.sign(day) === 1) {
+                        column.style.backgroundColor = "#E5E5E5";
+                    } else if (this.nowDate.getDate() < day && lastDate.getDate() >= day) {
+                        column.style.backgroundColor = "#FFFFFF";
+                        column.style.cursor = "pointer";
+                    } else if (this.nowDate.getDate() === day) {
+                        column.style.backgroundColor = "#F3F5F7";
+                        column.style.borderRadius = "0.5rem";
+                        column.style.cursor = "pointer";
+                    }
+                } else if (this.toDay.getMonth() < this.nowDate.getMonth()) {
+                    if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
+                        column.style.backgroundColor = "#E5E5E5";
+                    }
+                } else {
+                    if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
+                        column.style.backgroundColor = "#FFFFFF";
+                        column.style.cursor = "pointer";
+                    }
+                }
+            } else if (this.toDay.getFullYear() < this.nowDate.getFullYear()) {
+                if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
+                    column.style.backgroundColor = "#E5E5E5";
+                }
+            } else {
+                if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
+                    column.style.backgroundColor = "#FFFFFF";
+                    column.style.cursor = "pointer";
+                }
+            }
+        },
+
+        autoLeftPad(num, digit) {
+            if (String(num).length < digit) {
+                num = new Array(digit - String(num).length + 1).join("0") + num;
+            }
+            return num;
         },
     },
 };

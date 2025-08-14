@@ -4,8 +4,6 @@ html,body {
 .header-cont{padding: 1.25rem 2rem;}
 [class^="content-item"] .content-wrap {max-width: 100%; padding-left: 2rem; padding-right: 2rem;}
 .wrap:not(.main_p) .content-header {padding-left: 2rem; padding-right: 2rem;}
-.footer-wrap .footer-area {margin: 0 2rem;}
-
 .wrap{max-width: 1279px;margin:0 auto;min-width: revert;}
 
 .pc-only {display: none !important;}
@@ -79,3 +77,5 @@ html,body {
 .footer-bottom {display: block; padding-bottom: 0; margin: 0 1.25rem;}
 .footer-util {padding: 1rem 0 2.25rem;}
 .footer-logo img {width: 12.125rem; margin: 0; padding: 0;}
+.footer-wrap .selectbox-wrap.type3 {height: 3.5rem;}
+.footer-wrap .selectbox-wrap.type3 .select-cate::after {margin-top: 0;}
