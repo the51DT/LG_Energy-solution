@@ -804,7 +804,7 @@
 .rcct .system-tit-wrap > img { width: 3.5rem; }
 .rcct .system-tit-wrap > div > p { font-size: 1rem; line-height: 1.6rem; }
 .rcct .system-tit-wrap > div > span { font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; }
-.rcct .system-cont-wrap .system-cont { display: flex !important; flex-direction: column; }
+.rcct .system-cont-wrap .system-cont { display: flex !important; flex-direction: column; gap: 0.5rem !important; }
 .rcct .system-cont-detail { padding: 1.5rem 1.2rem; }
 .rcct .detail-tit-wrap > p { font-size: 1.25rem; line-height: 1.875rem; }
 .rcct .detail-tit-wrap > span { font-size: 1.5rem; line-height: 2rem; }
