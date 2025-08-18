@@ -159,6 +159,8 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 [class^="icon-btn"].icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external_bl.svg);}
 [class^="icon-btn"].icon-right .icon-area::before {background-image: url(../../images/icon/icon_link_arrow.svg);}
 [class^="icon-btn"].icon-right:hover .icon-area::before {background-image: url(../../images/icon/icon_link_arrow_bl.svg);}
+[class^="icon-btn"].icon-cs .icon-area::before {background-image: url(../../images/icon/icon_cs_wh.svg);}
+[class^="icon-btn"].icon-cs:hover .icon-area::before {background-image: url(../../images/icon/icon_cs.svg);}
 [class^="icon-btn"].btn-primary01 {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); padding: 1.25rem 1.88rem; background: var(--colorElement-light-fill-fill-default04); border-radius: 0.5rem;}
 
 
