@@ -1255,11 +1255,11 @@
 .rcct .evaluation-tit { border-bottom: none; padding: 0; }
 
 /* 서비스 > B-once */
+.service .article-btn-wrap { display: flex; justify-content: center; gap: 0.62rem; margin-bottom: 5rem; }
+.service .article-btn-wrap > a { display: flex; gap: 0.62rem; padding: 0.75rem 1.25rem; border: 1px solid #c9ced1; border-radius: 0.5625rem; align-items: center; justify-content: center; width: 16.25rem; }
+.service .article-btn-wrap > a > img { width: 1.5rem; }
+.service .article-btn-wrap > a > p { color: #555758; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
 .serv-bonce .article-img { padding: 2.6875rem 12.53125rem; margin: 5rem 0; }
-.serv-bonce .article-btn-wrap { display: flex; justify-content: center; gap: 0.62rem; margin-bottom: 5rem; }
-.serv-bonce .article-btn-wrap > a { display: flex; gap: 0.62rem; padding: 0.75rem 1.25rem; border: 1px solid #c9ced1; border-radius: 0.5625rem; align-items: center; justify-content: center; width: 16.25rem; }
-.serv-bonce .article-btn-wrap > a > img { width: 1.5rem; }
-.serv-bonce .article-btn-wrap > a > p { color: #555758; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
 .serv-bonce .adv-explain { font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
 .serv-bonce .adv-wrap { margin-top: 1.25rem; }
 .serv-bonce .type-wrap { display: flex; flex-direction: column; gap: 5rem; margin-top: 5rem; }
@@ -1286,3 +1286,49 @@
 .serv-bonce .ucd-desc-wrap { display: flex; gap: 0.62rem; flex-direction: column; }
 .serv-bonce .ucd-desc-wrap p:first-child { color: #171819; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
 .serv-bonce .ucd-desc-wrap p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
+
+/* 서비스 > KooRooo */
+.serv-kooroo .article-content { position: relative; }
+.serv-kooroo .article-content .article-desc + .content-tit { margin-top: 3.12rem; }
+.serv-kooroo .article-content .content-tit { display: inline-flex; align-items: center; justify-content: space-between; width: 100%; margin: 5rem 0 1.25rem; font-size: 1.5rem; line-height: 2.25rem; font-weight: 600; color: #171819; }
+.serv-kooroo .article-content .content-desc { color: #171819; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-bottom: 2.5rem; }
+.serv-kooroo .article-tit-wrap { display: flex; justify-content: space-between; }
+.serv-kooroo .article-tit-wrap .btn-wrap a { display: flex; align-items: center; background-color: #33B0C6; padding: 1rem 1.75rem; border-radius: 62rem; gap: 0.25rem; color: #fff; font-size: 1.125rem; font-weight: 500; line-height: 1; }
+.serv-kooroo .article-img { padding: 2.375rem 10.125rem; margin: 5rem 0; }
+.serv-kooroo .examp-wrap { display: flex; background-color: #F3F5F7; border-radius: 1rem; justify-content: center; align-items: center; padding: 2rem; }
+.serv-kooroo .examp-box { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
+.serv-kooroo .examp-box .examp-ico { width: 6.25rem; height: 6.25rem; border-radius: 50%; background: #fff; }
+.serv-kooroo .examp-box .examp-txt { color: #555758; font-size: 1rem; font-weight: 500; line-height: 1.6rem; }
+.serv-kooroo .content-item02 { background-color: #EAF3F8; }
+.serv-kooroo .station-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 0.62rem; z-index: 1; position: relative; }
+.serv-kooroo .station-box { background-color: #fff; display: flex; flex-direction: column; padding: 2.5rem; border-radius: 1rem; }
+.serv-kooroo .station-box img { width: 5rem; height: 5rem; }
+.serv-kooroo .station-top { display: flex; align-items: center; gap: 0.62rem; }
+.serv-kooroo .station-top span { color: #171819; font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
+.serv-kooroo .station-bottom { margin-left: 5.62rem; flex-grow: 1; align-items: center; display: flex; }
+.serv-kooroo .station-bottom p, .serv-kooroo .station-bottom li { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
+.serv-kooroo .station-img { position: absolute; width: 21rem; margin-left: -16.69rem; top: 3.13rem; }
+.serv-kooroo .station-battery-img { top: 6.81rem; width: 17.125rem; position: absolute; right: -4.95rem; }
+.serv-kooroo .infra-wrap { display: flex; flex-direction: column; align-items: center; margin: 0 3.28rem; }
+.serv-kooroo .infra-box-wrap { width: 100%; display: flex; gap: 1.25rem; }
+.serv-kooroo .infra-box { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; border: 2px solid #E1E7EA; border-radius: 1rem; padding: 1.875rem; gap: 1.25rem; }
+.serv-kooroo .infra-box > img { width: 7.5rem; }
+.serv-kooroo .infra-box > p { color: #171819; font-size: 1rem; font-weight: 600; line-height: 1.6rem; }
+.serv-kooroo .infra-box > p > span { display: block; font-size: 0.875rem; font-weight: 500; color: #555758; }
+.serv-kooroo .infra-wrap > img { width: 41rem; margin: 1.88rem 0 2.5rem; }
+.serv-kooroo .infra-desc { color: #171819; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
+.serv-kooroo .scooter-wrap { display: flex; flex-direction: column; align-items: center; position: relative; }
+.serv-kooroo .scooter-wrap > img { margin-top: 1.06rem; width: 51rem; }
+.serv-kooroo .scooter-box-wrap { display: flex; width: 100%; }
+.serv-kooroo .scooter-top { display: flex; background-color: #CBF3F7; border-radius: 62.4rem; padding: 1.875rem; }
+.serv-kooroo .scooter-box { background-color: #fff; border-radius: 50%; padding: 3rem 1.25rem; display: flex; flex-direction: column; gap: 0.62rem; align-items: center; text-align: center; justify-content: center; flex: 1; width: 12.5rem; height: 12.5rem; }
+.serv-kooroo .scooter-box img { width: 3rem; }
+.serv-kooroo .scooter-box p { color: #171819; font-size: 1rem; font-weight: 500; line-height: 1.6rem; }
+.serv-kooroo .scooter-bottom { background-color: #5AD1DC; border-radius: 50%; padding: 5rem 6rem; display: flex; flex-direction: column; gap: 0.56rem; position: absolute; right: 0; z-index: -1; }
+.serv-kooroo .scooter-bottom img { width: 4rem; }
+.serv-kooroo .scooter-bottom p { color: #fff; font-size: 1rem; font-weight: 600; line-height: 1.6rem; }
+.serv-kooroo .bmts-txt { width: 100%; }
+.serv-kooroo .bmts-box ul { margin-top: 1.2rem; }
+.serv-kooroo .bmts-box li { font-size: 1rem; line-height: 1.6rem; color: #555758; }
+.serv-kooroo .bmts-box li:last-child { display: flex; justify-content: space-between; }
+.serv-kooroo .bmts-box li > span { color: #858889; font-size: 0.8125rem; font-weight: 400; }

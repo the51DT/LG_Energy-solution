@@ -897,9 +897,9 @@
 .rcct .evaluation-wrap > div img { height: 9.125rem; }
 
 /* 서비스 > B-once */
+.service .article-btn-wrap { flex-direction: column; margin-bottom: 3rem; }
+.service .article-btn-wrap > a { width: 100%; }
 .serv-bonce .article-img { padding: 0 1.63rem; margin: 1.5rem 0 3rem 0; }
-.serv-bonce .article-btn-wrap { flex-direction: column; margin-bottom: 3rem; }
-.serv-bonce .article-btn-wrap > a { width: 100%; }
 .serv-bonce .adv-explain { font-weight: 700; line-height: 1.875rem; }
 .serv-bonce .type-wrap { margin-top: 0.5rem; gap: 3rem; }
 .serv-bonce .type-tit { font-size: 1.125rem; font-weight: 600; line-height: 1.75rem; margin-bottom: 1rem; }

@@ -372,7 +372,7 @@ aside > img{cursor: pointer;}
 
 .lang-wrap .lang-button.active .select-btn-right-icon {transform: translateY(-2px) rotate(-180deg);}
 .lang-wrap .select-menu {padding: 1rem 1.5rem; top: 2rem; left: 50%;transform: translateX(-50%);width:auto;flex-direction: column;align-items: center;gap: 0.625rem;border-radius: 0.5rem;background: var(--fill-fill-on-primary, #FFF);box-shadow: 10px 20px 40\px 0 var(--shadow-shadow-10, rgba(16, 16, 16, 0.10));}
-.lang-wrap .select-menu.on{display: flex;}
+.lang-wrap .select-menu.on{display: flex; z-index: 902;}
 .lang-wrap .select-menu > li > a {color: var(--text-text-default-03, #858889);font-size: var(--size-desktop-B1, 1.125rem);font-style: normal;font-weight: 600;line-height: var(--line-height-desktop-B1, 1.8rem);letter-spacing: var(--letter-spacing-default, 0);}
 .lang-wrap .select-menu > li > a:hover,
 .lang-wrap .select-menu > li > a.active{color: var(--text-text-default-01, #171819);}
