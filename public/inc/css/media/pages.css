@@ -853,3 +853,69 @@
 .rcct .evaluation-wrap > div { border-right: 0; border-bottom: 1px solid #C9CED1; padding: 1.5rem 0; width: 100%; }
 .rcct .evaluation-wrap > div:last-child { padding-bottom: 0; }
 .rcct .evaluation-wrap > div img { height: 9.125rem; }
+
+/* 서비스 > B-once */
+.serv-bonce .article-img {
+    padding: 0 1.63rem;
+    margin: 1.5rem 0 3rem 0;
+}
+
+.serv-bonce .article-btn-wrap {
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.serv-bonce .article-btn-wrap > a {
+    width: 100%;
+}
+
+.serv-bonce .adv-explain {
+    font-weight: 700;
+    line-height: 1.875rem;
+}
+
+.serv-bonce .type-wrap {
+    margin-top: 0.5rem;
+    gap: 3rem;
+}
+
+.serv-bonce .type-tit {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+}
+.serv-bonce .type-desc {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+.serv-bonce .type-box {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+.serv-bonce .type-box-sub {
+    flex-direction: column;
+    padding: 1.5rem 1.25rem;
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    gap: 0;
+}
+
+.serv-bonce .type-explain {
+    gap: 1rem;
+    border-bottom: 1px solid #C9CED1;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.serv-bonce .type-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.serv-bonce .type-step > div {
+    background-color: #f3f5f7;  
+
+}
