@@ -2,7 +2,8 @@ const LGEnSol = {
     
     headerEvent:function(){
         const eventCont = document.querySelector(".pc-only .nav-wrap"),
-        MoEventCont = document.querySelector(".mo-only .nav-wrap"),
+        moEventBtn = document.querySelector(".header-area.mo-only .nav-btn"),
+        moEventCont = document.querySelector(".header-area.mo-only .nav-pop"),
         eventParent = document.querySelector(".parent-event"),
         header_h = eventParent.offsetHeight;
         let maxCount = 0,
@@ -42,7 +43,6 @@ const LGEnSol = {
                     el.style.height = el.scrollHeight + "px";
                 });
 
-                
                 setTimeout(() => {
                     el.style.height = "";
                     el.style.overflow = "";
@@ -50,6 +50,7 @@ const LGEnSol = {
                 }, 300);
             });
         }
+
         function clearEvent(){
             eventParent.classList.remove("on");
             eventParent.style.height = 
@@ -59,7 +60,6 @@ const LGEnSol = {
             
             document.querySelectorAll(".gnb__tab-btn-wrap ul").forEach(el => {
                 el.classList.remove("on");
-
                 el.style.transition = "height 0s";
                 el.style.overflow = "hidden";
                 el.style.height = "0rem";
@@ -70,6 +70,17 @@ const LGEnSol = {
                 });
             });
         }
+
+        function setEventMo(){
+            moEventCont.classList.add("on");
+            moEventBtn.classList.add("on");
+        }
+
+        function clearEventMo(){
+            moEventCont.classList.remove("on");
+            moEventBtn.classList.remove("on");
+        }
+
         function event(){
             if(eventCont){
                 eventCont.addEventListener("mouseenter", function () {
@@ -80,7 +91,35 @@ const LGEnSol = {
                 });
             }
             
-            if(MoEventCont){
+            if(moEventCont){
+                moEventBtn.addEventListener("click", function () {
+                    if (!this.classList.contains("on")) {
+                        setEventMo();
+                    } else {
+                        clearEventMo();
+                    }
+                });
+                
+                document.querySelectorAll(".nav-pop .depth01 > a").forEach(depOneBtn => {
+                    depOneBtn.addEventListener("click", function(e) {
+                        e.preventDefault();
+                        const li = this.parentElement;
+                        const siblings = li.parentElement.children;
+                        const siblingsDep2 = li.querySelectorAll("ul li").length;
+                        const siblingsDep2H = 68 + (siblingsDep2 * 28.8) + ((siblingsDep2 - 1) * 12 + 24)  + "px";
+
+                        Array.from(siblings).forEach(sib => {
+                            sib.classList.remove("on");
+                            sib.style.height = "68px";
+                        });
+                        li.classList.add("on");
+                        li.style.height = siblingsDep2H
+                    })
+                    
+                });
+                document.querySelector(".header_search-btn").addEventListener("click", function () {
+                    clearEventMo();
+                })
                 
             }
             document.addEventListener("click", function (e) {
