@@ -1208,26 +1208,28 @@ var pubUi = {
                         const targetX = e.clientX;
                         const targetY = e.clientY;
                         const targetScreenWidth = window.screen.width;
-                        console.log(targetScreenWidth);
                         const targetId = this.targetBtn.getAttribute("id");
 
                         this.buildCalendar();
                         
-                        document.querySelector(`#${targetId}Calendar`).style.display = "block";
+                        document.querySelector(`#${targetId}Calendar`).classList.add("on");
                         document.querySelector(`#${targetId}Calendar`).style.position = "absolute";
                         document.querySelector(`#${targetId}Calendar`).style.backgroundColor = "#fff";
                         
                         if (document.querySelector(".wrap").classList.contains("mobile")) {
-                            document.querySelector(`#${targetId}Calendar`).style.top = "revert";
-                            document.querySelector(`#${targetId}Calendar`).style.bottom = 0;
-                            document.querySelector(`#${targetId}Calendar`).style.left = `50%`;
-                            document.querySelector(`#${targetId}Calendar`).style.transform = "translateX(-50%)";                            
-                            document.querySelector(`#${targetId}Calendar`).style.width = "100%";
-                            // document.querySelector(`#${targetId}Calendar`).style.width = `${targetScreenWidth - 40}px`;
-                            
-                        } else {
+                            document.querySelector(".wrap.mobile").classList.add("open-calendar");
+                            document.querySelector(".wrap.mobile aside").style.display = "none";
+                            document.querySelector(`#${targetId}Calendar`).style.top = "50%";
+                            document.querySelector(`#${targetId}Calendar`).style.left = "50%";
+                            document.querySelector(`#${targetId}Calendar`).style.transform = "translate(-50%, -50%)";
+                            document.querySelector(`#${targetId}Calendar`).style.width = `${targetScreenWidth - 40}px`;
+                            document.querySelector(`#${targetId}Calendar`).style.maxWidth = `360px`;                            
+                        } else {                            
                             document.querySelector(`#${targetId}Calendar`).style.left = targetX + "px";
-                            document.querySelector(`#${targetId}Calendar`).style.top = targetY + "px";
+                            document.querySelector(`#${targetId}Calendar`).style.top = targetY + "px";                            
+                            if (document.querySelector(".wrap").classList.contains("open-calendar")) {
+                                document.querySelector(".wrap").classList.remove("open-calendar");
+                            }
                         }
 
                         
@@ -1257,8 +1259,11 @@ var pubUi = {
                     }
 
                     // 바깥 클릭 시 닫기
-                    if (calendarEl.style.display === "block" && !e.target.closest(".scriptCalendar") && !e.target.closest(".calendar-btn")) {
-                        calendarEl.style.display = "none";
+                    if (calendarEl.classList.contains("on") && !e.target.closest(".scriptCalendar") && !e.target.closest(".calendar-btn")) {
+                        calendarEl.classList.remove("on");
+                        if(document.querySelector(".wrap").classList.contains("open-calendar")) {
+                            document.querySelector(".wrap").classList.remove("open-calendar");
+                        }
                     }
                 }
             });
@@ -1282,7 +1287,10 @@ var pubUi = {
             //선택한 날짜값 저장
             this.selectedDates[targetId] = selectedDate;
 
-            targetCalendar.style.display = "none";
+            targetCalendar.classList.remove("on");
+            if (document.querySelector(".wrap").classList.contains("open-calendar")) {
+                document.querySelector(".wrap").classList.remove("open-calendar");
+            }
         },
 
         prevCalendar() {

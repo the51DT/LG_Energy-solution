@@ -231,7 +231,8 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .calendar-wrap .calendar-btn::after {content:''; width: 1.5rem; height: 1.5rem; display: block; background: url(../../../inc/images/icon/icon_calander.svg) no-repeat center 100%; }
 .calendar-wrap .calendar-btn .title { color: #858889; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; margin-right: 1rem;}
 .calendar-wrap .calendar-btn .title.on {color:#171819;}
-.calendar-box {display: none; width: 360px; margin:0 auto; text-align: center; box-sizing: border-box; border: 1px solid #8E959C; padding: 0 1.25rem; z-index: 100;}
+.calendar-box {display: none; width: 360px; margin:0 auto; text-align: center; box-sizing: border-box; border: 1px solid #8E959C; padding: 0.75rem 1.25rem 2rem; z-index: 100; }
+.calendar-box.on {display: block;}
 .calendar-box > thead > tr:first-child > td { font-weight:bold; }
 .calendar-box > thead > tr:last-child > td { background-color:#fff; }
 .calendar-box > thead > tr:last-child > td:first-child {color: #EE444A;}
@@ -439,7 +440,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .accordion-list.type2 .accordion-btn:after {background-image:url(../../images/icon/icon_accord_plus.svg);}
 .accordion-list.type2.on .accordion-btn:after {background-image:url(../../images/icon/icon_accord_minus.svg);}
 
-.accordion-list.type3 {border-radius: 1rem; background: #fff;}
+.accordion-list.type3 {background: #fff;}
 .accordion-list.type3.on {border: 2px solid var(--colorElement-light-primary-primary-enabled);}
 .accordion-list.type3:not(:last-child) {margin-bottom: 1.25rem;}
 .accordion-list.type3 .accordion-btn .acd-group {gap: 2.5rem;}
@@ -486,7 +487,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .selectbox-wrap > div.select-cate > button.on {color:var(--colorElement-light-text-text-default01); font-weight:500;}
 .selectbox-wrap > div.select-cate > a > img {margin-top: 3px;}
 
-.select-menu {padding: 1rem 2em; width: 100%; position: absolute; top:3rem; left:0; background: #171819; display:none; z-index: 50;}
+.select-menu {padding: 1rem 2em; width: 100%; position: absolute; top:2.875rem; left:0; background: #171819; display:none; z-index: 50;}
 .select-menu.on {display: block;}
 .select-menu > li:not(:last-child) {padding-bottom: 1rem;}
 .select-menu > li > a {color: #fff; font-size: calc(18 / 16 * 1rem); font-weight: 400; line-height: calc(28.8 / 16 * 1rem); display: block;}
@@ -678,3 +679,20 @@ table {border-collapse: collapse;}
 .swiper-button-next {content:""; display: block; width: 2.5rem; height: 2.5rem; padding: 0.5rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat 50% center;  border: 1px solid #1f1f3c; border-radius: 50%;}
 .swiper-wrapper .swiper-download-btn {font-size: 1rem; position: absolute; bottom: 0; right: 0; display: flex; gap: 0.625rem; color: #fff; font-weight: 600; padding: 0.625rem 1.25rem; background-color: rgba(0, 0, 0, 0.80); align-items: center; }
 .swiper-wrapper .swiper-slide .swiper-download-btn img { width: 1.25rem; height: 1.25rem; }
+
+.type02Swiper .swiper-paging-wrap {display: block; width: 100%; max-width: revert; position: absolute; top:50%; margin: 0;}
+.type02Swiper .swiper-pagination {position: unset; display: flex; align-items: center; justify-content: center; margin-top: 1rem; transform: translate(0, 0); min-height: unset;}
+.type02Swiper .swiper-pagination-bullet {width: .625rem; height: .625rem; border: 1px solid #171819; background-color: transparent; opacity: 1;}
+.type02Swiper .swiper-pagination-bullet-active {background-color: #171819;}
+.type02Swiper .swiper-button-prev,
+.type02Swiper .swiper-button-next {background: #fff; border: 0;}
+
+/* marquee */
+.rolling-banner { position: relative; width: 100%; overflow: hidden; background: #fff; min-height:50px; display: flex; align-items: center;  border:1px solid #ccc;}
+.banner-track {display: flex; width: max-content; animation: scroll-left 15s linear infinite;}
+.banner-track:hover { animation-play-state: paused; /* 마우스 오버 시 멈춤 */}
+.banner-item { flex: 0 0 auto; padding: 0 2rem; font-size: 1rem;  white-space: nowrap;}
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}

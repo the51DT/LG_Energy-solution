@@ -613,7 +613,14 @@
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] {min-width: unset; width: 100%; height: 3.25rem; padding-inline: 1.88rem 1.25rem; font-size: 1.125rem; font-weight: 500; line-height: 1.575rem;}
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] .icon-area {width: fit-content;}
 
-/* 회사소개 소개 CI (comp) */
+
+/* 회사정보 회사소개 */
+.flex-box .left-area .number {width: 8.125rem; height: auto;}
+.flex-box .left-area .content {width: 32.70769rem; height: auto;}
+.comp .type02Swiper .swiper-pagination {margin-top: 8.06rem;}
+
+
+/* 회사정보 CI (comp) */
 .comp .intro-img-desc {display: flex; justify-content: space-between; color: var(--colorElement-light-text-text-default01);}
 .comp .intro-img-desc .desc {display: flex; flex-direction: column; gap: 1.5rem;}
 .comp .intro-img-desc .desc > p {font-size: 2rem; font-weight: 700; line-height: 3rem;}
