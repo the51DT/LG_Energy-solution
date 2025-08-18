@@ -1126,6 +1126,7 @@ var pubUi = {
     swiperUi: {
         init() {
             this.type01Swiper();
+            this.type02Swiper();
             this.bAroundMoSwiper();
         },
         // swiper default 타입 : type01Swiper
@@ -1138,6 +1139,24 @@ var pubUi = {
                     pagination: {
                         el: ".swiper-pagination",
                         type: "fraction",
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            } else {
+                return;
+            }
+        },
+        type02Swiper() {
+            const targetSwiper = document.querySelectorAll(".type02Swiper");
+
+            if (targetSwiper.length > 0) {
+                //newsroom 상세 사용중
+                var swiper1 = new Swiper(".type02Swiper", {
+                    pagination: {
+                        el: ".swiper-pagination",
                     },
                     navigation: {
                         nextEl: ".swiper-button-next",
@@ -1169,6 +1188,7 @@ var pubUi = {
         toDay: new Date(),
         nowDate: new Date(),
         targetBtn: null,
+        selectedDates: {},
 
         init() {
             this.bindEvents();
@@ -1178,44 +1198,73 @@ var pubUi = {
             document.body.addEventListener("click", (e) => {
                 const calendarEl = document.querySelector(".scriptCalendar");
 
-                // 캘린더 버튼 클릭
-                const btn = e.target.closest(".calendar-btn");
-                if (btn) {
-                    this.targetBtn = btn;
-                    this.buildCalendar();
-                    calendarEl.style.display = "block";
-                    return;
-                }
+                if (calendarEl) {
+                    // 캘린더 버튼 클릭
+                    const btn = e.target.closest(".calendar-btn");
+                    if (btn) {
+                        this.targetBtn = btn;
 
-                // 이전달 버튼
-                if (e.target.closest("#btnPrevCalendar")) {
-                    this.prevCalendar();
-                    return;
-                }
+                        // 클릭한 좌표값 및 스크린너비 변수에 저장
+                        const targetX = e.clientX;
+                        const targetY = e.clientY;
+                        const targetScreenWidth = window.screen.width;
+                        console.log(targetScreenWidth);
+                        const targetId = this.targetBtn.getAttribute("id");
 
-                // 다음달 버튼
-                if (e.target.closest("#nextNextCalendar")) {
-                    this.nextCalendar();
-                    return;
-                }
+                        this.buildCalendar();
+                        
+                        document.querySelector(`#${targetId}Calendar`).style.display = "block";
+                        document.querySelector(`#${targetId}Calendar`).style.position = "absolute";
+                        document.querySelector(`#${targetId}Calendar`).style.backgroundColor = "#fff";
+                        
+                        if (document.querySelector(".wrap").classList.contains("mobile")) {
+                            document.querySelector(`#${targetId}Calendar`).style.top = "revert";
+                            document.querySelector(`#${targetId}Calendar`).style.bottom = 0;
+                            document.querySelector(`#${targetId}Calendar`).style.left = `50%`;
+                            document.querySelector(`#${targetId}Calendar`).style.transform = "translateX(-50%)";                            
+                            document.querySelector(`#${targetId}Calendar`).style.width = "100%";
+                            // document.querySelector(`#${targetId}Calendar`).style.width = `${targetScreenWidth - 40}px`;
+                            
+                        } else {
+                            document.querySelector(`#${targetId}Calendar`).style.left = targetX + "px";
+                            document.querySelector(`#${targetId}Calendar`).style.top = targetY + "px";
+                        }
 
-                // 날짜 셀 클릭
-                const dayCell = e.target.closest(".scriptCalendar > tbody.box-day td");
-                if (dayCell) {
-                    const calendarID = dayCell.closest(".scriptCalendar").id;
-                    const targetId = calendarID.replace("Calendar", "");
-                    this.outputCalendar(targetId, dayCell);
-                    return;
-                }
+                        
 
-                // 바깥 클릭 시 닫기
-                if (calendarEl.style.display === "block" && !e.target.closest(".scriptCalendar") && !e.target.closest(".calendar-btn")) {
-                    calendarEl.style.display = "none";
+                        return;
+                    }
+
+                    // 이전달 버튼
+                    if (e.target.closest("#btnPrevCalendar")) {
+                        this.prevCalendar();
+                        return;
+                    }
+
+                    // 다음달 버튼
+                    if (e.target.closest("#nextNextCalendar")) {
+                        this.nextCalendar();
+                        return;
+                    }
+
+                    // 날짜 셀 클릭
+                    const dayCell = e.target.closest(".scriptCalendar > tbody.box-day td");
+                    if (dayCell) {
+                        const calendarID = dayCell.closest(".scriptCalendar").id;
+                        const targetId = calendarID.replace("Calendar", "");
+                        this.hideCalendar(targetId, dayCell);
+                        return;
+                    }
+
+                    // 바깥 클릭 시 닫기
+                    if (calendarEl.style.display === "block" && !e.target.closest(".scriptCalendar") && !e.target.closest(".calendar-btn")) {
+                        calendarEl.style.display = "none";
+                    }
                 }
             });
         },
 
-        outputCalendar(targetId, targetDay) {
+        hideCalendar(targetId, targetDay) {
             const targetCalBtn = document.querySelector(`#${targetId}`);
             const targetCalendar = document.querySelector(`#${targetId}Calendar`);
             const selectedYear = targetCalendar.querySelector("#calYear").innerText;
@@ -1223,10 +1272,17 @@ var pubUi = {
             const selectedDay = targetDay.innerText;
             const selectedDate = `${selectedYear}-${selectedMonth}-${selectedDay}`;
 
+            // console.log(targetDay);
             targetCalBtn.querySelector(".title").innerText = selectedDate;
             targetCalBtn.querySelector(".title").classList.add("on");
 
-            document.querySelector(".scriptCalendar").style.display = "none";
+            targetDay.classList.add("selected");
+            targetDay.setAttribute("data-selected", true);
+
+            //선택한 날짜값 저장
+            this.selectedDates[targetId] = selectedDate;
+
+            targetCalendar.style.display = "none";
         },
 
         prevCalendar() {
@@ -1265,6 +1321,14 @@ var pubUi = {
                         column.style.color = "#4D4DFF";
                         row = tbCalendar.insertRow();
                     }
+
+                    // 이미 저장된 선택날짜와 같으면 selected 클래스 추가
+                    const calendarId = this.targetBtn?.getAttribute("id");
+                    const savedDate = this.selectedDates[calendarId];
+                    const currentDate = `${this.toDay.getFullYear()}-${this.autoLeftPad(this.toDay.getMonth() + 1, 2)}-${this.autoLeftPad(day, 2)}`;
+                    if (savedDate === currentDate) {
+                        column.classList.add("selected");
+                    }
                 } else {
                     let exceptDay = new Date(doMonth.getFullYear(), doMonth.getMonth(), day);
                     column.innerText = this.autoLeftPad(exceptDay.getDate(), 2);
@@ -1279,36 +1343,39 @@ var pubUi = {
         },
 
         setDayCellStyle(column, day, lastDate) {
-            if (this.toDay.getFullYear() === this.nowDate.getFullYear()) {
-                if (this.toDay.getMonth() === this.nowDate.getMonth()) {
-                    if (this.nowDate.getDate() > day && Math.sign(day) === 1) {
-                        column.style.backgroundColor = "#E5E5E5";
-                    } else if (this.nowDate.getDate() < day && lastDate.getDate() >= day) {
-                        column.style.backgroundColor = "#FFFFFF";
-                        column.style.cursor = "pointer";
-                    } else if (this.nowDate.getDate() === day) {
-                        column.style.backgroundColor = "#F3F5F7";
-                        column.style.borderRadius = "0.5rem";
-                        column.style.cursor = "pointer";
+            if (!column.classList.contains("selected")) {
+                if (this.toDay.getFullYear() === this.nowDate.getFullYear()) {
+                    if (this.toDay.getMonth() === this.nowDate.getMonth()) {
+                        if (this.nowDate.getDate() > day && Math.sign(day) === 1) {
+                            // column.style.backgroundColor = "#E5E5E5"; (현재일 기준 해당달 이전 날짜 색상 변경 원할시 해당 부분 수정)
+                        } else if (this.nowDate.getDate() < day && lastDate.getDate() >= day) {
+                            //column.style.backgroundColor = "#FFFFFF";
+                            column.style.cursor = "pointer";
+                        } else if (this.nowDate.getDate() === day) {
+                            //today 날짜 : 현재 프로젝트에서는 사용안함으로 주석처리하였음
+                            // column.style.backgroundColor = "#F3F5F7";
+                            // column.style.borderRadius = "0.5rem";
+                            // column.style.cursor = "pointer";
+                        }
+                    } else if (this.toDay.getMonth() < this.nowDate.getMonth()) {
+                        if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
+                            // column.style.backgroundColor = "#E5E5E5"; (현재일 기준 이전달 날짜 색상 변경 원할시 해당 부분 수정)
+                        }
+                    } else {
+                        if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
+                            //column.style.backgroundColor = "#FFFFFF";
+                            column.style.cursor = "pointer";
+                        }
                     }
-                } else if (this.toDay.getMonth() < this.nowDate.getMonth()) {
+                } else if (this.toDay.getFullYear() < this.nowDate.getFullYear()) {
                     if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
-                        column.style.backgroundColor = "#E5E5E5";
+                        // column.style.backgroundColor = "#E5E5E5"; (현재일 기준 작년도 날짜 색상 변경 원할시 해당 부분 수정)
                     }
                 } else {
                     if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
-                        column.style.backgroundColor = "#FFFFFF";
+                        //column.style.backgroundColor = "#FFFFFF";
                         column.style.cursor = "pointer";
                     }
-                }
-            } else if (this.toDay.getFullYear() < this.nowDate.getFullYear()) {
-                if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
-                    column.style.backgroundColor = "#E5E5E5";
-                }
-            } else {
-                if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
-                    column.style.backgroundColor = "#FFFFFF";
-                    column.style.cursor = "pointer";
                 }
             }
         },
