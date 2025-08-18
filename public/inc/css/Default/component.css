@@ -355,6 +355,9 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .cont-area-title {font-size: 2.5rem; font-weight: 600; line-height: 3.5rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 2.5rem;}
 .cont-area-title.type2 {margin-bottom: 3.75rem;}
 .cont-list-col2 {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;}
+/* grid / flex content-type */
+.sect-item-box.grid-type {display: grid; gap: 1.25rem; grid-template-columns: repeat(3, 1fr); } 
+.sect-item-box.grid-type .grid-item {height: auto;}
 
 /* new */
 .sect-box > .sub-title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; margin-bottom: 0.62rem; color:#33b0c6;}
@@ -685,7 +688,7 @@ table {border-collapse: collapse;}
 .type02Swiper .swiper-pagination-bullet {width: .625rem; height: .625rem; border: 1px solid #171819; background-color: transparent; opacity: 1;}
 .type02Swiper .swiper-pagination-bullet-active {background-color: #171819;}
 .type02Swiper .swiper-button-prev,
-.type02Swiper .swiper-button-next {background: #fff; border: 0;}
+.type02Swiper .swiper-button-next {background-color: #fff; border: 0;}
 
 /* marquee */
 .rolling-banner { position: relative; width: 100%; overflow: hidden; background: #fff; min-height:50px; display: flex; align-items: center;  border:1px solid #ccc;}
