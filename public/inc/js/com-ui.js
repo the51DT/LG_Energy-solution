@@ -83,14 +83,14 @@ const LGEnSol = {
             if(MoEventCont){
                 
             }
-            document.addEventListener("click", function(e) {
-                const isInside = Array.from(document.querySelectorAll(".search-reset"))
-                    .some(reset => reset.contains(e.target));
-                if (!isInside) {
+            // document.addEventListener("click", function(e) {
+            //     const isInside = Array.from(document.querySelectorAll(".search-reset"))
+            //         .some(reset => reset.contains(e.target));
+            //     if (!isInside) {
                     
-                    pubUi.popUp.close('.header_search-area', '.header_search-btn');
-                }
-            });
+            //         pubUi.popUp.close('.header_search-area', '.header_search-btn');
+            //     }
+            // });
         }
         event();
     },
