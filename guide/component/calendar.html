@@ -24,7 +24,7 @@
                   <a href="../ui-guide.html" class="txt-btn02 txt-btn-sm">Component 페이지로 돌아가기</a>
                 </div>
               </div>
-              <h3 class="guide-title-h3">* 컴포넌트 사용시 유의사항</h3>
+              <h3 class="guide-title-h3 color-type-black">* 컴포넌트 사용시 유의사항</h3>
               <ul class="guide-list">
                 <li>                                             
                   <p>캘린더팝업 id값 정의시: 대상 캘린더 버튼과 id값 동일 + Calendar 명명규칙 맞춰서 사용할것 </p>
@@ -76,156 +76,9 @@
         </div> <!-- //guide-wrapper -->
 
     </body>
-    <script type="text/javascript">
-        var toDay = new Date(); // 오늘 날짜
-        var nowDate = new Date(); // 오늘 날짜 고정
-        let targetBtn; // 클릭한 버튼 저장
-
-        document.addEventListener("DOMContentLoaded", function () {
-            // 이벤트 위임
-            document.body.addEventListener("click", function (e) {
-                const calendarEl = document.querySelector(".scriptCalendar");
-
-                // 캘린더 버튼 클릭
-                const btn = e.target.closest(".calendar-btn");
-                if (btn) {
-                    targetBtn = btn;
-                    buildCalendar();
-                    calendarEl.style.display = "block";
-                    return;
-                }
-
-                // 이전달 버튼 클릭
-                if (e.target.closest("#btnPrevCalendar")) {
-                    prevCalendar();
-                    return;
-                }
-
-                // 다음달 버튼 클릭
-                if (e.target.closest("#nextNextCalendar")) {
-                    nextCalendar();
-                    return;
-                }
-
-                // 날짜 셀 클릭
-                const dayCell = e.target.closest(".scriptCalendar > tbody.box-day td");
-                if (dayCell) {
-                    const calendarID = dayCell.closest(".scriptCalendar").id;
-                    const targetId = calendarID.replace("Calendar", "");
-                    outputCalendar(targetId, dayCell);
-                    return;
-                }
-
-                // 바깥 클릭 시 닫기
-                if (
-                    calendarEl.style.display === "block" &&
-                    !e.target.closest(".scriptCalendar") &&
-                    !e.target.closest(".calendar-btn")
-                ) {
-                    calendarEl.style.display = "none";
-                }
-            });
-        });
-
-        function outputCalendar(targetId, targetDay) {
-            const targetCalBtn = document.querySelector(`#${targetId}`);
-            const targetCalendar = document.querySelector(`#${targetId}Calendar`);
-            const selectedYear = targetCalendar.querySelector("#calYear");
-            const selectedMonth = targetCalendar.querySelector("#calMonth");
-            const selectedDay = targetDay.innerText;
-
-            let selectedDate = `${selectedYear.innerText}-${selectedMonth.innerText}-${selectedDay}`;
-            targetCalBtn.querySelector(".title").innerText = selectedDate;
-            targetCalBtn.querySelector(".title").classList.add("on");
-
-            document.querySelector(".scriptCalendar").style.display = "none";
-        }
-
-        function prevCalendar() {
-            toDay = new Date(toDay.getFullYear(), toDay.getMonth() - 1, toDay.getDate());
-            buildCalendar();
-        }
-
-        function nextCalendar() {
-            toDay = new Date(toDay.getFullYear(), toDay.getMonth() + 1, toDay.getDate());
-            buildCalendar();
-        }
-
-        function buildCalendar() {
-            let doMonth = new Date(toDay.getFullYear(), toDay.getMonth(), 1);
-            let lastDate = new Date(toDay.getFullYear(), toDay.getMonth() + 1, 0);
-
-            let tbCalendar = document.querySelector(".scriptCalendar > tbody.box-day");
-            document.getElementById("calYear").innerText = toDay.getFullYear();
-            document.getElementById("calMonth").innerText = autoLeftPad((toDay.getMonth() + 1), 2);
-
-            while (tbCalendar.rows.length > 0) {
-                tbCalendar.deleteRow(tbCalendar.rows.length - 1);
-            }
-
-            let row = tbCalendar.insertRow();
-            let dom = 1;
-            let daysLength = (Math.ceil((doMonth.getDay() + lastDate.getDate()) / 7) * 7) - doMonth.getDay();
-
-            for (let day = 1 - doMonth.getDay(); daysLength >= day; day++) {
-                let column = row.insertCell();
-
-                if (Math.sign(day) == 1 && lastDate.getDate() >= day) {
-                    column.innerText = autoLeftPad(day, 2);
-                    if (dom % 7 == 1) column.style.color = "#FF4D4D";
-                    if (dom % 7 == 0) {
-                        column.style.color = "#4D4DFF";
-                        row = tbCalendar.insertRow();
-                    }
-                } else {
-                    let exceptDay = new Date(doMonth.getFullYear(), doMonth.getMonth(), day);
-                    column.innerText = autoLeftPad(exceptDay.getDate(), 2);
-                    column.style.color = "#A9A9A9";
-                }
-
-                if (toDay.getFullYear() == nowDate.getFullYear()) {
-                    if (toDay.getMonth() == nowDate.getMonth()) {
-                        if (nowDate.getDate() > day && Math.sign(day) == 1) {
-                            // column.style.backgroundColor = "#E5E5E5"; (현재일 기준 이전 날짜 색상 변경 원할시 해당 부분 수정)
-                        } else if (nowDate.getDate() < day && lastDate.getDate() >= day) {
-                            column.style.backgroundColor = "#FFFFFF";
-                            column.style.cursor = "pointer";
-                        } else if (nowDate.getDate() == day) {
-                            column.style.backgroundColor = "#F3F5F7";
-                            column.style.borderRadius = "0.5rem";
-                            column.style.cursor = "pointer";
-                        }
-                    } else if (toDay.getMonth() < nowDate.getMonth()) {
-                        if (Math.sign(day) == 1 && day <= lastDate.getDate()) {
-                            // column.style.backgroundColor = "#E5E5E5";  (현재일 기준 이전 날짜 색상 변경 원할시 해당 부분 수정)
-                        }
-                    } else {
-                        if (Math.sign(day) == 1 && day <= lastDate.getDate()) {
-                            column.style.backgroundColor = "#FFFFFF";
-                            column.style.cursor = "pointer";
-                        }
-                    }
-                } else if (toDay.getFullYear() < nowDate.getFullYear()) {
-                    if (Math.sign(day) == 1 && day <= lastDate.getDate()) {
-                        // column.style.backgroundColor = "#E5E5E5";  (현재일 기준 이전 날짜 색상 변경 원할시 해당 부분 수정)
-                    }
-                } else {
-                    if (Math.sign(day) == 1 && day <= lastDate.getDate()) {
-                        column.style.backgroundColor = "#FFFFFF";
-                        column.style.cursor = "pointer";
-                    }
-                }
-                dom++;
-            }
-        }
-
-        function autoLeftPad(num, digit) {
-            if (String(num).length < digit) {
-                num = new Array(digit - String(num).length + 1).join("0") + num;
-            }
-            return num;
-        }
-    </script>
+    <script type="text/javascript" src="../../public/inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../public/inc/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../../public/inc/js/pub-ui.js"></script>
 </head>
 
 

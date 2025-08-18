@@ -537,12 +537,12 @@
 .pind .indus-bottom .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
 .pind .indus-bottom .bottom-list {flex-shrink: 0; display: flex; gap: 2.5rem; margin-top: 1.875rem;}
 .pind .indus-bottom .bottom-list > li {width: 13.75rem; height: 13.75rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-on-primary); padding-top: 1rem; text-align: center;}
-.pind .indus-bottom .bottom-list > li > img {width: 11.25rem; height: 8.75rem;}
+.pind .indus-bottom .bottom-list > li > img {width: 11.25rem; height: 8.75rem; object-fit: cover;}
 .pind .indus-bottom .bottom-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .pind .indus-bottom .bottom-col {flex-grow: 1; display: flex; flex-direction: column; gap: 2.5rem;}
 .pind .indus-bottom .bottom-col > div {display: flex; flex-direction: column; gap: 0.62rem;}
-.pind .indus-bottom .bottom-col .btn-wrap {display: flex; gap: 0.62rem;}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] {justify-content: flex-start; width: 100%; min-width: unset; padding: 1.25rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-on-primary);}
+.pind .indus-bottom .bottom-col .btn-wrap {display: flex; gap: 0.625rem;}
+.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] {justify-content: flex-start; width: 100%; min-width: unset; height: auto; padding: 1.25rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-on-primary);}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"].gray {background-color: var(--colorElement-light-fill-fill-default02);}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] > img {width: 2.5rem; height: 2.5rem; margin-right: 1.25rem;}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] .icon-area {margin-left: auto; width: 1.875rem; height: 1.875rem;}

@@ -681,10 +681,10 @@
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
-                                                    <!-- 공급 예상 시기 : 캘린더 컴포넌트 퍼블리싱 작업 후 해당 부분 보완하여 추후 전달예정(확정 늦게되어 추가 작업필요) -->
+                                                    <!-- 공급 예상 시기 : 25.08.18 캘린더 컴포넌트 퍼블리싱 완료  -->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
-                                                            <label for="supply-input">공급 예상 시기</label>                                                            
+                                                            <label for="supply-input">공급 예상 시기</label>
                                                             <div class="supply-input-wrap">
                                                                 <div class="calendar-wrap">                                                                    
                                                                     <button type="button" class="calendar-btn" id="supply-input">
@@ -1136,21 +1136,21 @@
         </div>
     </div>
 
-    <!-- 캘린더 팝업 : 25.08.14 추가
+    <!-- 캘린더 팝업 : 25.08.18 추가
     * 컴포넌트 사용시 유의사항
-        캘린더팝업 id값 정의시: 대상 캘린더 버튼과 id값 동일 + Calendar 명명규칙 맞춰서 사용할것 
-        ex)캘린더 버튼 id가 supply-input이면 캘린더팝업 id supply-inputCalendar로 정의 -->
-        <table class="calendar-box scriptCalendar" id="supply-inputCalendar">
+    캘린더팝업 id값 정의시: 대상 캘린더 버튼과 id값 동일 + Calendar 명명규칙 맞춰서 사용할것 
+    ex)캘린더 버튼 id가 supply-input이면 캘린더팝업 id supply-inputCalendar로 정의 -->
+    <table class="calendar-box scriptCalendar" id="supply-inputCalendar">
         <thead>
             <tr class="calendar-head">
                 <td class="calendar-arr btn-prev" id="btnPrevCalendar"></td>
-                <td colspan="5">
+                <td colspan="5" class="calendar-title">
                     <span id="calYear">YYYY</span>년
                     <span id="calMonth">MM</span>월
                 </td>
                 <td class="calendar-arr btn-next" id="nextNextCalendar"></td>
             </tr>
-            <tr>
+            <tr class="calendar-day">
                 <td>일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td>
             </tr>
         </thead>
@@ -1159,7 +1159,7 @@
 
     <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
     <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
-    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+    <!-- <script type="text/javascript" src="../../../inc/js/com-ui.js"></script> -->
     <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
 </body>
 
