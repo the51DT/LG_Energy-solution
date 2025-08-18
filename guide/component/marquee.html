@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>LG에너지솔루션 | Component - marquee</title>
+    <link type="text/css" rel="stylesheet" href="../../guide/inc/css/shCoreDefault.css" />
+    <link type="text/css" rel="stylesheet" href="../../guide/inc/css/guide.css" />
+    <link type="text/css" rel="stylesheet" href="../../public/inc/css/swiper.min.css" />  <!-- swiper.js 라이브러리 사용시 추가 필요 -->  
+    <link type="text/css" rel="stylesheet" href="../../public/inc/css/common.css" />
+    </head>
+
+    <body>
+        <div class="skip-navigation">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="guide-wrapper">
+          <div class="wrap">
+            <section class="guide-section intro">
+              <div class="guide-header">
+                <p class="guide-title-h3">Marquee (롤링배너)</p>
+                <div class="btn-wrap">
+                  <a href="../ui-guide.html" class="txt-btn02 txt-btn-sm">Component 페이지로 돌아가기</a>
+                </div>
+              </div>
+              <ul class="guide-list">
+                <li>
+                  <p>흐르는 무한롤링배너 작업시 사용.</p>
+                </li>
+                <li>
+                  <p>
+                    mouseover, (mobile)touch시 멈추는 기능 포함
+                  </p>
+                </li>
+              </ul>
+            </section>
+
+            <section class="guide-section">
+                <p class="guide-title-h3">롤링배너 : rolling-banner 클래스</p>
+                <div class="rolling-banner">
+                    <div class="banner-track">
+                        <div class="banner-item">
+                        배너1
+                        </div>
+                        <div class="banner-item">
+                        배너2
+                        </div>
+                        <div class="banner-item">
+                        배너3
+                        </div>
+                        <div class="banner-item">
+                        배너4
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </div> <!-- //wrap-->
+        </div> <!-- //guide-wrapper -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const track = document.querySelector(".banner-track");
+                const items = Array.from(track.querySelectorAll(".banner-item"));
+
+                // 기존 아이템 복제
+                items.forEach(item => {
+                    const clone = item.cloneNode(true);
+                    track.appendChild(clone);
+                });
+
+                // 터치 시작 시 애니메이션 멈춤
+                track.addEventListener("touchstart", () => {
+                track.style.animationPlayState = "paused";
+                });
+
+                // 터치 끝나면 다시 재생
+                track.addEventListener("touchend", () => {
+                track.style.animationPlayState = "running";
+                });
+            });
+        </script>
+        <script type="text/javascript" src="../../public/inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../public/inc/js/swiper.min.js"></script> <!-- swiper.js 사용시 추가 필요 -->
+        <script type="text/javascript" src="../../public/inc/js/com-ui.js"></script>
+        <script type="text/javascript" src="../../public/inc/js/pub-ui.js"></script>
+    </body>
+</html>

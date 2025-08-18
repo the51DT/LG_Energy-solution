@@ -430,6 +430,7 @@ aside > img{cursor: pointer;}
 .bg-gray {background-color: var(--colorElement-light-fill-fill-default04) !important;}
 .bg-darkgray {background-color: var(--colorElement-light-fill-fill-default01) !important;}
 .bg-white {background-color: #fff !important;}
+.bg-skyblue {background-color: #EAF3F8 !important;}
 
 
 .content-wrap.w100 .tab-category {max-width: 90rem; margin: 0 auto;}
