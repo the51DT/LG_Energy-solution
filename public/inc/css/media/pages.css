@@ -477,7 +477,54 @@
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] {height: 2.375rem; padding-inline: 1rem 0.75rem; font-size: 0.8125rem; font-weight: 500; line-height: 1.1375rem;}
 
 
-/* 회사소개 소개 CI (comp) */
+/* 회사정보 회사소개 */
+.comp .comp-btn-area .btn-wrap {display: inline-block; margin-top: 5rem}
+.comp .comp-info {margin-top: 1.5rem;}
+.comp .comp-info .table-wrap table tbody > tr > th,
+.comp .comp-info .table-wrap table tbody > tr > td {padding: 1.5rem 0;}
+.comp .comp-info .table-wrap table tbody > tr > td .icon-title .title {font-size: 1rem; font-weight: 600; line-height: 1.6rem;}
+.comp .comp-info .table-wrap table tbody tr > th .icon-title .img-wrap {display: none;}
+.comp .comp-info .table-wrap table tbody > tr > td .tb-list-txt {font-size: 1.25rem; font-weight: 700; line-height: 1.875rem;}
+.comp .comp-info .table-wrap table tbody > tr > td .tb-list-txt > span {font-size: 1.125rem; font-weight: 400; line-height: 1.75rem; }
+.comp .comp-info .table-wrap.tb-list tbody tr > td {text-align: right;}
+.comp .comp-info .table-wrap.tb-list .tb-list-sub {padding-top: 0.5rem;}
+.comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox {justify-content: flex-end; gap: 0.75rem;}
+.comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox .group {gap: 0.25rem; font-size: 0.875rem; line-height: 1.3125rem; font-weight: 600;}
+.comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox .group em {font-weight: 400; }
+.comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox li {font-size: 0.875rem; line-height: 1.3125rem;}
+.comp .comp-info .comp-btn-area .btn-wrap {margin-top: 0.5rem; display: block;}
+.comp .comp-info .comp-btn-area .btn-wrap > a {width: 100%; min-width: revert;}
+
+.comp .type02Swiper .swiper-paging-wrap {display: none;}
+.comp .type02Swiper .swiper-pagination {margin-top: 2rem;}
+.comp .type02Swiper .img-wrap .number {width: 2rem; height: auto;}
+.comp .type02Swiper .sect-box .sub-title {font-size: 1rem; line-height: 1.6rem; margin-bottom: 0.5rem;}
+.comp .type02Swiper .sect-box > h2 {margin-bottom: 1.5rem;}
+.comp .type02Swiper .sect-box .info-desc {font-size: 1rem; font-weight: 500; line-height: 1.6rem; height: 6.4375rem;}
+.comp .type02Swiper .sect-box .content {height: auto; margin: 1.5rem auto 0;}
+.comp .type02Swiper .swiper-slide:nth-child(1) .sect-box .content {width: 18.1875rem;}
+.comp .type02Swiper .swiper-slide:nth-child(2) .sect-box .content {width: 14.25rem;}
+.comp .type02Swiper .swiper-slide:nth-child(3) .sect-box .content {width: 16.375rem;}
+.comp .type02Swiper .swiper-slide:nth-child(4) .sect-box .content {width: 11rem;}
+.comp .type02Swiper .sect-box .btn-wrap {margin-top: 2.5rem; display: flex; justify-content: center;}
+
+.comp .content-area-box .type03Swiper {padding: 1.5rem 1.25rem 0 1.25rem;}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a {border-radius: 1rem; padding: 2rem 1.25rem; background: #f3f5f7; position: relative; width: 100%; min-height: 457px;}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap {position: absolute; top: 2rem; left: 1.25rem;}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap h5 {font-size: 1.25rem; line-height: 1.875rem; font-weight: 700;}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap .desc {font-size: 1rem; color: #555758; line-height: 1.6rem; font-weight: 400;}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .img-wrap {position: absolute; bottom:76px; right: 1.25rem;}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .img-wrap > img {width: 13.27631rem; height: 13.74219rem; transform: rotate(-2deg);}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt {position: absolute; bottom: 2rem; left: 1.25rem; font-size: 0.875rem; font-weight: 500;line-height: 1.225rem; padding-right: 1.5rem;}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt::after{content:""; width: 1.25rem; height: 1.25rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat center center / 50%; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
+
+
+
+.modal-pop.ty-black .swiper-detail .desc-box .desc {color: #fff; font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
+.modal-pop.ty-black .swiper-detail .desc-box .desc:not(:first-child) {padding-top: 0.75rem;}
+
+
+/* 회사정보 CI (comp) */
 .comp .intro-img-desc {padding-inline: 1.25rem;}
 .comp .intro-img-desc {flex-direction: column; gap: 1.5rem;}
 .comp .intro-img-desc .desc > p {font-size: 1.25rem; line-height: 1.925rem;}

@@ -683,12 +683,20 @@
 
 
 /* 회사정보 회사소개 */
+.comp .comp-btn-area .btn-wrap {display: inline-block; margin-top: 5rem}
+.comp .right-area .table-wrap.tb-list tbody tr > td {text-align: right;}
+.comp .right-area .table-wrap.tb-list .tb-list-sub .listbox {justify-content: flex-end;}
+.comp .comp-info .table-wrap.tb-list table tbody > tr:first-of-type > th,
+.comp .comp-info .table-wrap.tb-list table tbody > tr:first-of-type > td {border-top: 0;}
+.comp .comp-info .table-wrap table tr > th,
+.comp .comp-info .table-wrap table tr > td {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+
 .flex-box .left-area .number {width: 8.125rem; height: auto;}
 .flex-box .left-area .content {width: 32.70769rem; height: auto;}
 .comp .type02Swiper .swiper-pagination {margin-top: 2.65rem;}
 .comp .sect-item-box {position: relative;}
 .comp .sect-item-box::before {content:""; display: block; width: 100%; height: 2.25rem; background: url(../../images/img/cont_sect2_shadow.png) no-repeat center 100%; position: absolute; left:0; top: 14.7rem;}
-.comp .sect-item-box .sect-item-list {display: flex; gap: 5.62rem;}
+.comp .sect-item-box .sect-item-list {display: flex; gap: 8.88rem;}
 .comp .sect-item-box .sect-item-list .img-wrap {padding-bottom: 1.81rem;}
 .comp .sect-item-box .sect-item-list .img-wrap img {width: 21.5rem; height: 16.875rem;}
 .comp .sect-item-box .sect-item-list .text-wrap {display: flex; flex-direction: column; gap: 1rem; }
@@ -709,7 +717,25 @@
 .comp .sect-item-box.grid-type .grid-item .text-wrap .desc {font-size: 1.25rem; color: #555758; line-height: 2rem; font-weight: 500;}
 .comp .sect-item-box.grid-type .grid-item .link-txt {position: absolute; bottom: 2.5rem; left: 2.5rem; z-index: 10; display: inline-flex; gap: 0.25rem; align-items: center;}
 .comp .sect-item-box.grid-type .grid-item .link-txt::after {content:""; display: inline-block; width: 1.5rem; height: 1.5rem; background: url(../../../inc/images/icon/icon_arrow_right2.svg) no-repeat center center;}
+.comp .content-area-box h2 {padding: 0 1.25rem;}
+.comp .content-area-box .tab-category { margin: 1rem 0 0; max-width: 100%;}
+.comp .content-area-box .tab-category li > button {font-size: 1rem; font-weight: 500; line-height: 1.4rem; padding: 0.53rem 1.5rem;}
+.comp .content-area-box .cont-box-wrap .img-wrap {padding-top: 2rem;}
+.comp .content-area-box .cont-box-wrap .img-wrap img {width: 100%; height: 10.6875rem;}
+.comp .content-area-box .cont-box-wrap .text-wrap {padding: 1.5rem 1.25rem 2rem;}
+.comp .content-area-box .cont-box-wrap .text-wrap .link-text {font-size: 1.25rem; font-weight: 700; line-height: 1.875rem;}
+.comp .content-area-box .cont-box-wrap .text-wrap .info-text {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; margin-top: 1rem;}
 
+.comp .vision .content-item01 .title-h1 {margin:0 auto; max-width: 90rem;}
+.comp .vision .visual-wrap {position: relative; height: 100%;}
+.comp .vision .visual-wrap .text-wrap {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center;}
+.comp .vision .visual-wrap .text-wrap .sub {font-size: 1.75rem; font-weight: 600; line-height: 2.625rem; text-shadow: 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 12px rgba(0, 0, 0, 0.12);;}
+.comp .vision .visual-wrap .text-wrap .desc {font-weight: 800; line-height: 5.5rem; font-size: 4.9955rem; color:#fff; text-align: center; text-shadow: 0 0 1.119px rgba(255, 255, 255, 0.08), 0 13.429px 13.429px rgba(0, 0, 0, 0.12);}
+.comp .vision .visual-wrap .btn-wrap {position:absolute; bottom: 10%; right: 5rem; background: rgba(0,0,0,0.2);}
+.comp .vision .visual-wrap .btn-wrap button {width: 5.6875rem; height: 5.6875rem;}
+
+.comp .vision .content-item02 {padding-top: 0;}
+.comp .vision 
 
 /* 회사정보 CI (comp) */
 .comp .intro-img-desc {display: flex; justify-content: space-between; color: var(--colorElement-light-text-text-default01);}
@@ -748,13 +774,6 @@
 .comp .ci-terms-wrap .terms-list > li > ol {margin-left: 2.416rem;}
 .comp .ci-terms-wrap .terms-list > li > ol > li {list-style-type: decimal;}
 
-.comp .comp-btn-area .btn-wrap {display: inline-block; margin-top: 5rem}
-.comp .right-area .table-wrap.tb-list tbody tr > td {text-align: right;}
-.comp .right-area .table-wrap.tb-list .tb-list-sub .listbox {justify-content: flex-end;}
-.comp .right-area .table-wrap.tb-list table tbody > tr:first-of-type > th,
- .table-wrap.tb-list table tbody > tr:first-of-type > td {border-top: 0;}
-.comp .right-area .table-wrap table tr > th,
-.comp .right-area .table-wrap table tr > td {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
 
 /* 글로벌네트워크 */
 .sort [class^=filter-][class*=type1] {background-color: #555758;}

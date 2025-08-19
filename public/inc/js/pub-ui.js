@@ -44,6 +44,9 @@ var pubUi = {
 
         /* search */
         this.self.searchResult = document.querySelectorAll(".searchEvt");
+
+        /* marquee (롤링배너) */
+        this.self.track = document.querySelector(".banner-track");        
     },
 
     bindEvents: function () {
@@ -71,6 +74,7 @@ var pubUi = {
             });
         });
 
+        // selectmenu 클릭이벤트 (.activeSelect)
         this.self.selectMenu.forEach((map) => {
             let pageMapCate = map.querySelectorAll("li > a");
 
@@ -85,6 +89,7 @@ var pubUi = {
             });
         });
 
+        // .wrap scroll 이벤트
         if (!this.self.wrap) {
             return;
         } else {
@@ -164,10 +169,33 @@ var pubUi = {
             });
         }
 
+        // search input deleteBtn이벤트 관련 script
         if (!this.self.searchResult) {
             return;
         } else {
             pubUi.searchTextDelEvt(this.self.searchResult);
+        }
+
+        // marquee 컴포넌트(롤링배너) 관련 script
+        if (!this.self.track) {
+            return;
+        } else {
+            const items = Array.from(this.self.track.querySelectorAll(".banner-item"));
+            // 기존 아이템 복제
+            items.forEach((item) => {
+                const clone = item.cloneNode(true);
+                this.self.track.appendChild(clone);
+            });
+
+            // 터치 시작 시 애니메이션 멈춤
+            this.self.track.addEventListener("touchstart", () => {
+                this.self.track.style.animationPlayState = "paused";
+            });
+
+            // 터치 끝나면 다시 재생
+            this.self.track.addEventListener("touchend", () => {
+                this.self.track.style.animationPlayState = "running";
+            });
         }
     },
     searchTextDelEvt: function (el) {
@@ -395,18 +423,32 @@ var pubUi = {
             switch (value) {
                 // history 연혁 페이지
                 case "history":
+                    //console.log("회사소개 > 연혁 페이지 예외처리 필요시 소스 하단 추가")
+                    break;
+                case "vision":
+                    //회사소개 > 비전 페이지 예외처리
+                    if (target) {
+                        
+                        const targetContent = document.querySelector(target);
+                        const targetOffsetY = targetContent.offsetTop - 80;
+                        const pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
+                        // const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
+                        // const totalHeadHeight = pageMapHeight + contentHeadHeight;
+                        console.log(targetOffsetY, pageMapHeight);
+                        document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
+                    }
+                    break;
+                default:                    
                     if (target) {
                         console.log(value);
                         const targetContent = document.querySelector(target);
                         const targetOffsetY = targetContent.offsetTop;
                         const pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
-                        const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
-                        const totalHeadHeight = pageMapHeight + contentHeadHeight;
-                        document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeight, behavior: "smooth" });
+                        // const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
+                        // const totalHeadHeight = pageMapHeight + contentHeadHeight;
+                        document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
                     }
                     break;
-                default:
-                    console.log("에러!, type,value값 확인 필요, 현재 type, value 값? " + type, value);
             }
         } else {
             console.log("type 에러!, type값 확인 필요, 현재 type 값? " + type);
@@ -1127,6 +1169,7 @@ var pubUi = {
         init() {
             this.type01Swiper();
             this.type02Swiper();
+            this.type03Swiper();
             this.bAroundMoSwiper();
         },
         // swiper default 타입 : type01Swiper
@@ -1153,10 +1196,31 @@ var pubUi = {
             const targetSwiper = document.querySelectorAll(".type02Swiper");
 
             if (targetSwiper.length > 0) {
-                //newsroom 상세 사용중
-                var swiper1 = new Swiper(".type02Swiper", {
+                //회사소개 > 소개 사용중
+                var swiper2 = new Swiper(".type02Swiper", {
                     pagination: {
                         el: ".swiper-pagination",
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            } else {
+                return;
+            }
+        },
+        type03Swiper() { //slidePerView 케이스
+            const targetSwiper = document.querySelectorAll(".type03Swiper");
+
+            if (targetSwiper.length > 0) {
+                //회사소개 > 소개 서비스영역 사용중
+                var swiper3 = new Swiper(".type03Swiper", {
+                    slidesPerView: 1.2,
+                    spaceBetween: 16,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
                     },
                     navigation: {
                         nextEl: ".swiper-button-next",
