@@ -987,9 +987,15 @@
 .serv-kooroo .scooter-bottom { position: relative; width: 10rem; height: 10rem; padding: 2.2rem 3.1rem; margin: 0 auto; text-align: center; margin-top: -0.3rem; }
 .serv-kooroo .scooter-bottom img { width: 3.7rem; height: 3.7rem; }
 .serv-kooroo .scooter-bottom p { font-size: 0.875rem; line-height: 1.3125rem; }
+
 .serv-ess .bmts-box > img, .serv-kooroo .bmts-box > img { width: 5rem; height: 5rem; }
 .serv-ess .bmts-box .bmts-tit, .serv-kooroo .bmts-box .bmts-tit { font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
 .serv-ess .bmts-box ul, .serv-kooroo .bmts-box ul { margin-top: 0.5rem; }
 .serv-ess .bmts-box li, .serv-kooroo .bmts-box li { font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem; }
 .serv-ess .bmts-txt > span, .serv-kooroo .bmts-txt > span { display: block; font-size: 0.8125rem; color: #858889; margin-top: 1.06rem; }
-.serv-ess .text-list-wrap .text-list > li::before, .serv-kooroo .text-list-wrap .text-list > li::before { top: 30%; }
+.serv-ess .text-list-wrap .text-list > li::before, .serv-kooroo .text-list-wrap .text-list > li::before { top: 0.7rem; }
+
+/* 서비스 > ess si */
+.serv-ess .adv-tit-wrap {
+    height: fit-content;
+}
