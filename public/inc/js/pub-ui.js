@@ -1242,6 +1242,7 @@ var pubUi = {
                         type: "bullets",
                         clickable: true,
                     },
+                    loop: true,
                 });
             } else {
                 return;
