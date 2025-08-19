@@ -148,18 +148,18 @@ var pubUi = {
                         // 해당 아이템에 active 클래스 추가
                         item.classList.add("active");
                         // 다른 아이템에서 active 클래스 제거
-                        targetContentItem.forEach((otherItem, otherIdx) => {
-                            if (otherIdx !== idx) {
-                                otherItem.classList.remove("active");
-                            }
-                        });
+                        // targetContentItem.forEach((otherItem, otherIdx) => {
+                        //     if (otherIdx !== idx) {
+                        //         otherItem.classList.remove("active");
+                        //     }
+                        // });
 
                         if (itemDataBg === "dark" && item.classList.contains("active")) {
                             // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
                             item.style.color = "#fff";
                         }
                     } else {
-                        item.classList.remove("active");
+                        // item.classList.remove("active");
                         if (itemDataBg === "dark") {
                             // 값 초기화
                             item.style.color = "revert";
@@ -926,6 +926,8 @@ var pubUi = {
                         const tabWrap = tabList.closest(".tab-wrap");
                         const contents = tabWrap.querySelectorAll(".tab-content-box > .tab-content");
                         const tabCateMo = tabWrap.querySelector(".tab-cate-wrap.new");
+
+                        if (tabCateMo) { pubUi.scrollToEvt(".wrap", "top"); } // mobile 상단탭카테고리 클릭 변경시 맨위로 스크롤 되도록
 
                         //08.12 수정 mobile, pc 파일 분리로 인해 불필요해져 주석처리하였음
                         //모바일 탭 카테고리 선택시, pc selectbox caseTab도 동일한 선택영역 지정되도록 기능 추가 - S
