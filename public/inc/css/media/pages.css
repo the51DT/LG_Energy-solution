@@ -877,9 +877,9 @@
 .serv-baround .text-list-wrap .list-tit + .text-list {margin-top: .5rem;}
 .serv-baround .text-list-wrap .text-list > li {margin-bottom: 0.375rem;}
 .e4w-box .e4w-btm .asterisk-text {padding-top: 1rem;}
-.serv-baround .swiper-pagination {position: unset; display: flex; align-items: center; justify-content: center; margin-top: 1rem; transform: translate(0, 0); min-height: unset;}
-.serv-baround .swiper-pagination-bullet {width: .625rem; height: .625rem; border: 1px solid #171819; background-color: transparent; opacity: 1;}
-.serv-baround .swiper-pagination-bullet-active {background-color: #171819;}
+.service .swiper-pagination {position: unset; display: flex; align-items: center; justify-content: center; margin-top: 1rem; transform: translate(0, 0); min-height: unset;}
+.service .swiper-pagination-bullet {width: .625rem; height: .625rem; border: 1px solid #171819; background-color: transparent; opacity: 1;}
+.service .swiper-pagination-bullet-active {background-color: #171819;}
 .e2w-box {flex-direction: column;}
 .e2w-box .e4w-top .top-logo>img {width: 6.29575rem;}
 .e2w-box .e4w-btm {gap: 1.5rem; height: auto;}
@@ -902,16 +902,35 @@
 .serv-blifecare .service-detail-wrap .detail-top>img {width: 3.75rem; height: 3.75rem;}
 .serv-blifecare .service-detail-wrap .detail-tit {font-size: 1rem; line-height: 1.6rem;}
 .serv-blifecare .service-detail-wrap .detail-desc {font-size: .875rem; line-height: 1.3125rem;}
-
- 
-
-
-
-
-
-
-
-
+.serv-blifecare .model-wrap {flex-wrap: wrap; gap: 1rem .5rem; padding: 1.5rem 1.25rem; border-radius: .5rem;}
+.serv-blifecare .model-inner {display: flex; gap: 0 .5rem;}
+.serv-blifecare .model-box {gap: .25rem; width: 8.75rem; height: 8.75rem;}
+.serv-blifecare .model-tit {font-size: .875rem; line-height: 1.3125rem;}
+.serv-blifecare .model-btn {width: 1.375rem; height: 1.375rem;}
+.serv-blifecare .content-item03::before {display: none;}
+.serv-blifecare .content-item03 {background-color: #374656;}
+.serv-blifecare .article-tit-wrap {flex-direction: column; gap: 2rem; padding-left: 0;}
+.serv-blifecare .article-tit-wrap .tit-desc {align-items: flex-start; gap: 1rem;}
+.serv-blifecare .article-tit-wrap .tit-desc .top-txt {font-size: 1.125rem; line-height: 1.75rem;}
+.serv-blifecare .article-tit-wrap .tit-desc .btm-txt {font-size: .875rem; line-height: 1.3125rem;}
+.serv-blifecare .swiper {margin-top: 1rem;}
+.serv-blifecare .swiper .swiper-slide {display: flex; justify-content: center;}
+.serv-blifecare .swiper-pagination {margin-top: 1.5rem;}
+.serv-blifecare .swiper-pagination-bullet {border-color: #fff;}
+.serv-blifecare .swiper-pagination-bullet-active {background-color: #fff;}
+.review-box {padding: 1.5rem; width: 100%; border-radius: 1rem; box-shadow: none; margin-bottom: 1.25rem;}
+.swiper-slide-active .review-box {box-shadow: 0px 0px 40px 0px rgba(16, 16, 16, 0.3);}
+.review-box::after {right: 1.87rem; border-width: 0 1.625rem 1.25rem 0;}
+.review-box .review-tit {font-size: 1.125rem; line-height: 1.75rem;}
+.review-box .review-bar>img {width: 5.3125rem; height: 1.1875rem;}
+.review-box .review-txt {font-size: .875rem; line-height: 1.3125rem;}
+.review-box .review-inner {padding-bottom: 1.5rem;}
+.review-box .review-answer {padding-top: 1.5rem;}
+.serv-blifecare .modal-pop {z-index: 1000;}
+.serv-blifecare .modal-pop.dialog .pop-wrap {gap: 1.88rem; padding-bottom: 1.5rem;}
+.serv-blifecare .modal-pop.dialog .pop-wrap .pop-header {padding-bottom: 0;}
+.serv-blifecare .modal-pop.dialog .pop-wrap .img-wrap {padding-bottom: 0; border-bottom: none;}
+.serv-blifecare .modal-pop.dialog .pop-wrap .desc {padding-top: 1.88rem; font-size: 1rem; line-height: 1.6rem;}
 
 /* 인사원칙 */
 .rchr .title-h2 { font-size: 1.5rem; }
