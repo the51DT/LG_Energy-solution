@@ -443,15 +443,36 @@
 .pfom .prod-core-box > li .core-prod {gap: 1rem; margin-top: -0.5rem;}
 .pfom .prod-core-box > li .core-prod > p {text-align: left;}
 .pfom .prod-visual-wrap + .prod-features,
-.pfom .prod-features + .prod-core-box {margin-top: 3rem;}
+.pfom .prod-features + .prod-core-box,
+.pfom .prod-visual-wrap + .prod-comp,
+.pfom .prod-comp + .prod-chart-wrap {margin-top: 3rem;}
 .pfom .prod-core-box > li .core-prod > div {justify-content: center; flex-wrap: wrap; gap: 1.5rem;}
 .pfom .prod-core-box > li .core-prod .prod-wrap > p {font-size: 0.875rem; line-height: 1.3125rem;}
 .pfom .prod-core-box > li .core-prod .prod-wrap:nth-child(1) > img {width: 6.0625rem;}
 .pfom .prod-core-box > li .core-prod .prod-wrap:nth-child(2) > img {width: 8.3125rem;}
 .pfom .prod-core-box > li .core-prod .prod-wrap:nth-child(3) > img {width: 7.6875rem;}
-.pfom .prod-visual:has([class^="pch-visual"]) {margin-right: 0; position: relative; width: 100%; height: 16.73144rem;}
+.pfom .prod-visual:has([class^="pch-visual"]) {margin-inline: auto; position: relative; width: 20rem;}
+.pfom .prod-visual:has(.pch-visual-1) {height: 16.73144rem;}
+.pfom .prod-visual:has(.pch-visual-2) {height: 19.6875rem;}
+.pfom .prod-visual:has(.pch-visual-3) {height: 18.92869rem;}
 .pfom .prod-visual:has([class^="pch-visual"]) > img {position: absolute; width: calc(100% + 1.25rem); height: auto;}
-.pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-1 {top: 0; left: 0;}
+.pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-1,
+.pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-3 {top: 0; left: 0;}
+.pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-2 {top: 0; left: -1.313rem; width: calc(100% + 1.25rem + 1.313rem);}
+.pfom .prod-comp {flex-direction: column; gap: 0.5rem;}
+.pfom .prod-comp > li {padding: 1.5rem; border-radius: 0.5rem;}
+.pfom .prod-comp > li > img {width: 5rem; height: 5rem; margin-bottom: 1rem;}
+.pfom .prod-comp > li .tit {font-size: 1.125rem; line-height: 1.75rem;}
+.pfom .prod-comp > li .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem;}
+.pfom .prod-chart-wrap {gap: 1rem;}
+.pfom .prod-chart-wrap .text-wrap {gap: 1rem;}
+.pfom .prod-chart-wrap .text-wrap .tit {font-size: 1.25rem; line-height: 1.875rem;}
+.pfom .prod-chart-wrap .text-wrap .desc {font-size: 1rem; line-height: 1.6rem;}
+.pfom .prod-chart-wrap .prod-chart-list {flex-direction: column; gap: 0.5rem;}
+.pfom .prod-chart-wrap .prod-chart-list > li {padding: 1.5rem; border-radius: 0.5rem;}
+.pfom .prod-chart-wrap .prod-chart-list > li > img {margin-bottom: 1rem;}
+.pfom .prod-chart-wrap .prod-chart-list > li .tit {font-size: 1rem; line-height: 1.6rem;}
+.pfom .prod-chart-wrap .prod-chart-list > li .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem;}
 
 .pfom [class^="content-item"] .content-sect:has(.tech-list) {padding-top: 2rem;}
 .pfom .tech-list > div + div {margin-top: 2rem; padding-top: 0; border-top: none;}
