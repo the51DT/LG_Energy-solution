@@ -625,35 +625,42 @@
 
 
 /* 회사정보 CI (comp) */
-.comp .intro-img-desc {padding-inline: 1.25rem;}
-.comp .intro-img-desc {flex-direction: column; gap: 1.5rem;}
-.comp .intro-img-desc .desc > p {font-size: 1.25rem; line-height: 1.925rem;}
-.comp .intro-img-desc .desc > span {font-size: 1rem; line-height: 1.5rem; color: var(--colorElement-light-text-text-default02);}
-.comp .intro-img-desc .img-area {width: 100%; padding-block: 3rem; border-radius: 0.5rem;}
+/* .comp .intro-img-desc {padding-inline: 1.25rem;} */
+.comp .intro-img-desc {flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;}
+.comp .intro-img-desc .desc > p {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1.5rem;}
+.comp .intro-img-desc .desc > span {font-size: 1rem; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
+.comp .intro-img-desc .img-area {width: 100%; padding-block: 3rem; border-radius: 1rem;}
 .comp .intro-img-desc .img-area img {width: 7rem;}
 .comp .ci-cont .ci-tit {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem;}
-.comp .ci-cont .ci-text {font-size: 1rem; line-height: 1.5rem;}
+.comp .ci-cont .ci-text {font-size: 1rem; line-height: 1.6rem;}
 .comp .ci-cont + .ci-logo-wrap {margin-top: 1.5rem;}
 .comp .ci-logo-wrap {flex-direction: column;}
-.comp .ci-logo-wrap .ci-logo-tit {font-size: 1rem; font-weight: 600; line-height: 1.5rem;}
+.comp .ci-logo-wrap .ci-logo-tit {font-size: 1.25rem; font-weight: 600; line-height: 1.75rem;}
 .comp .ci-logo-wrap .img-area {height: auto; padding-block: 2rem; border-radius: 0.5rem;}
 .comp .ci-logo-wrap .img-area > img {height: 2rem;}
 .comp .ci-logo-wrap .ci-logo-tit + .img-area {margin-top: 0.5rem;}
-.comp .ci-color-wrap {flex-direction: column; gap: 1.5rem; padding-inline: 1.25rem;}
+.comp .ci-color-wrap {flex-direction: column; gap: 1.5rem; padding-inline: 0;}
 .comp .ci-color-wrap > div:not(.ci-cont) {flex-direction: column; padding-top: 0; width: 100%;}
 .comp .ci-color-wrap .ci-color {flex-direction: row; height: 6rem; padding: 1rem;}
 .comp .ci-color-wrap .ci-color .tit {font-size: 1.25rem; line-height: 1.75rem;}
 .comp .ci-color-wrap .ci-color .text {font-size: 0.75rem; line-height: 1.2rem; text-align: right;}
 /* mo 디자인 누락 */
-.comp .ci-terms-wrap {padding-inline: 1.25rem;}
+.comp .ci-terms-wrap {padding-inline: 0rem;}
 .comp .ci-terms-wrap .ci-cont + .acdItem {margin-top: 1.5rem;}
-.comp .ci-terms-wrap .terms-wrap {display: flex; flex-direction: column; gap: 2rem;}
+.comp .ci-terms-wrap .terms-wrap {display: flex; flex-direction: column; gap: 1rem; background-color: #fff; padding: 1.5rem 1.25rem; border-radius: 0.5rem;}
 .comp .ci-terms-wrap .terms-wrap + .terms-wrap {margin-top: 2rem;}
-.comp .ci-terms-wrap .terms-tit {font-size: 1.125rem; line-height: 1.68rem;}
+.comp .ci-terms-wrap .terms-tit {font-size: 1rem; line-height: 1.68rem;}
 .comp .ci-terms-wrap .terms-list { font-size: 1rem; line-height: 1.563rem;}
-.comp .ci-terms-wrap .terms-list > li {display: flex; flex-direction: column; gap: 0.5rem;}
-.comp .ci-terms-wrap .terms-list > li + li {margin-top: 1.5rem;}
-.comp .ci-terms-wrap .terms-list > li > ol {margin-left: 1.5rem;}
+.comp .ci-terms-wrap .terms-list > li {display: flex; flex-direction: column; gap: 1rem;}
+.comp .ci-terms-wrap .terms-list > li + li {margin-top: 1rem;}
+.comp .ci-terms-wrap .terms-list > li > ol {margin-left: 0;}
+.comp .ci-terms-wrap .terms-list > li > ol > li { font-size: 0.875rem; line-height: 1.3125rem; padding-left: 1.25rem;}
+.comp .ci-terms-wrap .terms-list .terms-sub-tit { font-size: 1rem; font-weight: 1.6rem;}
+.comp .content-wrap:has(.accordion-list) { padding-left: 0; padding-right: 0; }
+.comp .caution-content h2, .comp .caution-content .ci-text { padding-left: 1.25rem; padding-right: 1.25rem; }
+.comp .accordion-list .accordion-content { background-color: transparent; padding: 0; }
+.comp .ci-terms-wrap .terms-list > li > ol > li::before {left: 0;}
+
 /* // mo 디자인 누락 */
 
 

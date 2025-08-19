@@ -806,8 +806,8 @@
 .comp .ci-terms-wrap .terms-list > li {display: flex; flex-direction: column; gap: 1rem;}
 .comp .ci-terms-wrap .terms-list > li + li {margin-top: 2.5rem;}
 .comp .ci-terms-wrap .terms-list > li > ol { margin-left: 1.25rem; list-style: none; counter-reset: list-counter; gap: 0.5rem; display: flex; flex-direction: column; }
-.comp .ci-terms-wrap .terms-list > li > ol > li { counter-increment: list-counter; font-size: 1rem; font-weight: 400; color: #555758; line-height: 1.6rem; }
-.comp .ci-terms-wrap .terms-list > li > ol > li::before { content: counter(list-counter) ") "; margin-right: 0.25em; }
+.comp .ci-terms-wrap .terms-list > li > ol > li { counter-increment: list-counter; font-size: 1rem; font-weight: 400; color: #555758; line-height: 1.6rem; position: relative; padding-left: 2.5em; }
+.comp .ci-terms-wrap .terms-list > li > ol > li::before { content: counter(list-counter) ")"; position: absolute; left: 1.25rem; top: 0; text-align: center; }
 .comp .ci-terms-wrap .terms-list .terms-sub-tit { color: #171819; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; }
 .comp .ci-terms-wrap .terms-list .terms-sub-list { margin-left: 1rem; }
 .comp .intro-img-desc { display: flex; justify-content: space-between; align-items: center; color: var(--colorElement-light-text-text-default01); }
