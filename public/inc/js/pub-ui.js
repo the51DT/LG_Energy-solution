@@ -19,6 +19,7 @@ var pubUi = {
         this.historyViewEvt();
         this.mobileDeviceChk();
         this.setScrollWidth();
+        this.requestInquiry();
     },
 
     settings: function () {
@@ -46,7 +47,7 @@ var pubUi = {
         this.self.searchResult = document.querySelectorAll(".searchEvt");
 
         /* marquee (롤링배너) */
-        this.self.track = document.querySelector(".banner-track");        
+        this.self.track = document.querySelector(".banner-track");
     },
 
     bindEvents: function () {
@@ -428,7 +429,6 @@ var pubUi = {
                 case "vision":
                     //회사소개 > 비전 페이지 예외처리
                     if (target) {
-                        
                         const targetContent = document.querySelector(target);
                         const targetOffsetY = targetContent.offsetTop - 80;
                         const pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
@@ -438,7 +438,7 @@ var pubUi = {
                         document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
                     }
                     break;
-                default:                    
+                default:
                     if (target) {
                         console.log(value);
                         const targetContent = document.querySelector(target);
@@ -866,6 +866,145 @@ var pubUi = {
             window.addEventListener("load", apply);
         }
     },
+    //문의하기 이벤트
+    requestInquiry: function () {
+        //문의하기 pc 관련 스크립트 - S
+        const pcSteps = document.querySelectorAll(".pc-only .stepper-wrapper  .accordion-list");
+        if (pcSteps.length > 0) {
+            const pcStepElements = Array.from(pcSteps).map((step) => ({
+                categoryBtns: step.querySelectorAll(".cont-btn-wrap .btn"),
+                nextBtn: step.querySelector(".btn-step-next"),
+                subContWrap: step.querySelector(".sub-cont-wrap"),
+                stepEl: step,
+            }));
+
+            let pcSelectedButtons = new Array(pcSteps.length).fill(null);
+
+            pcStepElements.forEach((step, index) => {
+                step.categoryBtns.forEach((button) =>
+                    button.addEventListener("click", function (e) {
+                        if (index === 2) {
+                            //step3 (index:2) 일때 버튼이벤트 예외처리
+                            const clickedBtn = e.target.closest("button");
+                            if (!clickedBtn) return;
+
+                            // multi-btn 컨테이너 안에서만 동작
+                            const multiGroup = clickedBtn.closest(".cont-btn-wrap.multi-btn");
+
+                            const multiGroupBtn = multiGroup.querySelectorAll("button");
+                            multiGroupBtn.forEach((btn) => {
+                                btn.classList.remove("active");
+                            });
+
+                            if (multiGroup) {
+                                // 이 줄만으로 해당 버튼의 on/off 토글, 다른 버튼 상태는 유지됨
+                                clickedBtn.classList.toggle("active");
+                            }
+                            return; // step3는 여기서 종료 (전역 초기화 로직 실행 방지)
+                        } else {
+                            if (pcSelectedButtons[index] !== this) {
+                                if (pcSelectedButtons[index]) pcSelectedButtons[index].classList.remove("active");
+                                this.classList.add("active");
+                                pcSelectedButtons[index] = this;
+                                pcMaxStepReached = index;
+                                if (index === 1 && step.subContWrap) step.subContWrap.style.display = "flex";
+                                step.nextBtn.classList.remove("disabled");
+                            }
+                        }
+                    })
+                );
+            });
+        }
+        // - E
+
+        //문의하기 mobile 관련 스크립트 - S
+        const mobileStepIndicator = document.querySelectorAll(".mo-only .stepper-wrapper .step-indicator .step-indicator-btn");
+        const mobileSteps = document.querySelectorAll(".mo-only .stepper-wrapper .faq-list > .item");
+
+        if (mobileStepIndicator.length > 0) {
+            mobileStepIndicator.forEach((indicator) => {
+                indicator.addEventListener("click", (el) => {
+                    const targetIndicator = el.currentTarget;
+                    const targetIndiDataType = targetIndicator.dataset.type;
+                    // console.log(targetIndiDataType, targetIndicator)
+
+                    // indicator active 클래스 초기화
+                    mobileStepIndicator.forEach((otherIndicator) => {
+                        otherIndicator.querySelector(".step").classList.remove("active");
+                    });
+                    // step item active 클래스 초기화
+                    mobileSteps.forEach((otherItem) => {
+                        otherItem.classList.remove("on");
+                    });
+
+                    // target Indicator & step item 클래스 부여
+                    targetIndicator.querySelector(".step").classList.add("active");
+                    targetStepItem = document.querySelector(`#${targetIndiDataType}`);
+                    targetStepItem.classList.add("on");
+                });
+            });
+        }
+
+        if (mobileSteps.length > 0) {
+            mobileSteps.forEach((step, index) => {
+                const stepEl = step;
+                const categoryBtns = step.querySelectorAll(".cont-btn-wrap button");
+                const categoryBtnsContent = step.querySelectorAll(".cont-btn-wrap .btn-box .btn-content");
+
+                const nextBtn = step.querySelector(".btn-primary01");
+                const prevBtn = step.querySelector(".btn-outline01");
+                const subContWrap = step.querySelector(".sub-cont-wrap");
+
+                // 문의하기 step별 카테고리 버튼 클릭시, 클릭 이벤트
+                categoryBtns.forEach((button) =>
+                    button.addEventListener("click", (e) => {
+                        if (index === 2) {
+                            //step3 (index:2) 일때 버튼이벤트 예외처리
+                            const clickedBtn = e.target.closest("button");
+                            if (!clickedBtn) return;
+
+                            // multi-btn 컨테이너 안에서만 동작
+                            const multiGroup = clickedBtn.closest(".cont-btn-wrap.multi-btn");
+
+                            const multiGroupBtn = multiGroup.querySelectorAll("button");
+                            multiGroupBtn.forEach((btn) => {
+                                btn.classList.remove("active");
+                            });
+
+                            if (multiGroup) {
+                                // 이 줄만으로 해당 버튼의 on/off 토글, 다른 버튼 상태는 유지됨
+                                clickedBtn.classList.toggle("active");
+                            }
+                            return; // step3는 여기서 종료 (전역 초기화 로직 실행 방지)
+                        } else {
+                            //카테고리 버튼 클래스초기화
+                            categoryBtns.forEach((btns) => {
+                                btns.classList.remove("active");
+                            });
+                            //카테고리 버튼컨텐츠 클래스초기화
+                            categoryBtnsContent.forEach((btnContent) => {
+                                btnContent.classList.remove("active");
+                            });
+
+                            e.target.classList.add("active"); //클릭한 카테고리 active클래스 추가
+
+                            const targetBtnId = e.target.getAttribute("id");
+                            const targetBtnContent = document.querySelector(`#${targetBtnId}-content`);
+                            //console.log(targetBtnId, targetBtnContent);
+
+                            //클릭한 카테고리에 해당하는 버튼컨텐츠 active클래스 추가 - null일경우 실행하지않음
+                            if (targetBtnContent != null) {
+                                if (!targetBtnContent.classList.contains("active")) {
+                                    targetBtnContent.classList.add("active");
+                                }
+                            }
+                        }
+                    })
+                );
+            });
+        }
+        // - E
+    },
 
     form: {
         init() {
@@ -927,7 +1066,9 @@ var pubUi = {
                         const contents = tabWrap.querySelectorAll(".tab-content-box > .tab-content");
                         const tabCateMo = tabWrap.querySelector(".tab-cate-wrap.new");
 
-                        if (tabCateMo) { pubUi.scrollToEvt(".wrap", "top"); } // mobile 상단탭카테고리 클릭 변경시 맨위로 스크롤 되도록
+                        if (tabCateMo) {
+                            pubUi.scrollToEvt(".wrap", "top");
+                        } // mobile 상단탭카테고리 클릭 변경시 맨위로 스크롤 되도록
 
                         //08.12 수정 mobile, pc 파일 분리로 인해 불필요해져 주석처리하였음
                         //모바일 탭 카테고리 선택시, pc selectbox caseTab도 동일한 선택영역 지정되도록 기능 추가 - S
@@ -1018,17 +1159,40 @@ var pubUi = {
             $(document).on("click", ".acdItem .acd-btn", function (e) {
                 e.preventDefault();
                 const $this = $(this);
+                const accordContWrap = $this.closest(".accord-cont-wrap");
                 const item = $this.closest(".acdItem");
                 const expanded = $this.attr("aria-expanded") === "true";
+                const region = item.find("[role=region]");
 
-                $this.attr("aria-expanded", !expanded);
-                item.find("[role=region]").slideToggle();
-                item.toggleClass("on", !expanded);
+                // 가로 아코디언 추가
+                if (accordContWrap.hasClass("horizontal")) {
+                    $this.attr("aria-expanded", !expanded);
+                    item.toggleClass("on", !expanded);
 
-                if (!item.hasClass("tog")) {
-                    item.siblings(".acdItem:not(.tog)").find("[aria-expanded]").attr("aria-expanded", false);
-                    item.siblings(".acdItem:not(.tog)").find("[role=region]").slideUp();
-                    item.siblings(".acdItem:not(.tog)").removeClass("on");
+                    if (!expanded) {
+                        // 열기 (오른쪽으로 슬라이드)
+                        region.show().css({ opacity: 0 }).animate({ opacity: 1 }, 400);
+                    } else {
+                        // 닫기 (왼쪽으로 접기)
+                        region.animate({ opacity: 0 }, 400);
+                    }
+
+                    if (!item.hasClass("tog")) {
+                        item.siblings(".acdItem:not(.tog)").find("[aria-expanded]").attr("aria-expanded", false);
+                        item.siblings(".acdItem:not(.tog)").find("[role=region]").animate({ opacity: 0 }, 400);
+                        item.siblings(".acdItem:not(.tog)").removeClass("on");
+                    }
+                } else {
+                    // 기존 세로 아코디언
+                    $this.attr("aria-expanded", !expanded);
+                    region.slideToggle();
+                    item.toggleClass("on", !expanded);
+
+                    if (!item.hasClass("tog")) {
+                        item.siblings(".acdItem:not(.tog)").find("[aria-expanded]").attr("aria-expanded", false);
+                        item.siblings(".acdItem:not(.tog)").find("[role=region]").slideUp();
+                        item.siblings(".acdItem:not(.tog)").removeClass("on");
+                    }
                 }
             });
         },
@@ -1212,7 +1376,8 @@ var pubUi = {
                 return;
             }
         },
-        type03Swiper() { //slidePerView 케이스
+        type03Swiper() {
+            //slidePerView 케이스
             const targetSwiper = document.querySelectorAll(".type03Swiper");
 
             if (targetSwiper.length > 0) {
@@ -1278,11 +1443,11 @@ var pubUi = {
                         const targetId = this.targetBtn.getAttribute("id");
 
                         this.buildCalendar();
-                        
+
                         document.querySelector(`#${targetId}Calendar`).classList.add("on");
                         document.querySelector(`#${targetId}Calendar`).style.position = "absolute";
                         document.querySelector(`#${targetId}Calendar`).style.backgroundColor = "#fff";
-                        
+
                         if (document.querySelector(".wrap").classList.contains("mobile")) {
                             document.querySelector(".wrap.mobile").classList.add("open-calendar");
                             document.querySelector(".wrap.mobile aside").style.display = "none";
@@ -1290,16 +1455,14 @@ var pubUi = {
                             document.querySelector(`#${targetId}Calendar`).style.left = "50%";
                             document.querySelector(`#${targetId}Calendar`).style.transform = "translate(-50%, -50%)";
                             document.querySelector(`#${targetId}Calendar`).style.width = `${targetScreenWidth - 40}px`;
-                            document.querySelector(`#${targetId}Calendar`).style.maxWidth = `360px`;                            
-                        } else {                            
+                            document.querySelector(`#${targetId}Calendar`).style.maxWidth = `360px`;
+                        } else {
                             document.querySelector(`#${targetId}Calendar`).style.left = targetX + "px";
-                            document.querySelector(`#${targetId}Calendar`).style.top = targetY + "px";                            
+                            document.querySelector(`#${targetId}Calendar`).style.top = targetY + "px";
                             if (document.querySelector(".wrap").classList.contains("open-calendar")) {
                                 document.querySelector(".wrap").classList.remove("open-calendar");
                             }
                         }
-
-                        
 
                         return;
                     }
@@ -1328,7 +1491,7 @@ var pubUi = {
                     // 바깥 클릭 시 닫기
                     if (calendarEl.classList.contains("on") && !e.target.closest(".scriptCalendar") && !e.target.closest(".calendar-btn")) {
                         calendarEl.classList.remove("on");
-                        if(document.querySelector(".wrap").classList.contains("open-calendar")) {
+                        if (document.querySelector(".wrap").classList.contains("open-calendar")) {
                             document.querySelector(".wrap").classList.remove("open-calendar");
                         }
                     }
