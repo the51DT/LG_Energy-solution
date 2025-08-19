@@ -927,6 +927,8 @@ var pubUi = {
                         const contents = tabWrap.querySelectorAll(".tab-content-box > .tab-content");
                         const tabCateMo = tabWrap.querySelector(".tab-cate-wrap.new");
 
+                        if (tabCateMo) { pubUi.scrollToEvt(".wrap", "top"); } // mobile 상단탭카테고리 클릭 변경시 맨위로 스크롤 되도록
+
                         //08.12 수정 mobile, pc 파일 분리로 인해 불필요해져 주석처리하였음
                         //모바일 탭 카테고리 선택시, pc selectbox caseTab도 동일한 선택영역 지정되도록 기능 추가 - S
                         // if (tabCateMo) {
