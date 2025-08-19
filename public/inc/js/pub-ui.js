@@ -149,18 +149,18 @@ var pubUi = {
                         // 해당 아이템에 active 클래스 추가
                         item.classList.add("active");
                         // 다른 아이템에서 active 클래스 제거
-                        targetContentItem.forEach((otherItem, otherIdx) => {
-                            if (otherIdx !== idx) {
-                                otherItem.classList.remove("active");
-                            }
-                        });
+                        // targetContentItem.forEach((otherItem, otherIdx) => {
+                        //     if (otherIdx !== idx) {
+                        //         otherItem.classList.remove("active");
+                        //     }
+                        // });
 
                         if (itemDataBg === "dark" && item.classList.contains("active")) {
                             // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
                             item.style.color = "#fff";
                         }
                     } else {
-                        item.classList.remove("active");
+                        // item.classList.remove("active");
                         if (itemDataBg === "dark") {
                             // 값 초기화
                             item.style.color = "revert";

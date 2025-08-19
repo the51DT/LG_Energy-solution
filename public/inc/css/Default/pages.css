@@ -581,10 +581,29 @@
 .pfom .prod-core-box > li .core-prod .prod-wrap:nth-child(2) > img {width: 10.8125rem;}
 .pfom .prod-core-box > li .core-prod .prod-wrap:nth-child(3) > img {width: 10rem;}
 .pfom .prod-visual-wrap + .prod-features,
-.pfom .prod-features + .prod-core-box {margin-top: 5rem;}
+.pfom .prod-features + .prod-core-box,
+.pfom .prod-visual-wrap + .prod-comp,
+.pfom .prod-comp + .prod-chart-wrap {margin-top: 5rem;}
 .pfom .prod-visual:has([class^="pch-visual"]) {margin-right: 0; position: relative; width: 100%; height: 36.5rem;}
 .pfom .prod-visual:has([class^="pch-visual"]) > img {position: absolute; width: calc(100% + 15rem); height: auto;}
 .pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-1 {top: -8.69rem; left: 0;}
+.pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-2 {top: -10.69rem; left: 0;}
+.pfom .prod-comp {display: flex; gap: 1.25rem;}
+.pfom .prod-comp > li {width: 100%; padding: 2.5rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04); background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
+.pfom .prod-comp > li > img {width: 7.5rem; height: 7.5rem; margin-bottom: 1.875rem;}
+.pfom .prod-comp > li .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.pfom .prod-comp > li .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
+.pfom .prod-chart-wrap {display: flex; flex-direction: column; gap: 2.5rem;}
+.pfom .prod-chart-wrap .text-wrap {display: flex; flex-direction: column; gap: 1.25rem;}
+.pfom .prod-chart-wrap .text-wrap .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
+.pfom .prod-chart-wrap .text-wrap .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.pfom .prod-chart-wrap .prod-chart-img,
+.pfom .prod-chart-wrap .prod-chart-img > img {width: 100%;}
+.pfom .prod-chart-wrap .prod-chart-list {display: flex; gap: 1.25rem;}
+.pfom .prod-chart-wrap .prod-chart-list > li {width: 100%; padding: 2.5rem 1.25rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
+.pfom .prod-chart-wrap .prod-chart-list > li > img {width: 5rem; height: 5rem; margin-bottom: 1.25rem;}
+.pfom .prod-chart-wrap .prod-chart-list > li .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.pfom .prod-chart-wrap .prod-chart-list > li .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 0.625rem;}
 
 .pfom .industry-wrap {display: flex; flex-direction: column; gap: 3.75rem;}
 .pfom .industry-box {display: flex; flex-wrap: wrap; gap: 1.25rem;}
@@ -654,6 +673,30 @@
 .pfom .order-history > li > img {width: 10rem; height: 5rem; object-fit: cover; flex-shrink: 0;}
 .pfom .order-history + .btn-wrap {margin-top: 7.5rem;}
 .pfom .btn-wrap {display: flex; justify-content: center; gap: 1.25rem;}
+
+.pfom .tab-cate-wrap.type2 {margin-top: 2.5rem;}
+.pfom .tab-cate-wrap.type2 .tab-category {gap: 0.625rem;}
+.pfom .tab-cate-wrap.type2 .tab-category > li {width: calc(50% - (0.625rem / 2));}
+.pfom .tab-cate-wrap.type2 .tab-category > li button {width: 100%; height: 3rem; justify-content: center;}
+.pfom .line-up-box {padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); margin-top: 2.5rem;}
+.pfom .line-up-box .text-wrap {display: flex; flex-direction: column; gap: 1.25rem;}
+.pfom .line-up-box .text-wrap .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
+.pfom .line-up-box .text-wrap .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.pfom .line-up-box .line-up-wrap {margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem;}
+.pfom .line-up-box .line-up-wrap > .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.pfom .line-up-box .line-up-wrap .line-up-list {display: flex; flex-wrap: wrap; gap: 1.25rem;}
+.pfom .line-up-box .line-up-wrap .line-up-list > li {width: calc(50% - (1.25rem / 2)); padding: 2.5rem 1.25rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04); text-align: center;}
+.pfom .line-up-box .line-up-wrap .line-up-list > li.col3 {width: calc(100% / 3 - (1.25rem / 1.5));}
+.pfom .line-up-box .line-up-wrap .line-up-list > li.col4 {width: calc((100% - 1.25rem * 3) / 4);}
+.pfom .line-up-box .line-up-wrap .line-up-list > li > img {height: 7.25rem; width: auto;}
+.pfom .line-up-box .line-up-wrap .line-up-list > li.col3 > img {height: 9.3125rem;}
+.pfom .line-up-box .line-up-wrap .line-up-list > li.col4 > img {height: 6.875rem;}
+.pfom .line-up-box .line-up-wrap .line-up-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.25rem;}
+.pfom .line-up-box .line-up-wrap .line-up-col {padding: 1.25rem 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04); display: flex; gap: 2.5rem;}
+.pfom .line-up-box .line-up-wrap .line-up-col > li {width: 100%; padding: 2.5rem; text-align: center;}
+.pfom .line-up-box .line-up-wrap .line-up-col > li > img {width: 6.25rem; height: 6.25rem; margin-bottom: 1.25rem;}
+.pfom .line-up-box .line-up-wrap .line-up-col > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.pfom .line-up-box .line-up-wrap .line-up-col > li > p > span {color: var(--colorElement-light-text-text-primary);}
 
 
 /* 정도경영 (etmg) */
@@ -772,7 +815,6 @@
 .comp .vision 
 
 /* 회사정보 CI (comp) */
-.comp .intro-img-desc {display: flex; justify-content: space-between; color: var(--colorElement-light-text-text-default01);}
 .comp .intro-img-desc .desc {display: flex; flex-direction: column; gap: 1.5rem;}
 .comp .intro-img-desc .desc > p {font-size: 1.5rem; font-weight: 400; line-height: 2.25rem;}
 .comp .intro-img-desc .desc > p > span {font-weight: 600;}
@@ -807,12 +849,11 @@
 .comp .ci-terms-wrap .terms-list > li {display: flex; flex-direction: column; gap: 1rem;}
 .comp .ci-terms-wrap .terms-list > li + li {margin-top: 2.5rem;}
 .comp .ci-terms-wrap .terms-list > li > ol { margin-left: 1.25rem; list-style: none; counter-reset: list-counter; gap: 0.5rem; display: flex; flex-direction: column; }
-.comp .ci-terms-wrap .terms-list > li > ol > li { counter-increment: list-counter; font-size: 1rem; font-weight: 400; color: #555758; line-height: 1.6rem; }
-.comp .ci-terms-wrap .terms-list > li > ol > li::before { content: counter(list-counter) ") "; margin-right: 0.25em; }
+.comp .ci-terms-wrap .terms-list > li > ol > li { counter-increment: list-counter; font-size: 1rem; font-weight: 400; color: #555758; line-height: 1.6rem; position: relative; padding-left: 2.5em; }
+.comp .ci-terms-wrap .terms-list > li > ol > li::before { content: counter(list-counter) ")"; position: absolute; left: 1.25rem; top: 0; text-align: center; }
 .comp .ci-terms-wrap .terms-list .terms-sub-tit { color: #171819; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; }
 .comp .ci-terms-wrap .terms-list .terms-sub-list { margin-left: 1rem; }
-
-
+.comp .intro-img-desc { display: flex; justify-content: space-between; align-items: center; color: var(--colorElement-light-text-text-default01); }
 
 /* 글로벌네트워크 */
 .sort [class^=filter-][class*=type1] {background-color: #555758;}

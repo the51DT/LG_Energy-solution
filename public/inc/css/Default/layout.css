@@ -337,7 +337,7 @@ aside > img{cursor: pointer;}
 
 
 [class^="content-item"] {padding: 7.5rem 0; width: 100%;}
-[class^="content-item"] + [class^="content-item"] {opacity: 0; transition: opacity 0.5s;}
+[class^="content-item"] + [class^="content-item"] {opacity: 1; transition: opacity 0.5s;}
 [class^="content-item"] + [class^="content-item"].active {opacity: 1;}
 [class^="content-item"] article:not(:last-child) {margin-bottom: 7.5rem;}
 [class^="content-item"] + [class^="content-item"]:last-child {padding-bottom: 15rem;}
