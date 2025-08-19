@@ -73,7 +73,15 @@
               </div>
             </section>
             <section class="guide-section">
-              <p class="guide-title-h3">4. tooltip popup - .tooltip</p>                  
+              <p class="guide-title-h3">4. popup - .ty-black 공통 컬러 디자인 타입 </p>                  
+              <div class="btn-wrap">
+                  <button type="button" class="act-btn-sm btn-primary01" id="popupAlertBtn1" onclick="pubUi.popUp.open('#popupAlert0','#popupAlertBtn0');">
+                    popup 블랙타입 팝업
+                  </button>
+              </div>
+            </section>
+            <section class="guide-section">
+              <p class="guide-title-h3">5. tooltip popup - .tooltip</p>                  
               <div class="btn-wrap">
                   <button type="button" class="act-btn-sm btn-primary01" id="popupTooltipBtn1-1" onclick="pubUi.popUp.open('#popupTooltip1-1',this);"> <!-- ★ tooltip일 경우는, 버튼 onclick="pubUi.popUp.open()" 이벤트 실행시 후위 파라미터 this로 넘길 것 -->
                     tooltip Layer popup - 하단 좌측 노출
@@ -110,6 +118,32 @@
           </div>
         </div>
 
+        <!-- popupAlert0 : black타입 -->
+        <div class="modal-pop alert ty-black" id="popupAlert0"> <!-- ty-black 클래스 추가 필요 -->
+          <div class="pop-wrap">
+              <div class="pop-content">
+                <div class="img-wrap">
+                  <img src="" alt="" onerror="this.onerror=null; this.src='../../public/inc/images/img/img_dummy_square.png';">
+                </div>
+                <div class="title">
+                  <h3>제목을 입력하세요</h3>
+                </div>
+                <p class="desc">LG에너지솔루션은 고객의 기대를 위해 끊임없이 노력하고 있습니다.</p>
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn01 txt-btn-sm">Button</a>
+                </div>
+              </div>
+              <div class="pop-footer">
+                <div class="btn-wrap">
+                  <div class="btn-group">
+                    <button type="button" class="act-btn-md btn-outline01 btn-cancel" onclick="pubUi.popUp.close('#popupAlert0', '#popupAlertBtn0')">취소</button>
+                    <button type="button" class="act-btn-md btn-primary01 btn-confirm">확인</button>
+                  </div>
+                </div>
+              </div>
+              <!-- <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupAlert0','#popupAlertBtn0');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> -->
+          </div>
+        </div>
         <!-- popupAlert1-->
         <div class="modal-pop alert" id="popupAlert1">
           <div class="pop-wrap">
@@ -175,7 +209,7 @@
               </div>
               <div class="pop-content">
                 <div class="img-wrap ty-rect">
-                  <img src="" alt="" onerror="this.onerror=null; this.src='../../public/inc/images/img/img_dummy_rectangle.png';">
+                  <img src="" alt="" >
                 </div>
                 <p class="desc">LG에너지솔루션은 고객의 기대를 뛰어넘는 제품 품질을 제공하기 위해 끊임없이 노력하고 있습니다. 철저한 품질경영시스템을 구축하고 모든 제조공정에서 품질과 안전성을 높이기 위한 활동을 전개해 나가고 있으며, 지속적인 개선 노력과 노하우를 공유해 임직원 및 협력회사가 함께 품질관리를 위한 협력을 강화해 나가고 있습니다.</p>
                 <div class="btn-wrap">
@@ -199,7 +233,7 @@
               </div>
               <div class="pop-content">
                 <div class="img-wrap ty-rect">
-                  <img src="" alt="" onerror="this.onerror=null; this.src='../../public/inc/images/img/img_dummy_rectangle.png';">
+                  <img src="" alt="" >
                 </div>
                 <p class="desc">LG에너지솔루션은 고객의 기대를 뛰어넘는 제품 품질을 제공하기 위해 끊임없이 노력하고 있습니다. 철저한 품질경영시스템을 구축하고 모든 제조공정에서 품질과 안전성을 높이기 위한 활동을 전개해 나가고 있으며, 지속적인 개선 노력과 노하우를 공유해 임직원 및 협력회사가 함께 품질관리를 위한 협력을 강화해 나가고 있습니다.</p>
                 <div class="btn-wrap">

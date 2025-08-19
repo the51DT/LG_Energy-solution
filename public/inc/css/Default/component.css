@@ -622,6 +622,9 @@ table {border-collapse: collapse;}
 .modal-pop.dialog .pop-footer > .btn-wrap .btn-cancel {width: 13.18rem;}
 .modal-pop.dialog .pop-footer > .btn-wrap .btn-confirm {width: 18.68rem;}
 
+.modal-pop.ty-black .pop-wrap {background:rgba(0, 0, 0, 0.90); padding: 3.25rem 1.25rem 2rem; border-radius: 0; color: #fff;}
+.modal-pop.ty-black .pop-close {background: url('../../images/icon/icon_close_btn_wh.svg') no-repeat center center / 50%; top: 1rem;}
+
 .modal-pop.full {margin: 1.87rem 1.5rem 2rem;}
 .modal-pop.full .pop-wrap .pop-close {top: 0; right: 0;}
 .modal-pop.full .pop-wrap {border-radius:0; height: 100%; max-height: calc(100% - constant(safe-area-inset-top)); max-height: calc(100% - env(safe-area-inset-top));}

@@ -60,26 +60,27 @@
           </div> <!-- //wrap-->
         </div> <!-- //guide-wrapper -->
         <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const track = document.querySelector(".banner-track");
-                const items = Array.from(track.querySelectorAll(".banner-item"));
+            // pub-ui.js 에 적용 완료 -> marquee 컴포넌트(롤링배너) 관련 script 주석 참고
+            // document.addEventListener("DOMContentLoaded", () => {
+            //     const track = document.querySelector(".banner-track");
+            //     const items = Array.from(track.querySelectorAll(".banner-item"));
 
-                // 기존 아이템 복제
-                items.forEach(item => {
-                    const clone = item.cloneNode(true);
-                    track.appendChild(clone);
-                });
+            //     // 기존 아이템 복제
+            //     items.forEach(item => {
+            //         const clone = item.cloneNode(true);
+            //         track.appendChild(clone);
+            //     });
 
-                // 터치 시작 시 애니메이션 멈춤
-                track.addEventListener("touchstart", () => {
-                track.style.animationPlayState = "paused";
-                });
+            //     // 터치 시작 시 애니메이션 멈춤
+            //     track.addEventListener("touchstart", () => {
+            //     track.style.animationPlayState = "paused";
+            //     });
 
-                // 터치 끝나면 다시 재생
-                track.addEventListener("touchend", () => {
-                track.style.animationPlayState = "running";
-                });
-            });
+            //     // 터치 끝나면 다시 재생
+            //     track.addEventListener("touchend", () => {
+            //     track.style.animationPlayState = "running";
+            //     });
+            // });
         </script>
         <script type="text/javascript" src="../../public/inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../public/inc/js/swiper.min.js"></script> <!-- swiper.js 사용시 추가 필요 -->
