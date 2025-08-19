@@ -772,7 +772,6 @@
 .comp .vision 
 
 /* 회사정보 CI (comp) */
-.comp .intro-img-desc {display: flex; justify-content: space-between; color: var(--colorElement-light-text-text-default01);}
 .comp .intro-img-desc .desc {display: flex; flex-direction: column; gap: 1.5rem;}
 .comp .intro-img-desc .desc > p {font-size: 1.5rem; font-weight: 400; line-height: 2.25rem;}
 .comp .intro-img-desc .desc > p > span {font-weight: 600;}
@@ -811,8 +810,7 @@
 .comp .ci-terms-wrap .terms-list > li > ol > li::before { content: counter(list-counter) ") "; margin-right: 0.25em; }
 .comp .ci-terms-wrap .terms-list .terms-sub-tit { color: #171819; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; }
 .comp .ci-terms-wrap .terms-list .terms-sub-list { margin-left: 1rem; }
-
-
+.comp .intro-img-desc { display: flex; justify-content: space-between; align-items: center; color: var(--colorElement-light-text-text-default01); }
 
 /* 글로벌네트워크 */
 .sort [class^=filter-][class*=type1] {background-color: #555758;}
