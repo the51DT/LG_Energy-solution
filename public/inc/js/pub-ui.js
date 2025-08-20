@@ -240,8 +240,15 @@ var pubUi = {
             button.classList.remove("active");
             map.classList.remove("on");
         } else if (type === "tab") {
-            pubUi.scrollToEvt(".wrap", "top"); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
+            
+            const subCateName = subCate.innerText;
 
+            if(subCateName == "연혁") {
+                pubUi.scrollToEvt(".wrap", "top", 480);
+            } else {
+                pubUi.scrollToEvt(".wrap", "top"); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
+            }
+            
             // console.log("tab click event");
             pageMapCate.forEach((otherBox) => {
                 //selectbox 카테고리 값 초기화
@@ -251,7 +258,7 @@ var pubUi = {
             //선택한 selectbox 카테고리, active & aria-selected true 처리
             subCate.classList.add("active");
             subCate.setAttribute("aria-selected", true);
-            const subCateName = subCate.innerText;
+            
             const selectedAriaCtrl = subCate.getAttribute("aria-controls");
             const button = map.closest(".select-cate").querySelector("button");
 
@@ -424,18 +431,56 @@ var pubUi = {
             switch (value) {
                 // history 연혁 페이지
                 case "history":
-                    //console.log("회사소개 > 연혁 페이지 예외처리 필요시 소스 하단 추가")
+                    if (target) {
+                        const targetContent = document.querySelector(target);
+                        const targetOffsetY = targetContent.offsetTop;
+                        const headerHeight = document.querySelector(".header-area").clientHeight;
+                        let pageMapHeight = "";                        
+                        let contentHeadHeight = "";
+                        let totalHeadHeightMobile = "";
+                        
+
+                        if(document.querySelector(".wrap").classList.contains("pc")) { //pc
+                            pageMapHeight = document.querySelector(".page-map-wrap").clientHeight; 
+                        } else if (document.querySelector(".wrap").classList.contains("mobile")) { //mobile                                                        
+                            contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
+                            totalHeadHeightMobile = headerHeight + contentHeadHeight;
+                        }
+                        
+                        console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
+                        
+                        if(document.querySelector(".wrap").classList.contains("mobile")) {
+                            document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeightMobile, behavior: "smooth" });
+                        } else {
+                            document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
+                        }
+                    }
                     break;
                 case "vision":
                     //회사소개 > 비전 페이지 예외처리
                     if (target) {
                         const targetContent = document.querySelector(target);
-                        const targetOffsetY = targetContent.offsetTop - 80;
-                        const pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
-                        // const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
-                        // const totalHeadHeight = pageMapHeight + contentHeadHeight;
-                        console.log(targetOffsetY, pageMapHeight);
-                        document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
+                        const targetOffsetY = targetContent.offsetTop - 120;
+                        const headerHeight = document.querySelector(".header-area").clientHeight;
+                        let pageMapHeight = "";                        
+                        let contentHeadHeight = "";
+                        let totalHeadHeightMobile = "";
+                        
+
+                        if(document.querySelector(".wrap").classList.contains("pc")) { //pc
+                            pageMapHeight = document.querySelector(".page-map-wrap").clientHeight; 
+                        } else if (document.querySelector(".wrap").classList.contains("mobile")) { //mobile                                                        
+                            contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
+                            totalHeadHeightMobile = headerHeight + contentHeadHeight;
+                        }
+                        
+                        console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
+                        
+                        if(document.querySelector(".wrap").classList.contains("mobile")) {
+                            document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeightMobile, behavior: "smooth" });
+                        } else {
+                            document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
+                        }
                     }
                     break;
                 default:
@@ -443,10 +488,28 @@ var pubUi = {
                         console.log(value);
                         const targetContent = document.querySelector(target);
                         const targetOffsetY = targetContent.offsetTop;
-                        const pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
-                        // const contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
-                        // const totalHeadHeight = pageMapHeight + contentHeadHeight;
-                        document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
+                        const headerHeight = document.querySelector(".header-area").clientHeight;
+                        let pageMapHeight = "";                        
+                        let contentHeadHeight = "";
+                        let totalHeadHeightMobile = "";
+                        
+
+                        if (document.querySelector(".wrap").classList.contains("pc")) {
+                            //pc
+                            pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
+                        } else if (document.querySelector(".wrap").classList.contains("mobile")) {
+                            //mobile
+                            contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
+                            totalHeadHeightMobile = headerHeight + contentHeadHeight;
+                        }
+
+                        console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
+
+                        if (document.querySelector(".wrap").classList.contains("mobile")) {
+                            document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeightMobile, behavior: "smooth" });
+                        } else {
+                            document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
+                        }
                     }
                     break;
             }

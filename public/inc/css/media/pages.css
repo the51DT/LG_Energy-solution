@@ -639,15 +639,39 @@
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt {position: absolute; bottom: 2rem; left: 1.25rem; font-size: 0.875rem; font-weight: 500;line-height: 1.225rem; padding-right: 1.5rem;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt::after{content:""; width: 1.25rem; height: 1.25rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat center center / 50%; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
 
-
-
 .modal-pop.ty-black .swiper-detail .desc-box .desc {color: #fff; font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 .modal-pop.ty-black .swiper-detail .desc-box .desc:not(:first-child) {padding-top: 0.75rem;}
 
+.comp .vision .content-item01 .title-h2 {padding: 0 1.25rem 0.5rem;}
+.comp .vision .visual-wrap .text-wrap .sub {font-size: 1.125rem; font-weight: 500; line-height: 1.75rem;}
+.comp .vision .visual-wrap .text-wrap .desc {line-height: 3.67819rem; font-size: 3.34081rem;}
+.comp .vision .visual-wrap .btn-wrap {position:absolute; bottom: 10%; right: 1.25rem; background: transparent;}
+.comp .vision .visual-wrap .btn-wrap button {width: 2rem; height: 2rem;}
+
+.comp .vision .content-item02 .content-video-wrap {width:100%; height: 185px; }
+.comp .vision .content-item02 .bdr-box-wrap {margin-top: 0; padding: 1.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03); background: #fff; border-radius: 1rem;}
+.comp .vision .content-item02 .bdr-box-wrap:not(:last-child) {margin-bottom: 1rem;}
+.comp .vision .content-item02 .bdr-box-wrap .list-title {font-size: 1.25rem; font-weight: 700; line-height: 1.875rem; margin-bottom: 1.5rem;}
+.comp .vision .content-item02 .bdr-box-wrap .list-subtit {font-size: 1rem; font-weight: 600; line-height: 1.6rem; margin-bottom: 1rem;}
+.comp .vision .content-item02 .bdr-box-wrap .list-desc {color: #555758; font-weight: 400; font-size: 1rem; line-height: 1.6rem; margin-bottom: 0.5rem;}
+.comp .vision .content-item02 .bdr-box-wrap .img-wrap {justify-content: flex-end;}
+.comp .vision .content-item02 .bdr-box-wrap .img-wrap img {width: 7rem; height: 7rem;}
+
+
+/* 회사정보 연혁 */
+.history-container {position: static; overflow: unset; height: 100%;}
+.history-container .history-wrap {background: #fff; height: 100%; padding:0.5rem 0 0;}
+.history-wrap .history-cont-wrap {height: 100%; position: static; max-width: revert; margin: 0; padding: 0;}
+.history-wrap .history-cont-wrap .year-info-box {}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box {padding-left: 1.81rem;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li:before {left: -2.2rem; top: 7px;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .title {color: #33B0C6; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc {padding: 0; font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: #555758;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc::before {display: none;}
 
 /* 회사정보 CI (comp) */
 /* .comp .intro-img-desc {padding-inline: 1.25rem;} */
-.comp .intro-img-desc {flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;}
+.comp .intro-img-desc {flex-direction: column; gap: 1.5rem;}
 .comp .intro-img-desc .desc > p {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1.5rem;}
 .comp .intro-img-desc .desc > span {font-size: 1rem; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
 .comp .intro-img-desc .img-area {width: 100%; padding-block: 3rem; border-radius: 1rem;}
@@ -678,6 +702,7 @@
 .comp .ci-terms-wrap .terms-list > li > ol > li { font-size: 0.875rem; line-height: 1.3125rem; padding-left: 1.25rem;}
 .comp .ci-terms-wrap .terms-list .terms-sub-tit { font-size: 1rem; font-weight: 1.6rem;}
 .comp .content-wrap:has(.accordion-list) { padding-left: 0; padding-right: 0; }
+.comp .caution-content {padding-top: 1rem;}
 .comp .caution-content h2, .comp .caution-content .ci-text { padding-left: 1.25rem; padding-right: 1.25rem; }
 .comp .accordion-list .accordion-content { background-color: transparent; padding: 0; }
 .comp .ci-terms-wrap .terms-list > li > ol > li::before {left: 0;}

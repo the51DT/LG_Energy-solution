@@ -1,3 +1,4 @@
+// locations 데이터 등록 (팝업 정보도 해당 데이터에서 연동되서 동적으로 마크업 생성됨)
 const locations = [
     {
         place: "본사",
@@ -247,6 +248,7 @@ const locations = [
         blog: true,
     },
     {
+        // 수급필요 데이터 추가필요
         place: "수급필요",
         lat: 42.75656883513447,
         lng: -86.06943931544865,
@@ -483,7 +485,7 @@ function initMap() {
     map.mapTypes.set("styled_map", styledMapType);
     map.setMapTypeId("styled_map");
 
-    const myIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57));
+    const makerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)); //지도 마커 아이콘 변경시 해당 소스 변경 필요
 
     infowindow = new google.maps.InfoWindow(); // 하나의 인포윈도우 재사용
 
@@ -492,7 +494,7 @@ function initMap() {
         const marker = new google.maps.Marker({
             map: map,
             position: new google.maps.LatLng(location.lat, location.lng),
-            icon: myIcon,
+            icon: makerIcon,
             title: location.place,
         });
 
@@ -504,7 +506,7 @@ function initMap() {
             map.setZoom(15);
 
             // 마커클릭시, 노출되는 infowindow
-            // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
+            //infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
             // infowindow.setContent(`<strong>${location.place}</strong>`);
             // infowindow.open(map, marker);
         });
@@ -621,7 +623,7 @@ function updateInfoList(filtered) {
 
                 let html = "";
 
-                html += '<div class="info-content-head" style="margin:100% 0;">';
+                html += '<div class="info-content-head" style="text-align:center; margin:100% auto;">';
                 html += `"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`;
                 html += "</div>";
 
@@ -674,52 +676,41 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
 
         const tabId = tab.id;
         const tabContryText = document.querySelector(`#${tabId} > button`).innerText;
+        console.log(tabContryText);
 
         let regionFilter = [];
+        let center, zoom;
 
         switch (tabId) {
             case "tab2": // 한국
                 regionFilter = ["서울", "과천", "청주", "서초", "대전"];
+                center = { lat: 36.5, lng: 127.5 };
+                zoom = 7;
                 break;
             case "tab3": // 아시아 오세아니아
                 regionFilter = ["중국", "일본", "대만", "인도", "인도네시아", "호주"];
+                center = { lat: 34.0479, lng: 100.6197 };
+                zoom = 3;
                 break;
             case "tab4": // 아메리카
                 regionFilter = ["미국"];
+                center = { lat: 39.6393, lng: -101.3754 };
+                zoom = 4;
                 break;
             case "tab5": // 유럽
                 regionFilter = ["독일", "폴란드"];
+                center = { lat: 54.526, lng: 15.2551 };
+                zoom = 5;
                 break;
             default: // 전체
                 regionFilter = []; // 전체 보여주기
+                center = null;
+                zoom = null;
         }
 
-        let filtered = [];
-        if (regionFilter.length > 0) {
-            filtered = locations.filter((loc) => regionFilter.includes(loc.country));
-            
-            if (tabContryText == "한국") {
-                map.setCenter({ lat: 36.5, lng: 127.5 });
-                map.setZoom(5);
-            } else if (tabContryText == "아시아·오세아니아") {
-                map.setCenter({ lat: 34.0479, lng: 100.6197 });
-                map.setZoom(3);
-            } else if (tabContryText == "아메리카") {
-                map.setCenter({ lat: 39.63935570747691, lng: -101.3754683869087 });
-                map.setZoom(4);
-            } else if (tabContryText == "유럽") {
-                map.setCenter({ lat: 54.526, lng: 15.2551 });
-                map.setZoom(5.5);
-            } else if (tabContryText == "전체") {
-                map.setCenter({ lat: 37.5266681, lng: 126.9271165 });
-                map.setZoom(2);
-            }
-        } else {
-            filtered = locations;
-        }
+        let filtered = regionFilter.length > 0 ? locations.filter((loc) => regionFilter.includes(loc.country)) : locations;
 
         clearMarkers();
-
         filtered.forEach((loc) => {
             const marker = new google.maps.Marker({
                 map: map,
@@ -740,8 +731,17 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
             });
         });
 
+        // 🔹 전체 탭일 때는 fitBounds 로 자동 줌아웃
+        if (tabId === "tab1") {
+            let bounds = new google.maps.LatLngBounds();
+            markers.forEach((m) => bounds.extend(m.getPosition()));
+            map.fitBounds(bounds);
+        } else {
+            map.setCenter(center);
+            map.setZoom(zoom);
+        }
+
         updateInfoList(filtered);
-        //initMap(); // 추가
     });
 });
 
@@ -832,7 +832,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 let html = "";
 
-                html += '<div class="info-content-head" style="margin:100% 0;">';
+                html += '<div class="info-content-head" style="text-align:center; margin:100% auto;">';
                 html += `"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`;
                 html += "</div>";
 

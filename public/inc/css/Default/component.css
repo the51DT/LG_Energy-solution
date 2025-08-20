@@ -514,13 +514,13 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .selectbox-wrap > div.select-cate > button.on {color:var(--colorElement-light-text-text-default01); font-weight:500;}
 .selectbox-wrap > div.select-cate > a > img {margin-top: 3px;}
 
-.select-menu {padding: 1rem 2em; width: 100%; position: absolute; top:2.875rem; left:0; background: #171819; display:none; z-index: 50;}
+
+.select-menu {width: 100%; position: absolute; top:2.875rem; left:0; display:none; z-index: 50;}
 .select-menu.on {display: block;}
-.select-menu > li:not(:last-child) {padding-bottom: 1rem;}
-.select-menu > li > a {color: #fff; font-size: calc(18 / 16 * 1rem); font-weight: 400; line-height: calc(28.8 / 16 * 1rem); display: block;}
-.select-menu > li > a.active,
-.select-menu > li > a:hover {color:#fff; font-weight: 600;}
-.select-menu > li > .cate-title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #fff; padding-bottom: 0.5rem;}
+.select-menu > li > a {color: #fff; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; display: block; padding: 0.875rem 1.25em; background: #171819;}
+.select-menu > li > a.active {color:#fff; font-weight: 700;}
+.select-menu > li > a:hover {background: #3B3D3E; }
+.select-menu > li > .cate-title {font-size: 1.125rem; font-weight: 700; line-height: 1.8rem; color: #fff; padding-bottom: 0.5rem;}
 .select-menu > li > .cate-item > li:not(:last-child) {padding-bottom: 0.5rem;}
 .select-menu > li > .cate-item > li > a {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 
@@ -530,12 +530,13 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .selectbox-wrap.type2 .select-cate > button.on {font-size: 1.25rem; font-weight: 600;}
 .selectbox-wrap.type2 .select-cate > button:after {content: ''; display: block; width: 1.5rem; height: 1.5rem; background: url(../../images/icon/icon_arrow_down.svg) no-repeat center center / contain; position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);}
 .selectbox-wrap.type2 .select-cate > button.active:after {transform: translateY(-50%) rotate(180deg)}
-.selectbox-wrap.type2 .select-cate .select-menu {padding:0; border:1px solid var(--colorElement-light-stroke-stroke-default03); background: #fff; border-radius: 0 0 0.5rem 0.5rem; border-top: 0; top: 4rem;}
+.selectbox-wrap.type2 .select-cate .select-menu {padding:0; border:1px solid var(--colorElement-light-stroke-stroke-default03); border-radius: 0 0 0.5rem 0.5rem; border-top: 0; top: 4rem;}
 .selectbox-wrap.type2 .select-cate > button.active {border-radius: 0.5rem 0.5rem 0 0;}
 .selectbox-wrap.type2 .select-menu > li:not(:last-child) {padding-bottom:0;}
 /* .selectbox-wrap.type2 .select-menu > li:first-child a:hover{border-radius: 1rem 1rem 0 0;}
 .selectbox-wrap.type2 .select-menu > li:last-child a:hover {border-radius: 0 0 1rem 1rem;} */
-.selectbox-wrap.type2 .select-menu > li > a {position: relative; padding:0.9rem 1.5rem; color: #555758; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.selectbox-wrap.type2 .select-menu > li > a {background: #fff;  position: relative; padding:0.9rem 1.5rem; color: #555758; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.selectbox-wrap.type2 .select-menu > li:last-child > a {border-radius: 0  0 0.5rem 0.5rem;}
 .selectbox-wrap.type2 .select-menu > li > a:hover {background-color:var(--colorElement-light-fill-fill-default04); color: var(--colorElement-light-text-text-default01);}
 .selectbox-wrap.type3 .select-cate {padding: 0; flex-grow: 1;}
 .selectbox-wrap.type3 > div button,
