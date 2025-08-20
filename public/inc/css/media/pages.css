@@ -519,18 +519,18 @@
 .pfom .tech-list .tech-desc-box .desc-box > div > img {width: 100%; height: auto; max-width: 25rem; margin-inline: auto;}
 .pfom .tech-list .tech-desc-box .desc-box > div .desc {line-height: 1.3125rem;}
 
-.pfom .industry-wrap {gap: 2rem;}
-.pfom .industry-box {flex-direction: column; gap: 1rem;}
-.pfom .industry-box .box-link {justify-content: flex-start; width: 100%; height: 8.75rem; padding: 1rem; border-radius: 0.5rem;}
-.pfom .industry-box .box-link.col3 {width: 100%;}
-.pfom .industry-box .box-link .tit {font-size: 1.125rem; line-height: 1.75rem;}
-.pfom .industry-box .box-link > img {top: auto; left: auto; bottom: 0; right: 0; transform: unset; width: 11.25rem; height: 6.5rem;}
-.pfom .industry-box .box-link.col3 > img {top: auto; left: auto; bottom: 0; right: 0; width: 12.16106rem; height: 7.26869rem;}
-.pfom .industry-box .box-link .more {justify-content: flex-start;}
-.pfom .industry-material {flex-direction: column; align-items: flex-start; gap: 1rem;}
-.pfom .industry-material > p {font-size: 1.25rem; line-height: 1.875rem;}
-.pfom .industry-material [class^="icon-btn"] {width: 100%; padding: 1rem; font-size: 1rem; line-height: 1.6rem;}
-.pfom .industry-material [class^="icon-btn"] > img {margin-right: 0.625rem;}
+.industry-wrap {gap: 2rem;}
+.industry-box {flex-direction: column; gap: 1rem;}
+.industry-box .box-link {justify-content: flex-start; width: 100%; height: 8.75rem; padding: 1rem; border-radius: 0.5rem;}
+.industry-box .box-link.col3 {width: 100%;}
+.industry-box .box-link .tit {font-size: 1.125rem; line-height: 1.75rem;}
+.industry-box .box-link > img {top: auto; left: auto; bottom: 0; right: 0; transform: unset; width: 11.25rem; height: 6.5rem;}
+.industry-box .box-link.col3 > img {top: auto; left: auto; bottom: 0; right: 0; width: 12.16106rem; height: 7.26869rem;}
+.industry-box .box-link .more {justify-content: flex-start;}
+.industry-material {flex-direction: column; align-items: flex-start; gap: 1rem;}
+.industry-material > p {font-size: 1.25rem; line-height: 1.875rem;}
+.industry-material [class^="icon-btn"] {width: 100%; padding: 1rem; font-size: 1rem; line-height: 1.6rem;}
+.industry-material [class^="icon-btn"] > img {margin-right: 0.625rem;}
 
 .pfom [class^="content-item"] .content-sect:has(.order-histoy) {padding-top: 1rem;}
 .pfom .order-history {gap: 1rem;}
