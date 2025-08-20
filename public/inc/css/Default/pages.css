@@ -549,7 +549,6 @@
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] .icon-area::before {background-image: url(../../images/icon/icon_arrow_right_wh.svg);}
 
 /* 폼펙터 (.pfom) */
-.pfom .title-h2 {color: var(--colorElement-light-text-text-default01);}
 .pfom .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .title-h2 + .title-desc {margin-top: 1.25rem;}
 .pfom .prod-visual-wrap {display: flex; flex-direction: column; gap: 5rem; padding-top: 2.5rem;}
