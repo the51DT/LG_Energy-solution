@@ -716,11 +716,20 @@
 
 
 /* 회사정보 연혁 */
-.history-container {position: static; overflow: unset; height: 100%;}
+.history-container {position: static; overflow: unset; height: 100%; background: #fff; padding-bottom: 5rem;}
 .history-container .history-wrap {background: #fff; height: 100%; padding:0.5rem 0 0;}
 .history-wrap .history-cont-wrap {height: 100%; position: static; max-width: revert; margin: 0; padding: 0;}
-.history-wrap .history-cont-wrap .year-info-box {}
+.history-wrap .history-cont-wrap .year-container-item:not(:last-child) {padding-bottom: 3rem;}
+.history-wrap .history-cont-wrap .year-container-item .list-info .year-title {padding-bottom: 1rem; font-size: 2.75rem; font-weight: 800; line-height: 3.85rem;}
+.history-wrap .history-cont-wrap .year-container-item .list-info .img-box {padding-bottom: 1.5rem;} 
+.history-wrap .history-cont-wrap .year-container-item .list-info .img-box .img-title {font-size: 1.25rem; font-weight: 400; line-height: 2rem; padding-bottom: 1.5rem;}
+.history-wrap .history-cont-wrap .year-container-item .list-info .img-box .img-title strong {font-weight: 600;}
+.history-wrap .history-cont-wrap .year-container-item .list-info .img-box img {height: 13rem;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item {display: block; }
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item::before {height: calc(100% - 20px); top: 10px; left: -1px;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box {padding-left: 1.81rem;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li:not(:last-child) {padding-bottom: 0.5rem;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li:before {width: 0.625rem; height: 0.625rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li:before {left: -2.2rem; top: 7px;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .title {color: #33B0C6; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc {padding: 0; font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: #555758;}
