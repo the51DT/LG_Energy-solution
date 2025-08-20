@@ -627,8 +627,8 @@
 .pfom .tech-list .text-wrap .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .tech-list .text-wrap .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .tech-list .tech-half-img {display: flex; justify-content: space-between; gap: 3.75rem;}
-.pfom .tech-list .tech-half-img .img-wrap {flex-shrink: 0; display: flex; justify-content: center; align-items: center; width: 35.375rem; height: 18.25rem; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
-.pfom .tech-list .tech-half-img .img-wrap > img {height: 100%; width: auto;}
+.pfom .tech-list .tech-half-img .img-wrap {flex-shrink: 0; display: flex; justify-content: center; align-items: center; width: 35.375rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.pfom .tech-list .tech-half-img .img-wrap > img {height: 100%; width: 100%; object-fit: cover;}
 .pfom .tech-list .tech-symbol-col .text-wrap + .symbol-wrap {margin-top: 2.5rem;}
 .pfom .tech-list .tech-symbol-col .text-wrap + .symbol-wrap.type2 {margin-top: 1.875rem;}
 .pfom .tech-list .tech-symbol-col .symbol-wrap {display: flex; gap: 1.25rem;}
@@ -661,7 +661,7 @@
 .pfom .tech-list .tech-desc-box .desc-box .tit {display: flex; align-items: center; gap: 0.5rem; font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .tech-list .tech-desc-box .desc-box .tit::before {content: ""; display: block; width: 0.25rem; height: 1rem; background-color: var(--colorElement-light-icon-icon-primary);}
 .pfom .tech-list .tech-desc-box .desc-box > div {display: flex; gap: 1rem; padding-inline: 0.625rem;}
-.pfom .tech-list .tech-desc-box .desc-box > div > img {width: 17.25rem; height: 9.8125rem; object-fit: cover;}
+.pfom .tech-list .tech-desc-box .desc-box > div > img {width: 22.5625rem; height: auto;}
 .pfom .tech-list .tech-desc-box .desc-box > div .desc {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
 
 .pfom [class^="content-item"] .content-sect:has(.order-histoy) {padding-top: 1.875rem;}
