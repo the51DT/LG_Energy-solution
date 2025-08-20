@@ -27,7 +27,6 @@ const LGEnSol = {
                 let display = window.getComputedStyle(el).display;
                 if (display === "none") display = "block";
                 el.style.display = display;
-
                 el.style.overflow = "hidden";
                 el.style.height = "0px";
 
