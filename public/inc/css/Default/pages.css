@@ -782,7 +782,7 @@
 .pmtl .mat-wrap > div .tit > span {font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
 .pmtl .mat-wrap > div .text {display: flex; flex-direction: column; justify-content: center; margin-top: 0.625rem; min-height: 3.25rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 .pmtl .mat-wrap > div .text .arrow {position: relative; width: fit-content; font-weight: 600; color: var(--colorElement-light-text-text-default01);}
-.pmtl .mat-wrap > div .text .arrow::after {content: ""; position: absolute; top: 50%; right: -1.25rem; transform: translate(50%, -50%); display: block; width: 0.938rem; height: 0.9375rem; background-image: url(../../images/img/pmtl_mat_arrow.png); background-size: contain;}
+.pmtl .mat-wrap > div .text .arrow::after {content: ""; position: absolute; top: 50%; right: -1.25rem; transform: translate(50%, -50%); display: block; width: 0.938rem; height: 0.9375rem; background-image: url(../../images/img/pmtl_mat_arrow.png); background-size: contain; background-repeat: no-repeat; background-position: left center;}
 .pmtl .mat-visual {margin-top: 2.5rem;}
 .pmtl .mat-type-wrap {display: flex; flex-direction: column; gap: 1.875rem; margin-top: 5rem;}
 .pmtl .mat-type-wrap > p {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
