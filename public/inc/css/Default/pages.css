@@ -708,7 +708,7 @@
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > img {width: 12.5rem; height: 12.5rem;}
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > p {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div:last-child > p {font-weight: 600; color: var(--colorElement-light-text-text-primary);}
-.pfom .line-up-box .line-up-wrap .line-up-info .col-flex .arrow {width: 1.875rem; height: auto; margin-top: 6rem; margin-right: 0.5rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info .col-flex .arrow {flex-shrink: 0; width: 1.875rem; height: auto; margin-top: 6rem; margin-right: 0.5rem;}
 .pfom .line-up-box.type2 {padding: 0; border-radius: 0; background-color: unset;}
 .pfom .line-up-box.type2 .line-up-wrap {margin-top: 0;}
 .pfom .line-up-box.type2 .line-up-wrap + .line-up-wrap {margin-top: 2.5rem;}

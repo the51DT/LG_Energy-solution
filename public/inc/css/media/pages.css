@@ -542,19 +542,20 @@
 .pfom .order-history + .btn-wrap {margin-top: 3rem;}
 .pfom .btn-wrap {flex-direction: column; align-items: center; gap: 1rem;}
 
+.pfom [class^="content-item"] .content-sect:has(.tab-cate-wrap.type2 .tab-category li:nth-child(3)) {padding-top: 1rem;}
 .pfom .tab-cate-wrap.type2 {margin-top: 2rem;}
 .pfom .tab-cate-wrap.type2::after {content: none;}
 .pfom .tab-cate-wrap.type2 .tab-category {gap: 0.5rem; padding-inline: 0; width: 100%;}
 .pfom .tab-cate-wrap.type2 .tab-category > li {width: calc(50% - (0.5rem / 2));}
-.pfom .tab-cate-wrap.type2 .tab-category > li button {width: 100%; height: 2.5rem; padding: 0.375rem 1.5rem;}
+.pfom .tab-cate-wrap.type2 .tab-category > li button {width: 100%; height: 2.5rem; padding: 0.375rem 1.5rem; font-size: 1rem; line-height: 1.4rem; align-items: center;}
+.pfom .tab-cate-wrap.type2 .tab-category:has(li:nth-child(3)) > li button {width: 9.52083rem;}
 .pfom .line-up-box {padding: 0; margin-top: 1.5rem; background-color: unset;}
 .pfom .line-up-box .text-wrap {gap: 1rem;}
 .pfom .line-up-box .text-wrap .tit {font-size: 1.25rem; line-height: 1.875rem;}
 .pfom .line-up-box .text-wrap .desc {font-size: 1rem; line-height: 1.6rem;}
 .pfom .line-up-box .line-up-wrap {margin-top: 1rem; gap: 1rem;}
-/* 디자인누락 확인중 */
-.pfom .line-up-box .line-up-wrap > .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
-/* // 디자인누락 확인중 */
+.pfom .line-up-box .line-up-wrap + .line-up-wrap {margin-top: 1.5rem;}
+.pfom .line-up-box .line-up-wrap > .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .pfom .line-up-box .line-up-wrap .line-up-list {gap: 0.5rem;}
 .pfom .line-up-box .line-up-wrap .line-up-list > li {display: flex; flex-direction: column; justify-content: center; align-items: center; width: calc(50% - (0.5rem / 2)); padding: 2rem 0; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
 .pfom .line-up-box .line-up-wrap .line-up-list > li.col3,
@@ -568,7 +569,31 @@
 .pfom .line-up-box .line-up-wrap .line-up-col > li {padding: 0;}
 .pfom .line-up-box .line-up-wrap .line-up-col > li > img {width: 5rem; height: 5rem; margin-bottom: 1rem;}
 .pfom .line-up-box .line-up-wrap .line-up-col > li > p {font-size: 1rem; line-height: 1.6rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info {grid-template-columns: 1fr; gap: 0.5rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info > div {padding: 1.5rem; border-radius: 0.5rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info .tit {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info .col-flex {gap: 0.5rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > img {width: 6.875rem; height: 6.875rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > p {font-size: 0.875rem; line-height: 1.3125rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info .col-flex .arrow {width: 2rem; height: auto; margin-top: 2.5rem; margin-right: 0;}
+.pfom .line-up-box.type2 .line-up-wrap {margin-top: 0;}
+.pfom .line-up-box.type2 .line-up-wrap + .line-up-wrap {margin-top: 3rem;}
+.pfom .line-up-box.type2 .line-up-wrap .line-up-list > li {width: calc(50% - (0.5rem / 2)); padding: 1.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.pfom .line-up-box.type2 .line-up-wrap .line-up-list > li:last-child {width: 100%;}
+.pfom .line-up-box.type2 .line-up-wrap .line-up-list > li > img {height: 5.9375rem;}
+.pfom .line-up-box.type2 .line-up-wrap .line-up-list > li:last-child > img {height: 6.125rem;}
 
+.pfom .prod-sol-wrap {gap: 1rem; margin-top: 1.5rem; padding: 0; border-radius: unset; background-color: unset;}
+.pfom .prod-sol-wrap .prod-sol-text {flex-direction: column; align-items: center; gap: 1rem; padding: 1.25rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.pfom .prod-sol-wrap .prod-sol-text > img.verti {width: auto; height: 13rem;}
+.pfom .prod-sol-wrap .prod-sol-text > div {gap: 1rem;}
+.pfom .prod-sol-wrap .prod-sol-text .desc {font-size: 1rem; line-height: 1.6rem;}
+.pfom .prod-sol-wrap .prod-sol-text [class^="icon-btn"] {width: 100%;}
+.pfom .prod-sol-wrap .prod-sol-box {flex-direction: column; gap: 0.5rem;}
+.pfom .prod-sol-wrap .prod-sol-box > div {padding: 1.5rem;}
+.pfom .prod-sol-wrap .prod-sol-box > div > img { margin-bottom: 1rem;}
+.pfom .prod-sol-wrap .prod-sol-box > div .tit {font-size: 1rem; line-height: 1.6rem;}
+.pfom .prod-sol-wrap .prod-sol-box > div .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem;}
 
 
 /* 정도경영 (etmg) */
