@@ -35,11 +35,11 @@ const LGEnSol = {
                     el.style.height = el.scrollHeight + "px";
                 });
 
-                setTimeout(() => {
-                    el.style.height = "";
-                    el.style.overflow = "";
-                    el.style.transition = "";
-                }, 300);
+                // setTimeout(() => {
+                //     el.style.height = "";
+                //     el.style.overflow = "";
+                //     el.style.transition = "";
+                // }, 300);
             });
         }
 
