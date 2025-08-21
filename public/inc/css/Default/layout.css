@@ -191,10 +191,6 @@ background: #FFF;overflow: hidden;position: relative;}
 .main_p .content-item05.scroll-on .action07{top:0px; opacity:1;}
 
 
-
-
-
-
 .main_p .content-item06{min-height:58rem;position:relative;overflow: hidden;padding-top:6.5rem;background:url("../../images/img/main_cont6_1.png") no-repeat bottom; background-size: cover; color: var(--text-text-on-primary, #FFF);}
 .main_p .content-item06 .position-txt{position:absolute;left:2.69rem;top:0;color: var(--text-text-on-primary, #FFF);font-size: 8.91588rem;font-weight: 800;line-height: 15.91913rem; /* 178.547% */letter-spacing: -0.08506rem;text-align:left;opacity: 0.15;}
 .main_p .content-item06 .position-txt p:first-of-type{padding-right:26rem;}
@@ -213,10 +209,6 @@ background: #FFF;overflow: hidden;position: relative;}
 }
 .main_p .content-item06 .area2 > div span:last-child{color: var(--text-text-default-03, #858889);font-size: var(--size-desktop-B2, 1rem);font-weight: 600;line-height: var(--line-height-desktop-B2, 1.6rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0rem);}
 .main_p .content-item06.scroll-on .area2 > div p + p::before{width: 13.5rem;transition:all .5s .8s;}
-
-
-
-
 
 .main_p .content-item06 .action01{position:relative;left:5rem;opacity:0;transition:all .8s ;}
 .main_p .content-item06 .action02{position:relative;left:5rem;opacity:0;transition:all .8s .2s;}
@@ -319,15 +311,13 @@ aside > img{cursor: pointer;}
 .sitemap_pop-wrap .sitemap_pop-ci {display: flex;width: 16.551rem;height: 2.625rem;justify-content: center;align-items: center;}
 .sitemap_pop-wrap .sitemap-close{position:absolute;right:0;top:0;width:3rem;height:3rem;}
 .sitemap_pop-wrap .sitemap-area{display: flex;justify-content: space-between;align-items: flex-start;align-self: stretch;}
-
-
+.sitemap_pop-wrap .sitemap-area a:hover{color: var(--text-text-primary, #33B0C6);}
 .sitemap_pop-wrap .depth02{padding-top:2.5rem;}
 .sitemap_pop-wrap .depth02 > ul{padding-top:.44rem;}
 .sitemap_pop-wrap .depth03{padding-top:.87rem;}
 .sitemap_pop-wrap .depth01 a{display:block;text-align:left;color: var(--text-text-on-primary, #FFF);font-size: var(--size-desktop-H2, 2rem);font-weight: 700;line-height: var(--line-height-desktop-H2, 3rem); /* 150% */letter-spacing: var(--letter-spacing-default, 0);}
 .sitemap_pop-wrap .depth02 a{color: var(--text-text-on-primary, #FFF);font-size: var(--size-desktop-H3, 1.5rem);font-weight: 600;line-height: var(--line-height-desktop-H3, 2.25rem); /* 150% */letter-spacing: var(--letter-spacing-default, 0);}
 .sitemap_pop-wrap .depth03 a{color: var(--text-text-disabled, #B4B8BA);font-size: var(--size-desktop-H4, 1.25rem);font-weight: 500;line-height: var(--line-height-desktop-H4, 2rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
-
 
 /* 디자인 레이아웃 재작업 - 0731 */
 .content-header_bg {position: relative; color: #fff; text-align: center; height: 30rem; }
@@ -336,7 +326,6 @@ aside > img{cursor: pointer;}
 .content-header_bg img {width: 100%; height: 100%;  object-fit: cover;}
 .content-header_text {position: absolute; bottom: 8.56rem; left: 50%; transform: translateX(-50%);}
 .content-header .title-h1  {margin-bottom: 2.5rem;}
-
 
 [class^="content-item"] {padding: 7.5rem 0; width: 100%;}
 [class^="content-item"] + [class^="content-item"] {opacity: 1; transition: opacity 0.5s;}
@@ -348,7 +337,6 @@ aside > img{cursor: pointer;}
 [class^="content-item"] .content-sect {padding-top: 2.5rem;}
 [class^="content-item"] article .content-sect {padding-top: 1.875rem;}
 [class^="content-item"].full-bg {margin-bottom: 0;}
-
 
 .title-h1 {font-size: 2.75rem; font-weight: 700; line-height: 3.5rem;}
 .title-h2 {font-size: 1.75rem; font-weight: 700; line-height: 3rem;} 
@@ -363,6 +351,8 @@ aside > img{cursor: pointer;}
 
 .page-map-wrap {position:sticky; font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; width: 100%; top:0; background-color: #fff; margin-top: 0; z-index: 50; display: none;} /* top:99px */
 .page-map-wrap.stuck {display: block;} /* sticky 붙었을경우 예외처리 클래스, 필요시 사용(기존 회색배경 디자인 변경으로 제거함) */
+.page-map-wrap {position:sticky; font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; width: 100%; top:0; background-color: #fff; margin-top: 0; z-index: 50;} /* top:99px */
+.page-map-wrap.stuck {} /* sticky 붙었을경우 예외처리 클래스, 필요시 사용(기존 회색배경 디자인 변경으로 제거함) */
 .page-map-wrap .selectbox-wrap {gap: 1.88rem; padding-top: 1.88rem; height: 5rem;}
 .page-map-wrap .selectbox-wrap > div.select-cate::after {content:""; width: 100%; height: 0.125rem; background: #1f1f3c; display: block; position: absolute; bottom: 0;}
 .page-map-wrap .selectbox-wrap > div.select-cate button {padding:0 0 1rem; width: 18.625rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
@@ -394,8 +384,6 @@ aside > img{cursor: pointer;}
 .util-item-cs .cs-cont a:hover{color:#fff;}
 .util-item-cs .cs-cont .cs-close{display: flex;padding: 0.25rem;width:1.38rem;height:1.38rem;background: url(../../images/icon/Icon_close_sm.svg)no-repeat center;margin-left:1rem;}
 
-
-
 /* footer - 추후 layout 옮길예정 (시안페이지의 css 중복방지하기위해 우선 component.css에 적용함) */
 .footer-wrap {position:relative;}
 .footer-wrap::before {content:""; width: 100%; height: 1px; display: block; background:#E1E7EA; position: absolute; left: 0; top: 0;}
@@ -406,16 +394,13 @@ aside > img{cursor: pointer;}
 .footer-item02 {display: flex; gap: 2.94rem; flex-direction: column;} 
 .footer-bottom {display: flex; justify-content: space-between; padding-bottom: 5rem; align-items: center; max-width: 90rem; margin: 0 auto;}
 .footer-util {display: flex; gap: 0.5rem; padding: 1.22rem 0;}
-
 .footer-wrap .selectbox-wrap.type3 > div button,
 .footer-wrap .selectbox-wrap.type3 > div a {color: #fff;}
 .footer-wrap .selectbox-wrap.type3 .select-cate > button {color: #171819;}
 .footer-wrap .selectbox-wrap.type3 .select-menu {width: 100%; height:100%; height: fit-content; background:#171819; color:#fff; top:revert; bottom:64px; overflow-y: auto; overflow-x: hidden; border: 1px solid #171819; padding: 1.5rem 0; border-radius: 1rem 1rem 0 0;}
 .footer-wrap .selectbox-wrap.type3 .select-menu .cate-title {color: #fff; padding: 0 1.5rem 0.5rem;}
-
 .footer-wrap .selectbox-wrap.type3 .select-menu .cate-item > li {position: relative; padding-left:0.75rem;}
 .footer-wrap .selectbox-wrap.type3 .select-menu .cate-item > li:not(:last-child){margin-bottom: 0.5rem; padding-bottom: 0;}
-
 .footer-wrap .selectbox-wrap.type3 .select-menu .cate-item > li::before {content:""; display: block; width:4px; height:1px; background:#fff; position: absolute; left:1.5rem; top: 50%; transform: translateY(-50%);}
 .footer-wrap .selectbox-wrap.type3 .select-menu > li:not(:last-child) {padding-bottom: 1.5rem;}
 .footer-wrap .selectbox-wrap.type3 .select-menu > li a {font-weight: 400; line-height: 1.6rem; font-size: 1rem; padding: 0 1.5rem;}
