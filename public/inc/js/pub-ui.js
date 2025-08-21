@@ -20,6 +20,9 @@ var pubUi = {
         this.mobileDeviceChk();
         this.setScrollWidth();
         this.requestInquiry();
+        
+        this.scrollWrapEvt();
+        this.sideStickyEvt();
     },
 
     settings: function () {
@@ -32,10 +35,16 @@ var pubUi = {
         this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
         this.self.tabListsMo = document.querySelectorAll(".mo-only .tab-cate-wrap.new [role=tablist]");
 
+        this.self.breadCrumbCate = document.querySelectorAll(".page-map-wrap .select-cate.activeSelect .select-menu.caseTab li > a");
         this.self.selectCate = document.querySelectorAll(".select-cate.activeSelect");
         this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
         this.self.selectMenu = document.querySelectorAll(".activeSelect .select-menu");
         this.self.selectMenuTab = document.querySelectorAll(".select-menu.caseTab");
+
+        /* side-sticky 관련 */
+        this.self.sideSticky = document.querySelectorAll(".side-sticky .side-list li > a");
+        this.self.sideStickyTitle = document.querySelector(".sticky-area-tit");    
+        this.self.sideStickyInnerTabBtn = document.querySelectorAll(".tab-cate-wrap .tab-category.activeTab > li > button");
 
         /* content-item */
         this.self.pcOnly = document.querySelector(".pc-only");
@@ -51,6 +60,7 @@ var pubUi = {
     },
 
     bindEvents: function () {
+        
         // selectbox 탭형식 이벤트 처리 (PC)
         this.self.selectCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", (e) => {
@@ -90,86 +100,6 @@ var pubUi = {
             });
         });
 
-        // .wrap scroll 이벤트
-        if (!this.self.wrap) {
-            return;
-        } else {
-            this.self.wrap.addEventListener("scroll", function (el) {
-                const historyWrap = document.querySelector(".history-wrap");
-                const aside = document.querySelector(".wrap aside");
-                const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
-
-                // 스크롤 이벤트 처리
-                const nowScroll = el.target.scrollTop;
-                const page_h = window.innerHeight * 0.3;
-                // console.log("body scroll event");
-                // console.log("nowScroll : " + nowScroll);
-                // aside 표시/숨김 처리
-                if (nowScroll > page_h) {
-                    aside && aside.style.display !== "block" && pubUi.fadeIn(aside, 500);
-                } else {
-                    aside && (aside.style.display = "none");
-                }
-
-                // aside 클릭 시 스크롤 최상단 이동
-                if (aside) {
-                    aside.onclick = function () {
-                        el.target.scrollTo({ top: 0, behavior: "smooth" });
-                    };
-                }
-
-                // history-wrap 처리
-                if (historyWrap && historyWrap.classList.contains("each-view")) {
-                    const historyViewY = historyWrap.offsetTop - 140;
-
-                    if (nowScroll > 0 && !historyWrap.getAttribute("data-scrolling")) {
-                        document.body.scrollTo({ top: historyViewY, behavior: "smooth" });
-                        historyWrap.setAttribute("data-scrolling", "true");
-                        document.body.style.overflow = "hidden";
-                        // console.log("scrollDown !!!");
-                    }
-                }
-
-                targetContentItem.forEach((item, idx) => {
-                    let itemTop = "";
-                    if (document.querySelector(".wrap").classList.contains("mobile")) {
-                        itemTop = item.offsetTop - 152;
-                    } else {
-                        itemTop = item.offsetTop - 600;
-                    }
-
-                    const itemHeight = item.clientHeight;
-                    const itemBottom = itemTop + itemHeight;
-
-                    const itemDataBg = item.dataset.bgtype;
-                    // console.log("itemDataBg : " + itemDataBg);
-
-                    // 현재 스크롤 위치가 아이템 영역에 들어왔는지 확인
-                    if (nowScroll >= itemTop && nowScroll < itemBottom) {
-                        // 해당 아이템에 active 클래스 추가
-                        item.classList.add("active");
-                        // 다른 아이템에서 active 클래스 제거
-                        // targetContentItem.forEach((otherItem, otherIdx) => {
-                        //     if (otherIdx !== idx) {
-                        //         otherItem.classList.remove("active");
-                        //     }
-                        // });
-
-                        if (itemDataBg === "dark" && item.classList.contains("active")) {
-                            // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
-                            item.style.color = "#fff";
-                        }
-                    } else {
-                        // item.classList.remove("active");
-                        if (itemDataBg === "dark") {
-                            // 값 초기화
-                            item.style.color = "revert";
-                        }
-                    }
-                });
-            });
-        }
-
         // search input deleteBtn이벤트 관련 script
         if (!this.self.searchResult) {
             return;
@@ -196,6 +126,132 @@ var pubUi = {
             // 터치 끝나면 다시 재생
             this.self.track.addEventListener("touchend", () => {
                 this.self.track.style.animationPlayState = "running";
+            });
+        }
+    },
+    scrollWrapEvt: function () {
+        // .wrap scroll
+        if (!this.self.wrap) {
+            return;
+        } else {
+            this.self.wrap.addEventListener("scroll", function (el) {
+                // console.log("scroll!");                
+                const aside = document.querySelector(".wrap aside");
+                const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
+
+                // 스크롤 이벤트 처리
+                const nowScroll = el.target.scrollTop;
+                const page_h = window.innerHeight * 0.3;
+                // console.log("body scroll event");
+                // console.log("nowScroll : " + nowScroll);
+                // aside 표시/숨김 처리
+                if (nowScroll > page_h) {
+                    aside && aside.style.display !== "block" && pubUi.fadeIn(aside, 500);
+                } else {
+                    aside && (aside.style.display = "none");
+                }
+
+                // aside 클릭 시 스크롤 최상단 이동
+                if (aside) {
+                    aside.onclick = function () {
+                        el.target.scrollTo({ top: 0, behavior: "smooth" });
+                    };
+                }
+
+                if (targetContentItem) {
+                    targetContentItem.forEach((item, idx) => {
+                        let itemTop = "";
+
+                        if (document.querySelector(".wrap").classList.contains("mobile")) {
+                            itemTop = item.offsetTop - 152;
+                        } else {
+                            itemTop = item.offsetTop - 600;
+                        }
+
+                        const itemHeight = item.clientHeight;
+                        const itemBottom = itemTop + itemHeight;
+
+                        const itemDataBg = item.dataset.bgtype;
+                        // console.log("itemDataBg : " + itemDataBg);
+
+                        // 현재 스크롤 위치가 아이템 영역에 들어왔는지 확인
+                        if (nowScroll >= itemTop && nowScroll < itemBottom) {
+                            // 해당 아이템에 active 클래스 추가
+                            item.classList.add("active");
+                            // 다른 아이템에서 active 클래스 제거
+                            // targetContentItem.forEach((otherItem, otherIdx) => {
+                            //     if (otherIdx !== idx) {
+                            //         otherItem.classList.remove("active");
+                            //     }
+                            // });
+
+                            // side-sticky 스크롤시, active 컨텐츠 영역도달시 side-list anchor 액티브 처리
+                            var targetSideSticky = el.target.querySelector(".side-sticky");
+                            var sideList;
+
+                            if (item.classList.contains("active")) {
+                                var itemId = item.getAttribute("id");
+
+                                if (targetSideSticky) {
+                                    sideList = targetSideSticky.querySelectorAll(".side-list li");
+                                    // console.log(itemId);
+                                    sideList.forEach((el) => {
+                                        sideList.forEach((otherList) => {
+                                            otherList.querySelector("a").classList.remove("active");
+                                        });
+                                        el = document.querySelector(`a[href="#${itemId}"]`);
+                                        el.classList.add("active");
+                                    });
+                                }
+                            }
+
+                            if (itemDataBg === "dark" && item.classList.contains("active")) {
+                                // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
+                                item.style.color = "#fff";
+                                if (targetSideSticky) {
+                                    targetSideSticky.classList.add("white");
+                                }
+                            } else {
+                                if (targetSideSticky) {
+                                    targetSideSticky.classList.remove("white");
+                                }
+                            }
+                        } else {
+                            //item.classList.remove("active");
+                            // if (itemDataBg === "dark") {
+                            //     // 값 초기화
+                            //     targetSideSticky.classList.add("white");
+                            // } else {
+                            //     targetSideSticky.classList.remove("white");
+                            // }
+                        }
+                    });
+                }
+
+
+                const historyWrap = document.querySelector(".history-wrap");
+                const historyEachView = document.querySelector(".history-wrap.each-view");                
+
+                if (historyEachView && document.querySelector(".tab-content.history").classList.contains("on")) {
+                    document.querySelector(".wrap").addEventListener("scroll", function (el) {
+                        const historyViewY = historyEachView.offsetTop;
+                        
+                        if (nowScroll > 0 && !historyEachView.getAttribute("data-scrolling")) {
+                            pubUi.scrollToEvt(".wrap", "top", historyViewY - 80);
+                            historyEachView.setAttribute("data-scrolling", true);
+                            document.querySelector(".wrap").style.overflowY = "hidden";
+                            console.log("scrollDown !!! + data-scrolling : ", historyEachView.getAttribute("data-scrolling"));
+                            console.log("111");
+                        } else if (nowScroll > 0 && historyEachView.getAttribute("data-scrolling") == true) {
+                            pubUi.scrollToEvt(".wrap", "top", historyViewY - 80);                            
+                            historyEachView.removeAttribute("data-scrolling");
+                            console.log("scrollDown !!! + data-scrolling : ", historyEachView.getAttribute("data-scrolling"));
+                            console.log("222");
+                        }
+                    });
+                } else {
+                    document.querySelector(".wrap").style.overflowY = "auto";                   
+                }
             });
         }
     },
@@ -240,15 +296,17 @@ var pubUi = {
             button.classList.remove("active");
             map.classList.remove("on");
         } else if (type === "tab") {
-            
             const subCateName = subCate.innerText;
 
-            if(subCateName == "연혁") {
+            if (subCateName == "연혁") {
                 pubUi.scrollToEvt(".wrap", "top", 480);
+                document.querySelector(".history-wrap.each-view").style.overflowY = "hidden";
+                document.querySelector(".history-wrap.each-view").removeAttribute("data-scrolling");
             } else {
                 pubUi.scrollToEvt(".wrap", "top"); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
+                
             }
-            
+
             // console.log("tab click event");
             pageMapCate.forEach((otherBox) => {
                 //selectbox 카테고리 값 초기화
@@ -258,7 +316,7 @@ var pubUi = {
             //선택한 selectbox 카테고리, active & aria-selected true 처리
             subCate.classList.add("active");
             subCate.setAttribute("aria-selected", true);
-            
+
             const selectedAriaCtrl = subCate.getAttribute("aria-controls");
             const button = map.closest(".select-cate").querySelector("button");
 
@@ -293,6 +351,18 @@ var pubUi = {
                     tabContent.setAttribute("aria-expanded", true);
                     // tabContentMo.classList.add("on");
                     // tabContentMo.setAttribute("aria-expanded", true);
+
+                    // page-map-wrap selectbox-wrap 탭컨텐츠의 side-list 체크
+                    const selectedTabContSideList = tabContent.querySelectorAll(".side-sticky .side-list > li > a");
+                    if (selectedTabContSideList) {
+                        setTimeout(function () {
+                            selectedTabContSideList.forEach((sideList, idx) => {
+                                sideList.classList.remove("active");
+                                selectedTabContSideList[0].classList.add("active");
+                                sideList.closest(".side-sticky").classList.remove("white");
+                            });
+                        }, 500);
+                    }
                 }
                 // 선택한 selectbox와 맞는 mobile 탭 활성화
                 // if (selectedTab) {
@@ -309,6 +379,8 @@ var pubUi = {
                 const secondTab = tabContent?.querySelector("[data-tab-type='secondTab']");
                 pubUi.secondTabChk(secondTab);
             }
+
+            
             button.classList.add("on");
             button.classList.remove("active");
             map.classList.remove("on");
@@ -395,6 +467,7 @@ var pubUi = {
             document.querySelector(".wrap").addEventListener("scroll", (e) => {
                 const offsetTop = document.querySelector(".wrap").scrollTop;
                 const stickyEl = document.querySelector(".page-map-wrap");
+                const sideStickyTit = document.querySelector(".sticky-area-tit");
                 const pageContentTab = document.querySelector(".content-area-head-tab");
 
                 if (!stickyEl) return;
@@ -403,8 +476,10 @@ var pubUi = {
                 if (pubUi.self.isPc) {
                     if (offsetTop > 400) {
                         stickyEl.classList.add("stuck");
+                        if (sideStickyTit) sideStickyTit.style.paddingTop = "7.5rem";
                     } else {
                         stickyEl.classList.remove("stuck");
+                        if (sideStickyTit) sideStickyTit.style.paddingTop = "12.5rem";
                     }
                 }
             });
@@ -435,21 +510,22 @@ var pubUi = {
                         const targetContent = document.querySelector(target);
                         const targetOffsetY = targetContent.offsetTop;
                         const headerHeight = document.querySelector(".header-area").clientHeight;
-                        let pageMapHeight = "";                        
+                        let pageMapHeight = "";
                         let contentHeadHeight = "";
                         let totalHeadHeightMobile = "";
-                        
 
-                        if(document.querySelector(".wrap").classList.contains("pc")) { //pc
-                            pageMapHeight = document.querySelector(".page-map-wrap").clientHeight; 
-                        } else if (document.querySelector(".wrap").classList.contains("mobile")) { //mobile                                                        
+                        if (document.querySelector(".wrap").classList.contains("pc")) {
+                            //pc
+                            pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
+                        } else if (document.querySelector(".wrap").classList.contains("mobile")) {
+                            //mobile
                             contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
                             totalHeadHeightMobile = headerHeight + contentHeadHeight;
                         }
-                        
+
                         console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
-                        
-                        if(document.querySelector(".wrap").classList.contains("mobile")) {
+
+                        if (document.querySelector(".wrap").classList.contains("mobile")) {
                             document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeightMobile, behavior: "smooth" });
                         } else {
                             document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
@@ -460,23 +536,26 @@ var pubUi = {
                     //회사소개 > 비전 페이지 예외처리
                     if (target) {
                         const targetContent = document.querySelector(target);
-                        const targetOffsetY = targetContent.offsetTop - 120;
                         const headerHeight = document.querySelector(".header-area").clientHeight;
-                        let pageMapHeight = "";                        
+                        let targetOffsetY = "";
+                        let pageMapHeight = "";
                         let contentHeadHeight = "";
                         let totalHeadHeightMobile = "";
-                        
 
-                        if(document.querySelector(".wrap").classList.contains("pc")) { //pc
-                            pageMapHeight = document.querySelector(".page-map-wrap").clientHeight; 
-                        } else if (document.querySelector(".wrap").classList.contains("mobile")) { //mobile                                                        
+                        if (document.querySelector(".wrap").classList.contains("pc")) {
+                            //pc
+                            pageMapHeight = document.querySelector(".page-map-wrap").clientHeight;
+                            targetOffsetY = targetContent.offsetTop - 120;
+                        } else {
+                            //mobile
+                            targetOffsetY = targetContent.offsetTop - 178;
                             contentHeadHeight = document.querySelector(".content-area-head-tab").clientHeight;
                             totalHeadHeightMobile = headerHeight + contentHeadHeight;
                         }
-                        
+
                         console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
-                        
-                        if(document.querySelector(".wrap").classList.contains("mobile")) {
+
+                        if (document.querySelector(".wrap").classList.contains("mobile")) {
                             document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeightMobile, behavior: "smooth" });
                         } else {
                             document.querySelector(".wrap").scrollTo({ top: targetOffsetY - pageMapHeight, behavior: "smooth" });
@@ -489,10 +568,9 @@ var pubUi = {
                         const targetContent = document.querySelector(target);
                         const targetOffsetY = targetContent.offsetTop;
                         const headerHeight = document.querySelector(".header-area").clientHeight;
-                        let pageMapHeight = "";                        
+                        let pageMapHeight = "";
                         let contentHeadHeight = "";
                         let totalHeadHeightMobile = "";
-                        
 
                         if (document.querySelector(".wrap").classList.contains("pc")) {
                             //pc
@@ -545,13 +623,38 @@ var pubUi = {
             });
         });
     },
+    sideStickyEvt: function () {
+        //side_sticky 클릭시, 클릭 이벤트
+        this.self.sideSticky.forEach((stickyBtn) => {
+            stickyBtn.addEventListener("click", () => {
+                const targetHref = stickyBtn.getAttribute("href");
+                this.self.sideSticky.forEach((otherBtn) => {
+                    otherBtn.classList.remove("active");
+                });
+                console.log(stickyBtn, targetHref);
+                stickyBtn.classList.add("active");
+                if (stickyBtn.classList.contains("active")) {
+                    if (document.querySelector(targetHref).dataset.bgtype == "dark") {
+                        this.self.sideSticky.forEach((btn) => {
+                            console.log("버튼 화이트 클래스 추가");
+                            btn.closest(".side-sticky").classList.add("white");
+                        });
+                    } else {
+                        console.log("버튼 화이트 클래스 제거");
+                        stickyBtn.closest(".side-sticky").classList.remove("white");
+                    }
+                }
 
+            });
+        });
+    },
     historyMotionEvt: function () {
+    
         // NodeList를 일반 배열로 변환하여 배열 메서드(map, find 등) 사용 가능하도록 처리
         const leftItems = Array.from(document.querySelectorAll(".left-area .year-container .item"));
         const rightItems = Array.from(document.querySelectorAll(".right-area .year-container .item"));
         const yearTermLinks = Array.from(document.querySelectorAll(".year-term-container .year-item-list > a"));
-        const historyContArea = document.querySelector(".history-cont-wrap"); // 스크롤 이벤트 타겟 영역
+        const historyContArea = document.querySelector(".history-cont-wrap"); // 스크롤 이벤트 타겟 영역                
 
         const yearClickIndex = {}; // 연도 구간별 클릭 인덱스 기억
         let lastClickedRange = null; // 마지막 클릭한 연도 구간
@@ -833,7 +936,7 @@ var pubUi = {
                 const atLast = currentIdx === leftItems.length - 1;
 
                 const historyView = document.querySelector(".history-wrap.each-view");
-                const historyViewY = historyView.offsetTop - 140;
+                if(historyView) { const historyViewY = historyView.offsetTop - 140; }
 
                 // 외부 스크롤 허용 조건
                 const allowExternalScroll = (isScrollingDown && atLast) || (isScrollingUp && atFirst);
@@ -888,31 +991,39 @@ var pubUi = {
         }
     },
     historyViewEvt: function () {
-        if (document.querySelector(".history-wrap") != null) {
-            const allView = document.querySelector("#allView");
-            const eachView = document.querySelector("#eachView");
-            const showAllBtn = document.querySelector("button[onclick*='#allView']");
-            const backToEachBtn = document.querySelector("button[onclick*='#eachView']");
+        if(!document.querySelector(".history-wrap")) {
+            return
+        } else {
+            if (document.querySelector(".history-wrap") != null) {
+                const allView = document.querySelector("#allView");
+                const eachView = document.querySelector("#eachView");
+                const showAllBtn = document.querySelector("button[onclick*='#allView']");
+                const backToEachBtn = document.querySelector("button[onclick*='#eachView']");
 
-            // 한눈에 보기 클릭 시 팝업 표시
-            showAllBtn.addEventListener("click", () => {
-                allView.classList.add("active");
-                eachView.style.display = "none";
-            });
+                // 한눈에 보기 클릭 시 팝업 표시
+                if (showAllBtn) {
+                    showAllBtn.addEventListener("click", () => {
+                        allView.classList.add("active");
+                        eachView.style.display = "none";
+                    });
+                }
 
-            // 하나씩 보기 클릭 시 팝업 숨기기
-            backToEachBtn.addEventListener("click", () => {
-                // console.log("eachView")
-                allView.classList.remove("active");
-                setTimeout(() => {
-                    eachView.style.display = "block";
-                }, 400); // transition 시간만큼 기다림
+                if (backToEachBtn){ 
+                    // 하나씩 보기 클릭 시 팝업 숨기기
+                    backToEachBtn.addEventListener("click", () => {
+                        // console.log("eachView")
+                        allView.classList.remove("active");
+                        setTimeout(() => {
+                            eachView.style.display = "block";
+                        }, 400); // transition 시간만큼 기다림
 
-                setTimeout(function () {
-                    pubUi.scrollToEvt("#eachView", "page", "history"); //페이지에서 사용하는 scrolToEvt사용 원할 시, 파라미터 전달값 : targetElement, "page(type)", "처리하려는 페이지 (value)"
-                }, 1000);
-            });
-        }
+                        setTimeout(function () {
+                            pubUi.scrollToEvt("#eachView", "page", "history"); //페이지에서 사용하는 scrolToEvt사용 원할 시, 파라미터 전달값 : targetElement, "page(type)", "처리하려는 페이지 (value)"
+                        }, 1000);
+                    });
+                }
+            }
+        }        
     },
     setScrollWidth: function () {
         const apply = () => {

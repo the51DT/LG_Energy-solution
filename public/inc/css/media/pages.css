@@ -760,7 +760,9 @@
 .history-wrap .history-cont-wrap .year-container-item .list-info .img-box .img-title {font-size: 1.25rem; font-weight: 400; line-height: 2rem; padding-bottom: 1.5rem;}
 .history-wrap .history-cont-wrap .year-container-item .list-info .img-box .img-title strong {font-weight: 600;}
 .history-wrap .history-cont-wrap .year-container-item .list-info .img-box img {height: 13rem;}
+.history-wrap.all-view .year-container {padding: 0;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item {display: block; }
+.history-wrap.all-view .history-cont-wrap .year-container-item:last-child .year-item-list .year-item::before {height: 93%;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item::before {height: calc(100% - 20px); top: 10px; left: -1px;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box {padding-left: 1.81rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li:not(:last-child) {padding-bottom: 0.5rem;}
