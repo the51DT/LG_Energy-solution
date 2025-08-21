@@ -411,22 +411,25 @@
 .pind .title-desc {font-size: 1.125rem; line-height: 1.75rem; margin-top: 1rem;}
 .pind .indus-list {gap: 0.5rem; overflow-x: scroll; margin-inline: -1.25rem; padding-inline: 1.25rem;}
 .pind .indus-list > li {width: auto; height: 15rem; aspect-ratio: 1 / 1;}
-.pind .indus-list > li > p {font-size: 1rem; font-weight: 400; line-height: 1.6rem; margin-top: 1.5rem; margin-left: 1.5rem;}
-.pind .indus-list > li > img {width: 10.37513rem; height: 6.25425rem; margin: auto 1.5rem 2.06rem auto;}
+.pind .indus-list > li > p {font-size: 1rem; line-height: 1.6rem; margin-top: 1.5rem; margin-left: 1.5rem;}
+.pind .indus-list > li > img,
+.pind .indus-list.col4 > li > img {width: 12.5rem; height: 8.125rem; margin: auto 1.25rem 1.25rem auto;}
+.pind .indus-list + .indus-box {margin-top: 1.5rem;}
 .pind .indus-box {flex-direction: column; gap: 1rem; padding: 1.5rem;}
 .pind .indus-box .tit {font-size: 1.125rem; line-height: 1.75em;}
 .pind .indus-box > ul {flex-wrap: wrap; row-gap: 1.5rem; column-gap: 0.625rem;}
 .pind .indus-box > ul > li {width: calc(50% - (0.625rem / 2));}
 .pind .indus-box > ul > li + li::before {content: unset;}
-.pind .indus-box > ul > li > img { margin-bottom: 0.5rem;}
+.pind .indus-box > ul > li > img {margin-bottom: 1rem;}
 .pind .indus-box > ul > li > p {font-size: 0.875rem; line-height: 1.3125rem;}
-.pind .indus-bottom {margin-top: 3rem;}
-.pind .indus-bottom::before {bottom: -6.25rem; height: 55.25rem;}
-.pind .indus-bottom {flex-direction: column; gap: 2.5rem;}
+.pind .indus-bottom {margin-top: 3rem; padding-top: 3rem; flex-direction: column; gap: 3rem;}
+.pind .indus-bottom::before {bottom: -6.25rem; height: calc(100% + 6.25rem);}
 .pind .indus-bottom .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .pind .indus-bottom .bottom-list {gap: 0.5rem; margin-top: 1rem;}
+.pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list {gap: 0.5rem; flex-wrap: wrap;}
 .pind .indus-bottom .bottom-list > li {width: 100%; height: 9.625rem; border-radius: 0.5rem; padding-top: 1.5rem;}
-.pind .indus-bottom .bottom-list > li > img {width: 6.10713rem; height: 4.75rem;}
+.pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list > li {width: calc(50% - (0.5rem / 2));}
+.pind .indus-bottom .bottom-list > li > img {width: 6.10713rem; height: 4.75rem; margin-bottom: 0.5rem;}
 .pind .indus-bottom .bottom-list > li > p {font-size: 1rem; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
 .pind .indus-bottom .bottom-col > div {gap: 1rem;}
 .pind .indus-bottom .bottom-col .btn-wrap {flex-direction: column;}
@@ -468,7 +471,7 @@
 .pfom .prod-core-box > li .core-prod .prod-wrap:nth-child(1) > img {width: 6.0625rem;}
 .pfom .prod-core-box > li .core-prod .prod-wrap:nth-child(2) > img {width: 8.3125rem;}
 .pfom .prod-core-box > li .core-prod .prod-wrap:nth-child(3) > img {width: 7.6875rem;}
-.pfom .prod-visual:has([class^="pch-visual"]) {margin-right: 0; position: relative; width: 100%; height: 16.73144rem;}
+.pfom .prod-visual:has([class^="pch-visual"]) {margin-inline: auto; position: relative; width: 100%; height: 16.73144rem; max-width: 22rem;}
 .pfom .prod-visual:has([class^="pch-visual"]) > img {position: absolute; width: calc(100% + 1.25rem); height: auto;}
 .pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-1,
 .pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-3 {top: 0; left: 0;}
@@ -532,16 +535,19 @@
 
 .industry-wrap {gap: 2rem;}
 .industry-box {flex-direction: column; gap: 1rem;}
-.industry-box .box-link {justify-content: flex-start; width: 100%; height: 8.75rem; padding: 1rem; border-radius: 0.5rem;}
+.industry-box .box-link {position: relative; width: 100%; height: 8.75rem; padding: 1rem; border-radius: 0.5rem;}
 .industry-box .box-link.col3 {width: 100%;}
+.industry-box .box-link > div {flex-direction: column; align-items: flex-start; gap: 0.5rem;}
 .industry-box .box-link .tit {font-size: 1.125rem; line-height: 1.75rem;}
-.industry-box .box-link > img {top: auto; left: auto; bottom: 0; right: 0; transform: unset; width: 11.25rem; height: 6.5rem;}
-.industry-box .box-link.col3 > img {top: auto; left: auto; bottom: 0; right: 0; width: 12.16106rem; height: 7.26869rem;}
+.industry-box .box-link > img,
+.industry-box .box-link.col3 > img {position: absolute; top: auto; left: auto; bottom: 1rem; right: 1rem; transform: unset; width: auto; height: 6.75rem;}
 .industry-box .box-link .more {justify-content: flex-start;}
 .industry-material {flex-direction: column; align-items: flex-start; gap: 1rem;}
 .industry-material > p {font-size: 1.25rem; line-height: 1.875rem;}
 .industry-material [class^="icon-btn"] {width: 100%; padding: 1rem; font-size: 1rem; line-height: 1.6rem;}
 .industry-material [class^="icon-btn"] > img {margin-right: 0.625rem;}
+.industry-material:has(> div) {gap: 1rem;}
+.industry-material > div {width: 100%; gap: 1rem;}
 
 .pfom [class^="content-item"] .content-sect:has(.order-histoy) {padding-top: 1rem;}
 .pfom .order-history {gap: 1rem;}
@@ -613,9 +619,11 @@
 .pmtl .title-h2 + .title-desc {margin-top: 2rem;}
 .pmtl .mat-wrap {flex-direction: column; gap: 0.5rem; margin-top: 1.5rem;}
 .pmtl .mat-wrap > div {gap: 1.5rem; height: auto; padding: 1.5rem;}
+.pmtl .mat-wrap > div:has(.text .arrow + .arrow) {padding: 1.5rem;}
 .pmtl .mat-wrap > div .tit {font-size: 1.5rem; line-height: 2.0625rem;}
 .pmtl .mat-wrap > div .tit > span {font-size: 0.875rem; line-height: 1.3125rem;}
 .pmtl .mat-wrap > div .text {min-height: unset; font-size: 0.875rem; line-height: 1.3125rem;}
+.pmtl .mat-wrap > div .text:has(.arrow + .arrow) {flex-direction: column; gap: 0.25rem;}
 .pmtl .mat-visual {margin-top: 1.5rem; max-width: 25rem; margin-inline: auto;}
 .pmtl .mat-type-wrap {gap: 1.5rem; margin-top: 3rem;}
 .pmtl .mat-type-wrap > p {font-size: 1.25rem; line-height: 1.875rem;}
