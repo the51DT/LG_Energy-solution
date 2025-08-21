@@ -1,19 +1,19 @@
 /* 지속가능경영 - 추진체계 */
 /* 지속가능경영 > 추진체계 > 비전 및 전략 */
 .esgm .article-content:first-child {margin-top: 3.75rem;}
-.esgm .article-content + .article-content {margin-top: 5rem;}
-.sust-strategy .vision-wrap {position: relative; display: flex; flex-direction: column; align-items: flex-end; padding-top: 8.69rem;}
-.sust-strategy .vision-wrap .vision-tit {position: absolute; left: 0; top: 0; font-size: 6.25rem; font-weight: 200; line-height: 6.875rem; letter-spacing: -.125rem; color: #171819;}
-.sust-strategy .vision-wrap .vision-tit>strong {font-weight: 900; color: #33B0C6;}
-.sust-strategy .vision-wrap .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; text-align: right; font-weight: 400;}
-.sust-strategy .vision-wrap .vision-img {margin-top: 2.5rem;}
-.sust-strategy .accordion-list .accordion-btn {display: flex; align-items: center; justify-content: space-between; padding: .967rem 2.5rem;}
-.sust-strategy .accordion-list.on .accordion-btn {padding: 3.75rem 2.5rem 0 2.5rem;}
-.sust-strategy .accordion-list .accordion-btn::after {position: unset; transform: unset;}
-.sust-strategy .accordion-list .accordion-btn .acd-group {gap: 2.5rem;}
-.sust-strategy .accordion-list .accordion-content {margin : 2.5rem 3.75rem 3.75rem 10.62rem; padding: 0; background-color: transparent;}
-.sust-strategy .accordion-list:nth-child(5) .content-box,
-.sust-strategy .accordion-list:last-child .content-box {align-items: flex-start;}
+.esgm .article-content + .article-content {padding-top: 5rem;}
+.sust-sys .vision-wrap {position: relative; display: flex; flex-direction: column; align-items: flex-end; padding-top: 8.69rem;}
+.sust-sys .vision-wrap .vision-tit {position: absolute; left: 0; top: 0; font-size: 6.25rem; font-weight: 200; line-height: 6.875rem; letter-spacing: -.125rem; color: #171819;}
+.sust-sys .vision-wrap .vision-tit>strong {font-weight: 900; color: #33B0C6;}
+.sust-sys .vision-wrap .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; text-align: right; font-weight: 400;}
+.sust-sys .vision-wrap .vision-img {margin-top: 2.5rem;}
+.sust-sys .accordion-list .accordion-btn {display: flex; align-items: center; justify-content: space-between; padding: .967rem 2.5rem;}
+.sust-sys .accordion-list.on .accordion-btn {padding: 3.75rem 2.5rem 0 2.5rem;}
+.sust-sys .accordion-list .accordion-btn::after {position: unset; transform: unset;}
+.sust-sys .accordion-list .accordion-btn .acd-group {gap: 2.5rem;}
+.sust-sys .accordion-list .accordion-content {margin : 2.5rem 3.75rem 3.75rem 10.62rem; padding: 0; background-color: transparent;}
+.sust-sys .accordion-list:nth-child(5) .content-box,
+.sust-sys .accordion-list:last-child .content-box {align-items: flex-start;}
 .content-box {display: flex; gap: 3.75rem; align-items: center; position: relative;}
 .content-box.type2 {gap: 5rem;}
 .content-box:not(:first-child) {margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid #d9d9d9;}
@@ -30,17 +30,17 @@
 .content-box.type2 .text-area .desc + .desc {padding-top: 1rem;}
 
 /* 지속가능경영 > 추진체계 > 거버넌스 */
-.sust-strategy .left-box {display: flex; gap: 3.75rem;}
-.sust-strategy .left-box::before {content: ""; display:block; width: 6rem; height: 18.125rem; background: url(../../images/img/sust01_img_tab2_01.png) no-repeat center center / contain;}
-.sust-strategy .text-wrap {position: relative; display: flex; justify-content: flex-start; flex-direction: column;}
-/* .sust-strategy .text-wrap .intro-desc {padding: 5.81rem 0 0;} */
-.sust-strategy .text-wrap .sub-desc-wrap {width: 80%; color: var(--colorElement-light-text-text-default02); font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; padding-top: 2.5rem;}
-.sust-strategy .text-wrap .sub-desc-wrap ul > li:not(:last-child) {padding-bottom: 1rem;}
-.sust-strategy .right-box {display: flex; justify-content: flex-end; gap: 6.25rem; padding-top: 2.69rem;}
-.sust-strategy .right-box .keyword {font-size: 10rem; font-weight: 800; line-height: 11.25rem; color: var(--colorElement-light-text-text-default02); text-align: right;  flex-grow: 1;}
-.sust-strategy .right-box::after {content: ""; display:block; width: 3.75rem; height: 10.75rem; background: url(../../images/img/sust01_img_tab2_02.png) no-repeat center center / contain;}
-.sust-strategy .content-item02 {background-color: #F3F5F7;}
-.sust-strategy .article-tit {font-size: 2rem; font-weight: 700; line-height: 3rem ; color: #171819;}
+.sust-sys .left-box {display: flex; gap: 3.75rem;}
+.sust-sys .left-box::before {content: ""; display:block; width: 6rem; height: 18.125rem; background: url(../../images/img/sust01_img_tab2_01.png) no-repeat center center / contain;}
+.sust-sys .text-wrap {position: relative; display: flex; justify-content: flex-start; flex-direction: column;}
+/* .sust-sys .text-wrap .intro-desc {padding: 5.81rem 0 0;} */
+.sust-sys .text-wrap .sub-desc-wrap {width: 80%; color: var(--colorElement-light-text-text-default02); font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; padding-top: 2.5rem;}
+.sust-sys .text-wrap .sub-desc-wrap ul > li:not(:last-child) {padding-bottom: 1rem;}
+.sust-sys .right-box {display: flex; justify-content: flex-end; gap: 6.25rem; padding-top: 2.69rem;}
+.sust-sys .right-box .keyword {font-size: 10rem; font-weight: 800; line-height: 11.25rem; color: var(--colorElement-light-text-text-default02); text-align: right;  flex-grow: 1;}
+.sust-sys .right-box::after {content: ""; display:block; width: 3.75rem; height: 10.75rem; background: url(../../images/img/sust01_img_tab2_02.png) no-repeat center center / contain;}
+.sust-sys .content-item02 {background-color: #F3F5F7;}
+.sust-sys .article-tit {font-size: 2rem; font-weight: 700; line-height: 3rem ; color: #171819;}
 
 .profile-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem; padding: 1.88rem 0 0 22.81rem;}
 .profile-wrap .profile-box {display: flex; gap: 1.88rem; width: calc(50% - .75rem); padding: 1.88rem; background-color: #fff; border-radius: 1rem;}
@@ -54,22 +54,86 @@
 .profile-wrap .profile-box .text-list li {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
 
 /* 지속가능경영 > 추진체계 > 글로벌 파트너십 */
-.sust-strategy .tab3-content .content-item01 {padding-bottom: 3.75rem;}
-.sust-strategy .tab3-content .cont-area-intro {margin-top: 2.13rem;}
-.sust-strategy .tab3-content .cont-area-intro .intro-desc {font-size: 1.75rem; font-weight: 400; line-height: 2.625rem; color: #171819;}
-.sust-strategy .tab3-content .content-item02 {background-color: #F3F5F7;}
-.sust-strategy .box-list {display: flex; flex-wrap: wrap; gap: 1.25rem;}
-.sust-strategy .box-list>li {position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 1.88rem; padding: 2.5rem; width: calc(50% - .625rem); background-color: #fff; border-radius: 1rem;}
-.sust-strategy .box-list.box-list-envir>li:last-child {width: 100%;}
-.sust-strategy .box-list>li .box-label {position: absolute; right: 2.5rem; top: 0; padding: .62rem; background-color: #5AD1DC; text-align: center; width: 7.5rem; border-radius: 0 0 .5rem .5rem; font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: #fff;}
-.sust-strategy .box-list.box-list-envir>li .box-label {background-color: #13BD99;}
-.sust-strategy .box-list.box-list-society>li .box-label {background-color: #33B0C6;}
-.sust-strategy .box-list .img-area>img {height: 6.25rem; object-fit: contain;}
-.sust-strategy .box-list.box-list-envir .img-area>img {height: 3rem;}
-.sust-strategy .box-list.box-list-envir>li:last-child .img-area>img {height: 5rem;}
-.sust-strategy .box-list .text-area .tit {font-size: 1.25rem; line-height: 2rem; color: #171819;}
-.sust-strategy .box-list .text-area .desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; font-weight: 400; color: #555758;}
-.sust-strategy .box-list .text-area .desc>a {text-decoration-line: none;}
+.sust-sys .tab3-content .content-item01 {padding-bottom: 3.75rem;}
+.sust-sys .tab3-content .cont-area-intro {margin-top: 2.13rem;}
+.sust-sys .tab3-content .cont-area-intro .intro-desc {font-size: 1.75rem; font-weight: 400; line-height: 2.625rem; color: #171819;}
+.sust-sys .tab3-content .content-item02 {background-color: #F3F5F7;}
+.sust-sys .box-list {display: flex; flex-wrap: wrap; gap: 1.25rem;}
+.sust-sys .box-list>li {position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 1.88rem; padding: 2.5rem; width: calc(50% - .625rem); background-color: #fff; border-radius: 1rem;}
+.sust-sys .box-list.box-list-envir>li:last-child {width: 100%;}
+.sust-sys .box-list>li .box-label {position: absolute; right: 2.5rem; top: 0; padding: .62rem; background-color: #5AD1DC; text-align: center; width: 7.5rem; border-radius: 0 0 .5rem .5rem; font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: #fff;}
+.sust-sys .box-list.box-list-envir>li .box-label {background-color: #13BD99;}
+.sust-sys .box-list.box-list-society>li .box-label {background-color: #33B0C6;}
+.sust-sys .box-list .img-area>img {height: 6.25rem; object-fit: contain;}
+.sust-sys .box-list.box-list-envir .img-area>img {height: 3rem;}
+.sust-sys .box-list.box-list-envir>li:last-child .img-area>img {height: 5rem;}
+.sust-sys .box-list .text-area .tit {font-size: 1.25rem; line-height: 2rem; color: #171819;}
+.sust-sys .box-list .text-area .desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; font-weight: 400; color: #555758;}
+.sust-sys .box-list .text-area .desc>a {text-decoration-line: none;}
+
+/* 지속가능경영 > 환경 > 환경경영 */
+.sust-env .title-h2 {font-size: 2rem; line-height: 3rem;}
+.sust-env .vision-wrap {display: flex; justify-content: space-between; gap: 5.05rem;}
+.sust-env .vision-txt .vision-tit {font-size: 5rem; font-weight: 200; line-height: 5.625rem; letter-spacing: -.125rem; color: #171819;}
+.sust-env .vision-txt .vision-tit>strong {font-weight: 800; color: #5AD1DC;}
+.sust-env .vision-txt .vision-desc {position: relative; margin-top: 2.5rem; font-size: 1.125rem; line-height: 1.8rem; color: #171819;}
+.sust-env .vision-txt .vision-desc::after {content: ''; position: absolute; left: 100%; top: 1.06rem; transform: translateX(-7rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
+.sust-env .tab1-content .content-item02 {background-color: #F3F5F7;}
+.sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 1.88rem;}
+.sust-env .article-desc {font-size: 1.25rem; line-height: 2rem; font-weight: 400; color: #171819;}
+.sust-env .eiass-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 2.5rem;}
+.sust-env .eiass-box {display: flex; flex-direction: column; align-items: center; gap: 1.88rem; width: calc(33.33% - .85rem); padding: 2.5rem; background-color: #fff; border: 2px solid #E1E7EA; border-radius: 1rem;}
+.sust-env .eiass-txt {display: flex; flex-direction: column; gap: 1.25rem;}
+.sust-env .eiass-txt .eiass-tit {font-size: 1.25rem; line-height: 2rem; text-align: center;}
+.sust-env .eiass-period {display: flex; gap: .62rem;} 
+.sust-env .eiass-period .period-box {display: flex; flex-direction: column; align-items: center; gap: .62rem; padding: 1.25rem 1.25rem .62rem; width: calc(50% - .31rem); text-align: center; background-color: #EAF3F8; border-radius: .5rem;}
+.sust-env .eiass-period .period-box span {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
+.sust-env .eiass-period .period-box .label {padding: .62rem 1.25rem; background-color: #33B0C6; border-radius: 62.4375rem; font-size: .875rem; font-weight: 600; line-height: 1.4rem; color: #fff;}
+.sust-env .eiass-txt .text-list>li {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
+.sust-env .eiass-box .text-list-wrap .text-list > li::before {top: .875rem;}
+.sust-env .btn-btm-wrap {display: flex; align-items: center; justify-content: center;}
+
+.sust-env .tab2-content .article-content {padding-bottom: 5rem; display: flex; flex-direction: column; gap: 2.5rem;}
+.sust-env .tab2-content .article-content:last-child {padding-bottom: 0;}
+.sust-env .tab2-content .article-content + .article-content {border-top: 1px solid #C9CED1;}
+.sust-env .tab2-content .img-area {margin-top: 3.75rem;}
+.sust-env .article-tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: #171819;}
+.sust-env .article-sub-tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
+.sust-env .tab2-content .article-content2 .article-sub-tit {margin-top: 1.88rem;}
+.sust-env .article-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
+.sust-env .tab2-content .article-content2 .article-desc {margin-top: 1.25rem;}
+.sust-env .env2030-wrap {display: flex; align-items: center; justify-content: center; gap: 2.5rem; padding: 2.5rem 0;}
+.sust-env .env2030-wrap>img {width: 20.5rem;}
+.sust-env .env2030-wrap>span {font-size: 6rem; font-weight: 800; line-height: 6.75rem; color: #C9CED1;}
+.sust-env .article-content3 .article-desc {margin-top: 1.25rem;}
+.sust-env .env2040-wrap {display: flex; gap: 1.25rem;}
+.sust-env .env2040-box {display: flex; flex-direction: column; align-items: center; justify-content: center; width: 25%; padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem;}
+.sust-env .env2040-box>img {width: 7.5rem;}
+.sust-env .env2040-box .tit {margin: 2.5rem 0 1.25rem; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819;}
+.sust-env .env2040-box .desc {text-align: center; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
+.sust-env .roadmap-wrap {padding: 3.75rem; background-color: #EAF3F8; border-radius: 1rem;}
+.sust-env .roadmap-wrap .roadmap-tit-wrap {display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.88rem;}
+.sust-env .roadmap-wrap .roadmap-tit-wrap .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
+.sust-env .roadmap-wrap .roadmap-tit-wrap>span {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
+.sust-env .article-content3 .article-inner {display: flex; gap: 2.5rem;}
+.sust-env .article-content3 .article-desc {margin-top: 1rem;}
+.sust-env .article-content3 .article-inner>img {width: 31.875rem;}
+
+.sust-env .tab2-content .content-item02 {background-color: #F3F5F7;}
+.sust-env .tab2-content .content-item02 .article-content {gap: 5rem;}
+.sust-env .graph-wrap {display: flex; flex-direction: column; gap: 2.5rem; margin-top: 2.5rem; padding: 3.75rem; border-radius: 1rem; background-color: #fff;}
+.sust-env .graph-wrap .graph-tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
+.sust-env .graph-desc-wrap {padding: 1.88rem; border-radius: .5rem; background-color: #F3F5F7;}
+.sust-env .graph-desc-wrap .tit {display: inline-flex; align-items: center; gap: .5rem; font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: #171819;}
+.sust-env .graph-desc-wrap .tit::before {content: ''; display: inline-flex; width: .25rem; height: 1rem; background-color: #33B0C6;}
+.sust-env .graph-desc-wrap .desc {padding: .62rem; font-size: .875rem; font-weight: 400; line-height: 1.4rem; color: #555758;}
+
+
+
+
+
+
+
 
 
 
