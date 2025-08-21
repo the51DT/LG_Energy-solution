@@ -810,6 +810,51 @@
 
 .pmtl .industry-material [class^="icon-btn"] {background-color: var(--colorElement-light-fill-fill-primary);}
 
+/* 성과보고 (sprf) */
+.sprf [class^="content-item"] .content-sect:has(.text-wrap) {padding-top: 4.625rem;}
+.sprf .text-wrap {color: var(--colorElement-light-text-text-default01);}
+.sprf .text-wrap .tit {font-size: 2rem; font-weight: 700; line-height: 3rem;}
+.sprf .text-wrap .sub-tit {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.sprf .text-wrap .desc {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
+.sprf .text-wrap .tit + .sub-tit {margin-top: 1.875rem;}
+.sprf .text-wrap .sub-tit + .desc {margin-top: 1rem;}
+
+.sprf .report-wrap {color: var(--colorElement-light-text-text-default01);}
+.sprf .report-wrap > .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; margin-bottom: 1.5rem;}
+.sprf .report-download {display: flex; flex-direction: column; align-items: center; gap: 3.75rem;}
+.sprf .report-download .img-wrap {width: 27.25rem; filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.10));}
+.sprf .report-list {display: flex; flex-direction: column; gap: 1.25rem; margin-top: 3.75rem;}
+.sprf .report-list > li {display: flex; align-items: center; gap: 1.25rem; padding: 2.5rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.sprf .report-list > li .year {width: 5.125rem; font-size: 1.5rem; font-weight: 700; line-height: 2.25rem; color: var(--colorElement-light-text-text-default03);}
+.sprf .report-list > li .tit {flex-grow: 1; font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.sprf .report-list > li > div {display: flex;}
+.sprf .down-icon {flex-shrink: 0; width: 2.875rem; height: 2.875rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-default04); background-image: url(../../images/icon/icon_download.svg); background-position: center center; background-size: 1.5rem 1.5rem; background-repeat: no-repeat;}
+.sprf .down-wrap {flex-grow: 0; flex-shrink: 1; display: flex; align-items: center; gap: 1.25rem; width: fit-content;}
+.sprf .down-wrap + .down-wrap {margin-left: 3.75rem;}
+.sprf .down-wrap:hover .down-icon {background-color: var(--colorElement-light-fill-fill-primary); background-image: url(../../images/icon/icon_download_wh.svg);}
+.sprf .down-wrap > span  {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.sprf .btn-wrap {display: flex; justify-content: center; gap: 0.625rem;}
+.sprf .btn-wrap .icon-btn-sm {max-width: 13.31249rem;}
+
+.sprf [class^="content-item"] .content-sect:has(.eval-status) {padding-top: 4.625rem;}
+.sprf .eval-status-tit {display: flex; justify-content: space-between; align-items: center; width: 100%;}
+.sprf .eval-status-tit .tit {font-size: 2rem; font-weight: 700; line-height: 3rem; color: var(--colorElement-light-text-text-default01);}
+.sprf .eval-status-tit .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.sprf .eval-status-tit + .eval-status {margin-top: 1.875rem;}
+.sprf .eval-status {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;}
+.sprf .eval-status > li {display: flex; flex-direction: column; gap: 1rem; padding: 1.875rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04);}
+.sprf .eval-status > li > div {display: flex; align-items: center; gap: 1.25rem; height: 8.6875rem;}
+.sprf .eval-status > li > div > img {height: 100%; width: auto;}
+.sprf .eval-status > li > div .grade {position: relative; width: 12.5rem; margin-left: 1.25rem; font-size: 4.5rem; font-weight: 800; line-height: 6.3rem; letter-spacing: -0.03125rem; color: var(--colorElement-light-text-text-primary); text-align: center;}
+.sprf .eval-status > li > div .grade::before {content: ""; position: absolute; top: 50%; left: -1.25rem; transform: translateY(-50%); display: block; width: 0.0625rem; height: 8.125rem; background-color: var(--colorElement-light-stroke-stroke-default03);}
+
+.sprf [class^="content-item"] .content-sect:has(.sust-rating) {padding-top: 1.875rem;}
+.sprf .sust-rating {padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.sprf .sust-rating > li {display: flex; align-items: baseline; gap: 2.5rem;}
+.sprf .sust-rating > li + li {margin-top: 1.875rem; padding-top: 1.875rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+.sprf .sust-rating > li .tit {width: 12.25rem; font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-primary);}
+.sprf .sust-rating > li .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
 .etmg .content-sect > .img-area {padding-inline: 7.2rem; margin-top: 3.75rem;}
