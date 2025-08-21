@@ -546,6 +546,8 @@
 .industry-material > p {font-size: 1.25rem; line-height: 1.875rem;}
 .industry-material [class^="icon-btn"] {width: 100%; padding: 1rem; font-size: 1rem; line-height: 1.6rem;}
 .industry-material [class^="icon-btn"] > img {margin-right: 0.625rem;}
+.industry-material:has(> div) {gap: 1rem;}
+.industry-material > div {width: 100%; gap: 1rem;}
 
 .pfom [class^="content-item"] .content-sect:has(.order-histoy) {padding-top: 1rem;}
 .pfom .order-history {gap: 1rem;}
@@ -617,9 +619,11 @@
 .pmtl .title-h2 + .title-desc {margin-top: 2rem;}
 .pmtl .mat-wrap {flex-direction: column; gap: 0.5rem; margin-top: 1.5rem;}
 .pmtl .mat-wrap > div {gap: 1.5rem; height: auto; padding: 1.5rem;}
+.pmtl .mat-wrap > div:has(.text .arrow + .arrow) {padding: 1.5rem;}
 .pmtl .mat-wrap > div .tit {font-size: 1.5rem; line-height: 2.0625rem;}
 .pmtl .mat-wrap > div .tit > span {font-size: 0.875rem; line-height: 1.3125rem;}
 .pmtl .mat-wrap > div .text {min-height: unset; font-size: 0.875rem; line-height: 1.3125rem;}
+.pmtl .mat-wrap > div .text:has(.arrow + .arrow) {flex-direction: column; gap: 0.25rem;}
 .pmtl .mat-visual {margin-top: 1.5rem; max-width: 25rem; margin-inline: auto;}
 .pmtl .mat-type-wrap {gap: 1.5rem; margin-top: 3rem;}
 .pmtl .mat-type-wrap > p {font-size: 1.25rem; line-height: 1.875rem;}

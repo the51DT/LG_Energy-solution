@@ -664,6 +664,8 @@
 .industry-material [class^="icon-btn"] > img {width: 2.5rem; height: 2.5rem; margin-right: 1.25rem;}
 .industry-material [class^="icon-btn"] .icon-area {margin-left: auto; width: 1.875rem; height: 1.875rem;}
 .industry-material [class^="icon-btn"] .icon-area::before {background-image: url(../../images/icon/icon_arrow_right_wh.svg);}
+.industry-material:has(> div) {flex-direction: column; align-items: flex-start; gap: 1.875rem;}
+.industry-material > div {display: flex; flex-wrap: wrap; gap: 1.25rem;}
 
 .pfom [class^="content-item"] .content-sect:has(.tech-list) {padding-top: 3.75rem;}
 .pfom .tech-list > div + div {margin-top: 3.75rem; padding-top: 3.75rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
@@ -777,13 +779,17 @@
 .pmtl .title-desc + .title-desc {margin-top: 1.25rem;}
 .pmtl .mat-wrap {display: flex; gap: 1.25rem; margin-top: 2.5rem;}
 .pmtl .mat-wrap > div {width: 100%; display: flex; align-items: center; gap: 2.5rem; height: 11.625rem; padding: 1.25rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.pmtl .mat-wrap > div:has(.text .arrow + .arrow) {padding: 2.5rem 3.75rem;}
 .pmtl .mat-wrap > div > img {width: 7rem; height: 6rem;}
 .pmtl .mat-wrap > div .tit {display: flex; align-items: center; gap: 0.25rem; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .pmtl .mat-wrap > div.Ni .tit {color: #1FB291;}
 .pmtl .mat-wrap > div.Co .tit {color: #288AFF;}
 .pmtl .mat-wrap > div.Mn .tit {color: #CE9741;}
+.pmtl .mat-wrap > div.Fe .tit {color: #5F5F5F;}
+.pmtl .mat-wrap > div.P .tit {color: #C4AB0C;}
 .pmtl .mat-wrap > div .tit > span {font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
 .pmtl .mat-wrap > div .text {display: flex; flex-direction: column; justify-content: center; margin-top: 0.625rem; min-height: 3.25rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.pmtl .mat-wrap > div .text:has(.arrow + .arrow) {flex-direction: row; justify-content: flex-start; gap: 2.5rem; min-height: unset;}
 .pmtl .mat-wrap > div .text .arrow {position: relative; width: fit-content; font-weight: 600; color: var(--colorElement-light-text-text-default01);}
 .pmtl .mat-wrap > div .text .arrow::after {content: ""; position: absolute; top: 50%; right: -1.25rem; transform: translate(50%, -50%); display: block; width: 0.938rem; height: 0.9375rem; background-image: url(../../images/img/pmtl_mat_arrow.png); background-size: contain; background-repeat: no-repeat; background-position: left center;}
 .pmtl .mat-visual {margin-top: 2.5rem;}
@@ -801,6 +807,8 @@
 .pmtl .mat-str-wrap > div .text-list-wrap {text-align: left; margin-top: 1.25rem;}
 .pmtl .mat-str-wrap > div .text-list-wrap .text-list > li {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 .pmtl .mat-str-wrap > div .text-list-wrap .text-list > li::before {top: 0.63rem; left: 0.25rem; transform: unset;}
+
+.pmtl .industry-material [class^="icon-btn"] {background-color: var(--colorElement-light-fill-fill-primary);}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
