@@ -59,28 +59,33 @@ var pubUi = {
         this.self.track = document.querySelector(".banner-track");
     },
 
-    bindEvents: function () {
-        
+    bindEvents: function () {        
         // selectbox 탭형식 이벤트 처리 (PC)
         this.self.selectCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", (e) => {
+                e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
                 const currentTarget = e.currentTarget;
-                if (!currentTarget.closest(".select-cate").classList.contains("disabled")) {
-                    this.self.selectCateBtn.forEach((otherTargetBtn) => {
-                        if (otherTargetBtn !== currentTarget) {
-                            otherTargetBtn.classList.remove("active");
-                            otherTargetBtn.closest(".select-cate").querySelector(".select-menu").classList.remove("on");
-                        }
-                    });
+                const currentSelectCate = currentTarget.closest(".select-cate");
 
-                    const menu = currentTarget.closest(".select-cate").querySelector(".select-menu");
-                    if (menu.classList.contains("on")) {
-                        menu.classList.remove("on");
-                        currentTarget.classList.remove("active");
-                    } else {
-                        menu.classList.add("on");
-                        currentTarget.classList.add("active");
+                if (currentSelectCate.classList.contains("disabled")) return;
+
+                // 모든 select-cate 닫기
+                this.self.selectCateBtn.forEach((otherTargetBtn) => {
+                    const otherCate = otherTargetBtn.closest(".select-cate");
+                    otherTargetBtn.classList.remove("active");
+                    if (otherCate) {
+                        const otherMenu = otherCate.querySelector(".select-menu");
+                        if (otherMenu) {
+                            otherMenu.classList.remove("on");
+                        }
                     }
+                });
+
+                // 현재 클릭한 것만 토글
+                const menu = currentSelectCate.querySelector(".select-menu");
+                if (menu) {
+                    currentTarget.classList.add("active");
+                    menu.classList.add("on");
                 }
             });
         });
@@ -91,12 +96,32 @@ var pubUi = {
 
             pageMapCate.forEach((subCate) => {
                 subCate.addEventListener("click", (e) => {
+                    e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
                     if (map.classList.contains("caseTab")) {
                         pubUi.selectMenuClickEvt("tab", pageMapCate, map, subCate);
                     } else {
                         pubUi.selectMenuClickEvt("default", pageMapCate, map, subCate);
                     }
+
+                    // 선택 후 메뉴 닫기
+                    const parentCate = map.closest(".select-cate");
+                    if (parentCate) {
+                        const btn = parentCate.querySelector(".btn-select");
+                        btn?.classList.remove("active");
+                        map.classList.remove("on");
+                    }
                 });
+            });
+        });
+
+        // 바깥 클릭 시 모든 메뉴 닫기
+        document.addEventListener("click", (e) => {
+            this.self.selectCateBtn.forEach((btn) => {
+                const cate = btn.closest(".select-cate");
+                const menu = cate.querySelector(".select-menu");
+
+                btn.classList.remove("active");
+                menu.classList.remove("on");
             });
         });
 
@@ -135,7 +160,7 @@ var pubUi = {
             return;
         } else {
             this.self.wrap.addEventListener("scroll", function (el) {
-                // console.log("scroll!");                
+                console.log("scroll!");                
                 const aside = document.querySelector(".wrap aside");
                 const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
 
@@ -155,6 +180,7 @@ var pubUi = {
                 if (aside) {
                     aside.onclick = function () {
                         el.target.scrollTo({ top: 0, behavior: "smooth" });
+                        document.querySelector(".wrap").style.overflow = "auto";
                     };
                 }
 
@@ -226,32 +252,7 @@ var pubUi = {
                             // }
                         }
                     });
-                }
-
-
-                const historyWrap = document.querySelector(".history-wrap");
-                const historyEachView = document.querySelector(".history-wrap.each-view");                
-
-                if (historyEachView && document.querySelector(".tab-content.history").classList.contains("on")) {
-                    document.querySelector(".wrap").addEventListener("scroll", function (el) {
-                        const historyViewY = historyEachView.offsetTop;
-                        
-                        if (nowScroll > 0 && !historyEachView.getAttribute("data-scrolling")) {
-                            pubUi.scrollToEvt(".wrap", "top", historyViewY - 80);
-                            historyEachView.setAttribute("data-scrolling", true);
-                            document.querySelector(".wrap").style.overflowY = "hidden";
-                            console.log("scrollDown !!! + data-scrolling : ", historyEachView.getAttribute("data-scrolling"));
-                            console.log("111");
-                        } else if (nowScroll > 0 && historyEachView.getAttribute("data-scrolling") == true) {
-                            pubUi.scrollToEvt(".wrap", "top", historyViewY - 80);                            
-                            historyEachView.removeAttribute("data-scrolling");
-                            console.log("scrollDown !!! + data-scrolling : ", historyEachView.getAttribute("data-scrolling"));
-                            console.log("222");
-                        }
-                    });
-                } else {
-                    document.querySelector(".wrap").style.overflowY = "auto";                   
-                }
+                }                
             });
         }
     },
@@ -299,10 +300,11 @@ var pubUi = {
             const subCateName = subCate.innerText;
 
             if (subCateName == "연혁") {
-                pubUi.scrollToEvt(".wrap", "top", 480);
-                document.querySelector(".history-wrap.each-view").style.overflowY = "hidden";
+                pubUi.scrollToEvt(".wrap", "top");
+                // document.querySelector(".history-wrap.each-view").style.overflowY = "hidden";
                 document.querySelector(".history-wrap.each-view").removeAttribute("data-scrolling");
             } else {
+                this.self.wrap.style.overflow = "auto";
                 pubUi.scrollToEvt(".wrap", "top"); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
                 
             }
@@ -841,64 +843,17 @@ var pubUi = {
                 }
             });
         });
-
-        // history-cont-wrap 내 스크롤 휠 이벤트 처리 (스크롤로 연도 이동)
-        // as-is
-        // if(historyContArea) {
-        //     historyContArea.addEventListener("wheel", (e) => {
-        //         const deltaY = e.deltaY;
-        //         const isScrollingDown = deltaY > 0;
-        //         const isScrollingUp = deltaY < 0;
-
-        //         const currentActive = document.querySelector(".left-area .item.active");
-        //         const currentIdx = leftItems.findIndex((item) => item === currentActive);
-
-        //         const atFirst = currentIdx === 0;
-        //         const atLast = currentIdx === leftItems.length - 1;
-
-        //         const historyView = document.querySelector(".history-wrap.each-view");
-        //         const historyViewY = historyView.offsetTop - 140;
-
-        //         // ✅ 외부 스크롤을 허용할 조건 (맨 처음 + 위, 맨 끝 + 아래)
-        //         const allowExternalScroll = (isScrollingDown && atLast) || (!isScrollingDown && atFirst);
-
-        //         // 🔒 외부 스크롤 차단
-        //         if (!allowExternalScroll) {
-        //             e.preventDefault();
-        //             // document.querySelector("body").style.overflow = "hidden";
-        //         } else {
-        //             document.querySelector("body").style.overflow = "auto";
-
-        //             setTimeout(function(){
-        //                 if (isScrollingUp) {
-        //                     console.log("scrollUp !!");
-        //                     document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
-        //                 }
-        //             },1000)
-        //         }
-
-        //         // 연도 전환 처리
-        //         const nextIdx = isScrollingDown
-        //             ? Math.min(currentIdx + 1, leftItems.length - 1)
-        //             : Math.max(currentIdx - 1, 0);
-
-        //         if (nextIdx !== currentIdx) {
-        //             activateYearByIndex(nextIdx);
-        //         }
-        //     }, { passive: false });
-        // }
-
+        
         // to-be mac os 대응
         if (historyContArea) {
             let isHandlingScroll = false;
+            
 
             // 터치 시작 위치 저장 (iOS 터치 대응용) - ios는 휠이벤트 인식하지못해, touchpad기반이라 다른 이벤트 조건 처리되도록 예외처리 필요하다고하여 소스 수정하였음.
             historyContArea.addEventListener(
-                "touchstart",
-                (e) => {
+                "touchstart", (e) => {
                     handleCustomScroll.touchStartY = e.touches[0].clientY;
-                },
-                { passive: true }
+                }, { passive: true }
             );
 
             // 다양한 이벤트 리스너 등록
@@ -907,12 +862,10 @@ var pubUi = {
             });
 
             function handleCustomScroll(e) {
-                // ✅ 중복 실행 방지
+                const nowScroll = document.querySelector(".wrap").scrollTop;
                 if (isHandlingScroll) return;
 
-                // ✅ 스크롤 방향 추출
                 let deltaY = 0;
-
                 if (e.type === "touchmove") {
                     if (typeof handleCustomScroll.touchStartY === "number") {
                         deltaY = handleCustomScroll.touchStartY - e.touches[0].clientY;
@@ -923,40 +876,55 @@ var pubUi = {
 
                 const isScrollingDown = deltaY > 5;
                 const isScrollingUp = deltaY < -5;
-
                 if (!isScrollingDown && !isScrollingUp) return;
 
-                isHandlingScroll = true; // 🔒 debounce
+                isHandlingScroll = true;
 
-                // ✅ 기존 로직 그대로 유지
                 const currentActive = document.querySelector(".left-area .item.active");
                 const currentIdx = leftItems.findIndex((item) => item === currentActive);
-
                 const atFirst = currentIdx === 0;
                 const atLast = currentIdx === leftItems.length - 1;
 
                 const historyView = document.querySelector(".history-wrap.each-view");
-                if(historyView) { const historyViewY = historyView.offsetTop - 140; }
+                const historyViewY2 = document.querySelector(".history-tit-wrap").offsetTop;
+                const historyViewTop = historyView.offsetTop - 80;
 
-                // 외부 스크롤 허용 조건
+                // ❗ 마지막 연도에서 아래로 스크롤 중이면 강제 스냅 금지
+                if (nowScroll < 800 && !(atLast && isScrollingDown)) {
+                    pubUi.scrollToEvt(".wrap", "top", historyViewTop);
+                }
+
+                // 스크롤방지 체크 변수 & "마지막에서 아래로"는 자연 스크롤 허용 변수
                 const allowExternalScroll = (isScrollingDown && atLast) || (isScrollingUp && atFirst);
+                const allowExternalScrollNatural = allowExternalScroll || (atLast && isScrollingDown);
 
-                if (!allowExternalScroll) {
+                if (!allowExternalScrollNatural) {
+                    // 연혁 내부 컨텐츠 안에서만 스크롤 유지
                     e.preventDefault();
-                    // document.querySelector("body").style.overflow = "hidden";
+                    document.querySelector(".wrap").style.overflow = "hidden";
+                    pubUi.scrollToEvt(".wrap", "top", historyViewTop);
+                    historyView.setAttribute("data-scrolling", true);
                 } else {
-                    if (isScrollingUp) {
-                        // console.log("scrollUp !!!");
-                        document.querySelector("body").scrollTo({ top: 0, behavior: "smooth" });
+                    // 외부 스크롤 허용 (.wrap 영역 스크롤)
+                    historyView.removeAttribute("data-scrolling");
+                    document.querySelector(".wrap").style.overflow = "auto";
 
-                        setTimeout(function () {
-                            historyView.removeAttribute("data-scrolling");
-                            document.querySelector("body").style.overflow = "auto";
-                        }, 1000);
+                    if (isScrollingUp) {
+                        // 맨 위로 빠져나갈 때 기존 동작 유지
+                        pubUi.scrollToEvt(".wrap", "top", 0);
+                        activateYearByIndex(0);
+                    } else if (atLast && isScrollingDown) {
+                        // ✨ 마지막 → 아래로: 아무 것도 강제 스크롤하지 않음 (자연 스크롤)                        
+                        // 마지막 연도 유지
+                        activateYearByIndex(leftItems.length - 1);
+                    } else if (atLast) {
+                        // 기존 else 분기 보완: 마지막에서 위/아래 아닌 기타 케이스 방어
+                        // (필요 시 유지/삭제)
+                        pubUi.scrollToEvt(".wrap", "top", historyViewY2);
                     }
                 }
 
-                // 연도 전환 처리
+                // 연도 전환
                 const nextIdx = isScrollingDown ? Math.min(currentIdx + 1, leftItems.length - 1) : Math.max(currentIdx - 1, 0);
 
                 if (nextIdx !== currentIdx) {

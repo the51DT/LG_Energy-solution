@@ -1319,7 +1319,7 @@
 .history-wrap .btn-area button::after {content:''; width:1.5rem; height:1.5rem; display:inline-block; background-size: contain; background-repeat: no-repeat; background-position: center center; position:absolute; right:1.87rem; top:50%; transform: translateY(-50%);}
 .history-wrap.each-view .btn-area button::after {background-image:url(../../images/icon/icon_arrow_nav_up.svg);}
 .history-wrap.all-view .btn-area button::after {background-image:url(../../images/icon/icon_arrow_nav_down.svg);}
-.history-wrap.each-view .history-cont-wrap {position:relative; height: calc(100vh - 140px);  overflow: hidden;}
+.history-wrap.each-view .history-cont-wrap {position:relative; height: 100vh;  overflow: hidden;}
 .history-cont-wrap .left-area {position:absolute; top:50%; left:0; transform:translateY(-50%); min-width:500px;}
 .history-cont-wrap .left-area .year-item-list .year {font-size:8.75rem; font-weight:700; line-height:6.3rem; display:flex; align-items: center;}
 .history-cont-wrap .left-area .year-item-list .year .first {color:#C9CED1;}
@@ -1344,7 +1344,7 @@
 .history-cont-wrap .right-area .year-item-list.on .item.active:before {width: 1.5rem; height: 1.5rem; left:-85px;}
 .history-cont-wrap .right-area .year-item-list.on .item:not(.active):before {width: 0.75rem; height: 0.75rem; }
 .history-cont-wrap .right-area .year-item-list.on .item:not(.active).prev:before {left:-268px;}
-.history-cont-wrap .right-area .year-item-list.on .item:not(.active).next:before {left:-268px;}
+.history-cont-wrap .right-area .year-item-list.on .item:not(.active).next:before {left:100px;}
 .history-cont-wrap .year-item-list .item:not(.active) {display:none;}
 .history-cont-wrap .right-area .year-item-list .item:not(.active) {display:block;}
 .history-cont-wrap .right-area .year-item-list .item:not(.active) .img-box {opacity: 0.5; filter: blur(10px);}

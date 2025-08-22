@@ -46,7 +46,7 @@ html,body {
 .header-area.mo-only .utile-cont .utile-item {margin-top: -2px;}   
 .lang-wrap .lang-button > img {width: 1.5rem; height: 1.5rem;}
 .lang-wrap .lang-button.active .select-btn-right-icon {transform: translateY(-2px) rotate(-180deg);}
-.lang-wrap .select-menu {padding: 1rem; width: 4.1875rem; top: 1.5rem; left: -12px;}
+.lang-wrap .select-menu {padding: 1rem; width: 4.1875rem; top: 1.5rem; left: 18px;}
 .lang-wrap .select-menu > li > a {font-size: 1rem; font-weight: 500; line-height: 1.5rem;}
 .header-area.mo-only .search-btn {width: 1.5rem; height: 1.5rem;}
 .header-area.mo-only .nav-btn {width: 1.5rem; height: 1.5rem; padding: 0}
