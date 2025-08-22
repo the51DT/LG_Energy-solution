@@ -793,7 +793,7 @@
 .pfom .line-up-box {padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); margin-top: 2.5rem;}
 .pfom .line-up-box .text-wrap {display: flex; flex-direction: column; gap: 1.25rem;}
 .pfom .line-up-box .text-wrap .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
-.pfom .line-up-box .text-wrap .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--text-text-primary);}
+.pfom .line-up-box .text-wrap .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .line-up-box .line-up-wrap {margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem;}
 .pfom .line-up-box .line-up-wrap > .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
 .pfom .line-up-box .line-up-wrap .line-up-list {display: flex; flex-wrap: wrap; gap: 1.25rem;}
@@ -919,6 +919,45 @@
 .sprf .sust-rating > li + li {margin-top: 1.875rem; padding-top: 1.875rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default04);}
 .sprf .sust-rating > li .tit {width: 12.25rem; font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-primary);}
 .sprf .sust-rating > li .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+
+/* 지배구조 (sgov) */
+.sgov .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.sgov [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
+.sgov .emphasis::after {content: "*"; color: var(--colorElement-light-text-text-primary);}
+
+.sgov [class^="content-item"] .content-sect:has(.bod-comp) {padding-top: 4.625rem;}
+.sgov .bod-comp {display: flex; flex-direction: column; gap: 1.875rem; color: var(--colorElement-light-text-text-default01);}
+.sgov .bod-comp .tit-wrap {display: flex; justify-content: space-between; align-items: center;}
+.sgov .bod-comp .tit-wrap .legend {display: flex; gap: 2rem;}
+.sgov .bod-comp .tit-wrap .legend > div {display: flex; align-items: center; gap: 0.5rem; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
+.sgov .bod-comp .table-wrap table thead > tr > th {font-size: 1.125rem; line-height: 1.8rem;}
+.sgov .bod-comp .text-list-wrap .text-list > li {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.sgov .bod-comp .text-list-wrap .text-list > li::before {top: 0.69rem; transform: unset;}
+.sgov .bod-comp .chr {display: inline-block; width: 1.25rem; height: 1.25rem; border-radius: 100%; background-color: var(--colorElement-light-icon-icon-default01); vertical-align: middle;}
+.sgov .bod-comp .mem {display: inline-block; width: 1.25rem; height: 1.25rem; border-radius: 100%; border: 1px solid var(--colorElement-light-stroke-stroke-default01); vertical-align: middle;}
+.sgov .indep-dir .title-h2.emphasis::after {margin-left: 0.25rem;}
+.sgov .indep-dir .indep-dir-img {margin-top: 1.25rem;}
+.sgov .indep-dir .btn-wrap {margin-top: 2.5rem;}
+.sgov .indep-dir .btn-wrap [class^="icon-btn"] {width: fit-content; gap: 1.25rem;}
+
+.sgov .gov-risk-img {margin-top: 2.5rem;}
+.sgov [class^="content-item"] .content-sect:has(.gov-risk-process) {padding-top: 1.875rem;}
+.sgov .gov-risk-process {display: flex; flex-direction: column; gap: 1.25rem;}
+.sgov .gov-risk-process > li {display: flex; gap: 2.5rem; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.sgov .gov-risk-process .tit-wrap {flex-shrink: 0; align-self: center; width: 11.4375rem; text-align: center;}
+.sgov .gov-risk-process .tit-wrap > img {width: 5rem; height: 5rem; margin-bottom: 1rem;}
+.sgov .gov-risk-process .tit-wrap > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.sgov .gov-risk-process .desc-wrap {padding-top: 1.25rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.sgov .gov-risk-process .desc-wrap > p > button {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-primary); text-decoration-line: underline; text-underline-position: from-font;}
+.sgov .gov-risk-process .desc-wrap .text-list-wrap {margin-top: 1.25rem;}
+.sgov .gov-risk-process .desc-wrap .text-list > li + li {margin-top: 1rem;}
+.sgov .gov-risk-process .desc-wrap .text-list > li > p {font-weight: 600;}
+.sgov .gov-risk-process .desc-wrap .text-list > li::before {top: 0.62rem; transform: unset;}
+.sgov .gov-risk-process .desc-wrap .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0;}
+
+.sgov .btn-wrap {display: flex; justify-content: center; gap: 0.625rem;}
+.sgov .gov-ethics-btn {margin-top: 2.5rem;}
+.sgov .gov-ethics-img .btn-wrap {margin-top: 2.5rem;}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
