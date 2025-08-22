@@ -35,7 +35,7 @@ html,body {
 .flex-box {display: block;}
 .cont-head-wrap {padding: 2rem 1.25rem 1.5rem;}
 
-.header-wrap {width:100%;height: 3.25rem;max-width: 1279px;margin:0 auto; min-width: auto;}
+.header-wrap {width:100%;height: 3.25rem;max-width: 1279px;margin:0 auto; min-width: auto;border-bottom: 1px solid var(--stroke-stroke-default-04, #E1E7EA);}
 .header-wrap .header-area,
 .header-wrap .header-cont {height: 100%;}
 .header-cont > .ci {width: 8.2755rem; height: auto;}
