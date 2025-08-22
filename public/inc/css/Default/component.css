@@ -150,6 +150,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 [class^="icon-btn"].icon-gray {border-color: var(--colorElement-light-stroke-stroke-default03); color: var(--colorElement-light-text-text-default02);}
 [class^="icon-btn"].icon-gray:hover {color: var(--colorElement-light-text-text-default01); background: var(--colorElement-light-fill-fill-default04);}
 [class^="icon-btn"].icon-gray:hover .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
+[class^="icon-btn"].icon-link2:hover .icon-area {background-color: #fff;}
 [class^="icon-btn"].icon-black .icon-area {background-color: #fff;}
 [class^="icon-btn"].icon-black .icon-area::before {background-image: url(../../images/icon/icon_download.svg);}
 [class^="icon-btn"].icon-black:hover .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
