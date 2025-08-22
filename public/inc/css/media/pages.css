@@ -108,9 +108,19 @@
 .sust-sys .box-list .text-area .tit {display: flex; flex-direction: column; font-size: 1.125rem; line-height: 1.75rem;}
 .sust-sys .box-list .text-area .desc {margin-top: .5rem; font-size: 1rem; line-height: 1.6rem;}
 
-
-
-
+/* 지속가능경영 > 환경 */
+.sust-env .article-content:first-child {margin-top: 0;}
+.sust-env .tab1-content .content-wrap {padding: 0;}
+.sust-env .tab1-content .content-item02 {padding: 3rem 1.25rem;}
+.sust-env .tab1-content .content-item01 .article-content:first-child {padding-left: 1.25rem;}
+.sust-env .vision-wrap {align-items: flex-start; padding: 0;}
+.sust-env .vision-wrap {flex-direction: column;}
+.sust-env .vision-wrap .vision-tit {position: unset; font-size: 2.75rem; line-height: 2.875rem; padding: .62rem 1.25rem .62rem 0;}
+.sust-env .vision-wrap .vision-desc {text-align: left; margin-top: 1rem; padding-right: 1.25rem;}
+.sust-env .vision-wrap .vision-img {width: 100%;}
+.sust-env .vision-img::after {bottom: 2.75rem;}
+.sust-env .eiass-wrap {margin-top: 1.5rem;}
+.sust-env .eiass-wrap .eiass-box {width: 100%;}
 
 
 
