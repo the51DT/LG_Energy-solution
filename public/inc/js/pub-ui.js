@@ -160,7 +160,7 @@ var pubUi = {
             return;
         } else {
             this.self.wrap.addEventListener("scroll", function (el) {
-                console.log("scroll!");                
+                // console.log("scroll!");                
                 const aside = document.querySelector(".wrap aside");
                 const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
 
@@ -525,7 +525,7 @@ var pubUi = {
                             totalHeadHeightMobile = headerHeight + contentHeadHeight;
                         }
 
-                        console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
+                        // console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
 
                         if (document.querySelector(".wrap").classList.contains("mobile")) {
                             document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeightMobile, behavior: "smooth" });
@@ -555,7 +555,7 @@ var pubUi = {
                             totalHeadHeightMobile = headerHeight + contentHeadHeight;
                         }
 
-                        console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
+                        // console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
 
                         if (document.querySelector(".wrap").classList.contains("mobile")) {
                             document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeightMobile, behavior: "smooth" });
@@ -566,7 +566,7 @@ var pubUi = {
                     break;
                 default:
                     if (target) {
-                        console.log(value);
+                        // console.log(value);
                         const targetContent = document.querySelector(target);
                         const targetOffsetY = targetContent.offsetTop;
                         const headerHeight = document.querySelector(".header-area").clientHeight;
@@ -583,7 +583,7 @@ var pubUi = {
                             totalHeadHeightMobile = headerHeight + contentHeadHeight;
                         }
 
-                        console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
+                        // console.log(targetOffsetY, pageMapHeight, totalHeadHeightMobile);
 
                         if (document.querySelector(".wrap").classList.contains("mobile")) {
                             document.querySelector(".wrap").scrollTo({ top: targetOffsetY - totalHeadHeightMobile, behavior: "smooth" });
@@ -633,16 +633,16 @@ var pubUi = {
                 this.self.sideSticky.forEach((otherBtn) => {
                     otherBtn.classList.remove("active");
                 });
-                console.log(stickyBtn, targetHref);
+                //console.log(stickyBtn, targetHref);
                 stickyBtn.classList.add("active");
                 if (stickyBtn.classList.contains("active")) {
                     if (document.querySelector(targetHref).dataset.bgtype == "dark") {
                         this.self.sideSticky.forEach((btn) => {
-                            console.log("버튼 화이트 클래스 추가");
+                            // console.log("버튼 화이트 클래스 추가");
                             btn.closest(".side-sticky").classList.add("white");
                         });
                     } else {
-                        console.log("버튼 화이트 클래스 제거");
+                        // console.log("버튼 화이트 클래스 제거");
                         stickyBtn.closest(".side-sticky").classList.remove("white");
                     }
                 }
@@ -1344,7 +1344,7 @@ var pubUi = {
             const popEl = document.querySelector(pop);
             const popElType = popEl.getAttribute("class");
             if (popElType === "modal-pop tooltip") {
-                console.log("툴팁", popElType);
+                // console.log("툴팁", popElType);
             }
 
             if (popEl != null && popEl.classList.contains("toast")) {
@@ -1352,7 +1352,7 @@ var pubUi = {
                 const targetBtnTop = popBtn.offsetTop;
                 const targetBtnTopTotal = targetBtnTop + popBtn.clientHeight;
 
-                console.log(targetBtnTopTotal);
+                // console.log(targetBtnTopTotal);
                 popEl.style.opacity = "1";
 
                 if (document.querySelector(".wrap").classList.contains("mobile")) {

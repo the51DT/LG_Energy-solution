@@ -636,10 +636,14 @@ function updateInfoList(filtered) {
 
 // ✅ 기능 1: 유형 필터
 mapFilterList.forEach((button) => {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (e) {
         const filterType = button.className.replace("filter-type", "").trim(); // 1~4
         let typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매" };
         const selectedType = typeMap[filterType];
+
+        // 지도내 유형 필터 선택한 값에 대한 텍스트 우측 selectbox에 활성화 내용 추가
+        document.querySelector(".map-info.pc-only .map-info-list .select-cate button").innerText = selectedType;
+        document.querySelector(".map-info.pc-only .map-info-list .select-cate button").classList.add("on");
 
         const filtered = locations.filter((loc) => loc.type === selectedType);
         clearMarkers();
