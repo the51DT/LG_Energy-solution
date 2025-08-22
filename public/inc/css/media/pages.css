@@ -689,6 +689,7 @@
 .sprf .report-list > li {display: grid; grid-template-columns: 1fr 1fr; row-gap: 0.5rem; column-gap: 1.25rem; padding: 1.5rem;}
 .sprf .report-list > li .year {width: auto; font-size: 0.875rem; font-weight: 600; line-height: 1.3125rem; grid-column: 1 / 3;}
 .sprf .report-list > li .tit {font-size: 1.125rem; line-height: 1.75rem;}
+.sprf .report-list > li > div {justify-content: flex-end;}
 .sprf .down-icon {width: 1.75rem; height: 1.75rem; background-size: 1rem 1rem;}
 .sprf .down-wrap {gap: 0.5rem;}
 .sprf .down-wrap + .down-wrap {margin-left: 1.125rem;}
@@ -703,7 +704,7 @@
 .sprf .eval-status-tit + .eval-status {margin-top: 1rem;}
 .sprf .eval-status {grid-template-columns: 1fr; gap: 0.5rem;}
 .sprf .eval-status > li {gap: 0.5rem; padding: 1.25rem; border-radius: 0.5rem; border: 1px solid var(--colorElement-light-stroke-stroke-default03);}
-.sprf .eval-status > li > div {height:5rem;}
+.sprf .eval-status > li > div {height:5rem; justify-content: center;}
 .sprf .eval-status > li > div > img {height: 100%; width: auto; padding-block: 0.375rem;}
 .sprf .eval-status > li > div .grade {width: 5.1875rem; margin-left: 1.25rem; font-size: 3rem; line-height: 4.2rem;     word-wrap: normal;}
 .sprf .eval-status > li > div .grade::before {height: 5rem;}
