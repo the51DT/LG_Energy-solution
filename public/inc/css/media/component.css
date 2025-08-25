@@ -181,6 +181,13 @@
 .modal-pop.dialog .pop-footer > .btn-wrap .btn-cancel {width: 6.25rem;}
 .modal-pop.dialog .pop-footer > .btn-wrap .btn-confirm {width: 8.25rem;}
 
+.modal-pop .pop-wrap.list-pop {padding: 1.875rem 1.5rem 1.5rem; width: 20rem;}
+.modal-pop .pop-wrap.list-pop .pop-header {padding-bottom: 1.5rem;}
+.modal-pop .pop-wrap.list-pop .pop-content .text-list-wrap {margin-top: 1.5rem;}
+.modal-pop .pop-wrap.list-pop .pop-content .text-list-wrap .text-list > li {font-size: 1rem; line-height: 1.6rem;}
+.modal-pop .pop-wrap.list-pop .pop-content .text-list-wrap .text-list > li + li {margin-top: 0.25rem;}
+.modal-pop .pop-wrap.list-pop .pop-close {top: 2rem;}
+
 .modal-pop.tooltip { max-width: 90%; left: 5% !important; right: auto !important;}
 
 .page-map-wrap {padding: 0; position: fixed; top: 0; padding-top: 3.25rem;}
