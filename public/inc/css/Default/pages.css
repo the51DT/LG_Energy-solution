@@ -196,8 +196,9 @@
 .sust-env .tab5-content .roadmap-box .btm-box {display: flex; gap: 1.88rem; padding: 2.5rem 1.88rem; background-color: #fff; border-right: 1px solid #E1E7EA;}
 .sust-env .tab5-content .roadmap-box:nth-child(2) .btm-box {height: 16.56rem;}
 .sust-env .tab5-content .roadmap-box:last-child .btm-box {height: 20.125rem; border-right: none;}
-.sust-env .tab5-content .roadmap-box:last-child .btm-box .text-list li {margin-top: 1.25rem;}
+.sust-env .tab5-content .roadmap-box:last-child .btm-box .text-list>li {margin-top: 1.25rem;}
 .sust-env .tab5-content .roadmap-box:last-child .btm-box .text-list li:first-child {margin-top: 0;}
+.sust-env .btm-box .text-list>li {color: #171819;}
 .sust-env .text-list.ty02 {margin-top: .5rem;}
 .sust-env .text-list.ty02>li {font-size: 1rem; line-height: 1.6rem; color: #555758;}
 .sust-env .tab5-content .info-inner {display: flex; gap: 1.25rem; margin-top: 1.25rem;}
