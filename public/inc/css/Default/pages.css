@@ -1033,6 +1033,7 @@
 
 /* 지배구조 (sgov) */
 .sgov .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.sgov .title-desc + .title-desc {margin-top: 1rem;}
 .sgov [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
 .sgov .emphasis::after {content: "*"; color: var(--colorElement-light-text-text-primary);}
 .sgov [class^="content-item"] .content-sect:has(> .accordion-list.type2) {padding-top: 1.25rem;}
@@ -1078,12 +1079,12 @@
 .sgov .comp-officer .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.25rem;}
 .sgov .comp-officer > ol {display: flex; gap: 1.25rem;}
 .sgov .comp-officer > ol > li {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
-.sgov .comp-officer > ol > li .num {display: flex; justify-content: center; align-items: center; width: 2.5rem; height: 2.5rem; border-radius: 1.25rem; background-color: var(--colorSemantic-light-cyan400); font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-on-primary); text-align: center;}
+.sgov .comp-officer > ol > li .num {display: flex; justify-content: center; align-items: center; width: 2.5rem; height: 2.5rem; border-radius: 12.5rem; background-color: var(--colorSemantic-light-cyan400); font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-on-primary); text-align: center;}
 .sgov .comp-officer > ol > li .desc {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .sgov .accordion-list.gov-down-acco {background: var(--colorElement-light-fill-fill-on-primary);}
 .sgov .accordion-list.gov-down-acco .accordion-content {padding: 0;}
-.sgov .accordion-list.gov-down-acco .accordion-content > ul {display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; width: 85rem;}
-.sgov .accordion-list.gov-down-acco .accordion-content > ul > li {width: calc(85rem / 3 - (1.5rem / 1.5));}
+.sgov .accordion-list.gov-down-acco .accordion-content > ul {display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;}
+.sgov .accordion-list.gov-down-acco .accordion-content > ul > li {width: 100%; min-width: 0;}
 .sgov .gov-down-acco .icon-btn-lg.icon-black {gap: 1rem; width: 100%; height: 6rem;}
 .sgov .gov-down-acco .icon-btn-lg.icon-black .icon-area {flex-shrink: 0; width: 3.5rem; height: 3.5rem;}
 .sgov .ctrl-process {display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2.5rem;}
@@ -1094,7 +1095,6 @@
 .sgov .ctrl-process .desc-wrap .text-list > li + li {margin-top: 1rem;}
 .sgov .ctrl-process .desc-wrap .text-list > li > p {font-weight: 600;}
 .sgov .ctrl-process .desc-wrap .text-list > li::before {top: 0.62rem; transform: unset;}
-.sgov .ctrl-process .desc-wrap .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0;}
 .sgov .crpt-risk [class^="icon-btn"] {width: fit-content; min-width: unset; gap: 1.25rem;}
 .sgov .crpt-risk .crpt-risk-box {display: flex; flex-direction: column; gap: 1.25rem; margin-top: 3.75rem; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .sgov .crpt-risk .crpt-risk-box .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
@@ -1819,8 +1819,6 @@
 
 
 /* 인재상 */
-.rctt [class^="content-item"] { padding: 0 0 15rem 0; }
-.rctt [class^="content-item"] .content-sect { padding: 0; }
 .rctt .core-cont-wrap { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; margin-bottom: 7.5rem; }
 .rctt .core-cont-wrap .core-cont { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4.0625rem; border: 4px solid #E1E7EA; padding: 2rem 2rem 1.5rem 2rem; border-radius: 1rem; flex: 1; }
 .rctt .core-cont-wrap .core-cont > span { color: #171819; font-size: 1.5rem; font-weight: 600; display: flex; gap: 0.5rem; }
