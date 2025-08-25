@@ -1006,7 +1006,29 @@
 .sgov .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .sgov [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
 .sgov .emphasis::after {content: "*"; color: var(--colorElement-light-text-text-primary);}
+.sgov [class^="content-item"] .content-sect:has(> .accordion-list.type2) {padding-top: 1.25rem;}
 
+.sgov [class^="content-item"] .content-sect:has(.bod-status) {padding-top: 4.625rem;}
+.sgov .bod-status .title-h2 + .gov-profile {margin-top: 1.25rem;}
+.sgov .bod-status .gov-profile + .btn-wrap {margin-top: 5rem;}
+.sgov .gov-profile .profile-row {position: relative; display: flex; justify-content: center;}
+.sgov .gov-profile .profile-row:first-child {gap: 10rem;}
+.sgov .gov-profile .profile-row:last-child {gap: 9.375rem;}
+.sgov .gov-profile .profile-row::before {content: ""; position: absolute; top: calc(14.375rem - 10.3125rem); left: 0; display: block; width: 100%; height: 10.3125rem; background-color: var(--colorElement-light-fill-fill-default04); z-index: -1;}
+.sgov .gov-profile .profile-row + .profile-row {margin-top: 3.75rem;}
+.sgov .gov-profile .profile-col {width: 13.125rem;}
+.sgov .gov-profile .profile-col > img {height: 14.375rem; width: auto;}
+.sgov .gov-profile .profile-col .profile-text {margin-top: 2.5rem;}
+.sgov .gov-profile .profile-col .profile-text .tit-wrap {display: flex; flex-direction: column; gap: 0.625rem; color: var(--colorElement-light-text-text-default01);}
+.sgov .gov-profile .profile-col .profile-text .tit {display: flex; align-items: center; gap: 0.625rem;}
+.sgov .gov-profile .profile-col .profile-text .name {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.sgov .gov-profile .profile-col .profile-text .position {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
+.sgov .gov-profile .profile-col .profile-text .term {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.sgov .gov-profile .profile-col .profile-text .text-list-wrap {margin-top: 1.25rem; color: var(--colorElement-light-text-text-default02); font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
+.sgov .gov-profile .profile-col .profile-text .text-list-wrap .text-list > li {white-space: nowrap;}
+.sgov .gov-profile {}
+.sgov .gov-profile {}
+.sgov .gov-profile {}
 .sgov .bod-gap {display: flex; flex-direction: column; gap: 7.5rem;}
 .sgov .bod-gap > div:last-child {border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); padding-top: 7.5rem;}
 .sgov .bod-gap [class^="icon-btn"] {width: 22.5rem;}
@@ -1026,6 +1048,32 @@
 .sgov .indep-dir .indep-dir-img {margin-top: 1.25rem;}
 .sgov .indep-dir .btn-wrap {margin-top: 2.5rem;}
 .sgov .indep-dir .btn-wrap [class^="icon-btn"] {width: fit-content; gap: 1.25rem;}
+
+.sgov .comp-officer .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.25rem;}
+.sgov .comp-officer > ol {display: flex; gap: 1.25rem;}
+.sgov .comp-officer > ol > li {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
+.sgov .comp-officer > ol > li .num {display: flex; justify-content: center; align-items: center; width: 2.5rem; height: 2.5rem; border-radius: 1.25rem; background-color: var(--colorSemantic-light-cyan400); font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-on-primary); text-align: center;}
+.sgov .comp-officer > ol > li .desc {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.sgov .accordion-list.gov-down-acco {background: var(--colorElement-light-fill-fill-on-primary);}
+.sgov .accordion-list.gov-down-acco .accordion-content {padding: 0;}
+.sgov .accordion-list.gov-down-acco .accordion-content > ul {display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; width: 85rem;}
+.sgov .accordion-list.gov-down-acco .accordion-content > ul > li {width: calc(85rem / 3 - (1.5rem / 1.5));}
+.sgov .gov-down-acco .icon-btn-lg.icon-black {gap: 1rem; width: 100%; height: 6rem;}
+.sgov .gov-down-acco .icon-btn-lg.icon-black .icon-area {flex-shrink: 0; width: 3.5rem; height: 3.5rem;}
+.sgov .ctrl-process {display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2.5rem;}
+.sgov .ctrl-process > li {display: flex; gap: 2.5rem; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.sgov .ctrl-process .tit {flex-shrink: 0; width: 12.5rem; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.sgov .ctrl-process .desc-wrap {width: 100%; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.sgov .ctrl-process .desc-wrap .text-list-wrap {margin-top: 1.25rem; font-size: 1rem; line-height: 1.6rem;}
+.sgov .ctrl-process .desc-wrap .text-list > li + li {margin-top: 1rem;}
+.sgov .ctrl-process .desc-wrap .text-list > li > p {font-weight: 600;}
+.sgov .ctrl-process .desc-wrap .text-list > li::before {top: 0.62rem; transform: unset;}
+.sgov .ctrl-process .desc-wrap .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0;}
+.sgov .crpt-risk [class^="icon-btn"] {width: fit-content; min-width: unset; gap: 1.25rem;}
+.sgov .crpt-risk .crpt-risk-box {display: flex; flex-direction: column; gap: 1.25rem; margin-top: 3.75rem; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.sgov .crpt-risk .crpt-risk-box .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.sgov .crpt-risk .crpt-risk-box .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.625rem;}
+.sgov .ceo-message {font-weight: 400; color: var(--colorElement-light-text-text-default01);}
 
 .sgov .gov-risk-img {margin-top: 2.5rem;}
 .sgov [class^="content-item"] .content-sect:has(.gov-risk-process) {padding-top: 1.875rem;}
