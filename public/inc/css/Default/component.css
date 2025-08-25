@@ -234,12 +234,11 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .calendar-wrap .calendar-btn::after {content:''; width: 1.5rem; height: 1.5rem; display: block; background: url(../../../inc/images/icon/icon_calander.svg) no-repeat center 100%; }
 .calendar-wrap .calendar-btn .title { color: #858889; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; margin-right: 1rem;}
 .calendar-wrap .calendar-btn .title.on {color:#171819;}
-.calendar-box {display: none; width: 360px; margin:0 auto; text-align: center; box-sizing: border-box; border: 1px solid #8E959C; padding: 0.75rem 1.25rem 2rem; z-index: 100; }
+.calendar-box {display: none; width: 360px; margin:0 auto; text-align: center; box-sizing: border-box; border: 1px solid #8E959C; padding: 0.75rem 1.25rem 2rem; z-index: 100; border-radius: 1rem;}
 .calendar-box.on {display: block;}
-.calendar-box > thead > tr:first-child > td { font-weight:bold; }
 .calendar-box > thead > tr:last-child > td { background-color:#fff; }
 .calendar-box > thead > tr:last-child > td:first-child {color: #EE444A;}
-.calendar-box > tbody > tr > td { width:50px;height:50px; }
+.calendar-box > tbody > tr > td { width:2.86rem; height: 2.63rem; }
 .calendar-box .calendar-title {font-size: 1.125rem; line-height: 1.8rem; color: #212528; font-weight: 700;}
 .calendar-box .calendar-head {height: 3.8125rem;}
 .calendar-box .calendar-head > td {position: relative;}
@@ -247,7 +246,8 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .calendar-box .calendar-day > td::before {content:''; width: 100%; height: 1.88rem; display: block;}
 .calendar-box .calendar-day > td::after {content:''; width: 100%; height: 1.88rem; display: block; border-top: 1px solid #C9CED1; margin-top: 0.5rem;}
 .calendar-box .box-day > tr td {color: #212528; font-weight: 400; font-size: 0.875rem; line-height: 1.4rem;}
-.calendar-box .box-day > tr td.selected {color: #212528; font-weight: 600; background-color: #F3F5F7 !important; border-radius: 0.5rem;}
+.calendar-box .box-day > tr td.selected {position: relative;}
+.calendar-box .box-day > tr td.selected::before {content:""; font-weight: 600; width: 2rem; height: 2rem; display: inline-block; position: absolute; top: 50%; left: 50%; background-color: #F3F5F7 !important; border-radius: 0.5rem; z-index: -1; transform: translate(-50%, -50%);}
 .calendar-arr {position: relative; cursor: pointer;}
 .calendar-arr::after {content:""; display: block; background: transparent no-repeat center center; width: 1rem; height: 1rem; position: absolute; top:50%; transform: translateY(-50%);}
 .calendar-arr.btn-prev::after {background-image:  url(../../images/icon/icon_arrow_prev1.svg); left: 50%;}
@@ -263,7 +263,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .cont-area-wrap .cont-area-intro .intro-desc.ty-light strong {font-weight: 600;}
 .cont-area-wrap .cont-area-sect > .cont-tit {padding-bottom: 1.88rem; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .cont-area-wrap .sect-cont-main {position: relative;}
-.cont-area-wrap .sect-cont-main:not(:last-child)::after {content:""; display: block; width: 100%; height: 0.0625rem; margin: 6.25rem 0; background-color: var(--colorElement-light-stroke-stroke-default01);}
+.cont-area-wrap .sect-cont-main:not(:last-child)::after {content:""; display: block; width: 100%; height: 0.0625rem; margin: 3.75rem 0; background-color: var(--colorElement-light-stroke-stroke-default03);}
 .cont-area-wrap .sect-cont-main.nbdr:not(:last-child) {padding-bottom: 5rem;}
 .cont-area-wrap .sect-cont-main.nbdr:not(:last-child)::after {display: none;}
 .cont-area-wrap .sect-cont-main.nbdr:last-child {padding-bottom: 15rem;}
@@ -656,7 +656,7 @@ table {border-collapse: collapse;}
 .modal-pop .pop-wrap.list-pop .pop-content .text-list-wrap .text-list > li::before {top: 0.69rem; transform: unset;}
 .modal-pop .pop-wrap.list-pop .pop-close {top: 2.125rem;}
 
-.modal-pop.ty-black .pop-wrap {background:rgba(0, 0, 0, 0.90); padding: 3.25rem 1.25rem 2rem; border-radius: 0; color: #fff;}
+.modal-pop.ty-black .pop-wrap {background:rgba(0, 0, 0, 0.90); padding: 3.25rem 1.25rem 2rem !important; border-radius: 0; color: #fff;}
 .modal-pop.ty-black .pop-close {background: url('../../images/icon/icon_close_btn_wh.svg') no-repeat center center / 50%; top: 1rem;}
 
 .modal-pop.full {margin: 1.87rem 1.5rem 2rem;}

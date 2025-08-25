@@ -44,7 +44,7 @@ var pubUi = {
         /* side-sticky 관련 */
         this.self.sideSticky = document.querySelectorAll(".side-sticky .side-list li > a");
         this.self.sideStickyTitle = document.querySelector(".sticky-area-tit");    
-        this.self.sideStickyInnerTabBtn = document.querySelectorAll(".tab-cate-wrap .tab-category.activeTab > li > button");
+        this.self.sideStickyInnerTabBtn = document.querySelectorAll(".sticky-area-tit .tab-cate-wrap .tab-category.activeTab > li > button");
 
         /* content-item */
         this.self.pcOnly = document.querySelector(".pc-only");
@@ -152,7 +152,8 @@ var pubUi = {
             this.self.track.addEventListener("touchend", () => {
                 this.self.track.style.animationPlayState = "running";
             });
-        }
+        }        
+        
     },
     scrollWrapEvt: function () {
         // .wrap scroll
@@ -390,7 +391,7 @@ var pubUi = {
     },
     secondTabChk: function (secondTab, type) {
         if (type === "reset") {
-            const secondTabAll = document.querySelectorAll(".tab-wrap[data-tab-type=secondTab");
+            const secondTabAll = document.querySelectorAll(".tab-wrap[data-tab-type=secondTab]");
             secondTabAll.forEach((secondTab) => {
                 const secondTabCategory = secondTab.querySelectorAll(".tab-category > .tab");
                 secondTabCategory.forEach((tabs) => {
@@ -1589,6 +1590,8 @@ var pubUi = {
                         document.querySelector(`#${targetId}Calendar`).classList.add("on");
                         document.querySelector(`#${targetId}Calendar`).style.position = "absolute";
                         document.querySelector(`#${targetId}Calendar`).style.backgroundColor = "#fff";
+                        document.querySelector(`#${targetId}Calendar`).style.borderColor = "#C9CED1";
+                        
 
                         if (document.querySelector(".wrap").classList.contains("mobile")) {
                             document.querySelector(".wrap.mobile").classList.add("open-calendar");
