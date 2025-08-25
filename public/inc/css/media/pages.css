@@ -259,9 +259,9 @@
 .sust-soc .mgmt-list>li:last-child {padding-bottom: 0; border: none;}
 .sust-soc .mgmt-list>li .mgmt-box {width: 50%;}
 .sust-soc .mgmt-list>li:last-child .mgmt-box {width: 100%;}
-
-
-
+.sust-soc .mgmt-box .box-label {padding: .125rem .375rem; font-size: .875rem; font-weight: 600; line-height: 1.3125; color: #fff; background-color: #33B0C6; border-radius: .25rem;}
+.sust-soc .mgmt-box .box-tit {display: block; padding: .5rem 0; font-size: .875rem; font-weight: 600; line-height: 1.3125rem; color: #171819;}
+.sust-soc .mgmt-box .box-desc {font-size: .875rem; font-weight: 400; line-height: 1.3125rem; color: #555758;}
 
 
 
