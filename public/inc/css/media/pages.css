@@ -1425,7 +1425,7 @@
 .rnd .article .sub { color: #555758; font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem; margin-top: 1rem; }
 .rnd .cont-tit, .rnd .sect-cont-main { padding: 0 1.25rem; }
 .rnd .content-wrap.w100 .tab-content .cont-area-wrap { padding-top: 3rem; }
-.rnd #tab2-content .content-item01, #tab3-content .content-item01 { padding-bottom: 1.5rem; }
+.rnd #tab2-content .content-item01, .rnd #tab3-content .content-item01 { padding-bottom: 1.5rem; }
 .rnd .cont-area-wrap .cont-area-sect > .cont-tit { font-size: 1.5rem; line-height: 2rem; padding-bottom: 1rem; }
 .rnd .cont-area-wrap .sect-cont-sub .main-text-wrap { padding-top: 1rem; }
 .rnd .cont-area-wrap .sect-cont-sub .main-text-wrap .article-content .desc { font-size: 1rem; line-height: 1.6rem; }
