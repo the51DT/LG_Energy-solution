@@ -1026,9 +1026,6 @@
 .sgov .gov-profile .profile-col .profile-text .term {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
 .sgov .gov-profile .profile-col .profile-text .text-list-wrap {margin-top: 1.25rem; color: var(--colorElement-light-text-text-default02); font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 .sgov .gov-profile .profile-col .profile-text .text-list-wrap .text-list > li {white-space: nowrap;}
-.sgov .gov-profile {}
-.sgov .gov-profile {}
-.sgov .gov-profile {}
 .sgov .bod-gap {display: flex; flex-direction: column; gap: 7.5rem;}
 .sgov .bod-gap > div:last-child {border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); padding-top: 7.5rem;}
 .sgov .bod-gap [class^="icon-btn"] {width: 22.5rem;}
