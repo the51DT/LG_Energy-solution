@@ -30,6 +30,7 @@ var pubUi = {
 
         this.scrollWrapEvt();
         this.sideStickyEvt();
+        this.selectboxCtrlEvt();
     },
 
     settings: function () {
@@ -68,64 +69,64 @@ var pubUi = {
 
     bindEvents: function () {
         // selectbox 탭형식 이벤트 처리 (PC)
-        this.self.selectCateBtn.forEach((targetBtn) => {
-            targetBtn.addEventListener("click", (e) => {
-                e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
-                const currentTarget = e.currentTarget;
-                const currentSelectCate = currentTarget.closest(".select-cate");
+        // this.self.selectCateBtn.forEach((targetBtn) => {
+        //     targetBtn.addEventListener("click", (e) => {
+        //         e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
+        //         const currentTarget = e.currentTarget;
+        //         const currentSelectCate = currentTarget.closest(".select-cate");
 
-                if (currentSelectCate.classList.contains("disabled")) return;
+        //         if (currentSelectCate.classList.contains("disabled")) return;
 
-                // 모든 select-cate 닫기
-                this.self.selectCateBtn.forEach((otherTargetBtn) => {
-                    const otherCate = otherTargetBtn.closest(".select-cate");
-                    otherTargetBtn.classList.remove("active");
-                    if (otherCate) {
-                        const otherMenu = otherCate.querySelector(".select-menu");
-                        if (otherMenu) {
-                            otherMenu.classList.remove("on");
-                        }
-                    }
-                });
+        //         // 모든 select-cate 닫기
+        //         this.self.selectCateBtn.forEach((otherTargetBtn) => {
+        //             const otherCate = otherTargetBtn.closest(".select-cate");
+        //             otherTargetBtn.classList.remove("active");
+        //             if (otherCate) {
+        //                 const otherMenu = otherCate.querySelector(".select-menu");
+        //                 if (otherMenu) {
+        //                     otherMenu.classList.remove("on");
+        //                 }
+        //             }
+        //         });
 
-                // 현재 클릭한 것만 토글
-                const menu = currentSelectCate.querySelector(".select-menu");
-                if (menu) {
-                    currentTarget.classList.add("active");
-                    menu.classList.add("on");
+        //         // 현재 클릭한 것만 토글
+        //         const menu = currentSelectCate.querySelector(".select-menu");
+        //         if (menu) {
+        //             currentTarget.classList.add("active");
+        //             menu.classList.add("on");
 
-                    pubUi.selectedData.category = menu;
-                    // console.log(pubUi.selectedData.category);
-                }
-            });
-        });
+        //             pubUi.selectedData.category = menu;
+        //             // console.log(pubUi.selectedData.category);
+        //         }
+        //     });
+        // });
 
-        // selectmenu 클릭이벤트 (.activeSelect)
-        this.self.selectMenu.forEach((map) => {
-            let pageMapCate = map.querySelectorAll("li > a");
+        // // selectmenu 클릭이벤트 (.activeSelect)
+        // this.self.selectMenu.forEach((map) => {
+        //     let pageMapCate = map.querySelectorAll("li > a");
 
-            pageMapCate.forEach((subCate) => {
-                subCate.addEventListener("click", (e) => {
-                    e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
-                    if (map.classList.contains("caseTab")) {
-                        pubUi.selectMenuClickEvt("tab", pageMapCate, map, subCate);
-                    } else {
-                        pubUi.selectMenuClickEvt("default", pageMapCate, map, subCate);
-                    }
+        //     pageMapCate.forEach((subCate) => {
+        //         subCate.addEventListener("click", (e) => {
+        //             e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
+        //             if (map.classList.contains("caseTab")) {
+        //                 pubUi.selectMenuClickEvt("tab", pageMapCate, map, subCate);
+        //             } else {
+        //                 pubUi.selectMenuClickEvt("default", pageMapCate, map, subCate);
+        //             }
 
-                    // 선택 후 메뉴 닫기
-                    const parentCate = map.closest(".select-cate");
-                    if (parentCate) {
-                        const btn = parentCate.querySelector(".btn-select");
-                        btn?.classList.remove("active");
-                        map.classList.remove("on");
-                    }
+        //             // 선택 후 메뉴 닫기
+        //             const parentCate = map.closest(".select-cate");
+        //             if (parentCate) {
+        //                 const btn = parentCate.querySelector(".btn-select");
+        //                 btn?.classList.remove("active");
+        //                 map.classList.remove("on");
+        //             }
 
-                    pubUi.selectedData.value = subCate;
-                    // console.log(pubUi.selectedData.value);
-                });
-            });
-        });
+        //             pubUi.selectedData.value = subCate;
+        //             // console.log(pubUi.selectedData.value);
+        //         });
+        //     });
+        // });
 
         // 바깥 클릭 시 모든 메뉴 닫기
         document.addEventListener("click", (e) => {
@@ -166,6 +167,73 @@ var pubUi = {
                 this.self.track.style.animationPlayState = "running";
             });
         }
+    },
+    selectboxCtrlEvt : function () {
+        if (this.self.selectCateBtn) {
+            
+            // selectbox 탭형식 이벤트 처리 (PC)
+            this.self.selectCateBtn.forEach((targetBtn) => {
+                targetBtn.addEventListener("click", (e) => {
+                    e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
+                    const currentTarget = e.currentTarget;
+                    const currentSelectCate = currentTarget.closest(".select-cate");
+
+                    if (currentSelectCate.classList.contains("disabled")) return;
+
+                    // 모든 select-cate 닫기
+                    this.self.selectCateBtn.forEach((otherTargetBtn) => {
+                        const otherCate = otherTargetBtn.closest(".select-cate");
+                        otherTargetBtn.classList.remove("active");
+                        if (otherCate) {
+                            const otherMenu = otherCate.querySelector(".select-menu");
+                            if (otherMenu) {
+                                otherMenu.classList.remove("on");
+                            }
+                        }
+                    });
+
+                    // 현재 클릭한 것만 토글
+                    const menu = currentSelectCate.querySelector(".select-menu");
+                    if (menu) {
+                        currentTarget.classList.add("active");
+                        menu.classList.add("on");
+
+                        pubUi.selectedData.category = menu;
+                        // console.log(pubUi.selectedData.category);
+                    }
+                });
+            });
+
+            if (this.self.selectMenu) {            
+                // selectmenu 클릭이벤트 (.activeSelect)
+                this.self.selectMenu.forEach((map) => {
+                    let pageMapCate = map.querySelectorAll("li > a");
+
+                    pageMapCate.forEach((subCate) => {
+                        subCate.addEventListener("click", (e) => {                            
+                            e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
+                            if (map.classList.contains("caseTab")) {
+                                pubUi.selectMenuClickEvt("tab", pageMapCate, map, subCate);
+                            } else {
+                                pubUi.selectMenuClickEvt("default", pageMapCate, map, subCate);
+                            }
+
+                            // 선택 후 메뉴 닫기
+                            const parentCate = map.closest(".select-cate");
+                            if (parentCate) {
+                                const btn = parentCate.querySelector(".btn-select");
+                                btn?.classList.remove("active");
+                                map.classList.remove("on");
+                            }
+
+                            pubUi.selectedData.value = subCate;
+                            // console.log(pubUi.selectedData.value);
+                        });
+                    });
+                });
+            }
+        }        
+
     },
     scrollWrapEvt: function () {
         // .wrap scroll
