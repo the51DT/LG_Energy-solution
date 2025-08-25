@@ -114,8 +114,7 @@
 .sust-env .article-desc {font-size: 1rem; line-height: 1.6rem;}
 .sust-env .article-tit {font-size: 1.125rem; line-height: 1.75rem;}
 .sust-env .article-sub-tit {font-size: 1rem; line-height: 1.6rem;}
-.sust-env .tab1-content .content-wrap {padding: 0;}
-.sust-env .tab1-content .content-item02 {padding: 3rem 1.25rem;}
+.sust-env .tab1-content .content-item01 .content-wrap {padding: 0;}
 .sust-env .tab1-content .content-item01 .article-content:first-child {padding-left: 1.25rem;}
 .sust-env .vision-wrap {flex-direction: column; align-items: flex-start; gap: 3.38rem; padding: 0;}
 .sust-env .vision-wrap .vision-tit {position: unset; font-size: 2.75rem; line-height: 2.875rem; padding: .62rem 1.25rem .62rem 0; margin-top: 1rem;}
@@ -241,7 +240,7 @@
 .sust-soc .tab-content .title-h1 {font-size: 1.5rem; font-weight: 700; line-height: 2.0625rem;}
 .sust-soc .tab-content .title-h2 {font-size: 1.25rem; line-height: 1.875rem;}
 .sust-soc .title-h3 {margin-top: 0; font-size: 1.125rem; line-height: 1.75rem;}
-.sust-soc .tab1-content .title-h2 {margin: 2rem 0;}
+.sust-soc .tab1-content .content-item01 .title-h2 {margin: 2rem 0;}
 .sust-soc .tab1-content .content-item01 .title-h1,
 .sust-soc .tab1-content .content-item01 .article-content:not(:first-child) {padding-left:  1.25rem; padding-right: 1.25rem;}
 .sust-soc .vision-wrap {gap: 0;}
@@ -263,11 +262,19 @@
 .sust-soc .mgmt-box .box-tit {display: block; padding: .5rem 0; font-size: .875rem; font-weight: 600; line-height: 1.3125rem; color: #171819;}
 .sust-soc .mgmt-box .box-desc {font-size: .875rem; font-weight: 400; line-height: 1.3125rem; color: #555758;}
 
-
-
-
-
-
+.sust-soc .sect-cont-sub article {padding: 1.5rem 1.25rem;}
+.sust-soc .cont-area-wrap .article-sub {font-size: 1rem; line-height: 1.6rem; margin-bottom: 1rem;}
+.sust-soc .article-content .text-wrap .desc {font-size: .875rem; line-height: 1.3125rem;}
+.sust-soc .article-content .text-wrap .desc + .desc {margin-top: 1rem;}
+.sust-soc .article-content .btn-wrap {margin-top: 1.5rem;}
+.sust-soc .article-content > .img-wrap img {width: 100%; height: auto; margin: 1rem 0 1.14rem;}
+.sust-soc .article-content > .img-wrap .desc {text-align: left; gap: .38rem;}
+.sust-soc .article-content > .title-h4 {margin: 1rem 0;} 
+.sust-soc .cont-area-wrap.type2 .box-container .box-list > li {max-width: unset; width: 100%; padding: 1.5rem; border-radius: 1rem; border: 2px solid #E1E7EA;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(2) {max-width: unset; margin-top: .5rem;}
+.cont-area-wrap.type2 .box-container .box-list > li:not(:last-child)::after {display: none;}
+.cont-area-wrap.type2 .box-container .box-list > li .text-area .tit {font-size: .875rem; line-height: 1.3125rem;}
+.cont-area-wrap.type2 .box-container .box-list > li .text-area .desc {margin-top: .5rem; font-size: .875rem; line-height: 1.3125rem;}
 
 /* 주식정보 (stif) */
 .stif .cont-area-wrap .cont-area-sect > section {padding-bottom: 3.5rem;}
