@@ -1498,3 +1498,22 @@
 .search .search-list-wrap .news-list .news-item > .news-content .title {font-size: 1.125rem; line-height: 1.75rem;}
 .search .search-list-wrap .news-list .news-item > .news-content .news-desc {font-size: 1rem; line-height: 1.6rem;}
 
+/* 안전가이드 */
+.foot-guide .article-tit { font-size: 1.5rem; margin-bottom: 1rem; }
+.foot-guide .title-h2 { margin: 3rem 0px 1rem 1.25rem; }
+.foot-guide .content-sect { padding-top: 3rem; }
+.foot-guide .content-wrap .content-sect:first-of-type { padding-top: 0; }
+.foot-guide .article-sub-tit { font-size: 1.25rem; margin-bottom: 1rem; }
+.foot-guide .article-desc { font-size: 1rem; line-height: 1.6rem; }
+.foot-guide .article-sub-desc { font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem; }
+.foot-guide .accordion-wrap { margin-bottom: 3rem; }
+.foot-guide .safety-guide-wrap { padding: 1.5rem 1.25rem; border-radius: 0.5rem; margin-top: 1.5rem; }
+.foot-guide .safety-guide { display: flex; flex-direction: column; border-bottom: 0; padding-bottom: 0; margin-bottom: 1.5rem; gap: 0.5rem; }
+.foot-guide .safety-guide > span { font-size: 1rem; line-height: 1; }
+.foot-guide .safety-guide li, .foot-guide .accordion-content li { font-size: 0.875rem; line-height: 1.3125rem; }
+.foot-guide .caution-text { font-size: 0.875rem; line-height: 1.3125rem; }
+.foot-guide .video-wrap { flex-direction: column; margin-top: 1.5rem; }
+.foot-guide .warning-list-wrap { border-radius: 0.5rem; padding: 1.5rem 1.25rem; margin-top: 1.5rem; }
+.foot-guide .warning-policy { padding: 1.25rem; }
+.foot-guide .warning-prohibition li, .foot-guide .warning-policy li { font-size: 0.875rem; line-height: 1.3125rem; }
+.foot-guide .warning-prohibition .text-list li::before, .foot-guide .warning-policy .text-list li::before { font-size: 0.875rem; }
