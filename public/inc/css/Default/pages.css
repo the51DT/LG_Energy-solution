@@ -466,6 +466,24 @@
 .stif .cont-box-wrap .right-box .keyword {font-size: 7.3125rem; font-weight: 800; line-height: 11.25rem; letter-spacing: -0.125rem;}
 
 
+/* 지속가능경영 > 사회 > 정보보안 / 충돌 방지를 위해 아래쪽에 작성 */
+.sust-soc .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.sust-soc [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
+
+.sust-soc [class^="content-item"] .content-sect:has(.infosec-system) {padding-top: 5rem;}
+.sust-soc .infosec-system .table-wrap {margin-top: 1.875rem;}
+.sust-soc .infosec-system .table-wrap table thead > tr > th {font-size: 1.125rem; line-height: 1.8rem;}
+.sust-soc .infosec-system .table-wrap table thead > tr > th > span {font-weight: 400; color: var(--colorElement-light-text-text-default02);}
+.sust-soc .infosec-protect .btn-wrap {display: flex; justify-content: center; margin-top: 2.5rem;}
+.sust-soc .infosec-protect {padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
+.sust-soc .infosec-protect + .infosec-protect {margin-top: 1.25rem;}
+.sust-soc [class^="content-item"] .content-sect:has(.infosec-activity) {padding-top: 1.875rem;}
+.sust-soc .infosec-activity {display: flex; gap: 1.25rem;}
+.sust-soc .infosec-activity > li {width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
+.sust-soc .infosec-activity .num {display: flex; justify-content: center; align-items: center; margin-inline: auto; margin-bottom: 1.25rem; width: 2.5rem; height: 2.5rem; border-radius: 12.5rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-on-primary);}
+.sust-soc .infosec-activity .desc {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+
+
 /* 공시정보 (disc) */
 .history-list > li {position: relative; display: flex; gap: 1.25rem;}
 .history-list > li + li {margin-top: 7.5rem;}
