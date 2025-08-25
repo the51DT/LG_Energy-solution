@@ -1,6 +1,13 @@
+
+
 var pubUi = {
     self: {},
-
+    selectedData: [
+        {
+            category: "",
+            value: "",
+        },
+    ],
     init: function () {
         this.settings();
         this.bindEvents();
@@ -20,7 +27,7 @@ var pubUi = {
         this.mobileDeviceChk();
         this.setScrollWidth();
         this.requestInquiry();
-        
+
         this.scrollWrapEvt();
         this.sideStickyEvt();
     },
@@ -43,7 +50,7 @@ var pubUi = {
 
         /* side-sticky 관련 */
         this.self.sideSticky = document.querySelectorAll(".side-sticky .side-list li > a");
-        this.self.sideStickyTitle = document.querySelector(".sticky-area-tit");    
+        this.self.sideStickyTitle = document.querySelector(".sticky-area-tit");
         this.self.sideStickyInnerTabBtn = document.querySelectorAll(".sticky-area-tit .tab-cate-wrap .tab-category.activeTab > li > button");
 
         /* content-item */
@@ -59,7 +66,7 @@ var pubUi = {
         this.self.track = document.querySelector(".banner-track");
     },
 
-    bindEvents: function () {        
+    bindEvents: function () {
         // selectbox 탭형식 이벤트 처리 (PC)
         this.self.selectCateBtn.forEach((targetBtn) => {
             targetBtn.addEventListener("click", (e) => {
@@ -86,6 +93,9 @@ var pubUi = {
                 if (menu) {
                     currentTarget.classList.add("active");
                     menu.classList.add("on");
+
+                    pubUi.selectedData.category = menu;
+                    // console.log(pubUi.selectedData.category);
                 }
             });
         });
@@ -110,6 +120,9 @@ var pubUi = {
                         btn?.classList.remove("active");
                         map.classList.remove("on");
                     }
+
+                    pubUi.selectedData.value = subCate;
+                    // console.log(pubUi.selectedData.value);
                 });
             });
         });
@@ -152,8 +165,7 @@ var pubUi = {
             this.self.track.addEventListener("touchend", () => {
                 this.self.track.style.animationPlayState = "running";
             });
-        }        
-        
+        }
     },
     scrollWrapEvt: function () {
         // .wrap scroll
@@ -161,7 +173,7 @@ var pubUi = {
             return;
         } else {
             this.self.wrap.addEventListener("scroll", function (el) {
-                // console.log("scroll!");                
+                // console.log("scroll!");
                 const aside = document.querySelector(".wrap aside");
                 const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
 
@@ -253,7 +265,7 @@ var pubUi = {
                             // }
                         }
                     });
-                }                
+                }
             });
         }
     },
@@ -307,7 +319,6 @@ var pubUi = {
             } else {
                 this.self.wrap.style.overflow = "auto";
                 pubUi.scrollToEvt(".wrap", "top"); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
-                
             }
 
             // console.log("tab click event");
@@ -383,7 +394,6 @@ var pubUi = {
                 pubUi.secondTabChk(secondTab);
             }
 
-            
             button.classList.add("on");
             button.classList.remove("active");
             map.classList.remove("on");
@@ -647,17 +657,15 @@ var pubUi = {
                         stickyBtn.closest(".side-sticky").classList.remove("white");
                     }
                 }
-
             });
         });
     },
     historyMotionEvt: function () {
-    
         // NodeList를 일반 배열로 변환하여 배열 메서드(map, find 등) 사용 가능하도록 처리
         const leftItems = Array.from(document.querySelectorAll(".left-area .year-container .item"));
         const rightItems = Array.from(document.querySelectorAll(".right-area .year-container .item"));
         const yearTermLinks = Array.from(document.querySelectorAll(".year-term-container .year-item-list > a"));
-        const historyContArea = document.querySelector(".history-cont-wrap"); // 스크롤 이벤트 타겟 영역                
+        const historyContArea = document.querySelector(".history-cont-wrap"); // 스크롤 이벤트 타겟 영역
 
         const yearClickIndex = {}; // 연도 구간별 클릭 인덱스 기억
         let lastClickedRange = null; // 마지막 클릭한 연도 구간
@@ -844,17 +852,18 @@ var pubUi = {
                 }
             });
         });
-        
+
         // to-be mac os 대응
         if (historyContArea) {
             let isHandlingScroll = false;
-            
 
             // 터치 시작 위치 저장 (iOS 터치 대응용) - ios는 휠이벤트 인식하지못해, touchpad기반이라 다른 이벤트 조건 처리되도록 예외처리 필요하다고하여 소스 수정하였음.
             historyContArea.addEventListener(
-                "touchstart", (e) => {
+                "touchstart",
+                (e) => {
                     handleCustomScroll.touchStartY = e.touches[0].clientY;
-                }, { passive: true }
+                },
+                { passive: true }
             );
 
             // 다양한 이벤트 리스너 등록
@@ -915,7 +924,7 @@ var pubUi = {
                         pubUi.scrollToEvt(".wrap", "top", 0);
                         activateYearByIndex(0);
                     } else if (atLast && isScrollingDown) {
-                        // ✨ 마지막 → 아래로: 아무 것도 강제 스크롤하지 않음 (자연 스크롤)                        
+                        // ✨ 마지막 → 아래로: 아무 것도 강제 스크롤하지 않음 (자연 스크롤)
                         // 마지막 연도 유지
                         activateYearByIndex(leftItems.length - 1);
                     } else if (atLast) {
@@ -960,8 +969,8 @@ var pubUi = {
         }
     },
     historyViewEvt: function () {
-        if(!document.querySelector(".history-wrap")) {
-            return
+        if (!document.querySelector(".history-wrap")) {
+            return;
         } else {
             if (document.querySelector(".history-wrap") != null) {
                 const allView = document.querySelector("#allView");
@@ -977,7 +986,7 @@ var pubUi = {
                     });
                 }
 
-                if (backToEachBtn){ 
+                if (backToEachBtn) {
                     // 하나씩 보기 클릭 시 팝업 숨기기
                     backToEachBtn.addEventListener("click", () => {
                         // console.log("eachView")
@@ -992,7 +1001,7 @@ var pubUi = {
                     });
                 }
             }
-        }        
+        }
     },
     setScrollWidth: function () {
         const apply = () => {
@@ -1591,7 +1600,6 @@ var pubUi = {
                         document.querySelector(`#${targetId}Calendar`).style.position = "absolute";
                         document.querySelector(`#${targetId}Calendar`).style.backgroundColor = "#fff";
                         document.querySelector(`#${targetId}Calendar`).style.borderColor = "#C9CED1";
-                        
 
                         if (document.querySelector(".wrap").classList.contains("mobile")) {
                             document.querySelector(".wrap.mobile").classList.add("open-calendar");

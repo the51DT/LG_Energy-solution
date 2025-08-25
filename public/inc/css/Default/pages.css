@@ -231,19 +231,27 @@
 .sust-soc.sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 0;}
 
 .sust-soc .cont-area-wrap .sect-cont-sub article:first-of-type {padding-top: 2.5rem;}
+.sust-soc .sect-cont-area {padding-bottom: 3.75rem ;}
+.sust-soc .sect-cont-area > .title-h2 {padding-bottom: 3.75rem;}
 .sust-soc .sect-cont-sub article {background-color: #fff; border-radius: 1rem; padding: 2.5rem; margin-top: 1.25rem;}
 .sust-soc .cont-area-wrap .sect-cont-sub article:not(:last-child)::after {display: none;}
 .sust-soc [class^="content-item"] article:not(:last-child) {margin-bottom: 0;}
 .sust-soc .cont-area-wrap .article-sub {margin-bottom: 1.25rem; line-height: 2rem;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list > li {padding: 2.5rem; max-width: revert;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list > li .text-area {padding-top: 0;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(1) {max-width: 52.5rem;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(2) {max-width: 36.25rem;}
 .sust-soc .article-content > .title-h2 {font-size: 1.75rem; line-height: 2.625rem;}
-.sust-soc .article-content .text-wrap .desc {color: #555758;} 
+.sust-soc .article-content .text-wrap .desc {color: #555758; font-size: 1rem; line-height: 1.6rem;} 
 .sust-soc .article-content .text-wrap .desc + .desc {margin-top: 1.25rem;} 
 .sust-soc .article-content .btn-wrap {display: flex; justify-content: center; margin-top: 2.5rem;}
 .sust-soc .article-content .btn-wrap [class^="icon-btn"][class*="-sm"] {min-width: revert; width: revert; gap: 1.25rem;}  
 .sust-soc .article-content > .img-wrap {text-align: center;}
 .sust-soc .article-content > .img-wrap img {margin: 2.5rem 0 1.19rem; width: 60rem; height: 16.875rem;}
 .sust-soc .article-content > .img-wrap .desc {color: #858889;}
-
+.sust-soc .article-content > .title-h4 {margin-bottom: 1.25rem;}
+.sust-soc .cont-area-wrap.type2 .box-container {padding-top: 2.5rem;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list {gap: 1.25rem;}
 
 .esgm .title-h3 { font-size: 2rem; font-weight: 700; color: #171819; margin-top: 1.25rem; }
 .esgm .sub-title { font-size: 1.5rem; font-weight: 600; color: #171819; }

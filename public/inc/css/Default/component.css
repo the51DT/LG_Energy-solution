@@ -337,10 +337,6 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .cont-area-wrap.type2 .box-container .box-list {display: flex; gap: 2.5rem;}
 .cont-area-wrap.type2 .box-container .box-list:not(:first-child) {margin-top: 2.5rem;}
 .cont-area-wrap.type2 .box-container .box-list > li {width:100%; max-width:43.75rem; padding: 1.25rem 2.5rem; border-radius: 1.25rem; border:1px solid var(--colorElement-light-stroke-stroke-default04);}
-.cont-area-wrap.type2 .box-container .box-list > li .img-area {width:6.375rem; height: 6.25rem;}
-.cont-area-wrap.type2 .box-container .box-list > li .img-area.rect1 {width: 18rem; height: auto;}
-.cont-area-wrap.type2 .box-container .box-list > li .img-area.rect2 {width: 9.25rem; height: auto; padding-top: 0.62rem;}
-.cont-area-wrap.type2 .box-container .box-list > li .img-area.rect3 {width: 21.5rem; height: auto;}
 .cont-area-wrap.type2 .box-container .box-list > li .img-area img {width: 100%; height: 100%; object-fit: cover;}
 .cont-area-wrap.type2 .box-container .box-list > li .text-area {padding-top: 2rem;}
 .cont-area-wrap.type2 .box-container .box-list > li .text-area .tit {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01);}
@@ -547,7 +543,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .selectbox-wrap.type3 > div button::before {margin-top: 3px; right: 0rem;}
 .selectbox-wrap.type3 .select-menu {width: 100%; height:100%; height: fit-content; max-height: 36rem; background:#fff; color:#555758; top:4.05rem; overflow-y: auto; overflow-x: hidden; border: 1px solid #C9CED1; padding: 0;}
 .selectbox-wrap.type3 .select-menu > li:not(:last-child) {padding-bottom: 0;}
-.selectbox-wrap.type3 .select-menu > li a {font-weight: 400; line-height: 1.8rem; font-size: 1.125rem; padding: 1.09rem 1.5rem;}
+.selectbox-wrap.type3 .select-menu > li a {font-weight: 400; line-height: 1.8rem; font-size: 1.125rem; padding: 1.09rem 1.5rem; background: #fff;}
 .selectbox-wrap.type3 .select-menu > li a.active {color: #171819; font-weight: 600; line-height: 1.8rem; position: relative;}
 .selectbox-wrap.type3 .select-menu > li a.active::after {content:"";  display: block; width: 1.5rem; height: 1.5rem; background: url("../../../inc/images/icon/icon_check_bl.svg") no-repeat center / 100%; position: absolute; right: 1.5rem; top:50%; transform: translateY(-50%);}
 .selectbox-wrap.type3 .select-menu > li a:hover {background: #F3F5F7; }
@@ -611,7 +607,7 @@ table {border-collapse: collapse;}
 .asterisk-text::before {flex-shrink: 0; content: ""; display: block; margin: 0.55rem 0.19rem; width: 0.37894rem; height: 0.37894rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
 
 /* popup */
-.modal-pop:not(.toast) {visibility: hidden; position: fixed; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 100;}
+.modal-pop:not(.toast) {visibility: hidden; position: fixed; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 9999;}
 .modal-pop:not(.toast).open {visibility: visible; margin: 0 1.2rem;}
 .modal-pop:not(.toast).open::before {opacity: 1;}
 .modal-pop:not(.toast)::before {content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.70); width:100%; height: 100%; opacity: 0;} 
