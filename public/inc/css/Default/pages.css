@@ -226,6 +226,7 @@
 
 /* 지속가능경영 > 사회 */
 .sust-env.sust-soc .vision-txt .vision-tit {min-width: 42.45031rem;}
+.sust-env.sust-soc .info-wrap {margin-top: 0; padding: 0; border-radius: 0; background-color: none;}
 .sust-soc .article-content .article-desc {margin-top: 1.875rem;}
 .sust-soc .box-content {margin-top: 2.5rem;} 
 .sust-soc .content-wrap .cont-area-wrap .sect-cont-main.nbdr:last-child {padding-bottom: 0;} 
@@ -251,8 +252,23 @@
 .sust-soc .article-content > .img-wrap img {margin: 2.5rem 0 1.19rem; width: 60rem; height: 16.875rem;}
 .sust-soc .article-content > .img-wrap .desc {color: #858889;}
 .sust-soc .article-content > .title-h4 {margin-bottom: 1.25rem;}
+.sust-soc .article-content > .box-content > .img-wrap {margin: 0 auto;}
+.sust-soc .article-content > .box-content > .img-wrap.img01 {width: 63.75rem;}
+.sust-soc .article-content > .box-content > .img-wrap.img02 {width: 63.75rem;}
+.sust-soc .article-content > .box-content > .img-wrap.img03 {width: 66.875rem;}
+.sust-soc .article-content > .box-content > .img-wrap.img04 {width: 60rem;}
+.sust-soc .article-content > .box-content > .img-wrap .desc {padding-top: 1.19rem; margin-left: 4.44rem; color: #858889; font-weight: 400; font-size: 1rem; line-height: 1.6rem;}
 .sust-soc .cont-area-wrap.type2 .box-container {padding-top: 2.5rem;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list {gap: 1.25rem;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list .img-area {margin: 0 auto;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list .img-area.img01 {width: 47.25rem; padding-top: 2.5rem;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list .img-area.img02 {width: 25rem; padding-top: 3.12rem;}
+.sust-soc .sect-cont-report {display: flex; gap: 1.88rem; flex-direction: column;}
+.sust-soc .sect-cont-report > .title-h2 {font-size: 1.75rem; font-weight: 600; line-height: 2.625rem;}
+.sust-soc .tab1-content .content-item04 .btn-wrap {justify-content: center;  padding-top:0.62rem;}
+.sust-soc .tab1-content .content-item04 .btn-wrap > a {color: #555758; line-height: 1.575rem; width: 100%; max-width: 21.25rem;}
+.sust-soc .tab1-content .content-item05 .btn-wrap {display: flex; justify-content: center;}
+
 
 .esgm .title-h3 { font-size: 2rem; font-weight: 700; color: #171819; margin-top: 1.25rem; }
 .esgm .sub-title { font-size: 1.5rem; font-weight: 600; color: #171819; }
