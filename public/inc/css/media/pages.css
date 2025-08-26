@@ -347,7 +347,7 @@
 .stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; padding-inline: 2.5rem; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
 
 
-/* 지속가능경영 > 사회 > 정보보안 / 충돌 방지를 위해 아래쪽에 작성 */
+/* 지속가능경영 > 사회 > / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1rem; line-height: 1.6rem;}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1rem;}
 
