@@ -25,7 +25,6 @@ html,body {
 [class^="content-item"] .content-wrap {max-width: 100%; padding: 0 1.25rem;}
 [class^="content-item"] .content-sect {padding-top: 1rem;}
 [class^="content-item"] article .content-sect {padding-top: 1rem;}
-.content-area-head-tab {top: 5.25rem;}
 
 .title-h1 {font-size: 1.875rem; line-height: 2.275rem;}
 .title-h2 {font-size: 1.5rem; line-height: 2.0625rem;} 
