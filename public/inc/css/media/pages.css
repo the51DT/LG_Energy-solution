@@ -238,7 +238,7 @@
 
 /* 지속가능경영 > 사회 */
 .sust-soc .tab-content .title-h1 {font-size: 1.5rem; font-weight: 700; line-height: 2.0625rem;}
-.sust-soc .tab-content .title-h2 {font-size: 1.25rem; line-height: 1.875rem;}
+.sust-soc .tab-content .title-h2 {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
 .sust-soc .title-h3 {margin-top: 0; font-size: 1.125rem; line-height: 1.75rem;}
 .sust-soc .tab1-content .content-item01 .title-h2 {margin: 2rem 0;}
 .sust-soc .tab1-content .content-item01 .title-h1,
@@ -330,6 +330,27 @@
 .stif .cont-box-wrap .right-box::before  {left: 0;}
 .stif .cont-box-wrap .right-box::after {right: 0;}
 .stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; padding-inline: 2.5rem; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
+
+
+/* 지속가능경영 > 사회 > 정보보안 / 충돌 방지를 위해 아래쪽에 작성 */
+.sust-soc .title-desc {font-size: 1rem; line-height: 1.6rem;}
+.sust-soc [class^="title-h"] + .title-desc {margin-top: 1rem;}
+
+.sust-soc [class^="content-item"] .content-sect:has(.infosec-system) {padding-top: 3rem;}
+.sust-soc .infosec-system .table-wrap {margin-top: 1rem;}
+.sust-soc .infosec-system .table-wrap table thead > tr > th,
+.sust-soc .infosec-system .table-wrap table tbody > tr > th {font-size: 1.125rem; line-height: 1.75rem; padding: 1.5rem 1rem;}
+.sust-soc .infosec-system .table-wrap table thead > tr > th > span {font-size: 1rem; line-height: 1.6rem; white-space: nowrap;}
+.sust-soc .infosec-system .table-wrap table tr > td {font-size: 1rem; line-height: 1.6rem; white-space: nowrap; padding: 1.5rem 1rem;}
+.sust-soc .infosec-protect .btn-wrap {margin-top: 1rem;}
+.sust-soc .infosec-protect .btn-wrap [class^="icon-btn"] {width: 100%; font-size: 0.875rem; line-height: 1.225rem;}
+.sust-soc .infosec-protect {padding: 1.5rem 1.25rem;}
+.sust-soc .infosec-protect + .infosec-protect {margin-top: 1.25rem;}
+.sust-soc [class^="content-item"] .content-sect:has(.infosec-activity) {padding-top: 1rem;}
+.sust-soc .infosec-activity {flex-direction: column; margin-bottom: 3rem;}
+.sust-soc .infosec-activity > li {display: flex; align-items: center; gap: 1rem; padding: 1.5rem 1.25rem; border-radius: 0.5rem; text-align: left;}
+.sust-soc .infosec-activity .num {flex-shrink: 0; margin-inline: 0; margin-bottom: 0; width: 2rem; height: 2rem; font-size: 0.875rem; line-height: 1.3125rem;}
+.sust-soc .infosec-activity .desc {font-size: 1rem; line-height: 1.6rem;}
 
 
 /* 공시정보 (disc) */
