@@ -502,8 +502,40 @@
 /* 지속가능경영 > 사회 / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
+.sust-soc .title-desc .text-list-wrap {margin-top: 1.25rem;}
+.sust-soc .title-desc .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.625rem;}
+
+.sust-soc .title-desc + .box-container.grid-type {margin-top: 2.5rem;}
+.sust-soc .content-item02 .infosec-protect .box-container.grid-type .box-content:nth-child(1) .bdr-box-wrap,
+.sust-soc .content-item02 .infosec-protect .box-container.grid-type .box-content:nth-child(2) .bdr-box-wrap {height: 100%;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head {gap: 0.625rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .num {min-width: 3.375rem; font-size: 1.25rem; font-weight: 800; line-height: 2rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .title {font-size: 1.125rem; line-height: 1.8rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .desc {margin-top: 0.625rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .text-list > li {font-size: 1rem; line-height: 1.6rem;}
+.sust-soc .infosec-protect .img-wrap {width: 37.1875rem; margin: 2.5rem auto;}
+.sust-soc .box-container.grid-type .box-content .box-head .num > img {width: 5rem; height: 5rem;}
+.sust-soc .box-container.grid-type .box-content .box-head:has(.num > img) .text-box .title {margin-top: 1.5rem;}
+.sust-soc .box-container.grid-type .box-content .box-head:has(.num > img) .text-box .desc {margin-top: 1.5rem;}
+.sust-soc .safety-improve {display: flex; flex-direction: column; gap: 5rem;}
+.sust-soc .safety-improve [class^="title-h"] + .title-desc {margin-top: 1.25rem; margin-bottom: 2.5rem;}
+.sust-soc .safety-improve .safety-improve-box {display: flex; justify-content: center; gap: 5rem; padding: 3.75rem 2.5rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
+.sust-soc .safety-improve .safety-improve-box > div > img {width: 6.25rem; height: 6.25rem;}
+.sust-soc .safety-improve .safety-improve-box .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem;}
+.sust-soc .safety-improve .safety-improve-box .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 0.625rem;}
+.sust-soc .safety-improve .safety-improve-ico {display: flex; gap: 1.25rem;}
+.sust-soc .safety-improve .safety-improve-ico > div {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; min-height: 23.75rem; padding: 2.5rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04); text-align: center;}
+.sust-soc .safety-improve .safety-improve-ico > div > img {width: 7.5rem; height: 7.5rem;}
+.sust-soc .safety-improve .safety-improve-ico .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 2.5rem;}
+.sust-soc .safety-improve .safety-improve-ico .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
+.sust-soc .safety-improve .safety-improve-img {display: flex; gap: 1.875rem;}
+.sust-soc .safety-improve .safety-improve-img > div {width: 100%;}
+.sust-soc .safety-improve .safety-improve-img > div > img {height: 18.75rem; width: 100%; object-fit: cover;}
+.sust-soc .safety-improve .safety-improve-img > div > p {margin-top: 1.25rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); text-align: center;}
+.sust-soc .safety-improve .csr-detail:only-child > img {width: 43.4375rem; height: 22.5rem;}
 
 .sust-soc [class^="content-item"] .content-sect:has(.human-mgmt) {padding-top: 5rem;}
+.sust-soc .human-mgmt .img-wrap {width: 70rem; height: auto; margin-inline: auto; margin-top: 2.5rem;}
 .sust-soc .human-mgmt .btn-wrap {display: flex; justify-content: center; margin-top: 2.5rem;}
 .sust-soc .human-mgmt .btn-wrap [class^="icon-btn"] {width: fit-content; gap: 1.25rem;}
 .sust-soc .human-mgmt .human-mgmt-list {display: flex; gap: 1.25rem; margin-top: 5rem;}
@@ -535,6 +567,8 @@
 .sust-soc .infosec-activity > li {width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
 .sust-soc .infosec-activity .num {display: flex; justify-content: center; align-items: center; margin-inline: auto; margin-bottom: 1.25rem; width: 2.5rem; height: 2.5rem; border-radius: 12.5rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-on-primary);}
 .sust-soc .infosec-activity .desc {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.sust-soc .infosec-activity.ty02 {margin-top: 2.5rem;}
+.sust-soc .infosec-activity.ty02  > li {background-color: var(--colorElement-light-fill-fill-on-primary); text-align: left;}
 
 
 /* 공시정보 (disc) */
