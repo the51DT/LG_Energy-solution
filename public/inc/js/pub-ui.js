@@ -2,12 +2,7 @@
 
 var pubUi = {
     self: {},
-    selectedData: [
-        {
-            category: "",
-            value: "",
-        },
-    ],
+    _boundSelects: new WeakSet(), // select-cate 엘리먼트 바운드 여부 체크
     init: function () {
         this.settings();
         this.bindEvents();
@@ -68,66 +63,6 @@ var pubUi = {
     },
 
     bindEvents: function () {
-        // selectbox 탭형식 이벤트 처리 (PC)
-        // this.self.selectCateBtn.forEach((targetBtn) => {
-        //     targetBtn.addEventListener("click", (e) => {
-        //         e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
-        //         const currentTarget = e.currentTarget;
-        //         const currentSelectCate = currentTarget.closest(".select-cate");
-
-        //         if (currentSelectCate.classList.contains("disabled")) return;
-
-        //         // 모든 select-cate 닫기
-        //         this.self.selectCateBtn.forEach((otherTargetBtn) => {
-        //             const otherCate = otherTargetBtn.closest(".select-cate");
-        //             otherTargetBtn.classList.remove("active");
-        //             if (otherCate) {
-        //                 const otherMenu = otherCate.querySelector(".select-menu");
-        //                 if (otherMenu) {
-        //                     otherMenu.classList.remove("on");
-        //                 }
-        //             }
-        //         });
-
-        //         // 현재 클릭한 것만 토글
-        //         const menu = currentSelectCate.querySelector(".select-menu");
-        //         if (menu) {
-        //             currentTarget.classList.add("active");
-        //             menu.classList.add("on");
-
-        //             pubUi.selectedData.category = menu;
-        //             // console.log(pubUi.selectedData.category);
-        //         }
-        //     });
-        // });
-
-        // // selectmenu 클릭이벤트 (.activeSelect)
-        // this.self.selectMenu.forEach((map) => {
-        //     let pageMapCate = map.querySelectorAll("li > a");
-
-        //     pageMapCate.forEach((subCate) => {
-        //         subCate.addEventListener("click", (e) => {
-        //             e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
-        //             if (map.classList.contains("caseTab")) {
-        //                 pubUi.selectMenuClickEvt("tab", pageMapCate, map, subCate);
-        //             } else {
-        //                 pubUi.selectMenuClickEvt("default", pageMapCate, map, subCate);
-        //             }
-
-        //             // 선택 후 메뉴 닫기
-        //             const parentCate = map.closest(".select-cate");
-        //             if (parentCate) {
-        //                 const btn = parentCate.querySelector(".btn-select");
-        //                 btn?.classList.remove("active");
-        //                 map.classList.remove("on");
-        //             }
-
-        //             pubUi.selectedData.value = subCate;
-        //             // console.log(pubUi.selectedData.value);
-        //         });
-        //     });
-        // });
-
         // 바깥 클릭 시 모든 메뉴 닫기
         document.addEventListener("click", (e) => {
             this.self.selectCateBtn.forEach((btn) => {
@@ -168,72 +103,81 @@ var pubUi = {
             });
         }
     },
-    selectboxCtrlEvt : function () {
-        if (this.self.selectCateBtn) {
-            
-            // selectbox 탭형식 이벤트 처리 (PC)
-            this.self.selectCateBtn.forEach((targetBtn) => {
-                targetBtn.addEventListener("click", (e) => {
-                    e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
-                    const currentTarget = e.currentTarget;
-                    const currentSelectCate = currentTarget.closest(".select-cate");
+    selectboxCtrlEvt: function (selectorOrEl) {
+        // 헬퍼: 개별 select-cate에 바인딩
+        const bindOne = (root) => {
+            if (!root || this._boundSelects.has(root)) return; // 중복 방지
+            console.log("root : " , root)
+            const targetBtn = root.querySelector("button");
+            const targetMenu = root.querySelector(".select-menu");
 
+            if (targetBtn) {
+                targetBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    const currentSelectCate = e.currentTarget.closest(".select-cate");
                     if (currentSelectCate.classList.contains("disabled")) return;
 
                     // 모든 select-cate 닫기
                     this.self.selectCateBtn.forEach((otherTargetBtn) => {
                         const otherCate = otherTargetBtn.closest(".select-cate");
                         otherTargetBtn.classList.remove("active");
-                        if (otherCate) {
-                            const otherMenu = otherCate.querySelector(".select-menu");
-                            if (otherMenu) {
-                                otherMenu.classList.remove("on");
-                            }
-                        }
+                        if (otherCate) otherCate.querySelector(".select-menu")?.classList.remove("on");
                     });
 
-                    // 현재 클릭한 것만 토글
+                    // 현재 것만 열기
                     const menu = currentSelectCate.querySelector(".select-menu");
                     if (menu) {
-                        currentTarget.classList.add("active");
+                        e.currentTarget.classList.add("active");
                         menu.classList.add("on");
-
-                        pubUi.selectedData.category = menu;
-                        // console.log(pubUi.selectedData.category);
                     }
+
+                    console.log("targetBtn : ", targetBtn);
                 });
-            });
+            }
 
-            if (this.self.selectMenu) {            
-                // selectmenu 클릭이벤트 (.activeSelect)
-                this.self.selectMenu.forEach((map) => {
-                    let pageMapCate = map.querySelectorAll("li > a");
-
-                    pageMapCate.forEach((subCate) => {
-                        subCate.addEventListener("click", (e) => {                            
-                            e.stopPropagation(); // 문서 클릭 이벤트 전파 방지
-                            if (map.classList.contains("caseTab")) {
-                                pubUi.selectMenuClickEvt("tab", pageMapCate, map, subCate);
-                            } else {
-                                pubUi.selectMenuClickEvt("default", pageMapCate, map, subCate);
-                            }
-
-                            // 선택 후 메뉴 닫기
-                            const parentCate = map.closest(".select-cate");
-                            if (parentCate) {
-                                const btn = parentCate.querySelector(".btn-select");
-                                btn?.classList.remove("active");
-                                map.classList.remove("on");
-                            }
-
-                            pubUi.selectedData.value = subCate;
-                            // console.log(pubUi.selectedData.value);
-                        });
+            if (targetMenu) {
+                const pageMapCate = targetMenu.querySelectorAll("li > a");
+                pageMapCate.forEach((subCate) => {
+                    subCate.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        if (targetMenu.classList.contains("caseTab")) {
+                            pubUi.selectMenuClickEvt("tab", pageMapCate, targetMenu, subCate);
+                        } else {
+                            pubUi.selectMenuClickEvt("default", pageMapCate, targetMenu, subCate);
+                        }
+                        // 선택 후 닫기
+                        const parentCate = targetMenu.closest(".select-cate");
+                        parentCate?.querySelector(".btn-select")?.classList.remove("active");
+                        targetMenu.classList.remove("on");
                     });
                 });
             }
-        }        
 
+            // 바인딩 완료 표시
+            this._boundSelects.add(root);
+        };
+
+        // 외부에서 특정 id/엘리먼트로 호출한 경우
+        if (selectorOrEl) {
+            const el = typeof selectorOrEl === "string" ? document.querySelector(selectorOrEl) : selectorOrEl;
+            // 최신 버튼/메뉴 목록 갱신(닫기 루틴에서 쓰임)
+            this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
+            bindOne(el);
+            return; // 여기서 끝
+        }
+
+        // 파라미터 없으면: 기존처럼 전체 바인딩
+        this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
+        this.self.selectCateBtn.forEach((btn) => {
+            const root = btn.closest(".select-cate");
+            bindOne(root);
+        });
+
+        // 메뉴 클릭(global)
+        this.self.selectMenu.forEach((map) => {
+            const root = map.closest(".select-cate");
+            bindOne(root); // 개별 헬퍼가 메뉴 클릭도 처리하므로 재사용
+        });
     },
     scrollWrapEvt: function () {
         // .wrap scroll
@@ -383,7 +327,11 @@ var pubUi = {
             if (subCateName == "연혁") {
                 pubUi.scrollToEvt(".wrap", "top");
                 // document.querySelector(".history-wrap.each-view").style.overflowY = "hidden";
-                document.querySelector(".history-wrap.each-view").removeAttribute("data-scrolling");
+                if (document.querySelector(".history-wrap.each-view")) {
+                    document.querySelector(".history-wrap.each-view").removeAttribute("data-scrolling");
+                } else {
+                    return;
+                }
             } else {
                 this.self.wrap.style.overflow = "auto";
                 pubUi.scrollToEvt(".wrap", "top"); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가

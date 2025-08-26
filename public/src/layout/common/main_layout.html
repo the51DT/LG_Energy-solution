@@ -432,7 +432,8 @@
                                 <li><a href="javascript:;" role="option" tabindex="0">뉴스룸</a></li>
                             </ul>
                         </div>
-                        <div class="select-cate activeSelect" role="option">
+                        <!-- 25.08.26 수정 : activeSelect 구조 변경 : select-cate activeSelect 클래스에 id값 추가 (개발자 요청사항) 외부에서 pubUi.selectboxCtrlEvt(id값) 으로 접근할 수 있도록 구조변경 -->
+                        <div class="select-cate activeSelect" role="option" id="selectbox01">                             
                             <button type="button" aria-haspopup="listbox">회사개요</button>
                             <!-- ★ PC 탭케이스일 경우, select-menu에 caseTab추가 필요, 하위 카테고리에 탭관련 속성 추가 필요 
                              [ex] role="tab" aria-selected="true" aria-controls="tab1-content" -->
