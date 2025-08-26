@@ -343,7 +343,8 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .box-container.grid-type .box-content .box-head .text-box .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
 .box-container.grid-type .box-content .box-head .text-box .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; margin-top: 0.5rem;}
 .box-container.grid-type .box-content .box-cont {padding-left: 4.94rem;}
-
+.box-container.grid-type.grid3 {grid-template-columns: repeat(3, 1fr);}
+.box-container.grid-type.grid3 .box-content .bdr-box-wrap {height: 100%;}
 
 .step-box-wrap {padding-top: 1.87rem;}
 .step-box-wrap .step-box {display: flex; gap: 1.25rem; justify-content: center; text-align: center;}
