@@ -2157,7 +2157,7 @@
 
 
 /* 개인정보처리방침 */
-.foot-policy.wrap:not(.main_p) .content-header { margin-top: 13.75rem; }
+.foot-policy.wrap:not(.main_p) .content-header { margin-top: 6.25rem; }
 .foot-policy.wrap:not(.main_p) .content-header .subp-tit { font-size: 1.25rem; line-height: 2rem; }
 .foot-policy [class^="content-item"] { padding-top: 0; }
 .foot-policy .selectbox-wrap { margin-bottom: 1.875rem; display: flex; justify-content: flex-end; }
