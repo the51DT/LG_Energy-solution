@@ -17,17 +17,7 @@
 [class*=_ctype06] {color: #A6CE39 !important;}
 [class*=_ctype07] {color: #858889 !important;}
 [class*=_ctype08] {color: #276EF2 !important;}
-[class^=underline] {font-weight: 600; position: relative; display: inline-block;}
-[class^=underline]::after {content:""; display: inline-block; width: 100%; height: 1px; position: absolute; bottom:-2px; left:0;}
-[class^=underline][class*=_ctype01] {color: var(--colorElement-light-text-text-primary); }
-[class^=underline][class*=_ctype01]::after {background-color: var(--colorElement-light-text-text-primary);}
-[class^=underline][class*=_ctype02]::after {background-color: #554596;}
-[class^=underline][class*=_ctype03]::after {background-color: #E12991;}
-[class^=underline][class*=_ctype04]::after {background-color: #F1593F;}
-[class^=underline][class*=_ctype05]::after {background-color: #303188;}
-[class^=underline][class*=_ctype06]::after {background-color: #A6CE39;}
-[class^=underline][class*=_ctype07]::after {background-color: #858889;}
-[class^=underline][class*=_ctype08]::after {background-color: #276EF2;}
+[class^=underline] {font-weight: 600; display: inline; text-decoration-line: underline; text-underline-position: from-font;}
 
 /* flex 정렬 */
 .al-center {align-items: center !important;}

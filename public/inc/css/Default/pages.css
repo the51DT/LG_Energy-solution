@@ -69,7 +69,6 @@
 .sust-sys .box-list.box-list-envir>li:last-child .img-area>img {height: 5rem;}
 .sust-sys .box-list .text-area .tit {font-size: 1.25rem; line-height: 2rem; color: #171819;}
 .sust-sys .box-list .text-area .desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; font-weight: 400; color: #555758;}
-.sust-sys .box-list .text-area .desc>a {text-decoration-line: none;}
 
 /* 지속가능경영 > 환경 > 환경경영 */
 .sust-env .title-h2 {font-size: 2rem; line-height: 3rem;}
@@ -240,7 +239,7 @@
 .sust-soc [class^="content-item"] article:not(:last-child) {margin-bottom: 0;}
 .sust-soc .cont-area-wrap .article-sub {margin-bottom: 1.25rem; line-height: 2rem;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li {padding: 2.5rem; max-width: revert;}
-.sust-soc .cont-area-wrap.type2 .box-container .box-list > li .text-area {padding-top: 0;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list > li .text-area {padding-top: 0; font-size: 0; line-height: 0;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(1) {max-width: 52.5rem;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(2) {max-width: 36.25rem;}
 .sust-soc .article-content > .title-h2 {font-size: 1.75rem; line-height: 2.625rem;}
@@ -2083,11 +2082,28 @@
 .serv-ess .text-list-wrap .text-list > li::before, .serv-kooroo .text-list-wrap .text-list > li::before { top: 0.7em; }
 
 /* 서비스 > ess si */
-.serv-ess .adv-box { background-color: #fff; }
-.serv-ess .adv-tit-wrap { height: 8rem; text-align: center; display: flex; justify-content: center; align-items: center; }
-.serv-ess .service-btn-wrap { margin-bottom: 15.06rem; }
-
-
+.serv-ess .service-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 1.88rem; margin-bottom: 1.25rem; }
+.serv-ess .service-box { padding: 2.5rem 2.5rem 3.75rem; border: 2px solid #E1E7EA; border-radius: 1rem; background-color: #fff; }
+.serv-ess .service-tit-wrap { display: flex; align-items: center; gap: 0.625rem; padding-bottom: 1.25rem; border-bottom: 1px solid #C9CED1; }
+.serv-ess .service-tit-wrap>img { width: 5rem; height: 5rem; }
+.serv-ess .service-tit-wrap .tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; }
+.serv-ess .service-desc { padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758; }
+.serv-ess .service-box .btn-wrap { justify-content: flex-end; margin-top: 1.25rem; }
+.serv-ess .service-box .btn-wrap a { display: flex; border: 1px solid #171819; border-radius: 999px; padding: 0.5rem 1.25rem; gap: 0.5rem; font-size: 0.875rem; font-weight: 500; line-height: 1.225rem; }
+.serv-ess .service-box .btn-wrap a img { width: 1.125rem; height: 1.125rem; }
+.serv-ess .diagram-flow { display: flex; background-color: #5AD1DC; border-radius: 999px; padding: 1.875rem; gap: 1.25rem; margin-top: 2.5rem; position: relative; }
+.serv-ess .diagram-flow > .arrow { position: absolute; width: 9.0625rem; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; }
+.serv-ess .flow-item { flex: 1; background-color: #fff; border-radius: 999px; position: relative; }
+.serv-ess .item-content { display: flex; flex-direction: column; align-items: center; padding: 2.5rem 0; gap: 0.625rem; }
+.serv-ess .flow-item::after { content: ''; background: url(../../images/img/serv06_icon_14.png) no-repeat; height: 4.8125rem; width: 1rem; position: absolute; background-size: contain; margin-top: 1.125rem; left: 50%; transform: translate(-50%, -50%); }
+.serv-ess .item-content img { width: 2.375rem; }
+.serv-ess .item-content > .title { font-size: 1.25rem; font-weight: 600; color: #33B0C6; line-height: 2rem; }
+.serv-ess .item-content > .subtitle { font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
+.serv-ess .feature-section { display: flex; justify-content: space-around; margin-top: 2.6875rem; }
+.serv-ess .feature-section .text-list { display: grid; grid-template-rows: repeat(3, auto); grid-auto-flow: column; column-gap: 1.5rem; }
+.serv-ess .feature-section .text-list li { color: #555758; font-size: 1rem; }
+.serv-ess .bmts-box>img {width: 5rem; height: 5rem;}
+.serv-ess .bmts-wrap { margin-top: 2.5rem;}
 /* 검색 */
 /* 검색결과 */
 .search .content-item01 .content-wrap {margin-top: 7.5rem;}
