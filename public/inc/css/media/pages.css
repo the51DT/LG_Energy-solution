@@ -343,6 +343,15 @@
 .sust-soc .title-desc {font-size: 1rem; line-height: 1.6rem;}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1rem;}
 
+.sust-soc [class^="content-item"] .content-sect:has(.csr-detail-list) {padding-top: 1.5rem;}
+.sust-soc .csr-acts > img {margin-bottom: 3rem;}
+.sust-soc .csr-detail-list {flex-direction: column; gap: 3rem;}
+.sust-soc .csr-detail .tit {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem;}
+.sust-soc .csr-detail > img {width: 100%; height: auto; object-fit: cover; aspect-ratio: 7 / 3;}
+.sust-soc .csr-detail .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 1rem;}
+.sust-soc .csr-detail:only-child .desc {width: 100%; margin-top: 1rem; margin-left: 0;}
+.sust-soc .csr-detail:only-child > img {height: auto; aspect-ratio: 15 / 7;}
+
 .sust-soc [class^="content-item"] .content-sect:has(.infosec-system) {padding-top: 3rem;}
 .sust-soc .infosec-system .table-wrap {margin-top: 1rem;}
 .sust-soc .infosec-system .table-wrap table thead > tr > th,
