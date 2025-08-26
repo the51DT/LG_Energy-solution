@@ -2154,3 +2154,11 @@
 .foot-guide .warning-policy li { counter-increment: list-counter; position: relative; padding-left: 1.25rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; }
 .foot-guide .warning-policy li:not(:last-child) { margin-bottom: 0.625rem; }
 .foot-guide .warning-policy .text-list li::before { content: counter(list-counter) ")"; position: absolute; color: #555758; left: 0; top: 0.15rem; width: 1em; background-color: transparent; font-size: 1rem; font-weight: 400; }
+
+
+/* 개인정보처리방침 */
+.foot-policy.wrap:not(.main_p) .content-header { margin-top: 13.75rem; }
+.foot-policy.wrap:not(.main_p) .content-header .subp-tit { font-size: 1.25rem; line-height: 2rem; }
+.foot-policy [class^="content-item"] { padding-top: 0; }
+.foot-policy .selectbox-wrap { margin-bottom: 1.875rem; display: flex; justify-content: flex-end; }
+.foot-policy .selectbox-wrap.type2 .select-cate { width: 22.5rem; }
