@@ -2086,6 +2086,7 @@
 .serv-ess .feature-section .text-list { display: grid; grid-template-rows: repeat(3, auto); grid-auto-flow: column; column-gap: 1.5rem; }
 .serv-ess .feature-section .text-list li { color: #555758; font-size: 1rem; }
 .serv-ess .bmts-box>img {width: 5rem; height: 5rem;}
+.serv-ess .bmts-wrap { margin-top: 2.5rem;}
 /* 검색 */
 /* 검색결과 */
 .search .content-item01 .content-wrap {margin-top: 7.5rem;}
