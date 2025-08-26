@@ -273,11 +273,11 @@
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li {max-width: unset; width: 100%; padding: 1.5rem; border-radius: 1rem; border: 2px solid #E1E7EA;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(2) {max-width: unset; margin-top: .5rem;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list .img-area {width: 100%; height: 100%; margin: 1.5rem 0 0;}
-.sust-soc .tab1-content .content-item03 .bdr-box-wrap.nbdr {padding: 1.5rem 1rem 1.5rem;}
 .sust-soc .sect-cont-report {gap: 1rem;}
 .sust-soc .sect-cont-report .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
-.sust-soc .tab1-content .content-item04 .btn-wrap {gap: 0.5rem; padding-top: 0.5rem; }
-.sust-soc .tab1-content .content-item04 .btn-wrap > a {background: #fff; border: 1px solid #c9ced1; font-size: 0.875rem; font-weight: 600; line-height: 1.225rem; max-width: 100%;}
+.sust-soc #tab1-content .content-item03 .bdr-box-wrap.nbdr {padding: 1.5rem 1rem 1.5rem;}
+.sust-soc #tab1-content .content-item04 .btn-wrap {gap: 0.5rem; padding-top: 0.5rem; }
+.sust-soc #tab1-content .content-item04 .btn-wrap > a {background: #fff; border: 1px solid #c9ced1; font-size: 0.875rem; font-weight: 600; line-height: 1.225rem; max-width: 100%;}
 
 .cont-area-wrap.type2 .box-container .box-list > li:not(:last-child)::after {display: none;}
 .cont-area-wrap.type2 .box-container .box-list > li .text-area .tit {font-size: .875rem; line-height: 1.3125rem;}

@@ -312,7 +312,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .bdr-box-wrap .box-head .title {font-size: 1.5rem; font-weight: 700; line-height: 2.25rem;}
 .bdr-box-wrap .box-head .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
 .bdr-box-wrap .box-cont {position: relative;}
-.bdr-box-wrap .box-cont::before {content: ""; width: 100%; height: 0.0625rem; display: block; background-color: #d9d9d9; margin: 2rem 0;}
+.bdr-box-wrap .box-cont::before {content: ""; width: 100%; height: 0.0625rem; display: block; background-color: #C9CED1; margin: 1.88rem 0;}
 .bdr-box-wrap.type2 .box-cont {padding-top: 3rem; display: flex; justify-content: center;}
 .bdr-box-wrap.type2 .box-cont::before {display: none;}
 .bdr-box-wrap .box-cont .text-wrap:not(:last-child) {margin-bottom: 1rem;}
@@ -345,6 +345,16 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .cont-area-wrap.type2 .box-container .box-list.type2 {display: block;}
 .cont-area-wrap.type2 .box-container .box-list.type2 > li {max-width: 100%;}
 .box-container:not(:first-child) .box-content {margin-top: 6.25rem;}
+.box-container.grid-type {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;}
+.box-container.grid-type .box-content {margin-top: 0;}
+.box-container.grid-type .box-content .bdr-box-wrap {margin-top: 0; padding: 2.5rem;}
+.box-container.grid-type .box-content .box-head {display: flex; gap: 1.25rem; flex-direction: row;}
+.box-container.grid-type .box-content .box-head .num {color: #5ad1dc; font-size: 2rem; font-weight: 700; line-height: 3rem; min-width: 3.75rem;}
+.box-container.grid-type .box-content .box-head .text-box .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.box-container.grid-type .box-content .box-head .text-box .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; margin-top: 0.5rem;}
+.box-container.grid-type .box-content .box-cont {padding-left: 4.94rem;}
+
+
 .step-box-wrap {padding-top: 1.87rem;}
 .step-box-wrap .step-box {display: flex; gap: 1.25rem; justify-content: center; text-align: center;}
 .step-box-wrap .step-box > li .img-wrap {content:""; width: 6rem; height: 6rem; display: block; border-radius: 3rem; background: var(--colorElement-light-fill-fill-primary); margin: 0 auto 2rem;}

@@ -67,7 +67,7 @@ body {
   color: #222;
   height: 100%;
   font-weight: 400;
-  letter-spacing: -0.03125rem;
+  /* letter-spacing: -0.03125rem; */
   -webkit-overflow-scrolling: touch;
 }
 h1,
