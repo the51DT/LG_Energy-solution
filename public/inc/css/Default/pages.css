@@ -69,7 +69,6 @@
 .sust-sys .box-list.box-list-envir>li:last-child .img-area>img {height: 5rem;}
 .sust-sys .box-list .text-area .tit {font-size: 1.25rem; line-height: 2rem; color: #171819;}
 .sust-sys .box-list .text-area .desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; font-weight: 400; color: #555758;}
-.sust-sys .box-list .text-area .desc>a {text-decoration-line: none;}
 
 /* 지속가능경영 > 환경 > 환경경영 */
 .sust-env .title-h2 {font-size: 2rem; line-height: 3rem;}
@@ -240,7 +239,7 @@
 .sust-soc [class^="content-item"] article:not(:last-child) {margin-bottom: 0;}
 .sust-soc .cont-area-wrap .article-sub {margin-bottom: 1.25rem; line-height: 2rem;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li {padding: 2.5rem; max-width: revert;}
-.sust-soc .cont-area-wrap.type2 .box-container .box-list > li .text-area {padding-top: 0;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list > li .text-area {padding-top: 0; font-size: 0; line-height: 0;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(1) {max-width: 52.5rem;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(2) {max-width: 36.25rem;}
 .sust-soc .article-content > .title-h2 {font-size: 1.75rem; line-height: 2.625rem;}
