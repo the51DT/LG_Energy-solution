@@ -501,9 +501,19 @@
 .stif .cont-box-wrap .right-box .keyword {font-size: 7.3125rem; font-weight: 800; line-height: 11.25rem; letter-spacing: -0.125rem;}
 
 
-/* 지속가능경영 > 사회 > 정보보안 / 충돌 방지를 위해 아래쪽에 작성 */
+/* 지속가능경영 > 사회 / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
+
+.sust-soc [class^="content-item"] .content-sect:has(.human-mgmt) {padding-top: 5rem;}
+.sust-soc .human-mgmt .btn-wrap {display: flex; justify-content: center; margin-top: 2.5rem;}
+.sust-soc .human-mgmt .btn-wrap [class^="icon-btn"] {width: fit-content; gap: 1.25rem;}
+.sust-soc .human-mgmt .human-mgmt-list {display: flex; gap: 1.25rem; margin-top: 5rem;}
+.sust-soc .human-mgmt .human-mgmt-box {display: flex; flex-direction: column; gap: 1.875rem; width: 100%; padding: 2.5rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04);}
+.sust-soc .human-mgmt .human-mgmt-box .title-desc {margin-top: 1.25rem;}
+.sust-soc .human-mgmt .human-mgmt-box > img {width: 7.5rem; height: 7.5rem; margin-inline: auto;}
+.sust-soc .human-mgmt .human-mgmt-box .desc {padding-top: 1.875rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.sust-soc .human-mgmt .human-mgmt-box .desc > p + p {margin-top: 1.25rem;}
 
 .sust-soc [class^="content-item"] .content-sect:has(.csr-detail-list) {padding-top: 3.75rem;}
 .sust-soc .csr-acts > img {margin-bottom: 5rem;}
@@ -520,8 +530,8 @@
 .sust-soc .infosec-system .table-wrap table thead > tr > th {font-size: 1.125rem; line-height: 1.8rem;}
 .sust-soc .infosec-system .table-wrap table thead > tr > th > span {font-weight: 400; color: var(--colorElement-light-text-text-default02);}
 .sust-soc .infosec-protect .btn-wrap {display: flex; justify-content: center; margin-top: 2.5rem;}
-.sust-soc .infosec-protect {padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
-.sust-soc .infosec-protect + .infosec-protect {margin-top: 1.25rem;}
+.sust-soc .infosec-protect .btn-wrap [class^="icon-btn"] {width: fit-content; gap: 1.25rem;}
+.sust-soc .infosec-protect + .infosec-protect {margin-top: 7.5rem; padding-top: 7.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .sust-soc [class^="content-item"] .content-sect:has(.infosec-activity) {padding-top: 1.875rem;}
 .sust-soc .infosec-activity {display: flex; gap: 1.25rem;}
 .sust-soc .infosec-activity > li {width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
