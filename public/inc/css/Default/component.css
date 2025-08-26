@@ -616,7 +616,7 @@ table {border-collapse: collapse;}
 .modal-pop:not(.toast) .pop-wrap {position: relative; display:flex; flex-direction: column; width:100vw; max-width: 100%; max-height: 38.7rem; overflow: hidden; z-index: 10; transition: opacity 0.5s linear; opacity: 0; border-radius: 1.5rem; background: #fff; margin: 0 auto; overflow: hidden;}
 .pop-wrap .pop-header .title {color: var(--colorElement-light-text-text-default01); font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
 .pop-wrap .pop-content {overflow-y: auto;} /* height: 100dvh;  */
-.pop-wrap .pop-footer {padding-top: 2.5rem;}
+.pop-wrap .pop-footer {padding-top: 2rem;}
 .pop-wrap .pop-footer > .btn-wrap button {width: 100%; max-width: 100%;}
 .pop-wrap .pop-close {display: block; width: 2rem; height: 2rem; background: url('../../images/icon/icon_close_btn.svg') no-repeat center center / contain; position: absolute; top: 2.25rem; right: 2.5rem;}
 .pop-wrap .img-wrap {padding-bottom: 1.5rem;}
@@ -655,13 +655,39 @@ table {border-collapse: collapse;}
 .modal-pop.ty-black .pop-wrap {background:rgba(0, 0, 0, 0.90); padding: 3.25rem 1.25rem 2rem !important; border-radius: 0; color: #fff;}
 .modal-pop.ty-black .pop-close {background: url('../../images/icon/icon_close_btn_wh.svg') no-repeat center center / 50%; top: 1rem;}
 
-.modal-pop.full {margin: 1.87rem 1.5rem 2rem;}
-.modal-pop.full .pop-wrap .pop-close {top: 0; right: 0;}
+.modal-pop .pop-wrap.input-form  {padding: 2rem 2.5rem;}
+.modal-pop .pop-wrap.input-form .pop-header {padding-bottom: 1rem;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap > label { min-width: 5.5rem;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-box {padding-right: 0; margin-left: 1.25rem;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap > label > span { color: #33B0C6; font-size: 1.125rem; margin-left: 0.25rem; }
+.modal-pop .pop-wrap.input-form .terms-wrap {background: #f3f5f7; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1.88rem;}
+.modal-pop .pop-wrap.input-form .terms-wrap .terms-item:not(:last-child) {margin-bottom: 1rem;}
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .text-wrap {padding-left: 1.75rem; margin-top: 0.5rem;}
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .text-wrap .text-list li { font-size: 0.875rem; font-weight: 400; line-height: 1.225rem; color: #555758;}
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .text-wrap .text-list li:not(:last-child) {margin-bottom: 0.5rem;}
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox {display: flex; align-items: center; font-size: 1rem; font-weight: 500; line-height: 1.4rem;}
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .txt > em {color: #33b0c6;}
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .btn-detail {font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: #858889; margin-left: 0.5rem;}
+.modal-pop .pop-wrap.input-form .terms-item-list .terms-item strong {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #555758;}
+.modal-pop .pop-wrap.input-form .terms-item-list .terms-item p {padding-left: 1.25rem; color: #555758; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.modal-pop .pop-wrap.input-form .terms-item-list .terms-item:last-child {padding-bottom: 4.06rem;}
+.modal-pop .pop-wrap.input-form .checkbox input[type="checkbox"] + label .txt {font-weight: 500;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap {display: flex; justify-content: center;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap:has(.btn-group) {display: block;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap button,
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap a {font-size: 1.25rem; font-weight: 500; line-height: 1.75rem;}
+
+/* full popup */
+.modal-pop.full .pop-wrap {padding: 1.88rem 1.5rem 2.56rem;}
+.modal-pop.full .pop-wrap .pop-header {padding-bottom: 1.5rem;}
+.modal-pop.full .pop-wrap .pop-close {top: 2rem; right: 1rem ;}
 .modal-pop.full .pop-wrap {border-radius:0; height: 100%; max-height: calc(100% - constant(safe-area-inset-top)); max-height: calc(100% - env(safe-area-inset-top));}
 .modal-pop.full .pop-wrap > div {flex: 1 1 auto;}
-.modal-pop.full .pop-wrap .pop-content {padding-top:24px; height: calc(100% - 135px);}
+/* .modal-pop.full .pop-wrap .pop-content {padding-top:24px; height: calc(100% - 135px);} */
+.modal-pop.full .pop-wrap .pop-footer {padding-top: 1.88rem;}
 .modal-pop.full::before {background:#fff;}
 
+/* tooltip popup */
 .modal-pop.tooltip {display: block; position: absolute; transition: top 0.3s ease, left 0.3s ease; right: revert; bottom: revert; max-width: 36.25rem;}
 .modal-pop.tooltip::before {display: none;}
 .modal-pop.tooltip.open {margin: 0;}

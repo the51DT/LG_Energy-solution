@@ -288,7 +288,7 @@
                                                                 <p class="tab-cont-name"> 사업영역 </p>
                                                                 <span class="download-tit">1865 카탈로그</span> 
                                                             </div>
-                                                            <a href="#" class="btn-download" download>
+                                                            <a href="#" class="btn-download" id="popupFormBtn1" onclick="pubUi.popUp.open('#popupForm1','#popupFormBtn1');"> <!-- 08.26 추가 : popup 이벤트 추가 -->
                                                                 <span class="btn-download-txt">PDF</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
@@ -2766,6 +2766,277 @@
     </footer>
     <!-- // footer -->
   </div>
+
+  <!-- 08.26 다운로드 리드젠 팝업 추가 : S -->  
+  <!-- popup : 다운로드 정보 입력 팝업 -->
+  <div class="modal-pop full" id="popupForm1">
+    <div class="pop-wrap input-form">
+        <div class="pop-header">
+            <h3 class="title">다운로드를 위해 정보를 입력해주세요.</h3>
+        </div>
+        <div class="pop-content">
+            <div class="input-box-wrap">
+                <div class="wrap-form-input">
+                    <div class="input-wrap">
+                        <label for="user-input">이름<span>*</span></label>
+                        <input type="text" id="user-input" class="input-box"
+                            placeholder="이름을 입력해 주세요." required>
+                    </div>
+                
+                    <div class="input-wrap">
+                        <label for="company-input">회사명<span>*</span></label>
+                        <input type="text" id="company-input" class="input-box"
+                            placeholder="회사명을 입력해 주세요." required>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="email-input">이메일<span>*</span></label>
+                        <div class="email-input-wrap">
+                            <input type="email" id="email-input1" class="input-box"
+                                placeholder="예 : solution">@
+                            <input type="email" id="email-input2" class="input-box"
+                                placeholder="예 : lgensol.com">
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="phone-input">연락처<span>*</span></label>
+                        <input type="number" id="phone-input" class="input-box"
+                            placeholder="연락처를 입력해 주세요." required>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="phone-input">관심제품군</label>
+                        <input type="text" id="phone-input" class="input-box"
+                            placeholder="[선택] 관심 제품군을 입력해주세요.">
+                    </div>                    
+                </div>
+            </div>
+            <div class="terms-chk-wrap">
+                <div class="terms-wrap">
+                    <div class="terms-item">
+                        <div class="checkbox chk-terms-wrap">
+                            <input type="checkbox" class="checkbox" id="checkbox-01-1"
+                                name="checkbox-01-1">
+                            <label for="checkbox-01-1" class="checkbox-label">
+                                <span class="custom-checkbox"></span>
+                                
+                                <span class="txt">
+                                    <em>[필수]</em> 개인정보 수집 및 이용에 동의합니다.
+                                </span>
+                            </label>
+                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms1','#popupDialogTermsBtn1')">[자세히보기]</button>
+                        </div>
+                        <div class="text-wrap">
+                            <div class="text-list-wrap">
+                                <ul class="text-list">
+                                    <li>수집 항목 : 이름, 회사명, 이메일, 연락처</li>
+                                    <li>수집 목적 : 제품 카탈로그 제공, 고객 응대</li>
+                                    <li>보유 및 이용기간은 수집일로부터 1년간 보관 후 파기</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terms-item">
+                        <div class="checkbox chk-terms-wrap">
+                            <input type="checkbox" class="checkbox" id="checkbox-01-2"
+                                name="checkbox-01-2">
+                            <label for="checkbox-01-2" class="checkbox-label">
+                                <span class="custom-checkbox"></span>
+                                
+                                <span class="txt">
+                                    [선택] 마케팅 정보 수신 및 활용에 동의합니다.
+                                </span>
+                            </label>
+                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms2','#popupDialogTermsBtn2')">[자세히보기]</button>
+                        </div>
+                    </div>
+                    <div class="terms-item">
+                        <div class="checkbox chk-terms-wrap">
+                            <input type="checkbox" class="checkbox" id="checkbox-01-3"
+                                name="checkbox-01-3">
+                            <label for="checkbox-01-3" class="checkbox-label">
+                                <span class="custom-checkbox"></span>
+                                
+                                <span class="txt">
+                                    [선택] 개인정보의 국외 이전에 동의합니다.
+                                </span>
+                            </label>
+                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms3','#popupDialogTermsBtn3')">[자세히보기]</button>
+                        </div>
+                    </div>
+                </div><!-- //terms-wrap -->
+            </div> <!-- //terms-chk-wrap -->
+        </div>
+        <div class="pop-footer">
+          <div class="btn-wrap">
+            <div class="btn-group">
+              <button type="button" class="act-btn-lg btn-outline01 btn-cancel" onclick="pubUi.popUp.close('#popupForm1','#popupFormBtn1')">취소</button>
+              <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="">동의 후 다운로드</button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupForm1','#popupFormBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- popup : 약관 자세히보기 팝업 : 개인정보 수집 및 이용에 동의합니다 -->
+  <div class="modal-pop full" id="popupDialogTerms1">
+    <div class="pop-wrap input-form">
+        <div class="pop-header">
+            <!-- 각 이용 동의 약관별 타이틀 노출 -->
+            <h3 class="title">개인정보 수집 및 이용 동의</h3>
+            <!-- <h3 class="title">마케팅 정보 수신 동의</h3> -->
+            <!-- <h3 class="title">개인정보 국외 이전 동의</h3> -->
+
+        </div>
+        <div class="pop-content">
+          <p class="desc">㈜ LG에너지솔루션은 다운로드 및 문의 대응을 위해 아래와 같이 
+            개인정보를 수집 및 이용합니다.</p> <!-- 개인정보 수집 및 이용 동의 문구 -->
+          <!-- 마케팅 정보 수신 동의 문구 -->
+          <!-- <p class="desc">㈜ LG에너지솔루션은 프로모션, 뉴스레터 등유용한 정보를 제공하기 위해 아래와 같이 개인정보를 활용합니다.</p> 
+           //마케팅 정보 수신 동의 문구 -->
+          <!-- 개인정보 국외 이전 동의 관련 문구 -->
+          <!-- <p class="desc">㈜ LG에너지솔루션은 고객님의 정보를 안정적으로 관리하기 위해 
+            클라우드 시스템을 사용하며, 이에 따라 개인정보가 국외로 이전될 수 
+            있습니다.
+            </p> //개인정보 국외 이전 동의 관련 문구 -->
+          
+            <div class="terms-wrap">
+                <ul class="terms-item-list">
+                    <li class="terms-item">
+                        <strong>1. 수집 항목</strong>
+                        <p>이름, 이메일, 연락처, 회사명</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>2. 활용 목적</strong>
+                        <p>마케팅 정보 제공</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>3. 수신 방법</strong>
+                        <p>이메일</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>4. 개인정보 보유 및 이용 기간</strong>
+                        <p>수집일로부터 1년간 보관 후 파기</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>5. 동의 거부권 및 불이익</strong>
+                        <p>동의를 거부할 수 있으며, 거부 시 콘텐츠 제공이 제한될 수 
+                            있습니다.</p>
+                    </li>
+                </ul>                
+            </div> <!--//terms-wrap -->            
+        </div>
+        <div class="pop-footer">
+          <div class="btn-wrap">
+            <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="pubUi.popUp.close('#popupDialogTerms1','#popupDialogTermsBtn1');">확인</button>
+          </div>
+        </div>
+        <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms1','#popupDialogTermsBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- popup : 약관 자세히보기 팝업 : 마케팅 정보 수신 동의 -->
+  <div class="modal-pop full" id="popupDialogTerms2">
+    <div class="pop-wrap input-form">
+        <div class="pop-header">
+            <!-- 각 이용 동의 약관별 타이틀 노출 -->            
+            <h3 class="title">마케팅 정보 수신 동의</h3>
+
+        </div>
+        <div class="pop-content">          
+          <!-- 마케팅 정보 수신 동의 문구 -->
+          <p class="desc">㈜ LG에너지솔루션은 프로모션, 뉴스레터 등유용한 정보를 제공하기 위해 아래와 같이 개인정보를 활용합니다.</p>           
+            <div class="terms-wrap">
+                <ul class="terms-item-list">
+                    <li class="terms-item">
+                        <strong>1. 수집 항목</strong>
+                        <p>이름, 이메일, 연락처, 회사명</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>2. 활용 목적</strong>
+                        <p>마케팅 정보 제공, 뉴스레터 발송 등</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>3. 수신 방법</strong>
+                        <p>이메일</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>4. 개인정보 보유 및 이용 기간</strong>
+                        <p>수집일로부터 1년간 보관 후 파기</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>5. 동의 거부권 및 불이익</strong>
+                        <p>동의를 거부할 수 있으며, 거부 시 콘텐츠 제공이 제한될 수 
+                            있습니다.</p>
+                    </li>
+                </ul>                
+            </div> <!--//terms-wrap -->            
+        </div>
+        <div class="pop-footer">
+          <div class="btn-wrap">
+            <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="pubUi.popUp.close('#popupDialogTerms2','#popupDialogTermsBtn2');">확인</button>
+          </div>
+        </div>
+        <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms2','#popupDialogTermsBtn2');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- popup : 약관 자세히보기 팝업 : 개인정보 국외 이전 동의 -->
+  <div class="modal-pop full" id="popupDialogTerms3">
+    <div class="pop-wrap input-form">
+        <div class="pop-header">
+            <!-- 각 이용 동의 약관별 타이틀 노출 -->            
+            <h3 class="title">개인정보 국외 이전 동의</h3>
+
+        </div>
+        <div class="pop-content">          
+          <!-- 개인정보 국외 이전 동의 관련 문구 -->
+          <p class="desc">㈜ LG에너지솔루션은 고객님의 정보를 안정적으로 관리하기 위해 
+            클라우드 시스템을 사용하며, 이에 따라 개인정보가 국외로 이전될 수 
+            있습니다.</p>
+          
+            <div class="terms-wrap">
+                <ul class="terms-item-list">
+                    <li class="terms-item">
+                        <strong>1. 이전 받는 자</strong>
+                        <p>Microsoft</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>2. 이전 국가</strong>
+                        <p>미국</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>3. 이전 항목</strong>
+                        <p>이름, 이메일, 연락처, 회사명</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>4. 이전 목적</strong>
+                        <p>데이터 저장 및 시스템 운영</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>5. 이전 방법</strong>
+                        <p>수집 즉시 네트워크 전송</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>6. 개인정보 보유 및 이용 기간</strong>
+                        <p>수집일로부터 1년간 보관 후 파기</p>
+                    </li>
+                    <li class="terms-item">
+                        <strong>7. 동의 거부권 및 불이익</strong>
+                        <p>동의를 거부할 수 있으며, 거부 시 콘텐츠 제공이 제한될 수 
+                            있습니다.</p>
+                    </li>
+                </ul>                
+            </div> <!--//terms-wrap -->            
+        </div>
+        <div class="pop-footer">
+          <div class="btn-wrap">
+            <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="pubUi.popUp.close('#popupDialogTerms3','#popupDialogTermsBtn3');">확인</button>
+          </div>
+        </div>
+        <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms3','#popupDialogTermsBtn3');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+    </div>
+  </div>
+  <!-- //08.26 다운로드 리드젠 팝업 추가 : E -->
 
   <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
   <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
