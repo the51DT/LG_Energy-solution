@@ -235,7 +235,6 @@
 .sust-env .tab5-content .table-list-wrap .list-box + .list-box {margin-top: 1.5rem;}
 
 
-
 /* 지속가능경영 > 사회 */
 .sust-soc .tab-content .title-h1 {font-size: 1.5rem; font-weight: 700; line-height: 2.0625rem;}
 .sust-soc .tab-content .title-h2 {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
@@ -248,7 +247,7 @@
 .sust-env.sust-soc .vision-txt .vision-tit::before {content: ''; position: absolute; left: 0; top: 0; width: 3.125rem; height: .25rem; background-color: #82DCE5;}
 .sust-soc .vision-img::after {display: none;}
 .sust-soc .vision-wrap .vision-desc {margin-top: 2rem; font-size: 1rem; line-height: 1.6rem;}
-.sust-soc .article-content .article-desc {margin-top: 1rem;}
+.sust-soc .article-content .article-desc {margin-top: 1rem; font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem;}
 .sust-soc .box-content {margin-top: 1rem;}
 .sust-soc .mgmt-wrap {margin-top: 1rem;}
 .sust-soc .mgmt-tit-wrap {display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; padding: 1rem 0; background-color: #EAF3F8; border-radius: .5rem;}
@@ -262,6 +261,7 @@
 .sust-soc .mgmt-box .box-tit {display: block; padding: .5rem 0; font-size: .875rem; font-weight: 600; line-height: 1.3125rem; color: #171819;}
 .sust-soc .mgmt-box .box-desc {font-size: .875rem; font-weight: 400; line-height: 1.3125rem; color: #555758;}
 
+.sust-soc .sect-cont-area {padding-bottom: 3rem;}
 .sust-soc .sect-cont-sub article {padding: 1.5rem 1.25rem;}
 .sust-soc .cont-area-wrap .article-sub {font-size: 1rem; line-height: 1.6rem; margin-bottom: 1rem;}
 .sust-soc .article-content .text-wrap .desc {font-size: .875rem; line-height: 1.3125rem;}
@@ -272,6 +272,13 @@
 .sust-soc .article-content > .title-h4 {margin: 1rem 0;} 
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li {max-width: unset; width: 100%; padding: 1.5rem; border-radius: 1rem; border: 2px solid #E1E7EA;}
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li:nth-child(2) {max-width: unset; margin-top: .5rem;}
+.sust-soc .cont-area-wrap.type2 .box-container .box-list .img-area {width: 100%; height: 100%; margin: 1.5rem 0 0;}
+.sust-soc .tab1-content .content-item03 .bdr-box-wrap.nbdr {padding: 1.5rem 1rem 1.5rem;}
+.sust-soc .sect-cont-report {gap: 1rem;}
+.sust-soc .sect-cont-report .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
+.sust-soc .tab1-content .content-item04 .btn-wrap {gap: 0.5rem; padding-top: 0.5rem; }
+.sust-soc .tab1-content .content-item04 .btn-wrap > a {background: #fff; border: 1px solid #c9ced1; font-size: 0.875rem; font-weight: 600; line-height: 1.225rem; max-width: 100%;}
+
 .cont-area-wrap.type2 .box-container .box-list > li:not(:last-child)::after {display: none;}
 .cont-area-wrap.type2 .box-container .box-list > li .text-area .tit {font-size: .875rem; line-height: 1.3125rem;}
 .cont-area-wrap.type2 .box-container .box-list > li .text-area .desc {margin-top: .5rem; font-size: .875rem; line-height: 1.3125rem;}
@@ -335,6 +342,15 @@
 /* 지속가능경영 > 사회 > 정보보안 / 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1rem; line-height: 1.6rem;}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1rem;}
+
+.sust-soc [class^="content-item"] .content-sect:has(.csr-detail-list) {padding-top: 1.5rem;}
+.sust-soc .csr-acts > img {margin-bottom: 3rem;}
+.sust-soc .csr-detail-list {flex-direction: column; gap: 3rem;}
+.sust-soc .csr-detail .tit {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem;}
+.sust-soc .csr-detail > img {width: 100%; height: auto; object-fit: cover; aspect-ratio: 7 / 3;}
+.sust-soc .csr-detail .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 1rem;}
+.sust-soc .csr-detail:only-child .desc {width: 100%; margin-top: 1rem; margin-left: 0;}
+.sust-soc .csr-detail:only-child > img {height: auto; aspect-ratio: 15 / 7;}
 
 .sust-soc [class^="content-item"] .content-sect:has(.infosec-system) {padding-top: 3rem;}
 .sust-soc .infosec-system .table-wrap {margin-top: 1rem;}
