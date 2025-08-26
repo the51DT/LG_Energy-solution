@@ -190,6 +190,36 @@
 
 .modal-pop.tooltip { max-width: 90%; left: 5% !important; right: auto !important;}
 
+.modal-pop .pop-wrap.input-form .wrap-form-input {gap: 1.5rem;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap {display: block;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap > label { min-width: revert;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-box {margin-left: 0;}
+
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap > label > span {font-size: 1rem; }
+
+
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .text-wrap {padding-left: 1.62rem; margin-top: 0.25rem;}
+
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .text-wrap .text-list li:not(:last-child) {margin-bottom: 0.25rem;}
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox {display: block; font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem;}
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .txt > em {color: #33b0c6; font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem; } 
+.modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .btn-detail {font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem; margin-left: 0; padding-left: 1.62rem;}
+.modal-pop .pop-wrap.input-form .terms-item-list .terms-item strong {font-size: 0.875rem; font-weight: 600; line-height: 1.3125rem;}
+.modal-pop .pop-wrap.input-form .terms-item-list .terms-item p {font-size: 0.875rem; line-height: 1.3125rem;}
+.modal-pop .pop-wrap.input-form .terms-item-list .terms-item:last-child {padding-bottom: 0;}
+.modal-pop .pop-wrap.input-form .email-input-wrap {display: grid; grid-template-columns: 8.78rem 0.9375rem 9rem; align-items: center; text-align: center; gap: 0.5rem;}
+.modal-pop .pop-wrap.input-form .email-input-wrap .input-box {display: flex;}
+
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap {display: flex; justify-content: center;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap:has(.btn-group) {display: block;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap button,
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap a {font-size: 1rem; line-height: 1.4rem;}
+.modal-pop .pop-wrap.input-form .terms-wrap .terms-item:not(:last-child) {margin-bottom: 0.75rem;}
+
+.modal-pop.full .pop-wrap {padding: 1.88rem 1.25rem 1.5rem;}
+.modal-pop.full .pop-wrap > div {flex: revert;}
+.modal-pop.full .pop-wrap .pop-content {margin-bottom: auto;}
+
 .page-map-wrap {padding: 0; position: fixed; top: 0; padding-top: 3.25rem;}
 .breadcrumb-wrap  > .select-cate:first-child {padding-left: 1.25rem;}
 .breadcrumb-wrap  > .select-cate:last-child {padding-right: 1.25rem;}
