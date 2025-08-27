@@ -383,7 +383,41 @@
 .sust-soc .title-desc {font-size: 1rem; line-height: 1.6rem;}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1rem;}
 
+.sust-soc #tab4-content [class^="content-item"] .content-sect:has(.human-mgmt) {padding-top: 3rem;}
+.sust-soc .title-desc + .box-container.grid-type {margin-top: 1.5rem;}
+.sust-soc .content-item02 .infosec-protect .box-container.grid-type .box-content:nth-child(1) .bdr-box-wrap,
+.sust-soc .content-item02 .infosec-protect .box-container.grid-type .box-content:nth-child(2) .bdr-box-wrap {height: 100%;}
+.sust-soc .infosec-protect .box-container.grid-type {grid-template-columns: 1fr; gap: 0.5rem;}
+.sust-soc .infosec-protect .box-container:not(:first-child) .box-content {margin-top: 0;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head {flex-direction: row; gap: 1.25rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .num {min-width: unset; font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .title {font-size: 1rem; line-height: 1.6rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .desc {margin-top: 0.5rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .text-list > li {font-size: 0.875rem; line-height: 1.3125rem;}
+.sust-soc .infosec-protect .box-container.grid-type.grid3 .box-head {display: grid; grid-template-columns: 3rem 1fr; column-gap: 0.25rem; row-gap: 0.5rem;}
+.sust-soc .infosec-protect .box-container.grid-type.grid3 .box-head > .desc {grid-column: 1 / 3; padding-inline: 1.25rem;}
+.sust-soc .infosec-protect .img-wrap {width: 20rem; margin: 1.5rem auto;}
+.sust-soc .box-container.grid-type .box-content .box-head .num > img {width: 3rem; height: 3rem;}
+.sust-soc .box-container.grid-type .box-content .box-head:has(.num > img) .text-box .title {margin-top: 0.875rem;}
+.sust-soc .box-container.grid-type .box-content .box-head:has(.num > img) .text-box .desc {margin-top: 0.5rem;}
+.sust-soc .safety-improve {gap: 3rem;}
+.sust-soc .safety-improve [class^="title-h"] + .title-desc {margin-block: 1rem;}
+.sust-soc .safety-improve .safety-improve-box {flex-direction: column; gap: 1.5rem; padding: 1.5rem;}
+.sust-soc .safety-improve .safety-improve-box > div > img {width: 5rem; height: 5rem;}
+.sust-soc .safety-improve .safety-improve-box .tit {font-size: 1rem; line-height: 1.6rem; margin-top: 1rem;}
+.sust-soc .safety-improve .safety-improve-box .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem;}
+.sust-soc .safety-improve .safety-improve-ico {flex-direction: column; gap: 0.5rem;}
+.sust-soc .safety-improve .safety-improve-ico > div {min-height: unset; padding: 1.5rem; border-radius: 0.5rem;}
+.sust-soc .safety-improve .safety-improve-ico > div > img {width: 5rem; height: 5rem;}
+.sust-soc .safety-improve .safety-improve-ico .tit {font-size: 1rem; line-height: 1.6rem; margin-top: 1rem;}
+.sust-soc .safety-improve .safety-improve-ico .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem;}
+.sust-soc .safety-improve .safety-improve-img {flex-direction: column; gap: 2rem;}
+.sust-soc .safety-improve .safety-improve-img > div > img {height: auto; width: 100%; object-fit: cover;}
+.sust-soc .safety-improve .safety-improve-img > div > p {margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.3125rem;}
+.sust-soc .safety-improve .csr-detail:only-child > img {width: 100%; height: auto; aspect-ratio: 139 / 72;}
+
 .sust-soc [class^="content-item"] .content-sect:has(.human-mgmt) {padding-top: 2rem;}
+.sust-soc .human-mgmt .img-wrap {width: 20rem; margin-top: 1rem;}
 .sust-soc .human-mgmt .btn-wrap {margin-top: 1.5rem;}
 .sust-soc .human-mgmt .btn-wrap [class^="icon-btn"] {width: 100%; font-size: 0.875rem; line-height: 1.225rem;}
 .sust-soc .human-mgmt .human-mgmt-list {flex-direction: column; margin-top: 3rem;}
@@ -416,6 +450,7 @@
 .sust-soc .infosec-activity > li {display: flex; align-items: center; gap: 1rem; padding: 1.5rem 1.25rem; border-radius: 0.5rem; text-align: left;}
 .sust-soc .infosec-activity .num {flex-shrink: 0; margin-inline: 0; margin-bottom: 0; width: 2rem; height: 2rem; font-size: 0.875rem; line-height: 1.3125rem;}
 .sust-soc .infosec-activity .desc {font-size: 1rem; line-height: 1.6rem;}
+.sust-soc .infosec-activity.ty02 {margin-top: 1rem; gap: 0.5rem;}
 
 
 /* 공시정보 (disc) */

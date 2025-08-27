@@ -505,6 +505,7 @@
 .sust-soc .title-desc .text-list-wrap {margin-top: 1.25rem;}
 .sust-soc .title-desc .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.625rem;}
 
+.sust-soc #tab4-content [class^="content-item"] .content-sect:has(.human-mgmt) {padding-top: 4.625rem;}
 .sust-soc .title-desc + .box-container.grid-type {margin-top: 2.5rem;}
 .sust-soc .content-item02 .infosec-protect .box-container.grid-type .box-content:nth-child(1) .bdr-box-wrap,
 .sust-soc .content-item02 .infosec-protect .box-container.grid-type .box-content:nth-child(2) .bdr-box-wrap {height: 100%;}
