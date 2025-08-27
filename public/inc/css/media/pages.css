@@ -746,6 +746,7 @@
 .pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list > li {width: calc(50% - (0.5rem / 2));}
 .pind .indus-bottom .bottom-list > li > img {width: 6.10713rem; height: 4.75rem; margin-bottom: 0.5rem;}
 .pind .indus-bottom .bottom-list > li > p {font-size: 1rem; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
+.pind .indus-bottom .bottom-col {max-width: unset;}
 .pind .indus-bottom .bottom-col > div {gap: 1rem;}
 .pind .indus-bottom .bottom-col .btn-wrap {flex-direction: column;}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] {padding: 1rem 1.5rem; font-size: 1rem; line-height: 1.6rem;}
