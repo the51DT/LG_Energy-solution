@@ -1192,7 +1192,7 @@
 .sgov .indep-dir .btn-wrap {margin-top: 2.5rem;}
 .sgov .indep-dir .btn-wrap [class^="icon-btn"] {width: fit-content; gap: 1.25rem;}
 
-.sgov .comp-officer .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.25rem;}
+.sgov .comp-officer [class^="title-h"] { margin-bottom: 1.25rem;}
 .sgov .comp-officer > ol {display: flex; gap: 1.25rem;}
 .sgov .comp-officer > ol > li {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
 .sgov .comp-officer > ol > li .num {display: flex; justify-content: center; align-items: center; width: 2.5rem; height: 2.5rem; border-radius: 12.5rem; background-color: var(--colorSemantic-light-cyan400); font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-on-primary); text-align: center;}

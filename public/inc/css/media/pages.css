@@ -1051,7 +1051,7 @@
 
 .sgov [class^="content-item"] .content-sect:has(> .btn-wrap:only-child) {padding-top: 2rem;}
 .sgov [class^="content-item"] .content-sect:has(.comp-officer) {padding-top: 1.5rem;}
-.sgov .comp-officer .tit {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem;}
+.sgov .comp-officer [class^="title-h"] {margin-bottom: 1rem;}
 .sgov .comp-officer > ol {flex-direction: column; gap: 0.5rem;}
 .sgov .comp-officer > ol > li {flex-direction: row; gap: 1rem; padding: 1rem 1.25rem; border-radius: 0.5rem; text-align: left;}
 .sgov .comp-officer > ol > li .num {flex-shrink: 0; width: 2rem; height: 2rem; font-size: 0.875rem; line-height: 1.3125rem;}
