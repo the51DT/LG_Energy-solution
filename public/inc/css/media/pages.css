@@ -954,7 +954,7 @@
 
 .pmtl .mat-str-wrap {flex-direction: column; gap: 0.5rem;}
 .pmtl .mat-str-wrap > div {padding: 1.5rem; border-radius: 0.5rem;}
-.pmtl .mat-str-wrap > div > img {width: 5rem; height: 5rem; margin-bottom: 1rem;}
+.pmtl .mat-str-wrap > div > img {margin-bottom: 1rem;}
 .pmtl .mat-str-wrap > div > p {font-size: 1.125rem;line-height: 1.75rem;}
 .pmtl .mat-str-wrap > div .text-list-wrap {margin-top: 0.5rem;}
 .pmtl .mat-str-wrap > div .text-list-wrap .text-list > li {font-size: 0.875rem; line-height: 1.3125rem;}
