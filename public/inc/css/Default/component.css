@@ -281,6 +281,23 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .box-content .bdr-box-info {margin-top: 1rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color:var(--colorElement-light-text-text-default02);}
 .bdr-box-wrap {padding: 2.5rem; border-radius: 0.625rem; border:4px solid var(--colorElement-light-stroke-stroke-default04); margin-top: 1rem;}
 .bdr-box-wrap.nbdr {padding: 1.87rem; border: 0; border-radius: 0.5rem; background: var(--colorElement-light-fill-fill-default04);}
+/*table-type 추가 */
+.bdr-box-wrap.table-type {padding: 2.5rem; background: #fff; margin-top: 0; border: 0;}
+.bdr-box-wrap.table-type .box-head {flex-direction: row; justify-content: space-between; gap: 6.25rem;}
+.bdr-box-wrap.table-type .list:not(:last-child)::after {content: ""; width: 100%; height: 1px; background:#C9CED1; display: block; margin: 2.5rem 0;}
+.bdr-box-wrap.table-type .box-head .type {color: #33b0c6; font-size: 1.25rem; font-weight: 600; line-height: 2rem; width: 18.75rem;}
+.bdr-box-wrap.table-type .box-head .text-box-list {flex-grow:1; display: flex;}
+.bdr-box-wrap.table-type .box-head .text-box-list:has(ul) {gap: 7.5rem;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul {flex: 1 1 auto;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li {display: flex; justify-content: space-between;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li:not(:last-child) {padding-bottom: 1.25rem;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li > em {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li > em.noti::after {content:"*"; color:#33B0C6; font-size: 1.75rem; font-weight: 600; line-height: 2.625rem;}
+.box-noti-wrap {padding-top: 2.5rem;}
+.box-noti-wrap .noti-txt {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-bottom: 0.62rem;}
+.box-noti-wrap .noti-sub {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color:#555758;}
+
 .nbdr-box-wrap {padding: 3.75rem; background: #fff; border-radius: 1rem; border: 0; margin-top: 1.25rem;}
 .nbdr-box-wrap.type2 {padding: 3rem; margin-top: 0;}
 .nbdr-box-wrap.type2.flex-box {flex-direction: column; gap: 2.5rem;}
@@ -355,6 +372,20 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .cont-area-title {font-size: 2.5rem; font-weight: 600; line-height: 3.5rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 2.5rem;}
 .cont-area-title.type2 {margin-bottom: 3.75rem;}
 .cont-list-col2 {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;}
+
+.article-section > section {padding-bottom: 5rem;}
+.article-section > section:last-child {padding-bottom: 0;}
+.article-section > section [class^=title-] {margin-bottom: 1.88rem;}
+.article-section .list-item-box {display: grid;  grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.article-section .list-item-box > .item {border-radius: 1rem; background: #f3f5f7; padding: 2.5rem; display: flex; justify-content: center; gap: 2rem; align-items: center;} 
+.article-section .list-item-box > .item .ico {color: #fff; font-size: 1rem; font-weight: 600; line-height: 1.6rem; position: relative; z-index: 0; display: block; text-indent: 15px;} 
+.article-section .list-item-box > .item .ico::before {content:""; width: 2.5rem; height: 2.5rem; display: inline-block; background: #5ad1dc; border-radius: 50%; position: absolute; top:50%; left: 0; transform: translateY(-50%); z-index: -1;}
+.article-section .list-item-box > .item p {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: #555758; flex-grow: 1;}
+.article-section .content-article img {width: 100%; height: 100%; object-fit: cover;}
+.article-section .content-article .btn-wrap {display: flex; justify-content: center; gap: 1.25rem; padding-top: 3.75rem;}
+.article-section .content-article .btn-wrap > a {width: 100%; max-width: 26.25rem; background: #fff;}
+
+
 /* grid / flex content-type */
 .sect-item-box.grid-type {display: grid; gap: 1.25rem; grid-template-columns: repeat(3, 1fr); } 
 .sect-item-box.grid-type .grid-item {height: auto;}

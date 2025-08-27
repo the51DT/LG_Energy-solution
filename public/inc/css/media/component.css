@@ -151,11 +151,39 @@
 .bdr-box-wrap .box-cont .text-wrap .title {font-size: 1rem; line-height: 1.5rem;}
 .bdr-box-wrap .box-cont .text-wrap .desc {font-size: 0.875rem; line-height: 1.4rem;}
 
+/*table-type 추가 */
+.bdr-box-wrap.table-type {padding: 1.5rem 1.25rem;}
+.bdr-box-wrap.table-type .box-head {display: block;}
+.bdr-box-wrap.table-type .list:not(:last-child)::after {margin: 1.5rem 0;}
+.bdr-box-wrap.table-type .box-head .type {font-size: 1.125rem; line-height: 1.75rem; width: 100%; margin-bottom: 1rem;}
+.bdr-box-wrap.table-type .box-head .text-box-list {display: block;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul:not(:last-child) {margin-bottom: 1rem;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li {display: block;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li:not(:last-child) {padding-bottom: 1rem;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li > p {font-size: 1rem; font-weight: 600; line-height: 1.6rem;}
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li > em {font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
+.bdr-box-wrap.table-type .box-head .text-box-list > ul > li > em.noti::after { font-size: 1.25rem; line-height: 1.875rem;}
+.box-noti-wrap {padding-top: 2.5rem;}
+.box-noti-wrap .noti-txt {font-size: 1rem; font-weight: 400; line-height: 1.6rem; margin-bottom: 0.5rem;}
+.box-noti-wrap .noti-sub {font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem;}
+
 .cont-area-wrap.type2 .cont-area-sect > section:not(:last-child) .box-container::after {margin: 2.5rem 0;}
-
-
 .cont-area-title {font-size: 1.5rem; line-height: 2.1rem; margin-bottom: 1.25rem;}
 .cont-area-title.type2 {margin-bottom: 2rem;}
+
+.article-section {margin-top: 2rem;}
+.article-section > section {padding-bottom: 2rem;}
+.article-section .list-item-box {display: block;}
+.article-section .list-item-box > .item {padding: 1.5rem 1.25rem; gap: 1.2rem;}
+.article-section .list-item-box > .item .ico {font-size: 0.875rem; line-height: 1.3125rem; text-indent: 7px;}
+.article-section .list-item-box > .item .ico::before {width: 1.5rem; height: 1.5rem;}
+.article-section .list-item-box > .item p {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
+.article-section .list-item-box > .item:not(:last-child) {margin-bottom: 1rem;}
+.article-section .content-article .btn-wrap {padding-top: 1rem; display: block;}
+.article-section .content-article .btn-wrap > a {max-width: 100%; font-size: 0.875rem; font-weight: 600; line-height: 1.225rem;}
+.article-section .content-article .btn-wrap > a:not(:last-child) {margin-bottom: 0.5rem;}
+.article-section .box-container.grid-type {display:block;}
+.article-section .box-container.grid-type .box-content:not(:last-child) {margin-bottom: 1rem;}
 
 .asterisk-text {gap: 0; font-size: 0.875rem; line-height: 1.3125rem;}
 .asterisk-text::before {content: "*\00a0"; display: block; margin: 0; width: auto; height: auto; background-image: none;}
