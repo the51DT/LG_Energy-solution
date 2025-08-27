@@ -2236,3 +2236,17 @@
 .foot-policy [class^="content-item"] { padding-top: 0; }
 .foot-policy .selectbox-wrap { margin-bottom: 1.875rem; display: flex; justify-content: flex-end; }
 .foot-policy .selectbox-wrap.type2 .select-cate { width: 22.5rem; }
+.foot-policy .text-bold {font-size: 1.25rem; font-weight: 500; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.foot-policy .text-light {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.foot-policy .desc-wrap {display: flex; flex-direction: column; gap: 2.5rem;}
+.foot-policy [class^="text-"] + [class^="text-"] {margin-top: -1rem;}
+.foot-policy .nest-list { font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.foot-policy .nest-list > li {display: flex; gap: 2rem;}
+.foot-policy .nest-list > li > span {width: 13rem; font-weight: 600; color: var(--colorElement-light-text-text-primary);}
+.foot-policy .nest-list > li + li {margin-top: 1.25rem; padding-top: 2rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+.foot-policy .nest-list > li {}
+.foot-policy .nest-list .text-list-wrap {color: var(--colorElement-light-text-text-default02);}
+.foot-policy .nest-list .text-list-wrap .text-list > li::before {top: 0.69rem; transform: unset;}
+.foot-policy .table-wrap table thead > tr:not(:first-child) > th {border-width: 1px;}
+.foot-policy .table-wrap.ty02 table tbody > tr > td[rowspan]:not(:first-child) {border-left: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.foot-policy {}

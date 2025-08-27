@@ -1922,3 +1922,11 @@
 .foot-guide .warning-policy { padding: 1.25rem; }
 .foot-guide .warning-prohibition li, .foot-guide .warning-policy li { font-size: 0.875rem; line-height: 1.3125rem; }
 .foot-guide .warning-prohibition .text-list li::before, .foot-guide .warning-policy .text-list li::before { font-size: 0.875rem; }
+
+/* 개인정보처리방침 */
+.foot-policy.wrap:not(.main_p) .content-header { margin-top: 0; }
+.foot-policy .content-header .title-h1 {margin-bottom: 1rem;}
+.foot-policy.wrap:not(.main_p) .content-header .subp-tit { font-size: 1rem; line-height: 1.6rem; }
+.foot-policy .selectbox-wrap { margin-bottom: 1.5rem;}
+.foot-policy .selectbox-wrap.type2 .select-cate { width: 100%; }
+.foot-policy .accordion-list {margin-inline: -1.25rem;}
