@@ -107,7 +107,7 @@ var pubUi = {
         // 헬퍼: 개별 select-cate에 바인딩
         const bindOne = (root) => {
             if (!root || this._boundSelects.has(root)) return; // 중복 방지
-            console.log("root : " , root)
+            // console.log("root : " , root)
             const targetBtn = root.querySelector("button");
             const targetMenu = root.querySelector(".select-menu");
 
@@ -131,7 +131,7 @@ var pubUi = {
                         menu.classList.add("on");
                     }
 
-                    console.log("targetBtn : ", targetBtn);
+                    // console.log("targetBtn : ", targetBtn);
                 });
             }
 

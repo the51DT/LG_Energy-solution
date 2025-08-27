@@ -1867,11 +1867,34 @@
 .bmts-box .bmts-tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819}
 .bmts-box .bmts-desc {padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758;}
 
+/* B.around 다이어그램 이미지 팝업영역 */
+.serv_baround_chart .model-wrap {width: 100%; height: 18.75rem; padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: center; background-color: #F3F5F7; border-radius: 62.4375rem; position: relative;}
+.serv_baround_chart .model-box-wrap {display: flex;}
+.serv_baround_chart .model-box .model-btn {width: 1.25rem; height: 1.25rem; background: url(../../images/img/serv03_icon_07.png) center/contain no-repeat;}
+.serv_baround_chart .left-area {position: absolute; left: 3rem; top:2.5rem; }
+.serv_baround_chart .left-area .model-box {border-radius: 100%; width: 13.25rem; height: 13.25rem; position: relative;}
+.serv_baround_chart .left-area .model-box:first-child {background: #5AD1DC;}
+.serv_baround_chart .left-area .model-box:last-child {background: #9988DF; margin-left: -40px; mix-blend-mode: multiply;}
+.serv_baround_chart .left-area .model-box .model-group {display: flex; flex-direction: column; align-items: center; position: absolute; top: 6.87rem; left: 50%; transform: translateX(-50%);}
+.serv_baround_chart .left-area .model-box .model-tit {color: #fff; font-size: 1rem; font-weight: 600; line-height: 1.6rem; white-space: nowrap; padding-bottom: 0.25rem;}
+.serv_baround_chart .left-area .model-box .model-icon {width: 4rem; height: 4rem; position: absolute; top: 2.31rem; left: 50%; transform: translateX(-50%);}
+.serv_baround_chart .left-area .model-box .model-btn {width: 1.5rem; height: 1.5rem; background-image: url(../../images/img/serv03_icon_07_wh.png);}
+.serv_baround_chart .right-area {padding: 1rem; position:absolute; right: 3.87rem; top: 4.5rem;}
+.serv_baround_chart .right-area .model-box {display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1.5rem;}
+.serv_baround_chart .right-area .model-box:not(:last-child) {padding-right: 1rem;}
+.serv_baround_chart .right-area .model-box .model-group {display: flex; gap: 0.25rem; font-size: 1rem; color: #555758; line-height: 1.6rem; font-weight: 600; align-items: center;}
+.serv_baround_chart .right-area .model-box .model-icon { width: 7.5rem; height: 7.5rem; background-color: #fff; border-radius: 50%; position: relative;}
+.serv_baround_chart .right-area .model-box .model-icon img {width: 3rem; height: 3rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.serv_baround_chart .center-bdr-line {position: absolute; top: 50%; transform: translateY(-50%); left: 26.8rem;}
+.serv_baround_chart .center-bdr-line img {display: block; width: 9.9375rem; height: auto;}
+
+
+
 /* 서비스 - B-Lifecare */
 .serv-blifecare .page-map-wrap {margin-top: 6.25rem;}
 .serv-blifecare .icon-link2 {border-radius: calc(100 / 16 * 1rem); color: #fff;}
 .serv-blifecare .icon-link2:hover {background-color: var(--colorElement-light-fill-fill-primary);}
-.serv-blifecare .icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external.svg);}
+.serv-blifecare .icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external_bl.svg);}
 .serv-blifecare .brand-info {margin-top: 5rem;}
 .serv-blifecare .brand-info .brand-logo {max-width: 44.44rem; margin: 0 auto;}
 .serv-blifecare .brand-info .brand-desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; color: #171819;}
@@ -1921,6 +1944,13 @@
 .serv-blifecare .modal-pop.dialog .pop-wrap .img-wrap {max-height: 22.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #C9CED1;}
 .serv-blifecare .modal-pop.dialog .pop-wrap .img-wrap > img {display: block; margin: 0 auto; width: auto; height: auto;}
 .serv-blifecare .modal-pop.dialog .pop-wrap .desc {padding-top: 2.5rem; font-size: 1.125rem; line-height: 1.8rem; color: #555758;}
+/* 서비스 공통 팝업 */
+.modal-pop .pop-wrap.service {width: 62.5rem; max-width: 62.5rem;}
+.modal-pop .pop-wrap.service .pop-header {padding-bottom: 2.5rem;}
+.modal-pop .pop-wrap.service .img-wrap {max-height: 22.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #C9CED1;}
+.modal-pop .pop-wrap.service .img-wrap > img {display: block; margin: 0 auto; width: auto; height: auto;}
+.modal-pop .pop-wrap.service .desc {padding-top: 2.5rem; font-size: 1.125rem; line-height: 1.8rem; color: #555758;}
+
 
 
 
