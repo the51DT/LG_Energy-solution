@@ -93,8 +93,8 @@ aside > img{cursor: pointer;}
 .sitemap_pop-wrap .depth03 a{color: var(--text-text-disabled, #B4B8BA);font-size: var(--size-desktop-H4, 1.25rem);font-weight: 500;line-height: var(--line-height-desktop-H4, 2rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
 
 /* 디자인 레이아웃 재작업 - 0731 */
-.content-header_bg {position: relative; color: #fff; text-align: center; height: 30rem; top: 6.25rem;}
-.content-header_bg .visual-video {width: 100%; height: 30rem;} 
+.content-header_bg {position: relative; color: #fff; text-align: center; height: 36.25rem;}
+.content-header_bg .visual-video {width: 100%; height: 36.25rem;} 
 .content-header_bg video {width: 100%; height: 100%; object-fit: fill;}
 .content-header_bg img {width: 100%; height: 100%;  object-fit: cover;}
 .content-header_text {position: absolute; bottom: 7.5rem; left: 50%; transform: translateX(-50%);}
