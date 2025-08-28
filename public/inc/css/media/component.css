@@ -237,12 +237,10 @@
 .modal-pop .pop-wrap.input-form .terms-item-list .terms-item:last-child {padding-bottom: 0;}
 .modal-pop .pop-wrap.input-form .email-input-wrap {display: grid; grid-template-columns: 8.78rem 0.9375rem 9rem; align-items: center; text-align: center; gap: 0.5rem;}
 .modal-pop .pop-wrap.input-form .email-input-wrap .input-box {display: flex;}
-
-.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap {display: flex; justify-content: center;}
-.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap:has(.btn-group) {display: block;}
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap button,
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap a {font-size: 1rem; line-height: 1.4rem;}
 .modal-pop .pop-wrap.input-form .terms-wrap .terms-item:not(:last-child) {margin-bottom: 0.75rem;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap .btn-cancel {max-width: 6.25rem;}
 
 .modal-pop.full .pop-wrap {padding: 1.88rem 1.25rem 1.5rem;}
 .modal-pop.full .pop-wrap > div {flex: revert;}
