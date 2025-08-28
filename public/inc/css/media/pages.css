@@ -1965,3 +1965,14 @@
 .foot-policy .selectbox-wrap { margin-bottom: 1.5rem;}
 .foot-policy .selectbox-wrap.type2 .select-cate { width: 100%; }
 .foot-policy .accordion-list {margin-inline: -1.25rem;}
+
+/* 이메일 무단 수집거부 */
+#popupEmailBlock .pop-wrap {width: auto; padding: 1.875rem 1.5rem 1.5rem; max-height: unset;}
+#popupEmailBlock .pop-wrap .pop-header {padding-bottom: 1.5rem;}
+#popupEmailBlock .pop-wrap .pop-footer {padding-top: 1.875rem;}
+#popupEmailBlock .pop-wrap .pop-footer .btn-wrap {width: 100%;}
+.email-block {gap: 1rem; padding: 1.25rem;}
+.email-block .img-wrap {padding: 0;}
+.email-block .link-wrap {flex-direction: column; gap: 0.5rem; padding-top: 1rem;}
+.email-block .link-wrap > p {font-size: 0.875rem; line-height: 1.3125rem;}
+.email-block .link-wrap > a {line-height: 1.3125rem;}
