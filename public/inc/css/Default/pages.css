@@ -1827,7 +1827,7 @@
 .service .content-item01 .content-sect { padding-top: 0; }
 .service .article-content .article-desc { padding: 1.88rem 0; font-size: 1.25rem; line-height: 2rem; }
 .adv-wrap, .serv-trading .service-wrap { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.88rem;}
-.adv-wrap .adv-box { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem; width: calc(33.33% - 1rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem; }
+.adv-wrap .adv-box { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 1.25rem; width: calc(33.33% - 1rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem; }
 .adv-wrap .adv-box .adv-img {width: 7.5rem; height: 7.5rem;}
 .adv-wrap .adv-box .adv-tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; text-align: center; }
 .adv-wrap .adv-box .adv-desc { font-size: 1rem; line-height: 1.6rem; color: #555758; text-align: center; }
@@ -1837,8 +1837,13 @@
 .serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
 .serv-trading .service-wrap .service-desc { padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758; }
 .service .service-btn-wrap { display: flex; gap: 1.25rem; justify-content: center; margin-top: 7.5rem; }
-.service .service-btn-wrap > button {background-color: #fff;}
-.service .service-btn-wrap > button:hover {background-color: var(--colorElement-light-fill-fill-default00);}
+.service .service-btn-wrap > button,
+.service .service-btn-wrap > a {background-color: #fff;}
+.service .service-btn-wrap > button:hover,
+.service .service-btn-wrap > a:hover {background-color: var(--colorElement-light-fill-fill-default00);}
+
+.serv-trading #content01 .article-img {position: relative;}
+.serv-trading #content01 .article-img .lottie-wrap {width: 5rem; height: 5rem; position: absolute; top:21.31rem; left: 50%; transform: translateX(-50%);}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {display: flex; flex-direction: column; align-items: center; margin-top: 5rem;}
@@ -1920,8 +1925,8 @@
 .serv-blifecare .icon-link2 {border-radius: calc(100 / 16 * 1rem); color: #fff;}
 .serv-blifecare .icon-link2:hover {background-color: var(--colorElement-light-fill-fill-primary);}
 .serv-blifecare .icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external_bl.svg);}
-.serv-blifecare .brand-info {margin-top: 5rem;}
-.serv-blifecare .brand-info .brand-logo {max-width: 44.44rem; margin: 0 auto;}
+.serv-blifecare .brand-info {margin: 5rem 0;}
+.serv-blifecare .brand-info .brand-logo {max-width: 44.44rem; margin: 0 auto; padding: 2.31rem 0;}
 .serv-blifecare .brand-info .brand-desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; color: #171819;}
 .serv-blifecare .brand-info .service-btn-wrap {margin: 5rem 0;}
 .service .btn-playstore, .service .btn-appstore {display: flex; align-items: center; justify-content: center; gap: .62rem; width: 16.25rem; height: 3.75rem; padding: .75rem 1.25rem; border-radius: .56rem; border: 1px solid #C9CED1; color: #555758; font-weight: 600;}

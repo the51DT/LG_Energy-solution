@@ -184,100 +184,70 @@ var pubUi = {
         if (!this.self.wrap) {
             return;
         } else {
-            this.self.wrap.addEventListener("scroll", function (el) {
-                // console.log("scroll!");
+            this.self.wrap.addEventListener("scroll", function (e) {
+                const wrap = e.currentTarget || e.target;
                 const aside = document.querySelector(".wrap aside");
-                const targetContentItem = el.target.querySelectorAll("[class^=content-item]");
-
-                // 스크롤 이벤트 처리
-                const nowScroll = el.target.scrollTop;
+                const targetContentItem = wrap.querySelectorAll("[class^='content-item']");
+                const nowScroll = wrap.scrollTop;
                 const page_h = window.innerHeight * 0.3;
-                // console.log("body scroll event");
-                // console.log("nowScroll : " + nowScroll);
-                // aside 표시/숨김 처리
+
+                // aside 표시/숨김
                 if (nowScroll > page_h) {
-                    aside && aside.style.display !== "block" && pubUi.fadeIn(aside, 500);
+                    if (aside && aside.style.display !== "block") pubUi.fadeIn(aside, 500);
                 } else {
-                    aside && (aside.style.display = "none");
+                    if (aside) aside.style.display = "none";
                 }
 
-                // aside 클릭 시 스크롤 최상단 이동
-                if (aside) {
-                    aside.onclick = function () {
-                        el.target.scrollTo({ top: 0, behavior: "smooth" });
+                // 클릭 핸들러는 스크롤마다 다시 달지 말고 한 번만!
+                if (aside && !aside.dataset.bound) {
+                    aside.addEventListener("click", () => {
+                        wrap.scrollTo({ top: 0, behavior: "smooth" });
                         document.querySelector(".wrap").style.overflow = "auto";
-                    };
-                }
-
-                if (targetContentItem) {
-                    targetContentItem.forEach((item, idx) => {
-                        let itemTop = "";
-
-                        if (document.querySelector(".wrap").classList.contains("mobile")) {
-                            itemTop = item.offsetTop - 152;
-                        } else {
-                            itemTop = item.offsetTop - 600;
-                        }
-
-                        const itemHeight = item.clientHeight;
-                        const itemBottom = itemTop + itemHeight;
-
-                        const itemDataBg = item.dataset.bgtype;
-                        // console.log("itemDataBg : " + itemDataBg);
-
-                        // 현재 스크롤 위치가 아이템 영역에 들어왔는지 확인
-                        if (nowScroll >= itemTop && nowScroll < itemBottom) {
-                            // 해당 아이템에 active 클래스 추가
-                            item.classList.add("active");
-                            // 다른 아이템에서 active 클래스 제거
-                            // targetContentItem.forEach((otherItem, otherIdx) => {
-                            //     if (otherIdx !== idx) {
-                            //         otherItem.classList.remove("active");
-                            //     }
-                            // });
-
-                            // side-sticky 스크롤시, active 컨텐츠 영역도달시 side-list anchor 액티브 처리
-                            var targetSideSticky = el.target.querySelector(".side-sticky");
-                            var sideList;
-
-                            if (item.classList.contains("active")) {
-                                var itemId = item.getAttribute("id");
-
-                                if (targetSideSticky) {
-                                    sideList = targetSideSticky.querySelectorAll(".side-list li");
-                                    // console.log(itemId);
-                                    sideList.forEach((el) => {
-                                        sideList.forEach((otherList) => {
-                                            otherList.querySelector("a").classList.remove("active");
-                                        });
-                                        el = document.querySelector(`a[href="#${itemId}"]`);
-                                        el.classList.add("active");
-                                    });
-                                }
-                            }
-
-                            if (itemDataBg === "dark" && item.classList.contains("active")) {
-                                // dark 타입의 아이템이 on 상태일 때, 폰트 컬러 변경
-                                item.style.color = "#fff";
-                                if (targetSideSticky) {
-                                    targetSideSticky.classList.add("white");
-                                }
-                            } else {
-                                if (targetSideSticky) {
-                                    targetSideSticky.classList.remove("white");
-                                }
-                            }
-                        } else {
-                            //item.classList.remove("active");
-                            // if (itemDataBg === "dark") {
-                            //     // 값 초기화
-                            //     targetSideSticky.classList.add("white");
-                            // } else {
-                            //     targetSideSticky.classList.remove("white");
-                            // }
-                        }
                     });
+                    aside.dataset.bound = "1";
                 }
+
+                if (!targetContentItem) return;
+
+                targetContentItem.forEach((item) => {
+                    const isMobile = document.querySelector(".wrap").classList.contains("mobile");
+                    const itemTop = item.offsetTop - (isMobile ? 152 : 600);
+                    const itemHeight = item.clientHeight;
+                    const itemBottom = itemTop + itemHeight;
+                    const targetSideSticky = wrap.querySelector(".side-sticky");
+
+                    if (nowScroll >= itemTop && nowScroll < itemBottom) {
+                        item.classList.add("active");
+
+                        if (targetSideSticky) {
+                            const itemId = item.id;
+
+                            // 1) 기존 active 제거(한 번만)
+                            targetSideSticky.querySelectorAll(".side-list a.active").forEach((a) => a.classList.remove("active"));
+
+                            // 2) 현재 섹션의 앵커만 active
+                            if (itemId) {
+                                // CSS.escape로 특수문자 id 안전 처리
+                                const link = targetSideSticky.querySelector(`.side-list a[href="#${CSS.escape(itemId)}"]`);
+                                if (link) {
+                                    link.classList.add("active");
+                                }
+                                // link가 없으면 마크업(href="#섹션ID")을 점검하세요.
+                            }
+                        }
+
+                        // 다크 배경 처리
+                        if (item.dataset.bgtype === "dark") {
+                            item.style.color = "#fff";
+                            targetSideSticky && targetSideSticky.classList.add("white");
+                        } else {
+                            targetSideSticky && targetSideSticky.classList.remove("white");
+                        }
+                    } else {
+                        // 필요시 비활성화 로직
+                        // item.classList.remove("active");
+                    }
+                });
             });
         }
     },

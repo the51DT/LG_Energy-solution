@@ -10,6 +10,7 @@
         <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
         <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />        
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/lottie.js"></script> <!-- 08.28 추가 : lottie 사용영역 lottie.js 추가 -->
     </head>
 
     <body>
@@ -419,11 +420,12 @@
                     </div>
                     <div class="sticky-area">
                         <div class="side-sticky">
+                            <!-- 08.28 수정 : side-list href값 #누락으로 수정 -->
                             <ul class="side-list">
-                                <li><a href="content01" class="active">서비스 소개</a></li>
-                                <li><a href="content02" class="">Eaas란?</a></li>
-                                <li><a href="content03" class="">특장점</a></li>
-                                <li><a href="content04" class="">제공 서비스</a></li>
+                                <li><a href="#content01" class="active">서비스 소개</a></li>
+                                <li><a href="#content02" class="">Eaas란?</a></li>
+                                <li><a href="#content03" class="">특장점</a></li>
+                                <li><a href="#content04" class="">제공 서비스</a></li>
                             </ul>
                         </div>
                         <div class="content-item01 active" id="content01"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
@@ -441,7 +443,13 @@
                                                     </p>
                                                     <div class="article-img">
                                                         <img src="../../../inc/images/img/serv01_img_01.png" alt="">
+                                                        <!-- 08.28 수정 : lottie 추가 -->
+                                                        <!-- lottie : 추후 관련 로티 디자인 수급 후 json 파일 교체 필요 -->
+                                                        <div class="lottie-wrap">
+                                                            <lottie-player src="../../../inc/images/lottie/icon_Series-01.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+                                                        </div>
                                                     </div>
+                                                    
                                                 </div>
                                             </article>
                                         </div>

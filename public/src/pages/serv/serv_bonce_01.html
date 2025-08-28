@@ -9,6 +9,7 @@
         <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
         <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />      
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/lottie.js"></script> <!-- 08.28 추가 : lottie 사용영역 lottie.js 추가 -->
     </head>
 
     <body>
@@ -425,7 +426,8 @@
                                                     <div class="article-img">
                                                         <img src="../../../inc/images/img/serv04_img_01.png" alt="B-once 로고">
                                                     </div>
-                                                    <div class="article-btn-wrap">
+                                                    <!-- 08.28 수정 : 앱스토어 버튼, 모바일만 노출로 변경되어 삭제 -->
+                                                    <!-- <div class="article-btn-wrap">
                                                         <a href="https://play.google.com/store/apps/details?id=com.lges.blc" target="_blank">
                                                             <img src="../../../inc/images/img/serv04_icon_01.png" alt="구글 플레이 스토어 바로가기">
                                                             <p>구글 플레이 스토어</p>
@@ -434,21 +436,34 @@
                                                             <img src="../../../inc/images/img/serv04_icon_02.png" alt="앱 스토어 바로가기">
                                                             <p>앱스토어</p>
                                                         </a>
-                                                    </div>
+                                                    </div> -->
                                                     <p class="adv-explain">배터리 평가 결과는 다양한 방식으로 고객에게 제공될 수 있습니다.</p>
                                                     <div class="adv-wrap">
                                                         <div class="adv-box">
-                                                            <img src="../../../inc/images/img/serv04_img_02.png" class="adv-img">
+                                                            <!-- 08.28 수정 : lottie 추가 -->
+                                                            <!-- lottie : 추후 관련 로티 디자인 수급 후 json 파일 교체 필요 -->
+                                                            <!-- <img src="../../../inc/images/img/serv04_img_02.png" class="adv-img"> -->
+                                                            <div class="lottie-wrap">
+                                                                <lottie-player src="../../../inc/images/lottie/icon_Series-01.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+                                                            </div>
+                                                            <!--//lottie-->
                                                             <span class="adv-tit">B-Once App</span>
                                                             <span class="adv-desc">
                                                                 진단 결과를 즉시 앱을 통해 확인할 수 
                                                                 있으며, 휴대폰/태블릿을 통해 사용자에게 
                                                                 배터리 평가 결과를 제공할 수 있습니다.
                                                             </span>
+                                                            
                                                         </div>
                                                         
                                                         <div class="adv-box">
-                                                            <img src="../../../inc/images/img/serv04_img_03.png" class="adv-img">
+                                                            <!-- 08.28 수정 : lottie 추가 -->
+                                                            <!-- lottie : 추후 관련 로티 디자인 수급 후 json 파일 교체 필요 -->
+                                                            <!-- <img src="../../../inc/images/img/serv04_img_03.png" class="adv-img"> -->
+                                                            <div class="lottie-wrap">
+                                                                <lottie-player src="../../../inc/images/lottie/icon_Series-02.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+                                                            </div>
+                                                            <!--//lottie-->
                                                             <span class="adv-tit">API</span>
                                                             <span class="adv-desc">
                                                                 API를 통해 진단결과를 귀사의 서비스, 
@@ -458,7 +473,13 @@
                                                             </span>
                                                         </div>
                                                         <div class="adv-box">
-                                                            <img src="../../../inc/images/img/serv04_img_04.png" class="adv-img">
+                                                            <!-- 08.28 수정 : lottie 추가 -->
+                                                            <!-- lottie : 추후 관련 로티 디자인 수급 후 json 파일 교체 필요 -->
+                                                            <!-- <img src="../../../inc/images/img/serv04_img_04.png" class="adv-img"> -->
+                                                            <div class="lottie-wrap">
+                                                                <lottie-player src="../../../inc/images/lottie/icon_Series-03.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+                                                            </div>
+                                                            <!--//lottie-->
                                                             <span class="adv-tit">Mail</span>
                                                             <span class="adv-desc">
                                                                 회사 대표 메일 계정 등 지정된 이메일로 
@@ -585,15 +606,16 @@
                                                     </div>
                                                 </div>
                                                 <div class="serv-trading">
+                                                    <!-- 08.28 수정 : 카탈로그/문의하기 버튼 a태그로 변경 -->
                                                     <div class="service-btn-wrap">
-                                                        <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01">
+                                                        <a href="#" target="_blank" class="icon-btn-lg icon-white icon-download btn-outline01" download>
                                                             <span>카탈로그</span>
                                                             <div class="icon-area"></div>
-                                                        </button>
-                                                        <button type="button" class="icon-btn-lg icon-white icon-cs btn-outline01">
+                                                        </a>
+                                                        <a href="#" target="_blank" class="icon-btn-lg icon-white icon-cs btn-outline01">
                                                             <span>문의하기</span>
                                                             <div class="icon-area"></div>
-                                                        </button>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </article>
