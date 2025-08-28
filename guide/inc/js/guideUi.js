@@ -57,7 +57,7 @@ pathApp.setUrl = function () {
 
     if (link !== "") {
       const anchor = document.createElement("a");
-      anchor.href = "../public/src/pages/" + link;
+      anchor.href = "../public/src/" + link;
       anchor.target = "_blank";
       anchor.rel = "noopener";
       anchor.textContent = link;
