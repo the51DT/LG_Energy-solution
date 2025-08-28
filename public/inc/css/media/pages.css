@@ -1558,6 +1558,7 @@
 .serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .serv-trading .service-wrap .service-desc {padding-top: 1rem; font-size: .875rem; line-height: 1.3125rem; text-align: center;}
 .service .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 9.25rem;}
+.service .service-btn-wrap > button {width: 100%;}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info .brand-logo {width: 17.5rem;}
