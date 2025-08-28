@@ -932,13 +932,13 @@
 .pfom .prod-comp > li > img {width: 5rem; height: 5rem; margin-bottom: 1.875rem;}
 .pfom .prod-comp > li .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .prod-comp > li .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
-.pfom .prod-chart-wrap {display: flex; flex-direction: column; gap: 2.5rem;}
+.pfom .prod-chart-wrap {display: flex; flex-direction: column; gap: 2.5rem; margin-top: 5rem;}
 .pfom .prod-chart-wrap .text-wrap {display: flex; flex-direction: column; gap: 1.25rem;}
 .pfom .prod-chart-wrap .text-wrap .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .prod-chart-wrap .text-wrap .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .prod-chart-wrap .prod-chart-img,
 .pfom .prod-chart-wrap .prod-chart-img > img {width: 100%;}
-.pfom .prod-chart-wrap .prod-chart-list {display: flex; gap: 1.25rem;}
+.pfom .prod-chart-wrap .prod-chart-list {display: flex; gap: 1.25rem; margin-bottom: 2.5rem;}
 .pfom .prod-chart-wrap .prod-chart-list > li {width: 100%; padding: 2.5rem 1.25rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
 .pfom .prod-chart-wrap .prod-chart-list > li > img {width: 5rem; height: 5rem; margin-bottom: 1.25rem;}
 .pfom .prod-chart-wrap .prod-chart-list > li .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
@@ -1027,19 +1027,20 @@
 .pfom .line-up-box .text-wrap .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .line-up-box .line-up-wrap {margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem;}
 .pfom .line-up-box .line-up-wrap > .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.pfom .line-up-box .line-up-wrap > .tit > span {display: block; font-size: 1rem; font-weight: 400; line-height: 1.6rem; margin-top: 0.625rem;}
 .pfom .line-up-box .line-up-wrap .line-up-list {display: flex; flex-wrap: wrap; gap: 1.25rem;}
 .pfom .line-up-box .line-up-wrap .line-up-list > li {width: calc(50% - (1.25rem / 2)); padding: 2.5rem 1.25rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04); text-align: center;}
 .pfom .line-up-box .line-up-wrap .line-up-list > li.col3 {width: calc(100% / 3 - (1.25rem / 1.5));}
 .pfom .line-up-box .line-up-wrap .line-up-list > li.col4 {width: calc((100% - 1.25rem * 3) / 4);}
-.pfom .line-up-box .line-up-wrap .line-up-list > li > img {height: 7.25rem; width: auto;}
+.pfom .line-up-box .line-up-wrap .line-up-list > li > img {height: auto; width: 22.5rem;}
 .pfom .line-up-box .line-up-wrap .line-up-list > li.col3 > img {height: 9.3125rem;}
 .pfom .line-up-box .line-up-wrap .line-up-list > li.col4 > img {height: 6.875rem;}
 .pfom .line-up-box .line-up-wrap .line-up-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.25rem;}
 .pfom .line-up-box .line-up-wrap .line-up-col {padding: 1.25rem 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04); display: flex; gap: 2.5rem;}
-.pfom .line-up-box .line-up-wrap .line-up-col > li {width: 100%; padding: 2.5rem; text-align: center;}
+.pfom .line-up-box .line-up-wrap .line-up-col > li {width: 100%; padding: 2.5rem 0; text-align: center;}
 .pfom .line-up-box .line-up-wrap .line-up-col > li > img {width: 6.25rem; height: 6.25rem; margin-bottom: 1.25rem;}
-.pfom .line-up-box .line-up-wrap .line-up-col > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
-.pfom .line-up-box .line-up-wrap .line-up-col > li > p > span {color: var(--colorElement-light-text-text-primary);}
+.pfom .line-up-box .line-up-wrap .line-up-col > li .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.pfom .line-up-box .line-up-wrap .line-up-col > li .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 .pfom .line-up-box .line-up-wrap .line-up-info {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;}
 .pfom .line-up-box .line-up-wrap .line-up-info > div {padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04); text-align: center;}
 .pfom .line-up-box .line-up-wrap .line-up-info .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.875rem;}
@@ -1048,6 +1049,7 @@
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > p {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div:last-child > p {font-weight: 600; color: var(--colorElement-light-text-text-primary);}
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex .arrow {flex-shrink: 0; width: 1.875rem; height: auto; margin-top: 6rem; margin-right: 0.5rem;}
+.pfom .line-up-box .line-up-wrap .line-up-img {width: 100%;}
 .pfom .line-up-box.type2 {padding: 0; border-radius: 0; background-color: unset; margin-top: 0;}
 .pfom .line-up-box.type2 .line-up-wrap {margin-top: 0;}
 .pfom .line-up-box.type2 .line-up-wrap + .line-up-wrap {margin-top: 2.5rem;}
