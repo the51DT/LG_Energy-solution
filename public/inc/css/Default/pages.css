@@ -1323,7 +1323,7 @@
 .flex-box .left-area .content {width: 32.70769rem; height: auto;}
 .comp .type02Swiper .swiper-pagination {margin-top: 2.65rem;}
 .comp .sect-item-box {position: relative;}
-.comp .sect-item-box::before {content:""; display: block; width: 100%; height: 2.25rem; background: url(../../images/img/cont_sect2_shadow.png) no-repeat center 100%; position: absolute; left:0; top: 14.7rem;}
+.comp .sect-item-box:not(.grid-type)::before {content:""; display: block; width: 100%; height: 2.25rem; background: url(../../images/img/cont_sect2_shadow.png) no-repeat center 100%; position: absolute; left:0; top: 14.7rem;}
 .comp .sect-item-box .sect-item-list {display: flex; gap: 8.88rem;}
 .comp .sect-item-box .sect-item-list .img-wrap {padding-bottom: 1.81rem;}
 .comp .sect-item-box .sect-item-list .img-wrap img {width: 21.5rem; height: 16.875rem;}
@@ -1526,7 +1526,9 @@
 /* R&D */
 .rnd .cont-area-intro .article-content {margin-top: 1.87rem;}
 .rnd .cont-area-wrap.type2 .cont-area-sect > section:last-of-type {padding-bottom: 0;}
+.rnd .cont-area-wrap .cont-area-intro .intro-desc.ty-light {font-size: 1.5rem; line-height: 2.25rem;}
 .rnd-content .box-content {margin-top: 1.88rem;}
+.rnd-content .box-content.ty02 {margin-top: 1.25rem;}
 .rnd-content .img-wrap  {max-width: 69.5rem; margin: 0 auto;}
 .rnd-content .img-wrap img {width: 100%; height: 100%; object-fit: cover;}
 .rnd-content .graph-wrap {display: flex; gap: 1.25rem; justify-content: center;}
@@ -1572,6 +1574,15 @@
 .rnd .step-box-wrap .step-box > li:nth-child(1) .img-wrap > img {width:2.625rem; height: auto;}
 .rnd .step-box-wrap .step-box > li:nth-child(2) .img-wrap > img {width:2.4075rem; height: auto;}
 .rnd .step-box-wrap .step-box > li:nth-child(3) .img-wrap > img {width:3.6875rem; height: auto;}
+
+.rnd .ip-rights {display: flex; gap: 1.25rem;}
+.rnd .ip-rights > div {width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04); color: var(--colorElement-light-text-text-default01);}
+.rnd .ip-rights > div > .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; margin-bottom: 1.875rem;}
+.rnd .ip-rights > div > .badge-list {display: flex; flex-direction: column; gap: 0.625rem;}
+.rnd .ip-rights > div > .badge-list > li {display: flex; align-items: center; gap: 0.625rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
+.rnd .ip-rights > div > .badge-list .badge {padding: 0.25rem 1.25rem; border-radius: 62.4375rem; background-color: var(--colorElement-light-fill-fill-primary); font-weight: 600; color: var(--colorElement-light-text-text-on-primary);}
+.rnd .ip-rights > div > .text-list-wrap {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
+.rnd .ip-rights > div > .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.625rem;}
 
 /* 다운로드 */
 .download .download-content-area .title-h1 {margin: 5rem 0 0;}
