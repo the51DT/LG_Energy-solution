@@ -248,17 +248,16 @@ const locations = [
         blog: true,
     },
     {
-        // 수급필요 데이터 추가필요
-        place: "수급필요",
+        place: "PT. HLI GREEN POWER",
         lat: 42.75656883513447,
         lng: -86.06943931544865,
-        address: "수급필요",
-        tel: "수급필요",
-        sort: "자동차 전지",
-        type: "생산",
+        address: "KNIC(Karawang New Industry City), Jalan Raya Trans Heksa Km 7, Wanajaya, Telukjambe Barat, Karawang, Jawa Barat, Indonesia 41361",
+        tel: "+62-812-8540-0888",
+        sort: "파우치 전지",
+        type: "JV/생산",
         country: "인도네시아",
         continent: "아시아·오세아니아",
-        year: "2000",
+        year: "2024",
         img: "inc/images/sample/map/img_popup_map_china.png",
         home: false,
         insta: false,
@@ -561,7 +560,7 @@ function updateInfoList(filtered) {
                 } else if (targetLocation.type === "R&D") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "생산") {
+                } else if (targetLocation.type === "생산" || "JV/생산") {
                     //생산
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 } else {
