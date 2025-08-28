@@ -1416,7 +1416,8 @@
 .faq .total-wrap .total {font-size: 1rem; line-height: 1.6rem;}
 
 /* 다운로드 */
-.download .cont-head-wrap { margin-bottom: 0; }
+.download .download-content-area .title-h1 {margin: 0;}
+.download .cont-head-wrap { padding-bottom: 0; }
 .download [class^="content-item"] { padding-top: 0; }
 .download .search-box-wrap { justify-content: flex-start; height: 6.25rem; padding: 0.625rem 0;}
 .download .search-box { gap: 1.25rem; width: 100%; padding: 0; }
@@ -1426,6 +1427,7 @@
 .download .search-box .btn-search-reset { width: 1.5rem; height: 1.5rem; }
 .download .search-box .btn-search-reset img { width: .5rem; height: .5rem; }
 .download .tab-category { padding-left: 0; }
+.download #tab5-content .tab-cate-wrap { margin-top: 1.25rem; }
 .tab-cate-wrap.type3 .tab-category > li button { align-items: center; height: 2.5rem; padding: .375rem 1.5rem; font-size: 1rem; line-height: 1.4rem; }
 .download .cont-area-wrap .cont-area-sect > section {padding-top: 1rem;}
 .download-list>li { align-items: center; gap: 1rem; }
@@ -1438,7 +1440,6 @@
 .download .btm-btn { margin-top: 2rem; }
 .download #tab5-content .tab-category { gap: 1rem; }
 .download #tab5-content .tab-category > li button { font-size: 1rem; line-height: 1.4rem;}
-.download #tab5-content .cont-area-wrap .cont-area-sect > section { padding-top: 1.5rem; }
 .download .paging-wrap { margin-top: 2.5rem; }
 .btn-download { flex-direction: column; gap: 0; width: 3.375rem; height: auto; padding: 0.5rem 0.75rem;}
 .btn-download .btn-download-txt { font-size: 0.8125rem; line-height: 1.1375rem; }
@@ -1447,7 +1448,7 @@
 .download .no-result-wrap .no-result { padding: 6.25rem 0; font-size: 1rem; line-height: 1.6rem; }
 .download .no-result-wrap>button { width: 20rem; margin: 1.5rem 0 6.25rem; }
 
-.download .total-wrap {margin-top: 1.25rem;}
+.download .total-wrap {margin-top: 1.5rem;}
 .download .total-wrap .total {font-size: 1rem; line-height: 1.6rem;}
 
 /* 문의하기 */
