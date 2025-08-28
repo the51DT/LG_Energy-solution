@@ -44,7 +44,7 @@ aside > img{cursor: pointer;}
 .gnb__tab-btn-wrap{display:flex;gap:2.5rem;}
 .gnb__tab-btn-wrap .depth01{position:relative; display:flex;flex-direction: column;}
 .gnb__tab-btn-wrap .depth01 > button {width:5.875rem;height:6.25rem;color: var(--text-text-default-01, #171819);font-size: var(--size-desktop-B1, 1.125rem);font-weight: 500;line-height: var(--line-height-desktop-B1, 1.8rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);text-align:center}
-.gnb__tab-btn-wrap .depth01 > button:hover{color: var(--colorElement-light-text-text-primary);}
+.gnb__tab-btn-wrap .depth01 > button:hover{color: var(--colorElement-light-text-text-primary); font-weight: 700;}
 .nav-wrap .gnb__tab-btn-wrap ul {position: absolute;top:100px;left: 50%;transform: translateX(-50%);display: none;padding-top:0.87rem}
 .header-wrap .nav-wrap .gnb__tab-btn-wrap ul.on {display:block;text-align: center;}
 .header-wrap .nav-wrap .gnb__tab-btn-wrap ul li{padding-top:0.88rem;}
