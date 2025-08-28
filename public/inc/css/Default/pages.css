@@ -2027,7 +2027,7 @@
 .rchr .title-h2 > span { color: #33B0C6; }
 .rchr .flex-cont-wrap { display: flex; gap: 1.25rem; }
 .rchr .flex-cont-wrap > div { border: 2px solid #E1E7EA; border-radius: 1rem; padding: 2.5rem; display: flex; flex-direction: column; align-items: center; flex: 1; }
-.rchr .flex-cont-wrap > div > img { width: 7.5rem; margin-bottom: 1.88rem; }
+.rchr .flex-cont-wrap > div > .lottie-wrap { width: 5rem; margin-bottom: 1.88rem; }
 .rchr .flex-cont-wrap > div > span { color: #171819; font-size: 1.5rem; font-weight: 600; margin-bottom: 1.25rem; }
 .rchr .flex-cont-wrap > div > p { color: #171819; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; margin-bottom: 2.5rem; text-align: center; }
 .rchr .flex-cont-wrap > div > .text-list-wrap { width: 100%; }
@@ -2047,7 +2047,7 @@
 .rchr .program-cont-wrap > div > p, .rchr .program-cont-wrap .text-list > li { font-size: 1rem; line-height: 1.6rem; display: flex; color: #555758; font-weight: 400; margin-bottom: 0.62rem; }
 .rchr .program-cont-wrap > div > p > strong { width: 5rem; display: block; color: #171819; font-weight: 600; }
 .rchr .program-cont-wrap > div .program-tit-wrap { display: flex; gap: 1.88rem; margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #C9CED1; align-items: center; }
-.rchr .program-cont-wrap > div .program-tit-wrap > img { width: 7.5rem; }
+.rchr .program-cont-wrap > div .program-tit-wrap > .lottie-wrap { width: 5rem; }
 .rchr .program-cont-wrap > div .program-tit-wrap span { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.65rem; }
 .rchr .program-cont-wrap > div .program-tit-wrap p { font-size: 1.125rem; font-weight: 500; }
 .rchr .program-cont-wrap .program-tag-wrap { display: flex; gap: 0.5rem; margin-top: 1.88rem; }
@@ -2073,7 +2073,7 @@
 /* 조직문화 */
 .rcct .content-sect { display: flex; flex-direction: column; gap: 5rem; }
 .rcct .system-tit-wrap { display: flex; align-items: center; gap: 2.5rem; margin-bottom: 2.5rem; }
-.rcct .system-tit-wrap > img { width: 7.5rem; }
+.rcct .system-tit-wrap > .lottie-wrap { width: 5rem; }
 .rcct .system-tit-wrap > div > p { font-size: 1.5rem; font-weight: 400; line-height: 2.25rem; }
 .rcct .system-tit-wrap > div > span { font-size: 2rem; font-weight: 700; line-height: 3rem; }
 .rcct .system-cont-wrap:nth-of-type(1) .system-cont, .rcct .system-cont-wrap:nth-of-type(2) .system-cont { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
