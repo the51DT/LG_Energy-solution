@@ -1399,7 +1399,7 @@ var pubUi = {
                     popEl.querySelector(".pop-content").style.top = "revert";
                 }, 2000);
             } else {
-                document.body.classList.add("noScroll");
+                document.body.querySelector(".wrap").classList.add("noScroll");
 
                 ["pop-s", "pop-e"].forEach((cls) => {
                     const div = document.createElement("div");
@@ -1430,7 +1430,7 @@ var pubUi = {
 
         close(pop, btn) {
             const popEl = document.querySelector(pop);
-            document.body.classList.remove("noScroll");
+            document.body.querySelector(".wrap").classList.remove("noScroll");
             popEl.classList.remove("open");
             popEl.removeAttribute("style");
             popEl.querySelector(".pop-s")?.remove();
@@ -1465,7 +1465,7 @@ var pubUi = {
             let top = 0;
             let left = 0;
 
-            document.body.classList.remove("noScroll");
+            document.body.querySelector(".wrap").classList.remove("noScroll");
             popEl.style.position = "absolute";
             popEl.style.zIndex = 100;
 
