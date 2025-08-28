@@ -1579,7 +1579,7 @@
 .download .search-box .btn-search img { width: 3rem; height: 3rem; }
 .download .search-box .btn-search-reset { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; padding: .25rem; background-color: #B4B8BA; border-radius: 50%; }
 .download .search-box .btn-search-reset img { width: .75rem; height: .75rem; object-fit: contain; }
-.download .tab-cate-wrap.type3 .tab-category {gap: .62rem;}
+.download .tab-cate-wrap.type3 .tab-category {gap: .625rem;}
 .download-list .checkbox { padding-left: 2.5rem; }
 .download-list>li { position: relative; display: flex; gap: 2.5rem; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03); }
 .download-list>li:first-child:before { content: ""; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 2px; background-color: #000; }
