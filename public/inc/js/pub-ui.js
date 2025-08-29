@@ -1294,13 +1294,13 @@ var pubUi = {
         scrollToTab() {
             // 탭형태가아닌(role=tablist 사용안하는)  페이지 이동 형식일때, on 클래스가 존재하는 탭으로 가로스크롤 이동 (서비스 mobile 해당)
             if (pubUi.self.tabListsNotList.length > 0) {
-                console.log("테스트 : ", pubUi.self.tabListsNotList);
+                // console.log("테스트 : ", pubUi.self.tabListsNotList);
                 const tabList = pubUi.self.tabListsNotList;
                 tabList.forEach((list) => {
                     if (list.classList.contains("on")) {
                         let listLeftValue = list.offsetLeft;
                         let listParent = list.closest(".tab-category");
-                        console.log(listLeftValue);
+                        // console.log(listLeftValue);
                         listParent.scrollTo({ left: listLeftValue, behavior: "smooth" });
                     }
                 });
