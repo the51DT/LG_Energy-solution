@@ -1,11 +1,13 @@
 /* 지속가능경영 - 추진체계 */
 /* 지속가능경영 > 추진체계 > 비전 및 전략 */
 .esgm .article-content:first-child {margin-top: 3.75rem;}
+.esgm #tab3-content .article-content:first-child {margin-top: 0rem;}
 .esgm .article-content + .article-content {padding-top: 5rem;}
-.sust-sys .vision-wrap {position: relative; display: flex; flex-direction: column; align-items: flex-end; padding-top: 8.69rem;}
+.sust-sys .vision-wrap {position: relative; display: flex; flex-direction: column; align-items: flex-end; padding-top: 8.6875rem;}
+.sust-sys .vision-wrap:lang(en) {padding-top: 2.875rem;}
 .sust-sys .vision-wrap .vision-tit {position: absolute; left: 0; top: 0; font-size: 6.25rem; font-weight: 200; line-height: 6.875rem; letter-spacing: -.125rem; color: #171819;}
 .sust-sys .vision-wrap .vision-tit>strong {font-weight: 900; color: #33B0C6;}
-.sust-sys .vision-wrap .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; text-align: right; font-weight: 400;}
+.sust-sys .vision-wrap .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; font-weight: 400;}
 .sust-sys .vision-wrap .vision-img {margin-top: 2.5rem;}
 .sust-sys .accordion-list .accordion-btn {display: flex; align-items: center; justify-content: space-between; padding: .967rem 2.5rem;}
 .sust-sys .accordion-list.on .accordion-btn {padding: 3.75rem 2.5rem 0 2.5rem;}
@@ -22,7 +24,7 @@
 .content-box .text-area .desc {font-size: 1rem; font-weight: 400; color: var(--colorElement-light-text-text-default02); line-height: 1.6rem; padding-top: 1.25rem;}
 .content-box .text-area .intro-txt {font-size: 1.75rem; font-weight: 400; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
 .content-box .text-area .intro-sub {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01); margin-top: 2rem;}
-.content-box .img-area img {min-width: 28.75rem; height: 17.5rem;}
+.content-box .img-area img {min-width: 25rem; height: 14.375rem;}
 .content-box.type2 > div {width: calc(50% - 5rem); flex-grow: 1;}
 .content-box.type2 .img-area {padding-top: 0;}
 .content-box.type2 .img-area img {width: 100%; height: 100%; object-fit: cover;}
@@ -45,13 +47,16 @@
 .profile-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem; padding: 1.88rem 0 0 22.81rem;}
 .profile-wrap .profile-box {display: flex; gap: 1.88rem; width: calc(50% - .75rem); padding: 1.88rem; background-color: #fff; border-radius: 1rem;}
 .profile-wrap .profile-box:first-child {width: 100%; margin-bottom: .62rem;}
-.profile-wrap .profile-box .profile-img {width: 8.125rem;}
+.profile-wrap .profile-box .profile-img {width: 8.125rem; align-self: flex-start;}
 .profile-wrap .profile-box .profile-name {display: flex; align-items: center; gap: .62rem; font-weight: 600; color: #171819} 
 .profile-wrap .profile-box .profile-name .name {font-size: 1.25rem; line-height: 2rem;}
 .profile-wrap .profile-box .profile-name .position {font-size: 1.125rem; line-height: 1.8rem;}
 .profile-wrap .profile-box .profile-period {margin-top: .62rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #171819;}
 .profile-wrap .profile-box .text-list {margin-top: 1.25rem;}
 .profile-wrap .profile-box .text-list li {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
+.profile-wrap .profile-box .text-list-wrap .text-list > li::before {left: 0.25rem; top: 0.69rem; transform: unset;}
+
+.profile-wrap:lang(en) .profile-box:not(:first-child) .profile-name {flex-direction: column; align-items: flex-start; gap: 0;}
 
 /* 지속가능경영 > 추진체계 > 글로벌 파트너십 */
 .sust-sys .tab3-content .content-item01 {padding-bottom: 3.75rem;}
@@ -69,6 +74,7 @@
 .sust-sys .box-list.box-list-envir>li:last-child .img-area>img {height: 5rem;}
 .sust-sys .box-list .text-area .tit {font-size: 1.25rem; line-height: 2rem; color: #171819;}
 .sust-sys .box-list .text-area .desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; font-weight: 400; color: #555758;}
+.sust-sys:lang(en) .box-list .text-area .desc [class^=underline] {font-weight: 400;}
 
 /* 지속가능경영 > 환경 > 환경경영 */
 .sust-env .title-h2 {font-size: 2rem; line-height: 3rem;}
@@ -500,15 +506,16 @@
 .stif .stock-sub-box > div .plus .compare .percent::before {content: "+";}
 .stif .stock-sub-box > div .minus .compare .percent::before {content: "-";}
 .stif .cont-box-wrap:has(.left-box, .right-box) {margin-top: 1.25rem;}
-.stif .cont-box-wrap .left-box {min-height: 29.375rem; padding-left: 8.31rem; background-image: url(../../images/img/stif01_tab2_img.png); background-size: contain; background-position: top right; background-repeat: no-repeat;}
-.stif .cont-box-wrap .left-box::before {top: 0;}
-.stif .cont-box-wrap .left-box .intro-desc {padding: 0; font-size: 1.75rem; font-weight: 600; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
-.stif .cont-box-wrap .left-box .sub-desc-wrap {padding-top: 2rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
+.stif .cont-box-wrap .left-box {position: relative; min-height: 29.375rem; padding-left: 8.31rem; background-image: url(../../images/img/stif01_tab2_img.png); background-size: contain; background-position: top right; background-repeat: no-repeat;}
+.stif .cont-box-wrap .left-box::before {position: absolute; top: 0; left: 0rem; content: ""; display:block; width: 5.625rem; height: 17.3125rem; background: url(../../images/img/sust01_img_tab2_01.png) no-repeat center center / contain;}
+.stif .cont-box-wrap .left-box .intro-desc {padding: 0; font-size: 2rem; font-weight: 700; line-height: 3rem; color: var(--colorElement-light-text-text-default01);}
+.stif .cont-box-wrap .left-box .sub-desc-wrap {padding-top: 2rem; font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
+.stif .cont-box-wrap .left-box .sub-desc-wrap > ul > li:not(:last-child) {padding-bottom: 1.25rem;}
 .stif .asterisk-text {display: flex; gap: 0.38rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 .stif .asterisk-text::before {flex-shrink: 0; content: ""; display: block; margin: 0.55rem 0.19rem; width: 0.37894rem; height: 0.37894rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
-.stif .cont-box-wrap .right-box {padding-top: 0; padding-right: 4.88rem;}
-.stif .cont-box-wrap .right-box::after {top: 0.66rem;}
-.stif .cont-box-wrap .right-box .keyword {font-size: 7.3125rem; font-weight: 800; line-height: 11.25rem; letter-spacing: -0.125rem;}
+.stif .cont-box-wrap .right-box {position: relative; padding-top: 0; padding-right: 4.88rem;}
+.stif .cont-box-wrap .right-box::after {position: absolute; top: 0.66rem; right: 0; content: ""; display:block; width: 3.625rem; height: 9.9375rem; background: url(../../images/img/sust01_img_tab2_02.png) no-repeat center center / contain;}
+.stif .cont-box-wrap .right-box .keyword {font-size: 7.3125rem; font-weight: 800; line-height: 11.25rem; letter-spacing: -0.125rem; text-align: right; color: var(--colorElement-light-text-text-default02);}
 
 
 /* 지속가능경영 > 사회 / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
@@ -662,6 +669,7 @@
 .fina .accord-content .accordion-title {font-weight: 700; line-height: 3rem; padding-bottom: 1.25rem;}
 .fina .accord-content .accordion-list:first-of-type {border: none;}
 .fina .table-wrap table tbody > tr > th {font-size: 1.125rem; line-height: 1.8rem;}
+.fina .accord-content .table-area .asterisk-text {margin-top: 2rem;}
 
 .gray-box-area > ul {display: flex; gap: 1rem; flex-direction: column;}
 .gray-box-area > ul > li {padding: 1.875rem 2.5rem; border-radius: 0.625rem; background-color: var(--colorElement-light-fill-fill-default04); width: 100%; height: auto;}
@@ -669,6 +677,8 @@
 .gray-box-area > ul > li .box-wrap .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
 .history-box {padding-top: 6.25rem;}
 .gray-box-area > ul > li .box-wrap [class^="act-btn"]:not(:hover) {background-color: var(--colorElement-light-fill-fill-on-primary);}
+.gray-box-area:lang(en) > ul > li .box-wrap .btn-group {flex-direction: column;}
+.gray-box-area:lang(en) > ul > li .box-wrap .btn-group [class^="act-btn"] {width: 10.1875rem; justify-content: center;}
 
 
 /* IR행사 */
