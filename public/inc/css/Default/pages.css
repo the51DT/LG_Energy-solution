@@ -716,7 +716,7 @@
 .evt-schedule-bot ul > li .bar {width: 0.0625rem; height: 2.5rem; background: var(--colorElement-light-stroke-stroke-default03);  margin: 0 2.5rem;}
 .evt-schedule-bot ul > li .center-area {display: flex; align-items: center; gap: 0.75rem; width: 100%; max-width: 53.6875rem;}
 .evt-schedule-bot ul > li .center-area .title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
-.evt-schedule-bot ul > li .right-area {text-align: right; min-width: 9.4375rem; margin-left: 2.5rem;}
+.evt-schedule-bot ul > li .right-area {text-align: right; min-width: 9.4375rem; margin-left: 2.5rem; width: fit-content; flex-shrink: 0;}
 .evt-schedule-bot ul > li .right-area .place {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); white-space:nowrap;}
 .irif .accord-content .accordion-list:first-of-type {border: none;}
 .evt-schedule-past .table-wrap table thead > tr > th {font-size: 1.125rem; line-height: 1.8rem;}
@@ -753,6 +753,9 @@
 .irif .asterisk-text::before {flex-shrink: 0; content: ""; display: inline-block; margin: 0.61rem 0.19rem; width: 0.37894rem; height: 0.39744rem; background-image: url(../../images/icon/icon_asterisk.svg); background-size: cover;}
 .irif .agm-info-list > li .btn-wrap {position: absolute; right: 0; top: 2.5rem; display: flex; gap: 1.88rem;}
 .irif .agm-info-list > li .btn-wrap .history-btn-wrap + .history-btn-wrap {margin: 0;}
+
+.irif:lang(en) .btn-badge,
+.irif:lang(en) .evt-schedule-past .btn-badge {width: 8.5rem; padding-inline: 0;}
 
 
 /* 채용공고 (rcpt) */

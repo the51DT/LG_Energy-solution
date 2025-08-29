@@ -415,6 +415,8 @@
 .stif .cont-box-wrap .right-box::after {right: 0;}
 .stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; padding-inline: 2.5rem; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
 
+.irif:lang(en) .btn-badge,
+.irif:lang(en) .evt-schedule-past .btn-badge {width: fit-content; padding-inline: 0.625rem;}
 
 /* 지속가능경영 > 사회 > / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1rem; line-height: 1.6rem;}
