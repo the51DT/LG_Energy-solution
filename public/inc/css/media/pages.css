@@ -584,6 +584,8 @@
 .fina .accord-content .accordion-title {font-size: 1.5rem; line-height: 2.0625rem; padding-bottom: 1.5rem;}
 .fina .accord-content .accordion-list {margin-inline: -1.25rem;}
 .fina .accordion-list .accordion-content .table-wrap table tbody > tr > th, .accordion-list .accordion-content .table-wrap table tbody > tr > td {line-height: 1.3125rem; white-space: normal;}
+.fina .accord-content .table-area .asterisk-text {margin-top: 1rem;}
+.gray-box-area:lang(en) > ul > li .box-wrap .btn-group [class^="act-btn"] {width: 7.75rem;}
 
 .gray-box-area > ul {display: block; border-radius: 0.5rem;background:var(--colorElement-light-fill-fill-default04); padding: 1.5rem; margin-top: 1.5rem;}
 .gray-box-area > ul > li {padding: 0; border-radius: 0; background-color: var(--colorElement-light-fill-fill-default04); width: 100%; height: auto;}

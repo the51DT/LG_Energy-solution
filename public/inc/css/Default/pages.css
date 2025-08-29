@@ -668,6 +668,7 @@
 .fina .accord-content .accordion-title {font-weight: 700; line-height: 3rem; padding-bottom: 1.25rem;}
 .fina .accord-content .accordion-list:first-of-type {border: none;}
 .fina .table-wrap table tbody > tr > th {font-size: 1.125rem; line-height: 1.8rem;}
+.fina .accord-content .table-area .asterisk-text {margin-top: 2rem;}
 
 .gray-box-area > ul {display: flex; gap: 1rem; flex-direction: column;}
 .gray-box-area > ul > li {padding: 1.875rem 2.5rem; border-radius: 0.625rem; background-color: var(--colorElement-light-fill-fill-default04); width: 100%; height: auto;}
@@ -675,6 +676,8 @@
 .gray-box-area > ul > li .box-wrap .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
 .history-box {padding-top: 6.25rem;}
 .gray-box-area > ul > li .box-wrap [class^="act-btn"]:not(:hover) {background-color: var(--colorElement-light-fill-fill-on-primary);}
+.gray-box-area:lang(en) > ul > li .box-wrap .btn-group {flex-direction: column;}
+.gray-box-area:lang(en) > ul > li .box-wrap .btn-group [class^="act-btn"] {width: 10.1875rem; justify-content: center;}
 
 
 /* IR행사 */
