@@ -36,6 +36,8 @@ var pubUi = {
 
         this.self.tabCategory = document.querySelector(".activeTab");
         this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
+        this.self.tabListsNotList = document.querySelectorAll(".tab-cate-wrap :not([role=tablist]) > li"); // tablist케이스 아닌 경우, 예외처리하기 위한 변수(서비스_모바일)
+        
         this.self.tabListsMo = document.querySelectorAll(".mo-only .tab-cate-wrap.new [role=tablist]");
 
         this.self.breadCrumbCate = document.querySelectorAll(".page-map-wrap .select-cate.activeSelect .select-menu.caseTab li > a");
@@ -1191,6 +1193,7 @@ var pubUi = {
         init() {
             this.tab();
             this.scroll();
+            this.scrollToTab();
         },
         tab() {
             //공통
@@ -1275,7 +1278,8 @@ var pubUi = {
                         // console.log(tabOnLeftValue);
                     });
                 });
-            });
+            });            
+
         },
         scroll() {
             pubUi.self.tabLists.forEach((tabList) => {
@@ -1287,6 +1291,21 @@ var pubUi = {
                 }
             });
         },
+        scrollToTab() {
+            // 탭형태가아닌(role=tablist 사용안하는)  페이지 이동 형식일때, on 클래스가 존재하는 탭으로 가로스크롤 이동 (서비스 mobile 해당)
+            if (pubUi.self.tabListsNotList.length > 0) {
+                console.log("테스트 : ", pubUi.self.tabListsNotList);
+                const tabList = pubUi.self.tabListsNotList;
+                tabList.forEach((list) => {
+                    if (list.classList.contains("on")) {
+                        let listLeftValue = list.offsetLeft;
+                        let listParent = list.closest(".tab-category");
+                        console.log(listLeftValue);
+                        listParent.scrollTo({ left: listLeftValue, behavior: "smooth" });
+                    }
+                });
+            }
+        }
     },
 
     acdItem: {
@@ -1642,9 +1661,54 @@ var pubUi = {
             const targetCalBtn = document.querySelector(`#${targetId}`);
             const targetCalendar = document.querySelector(`#${targetId}Calendar`);
             const selectedYear = targetCalendar.querySelector("#calYear").innerText;
-            const selectedMonth = targetCalendar.querySelector("#calMonth").innerText;
+            let selectedMonth = targetCalendar.querySelector("#calMonth").innerText;
             const selectedDay = targetDay.innerText;
-            const selectedDate = `${selectedYear}-${selectedMonth}-${selectedDay}`;
+            let selectedDate = "";
+
+            // calendarUi 영문일 경우, 달력 일자형식 예외처리 내용 추가 - 영문도 inputbox 노출 시에는 yyyy-mm-dd로 노출시키기 위해 해당 switch문 추가함
+            if (targetCalendar.classList.contains("en")) {
+                switch (selectedMonth) {
+                    case "January":
+                        selectedMonth = "01";
+                        break;
+                    case "February":
+                        selectedMonth = "02";
+                        break;
+                    case "March":
+                        selectedMonth = "03";
+                        break;
+                    case "April":
+                        selectedMonth = "04";
+                        break;
+                    case "May":
+                        selectedMonth = "05";
+                        break;
+                    case "June":
+                        selectedMonth = "06";
+                        break;
+                    case "July":
+                        selectedMonth = "07";
+                        break;
+                    case "August":
+                        selectedMonth = "08";
+                        break;
+                    case "September":
+                        selectedMonth = "09";
+                        break;
+                    case "October":
+                        selectedMonth = 10;
+                        break;
+                    case "November":
+                        selectedMonth = 11;
+                        break;
+                    case "December":
+                        selectedMonth = 12;
+                        break;
+                }
+                selectedDate = `${selectedYear}-${selectedMonth}-${selectedDay}`;
+            } else {
+                selectedDate = `${selectedYear}-${selectedMonth}-${selectedDay}`;
+            }
 
             // console.log(targetDay);
             targetCalBtn.querySelector(".title").innerText = selectedDate;
@@ -1675,8 +1739,7 @@ var pubUi = {
             const calendarBox = document.querySelector(".calendar-box");
             if (calendarBox.classList.contains("en")) {
                 month = this.autoLeftPad(this.toDay.getMonth() + 1, 2);
-                console.log("달 : " + month);
-
+                // console.log("달 : " + month);
                 switch (month) {
                     case "01":
                         month = "January";
@@ -1775,19 +1838,19 @@ var pubUi = {
                 if (this.toDay.getFullYear() === this.nowDate.getFullYear()) {
                     if (this.toDay.getMonth() === this.nowDate.getMonth()) {
                         if (this.nowDate.getDate() > day && Math.sign(day) === 1) {
-                            // column.style.backgroundColor = "#E5E5E5"; (현재일 기준 해당달 이전 날짜 색상 변경 원할시 해당 부분 수정)
+                            //(현재일 기준 해당달 이전 날짜 색상 비활성화 컬러 색상 활성화 원할시 해당 부분 주석 해제)
+                            // column.style.backgroundColor = "#E5E5E5";
                         } else if (this.nowDate.getDate() < day && lastDate.getDate() >= day) {
                             //column.style.backgroundColor = "#FFFFFF";
                             column.style.cursor = "pointer";
                         } else if (this.nowDate.getDate() === day) {
                             //today 날짜
-                            column.style.backgroundColor = "#F3F5F7";
-                            column.style.borderRadius = "0.5rem";
-                            column.style.cursor = "pointer";
+                            column.classList.add("today"); //today 클래스 추가 (css로 today 클래스 스타일 정의)
                         }
                     } else if (this.toDay.getMonth() < this.nowDate.getMonth()) {
                         if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
-                            // column.style.backgroundColor = "#E5E5E5"; (현재일 기준 이전달 날짜 색상 변경 원할시 해당 부분 수정)
+                            //(현재일 기준 이전달 날짜 색상 비활성화 컬러 색상 활성화 원할시 해당 부분 주석 해제)
+                            // column.style.backgroundColor = "#E5E5E5"; 
                         }
                     } else {
                         if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
@@ -1797,7 +1860,8 @@ var pubUi = {
                     }
                 } else if (this.toDay.getFullYear() < this.nowDate.getFullYear()) {
                     if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
-                        // column.style.backgroundColor = "#E5E5E5"; (현재일 기준 작년도 날짜 색상 변경 원할시 해당 부분 수정)
+                        //(현재일 기준 작년도 날짜 색상 비활성화 컬러 색상 활성화 원할시 해당 부분 주석 해제)
+                        // column.style.backgroundColor = "#E5E5E5";
                     }
                 } else {
                     if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
