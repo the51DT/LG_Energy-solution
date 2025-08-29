@@ -402,6 +402,7 @@
 .stif .content-wrap:has(> .content-sect > .cont-box-wrap > .left-box) {background-image: url(../../images/img/stif01_tab2_img_mo.png); background-repeat: no-repeat; background-size: contain; background-position: top 1.62rem right;}
 .stif .cont-box-wrap:has(.left-box, .right-box) {display: flex; flex-direction: column-reverse; margin-top: 0;}
 .stif .cont-box-wrap .left-box {min-height: unset; background-image: none; padding-inline: 0;}
+.stif .cont-box-wrap .left-box::before {content: none;}
 .stif .cont-box-wrap .left-box .intro-desc {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem;}
 .stif .cont-box-wrap .left-box .sub-desc-wrap {padding-top: 1rem; font-size: 1rem; line-height: 1.6rem;}
 .stif .cont-box-wrap .left-box .sub-desc-wrap ul > li:not(:last-child) {padding-bottom: 1.25rem;}
@@ -409,7 +410,7 @@
 .stif .asterisk-text {gap: 0; font-size: 0.875rem; line-height: 1.3125rem;}
 .stif .asterisk-text::before {content: "*\00a0"; display: block; margin: 0; width: auto; height: auto; background-image: none;}
 .stif .cont-box-wrap .right-box {order: 0; display: flex; justify-content: center; padding: 0; background-image: none; margin: 0 0 3.75rem;}
-.stif .cont-box-wrap .right-box::before, .stif .cont-box-wrap .right-box::after {top: 50%; transform: translateY(-50%);}
+.stif .cont-box-wrap .right-box::before, .stif .cont-box-wrap .right-box::after {top: 50%; transform: translateY(-50%);  width: 1.71388rem; height: 5.26794rem;}
 .stif .cont-box-wrap .right-box::before  {left: 0;}
 .stif .cont-box-wrap .right-box::after {right: 0;}
 .stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; padding-inline: 2.5rem; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
