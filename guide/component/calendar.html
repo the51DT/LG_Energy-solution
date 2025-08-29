@@ -53,9 +53,10 @@
                 
                 <!-- 
                 * 컴포넌트 사용시 유의사항
-                 캘린더팝업 id값 정의시: 대상 캘린더 버튼과 id값 동일 + Calendar 명명규칙 맞춰서 사용할것 
-                 ex)캘린더 버튼 id가 supply-input이면 캘린더팝업 id supply-inputCalendar로 정의 -->
-                <table class="calendar-box scriptCalendar" id="supply-inputCalendar">
+                - 캘린더팝업 id값 정의시: 대상 캘린더 버튼과 id값 동일 + Calendar 명명규칙 맞춰서 사용할것 
+                ex)캘린더 버튼 id가 supply-input이면 캘린더팝업 id supply-inputCalendar로 정의 
+                - calender-box 클래스에 국문 이외 영문표기법 달출력 원할시 en 클래스 추가 할 것 -->
+                <table class="calendar-box scriptCalendar" id="supply-inputCalendar"> <!-- en 클래스 추가시, 달 영문표기로 사용가능 ex) 08월 -> August -->
                     <thead>
                         <tr class="calendar-head">
                             <td class="calendar-arr btn-prev" id="btnPrevCalendar"></td>

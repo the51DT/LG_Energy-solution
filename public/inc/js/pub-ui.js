@@ -1559,7 +1559,7 @@ var pubUi = {
         nowDate: new Date(),
         targetBtn: null,
         selectedDates: {},
-
+        month: {},
         init() {
             this.bindEvents();
         },
@@ -1671,14 +1671,65 @@ var pubUi = {
             this.toDay = new Date(this.toDay.getFullYear(), this.toDay.getMonth() + 1, this.toDay.getDate());
             this.buildCalendar();
         },
+        chkMonth() {
+            const calendarBox = document.querySelector(".calendar-box");
+            if (calendarBox.classList.contains("en")) {
+                month = this.autoLeftPad(this.toDay.getMonth() + 1, 2);
+                console.log("달 : " + month);
 
+                switch (month) {
+                    case "01":
+                        month = "January";
+                        break;
+                    case "02":
+                        month = "February";
+                        break;
+                    case "03":
+                        month = "March";
+                        break;
+                    case "04":
+                        month = "April";
+                        break;
+                    case "05":
+                        month = "May";
+                        break;
+                    case "06":
+                        month = "June";
+                        break;
+                    case "07":
+                        month = "July";
+                        break;
+                    case "08":
+                        month = "August";
+                        break;
+                    case "09":
+                        month = "September";
+                        break;
+                    case 10 :
+                        month = "October";
+                        break;
+                    case 11 :
+                        month = "November";
+                        break;
+                    case 12 :
+                        month = "December";
+                        break;
+                }
+            } else {
+                month = this.autoLeftPad(this.toDay.getMonth() + 1, 2);
+            }
+            
+        },
         buildCalendar() {
             const doMonth = new Date(this.toDay.getFullYear(), this.toDay.getMonth(), 1);
-            const lastDate = new Date(this.toDay.getFullYear(), this.toDay.getMonth() + 1, 0);
+            const lastDate = new Date(this.toDay.getFullYear(), this.toDay.getMonth() + 1, 0);        
             const tbCalendar = document.querySelector(".scriptCalendar > tbody.box-day");
-
+            
             document.getElementById("calYear").innerText = this.toDay.getFullYear();
-            document.getElementById("calMonth").innerText = this.autoLeftPad(this.toDay.getMonth() + 1, 2);
+            
+            this.chkMonth();
+            document.getElementById("calMonth").innerText = month;
+            
 
             while (tbCalendar.rows.length > 0) {
                 tbCalendar.deleteRow(tbCalendar.rows.length - 1);
@@ -1729,10 +1780,10 @@ var pubUi = {
                             //column.style.backgroundColor = "#FFFFFF";
                             column.style.cursor = "pointer";
                         } else if (this.nowDate.getDate() === day) {
-                            //today 날짜 : 현재 프로젝트에서는 사용안함으로 주석처리하였음
-                            // column.style.backgroundColor = "#F3F5F7";
-                            // column.style.borderRadius = "0.5rem";
-                            // column.style.cursor = "pointer";
+                            //today 날짜
+                            column.style.backgroundColor = "#F3F5F7";
+                            column.style.borderRadius = "0.5rem";
+                            column.style.cursor = "pointer";
                         }
                     } else if (this.toDay.getMonth() < this.nowDate.getMonth()) {
                         if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
