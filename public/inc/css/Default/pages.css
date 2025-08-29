@@ -1,11 +1,13 @@
 /* 지속가능경영 - 추진체계 */
 /* 지속가능경영 > 추진체계 > 비전 및 전략 */
 .esgm .article-content:first-child {margin-top: 3.75rem;}
+.esgm #tab3-content .article-content:first-child {margin-top: 0rem;}
 .esgm .article-content + .article-content {padding-top: 5rem;}
-.sust-sys .vision-wrap {position: relative; display: flex; flex-direction: column; align-items: flex-end; padding-top: 8.69rem;}
+.sust-sys .vision-wrap {position: relative; display: flex; flex-direction: column; align-items: flex-end; padding-top: 8.6875rem;}
+.sust-sys .vision-wrap:lang(en) {padding-top: 2.875rem;}
 .sust-sys .vision-wrap .vision-tit {position: absolute; left: 0; top: 0; font-size: 6.25rem; font-weight: 200; line-height: 6.875rem; letter-spacing: -.125rem; color: #171819;}
 .sust-sys .vision-wrap .vision-tit>strong {font-weight: 900; color: #33B0C6;}
-.sust-sys .vision-wrap .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; text-align: right; font-weight: 400;}
+.sust-sys .vision-wrap .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; font-weight: 400;}
 .sust-sys .vision-wrap .vision-img {margin-top: 2.5rem;}
 .sust-sys .accordion-list .accordion-btn {display: flex; align-items: center; justify-content: space-between; padding: .967rem 2.5rem;}
 .sust-sys .accordion-list.on .accordion-btn {padding: 3.75rem 2.5rem 0 2.5rem;}
@@ -22,7 +24,7 @@
 .content-box .text-area .desc {font-size: 1rem; font-weight: 400; color: var(--colorElement-light-text-text-default02); line-height: 1.6rem; padding-top: 1.25rem;}
 .content-box .text-area .intro-txt {font-size: 1.75rem; font-weight: 400; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
 .content-box .text-area .intro-sub {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01); margin-top: 2rem;}
-.content-box .img-area img {min-width: 28.75rem; height: 17.5rem;}
+.content-box .img-area img {min-width: 25rem; height: 14.375rem;}
 .content-box.type2 > div {width: calc(50% - 5rem); flex-grow: 1;}
 .content-box.type2 .img-area {padding-top: 0;}
 .content-box.type2 .img-area img {width: 100%; height: 100%; object-fit: cover;}
@@ -45,13 +47,16 @@
 .profile-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem; padding: 1.88rem 0 0 22.81rem;}
 .profile-wrap .profile-box {display: flex; gap: 1.88rem; width: calc(50% - .75rem); padding: 1.88rem; background-color: #fff; border-radius: 1rem;}
 .profile-wrap .profile-box:first-child {width: 100%; margin-bottom: .62rem;}
-.profile-wrap .profile-box .profile-img {width: 8.125rem;}
+.profile-wrap .profile-box .profile-img {width: 8.125rem; align-self: flex-start;}
 .profile-wrap .profile-box .profile-name {display: flex; align-items: center; gap: .62rem; font-weight: 600; color: #171819} 
 .profile-wrap .profile-box .profile-name .name {font-size: 1.25rem; line-height: 2rem;}
 .profile-wrap .profile-box .profile-name .position {font-size: 1.125rem; line-height: 1.8rem;}
 .profile-wrap .profile-box .profile-period {margin-top: .62rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #171819;}
 .profile-wrap .profile-box .text-list {margin-top: 1.25rem;}
 .profile-wrap .profile-box .text-list li {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
+.profile-wrap .profile-box .text-list-wrap .text-list > li::before {left: 0.25rem; top: 0.69rem; transform: unset;}
+
+.profile-wrap:lang(en) .profile-box:not(:first-child) .profile-name {flex-direction: column; align-items: flex-start; gap: 0;}
 
 /* 지속가능경영 > 추진체계 > 글로벌 파트너십 */
 .sust-sys .tab3-content .content-item01 {padding-bottom: 3.75rem;}
@@ -69,6 +74,7 @@
 .sust-sys .box-list.box-list-envir>li:last-child .img-area>img {height: 5rem;}
 .sust-sys .box-list .text-area .tit {font-size: 1.25rem; line-height: 2rem; color: #171819;}
 .sust-sys .box-list .text-area .desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; font-weight: 400; color: #555758;}
+.sust-sys:lang(en) .box-list .text-area .desc [class^=underline] {font-weight: 400;}
 
 /* 지속가능경영 > 환경 > 환경경영 */
 .sust-env .title-h2 {font-size: 2rem; line-height: 3rem;}

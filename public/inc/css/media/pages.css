@@ -77,14 +77,21 @@
 .sust-sys .esg-wrap .esg-box4 .esg-tit {color: #fff;}
 .sust-sys .esg-wrap .esg-box4 .text-list-wrap .text-list > li {color: #fff;}
 
-.sust-sys .tab2-content .content-item02 {padding-bottom: 0;}
 .profile-wrap {padding-left: 0;}
-.profile-wrap .profile-box {flex-direction: column; gap: 1.25rem; width: 100%;}
+.profile-wrap .profile-box {flex-direction: column; gap: 1.25rem; width: 100%; padding: 1.25rem;}
 .profile-wrap .profile-box:first-child {margin-bottom: 0;}
 .profile-wrap .profile-box .box-top {display: flex; justify-content: space-between; align-items: flex-end;}
 .profile-wrap .profile-box .profile-name {flex-direction: column; align-items: flex-start; gap: .25rem;}
 .profile-wrap .profile-box .profile-period {display: flex; flex-direction: column; font-size: 1rem; line-height: 1.6rem;}
+.profile-wrap .profile-box .text-list {margin-top: 0;}
 .profile-wrap .profile-box .text-list li {font-size: 1rem; line-height: 1.6rem;}
+.profile-wrap .profile-box .text-list-wrap .text-list > li::before {top: 0.69rem;}
+.profile-wrap:lang(en) .profile-box .profile-name .name {font-size: 1.125rem; line-height: 1.75rem;}
+.profile-wrap:lang(en) .profile-box .profile-name .position {font-size: 0.875rem; line-height: 1.3125rem;}
+.profile-wrap:lang(en) .profile-box .profile-period {display: flex; flex-direction: column; font-size: 0.875rem; line-height: 1.3125rem;}
+.profile-wrap:lang(en) .profile-box .profile-img {width: 6.875rem;}
+.profile-wrap:lang(en) .profile-box .text-list li {font-size: 0.875rem; line-height: 1.3125rem;}
+.profile-wrap:lang(en) .profile-box .text-list-wrap .text-list > li::before {top: 0.44rem;}
 
 .keyword-cont {padding: 1.5rem 1.25rem 1.69rem;}
 .keyword-cont-list > li {border-radius: 1rem; background:rgba(255, 255, 255, 0.5); padding:1.25rem; backdrop-filter: blur(5.099999904632568px);}
@@ -107,6 +114,7 @@
 .sust-sys .box-list.box-list-society .img-area>img {height: 4.5rem;}
 .sust-sys .box-list .text-area .tit {display: flex; flex-direction: column; font-size: 1.125rem; line-height: 1.75rem;}
 .sust-sys .box-list .text-area .desc {margin-top: .5rem; font-size: 1rem; line-height: 1.6rem;}
+.sust-sys:lang(en) .box-list.box-list-envir>li .box-label {width: fit-content; right: 1.125rem;}
 
 /* 지속가능경영 > 환경 */
 .sust-env .title-h2 {font-size: 1.25rem; line-height: 1.875rem;}
