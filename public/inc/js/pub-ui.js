@@ -1313,7 +1313,29 @@ var pubUi = {
             this.tab();
         },
         tab() {
-            $(document).on("click", ".acdItem .acd-btn", function (e) {
+            // 문의하기 아코디언 (wrap.cont 케이스)
+            $(document).on("click", ".wrap.cont .acdItem .acd-btn", function (e) {
+                e.preventDefault();
+                console.log("wrap.cont");
+                const $this = $(this);
+                const accordContWrap = $this.closest(".accord-cont-wrap");
+                const item = $this.closest(".acdItem");
+                const expanded = $this.attr("aria-expanded") === "true";
+                const region = item.find("[role=region]");
+                         
+                if (item.hasClass("on")) {                                        
+                    item.find("[aria-expanded]").attr("aria-expanded", false);
+                    item.find("[role=region]").slideUp();
+                    item.removeClass("on");
+                } else {
+                    $this.attr("aria-expanded", !expanded);
+                    region.slideDown();
+                    item.toggleClass("on", !expanded);
+                }
+            });
+
+            // 기존 아코디언 (wrap.cont(문의하기) 케이스 아닌경우)
+            $(document).on("click", ".wrap:not(.cont) .acdItem .acd-btn", function (e) {
                 e.preventDefault();
                 const $this = $(this);
                 const accordContWrap = $this.closest(".accord-cont-wrap");
