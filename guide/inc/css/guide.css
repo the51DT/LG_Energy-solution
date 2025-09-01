@@ -188,6 +188,7 @@ header {
   display: flex;
   justify-content: space-between;
   min-width: 480px;
+  gap:2rem;
 }
 .nav-wrap .nav li a {
   font-size: 16px;
