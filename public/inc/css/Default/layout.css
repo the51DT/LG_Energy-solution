@@ -218,15 +218,15 @@ aside > img{cursor: pointer;}
 .sticky-area .side-sticky {position: sticky; top: 5rem; height: fit-content; width: calc(100vw - var(--scrollbar-width));  margin-inline: auto; z-index: 4;}
 .sticky-area .side-sticky .side-list {position: absolute; top: 5rem; left: 50%; transform: translate(-50%); max-width: 90rem; width: 100%; pointer-events: none; display: flex; flex-direction: column; gap: 0.25rem;}
 .sticky-area .side-sticky .side-list > li {width: fit-content; pointer-events: all; padding-block: 0.5rem;}
-.sticky-area .side-sticky .side-list > li > a {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.sticky-area .side-sticky .side-list > li > a {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
 .sticky-area .side-sticky .side-list > li > a.active {font-weight: 600; color: var(--colorElement-light-text-text-default01);}
-.sticky-area .side-sticky.white .side-list > li > a {color: var(--colorElement-light-text-text-on-primary);}
+.sticky-area .side-sticky.white .side-list > li > a {color: #B4B8BA;}
+.sticky-area .side-sticky.white .side-list > li > a.active {color: #fff;}
 
 
 
 
-
-
+ 
 
 
 

@@ -83,7 +83,7 @@
 .sust-env .vision-txt .vision-tit>strong {font-weight: 800; color: #5AD1DC;}
 .sust-env .vision-txt .vision-desc { margin-top: 2.5rem; font-size: 1.125rem; line-height: 1.8rem; color: #171819;}
 .sust-env .vision-img {position: relative;}
-.sust-env .vision-img::after {content: ''; position: absolute; right: 100%; bottom: 5.19rem; transform: translateX(7rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
+.sust-env .vision-img::after {content: ''; position: absolute; right: 100%; bottom: 13rem; transform: translateX(7rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
 .sust-env .tab1-content .content-item02 {background-color: #F3F5F7;}
 .sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 1.88rem;}
 .sust-env .article-desc {font-size: 1.25rem; line-height: 2rem; font-weight: 400; color: #171819;}
