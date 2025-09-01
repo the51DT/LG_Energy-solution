@@ -759,7 +759,7 @@
 .rcif .job-story > li > a {padding: 1rem 1.25rem; gap: 1rem;}
 .rcif .job-story > li > a .tit {font-size: 1rem; line-height: 1.6rem;}
 .rcif .job-story + .paging-wrap {margin-top: 2rem;}
-
+.rcif:lang(en) .tab-content-box .job-list + .btn-wrap > a {width: 100%;}
 
 /* 산업별 솔루션 (pind) */
 .pind [class^="content-item"]:only-child {padding-bottom: 6.25rem;}
@@ -1705,7 +1705,7 @@
 .rchr .sect-box > div { text-align: center; margin: 0; padding: 2.5rem 2.5rem; }
 .rchr .sect-box > div:nth-of-type(3), .rchr .sect-box > div:nth-of-type(5) { margin: -1.8rem 0 0 0; }
 .rchr .sect-box > div:nth-of-type(2) { background-color: #fff; border: 1px solid #E1E7EA; padding-top: 2rem; }
-.rchr .sect-box > div > span { font-size: 1.125rem; }
+.rchr .sect-box > div > span { font-size: 1.125rem; line-height: 1.75rem;}
 .rchr .sect-box > div > p.desc { font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem; }
 .rchr .sect-box > p.sub-title { font-size: 1.25rem; color: #171819; font-weight: 600; margin: 2rem 0 1rem 0; display: flex; width: 100%; align-items: center; }
 .rchr .sect-box > p.sub-title:first-child { margin-top: 0; }
