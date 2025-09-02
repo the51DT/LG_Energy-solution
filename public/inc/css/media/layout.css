@@ -210,7 +210,7 @@ html,body {
 .main-page .content-item04 .move-img-area{width: 20rem;position:absolute;bottom:0;left:50%; transform: translateX(-50%);}
 .main-page .content-item04.active .move-img-area{transition: all 1.5s 1s;width: 112.5rem ;height:auto;bottom:0;}
 
-.main-page .content-item05{height:40rem;position: relative;margin-top:2rem;opacity: 1;transition: all 1s;overflow: hidden;padding: 0;}
+.main-page .content-item05{height:40rem;position: relative;margin-top:2rem;opacity: 0;transition: all 1s;overflow: hidden;padding: 0;}
 .main-page .content-item05.active{margin-top:0rem;opacity: 1;}
 .main-page .content-item05 .content-wrap{width:100%; margin:0 auto;height:100%;position: relative;}
 .main-page .content-item05 .text-area{position: absolute;bottom:2rem; z-index: 1;display: flex;flex-direction: column;margin-top:0;}
