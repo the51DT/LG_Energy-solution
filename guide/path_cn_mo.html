@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>LG에너지솔루션 | path</title>
+  <link type="text/css" rel="stylesheet" href="./inc/css/guide.css" />
+</head>
+
+<body>
+  <div id="guideWrap">
+    <header>
+      <!-- Guide Header -->
+      <div id="guideHeader">
+        <div>
+          <h1>LG에너지솔루션<span> : Path</span></h1>
+          <div class="total"></div>
+        </div>
+      </div>
+      <!-- //Guide Header -->
+      <div class="nav-wrap">
+        <ul class="nav">
+          <li class="nav-item nav-item1"><a href="path.html">Path_PC</a></li>
+          <li class="nav-item nav-item1"><a href="path_mo.html">Path_Mo</a></li>
+          <li class="nav-item nav-item1"><a href="path_en.html">Path_EN_PC</a></li>
+          <li class="nav-item nav-item1"><a href="path_en_mo.html">Path_EN__Mo</a></li>
+          <li class="nav-item nav-item1"><a href="path_cn.html">Path_CN_PC</a></li>
+          <li class="nav-item nav-item1"><a href="path_cn_mo.html" class="on">Path_CN_Mo</a></li>
+          <li class="nav-item nav-item1"><a href="path_pl.html">Path_PL_PC</a></li>
+          <li class="nav-item nav-item1"><a href="path_pl_mo.html">Path_PL_Mo</a></li>
+          <li class="nav-item nav-item1"><a href="path_de.html">Path_DE_PC</a></li>
+          <li class="nav-item nav-item1"><a href="path_de_mo.html">Path_DE_Mo</a></li>
+          <li class="nav-item nav-item2"><a href="setting.html">Setting</a></li>
+          <li class="nav-item nav-item3"><a href="ui-guide.html">Component</a></li>
+          <li class="nav-item nav-item4"><a href="#">Layout</a></li>
+        </ul>
+      </div>
+      <!-- Navi Menu -->
+      <div class="path-head">
+        <div class="pathNavMenu"></div>
+        <ul class="mark-wrap">
+          <li><span class="icon-state"></span>대기</li>
+          <li><span class="icon-state working"></span>작업중</li>
+          <li><span class="icon-state examine"></span>내부검수</li>
+          <li><span class="icon-state retouch"></span>수정</li>
+          <li><span class="icon-state comp"></span>완료</li>
+        </ul>
+      </div>
+      <!-- // Navi Menu -->
+    </header>
+    <!-- Path List -->
+    <div class="pathList">
+      <!-- Path -->
+
+      <div id="path-wrap">
+        <table class="pathTbl">
+          <caption>Path List</caption>
+          <colgroup>
+            <col width='8%' />
+            <col width='8%' />
+            <col width='8%' />
+            <col width='10%' />
+            <col width='15%' />
+            <col width='13%' />
+            <col width='7%' />
+            <col width='3%' />
+            <col width='35%' />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Depth 1</th>
+              <th scope="col">Depth 2</th>
+              <th scope="col">Depth 3</th>
+              <th scope="col">Depth 4</th>
+              <th scope="col">Depth 5</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">State</th>
+              <th scope="col">Notice</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <!-- // Path -->
+    </div>
+    <!-- // Path List -->
+
+    <!-- Footer -->
+    <!-- <div id="footer">Media4th&amp;Company</div> -->
+    <!-- // Footer -->
+  </div>
+</body>
+
+<!-- <script type="text/javascript" src="./inc/js/jquery-1.12.4.min.js"></script> -->
+
+<script>
+  // date:'<span>2017-04-10</span> <span>2017-04-11</span>''
+  // noti:'<li date-noti="2017-04-10">설명</li><li date-noti="2017-04-11">설명2</li>'
+  var path = [
+    {dep1:'공통', dep2:'', dep3:'', dep4:'', dep5:'', url:'', date:'', check: "", noti:''},
+    {dep1:'공통', dep2:'메인', dep3:'', dep4:'', dep5:'', url:'pages_cn/comm/comm_main_mo.html', date:'', check: "<span class='icon-state'></span>", noti:''},
+    {dep1:'공통', dep2:'header', dep3:'', dep4:'', dep5:'', url:'pages_cn/comm/comm_header_mo.html', date:'', check: "<span class='icon-state'></span>", noti:''},
+    {dep1:'공통', dep2:'검색결과', dep3:'', dep4:'', dep5:'', url:'pages_cn/comm/comm_main_search.html', date:'', check: "<span class='icon-state'></span>", noti:''},
+    // {dep1:'해더 / 푸터 / 레아이웃 공통', dep2:'', dep3:'', dep4:'', dep5:'', url:'pages_cn/layout/main_layout_mo.html', date:'<span>2025-6-08</span><span>2025-6-08</span>', check:"<span class='icon-state'></span>", noti:''},
+    // {dep1:'해더 / 푸터 / 레아이웃 공통', dep2:'', dep3:'', dep4:'', dep5:'', url:'pages_cn/layout/main_layout_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    // {dep1:'해더 / 푸터 / 레아이웃 공통', dep2:'', dep3:'', dep4:'', dep5:'', url:'pages_cn/', date:'', check:"<span class='icon-state'></span>", noti:''},
+    // {dep1:'해더 / 푸터 / 레아이웃 공통', dep2:'', dep3:'', dep4:'', dep5:'', url:'pages_cn/layout/main_layout_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''}
+    {dep1:'제품', dep2:'산업별 솔루션', dep3:'', dep4:'', dep5:'', url:'pages_cn/prod/prod_indus_psg_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'제품', dep2:'폼펙터', dep3:'원통형, 파우치형', dep4:'', dep5:'', url:'pages_cn/prod/prod_form_cylindrical_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'제품', dep2:'소재', dep3:'NCM, LFP', dep4:'', dep5:'', url:'pages_cn/prod/prod_mtrl_ncm_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    
+    {dep1:'서비스', dep2:'전력 중개', dep3:'', dep4:'', dep5:'', url:'pages_cn/serv/serv_trading_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'서비스', dep2:'B.around', dep3:'', dep4:'', dep5:'', url:'pages_cn/serv/serv_baround_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'서비스', dep2:'B-Lifecare', dep3:'', dep4:'', dep5:'', url:'pages_cn/serv/serv_blifecare_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'서비스', dep2:'B-once', dep3:'', dep4:'', dep5:'', url:'pages_cn/serv/serv_bonce_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'서비스', dep2:'KooRoo', dep3:'', dep4:'', dep5:'', url:'pages_cn/serv/serv_kooroo_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'서비스', dep2:'ESS SI', dep3:'', dep4:'', dep5:'', url:'pages_cn/serv/serv_ess_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+
+    {dep1:'회사정보', dep2:'회사소개', dep3:'', dep4:'', dep5:'', url:'pages_cn/comp/comp_int_overview_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'회사정보', dep2:'정도경영', dep3:'', dep4:'', dep5:'', url:'pages_cn/comp/comp_ethics_overview_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'회사정보', dep2:'사업장', dep3:'', dep4:'', dep5:'', url:'pages_cn/comp/comp_global_all_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'회사정보', dep2:'R&D', dep3:'', dep4:'', dep5:'', url:'pages_cn/comp/comp_rnd_status_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'회사정보', dep2:'뉴스룸', dep3:'목록', dep4:'', dep5:'', url:'pages_cn/comp/comp_newsroom_release_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'회사정보', dep2:'뉴스룸', dep3:'검색목록(결과 있는 경우)', dep4:'', dep5:'', url:'pages_cn/comp/comp_newsroom_release_02_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'회사정보', dep2:'뉴스룸', dep3:'검색목록(결과 없는 경우)', dep4:'', dep5:'', url:'pages_cn/comp/comp_newsroom_release_03_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'회사정보', dep2:'뉴스룸', dep3:'상세', dep4:'', dep5:'', url:'pages_cn/comp/comp_newsroom_release_04_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+
+    {dep1:'지속가능경영', dep2:'추진체계', dep3:'비전 및 전략, 거버넌스, 글로벌 파트너십', dep4:'지속가능경영', dep5:'', url:'pages_cn/sust/sust_sys_strategy_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'지속가능경영', dep2:'환경', dep3:'', dep4:'', dep5:'', url:'pages_cn/sust/sust_env_product_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'지속가능경영', dep2:'사회', dep3:'', dep4:'', dep5:'', url:'pages_cn/sust/sust_soc_eco_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'지속가능경영', dep2:'지배구조', dep3:'', dep4:'', dep5:'', url:'pages_cn/sust/sust_gov_bod_01.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'지속가능경영', dep2:'성과 및 보고', dep3:'', dep4:'', dep5:'', url:'pages_cn/sust/sust_perf_report_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    
+    {dep1:'투자정보', dep2:'재무정보', dep3:'재무상태표, 손익계산서, 현금흐름도, 신용등급, ESG 채권', dep4:'', dep5:'', url:'pages_cn/ir/ir_fin_sheet_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'투자정보', dep2:'주식정보', dep3:'주가정보, 주주환원', dep4:'', dep5:'', url:'pages_cn/ir/ir_stock_info_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'투자정보', dep2:'공시정보', dep3:'전자공고, 공시자료', dep4:'', dep5:'', url:'pages_cn/ir/ir_disclosure_announcement_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'투자정보', dep2:'IR정보', dep3:'IR 행사, 실적발표, 주추총회', dep4:'', dep5:'', url:'pages_cn/ir/ir_irinfo_event_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'투자정보', dep2:'IR자료', dep3:'사업보고서, 영업보고서, 감사보고서, 기업가치 제고 계획', dep4:'', dep5:'', url:'pages_cn/ir/ir_irdata_report_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    
+    {dep1:'인재채용', dep2:'인재상', dep3:'', dep4:'', dep5:'', url:'pages_cn/recr/recr_talent_enhancement_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'인재채용', dep2:'인사제도', dep3:'인사원칙, 인재육성, 복리후생', dep4:'', dep5:'', url:'pages_cn/recr/recr_hr_principle_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'인재채용', dep2:'조직문화', dep3:'일하는 방식, 소통문화', dep4:'', dep5:'', url:'pages_cn/recr/recr_cult_work_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'인재채용', dep2:'채용정보', dep3:'채용절차, 직무소개, Story', dep4:'', dep5:'', url:'pages_cn/recr/recr_info_process_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'인재채용', dep2:'채용공고', dep3:'국내, 해외', dep4:'', dep5:'', url:'pages_cn/recr/recr_post_kr_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+ 
+    {dep1:'고객지원', dep2:'다운로드', dep3:'', dep4:'', dep5:'', url:'pages_cn/down/down_all_story_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'고객지원', dep2:'문의하기', dep3:'', dep4:'', dep5:'', url:'pages_cn/cont/cont_prod_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'고객지원', dep2:'FAQ', dep3:'', dep4:'', dep5:'', url:'pages_cn/cs/faq01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+
+    {dep1:'Footer', dep2:'개인정보처리방침', dep3:'', dep4:'', dep5:'', url:'pages_cn/foot/foot_policy_privacy_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'Footer', dep2:'이메일무단수집거부', dep3:'', dep4:'', dep5:'', url:'pages_cn/foot/foot_policy_emailblock_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    {dep1:'Footer', dep2:'안전가이드', dep3:'', dep4:'', dep5:'', url:'pages_cn/foot/foot_guide_info_01_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''}
+
+    // {dep1:'시안', dep2:'메인', dep3:'', dep4:'', dep5:'', url:'pages_cn/cyanogen/cyanogen_main_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    // {dep1:'시안', dep2:'회사소개', dep3:'소개', dep4:'', dep5:'', url:'pages_cn/cyanogen/cyanogen_sub1_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    // {dep1:'시안', dep2:'회사소개', dep3:'글로벌 네트워크', dep4:'', dep5:'', url:'pages_cn/cyanogen/cyanogen_sub2_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+    // {dep1:'시안', dep2:'지속가능경영', dep3:'추진체계', dep4:'', dep5:'', url:'pages_cn/cyanogen/cyanogen_sub3_mo.html', date:'', check:"<span class='icon-state'></span>", noti:''},
+  ];
+
+
+  var _tablePath ="";
+
+
+  // for (var i = 0; i < arr.length; i++) { 
+
+  // }
+  // document.addEventListener("DOMContentLoaded", function () {
+  // var $listTbody = document.querySelector(".list tbody");
+  var pathWrap = document.getElementById('path-wrap');
+  var pathTbody = pathWrap.querySelector('tbody')
+  path.forEach(function (e) {
+    pathTbody.innerHTML +="<tr><th class='dep1'><p class='tit'>" + e.dep1 +
+     "</p></th><td class='dep2'><p class='tit'>" + e.dep2 +"</p></td><td class='dep3'><p class='tit'>" + e
+      .dep3 +"</p></td><td class='dep4'><p class='tit'>" + e.dep4 +
+     "</p></td><td class='dep5'><p class='tit'>" + e.dep5 +"</p></td><td class='url'><span>" + e.url +
+     "</span></td><td class='date'>" + e.date +"</td><td class='check'>" + e.check +
+     "</td><td class='txt'><ul>" + e.noti +"</ul></td></tr>"
+  });
+  // });
+
+  // $('.path-wrap')
+  // pathWrap.write(_tablePath);
+</script>
+<script type="text/javascript" src="./inc/js/guideUi.js"></script>
+
+</html>
