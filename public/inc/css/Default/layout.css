@@ -380,3 +380,9 @@ aside > img{cursor: pointer;}
 .main-page .content-item06 .area-box li:nth-child(n + 2){transition: all .3s .2s;}
 .main-page .content-item06 .area-box li:nth-child(n + 3){transition: all .3s .4s;}
 .main-page .content-item06 .area-box li:nth-child(n + 4){transition: all .3s .6s;}
+
+
+
+
+/* 영문 */
+html[lang=en] .gnb__tab-btn-wrap .depth01 > button{width:6.125rem;font-size: var(--size-desktop-B2, 1rem);line-height: var(--line-height-desktop-B2, 1.6rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
