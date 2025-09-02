@@ -74,7 +74,7 @@ aside > img{cursor: pointer;}
 .header-wrap + .header_search-area .search-result>img{width: 3.5rem;height: 3.5rem;}
 .header-wrap + .header_search-area .search-result>button{background-color:#B4B8BA;border-radius:999px;}
 .header-wrap + .header_search-area .search-result>button>img{padding:0.641rem}
-.header-wrap + .header_search-area.open{display: block; z-index:900;}
+.header-wrap + .header_search-area.open{display: block; z-index:90;}
 
 .sitemap_pop-wrap{position: absolute;width:100vw;height:100vh;z-index: 1000;background: var(--fill-fill-default-01, #555758);padding: 3.75rem 10rem;overflow-y: auto;display: none;;}
 .sitemap_pop-wrap.open{display: block;}
