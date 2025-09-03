@@ -1843,12 +1843,12 @@
 .cont .stepper-line { background-color: #E1E7EA; transition: height 0.2s ease; } */
 .cont .stepper-wrapper .faq-list { position: relative; z-index: 2; list-style: none; padding: 0; margin: 0; counter-reset: step-counter; }
 .cont .stepper-wrapper .accordion-list { position: relative; counter-increment: step-counter; }
-.cont .stepper-wrapper .accordion-list::before { content: counter(step-counter); position: absolute; z-index: 3; left: -90px; background-color: #E1E7EA; border-radius: 50%; width: 2.75rem; height: 2.75rem; line-height: 2.25rem; font-size: 1.5rem; font-weight: 600; color: #858889; display: flex; align-items: center; justify-content: center; top: 1.63rem; }
+.cont .stepper-wrapper .accordion-list::before { content: counter(step-counter); position: absolute; z-index: 3; left: -92px; background-color: #E1E7EA; border-radius: 50%; width: 2.75rem; height: 2.75rem; line-height: 2.25rem; font-size: 1.5rem; font-weight: 600; color: #858889; display: flex; align-items: center; justify-content: center; top: 1.63rem; }
 .cont .stepper-wrapper .accordion-list::after {content:''; width: 0.0625rem; height: 7.5rem; display: inline-block; background: var(--colorElement-light-stroke-stroke-default03); position: absolute; left: -70px; top: 48px;}
 
-.cont .stepper-wrapper .accordion-list.on::after {height: 100%; left: -70px; transition: height 0.5s ease-in;}
+.cont .stepper-wrapper .accordion-list.on::after {height: 100%; left: -68px;}
 .cont .stepper-wrapper .accordion-list:last-of-type::after {display: none;}
-.cont .stepper-wrapper .accordion-list.on::before, .cont .accordion-list.completed::before { background-color: #33B0C6; color: #fff; width: 3.75rem; height: 3.75rem; line-height: 2.625rem; font-size: 1.75rem; left: -90px;}
+.cont .stepper-wrapper .accordion-list.on::before, .cont .accordion-list.completed::before { background-color: #33B0C6; color: #fff; width: 3.75rem; height: 3.75rem; line-height: 2.625rem; font-size: 1.75rem; left: -98px;}
 .cont .stepper-wrapper .accordion-list.on.prev::before {background: #555758 !important; color: #fff !important; width: 2.75rem !important; height: 2.75rem !important; left: -90px !important; line-height: 2.25rem; font-size: 1.5rem;}
 
 .cont .faq-list .cont-btn-wrap .icon-btn .img-wrap {width: 1.25rem; height: 1.25rem; display: inline-block; background: url(../../images/icon/icon_link_external_gr.svg) center/contain no-repeat;}
