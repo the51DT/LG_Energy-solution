@@ -189,7 +189,7 @@ var pubUi = {
             const aside = document.querySelector(".wrap aside");
 
             // 1) 가장 안쪽의 활성 탭 패널을 찾는다.
-            const onPanels = wrap.querySelectorAll(".tab-content.on");
+            const onPanels = wrap.querySelectorAll(".tab-content-box .tab-content.on");
             const activePanel = onPanels[onPanels.length - 1] || wrap;
 
             // 2) 현재 활성 패널 기준으로 요소들을 구한다.
@@ -234,13 +234,13 @@ var pubUi = {
                             const link = targetSideSticky.querySelector(`.side-list a[href="#${safeId}"]`);
                             if (link) link.classList.add("active");
                         }
+                    }
 
-                        if (item.dataset.bgtype === "dark") {
-                            item.style.color = "#fff";
-                            targetSideSticky.classList.add("white");
-                        } else {
-                            targetSideSticky.classList.remove("white");
-                        }
+                    if (item.dataset.bgtype === "dark") {
+                        item.style.color = "#fff";
+                        if (targetSideSticky) targetSideSticky.classList.add("white");
+                    } else {
+                        if (targetSideSticky) targetSideSticky.classList.remove("white");                        
                     }
                 } else {
                     // 필요 시 비활성화 처리
