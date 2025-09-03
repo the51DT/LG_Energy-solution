@@ -865,7 +865,7 @@
 .rcif .job-story + .paging-wrap {margin-top: 3.75rem;}
 
 /* 산업별 솔루션 (pind) */
-.pind [class^="content-item"]:only-child {padding-bottom: 15rem;}
+.pind [class^="content-item"]:only-child {padding-bottom: 7.5rem;}
 .pind [class^="content-item"] .content-sect {padding-top: 5rem;}
 .pind .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem;}
 .pind .indus-list {display: flex; gap: 1.25rem;}
@@ -882,7 +882,7 @@
 .pind .indus-box > ul > li > img {width: 3.5rem; height: 3.5rem; margin-bottom: 1.25rem;}
 .pind .indus-box > ul > li > p {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-secondary-secondary-enabled);}
 .pind .indus-bottom {position: relative; margin-top: 5rem;}
-.pind .indus-bottom::before {content: ""; position: absolute; bottom: -15rem; left: 50%; transform: translateX(-50%); display: block; height: calc(100% + 15rem + 10.5rem); width: calc(100vw - var(--scrollbar-width)); background-color: var(--colorElement-light-fill-fill-default04); z-index: -1;}
+.pind .indus-bottom::before {content: ""; position: absolute; bottom: -7.5rem; left: 50%; transform: translateX(-50%); display: block; height: calc(100% + 7.5rem + 10.5rem); width: calc(100vw - var(--scrollbar-width)); background-color: var(--colorElement-light-fill-fill-default04); z-index: -1;}
 .pind .indus-bottom {display: flex; gap: 7rem; justify-content: space-between;}
 .pind .indus-bottom .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
 .pind .indus-bottom .bottom-list {flex-shrink: 0; display: flex; gap: 2.5rem; margin-top: 1.875rem;}
@@ -890,9 +890,9 @@
 .pind .indus-bottom .bottom-list > li > img {width: 3.75rem; height: 3.75rem; object-fit: cover;}
 .pind .indus-bottom .bottom-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .pind .indus-bottom .bottom-list > li > p > span {display: block; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
-.pind .indus-bottom .bottom-col {flex-grow: 1; display: flex; flex-direction: column; gap: 2.5rem; max-width: 36.75rem;}
+.pind .indus-bottom .bottom-col {flex-grow: 1; display: flex; flex-direction: column; gap: 2.5rem; max-width: 24.25rem;}
 .pind .indus-bottom .bottom-col > div {display: flex; flex-direction: column; gap: 0.625rem;}
-.pind .indus-bottom .bottom-col .btn-wrap {display: flex; gap: 0.625rem;}
+.pind .indus-bottom .bottom-col .btn-wrap {display: flex; gap: 0.625rem; flex-direction: column; }
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] {justify-content: flex-start; width: 100%; min-width: unset; height: auto; padding: 1.25rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-on-primary);}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"].gray {background-color: var(--colorElement-light-fill-fill-default02);}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] > img {width: 2.5rem; height: 2.5rem; margin-right: 1.25rem;}
@@ -1347,6 +1347,7 @@
 .comp .sect-item-box .sect-item-list .text-wrap .link-text {font-size: 1.5rem; color: #171819; font-weight: 600; line-height: 2.25rem; width: 100%; position: relative; padding-right: 2rem;}
 .comp .sect-item-box .sect-item-list .text-wrap .link-text::after {content:""; display: block; width: 2rem; height: 2rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat center 50%; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
 .comp .sect-item-box .sect-item-list .text-wrap .info-text {font-size: 1.125rem; color: #555758; font-weight: 400; line-height: 1.8rem;}
+.comp .sect-item-box .sect-item-list:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) {justify-content: center; gap: 19.5rem; padding-inline: 14.25rem 9.938rem;}
 .comp .sect-item-box.grid-type {padding-top: 0.625rem;}
 .comp .sect-item-box.grid-type .grid-item > a {height: 30rem; background-color: #f3f5f7; border-radius: 1rem; position: relative; padding: 2.5rem; display: block;}
 .comp .sect-item-box.grid-type .grid-item > a::after {content:""; display: block; width: 26.6875rem; height: 21.25rem; background-size:contain; position: absolute; bottom: 0; right: 0;}
@@ -2124,6 +2125,7 @@
 .rcct .detail-tit-wrap { display: flex; margin-bottom: 1.88rem; padding-bottom: 1.88rem; border-bottom: 1px solid #C9CED1; gap: 0.65rem; align-items: center; }
 .rcct .detail-tit-wrap > span { font-size: 2rem; font-weight: 700; line-height: 3rem; }
 .rcct .detail-tit-wrap > p { font-size: 1.5rem; font-weight: 600; }
+.rcct .system-cont-wrap .detail-tit-wrap > span {width: 3.125rem;}
 .rcct .system-cont-wrap:nth-of-type(1) .detail-tit-wrap > span { color: #7362BB; }
 .rcct .system-cont-wrap:nth-of-type(2) .detail-tit-wrap > span { color: #33B0C6; }
 .rcct .system-cont-wrap:nth-of-type(3) .detail-tit-wrap > span { color: #A6CE39; }
