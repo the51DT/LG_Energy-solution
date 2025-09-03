@@ -1861,7 +1861,7 @@
 .service .article-content .article-desc { padding: 1.88rem 0; font-size: 1.25rem; line-height: 2rem; }
 .adv-wrap, .serv-trading .service-wrap { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.88rem;}
 .adv-wrap .adv-box { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 1.25rem; width: calc(33.33% - 1rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem; }
-.adv-wrap .adv-box .adv-img {width: 5rem; height: 5rem;}
+.adv-wrap .adv-box .lottie-wrap {width: 5rem; height: 5rem;}
 .adv-wrap .adv-box .adv-tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; text-align: center; }
 .adv-wrap .adv-box .adv-desc { font-size: 1rem; line-height: 1.6rem; color: #555758; text-align: center; }
 .serv-trading .service-wrap .service-box { width: calc(50% - .625rem); padding: 2.5rem 2.5rem 3.75rem; border: 2px solid #E1E7EA; border-radius: 1rem; background-color: #fff; }
