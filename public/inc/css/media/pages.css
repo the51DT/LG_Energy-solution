@@ -1229,6 +1229,7 @@
 .comp .type02Swiper .sect-box .btn-wrap {margin-top: 2.5rem; display: flex; justify-content: center;}
 
 .comp .content-area-box .type03Swiper {padding: 1.5rem 1.25rem 0 1.25rem;}
+.comp .content-area-box .type03Swiper .sect-item-box::before {content: unset;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a {border-radius: 1rem; padding: 2rem 1.25rem; background: #f3f5f7; position: relative; width: 100%; min-height: 457px;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap {position: absolute; top: 2rem; left: 1.25rem;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap h5 {font-size: 1.25rem; line-height: 1.875rem; font-weight: 700;}
