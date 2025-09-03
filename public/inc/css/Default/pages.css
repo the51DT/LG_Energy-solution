@@ -2177,6 +2177,9 @@
 .serv-kooroo .article-content .article-desc + .content-tit { margin-top: 3.12rem; }
 .serv-kooroo .article-content .content-tit { display: inline-flex; align-items: center; justify-content: space-between; width: 100%; margin: 5rem 0 1.25rem; font-size: 1.5rem; line-height: 2.25rem; font-weight: 600; color: #171819; }
 .serv-kooroo .article-content .content-desc { color: #171819; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-bottom: 2.5rem; }
+.serv-kooroo .article-content:has(.station-battery-img) {margin-top: 2.5rem; padding: 2.5rem; border-radius: 1rem; background-color: #555758;}
+.serv-kooroo .article-content:has(.station-battery-img) .content-tit {margin-top: 0; color: var(--colorElement-light-text-text-on-primary);}
+.serv-kooroo .article-content:has(.station-battery-img) .content-desc {color: var(--colorElement-light-text-text-on-primary);}
 .serv-kooroo .article-tit-wrap { display: flex; justify-content: space-between; }
 .serv-kooroo .article-tit-wrap .btn-wrap a { display: flex; align-items: center; background-color: #33B0C6; padding: 1rem 1.75rem; border-radius: 62rem; gap: 0.25rem; color: #fff; font-size: 1.125rem; font-weight: 500; line-height: 1; }
 .serv-kooroo .article-img { padding: 2.375rem 10.125rem; margin: 5rem 0; }
@@ -2192,16 +2195,17 @@
 .serv-kooroo .station-top span { color: #171819; font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
 .serv-kooroo .station-bottom { margin-left: 5.62rem; flex-grow: 1; align-items: center; display: flex; }
 .serv-kooroo .station-bottom p, .serv-kooroo .station-bottom li { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
-.serv-kooroo .station-img { position: absolute; width: 21rem; margin-left: -16.69rem; top: 3.13rem; }
-.serv-kooroo .station-battery-img { top: 6.81rem; width: 17.125rem; position: absolute; right: -4.95rem; }
+.serv-kooroo .station-img { position: absolute; width: 50rem; margin-left: -30.75rem; top: 0.75rem; }
+.serv-kooroo .station-battery-img { top: 4.94rem; width: 28.75rem; position: absolute; right: -1.56rem; }
 .serv-kooroo .infra-wrap { display: flex; flex-direction: column; align-items: center; margin: 0 3.28rem; }
 .serv-kooroo .infra-box-wrap { width: 100%; display: flex; gap: 1.25rem; }
-.serv-kooroo .infra-box { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; border: 2px solid #E1E7EA; border-radius: 1rem; padding: 1.875rem; gap: 1.25rem; }
-.serv-kooroo .infra-box > img { width: 7.5rem; }
+.serv-kooroo .infra-box { flex: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; border: 2px solid #E1E7EA; border-radius: 1rem; padding: 1.875rem; gap: 1.25rem; }
+.serv-kooroo .infra-box > img { width: 5rem; }
 .serv-kooroo .infra-box > p { color: #171819; font-size: 1rem; font-weight: 600; line-height: 1.6rem; }
 .serv-kooroo .infra-box > p > span { display: block; font-size: 0.875rem; font-weight: 500; color: #555758; }
-.serv-kooroo .infra-wrap > img { width: 41rem; margin: 1.88rem 0 2.5rem; }
-.serv-kooroo .infra-desc { color: #171819; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
+.serv-kooroo .infra-wrap > img { width: 41rem; margin: 4.37rem 0 1.875rem; }
+.serv-kooroo .infra-desc { color: #171819; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; text-align: center; }
+.serv-kooroo .infra-desc > img {display: block; width: 7.5rem; margin-bottom: 1.875rem; margin-inline: auto;}
 .serv-kooroo .scooter-wrap { display: flex; flex-direction: column; align-items: center; position: relative; }
 .serv-kooroo .scooter-wrap > img { margin-top: 1.06rem; width: 51rem; }
 .serv-kooroo .scooter-box-wrap { display: flex; width: 100%; }
