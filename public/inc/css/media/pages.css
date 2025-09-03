@@ -1176,7 +1176,7 @@
 .etmg .desc-col2 .tit {font-size: 1.25rem; font-weight: 700; line-height: 1.875rem;}
 .etmg .desc-col2 .desc {font-size: 1rem; line-height: 1.6rem;}
 .etmg .desc-col2 .tit + .desc {margin-top: 1rem;}
-.etmg .desc-col2 .img-area {width: 6.25rem;}
+.etmg .desc-col2 .img-area {width: 5rem;}
 .etmg .desc-box {gap: 0.62rem; padding: 1.5rem 1.25rem;}
 .etmg .desc-box > li {align-items: flex-start; gap: 0.62rem;}
 .etmg .desc-box .desc-box-tit {width: 5.62rem; gap: 0.5rem; font-size: 0.875rem; line-height: 1.3125rem;}

@@ -90,6 +90,7 @@
 .sust-env .intro-wrap .article-desc {margin: 1.25rem 0;}
 .sust-env .eiass-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 2.5rem;}
 .sust-env .eiass-box {display: flex; flex-direction: column; align-items: center; gap: 1.88rem; width: calc(33.33% - .85rem); padding: 2.5rem; background-color: #fff; border: 2px solid #E1E7EA; border-radius: 1rem;}
+.sust-env .eiass-box .eiass-img {width: 5rem; height: 5rem;}
 .sust-env .eiass-txt {display: flex; flex-direction: column; gap: 1.25rem;}
 .sust-env .eiass-txt .eiass-tit {font-size: 1.25rem; line-height: 2rem; text-align: center;}
 .sust-env .eiass-period {display: flex; gap: .62rem;} 
@@ -1301,7 +1302,7 @@
 .etmg .desc-col2 .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
 .etmg .desc-col2 .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); word-break: break-all;}
 .etmg .desc-col2 .tit + .desc {margin-top: 1.25rem;}
-.etmg .desc-col2 .img-area {width: 7.5rem; margin-inline: auto; margin-bottom: 2.5rem;}
+.etmg .desc-col2 .img-area {width: 5rem; margin-inline: auto; margin-bottom: 2.5rem;}
 .etmg .desc-box {display: flex; flex-direction: column; gap: 0.63rem; padding: 1.88rem 2.5rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
 .etmg .desc-box > li {display: flex; align-items: center; gap: 0.62rem;}
 .etmg .desc-box .desc-box-tit {flex-shrink: 0; display: flex; align-items: center; gap: 0.62rem; width: 6.37rem; font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
