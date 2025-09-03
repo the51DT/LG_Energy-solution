@@ -43,7 +43,7 @@ aside > img{cursor: pointer;}
 .header-wrap.on .nav-wrap{height:auto;}
 .gnb__tab-btn-wrap{display:flex;gap:2.5rem;}
 .gnb__tab-btn-wrap .depth01{position:relative; display:flex;flex-direction: column;}
-.gnb__tab-btn-wrap .depth01 > button {width:5.875rem;height:6.25rem;color: var(--text-text-default-01, #171819);font-size: var(--size-desktop-B1, 1.125rem);font-weight: 500;line-height: var(--line-height-desktop-B1, 1.8rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);text-align:center}
+.gnb__tab-btn-wrap .depth01 > button {min-width:5.875rem;height:6.25rem;color: var(--text-text-default-01, #171819);font-size: var(--size-desktop-B1, 1.125rem);font-weight: 500;line-height: var(--line-height-desktop-B1, 1.8rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);text-align:center}
 .gnb__tab-btn-wrap .depth01 > button:hover{color: var(--colorElement-light-text-text-default01); font-weight: 700;}
 .nav-wrap .gnb__tab-btn-wrap ul {position: absolute;top:100px;left: 50%;transform: translateX(-50%);display: none;padding-top:0.87rem}
 .header-wrap .nav-wrap .gnb__tab-btn-wrap ul.on {display:block;text-align: center;}
@@ -386,6 +386,6 @@ aside > img{cursor: pointer;}
 
 
 /* 영문 */
-html[lang=en] .gnb__tab-btn-wrap .depth01 > button{width:6.125rem;font-size: var(--size-desktop-B2, 1rem);line-height: var(--line-height-desktop-B2, 1.6rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
+html[lang=en] .gnb__tab-btn-wrap .depth01 > button{min-width:6.125rem;font-size: var(--size-desktop-B2, 1rem);line-height: var(--line-height-desktop-B2, 1.6rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
 html[lang=en] .util-item-cs .cs-cont a{font-size: var(--size-desktop-B3, 0.875rem);font-weight: 600;line-height: var(--line-height-desktop-B3, 1.4rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);width:max-content}
 html[lang=en] .util-item-cs .cs-cont a:after{margin: 0 0.6rem;}
