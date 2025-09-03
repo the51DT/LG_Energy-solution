@@ -146,13 +146,19 @@
   <div class="header_search-area target-header_search search-reset">
       <div class="pop-wrap">
           <!-- 엔터 클릭시 검색 -->
-          <div class="search-result searchEvt pc-only">
-              <img src="../../../inc/images/icon/icon_head_search.svg" alt="">
-              <input type="text" placeholder="Please enter a keyword">
-              <button aria-label="삭제" class="btn-delete" style="display: none;">
-                  <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="">
-              </button>
+          <!-- 09.03 수정 : 검색영역 마크업 통일 -->
+          <div class="search-box-wrap pc-only">
+              <div class="search-box searchEvt">
+                  <button type="button" class="btn-search" aria-label="검색" class="btn-search">
+                      <img src="../../../inc/images/icon/icon_head_search.svg" alt="검색 아이콘" role="button">
+                  </button>
+                  <input type="text" id="faq-search" placeholder="검색어를 입력해 주세요.">
+                  <button type="button" class="btn-search-reset btn-delete" aria-label="검색어 초기화">
+                      <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="삭제 아이콘">
+                  </button>
+              </div>
           </div>
+          <!-- //09.03 수정 : 검색영역 마크업 통일 -->
       </div>
   </div>
   <div class="sitemap_pop-wrap">
