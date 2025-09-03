@@ -1663,6 +1663,8 @@
 .serv-blifecare .model-wrap {flex-wrap: wrap; gap: 1rem .5rem; padding: 1.5rem 1.25rem; border-radius: .5rem;}
 .serv-blifecare .model-inner {display: flex; gap: 0 .5rem;}
 .serv-blifecare .model-box {gap: .25rem; width: 8.75rem; height: 8.75rem;}
+.serv-blifecare .model-icon {width: 3.75rem; height: 3.75rem;}
+.serv-blifecare .model-icon > img {width: 2.5rem; height: 2.5rem;}
 .serv-blifecare .model-tit {font-size: .875rem; line-height: 1.3125rem;}
 .serv-blifecare .model-btn {width: 1.375rem; height: 1.375rem;}
 .serv-blifecare .content-item03::before {display: none;}

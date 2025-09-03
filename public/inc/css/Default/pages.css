@@ -1977,7 +1977,8 @@
 .serv-blifecare .service-detail-wrap .detail-desc {font-size: 1rem; color: #555758; line-height: 1.6rem;}
 .serv-blifecare .model-wrap {width: 100%; padding: 1.88rem 2.5rem 2rem; display: flex; align-items: center; justify-content: center; background-color: #CBF3F7; border-radius: 62.4375rem;}
 .serv-blifecare .model-box {display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .62rem; width: 15.5rem; height: 15.5rem; background-color: #fff; border-radius: 50%;}
-.serv-blifecare .model-icon {width: 3rem; height: 3rem;}
+.serv-blifecare .model-icon {display: flex; justify-content: center; align-items: center; width: 5rem; height: 5rem;}
+.serv-blifecare .model-icon > img {width: 3rem; height: 3rem;}
 .serv-blifecare .model-tit {font-size: 1.125rem; font-weight: 600; color: #171819; line-height: 1.8rem; text-align: center;}
 .serv-blifecare .model-btn {width: 1.75rem; height: 1.75rem; background: url(../../images/img/serv03_icon_07.png) center/contain no-repeat;}
 .serv-blifecare .content-item03 {position: relative;}
