@@ -1576,10 +1576,11 @@
 .adv-wrap .adv-box .adv-tit {margin: 1rem 0 .5rem; font-size: 1.125rem; line-height: 1.75rem;}
 .adv-wrap .adv-box .adv-desc {font-size: .875rem; line-height: 1.3125rem;}
 .serv-trading .service-wrap .service-box {width: 100%; padding: 1.5rem;}
-.serv-trading .service-wrap .service-tit-wrap {flex-direction: column; gap: 1rem; padding-bottom: 1rem;}
+.serv-trading .service-wrap .service-tit-wrap {gap: 0.25rem; padding-bottom: 1rem;}
 .serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .serv-trading .service-wrap .service-desc {padding-top: 1rem; font-size: .875rem; line-height: 1.3125rem; text-align: center;}
-.serv-trading #content01 .article-img .lottie-wrap {top: 25.47rem;}
+.serv-trading #content01 .article-img {max-width: 20rem; margin-inline: auto;}
+.serv-trading #content01 .article-img .lottie-wrap {top: 21.97rem; left: 50%; transform: translateX(-50%);}
 .service .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 9.25rem;}
 .service .tab-content-box > .service-btn-wrap:last-of-type {margin-left: 1.25rem; margin-right: 1.25rem;}
 .service .service-btn-wrap > button,
