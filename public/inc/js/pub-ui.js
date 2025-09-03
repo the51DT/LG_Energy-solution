@@ -1090,7 +1090,7 @@ var pubUi = {
         if (mobileSteps.length > 0) {
             mobileSteps.forEach((step, index) => {
                 const stepEl = step;
-                const categoryBtns = step.querySelectorAll(".cont-btn-wrap button");
+                const categoryBtns = step.querySelectorAll(".cont-btn-wrap .btn");
                 const categoryBtnsContent = step.querySelectorAll(".cont-btn-wrap .btn-box .btn-content");
 
                 const nextBtn = step.querySelector(".btn-primary01");
@@ -1100,6 +1100,7 @@ var pubUi = {
                 // 문의하기 step별 카테고리 버튼 클릭시, 클릭 이벤트
                 categoryBtns.forEach((button) =>
                     button.addEventListener("click", (e) => {
+                        console.log(e.target);
                         if (index === 2) {
                             //step3 (index:2) 일때 버튼이벤트 예외처리
                             const clickedBtn = e.target.closest("button");
@@ -1128,7 +1129,11 @@ var pubUi = {
                                 btnContent.classList.remove("active");
                             });
 
-                            e.target.classList.add("active"); //클릭한 카테고리 active클래스 추가
+                            if(e.target.tagName === "A") {
+                                e.target.closest(".btn").classList.add("active"); //클릭한 카테고리 active클래스 추가
+                            } else {
+                                e.target.classList.add("active"); //클릭한 카테고리 active클래스 추가
+                            }
 
                             const targetBtnId = e.target.getAttribute("id");
                             const targetBtnContent = document.querySelector(`#${targetBtnId}-content`);

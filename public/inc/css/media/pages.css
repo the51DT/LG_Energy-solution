@@ -794,7 +794,7 @@
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] > img {margin-right: 1rem;}
 
 
-/* 폼펙터 (.pfom) */
+/* 폼팩터 (.pfom) */
 .pfom .tab-cate-wrap.full-line::after {content: none;}
 .pfom .tab-cate-wrap.full-line .tab-category {width: 100%;}
 .pfom .tab-cate-wrap.full-line .tab-category > li button {width: 5.625rem;}
@@ -1966,6 +1966,8 @@
 
 /* 안전가이드 */
 .foot-guide .article-tit { font-size: 1.5rem; margin-bottom: 1rem; }
+.foot-guide [class^="content-item"]:first-child {padding-top: 3rem;}
+.foot-guide .tab-category {max-width: 100%; width: 100%;}
 .foot-guide .title-h2 { margin: 3rem 0px 1rem 1.25rem; }
 .foot-guide .content-sect { padding-top: 3rem; }
 .foot-guide .content-wrap .content-sect:first-of-type { padding-top: 0; }
