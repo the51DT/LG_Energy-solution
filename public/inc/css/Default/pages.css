@@ -1883,8 +1883,10 @@
 .serv-baround .brand-info .brand-logo {width: 40.6875rem;}
 .serv-baround .brand-info .brand-img {width: 39.75rem; margin: 1.12rem 0 1.06rem;}
 .serv-baround .info-wrap {display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; width: 100%;}
-.serv-baround .info-wrap .info-box {display: flex; flex-direction: column; padding: 2.5rem; width: 16.3rem; border: 2px solid #E1E7EA; border-radius: 1rem; text-align: center;}
+.serv-baround .info-wrap .info-box {display: flex; flex-direction: column; padding: 2.5rem; width: 17.5rem; border: 2px solid #E1E7EA; border-radius: 1rem; text-align: center;}
 .serv-baround .info-wrap .info-box .highlight {color: #33B0C6;}
+.serv-baround .info-wrap .info-box:nth-child(2) .highlight {color: #0C9CAB;}
+.serv-baround .info-wrap .info-box:nth-child(3) .highlight,
 .serv-baround .info-wrap .info-box .highlight.green {color: #00983F;}
 .serv-baround .info-wrap .info-tit {display: flex; flex-direction: column; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(133, 136, 137, .25);}
 .serv-baround .info-wrap .info-tit>span {font-size: 1.25rem; line-height: 2rem; font-weight: 600}
@@ -1905,7 +1907,7 @@
 .e4w-box .e4w-top {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem; background-color: #33B0C6; border-radius: 1rem 1rem 0 0;}
 .e4w-box .e4w-top .top-logo {display: inline-flex; align-items: center; justify-content: center; width: 11.25rem; height: 11.25rem; background-color: #fff; border-radius: 50%;}
 .e4w-box .e4w-top .top-logo .b-lifecare {width: 9.3125rem; height: 2.5rem;}
-.e4w-box .e4w-top .top-logo .b-once {width: 8.63413rem; height: 2rem;}
+.e4w-box .e4w-top .top-logo .b-once {width: 7.4375rem; height: 1.5625rem;}
 .e4w-box .e4w-top .top-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #fff; text-align: center;}
 .e4w-box .e4w-btm {display: flex; flex-direction: column; justify-content: space-between; height: 20.5rem; padding: 2.5rem; background-color: #fff; border-radius: 0 0 1rem 1rem;}
 .e4w-box .e4w-btm .asterisk-text {padding-top: 1.88rem;}
@@ -1926,7 +1928,7 @@
 
 .bmts-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem;} 
 .bmts-box {display: flex; flex-direction: column; align-items: center; gap: 1.88rem; width: calc(50% - .9rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem;}
-.bmts-box>img {width: 7.5rem; height: 7.5rem;}
+.bmts-box>img {width: 5rem; height: 5rem;}
 .bmts-box .bmts-tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819}
 .bmts-box .bmts-desc {padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem; color: #555758;}
 
@@ -2010,9 +2012,14 @@
 /* 서비스 공통 팝업 */
 .modal-pop .pop-wrap.service {width: 62.5rem; max-width: 62.5rem;}
 .modal-pop .pop-wrap.service .pop-header {padding-bottom: 2.5rem;}
-.modal-pop .pop-wrap.service .img-wrap {max-height: 22.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #C9CED1;}
-.modal-pop .pop-wrap.service .img-wrap > img {display: block; margin: 0 auto; width: auto; height: auto;}
+.modal-pop .pop-wrap.service .img-wrap {padding-bottom: 2.5rem; border-bottom: 1px solid #C9CED1;}
+.modal-pop .pop-wrap.service .img-wrap > img {display: block; margin: 0 auto; width: auto; height: 100%;}
 .modal-pop .pop-wrap.service .desc {padding-top: 2.5rem; font-size: 1.125rem; line-height: 1.8rem; color: #555758;}
+.modal-pop .pop-wrap.service.bms .img-wrap {height: 22.3125rem;}
+.modal-pop .pop-wrap.service.cloud .img-wrap {height: 14.5rem;}
+.modal-pop .pop-wrap.service.sdv .img-wrap {height: 8.4375rem;}
+.modal-pop .pop-wrap.service.sdt .img-wrap {height: 9.375rem;}
+.modal-pop .pop-wrap.service.dlpt .img-wrap {height: 10.6695rem;}
 
 
 

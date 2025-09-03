@@ -1690,11 +1690,15 @@
 .serv-blifecare .modal-pop.dialog .pop-wrap .img-wrap {padding-bottom: 0; border-bottom: none;}
 .serv-blifecare .modal-pop.dialog .pop-wrap .desc {padding-top: 1.88rem; font-size: 1rem; line-height: 1.6rem;}
 /* 서비스 공통 팝업 */
-.modal-pop .pop-wrap.service {gap: 1.5rem;}
+.modal-pop .pop-wrap.service {gap: 1.5rem; max-height: unset;}
 .modal-pop .pop-wrap.service .pop-header {padding-bottom: 0;}
 .modal-pop .pop-wrap.service .img-wrap {padding-bottom: 0; border-bottom: none;}
-.modal-pop .pop-wrap.service .img-wrap > img {width: 100%; height: 100%;}
 .modal-pop .pop-wrap.service .desc {padding-top: 1.5rem; font-size: 1rem; line-height: 1.6rem;}
+.modal-pop .pop-wrap.service.bms .img-wrap {height: 13.51669rem;}
+.modal-pop .pop-wrap.service.cloud .img-wrap {height: 8.75rem;}
+.modal-pop .pop-wrap.service.sdv .img-wrap {height: 13.125rem;}
+.modal-pop .pop-wrap.service.sdt .img-wrap {height: 10.5625rem;}
+.modal-pop .pop-wrap.service.dlpt .img-wrap {height: 6.94144rem;}
 
 /* 인사원칙 */
 .rchr .title-h2 { font-size: 1.5rem; }
