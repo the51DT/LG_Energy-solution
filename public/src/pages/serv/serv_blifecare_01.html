@@ -31,7 +31,7 @@
                                     <li class="depth01">
                                         <button class="parent-event_btn">제품</button>
                                         <ul>
-                                            <li class="depth02"><a href="#">사업별 솔루션</a></li>
+                                            <li class="depth02"><a href="#">산업별 솔루션</a></li>
                                             <li class="depth02"><a href="#">폼팩터</a></li>
                                             <li class="depth02"><a href="#">소재</a></li>
                                         </ul>
@@ -64,7 +64,7 @@
                                             <li class="depth02"><a href="#">환경</a></li>
                                             <li class="depth02"><a href="#">사회</a></li>
                                             <li class="depth02"><a href="#">지배구조</a></li>
-                                            <li class="depth02"><a href="#">성과 및 보고</a></li>
+                                            <li class="depth02"><a href="#">성과보고</a></li>
                                         </ul>
                                     </li>
                                     <li class="depth01">
@@ -164,14 +164,14 @@
                             <a href="#">제품</a>
                             <ul>
                                 <li class="depth02">
-                                    <a href="#">사업별 솔루션</a>
+                                    <a href="#">산업별 솔루션</a>
                                     <ul>
                                         <li class="depth03"><a href="#">승용 EV</a></li>
                                         <li class="depth03"><a href="#">상용 EV</a></li>
                                         <li class="depth03"><a href="#">LEV</a></li>
                                         <li class="depth03"><a href="#">ESS</a></li>
                                         <li class="depth03"><a href="#">스마트기기</a></li>
-                                        <li class="depth03"><a href="#">파워툴</a></li>
+                                        <li class="depth03"><a href="#">전동공구</a></li>
                                         <li class="depth03"><a href="#">중장비</a></li>
                                         <li class="depth03"><a href="#">로봇</a></li>
                                         <li class="depth03"><a href="#">미래모빌리티</a></li>
@@ -298,7 +298,7 @@
                                     </ul>
                                 </li>
                                 <li class="depth02">
-                                    <a href="#">성과 및 보고</a>
+                                    <a href="#">성과보고</a>
                                     <ul>
                                         <li class="depth03"><a href="#">보고서</a></li>
                                         <li class="depth03"><a href="#">평가</a></li>
@@ -483,42 +483,32 @@
                                                 <div class="article-content">
                                                     <p class="content-tit">협업 모델 예시</p>
                                                     <div class="model-wrap">
+                                                        <!-- 09.03 / B-Lifecare 팝업 버튼 삭제 [start] -->
                                                         <div class="model-box">
                                                             <div class="model-icon">
                                                                 <img src="../../../inc/images/img/serv03_icon_03.png" alt="">
                                                             </div>
                                                             <span class="model-tit">완성차 판매 딜러사</span>
-                                                            <button type="button" class="model-btn" id="popupModelBtn1" onclick="pubUi.popUp.open('#popupModel1','#popupModelBtn1')">
-                                                                <span class="blind">완성차 판매 딜러사 팝업 버튼</span>
-                                                            </button>
                                                         </div>
                                                         <div class="model-box">
                                                             <div class="model-icon">
                                                                 <img src="../../../inc/images/img/serv03_icon_04.png" alt="">
                                                             </div>
                                                             <span class="model-tit">자동차유통사</span>
-                                                            <button type="button" class="model-btn" id="popupModelBtn2" onclick="pubUi.popUp.open('#popupModel2','#popupModelBtn2')">
-                                                                <span class="blind">자동차유통사 팝업 버튼</span>
-                                                            </button>
                                                         </div>
                                                         <div class="model-box">
                                                             <div class="model-icon">
                                                                 <img src="../../../inc/images/img/serv03_icon_05.png" alt="">
                                                             </div>
                                                             <span class="model-tit">중고차 유통사</span>
-                                                            <button type="button" class="model-btn" id="popupModelBtn3" onclick="pubUi.popUp.open('#popupModel3','#popupModelBtn3')">
-                                                                <span class="blind">중고차 유통사 팝업 버튼</span>
-                                                            </button>
                                                         </div>
                                                         <div class="model-box">
                                                             <div class="model-icon">
                                                                 <img src="../../../inc/images/img/serv03_icon_06.png" alt="">
                                                             </div>
                                                             <span class="model-tit">차량 정비업체</span>
-                                                            <button type="button" class="model-btn" id="popupModelBtn4" onclick="pubUi.popUp.open('#popupModel4','#popupModelBtn4')">
-                                                                <span class="blind">차량 정비업체 팝업 버튼</span>
-                                                            </button>
                                                         </div>
+                                                        <!-- 09.03 / B-Lifecare 팝업 버튼 삭제 [end] -->
                                                     </div>
                                                 </div>
                                             </article>
@@ -900,76 +890,7 @@
                 </div>
             </footer>
             <!-- // footer -->
-            <!-- popup -->
-            <!-- popupModel1 -->
-            <div class="modal-pop dialog model1" id="popupModel1">
-                <div class="pop-wrap">
-                    <div class="pop-header">
-                        <h3 class="title">완성차 판매 딜러사</h3>
-                    </div>
-                    <div class="pop-content">
-                        <div class="img-wrap">
-                            <img src="" alt="" onerror="this.onerror=null; this.src='../../../inc/images/img/serv03_img_popup1.png';">
-                        </div>
-                        <p class="desc">
-                            커넥티비티 서비스가 부재한 수입 완성차를 이용하는 고객들에게 B-Lifecare를 통해 최적화된 EV 사용 경험을 제공하고 있습니다. B-Lifecare는 커넥티비티 서비스를 보완함과 동시에 전문적인 배터리 관리를 위해 완성차 AS센터와도 제휴하였습니다.
-                        </p>
-                    </div>
-                    <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel1','#popupModelBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
-                </div>
-            </div>
-            <!-- popupModel2 -->
-            <div class="modal-pop dialog model2" id="popupModel2">
-                <div class="pop-wrap">
-                    <div class="pop-header">
-                        <h3 class="title">자동차 유통사</h3>
-                    </div>
-                    <div class="pop-content">
-                        <div class="img-wrap">
-                            <img src="" alt="" onerror="this.onerror=null; this.src='../../../inc/images/img/serv03_img_popup2.png';">
-                        </div>
-                        <p class="desc">
-                            B-Lifecare를 통해 리스차량 출고부터 반납 시점까지 잔존 성능 관리 및 배터리 관리 가이드 제공을 통해 중고차 가치를 높이며, 배터리 관리 가이드를 준수한 이용자에게 중고 EV 잔존가치 향상으로 확보한 비용을 리스료 절감 혜택으로 제공하고 있습니다.
-                        </p>
-                    </div>
-                    <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel2','#popupModelBtn2');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
-                </div>
-            </div>
-            <!-- popupModel3 -->
-            <div class="modal-pop dialog model3" id="popupModel3">
-                <div class="pop-wrap">
-                    <div class="pop-header">
-                        <h3 class="title">중고차 유통사</h3>
-                    </div>
-                    <div class="pop-content">
-                        <div class="img-wrap">
-                            <img src="" alt="" onerror="this.onerror=null; this.src='../../../inc/images/img/serv03_img_popup3.png';">
-                        </div>
-                        <p class="desc">
-                            중고 EV에서 가장 중요한 부품인 배터리를 배터리 제조사의 전문 기술력을 바탕으로 배터리 성능인증을 제공합니다. 배터리 상태와 더불어 배터리가 그동안 어떻게 사용되어 왔는지에 대한 이력도 함께 제공될 수 있어 중고 EV 거래 시, 차량의 가치와 성능을 보장할 수 있습니다.
-                        </p>
-                    </div>
-                    <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel3','#popupModelBtn3');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
-                </div>
-            </div>
-            <!-- popupModel4 -->
-            <div class="modal-pop dialog model4" id="popupModel4">
-                <div class="pop-wrap">
-                    <div class="pop-header">
-                        <h3 class="title">차량 정비업체</h3>
-                    </div>
-                    <div class="pop-content">
-                        <div class="img-wrap">
-                            <img src="" alt="" onerror="this.onerror=null; this.src='../../../inc/images/img/serv03_img_popup4.png';">
-                        </div>
-                        <p class="desc">
-                            내 EV의 점검, 중고차로 구매 전 성능에 대한 별도 점검 등 정비 플랫폼을 통해 배터리 성능 평가를 제공하고 있습니다. 이 서비스는 향후 사고 혹은 고장으로 A/S가 필요한 고객들에게 파트너사와 협업하여 안전한 수리 및 재제조 서비스를 제공하고 배터리 사용과 관련된 워런티를 제공할 수 있습니다.
-                        </p>
-                    </div>
-                    <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel4','#popupModelBtn4');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
-                </div>
-            </div>
-            <!-- //popup -->
+            <!-- 09.03 / B-Lifecare 팝업 삭제 -->
         </div>
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
