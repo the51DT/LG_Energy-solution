@@ -36,6 +36,8 @@ aside > img{cursor: pointer;}
 .header-wrap.scroll-on{height:6.825rem;}
 .header-cont{position:relative;left:50%;transform: translateX(-50%);width:100%;max-width:90rem;height:6.25rem;display:flex;justify-content: space-between;z-index: 1;}
 .header-cont > .ci {width: 12.5rem; height: 6.25rem;display: flex;align-items: center;}
+.header-cont > .ci a {display: flex;align-items: center;}
+ 
 /* .header-wrap.on .header-cont, */
 /* .header-wrap.scroll-on .header-cont{height:6.825rem;} */
 .sitemap-wrap{display:flex;}
