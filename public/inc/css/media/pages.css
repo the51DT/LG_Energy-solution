@@ -1589,7 +1589,7 @@
 .service .article-content .article-desc {padding: 1.5rem 0; font-size: 1rem; line-height: 1.6rem;}
 .adv-wrap, .serv-trading .service-wrap {gap: 1rem; margin-top: 1rem;}
 .adv-wrap .adv-box {width: 100%; padding: 1.5rem; gap: 0;}
-.adv-wrap .adv-box .adv-img {width: 5rem; height: 5rem;}
+.adv-wrap .adv-box .adv-img {width: 4rem; height: 4rem;}
 .adv-wrap .adv-box .adv-tit {margin: 1rem 0 .5rem; font-size: 1.125rem; line-height: 1.75rem;}
 .adv-wrap .adv-box .adv-desc {font-size: .875rem; line-height: 1.3125rem;}
 .serv-trading .service-wrap .service-box {width: 100%; padding: 1.5rem;}
@@ -1597,11 +1597,14 @@
 .serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .serv-trading .service-wrap .service-desc {padding-top: 1rem; font-size: .875rem; line-height: 1.3125rem; text-align: center;}
 .serv-trading #content01 .article-img {max-width: 20rem; margin-inline: auto;}
+.serv-trading #content02 .article-img {margin: .5rem 2.81rem 0;}
+
 .serv-trading #content01 .article-img .lottie-wrap {top: 21.97rem; left: 50%; transform: translateX(-50%);}
 .service .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 0;}
 .service .tab-content-box > .service-btn-wrap:last-of-type {margin-left: 1.25rem; margin-right: 1.25rem;}
 .service .service-btn-wrap > button,
 .service .service-btn-wrap > a {width: 100%;}
+.serv-trading .service-wrap .service-tit-wrap>img {width: 3.75rem; height: 3.75rem;}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {margin-top: 3rem;}
