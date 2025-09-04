@@ -162,7 +162,7 @@ aside > img{cursor: pointer;}
 .util-item-cs .cs-cont.open{z-index:1 }
 .util-item-cs .cs-cont .pop-wrap{width:0;overflow:hidden;display:flex;flex-direction:row;height: 3.8125rem;padding: 1rem 1.5rem;align-items: center;background:#000;border-radius: 3.8125rem;opacity:0;transition: all .1s;}
 .util-item-cs .cs-cont.open .pop-wrap{opacity:1;width:18.3125rem;transition: all .3s;}
-.util-item-cs .cs-cont a{color: var(--text-text-disabled, #B4B8BA);font-size: var(--size-desktop-B2, 1rem);font-weight: 600;line-height: var(--line-height-desktop-B2, 1.6rem);letter-spacing: var(--letter-spacing-default, 0);display:flex;align-items: center;}
+.util-item-cs .cs-cont a{width:max-content;white-space:nowrap;color: var(--text-text-disabled, #B4B8BA);font-size: var(--size-desktop-B2, 1rem);font-weight: 600;line-height: var(--line-height-desktop-B2, 1.6rem);letter-spacing: var(--letter-spacing-default, 0);display:flex;align-items: center;}
 .util-item-cs .cs-cont a:after{display:block;content: "";width: 0.0625rem;height: 1rem;margin:0 1rem;background: var(--stroke-stroke-default-01, #555758);}
 .util-item-cs .cs-cont a:last-of-type:after{display:none;}
 .util-item-cs .cs-cont a:hover{color:#fff;}
@@ -394,7 +394,10 @@ aside > img{cursor: pointer;}
 
 
 
+
+
 /* 영문 */
-html[lang=en] .gnb__tab-btn-wrap .depth01 > button{min-width:6.125rem;font-size: var(--size-desktop-B2, 1rem);line-height: var(--line-height-desktop-B2, 1.6rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
+html[lang=en] .gnb__tab-btn-wrap .depth01 > button{min-width:4.75rem;font-size: var(--size-desktop-B2, 1rem);line-height: var(--line-height-desktop-B2, 1.6rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
+html[lang=en] .nav-wrap li.depth02 a{color: var(--text-text-default-01, #171819);text-align: center;font-size: var(--size-desktop-Dense14, 0.875rem);font-weight: 400;line-height: var(--line-height-desktop-Dense14, 1.225rem); /* 140% */letter-spacing: var(--letter-spacing-default, 0);}
 html[lang=en] .util-item-cs .cs-cont a{font-size: var(--size-desktop-B3, 0.875rem);font-weight: 600;line-height: var(--line-height-desktop-B3, 1.4rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);width:max-content}
 html[lang=en] .util-item-cs .cs-cont a:after{margin: 0 0.6rem;}
