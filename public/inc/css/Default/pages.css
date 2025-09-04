@@ -853,7 +853,7 @@
 .rcif .job-list {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;}
 .rcif .job-list > li {padding: 1.88rem 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
 .rcif .job-list > li .job-tit {display: flex; gap: 0.62rem; align-items: center; padding-bottom: 0.62rem; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
-.rcif .job-list > li .job-tit > img {flex-shrink: 0; width: 5rem; height: 5rem; object-fit: contain;}
+.rcif .job-list > li .job-tit > img {flex-shrink: 0; width: 5rem; height: 5rem; padding: 1rem; object-fit: contain;}
 .rcif .job-list > li .job-tit > p {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
 .rcif .job-list > li .text-list-wrap {padding-top: 1.875rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .rcif .text-list-wrap .text-list > li::before {left: 0.25rem; top: 0.69rem; transform: translate(0, 0);}
@@ -899,6 +899,8 @@
 .pind .indus-bottom .bottom-col .btn-wrap {display: flex; gap: 0.625rem; flex-direction: column; }
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] {justify-content: flex-start; width: 100%; min-width: unset; height: auto; padding: 1.25rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-on-primary);}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"].gray {background-color: var(--colorElement-light-fill-fill-default02);}
+.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"]:hover {background: var(--primary-primary-pressed, #0C9CAB);}
+.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"].gray:hover {background: var(--coolgray-600, #707273);}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] > img {width: 2.5rem; height: 2.5rem; margin-right: 1.25rem;}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] .icon-area {margin-left: auto; width: 1.875rem; height: 1.875rem;}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] .icon-area::before {background-image: url(../../images/icon/icon_arrow_right_wh.svg);}
@@ -2089,7 +2091,7 @@
 .rchr .content-sect > p { color: #171819; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; }
 .rchr .grid-cont-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2.5rem; }
 .rchr .grid-cont-wrap > div { border: 2px solid #e1e7ea; padding: 2.5rem; border-radius: 1rem; display: grid; grid-template-columns: 5rem 1fr; gap: 0.62rem; }
-.rchr .grid-cont-wrap > div > img { width: 5rem; }
+.rchr .grid-cont-wrap > div > img { width: 5rem; padding: 1rem; }
 .rchr .grid-cont-wrap > div > div { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; }
 .rchr .grid-cont-wrap > div > div > span { color: #171819; font-size: 1.25rem; font-weight: 600; line-height: 1; }
 .rchr .grid-cont-wrap > div > div > span > span { font-size: 1.125rem; font-weight: 400; }
@@ -2114,7 +2116,7 @@
 .rchr .welfare-cont-wrap { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2.5rem; }
 .rchr .welfare-cont-wrap .welfare-cont { background-color: #fff; padding: 1.88rem 2.5rem 3.75rem; display: flex; flex-direction: column; border-radius: 1rem; }
 .rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap { display: flex; margin-bottom: 2.5rem; padding-bottom: 1.25rem; align-items: center; border-bottom: 1px solid #C9CED1; gap: 0.62rem; }
-.rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap img { width: 5rem; }
+.rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap img { width: 5rem; padding: 1rem; }
 .rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap span { font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; }
 .rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap .btn-wrap { margin-left: auto; border: 1px solid #171819; padding: 0.375rem 1.5rem; border-radius: 6.25rem; display: flex; align-items: center; height: 3rem;}
 .rchr .welfare-list-wrap { display: grid; grid-template-columns: repeat(3, 1fr); row-gap: 2.5rem; column-gap: 2.5rem; margin-left: 5.625rem; margin-right: 3.75rem;}

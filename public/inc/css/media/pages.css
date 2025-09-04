@@ -757,7 +757,7 @@
 .rcif .job-list {grid-template-columns: 1fr; gap: 1rem;}
 .rcif .job-list > li {padding: 1rem 1.25rem; border-radius: 0.5rem;}
 .rcif .job-list > li .job-tit {gap: 0.25rem; padding-bottom: 1rem;}
-.rcif .job-list > li .job-tit > img {width: 3.75rem; height: 3.75rem;}
+.rcif .job-list > li .job-tit > img {width: 3.75rem; height: 3.75rem; padding: 0.75rem;}
 .rcif .job-list > li .job-tit > p {font-size: 1.125rem; line-height: 1.75rem;}
 .rcif .job-list > li .text-list-wrap {padding-top: 1rem; font-size: 0.875rem; line-height: 1.3125rem;}
 .rcif .text-list-wrap .text-list > li::before {top: 0.44rem; left: 0.25rem;}
@@ -1738,7 +1738,7 @@
 .rchr .sect-box > p.sub-title::after { content: ''; background-color: rgba(23, 24, 25, 0.2); height: 1px; flex-grow: 1; margin-left: 1rem; }
 .rchr .flex-cont-wrap { flex-direction: column; }
 .rchr .flex-cont-wrap > div { padding: 1.5rem; }
-.rchr .flex-cont-wrap > div > .lottie-wrap { width: 5rem; margin-bottom:  1rem; }
+.rchr .flex-cont-wrap > div > .lottie-wrap { width: 4rem; margin-bottom:  1rem; }
 .rchr .flex-cont-wrap > div > span { font-size: 1.125rem; margin-bottom: 0.5rem; }
 .rchr .flex-cont-wrap > div > p { font-size: 0.875rem; line-height: 1.13125rem; margin-bottom: 1rem; }
 .rchr .flex-cont-wrap > div > .text-list-wrap li { font-size: 0.875rem; line-height: 1.3125rem; }
@@ -1747,7 +1747,7 @@
 .rchr .grid-cont-wrap > div { display: flex; flex-direction: column; padding: 1rem 1.5rem; }
 .rchr .grid-cont-wrap > div > p { font-size: 0.875rem; color: #555758; line-height: 1.3125rem; font-weight: 400; }
 .rchr .grid-cont-wrap > div > div { flex-direction: row; border-bottom: 1px solid #C9CED1; padding-bottom: 1rem; margin-bottom: 1rem; align-items: center; margin-top: 0; gap: 0.25rem; }
-.rchr .grid-cont-wrap > div > div > img { width: 3.75rem; }
+.rchr .grid-cont-wrap > div > div > img { width: 3.75rem; padding: 0.75rem; }
 .rchr .grid-cont-wrap > div > div > span { font-size: 1rem; line-height: 1.6rem; }
 .rchr #tab1-content .content-item03 article:last-child .grid-cont-wrap > div > div { border: none; margin-bottom: 0.65rem; padding-bottom: 0; }
 .rchr .content-wrap .sub-title { font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 0.65rem; margin-top: 1.5rem;}
@@ -1765,10 +1765,10 @@
 .rchr .welfare-cont-wrap { margin-top: 1.5rem; }
 .rchr .welfare-cont-wrap .welfare-cont { padding: 1rem 1.5rem; }
 .rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap { flex-direction: column; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; }
-.rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap img { width: 3.75rem; }
+.rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap img { width: 3.75rem; padding: 0.75rem; }
 .rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap span { font-size: 1.125rem; font-weight: 600; line-height: 1.75rem; }
 .rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap > div { display: flex; align-items: center; }
-.rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap .btn-wrap { width: 100%; display: flex; justify-content: center; align-items: center; padding-right: 32px; }
+.rchr .welfare-cont-wrap .welfare-cont .welfare-tit-wrap .btn-wrap { width: 100%; display: flex; justify-content: center; align-items: center; padding-right: 2rem; height: 2.375rem; }
 .rchr [class^="txt-btn"][class*="-sm"] { padding: 0; }
 .rchr .txt-btn01:after { right: -5rem; }
 .rchr .welfare-list-wrap { display: flex; flex-direction: column; margin-left: 0; gap: 1rem; }
