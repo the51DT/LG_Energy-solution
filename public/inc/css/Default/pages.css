@@ -77,7 +77,7 @@
 .sust-sys:lang(en) .box-list .text-area .desc [class^=underline] {font-weight: 400;}
 
 /* 지속가능경영 > 환경 > 환경경영 */
-.sust-env .title-h2 {font-size: 2rem; line-height: 3rem;}
+.sust-env .title-h2 {font-size: 2rem; line-height: 3rem; padding-bottom: 1.88rem;}
 .sust-env .vision-wrap {display: flex; justify-content: space-between; gap: 5.05rem;}
 .sust-env .vision-txt .vision-tit {font-size: 5rem; font-weight: 200; line-height: 5.625rem; letter-spacing: -.125rem; color: #171819;}
 .sust-env .vision-txt .vision-tit>strong {font-weight: 800; color: #5AD1DC;}
@@ -85,7 +85,7 @@
 .sust-env .vision-img {position: relative; width: 42.5rem; height: fit-content; flex-shrink: 0;}
 .sust-env .vision-img::after {content: ''; position: absolute; right: 100%; bottom: 4.19rem; transform: translateX(5.5rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
 .sust-env .tab1-content .content-item02 {background-color: #F3F5F7;}
-.sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 1.88rem;}
+.sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 1.88rem; padding-bottom: 0;}
 .sust-env .article-desc {font-size: 1.25rem; line-height: 2rem; font-weight: 400; color: #171819;}
 .sust-env .intro-wrap .article-desc {margin: 1.25rem 0;}
 .sust-env .eiass-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 2.5rem;}
@@ -105,6 +105,8 @@
 .sust-env .btn-btm-wrap {display: flex; align-items: center; justify-content: center;}
 
 .sust-env .tab2-content .article-content {padding-bottom: 5rem; display: flex; flex-direction: column; gap: 2.5rem;}
+.sust-env .tab2-content .article-content:first-child {gap: 0; margin-top: 5rem;} 
+.sust-env .tab2-content .article-content:first-child .title-h2 {padding-bottom: 0;}
 .sust-env .tab2-content .article-content:last-child {padding-bottom: 0;}
 .sust-env .tab2-content .article-content + .article-content {border-top: 1px solid #C9CED1;}
 .sust-env .tab2-content .img-area {margin-top: 3.75rem;}
@@ -113,6 +115,8 @@
 .sust-env .tab2-content .article-content2 .article-sub-tit {margin-top: 1.88rem;}
 .sust-env .article-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
 .sust-env .tab2-content .article-content2 .article-desc {margin-top: 1.25rem;}
+.sust-env .tab2-content .content-item02 .content-wrap .title-h2 {padding-bottom: 0;}
+.sust-env .tab2-content .content-item02 .article-inner .article-tit {padding-bottom: 1.25rem;}
 .sust-env .env2030-wrap {display: flex; align-items: center; justify-content: center; gap: 2.5rem; padding: 2.5rem 0;}
 .sust-env .env2030-wrap>img {width: 20.5rem;}
 .sust-env .env2030-wrap>span {font-size: 6rem; font-weight: 800; line-height: 6.75rem; color: #C9CED1;}
@@ -143,7 +147,7 @@
 .sust-env .tab3-content .article-content {color: #171819;}
 .sust-env .tab3-content .content-item01 {padding-bottom: 0;}
 .sust-env .tab3-content .content-item01 img {margin-top: 5rem;}
-.sust-env .tab3-content .content-item02 .article-content {display: flex; align-items: center; justify-content: space-between; gap: 1.88rem;}
+.sust-env .tab3-content .content-item02 .article-content {display: flex; align-items: center; justify-content: space-between; gap: 1.88rem; }
 .sust-env .tab3-content .content-item02 .article-desc + .article-desc {margin-top: 1.25rem;}
 .sust-env .tab3-content .content-item02 img {width: 13.125rem;}
 .sust-env .tab3-content .content-item03 {background-color: #F3F5F7;}
@@ -192,6 +196,11 @@
 .sust-env .info-wrap .info-desc {margin-top: 1.25rem; padding: 0 .62rem; font-size: .875rem; font-weight: 400; line-height: 1.4rem; color: #555758;}
 .sust-env .info-wrap .info-img {margin-top: 2.5rem;}
 .sust-env .tab4-content .content-item04 {background-color: #F3F5F7;}
+.sust-env .tab4-content .content-item02 .article-content:first-child,
+.sust-env .tab4-content .content-item03 .article-content:first-child,
+.sust-env .tab4-content .content-item04 .article-content:first-child {margin-top: 0;}
+.sust-env .tab4-content .content-item02 .article-content:first-child .title-h3 {margin-top: 0;}
+.sust-env .tab4-content .content-item04 .article-desc:first-child {margin-top: 0;}
 
 .sust-env .tab5-content .content-item02 {background-color: #EAF3F8;}
 .sust-env .tab5-content .roadmap-wrap {display: flex; align-items: flex-end; margin-top: 3.75rem;}
@@ -232,6 +241,10 @@
 .sust-env .table-wrap .btn-outline01.icon-btn {padding: 0.375rem 1.5rem; width: auto; font-size: .875rem; line-height: 1.225rem;}
 .sust-env .tab5-content .content-item04 .article-btn-wrap { margin-top: 7.5rem;}
 .sust-env .sect-cont-main > p.title-h2 {margin: 3.37rem 0 5rem;}
+
+.sust-env:lang(en) .tab5-content .roadmap-box .btm-box .text-list-wrap {width: 100%;}
+.sust-env:lang(en) .tab5-content .roadmap-box:nth-child(2) .btm-box {height: calc(30.9375rem - 7.5rem);}
+.sust-env:lang(en) .tab5-content .roadmap-box:nth-child(3) .btm-box {height: calc(34.5rem - 7.5rem);}
 
 
 /* 지속가능경영 > 사회 */
@@ -965,6 +978,9 @@
 .pfom .prod-chart-wrap .prod-chart-list > li > img {width: 5rem; height: 5rem; margin-bottom: 1.25rem;}
 .pfom .prod-chart-wrap .prod-chart-list > li .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .prod-chart-wrap .prod-chart-list > li .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 0.625rem;}
+
+.pfom #pch2-2[class^="content-item"] .content-sect {padding-top: 0;}
+.pfom #pch2-2[class^="content-item"] .content-sect .tab-cate-wrap {margin-top: 1.88rem;}
 
 .industry-wrap {display: flex; flex-direction: column; gap: 3.75rem;}
 .industry-box {display: flex; flex-wrap: wrap; gap: 1.25rem;}

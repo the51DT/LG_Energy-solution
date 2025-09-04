@@ -120,7 +120,7 @@
 .sust-sys:lang(en) .box-list.box-list-envir>li .box-label {width: fit-content; right: 1.125rem;}
 
 /* 지속가능경영 > 환경 */
-.sust-env .title-h2 {font-size: 1.25rem; line-height: 1.875rem;}
+.sust-env .title-h2 {font-size: 1.25rem; line-height: 1.875rem; padding-bottom: 0;}
 .sust-env .article-content:first-child {margin-top: 0;}
 .sust-env .article-desc {font-size: 1rem; line-height: 1.6rem;}
 .sust-env .article-tit {font-size: 1.125rem; line-height: 1.75rem;}
@@ -177,7 +177,11 @@
 .sust-env .graph-desc-wrap {padding: 1.5rem 1.25rem; }
 .sust-env .graph-desc-wrap .desc {padding: .5rem .62rem 0;}
 .sust-env .graph-desc-wrap .tit::before {width: .125rem; height: 2.625rem;}
-
+.sust-env .tab2-content .article-content:first-child {margin-top: 0;}
+.sust-env .tab2-content .content-item02 .content-wrap .title-h2 {padding-bottom: 1.5rem; margin-top: 0;}
+.sust-env .tab2-content .content-item02 .article-inner .article-tit {padding-bottom: revert;}
+.sust-env .article-btn-wrap button,
+.sust-env .article-btn-wrap a {width: 100% !important;}
 .sust-env .tab3-content .title-h1 {margin-bottom: 1rem;}
 .sust-env .tab3-content .content-item01 img {margin-top: 0;}
 .sust-env .tab3-content .circle-img-wrap {padding: 1.5rem; margin-top: 1rem; background-color: #EAF3F8; border-radius: 1rem;}
@@ -206,6 +210,8 @@
 .sust-env .tab4-content .content-item02 .article-content, 
 .sust-env .tab4-content .content-item04 .article-content {flex-direction: column; gap: 1rem;}
 .sust-env .tab4-content .content-item01 .article-inner {margin-top: 1rem;}
+.sust-env .tab4-content .content-item01 .title-h2  {padding-bottom: 1rem;}
+.sust-env .tab4-content .content-item01 .img-wrap {width: 7.5rem; height: 7.5rem;}
 
 .sust-env .tab4-content .content-item02 .tit-wrap {display: flex; align-items: center; gap: 1rem; width: 100%;}
 .sust-env .tab4-content .content-item02 .tit-wrap img {width: 4rem;}
@@ -856,7 +862,7 @@
 .pfom .prod-chart-wrap .text-wrap {gap: 1rem;}
 .pfom .prod-chart-wrap .text-wrap .tit {font-size: 1.25rem; line-height: 1.875rem;}
 .pfom .prod-chart-wrap .text-wrap .desc {font-size: 1rem; line-height: 1.6rem;}
-.pfom .prod-chart-wrap .prod-chart-img {max-width: 20rem; margin-inline: auto;}
+.pfom .prod-chart-wrap .prod-chart-img {margin-inline: auto; width: 100%;}
 .pfom .prod-chart-wrap .prod-chart-list {flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;}
 .pfom .prod-chart-wrap .prod-chart-list > li {padding: 1.5rem; border-radius: 0.5rem;}
 .pfom .prod-chart-wrap .prod-chart-list > li > img {margin-bottom: 1rem;}
@@ -1583,7 +1589,7 @@
 .service .article-content .article-desc {padding: 1.5rem 0; font-size: 1rem; line-height: 1.6rem;}
 .adv-wrap, .serv-trading .service-wrap {gap: 1rem; margin-top: 1rem;}
 .adv-wrap .adv-box {width: 100%; padding: 1.5rem; gap: 0;}
-.adv-wrap .adv-box .adv-img {width: 5rem; height: 5rem;}
+.adv-wrap .adv-box .adv-img {width: 4rem; height: 4rem;}
 .adv-wrap .adv-box .adv-tit {margin: 1rem 0 .5rem; font-size: 1.125rem; line-height: 1.75rem;}
 .adv-wrap .adv-box .adv-desc {font-size: .875rem; line-height: 1.3125rem;}
 .serv-trading .service-wrap .service-box {width: 100%; padding: 1.5rem;}
@@ -1591,11 +1597,14 @@
 .serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .serv-trading .service-wrap .service-desc {padding-top: 1rem; font-size: .875rem; line-height: 1.3125rem; text-align: center;}
 .serv-trading #content01 .article-img {max-width: 20rem; margin-inline: auto;}
+.serv-trading #content02 .article-img {margin: .5rem 2.81rem 0;}
+
 .serv-trading #content01 .article-img .lottie-wrap {top: 21.97rem; left: 50%; transform: translateX(-50%);}
 .service .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 0;}
 .service .tab-content-box > .service-btn-wrap:last-of-type {margin-left: 1.25rem; margin-right: 1.25rem;}
 .service .service-btn-wrap > button,
 .service .service-btn-wrap > a {width: 100%;}
+.serv-trading .service-wrap .service-tit-wrap>img {width: 3.75rem; height: 3.75rem;}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {margin-top: 3rem;}
