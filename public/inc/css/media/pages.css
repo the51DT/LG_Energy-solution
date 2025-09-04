@@ -1929,7 +1929,7 @@
 .rnd .cont-list-col2 .nbdr-box-wrap:first-child { padding-bottom: 3rem; border-bottom: 1px solid #858889; }
 .rnd .nbdr-box-wrap .cont-box-wrap { flex-direction: column; align-items: flex-start; padding: 0; gap: 2rem; }
 .rnd .nbdr-box-wrap .img-area .cate-group .cate { width: 100%; gap: 1rem; align-items: center; justify-content: center; }
-.rnd .nbdr-box-wrap .img-area .cate-group .cate > li { width: 7.5rem; height: 7.5rem; }
+.rnd .nbdr-box-wrap .img-area .cate-group .cate > li { width: 7.5rem; height: 7.5rem;}
 .rnd .nbdr-box-wrap .text-area { font-weight: 500; }
 .rnd .nbdr-box-wrap .text-area .tit { font-size: 1.25rem; font-weight: 700; line-height: 1.75rem; }
 .rnd .nbdr-box-wrap .text-area .cate-group { padding-top: 1.5rem; gap: 1.5rem; }
@@ -1966,9 +1966,11 @@
 .rnd .article-box .head-title + .img-wrap {height: auto;}
 .rnd .article-box:first-child .head-title + .img-wrap > img {height: 5.9375rem; max-width: unset;}
 .rnd .article-box:last-child .head-title + .img-wrap > img {height: 6.92rem; width: auto;}
-
+.rnd .nbdr-box-list > .nbdr-box-wrap .text-area {margin-bottom: 2rem;}
+.rnd #tab2-content .content-item02 .nbdr-box-list > .nbdr-box-wrap:last-child .text-area .cate-group {height: auto;}
 .rnd #tab3-content .content-item02 .nbdr-box-wrap.type2 .box-cont .img-wrap {margin-top: 1rem;}
 .rnd #tab3-content .content-item02 .nbdr-box-wrap.type2 .box-cont .img-wrap img {width: 100%; height: auto;}
+
 
 /* 검색 */
 /* 검색결과 */

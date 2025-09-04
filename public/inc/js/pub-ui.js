@@ -880,7 +880,14 @@ var pubUi = {
                 const atLast = currentIdx === leftItems.length - 1;
 
                 const historyView = document.querySelector(".history-wrap.each-view");
-                const historyViewY2 = document.querySelector(".history-tit-wrap").offsetTop;
+                let historyViewY2 = "";
+
+                if(document.querySelector(".history-tit-wrap")) {
+                    historyViewY2 = document.querySelector(".history-tit-wrap").offsetTop;
+                } else {
+                    return;
+                }
+
                 const historyViewTop = historyView.offsetTop - 80;
 
                 // ❗ 마지막 연도에서 아래로 스크롤 중이면 강제 스냅 금지

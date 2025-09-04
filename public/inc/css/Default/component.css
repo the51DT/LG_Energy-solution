@@ -783,8 +783,8 @@ table {border-collapse: collapse;}
 .swiper-pagination .swiper-pagination-current {color: #171819; font-weight: 600;}
 .swiper-button-next::after,
 .swiper-button-prev::after {display: none;}
-.swiper-button-next.swiper-button-disabled, 
-.swiper-button-prev.swiper-button-disabled {display: none;}
+.ty02Swiper .swiper-button-next.swiper-button-disabled, 
+.ty02Swiper .swiper-button-prev.swiper-button-disabled {display: none;}
 .swiper-button-prev {content:""; display: block; width: 2.5rem; height: 2.5rem; padding: 0.5rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat 50% center; transform: rotate(-180deg); border: 1px solid #1f1f3c; border-radius: 50%;}
 .swiper-button-next {content:""; display: block; width: 2.5rem; height: 2.5rem; padding: 0.5rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat 50% center;  border: 1px solid #1f1f3c; border-radius: 50%;}
 .swiper-wrapper .swiper-download-btn {font-size: 1rem; position: absolute; bottom: 0; right: 0; display: flex; gap: 0.625rem; color: #fff; font-weight: 600; padding: 0.625rem 1.25rem; background-color: rgba(0, 0, 0, 0.80); align-items: center; }
