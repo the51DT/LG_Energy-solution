@@ -72,8 +72,8 @@
 .sust-sys .esg-wrap .esg-box4 {background-color: #33B0C6;}
 .sust-sys .esg-wrap .esg-box .esg-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem; color: #171819;}
 .sust-sys .esg-wrap .text-list-wrap {margin-top: .5rem;}
-.sust-sys .esg-wrap .text-list-wrap .text-list > li {font-size: .875rem; font-weight: 400; line-height: 1.3125rem; color: #555758;}
-.sust-sys .esg-wrap .text-list-wrap .text-list > li::before {background-color: #fff;}
+.sust-sys .esg-wrap .text-list-wrap .text-list > li {font-size: .875rem; font-weight: 400; line-height: 1.3125rem; color: #555758; white-space: nowrap;}
+.sust-sys .esg-wrap .esg-box4 .text-list-wrap .text-list > li::before {background-color: #fff;}
 .sust-sys .esg-wrap .esg-box4 .esg-tit {color: #fff;}
 .sust-sys .esg-wrap .esg-box4 .text-list-wrap .text-list > li {color: #fff;}
 
@@ -82,7 +82,9 @@
 .profile-wrap .profile-box:first-child {margin-bottom: 0;}
 .profile-wrap .profile-box .box-top {display: flex; justify-content: space-between; align-items: flex-end;}
 .profile-wrap .profile-box .profile-name {flex-direction: column; align-items: flex-start; gap: .25rem;}
-.profile-wrap .profile-box .profile-period {display: flex; flex-direction: column; font-size: 1rem; line-height: 1.6rem;}
+.profile-wrap .profile-box .profile-name .name {font-size: 1.125rem; line-height: 1.75rem;}
+.profile-wrap .profile-box .profile-name .position {font-size: 1rem; line-height: 1.6rem;}
+.profile-wrap .profile-box .profile-period {display: flex; flex-direction: column; font-size: 1rem; line-height: 1.6rem; margin-top: 0.5rem;}
 .profile-wrap .profile-box .text-list {margin-top: 0;}
 .profile-wrap .profile-box .text-list li {font-size: 1rem; line-height: 1.6rem;}
 .profile-wrap .profile-box .text-list-wrap .text-list > li::before {top: 0.69rem;}
