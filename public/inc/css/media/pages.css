@@ -1386,7 +1386,7 @@
 .news-content-area .top-bar .total-result{border-bottom:0;margin-bottom:0;padding-bottom:0}
 .news-content-area .top-bar .no-result{padding:4rem 0;margin-bottom:1rem}
 .news .view-list-btn{width:100%;justify-content:center;font-size:1rem;padding:0.6875rem}
-.news .view-list-btn>img{width:0.8125rem}
+.news .view-list-btn>img{width:1.25rem;}
 .news-detail-area{padding:0;background-color:#fff}
 .news-detail-area .news-detail {margin-top: 2rem;}
 .news-detail-area .news-detail .news-detail-tit{font-size:1.25rem;line-height:150%; font-weight: 700;}
@@ -1406,7 +1406,7 @@
 .news-detail-area .news-pagination-wrap .pagination-tit-wrap>p{display:none}
 .news-detail-area .news-pagination-wrap .news-pagination-left{align-items:center;padding:0.75rem 1rem;gap:1rem}
 .news-detail-area .news-pagination-wrap .news-pagination-right{align-items:center;padding:0.75rem 1rem;gap:1rem}
-.news-detail-area .news-pagination-wrap .news-pagination-btn{padding:0.375rem}
+.news-detail-area .news-pagination-wrap .news-pagination-btn{padding:0.375rem; width: 1.75rem; height: 1.75rem;}
 .news-detail-area .news-pagination-wrap .news-pagination-btn>img{width:1rem;height:1rem}
 .news-detail-area .view-btn-wrap{margin:0 1.25rem;margin-bottom:6.25rem}
 
@@ -1592,19 +1592,20 @@
 .serv-trading .service-wrap .service-desc {padding-top: 1rem; font-size: .875rem; line-height: 1.3125rem; text-align: center;}
 .serv-trading #content01 .article-img {max-width: 20rem; margin-inline: auto;}
 .serv-trading #content01 .article-img .lottie-wrap {top: 21.97rem; left: 50%; transform: translateX(-50%);}
-.service .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 9.25rem;}
+.service .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 0;}
 .service .tab-content-box > .service-btn-wrap:last-of-type {margin-left: 1.25rem; margin-right: 1.25rem;}
 .service .service-btn-wrap > button,
 .service .service-btn-wrap > a {width: 100%;}
 
 /* 서비스 - B.around */
+.serv-baround .brand-info {margin-top: 3rem;}
 .serv-baround .brand-info .brand-logo {width: 17.5rem;}
 .serv-baround .info-wrap {flex-direction: column; align-items: center; gap: 1rem; margin-top: 1rem;}
 .serv-baround .info-wrap .info-box {width: 100%; padding: 1.5rem;}
 .serv-baround .info-wrap .info-tit {flex-direction: row; align-items: center; justify-content: center; gap: .5rem; padding-bottom: 1rem; font-size: 1.25rem; line-height: 2rem;}
 .serv-baround .info-wrap .info-tit .highlight {font-size: 1.25rem;}
 .serv-baround .core-value-img {width: 100%; height: auto; aspect-ratio: 1;}
-.service .article-content .content-tit {margin: 3rem 0 1rem;}
+.service .article-content .content-tit {margin: 2rem 0 1rem;}
 .serv-baround .article-content .examp-tit {flex-direction: column; align-items: flex-start; gap: .5rem; font-size: 1.125rem; line-height: 1.75rem;}
 .serv-baround .examp-wrap {flex-direction: column; gap: 0;}
 .serv-baround .examp-wrap .examp-box {flex-direction: row; gap: 1rem; width: 100%; padding: 1rem 0; border-bottom: 1px solid #C9CED1;}
@@ -1634,6 +1635,11 @@
 .swiper .bmts-box img {width: 5rem; height: 5rem ;}
 .bmts-box .bmts-tit {font-size: 1rem; line-height: 1.6rem;}
 .bmts-box .bmts-desc {padding-top: .5rem; font-size: .875rem; line-height: 1.3125rem;}
+.serv-baround .content-item02 .article-content .article-desc { padding:1rem 0 0;}
+.serv-baround .content-item03 .article-content .article-desc { padding:0 0 1.5rem;}
+
+.serv-baround article .article-content + .article-content:has(.content-tit) {padding-top: 1rem;}
+.serv-baround .article-content .article-desc {padding: 1rem 0 0;}
 /* B.around 다이어그램 이미지 팝업영역 */
 
 .serv_baround_chart .model-wrap {display: block; padding: 1.5rem 1.25rem; border-radius: .5rem; height: 24rem;}
@@ -1702,6 +1708,7 @@
 .serv-blifecare .modal-pop.dialog .pop-wrap .pop-header {padding-bottom: 0;}
 .serv-blifecare .modal-pop.dialog .pop-wrap .img-wrap {padding-bottom: 0; border-bottom: none;}
 .serv-blifecare .modal-pop.dialog .pop-wrap .desc {padding-top: 1.88rem; font-size: 1rem; line-height: 1.6rem;}
+.serv-blifecare .service-btn-wrap {padding-bottom: 6.25rem;}
 /* 서비스 공통 팝업 */
 .modal-pop .pop-wrap.service {gap: 1.5rem; max-height: unset;}
 .modal-pop .pop-wrap.service .pop-header {padding-bottom: 0;}

@@ -476,7 +476,7 @@ var pubUi = {
                         if (sideStickyTit) sideStickyTit.style.paddingTop = "7.5rem";
                     } else {
                         stickyEl.classList.remove("stuck");
-                        if (sideStickyTit) sideStickyTit.style.paddingTop = "12.5rem";
+                        // if (sideStickyTit) sideStickyTit.style.paddingTop = "12.5rem";
                     }
                 }
             });

@@ -892,8 +892,8 @@
 .pind .indus-bottom .bottom-list {flex-shrink: 0; display: flex; gap: 2.5rem; margin-top: 1.875rem;}
 .pind .indus-bottom .bottom-list > li {display: flex; flex-direction: column; justify-content: center; gap: 1.25rem; align-items: center; width: 13.75rem; height: 13.75rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
 .pind .indus-bottom .bottom-list > li > img {width: 3.75rem; height: 3.75rem; object-fit: cover;}
-.pind .indus-bottom .bottom-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
-.pind .indus-bottom .bottom-list > li > p > span {display: block; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
+.pind .indus-bottom .bottom-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); display: flex; gap: 0.25rem;}
+.pind .indus-bottom .bottom-list > li > p > span {display: block; font-size: 0.875rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default02);}
 .pind .indus-bottom .bottom-col {flex-grow: 1; display: flex; flex-direction: column; gap: 2.5rem; max-width: 24.25rem;}
 .pind .indus-bottom .bottom-col > div {display: flex; flex-direction: column; gap: 0.625rem;}
 .pind .indus-bottom .bottom-col .btn-wrap {display: flex; gap: 0.625rem; flex-direction: column; }
@@ -1545,7 +1545,7 @@
 .news-detail-area .news-pagination-wrap>button{gap:2rem;flex:1 0 0;border-radius:0.625rem;background-color:#F3F5F7}
 .news-detail-area .news-pagination-wrap .news-pagination-left{display:flex;padding:1.875rem 1.5rem 1.875rem 2.5rem;text-align:left}
 .news-detail-area .news-pagination-wrap .news-pagination-right{display:flex;padding:1.875rem 2.5rem 1.875rem 1.5rem;text-align:right;justify-content:flex-end}
-.news-detail-area .news-pagination-wrap .news-pagination-btn{background-color:#fff;padding:0.625rem;border-radius:999px}
+.news-detail-area .news-pagination-wrap .news-pagination-btn{background-color:#fff;padding:0.62rem;border-radius:999px; width: 3rem; height:3rem;}
 .news-detail-area .news-pagination-wrap .news-pagination-btn>img{width:1.75rem; height: 1.75rem;}
 .news-detail-area .news-pagination-wrap .pagination-tit-wrap>span{font-size:0.875rem;color:#555758;line-height:160%}
 .news-detail-area .news-pagination-wrap .pagination-tit-wrap>p{font-size:1.125rem;color:#171819;line-height:160%;font-weight:500}
@@ -1874,7 +1874,7 @@
 .serv-trading .content-item02 {background-color: #F3F5F7;}
 .serv-trading .content-item04 {background-color: #EAF3F8;}
 .service .content-item01 .content-sect { padding-top: 0; }
-.service .article-content .article-desc { padding: 1.88rem 0; font-size: 1.25rem; line-height: 2rem; }
+.service .article-content .article-desc { padding: 1.88rem 0 2.5rem; font-size: 1.25rem; line-height: 2rem; }
 .adv-wrap, .serv-trading .service-wrap { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.88rem;}
 .adv-wrap .adv-box {display: flex;flex-direction: column; align-items: center; justify-content: space-between; gap: 1.25rem; width: calc(33.33% - 1rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem; }
 .adv-wrap .adv-box img{width:5rem;height:5rem;}
@@ -1890,7 +1890,8 @@
 .service .service-btn-wrap > button,
 .service .service-btn-wrap > a {background-color: #fff;}
 .service .service-btn-wrap > button:hover,
-.service .service-btn-wrap > a:hover {background-color: var(--colorElement-light-fill-fill-default00);}
+.service .service-btn-wrap > a:hover {background-color: var(--colorElement-light-fill-fill-default00); color: #fff;}
+.service [class^="content-item"] .content-sect {padding-top: 0;}
 
 .serv-trading #content01 .article-img {position: relative;}
 .serv-trading #content01 .article-img .lottie-wrap {width: 5rem; height: 5rem; position: absolute; top:21.31rem; left: 50%; transform: translateX(-50%);}
@@ -1911,8 +1912,8 @@
 .serv-baround .info-wrap .info-desc {padding-top: 1.25rem; font-size: 1rem; line-height: 1.6rem;}
 .service .article-content .content-tit {display: inline-flex; align-items: center; justify-content: space-between; width: 100%; margin: 5rem 0 1.25rem; font-size: 1.5rem; line-height: 2.25rem; font-weight: 600; color: #171819;}
 .service .article-content .content-tit>span {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
-.serv-baround .examp-wrap {display: flex; justify-content: center; gap: 2.5rem; padding: 2.5rem; border-radius: 1rem; background-color: #F3F5F7;}
-.serv-baround .examp-box {display: flex; flex-direction: column; align-items: center; width: 9.5rem;}
+.serv-baround .examp-wrap {display: flex; justify-content: center; gap: 1.25rem; padding: 2.5rem; border-radius: 1rem; background-color: #F3F5F7;}
+.serv-baround .examp-box {display: flex; flex-direction: column; align-items: center; width: 10rem; gap: 1rem;}
 .serv-baround .examp-box .examp-ico {width: 6.25rem; height: 6.25rem; border-radius: 50%; background: #fff;}
 .serv-baround .examp-box .examp-txt {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: #554596; text-align: center;}
 .serv-baround .content-item02 {background-color: #F3F5F7;}
@@ -1921,7 +1922,7 @@
 .serv-baround .text-list-wrap .text-list>li {font-size: 1rem; line-height: 1.6rem; color: #555758;}
 .e4w-wrap {display: flex; gap: 1.25rem;}
 .e4w-box {border-radius: 1rem; width: 50%;}
-.e4w-box .e4w-top {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem; background-color: #33B0C6; border-radius: 1rem 1rem 0 0;}
+.e4w-box .e4w-top {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem; background-color: #33B0C6; border-radius: 1rem 1rem 0 0; height: 22.3125rem;}
 .e4w-box .e4w-top .top-logo {display: inline-flex; align-items: center; justify-content: center; width: 11.25rem; height: 11.25rem; background-color: #fff; border-radius: 50%;}
 .e4w-box .e4w-top .top-logo .b-lifecare {width: 9.3125rem; height: 2.5rem;}
 .e4w-box .e4w-top .top-logo .b-once {width: 7.4375rem; height: 1.5625rem;}
@@ -1931,6 +1932,8 @@
 .serv-baround .btm-btn {text-align: right;}
 .serv-baround .btm-btn .txt-btn01 {font-size: .875rem; line-height: 1.225rem; padding-right: 1.5rem;}
 .serv-baround .btm-btn .txt-btn01::after {width: 1.25rem; height: 1.25rem;}
+.serv-baround .content-item02 .article-content .article-desc { padding:1.88rem 0;}
+.serv-baround .content-item03 .article-content .article-desc { padding:0 0 1.88rem;}
 
 .e2w-box {display: flex;}
 .e2w-box .e2w-logo-wrap {display: flex; align-items: center; justify-content: center; padding: 2.5rem; width: 16.25rem; background-color: #33B0C6; border-radius: 1rem 0 0 1rem;}
@@ -1974,7 +1977,7 @@
 
 /* 서비스 - B-Lifecare */
 .serv-blifecare .page-map-wrap {margin-top: 6.25rem;}
-.serv-blifecare .icon-link2 {border-radius: calc(100 / 16 * 1rem); color: #fff;}
+.serv-blifecare .icon-link2 {border-radius: calc(100 / 16 * 1rem); color: #fff; font-weight: 500;}
 .serv-blifecare .icon-link2:hover {background-color: var(--colorElement-light-fill-fill-primary);}
 .serv-blifecare .icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external_bl.svg);}
 .serv-blifecare .brand-info {margin: 5rem 0;}
@@ -2177,8 +2180,8 @@
 .serv-bonce .type-tit { font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; margin-bottom: 1.25rem; }
 .serv-bonce .type-desc { font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-bottom: 2.5rem; }
 .serv-bonce .type-box { background-color: #fff; padding: 2.5rem; border-radius: 1rem; }
-.serv-bonce .type-box-sub { display: flex; background-color: #F3F5F7; border-radius: 0.5rem; padding: 1.88rem; align-items: center; gap: 1.88rem; }
-.serv-bonce .type-box-sub > img { width: 33.25rem; flex: 1; }
+.serv-bonce .type-box-sub { display: flex; background-color: #F3F5F7; border-radius: 0.5rem; padding: 1.88rem; align-items: center; gap: 1.25rem; }
+.serv-bonce .type-box-sub > img { width: 33.1875rem; flex: 1; }
 .serv-bonce .type-explain { display: flex; flex-direction: column; gap: 0.62rem; }
 .serv-bonce .type-explain > p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; display: flex; gap: 0.62rem; }
 .serv-bonce .type-explain > p > span { display: block; width: 3.75rem; color: #33B0C6; font-weight: 600; }
@@ -2187,8 +2190,8 @@
 .serv-bonce .quickscan-img img { width: 38.8rem; }
 .serv-bonce .powerscan-img { margin: 2.5rem 0; }
 .serv-bonce .powerscan-img img { width: 55rem; }
-.serv-bonce .scan-img { text-align: center; margin-top: 2.5rem; margin-bottom: 5rem; }
-.serv-bonce .scan-img img { width: 53.4rem; }
+.serv-bonce .scan-img { text-align: center; margin-bottom: 5rem; }
+.serv-bonce .scan-img img { width: 53.4rem; margin-bottom: 0;}
 .serv-bonce .ucd-wrap { display: flex; flex-direction: column; gap: 5rem; }
 .serv-bonce .ucd-tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; margin-bottom: 1.25rem; display: block; }
 .serv-bonce .ucd-box-wrap { display: flex; gap: 1.25rem; }
@@ -2254,7 +2257,7 @@
 
 /* 서비스 > ess si */
 .serv-ess .service-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 1.88rem; margin-bottom: 1.25rem; }
-.serv-ess .service-box { padding: 2.5rem 2.5rem 3.75rem; border: 0; border-radius: 1rem; background-color: #fff; }
+.serv-ess .service-box { padding: 1.88rem 2.5rem; border: 0; border-radius: 1rem; background-color: #fff; }
 .serv-ess .service-tit-wrap { display: flex; align-items: center; gap: 0.625rem; padding-bottom: 1.25rem; border-bottom: 1px solid #C9CED1; }
 .serv-ess .service-tit-wrap>img { width: 5rem; height: 5rem; }
 .serv-ess .service-tit-wrap .tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; }
