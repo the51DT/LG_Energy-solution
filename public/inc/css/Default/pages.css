@@ -82,7 +82,7 @@
 .sust-env .vision-txt .vision-tit {font-size: 5rem; font-weight: 200; line-height: 5.625rem; letter-spacing: -.125rem; color: #171819;}
 .sust-env .vision-txt .vision-tit>strong {font-weight: 800; color: #5AD1DC;}
 .sust-env .vision-txt .vision-desc { margin-top: 2.5rem; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: #171819;}
-.sust-env .vision-img {position: relative; width: 42.5rem; height: fit-content;}
+.sust-env .vision-img {position: relative; width: 42.5rem; height: fit-content; flex-shrink: 0;}
 .sust-env .vision-img::after {content: ''; position: absolute; right: 100%; bottom: 4.19rem; transform: translateX(5.5rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
 .sust-env .tab1-content .content-item02 {background-color: #F3F5F7;}
 .sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 1.88rem;}
@@ -551,8 +551,8 @@
 .sust-soc .safety-improve .safety-improve-box .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem;}
 .sust-soc .safety-improve .safety-improve-box .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 0.625rem;}
 .sust-soc .safety-improve .safety-improve-ico {display: flex; gap: 1.25rem;}
-.sust-soc .safety-improve .safety-improve-ico > div {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; min-height: 23.75rem; padding: 2.5rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04); text-align: center;}
-.sust-soc .safety-improve .safety-improve-ico > div > img {width: 7.5rem; height: 7.5rem;}
+.sust-soc .safety-improve .safety-improve-ico > div {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; padding: 2.5rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04); text-align: center;}
+.sust-soc .safety-improve .safety-improve-ico > div > img {width: 5rem; height: 5rem;}
 .sust-soc .safety-improve .safety-improve-ico .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 2.5rem;}
 .sust-soc .safety-improve .safety-improve-ico .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
 .sust-soc .safety-improve .safety-improve-img {display: flex; gap: 1.875rem;}
@@ -568,7 +568,7 @@
 .sust-soc .human-mgmt .human-mgmt-list {display: flex; gap: 1.25rem; margin-top: 5rem;}
 .sust-soc .human-mgmt .human-mgmt-box {display: flex; flex-direction: column; gap: 1.875rem; width: 100%; padding: 2.5rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04);}
 .sust-soc .human-mgmt .human-mgmt-box .title-desc {margin-top: 1.25rem;}
-.sust-soc .human-mgmt .human-mgmt-box > img {width: 7.5rem; height: 7.5rem; margin-inline: auto;}
+.sust-soc .human-mgmt .human-mgmt-box > img {width: 5rem; height: 5rem; margin-inline: auto;}
 .sust-soc .human-mgmt .human-mgmt-box .desc {padding-top: 1.875rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);}
 .sust-soc .human-mgmt .human-mgmt-box .desc > p + p {margin-top: 1.25rem;}
 
