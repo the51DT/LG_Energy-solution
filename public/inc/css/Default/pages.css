@@ -81,9 +81,9 @@
 .sust-env .vision-wrap {display: flex; justify-content: space-between; gap: 5.05rem;}
 .sust-env .vision-txt .vision-tit {font-size: 5rem; font-weight: 200; line-height: 5.625rem; letter-spacing: -.125rem; color: #171819;}
 .sust-env .vision-txt .vision-tit>strong {font-weight: 800; color: #5AD1DC;}
-.sust-env .vision-txt .vision-desc { margin-top: 2.5rem; font-size: 1.125rem; line-height: 1.8rem; color: #171819;}
-.sust-env .vision-img {position: relative;}
-.sust-env .vision-img::after {content: ''; position: absolute; right: 100%; bottom: 13rem; transform: translateX(7rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
+.sust-env .vision-txt .vision-desc { margin-top: 2.5rem; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: #171819;}
+.sust-env .vision-img {position: relative; width: 42.5rem; height: fit-content;}
+.sust-env .vision-img::after {content: ''; position: absolute; right: 100%; bottom: 4.19rem; transform: translateX(5.5rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
 .sust-env .tab1-content .content-item02 {background-color: #F3F5F7;}
 .sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 1.88rem;}
 .sust-env .article-desc {font-size: 1.25rem; line-height: 2rem; font-weight: 400; color: #171819;}
@@ -98,6 +98,9 @@
 .sust-env .eiass-period .period-box span {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
 .sust-env .eiass-period .period-box .label {padding: .62rem 1.25rem; background-color: #33B0C6; border-radius: 62.4375rem; font-size: .875rem; font-weight: 600; line-height: 1.4rem; color: #fff;}
 .sust-env .text-list>li {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
+.sust-env .text-list>li>.text-list-wrap:has(.ty02) {margin-left: -1.13rem;}
+.sust-env .text-list>li>.text-list-wrap .ty02 > li {padding-left: 1.13rem;}
+.sust-env .text-list>li>.text-list-wrap .ty02 > li::before {content: ""; display: block; width: .375rem; height: .0875rem; border-radius: 0;}
 .sust-env .text-list-wrap .text-list > li::before {top: .875rem;}
 .sust-env .btn-btm-wrap {display: flex; align-items: center; justify-content: center;}
 
@@ -175,12 +178,11 @@
 .sust-env .tab4-content .content-item02 .img-wrap {width: 13.125rem; height: 13.125rem;}
 .sust-env .tab4-content .content-item02 {background-color: #EAF3F8;}
 .sust-env .tab4-content .program-wrap {margin-top: 5rem;}
-.sust-env .tab4-content .program-box {display: flex; gap: 2.5rem; margin-bottom: 1.25rem; padding: 2.5rem; border-radius: 1rem; border: 2px solid #E1E7EA;}
+.sust-env .tab4-content .program-box {display: flex; align-items: center; gap: 2.5rem; margin-bottom: 1.25rem; padding: 2.5rem; border-radius: 1rem; border: 2px solid #E1E7EA;}
 .sust-env .tab4-content .program-box:last-child {align-items: flex-start; margin-bottom: 0;}
 .sust-env .tab4-content .program-box .tit-wrap {display: flex; flex-direction: column; gap: 1.25rem; align-items: center; justify-content: center; width: 12.5rem;}
 .sust-env .tab4-content .program-box .program-icon {display: inline-flex; align-items: center; justify-content: center; width: 6.25rem; height: 6.25rem; border-radius: 50%; background-color: #F3F5F7;}
 .sust-env .tab4-content .program-box .program-icon>img {width: 3rem; height: 3rem;}
-.sust-env .tab4-content .program-box:nth-child(4) .program-icon>img {width: 5rem; height: 5rem;}
 .sust-env .tab4-content .program-box .program-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819;}
 .sust-env .tab4-content .program-box .right-box {width: calc(100% - 15rem);}
 .sust-env .info-wrap {margin-top: 1.25rem; padding: 1.88rem; border-radius: .5rem; background-color: #F3F5F7;}
@@ -201,7 +203,7 @@
 .sust-env .tab5-content .roadmap-box .top-box .label {position: absolute; left: 50%; top: 0; display: inline-flex; align-items: center; justify-content: center; transform: translate(-50%, -50%); width: 2.5rem; height: 2.5rem; font-size: 1rem; font-weight: 600; color: #33B0C6; background-color: #fff; border-radius: 50%;}
 .sust-env .tab5-content .roadmap-box:nth-child(2) .top-box .label {color: #13BD99;}
 .sust-env .tab5-content .roadmap-box:last-child .top-box .label {color: #33B0C6;}
-.sust-env .tab5-content .roadmap-box .btm-box {display: flex; gap: 1.88rem; padding: 2.5rem 1.88rem; background-color: #fff; border-right: 1px solid #E1E7EA;}
+.sust-env .tab5-content .roadmap-box .btm-box {display: flex; gap: 1.875rem; padding: 2.5rem 1.875rem; background-color: #fff; border-right: 1px solid #E1E7EA;}
 .sust-env .tab5-content .roadmap-box:nth-child(2) .btm-box {height: 16.56rem;}
 .sust-env .tab5-content .roadmap-box:last-child .btm-box {height: 20.125rem; border-right: none;}
 .sust-env .tab5-content .roadmap-box:last-child .btm-box .text-list>li {margin-top: 1.25rem;}
