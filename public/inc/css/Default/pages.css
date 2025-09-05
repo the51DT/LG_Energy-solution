@@ -316,7 +316,7 @@
 .sust-soc .cont-article-wrap section .text-area .desc + .desc {margin-top: 1rem;}
 .sust-soc .cont-article-wrap section .img-area {margin: 2.5rem 5.62rem 0;}
 .sust-soc [class^="content-item"] .content-sect:has(.box-container) {padding-top: 1.88rem;}
-.sust-soc .content-item02 .box-container.grid-type .box-content .bdr-box-wrap {background: #fff;}
+.sust-soc .content-item02 .box-container.grid-type .box-content .bdr-box-wrap {background: #fff; height: 100%;}
 .sust-soc .content-item02 .box-container.grid-type .box-content:nth-child(1) .bdr-box-wrap,
 .sust-soc .content-item02 .box-container.grid-type .box-content:nth-child(2) .bdr-box-wrap { height: 23.9375rem; }
 .sust-soc .content-item02 .accordion-list {background: #fff;}
@@ -347,6 +347,8 @@
 .esgm .sub-content .img-wrap { margin-top: 1.25rem; }
 .esgm .sub-content .desc-wrap { display: flex; gap: 0.375rem; margin-left: 16.9375rem; }
 .esgm .sub-content .desc-wrap > img { width: 0.375rem; }
+
+.sust-soc:lang(en) .article-content > .box-content > .img-wrap .desc {margin-left: 2.32rem;}
 
 
 /* 지속가능경영 > 사회 / rnd 사용 */

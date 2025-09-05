@@ -254,6 +254,8 @@
 .sust-env .tab5-content .table-list-wrap .tit {margin-bottom: 1rem;}
 .sust-env .tab5-content .table-list-wrap .list-box + .list-box {margin-top: 1.5rem;}
 
+.sust-env:lang(en) .tab5-content .roadmap-box:nth-child(2) .btm-box,
+.sust-env:lang(en) .tab5-content .roadmap-box:nth-child(3) .btm-box {height: auto;}
 
 /* 지속가능경영 > 사회 */
 .article-content .list:not(:last-child) {padding-bottom: .5rem;}
@@ -313,6 +315,7 @@
 .sust-soc .mgmt-box .box-label {padding: .125rem .375rem; font-size: .875rem; font-weight: 600; line-height: 1.3125; color: #fff; background-color: #33B0C6; border-radius: .25rem;}
 .sust-soc .mgmt-box .box-tit {display: block; padding: .5rem 0; font-size: .875rem; font-weight: 600; line-height: 1.3125rem; color: #171819;}
 .sust-soc .mgmt-box .box-desc {font-size: .875rem; font-weight: 400; line-height: 1.3125rem; color: #555758;}
+.sust-soc .mgmt-box .asterisk-text {margin-top: 0.5rem;}
 
 .sust-soc .sect-cont-area {padding-bottom: 3rem;}
 .sust-soc .sect-cont-sub article {padding: 1.5rem 1.25rem;}
@@ -374,6 +377,8 @@
 .cont-area-wrap.type2 .box-container .box-list > li:not(:last-child)::after {display: none;}
 .cont-area-wrap.type2 .box-container .box-list > li .text-area .tit {font-size: .875rem; line-height: 1.3125rem;}
 .cont-area-wrap.type2 .box-container .box-list > li .text-area .desc {margin-top: .5rem; font-size: .875rem; line-height: 1.3125rem;}
+
+.sust-soc:lang(en) #tab2-content .content-item02.bg-skyblue {padding-bottom: 3rem;}
 
 /* 주식정보 (stif) */
 .stif .cont-area-wrap .cont-area-sect > section {padding-bottom: 3.5rem;}
