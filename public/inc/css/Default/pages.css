@@ -1223,6 +1223,7 @@
 .sgov .gov-profile .profile-col .profile-text .term {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
 .sgov .gov-profile .profile-col .profile-text .text-list-wrap {margin-top: 1.25rem; color: var(--colorElement-light-text-text-default02); font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 .sgov .gov-profile .profile-col .profile-text .text-list-wrap .text-list > li {white-space: nowrap;}
+.sgov .gov-profile .profile-col .profile-text .text-list-wrap .text-list > li::before {top: 0.625rem; left: 0.25rem; transform: unset;}
 .sgov .bod-gap {display: flex; flex-direction: column; gap: 7.5rem;}
 .sgov .bod-gap > div:last-child {border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); padding-top: 7.5rem;}
 .sgov .bod-gap [class^="icon-btn"] {width: 22.5rem;}
@@ -1286,6 +1287,9 @@
 .sgov .btn-wrap {display: flex; justify-content: center; gap: 0.625rem;}
 .sgov .gov-ethics-btn {margin-top: 2.5rem;}
 .sgov .gov-ethics-img .btn-wrap {margin-top: 2.5rem;}
+
+.sgov:lang(en) .gov-profile .profile-col .profile-text .tit {flex-direction: column; align-items: flex-start; gap: 0;}
+.sgov:lang(en) .gov-profile .profile-col .profile-text .position {white-space: nowrap;}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}

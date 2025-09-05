@@ -1093,6 +1093,7 @@
 .sgov .gov-profile .profile-col .profile-text .position {font-size: 1rem;line-height: 1.6rem;}
 .sgov .gov-profile .profile-col .profile-text .term {font-size: 1rem; line-height: 1.6rem;}
 .sgov .gov-profile .profile-col .profile-text .text-list-wrap {margin-top: 1rem; font-size: 0.875rem; line-height: 1.3125rem;}
+.sgov .gov-profile .profile-col .profile-text .text-list-wrap .text-list > li::before {top: 0.4375rem;}
 .sgov .gov-profile .profile-col .profile-text .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.56rem;}
 .sgov .bod-gap {gap: 3rem;}
 .sgov .bod-gap > div:last-child {position: relative; border: none; padding-top: 3rem;}
