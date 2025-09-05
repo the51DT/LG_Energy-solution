@@ -45,7 +45,10 @@ aside.end {bottom: 390px;}
 .header-wrap .header-cont .ci > a {width: 132px; height: 21px; display: block;}
 .header-wrap .header-cont .ci > img {width: 100%; height: 100%; object-fit: cover;}
 .header-area.mo-only .utile-cont {gap: 1rem;height: auto;}
-.header-area.mo-only .utile-cont .utile-item {margin-top: -2px;}   
+.header-area.mo-only .utile-cont .utile-item {margin-top: -2px;}
+.header-area.mo-only .utile-cont .utile-item02{display: none;}
+.header-area.mo-only .nav-pop.on + .utile-wrap .utile-cont .utile-item {display: none;}
+.header-area.mo-only .nav-pop.on + .utile-wrap .utile-cont .utile-item02{display: block;}
 .lang-wrap .lang-button > img {width: 1.5rem; height: 1.5rem;}
 .lang-wrap .lang-button.active .select-btn-right-icon {transform: translateY(-2px) rotate(-180deg);}
 .lang-wrap .select-menu {padding: 1rem; width: 4.1875rem; top: 1.5rem; left: 18px;}
