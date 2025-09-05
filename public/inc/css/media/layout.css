@@ -12,6 +12,8 @@ html,body {
 .wrap:not(.main_p) .content-header {max-width: 100%; padding: 2rem 1.25rem 1.5rem;}
 /* .wrap:not(.main_p) :has(.content-header) .content-area [class^="content-item"]:first-child {padding-top: 0;} */
 
+aside.end {bottom: 390px;}
+
 .content-header_bg {display: none;}
 .content-header .title-h1  {margin-bottom: 2rem;}
 .content-header .subp-tit {font-size: 1.125rem; line-height: 1.75rem;}    

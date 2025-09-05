@@ -705,7 +705,7 @@
 .rcpt .content-wrap > .btn-wrap {flex-direction: column; align-items: center; gap: 0.5rem;}
 
 .post-list {gap: 0.5rem;}
-.post-list > li {padding: 1.25rem; border-radius: 0.5rem; flex-direction: column; align-items: flex-start; gap: 0.5rem;}
+.post-list > li > a {padding: 1.25rem; border-radius: 0.5rem; flex-direction: column; align-items: flex-start; gap: 0.5rem;}
 .post-list > li .post-info {gap: 0.25rem;}
 .post-list > li .post-tag {font-size: 0.875rem; line-height: 1.3125rem;}
 .post-list > li .post-tit {font-size: 1.125rem; line-height: 1.75rem;}
@@ -928,11 +928,11 @@
 
 .pfom [class^="content-item"] .content-sect:has(.order-histoy) {padding-top: 1rem;}
 .pfom .order-history {gap: 1rem;}
-.pfom .order-history > li {flex-direction: column; gap: 1rem; justify-content: space-between; padding: 1.5rem;}
-.pfom .order-history > li .text-wrap {gap: 0.5rem;}
-.pfom .order-history > li .text-wrap .tit {width: 100%; font-size: 1.125rem; line-height: 1.75rem;}
-.pfom .order-history > li .text-wrap .date {font-size: 1rem; line-height: 1.6rem;}
-.pfom .order-history > li > img {width: 100%; height: 5rem; object-fit: cover;}
+.pfom .order-history > li > a {flex-direction: column; gap: 1rem; justify-content: space-between; padding: 1.5rem;}
+.pfom .order-history > li > a .text-wrap {gap: 0.5rem;}
+.pfom .order-history > li > a .text-wrap .tit {width: 100%; font-size: 1.125rem; line-height: 1.75rem;}
+.pfom .order-history > li > a .text-wrap .date {font-size: 1rem; line-height: 1.6rem;}
+.pfom .order-history > li > a img {width: 100%; height: 5rem; object-fit: cover;}
 .pfom .order-history + .btn-wrap {margin-top: 3rem;}
 .pfom .btn-wrap {flex-direction: column; align-items: center; gap: 1rem;}
 
@@ -1233,11 +1233,14 @@
 
 .comp .type02Swiper .swiper-paging-wrap {display: none;}
 .comp .type02Swiper .swiper-pagination {margin-top: 2rem;}
-.comp .type02Swiper .img-wrap .number {width: 2rem; height: auto;}
 .comp .type02Swiper .sect-box .sub-title {font-size: 1rem; line-height: 1.6rem; margin-bottom: 0.5rem;}
 .comp .type02Swiper .sect-box > h2 {margin-bottom: 1.5rem;}
 .comp .type02Swiper .sect-box .info-desc {font-size: 1rem; font-weight: 500; line-height: 1.6rem; height: 6.4375rem;}
 .comp .type02Swiper .sect-box .content {height: auto; margin: 1.5rem auto 0;}
+.comp .type02Swiper .swiper-slide:nth-child(1) .img-wrap .number {width: 2.75rem; height: auto;}
+.comp .type02Swiper .swiper-slide:nth-child(2) .img-wrap .number {width: 3.3125rem; height: auto;}
+.comp .type02Swiper .swiper-slide:nth-child(3) .img-wrap .number {width: 3.375rem; height: auto;}
+.comp .type02Swiper .swiper-slide:nth-child(4) .img-wrap .number {width: 3.4375rem; height: auto;}
 .comp .type02Swiper .swiper-slide:nth-child(1) .sect-box .content {width: 18.1875rem;}
 .comp .type02Swiper .swiper-slide:nth-child(2) .sect-box .content {width: 14.25rem;}
 .comp .type02Swiper .swiper-slide:nth-child(3) .sect-box .content {width: 16.375rem;}

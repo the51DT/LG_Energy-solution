@@ -498,10 +498,11 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .accord-cont-wrap.horizontal .accordion-list.on .accordion-btn .acd-tit {max-width: 100%; white-space: initial;}
 .accord-cont-wrap.horizontal .accordion-list.on {padding: 0; display: flex;}
 .accord-cont-wrap.horizontal .accordion-list.on .accordion-btn:after {display:none;}
-.accord-cont-wrap.horizontal .accordion-list.on .accordion-btn {width: 36.75rem; padding: 2.5rem 2.25rem 0 3rem; transition: width .3s ease-in-out;}
+.accord-cont-wrap.horizontal .accordion-list.on .accordion-btn {width: 36.75rem; padding: 2.5rem 2.25rem 0 3rem; }
 
 
-.accord-cont-wrap.horizontal .accordion-list .btn-accord-icon:after {content:""; display:block; width: 2rem; height: 2rem; position:absolute; top: 2rem; right: 2rem; transform: revert; background:url(../../images/icon/icon_accord_plus.svg) no-repeat center / 100%;}
+.accord-cont-wrap.horizontal .accordion-list .btn-accord-icon {width: 2rem; height: 2rem; position:absolute; top: 2rem; right: 2rem; cursor: pointer;}
+.accord-cont-wrap.horizontal .accordion-list .btn-accord-icon:after {content:""; display:block; width: 2rem; height: 2rem; position:absolute; top: 0; right: 0; transform: revert; background:url(../../images/icon/icon_accord_plus.svg) no-repeat center / 100%;}
 .accord-cont-wrap.horizontal .accordion-list.on .btn-accord-icon:after {background-image:url(../../images/icon/icon_accord_minus.svg);}
 
 .accord-cont-wrap.horizontal .accordion-list .accordion-btn {display: block; height: 100%; padding: 2rem; border-radius: 1rem; border: 1px solid #c9ced1; background: #fff;}
@@ -509,9 +510,11 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .accord-cont-wrap.horizontal .accordion-list .accordion-btn .acd-group {display: block;}
 .accord-cont-wrap.horizontal .accordion-list .accordion-btn .acd-group .img-area {width: 6rem; height: 6rem; position:absolute; bottom: 1.5rem; right: 1.5rem;}
 .accord-cont-wrap.horizontal .accordion-list.on .accordion-btn .acd-group .img-area {right: 2.25rem; bottom: 3.13rem; width: 12rem; height: 12rem;}
-.accord-cont-wrap.horizontal .accordion-list .accordion-content {margin: 0; padding: 0; position: absolute; bottom: 3.31rem; left: 3rem; max-width: 16rem;}
-.accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
+.accord-cont-wrap.horizontal .accordion-list .accordion-content {margin: 0; padding: 0; position: absolute; bottom: 0; top: 6.75rem; left: 3rem; max-width: 16rem; height: 190px;}
+.accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; width: 257px;}
 .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .sub {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; padding-top: 0.75rem;}
+
+
 
 
 /* *** textarea *** */
@@ -783,8 +786,8 @@ table {border-collapse: collapse;}
 .swiper-pagination .swiper-pagination-current {color: #171819; font-weight: 600;}
 .swiper-button-next::after,
 .swiper-button-prev::after {display: none;}
-.ty02Swiper .swiper-button-next.swiper-button-disabled, 
-.ty02Swiper .swiper-button-prev.swiper-button-disabled {display: none;}
+.type02Swiper .swiper-button-next.swiper-button-disabled, 
+.type02Swiper .swiper-button-prev.swiper-button-disabled {display: none;}
 .swiper-button-prev {content:""; display: block; width: 2.5rem; height: 2.5rem; padding: 0.5rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat 50% center; transform: rotate(-180deg); border: 1px solid #1f1f3c; border-radius: 50%;}
 .swiper-button-next {content:""; display: block; width: 2.5rem; height: 2.5rem; padding: 0.5rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat 50% center;  border: 1px solid #1f1f3c; border-radius: 50%;}
 .swiper-wrapper .swiper-download-btn {font-size: 1rem; position: absolute; bottom: 0; right: 0; display: flex; gap: 0.625rem; color: #fff; font-weight: 600; padding: 0.625rem 1.25rem; background-color: rgba(0, 0, 0, 0.80); align-items: center; }

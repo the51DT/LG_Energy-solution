@@ -109,7 +109,6 @@ var pubUi = {
         // 헬퍼: 개별 select-cate에 바인딩
         const bindOne = (root) => {
             if (!root || this._boundSelects.has(root)) return; // 중복 방지
-            // console.log("root : " , root)
             const targetBtn = root.querySelector("button");
             const targetMenu = root.querySelector(".select-menu");
 
@@ -117,7 +116,10 @@ var pubUi = {
                 targetBtn.addEventListener("click", (e) => {
                     e.stopPropagation();
                     const currentSelectCate = e.currentTarget.closest(".select-cate");
-                    if (currentSelectCate.classList.contains("disabled")) return;
+                    if (!currentSelectCate || currentSelectCate.classList.contains("disabled")) return;
+
+                    const menu = currentSelectCate.querySelector(".select-menu");
+                    const wasActive = e.currentTarget.classList.contains("active"); // ★ 변경: 클릭 시점 active 여부 저장
 
                     // 모든 select-cate 닫기
                     this.self.selectCateBtn.forEach((otherTargetBtn) => {
@@ -126,14 +128,13 @@ var pubUi = {
                         if (otherCate) otherCate.querySelector(".select-menu")?.classList.remove("on");
                     });
 
-                    // 현재 것만 열기
-                    const menu = currentSelectCate.querySelector(".select-menu");
-                    if (menu) {
+                    // ★ 변경: 이전 상태에 따라 토글
+                    // 이미 active였으면 방금 모두 닫혔으니 "그대로 닫힌 상태" 유지
+                    // active가 아니었으면 현재 것만 열기
+                    if (!wasActive) {
                         e.currentTarget.classList.add("active");
-                        menu.classList.add("on");
+                        menu?.classList.add("on");
                     }
-
-                    // console.log("targetBtn : ", targetBtn);
                 });
             }
 
@@ -149,7 +150,7 @@ var pubUi = {
                         }
                         // 선택 후 닫기
                         const parentCate = targetMenu.closest(".select-cate");
-                        parentCate?.querySelector(".btn-select")?.classList.remove("active");
+                        parentCate?.querySelector(".btn-select, button")?.classList.remove("active");
                         targetMenu.classList.remove("on");
                     });
                 });
@@ -164,11 +165,11 @@ var pubUi = {
             const el = typeof selectorOrEl === "string" ? document.querySelector(selectorOrEl) : selectorOrEl;
             // 최신 버튼/메뉴 목록 갱신(닫기 루틴에서 쓰임)
             this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
-            bindOne(el);
+            if (el) bindOne(el);
             return; // 여기서 끝
         }
 
-        // 파라미터 없으면: 기존처럼 전체 바인딩
+        // 파라미터 없으면: 전체 바인딩
         this.self.selectCateBtn = document.querySelectorAll(".activeSelect button");
         this.self.selectCateBtn.forEach((btn) => {
             const root = btn.closest(".select-cate");
@@ -184,70 +185,155 @@ var pubUi = {
     scrollWrapEvt: function () {
         if (!this.self.wrap) return;
 
-        this.self.wrap.addEventListener("scroll", (e) => {
-            const wrap = e.currentTarget || e.target;
-            const aside = document.querySelector(".wrap aside");
+        // === 유틸 ===
+        const topRelToScroller = (el, scroller, viewportTop) => {
+            const er = el.getBoundingClientRect();
+            return er.top - viewportTop + scroller.scrollTop;
+        };
 
-            // 1) 가장 안쪽의 활성 탭 패널을 찾는다.
-            const onPanels = wrap.querySelectorAll(".tab-content-box .tab-content.on");
-            const activePanel = onPanels[onPanels.length - 1] || wrap;
+        const getPanelByActiveAria = (root) => {
+            const cate = root.querySelector(":scope .tab-wrap .tab-cate-wrap.new .tab-category.activeTab");
+            if (!cate) return null;
 
-            // 2) 현재 활성 패널 기준으로 요소들을 구한다.
-            const targetSideSticky = activePanel.querySelector(".side-sticky");
-            const targetContentItem = activePanel.querySelectorAll("[class^='content-item']");
-
-            const nowScroll = wrap.scrollTop;
-            const page_h = window.innerHeight * 0.3;
-
-            // aside 표시/숨김
-            if (nowScroll > page_h) {
-                if (aside && aside.style.display !== "block") pubUi.fadeIn(aside, 500);
-            } else {
-                if (aside) aside.style.display = "none";
+            let activeBtn = cate.querySelector(':scope [role="tab"][aria-selected="true"]');
+            if (!activeBtn) {
+                const onLi = cate.querySelector(":scope .tab.on > [role='tab'], :scope li.on > [role='tab']");
+                if (onLi) activeBtn = onLi;
             }
-            if (aside && !aside.dataset.bound) {
-                aside.addEventListener("click", () => {
-                    wrap.scrollTo({ top: 0, behavior: "smooth" });
-                    document.querySelector(".wrap").style.overflow = "auto";
-                });
-                aside.dataset.bound = "1";
+            if (!activeBtn) return null;
+
+            const controlsId = activeBtn.getAttribute("aria-controls");
+            if (!controlsId) return null;
+
+            const safe = window.CSS && CSS.escape ? CSS.escape(controlsId) : controlsId;
+            return root.querySelector(`:scope #${safe}`) || null;
+        };
+
+        const resolveDeepestScope = (wrap) => {
+            let scope = wrap.querySelector(":scope .content-area .tab-content-box > .tab-content.on") || wrap;
+            let next = getPanelByActiveAria(scope);
+            if (next) scope = next;
+            while (true) {
+                const deeper = getPanelByActiveAria(scope);
+                if (!deeper || deeper === scope) break;
+                scope = deeper;
             }
+            return scope;
+        };
 
-            if (!targetContentItem || !targetContentItem.length) return;
+        // rAF 쓰로틀
+        let rafId = null;
+        const onScroll = (e) => {
+            if (rafId) return;
+            rafId = requestAnimationFrame(() => {
+                rafId = null;
 
-            targetContentItem.forEach((item) => {
-                const isMobile = document.querySelector(".wrap").classList.contains("mobile");
-                const itemTop = item.offsetTop - (isMobile ? 152 : 600);
-                const itemHeight = item.clientHeight;
-                const itemBottom = itemTop + itemHeight;
+                const wrap = e.currentTarget || e.target;
+                const wrapEl = document.querySelector(".wrap");
+                const isMobile = !!wrapEl?.classList.contains("mobile");
 
-                if (nowScroll >= itemTop && nowScroll < itemBottom) {
-                    item.classList.add("active");
+                // ★ 실제 스크롤러 감지 (모바일에서 body/document가 스크롤러인 케이스 대응)
+                const wrapScrollable = wrap.scrollHeight > wrap.clientHeight + 1;
+                const scroller = wrapScrollable ? wrap : document.scrollingElement; // fallback
+                const viewportTop = wrapScrollable ? wrap.getBoundingClientRect().top : 0;
 
-                    if (targetSideSticky) {
-                        const itemId = item.id;
-                        targetSideSticky.querySelectorAll(".side-list a.active").forEach((a) => a.classList.remove("active"));
+                const aside = document.querySelector(".wrap aside");
+                const nowScroll = scroller.scrollTop;
+                const page_h = window.innerHeight * 0.3;
 
-                        if (itemId) {
-                            // 필요하면 CSS.escape 사용
-                            const safeId = window.CSS && CSS.escape ? CSS.escape(itemId) : itemId;
-                            const link = targetSideSticky.querySelector(`.side-list a[href="#${safeId}"]`);
-                            if (link) link.classList.add("active");
-                        }
-                    }
+                const footerTop = document.querySelector(".footer-wrap").offsetTop;
+                const footerH = document.querySelector(".footer-wrap").clientHeight;
+                const footerVal = footerTop - footerH;
 
-                    if (item.dataset.bgtype === "dark") {
-                        item.style.color = "#fff";
-                        if (targetSideSticky) targetSideSticky.classList.add("white");
-                    } else {
-                        if (targetSideSticky) targetSideSticky.classList.remove("white");                        
+                // aside 표시/숨김
+                // console.log(nowScroll, footerTop);
+                if (nowScroll > page_h) {
+                    if (aside && aside.style.display !== "block") {
+                        aside.classList.remove("end");
+                        pubUi.fadeIn(aside, 500);
                     }
                 } else {
-                    // 필요 시 비활성화 처리
-                    // item.classList.remove("active");
+                    if (aside) aside.style.display = "none";
+                }
+
+                // footer 영역 하단까지 top내려가는거 방지
+                if (nowScroll >= footerVal - 100) {
+                    if (!aside.classList.contains("end")) {
+                        aside.classList.add("end");
+                        aside.style.display = "block";
+                    }
+                } else {
+                    aside.classList.remove("end");
+                }
+
+                // aside 클릭 시 최상단 이동
+                if (aside && !aside.dataset.bound) {
+                    aside.addEventListener("click", () => {
+                        scroller.scrollTo({ top: 0, behavior: "smooth" });
+                        if (wrapEl) wrapEl.style.overflow = "auto";
+                        aside.style.display = "none";
+                        aside.style.opacity = "0";
+                    });
+                    aside.dataset.bound = "1";
+                }
+
+                // 최종 스코프
+                const scope = resolveDeepestScope(wrap);
+
+                // 스코프 내부 영역 수집 (sticky-area 없으면 스코프 전체에서 아이템 찾기)
+                const stickyArea = scope.querySelector(":scope .sticky-area");
+                const targetSideSticky = stickyArea && !isMobile ? stickyArea.querySelector(":scope .side-sticky") : null; // 모바일은 항상 null
+                const targetContentItem = stickyArea ? stickyArea.querySelectorAll(":scope [class^='content-item']") : scope.querySelectorAll(":scope [class^='content-item']");
+
+                if (!targetContentItem || !targetContentItem.length) return;
+
+                // 활성화 동기화
+                let anyActive = false;
+                targetContentItem.forEach((item) => {
+                    const guard = isMobile ? 152 : 600;
+                    const itemTop = topRelToScroller(item, scroller, viewportTop) - guard;
+                    const itemBottom = itemTop + item.clientHeight;
+
+                    if (nowScroll >= itemTop && nowScroll < itemBottom) {
+                        anyActive = true;
+
+                        // ★ 먼저 active 붙이기 (모바일에서도 확실히 들어오게)
+                        if (!item.classList.contains("active")) item.classList.add("active");
+
+                        // 모바일: 다크/라이트 텍스트만 전환하고 종료 (side-sticky 미사용)
+                        if (isMobile) {
+                            const isDark = item.dataset.bgtype === "dark";
+                            item.style.color = isDark ? "#fff" : "";
+                            return;
+                        }
+
+                        // 데스크톱: side-sticky 동기화
+                        if (targetSideSticky) {
+                            targetSideSticky.querySelectorAll(":scope .side-list a.active").forEach((a) => a.classList.remove("active"));
+
+                            const itemId = item.id;
+                            if (itemId) {
+                                const safeId = window.CSS && CSS.escape ? CSS.escape(itemId) : itemId;
+                                const link = targetSideSticky.querySelector(`:scope .side-list a[href="#${safeId}"]`);
+                                if (link) link.classList.add("active");
+                            }
+                        }
+
+                        const isDark = item.dataset.bgtype === "dark";
+                        if (targetSideSticky) targetSideSticky.classList.toggle("white", isDark);
+                        item.style.color = isDark ? "#fff" : "";
+                    }
+                });
+
+                // (선택) 아무 섹션도 매칭 안 되면 모바일 텍스트 기본값 복귀
+                if (isMobile && !anyActive) {
+                    // 필요 시 리셋할 요소들 처리 (예: 최근 active 요소 텍스트 컬러 원복)
+                    // 여기서는 건너뜀
                 }
             });
-        });
+        };
+
+        this.self.wrap.addEventListener("scroll", onScroll);
     },
     searchTextDelEvt: function (el) {
         el.forEach((searchR) => {
@@ -882,7 +968,7 @@ var pubUi = {
                 const historyView = document.querySelector(".history-wrap.each-view");
                 let historyViewY2 = "";
 
-                if(document.querySelector(".history-tit-wrap")) {
+                if (document.querySelector(".history-tit-wrap")) {
                     historyViewY2 = document.querySelector(".history-tit-wrap").offsetTop;
                 } else {
                     return;
@@ -1136,7 +1222,7 @@ var pubUi = {
                                 btnContent.classList.remove("active");
                             });
 
-                            if(e.target.tagName === "A") {
+                            if (e.target.tagName === "A") {
                                 e.target.closest(".btn").classList.add("active"); //클릭한 카테고리 active클래스 추가
                             } else {
                                 e.target.classList.add("active"); //클릭한 카테고리 active클래스 추가
@@ -1364,11 +1450,9 @@ var pubUi = {
                     if (!expanded) {
                         // 열기 (오른쪽으로 슬라이드)
                         region.find(".detail-wrap .title").show().css({ opacity: 0 }).animate({ opacity: 1 }, 1000);
-                        region.closest(".accordion-list").find(".accordion-btn").find(".img-area").show().css({ opacity: 0 }).animate({ opacity: 1 }, 1000);
                     } else {
                         // 닫기 (왼쪽으로 접기)
                         region.find(".detail-wrap .title").animate({ opacity: 0 }, 400);
-                        region.closest(".accordion-list").find(".accordion-btn").find(".img-area").animate({ opacity: 0 }, 400);
                     }
 
                     if (!item.hasClass("tog")) {
@@ -1540,8 +1624,9 @@ var pubUi = {
                 //newsroom 상세 사용중
                 var swiper1 = new Swiper(".type01Swiper", {
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".type01Swiper .swiper-pagination",
                         type: "fraction",
+                        clickable: true,
                     },
                     navigation: {
                         nextEl: ".swiper-button-next",
@@ -1559,7 +1644,8 @@ var pubUi = {
                 //회사소개 > 소개 사용중
                 var swiper2 = new Swiper(".type02Swiper", {
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".type02Swiper .swiper-pagination",
+                        clickable: true,
                     },
                     navigation: {
                         nextEl: ".swiper-button-next",
@@ -1580,7 +1666,7 @@ var pubUi = {
                     slidesPerView: 1.2,
                     spaceBetween: 16,
                     pagination: {
-                        el: ".swiper-pagination",
+                        el: ".type03Swiper .swiper-pagination",
                         clickable: true,
                     },
                     navigation: {
