@@ -1117,6 +1117,7 @@
 .sgov [class^="content-item"] .content-sect:has(> .btn-wrap:only-child) {padding-top: 2rem;}
 .sgov [class^="content-item"] .content-sect:has(.comp-officer) {padding-top: 1.5rem;}
 .sgov .comp-officer [class^="title-h"] {margin-bottom: 1rem;}
+.sgov .comp-officer .title-h4 {font-size: 1.125rem; line-height: 1.75rem;}
 .sgov .comp-officer > ol {flex-direction: column; gap: 0.5rem;}
 .sgov .comp-officer > ol > li {flex-direction: row; gap: 1rem; padding: 1rem 1.25rem; border-radius: 0.5rem; text-align: left;}
 .sgov .comp-officer > ol > li .num {flex-shrink: 0; width: 2rem; height: 2rem; font-size: 0.875rem; line-height: 1.3125rem;}
@@ -1128,7 +1129,7 @@
 .sgov .gov-down-acco .icon-btn-lg.icon-black .icon-area {width: 1.75rem; height: 1.75rem;}
 .sgov .ctrl-process {gap: 0.5rem; margin-top: 1rem;}
 .sgov .ctrl-process > li {flex-direction: column; gap: 1rem; padding: 1.5rem 1.25rem; border-radius: 0.5rem;}
-.sgov .ctrl-process .tit {font-size: 1rem; line-height: 1.6rem;}
+.sgov .ctrl-process .tit {font-size: 1rem; line-height: 1.6rem; width: auto;}
 .sgov .ctrl-process .desc-wrap {font-size: 1rem; line-height: 1.6rem;}
 .sgov .ctrl-process .desc-wrap .text-list-wrap {margin-top: 0.25rem; font-size: 0.875rem; line-height: 1.3125rem;}
 .sgov .ctrl-process .desc-wrap .text-list > li > p {font-size: 1rem; line-height: 1.6rem;}
@@ -1154,6 +1155,8 @@
 .sgov .gov-ethics-btn {margin-top: 1rem;}
 .sgov .gov-ethics-img .btn-wrap {margin-top: 2rem;}
 
+.sgov:lang(en) .bod-gap [class^="icon-btn"] {min-width: unset; width: 100%; gap: unset; min-height: unset;}
+.sgov:lang(en) .bod-comp .tit-wrap {flex-direction: column; align-items: flex-start; gap: 0.5rem;}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1rem;}

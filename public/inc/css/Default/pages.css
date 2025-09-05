@@ -1287,9 +1287,11 @@
 .sgov .btn-wrap {display: flex; justify-content: center; gap: 0.625rem;}
 .sgov .gov-ethics-btn {margin-top: 2.5rem;}
 .sgov .gov-ethics-img .btn-wrap {margin-top: 2.5rem;}
+.sgov .gov-ethics-img .btn-wrap [class^="icon-btn"] {width: fit-content; min-width: 15.625rem; gap: 1.25rem;}
 
 .sgov:lang(en) .gov-profile .profile-col .profile-text .tit {flex-direction: column; align-items: flex-start; gap: 0;}
 .sgov:lang(en) .gov-profile .profile-col .profile-text .position {white-space: nowrap;}
+.sgov:lang(en) .bod-gap [class^="icon-btn"] {min-width: 22.5rem; width: fit-content; gap: 1.25rem; min-height: 3.75rem; height: auto;}
 
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
