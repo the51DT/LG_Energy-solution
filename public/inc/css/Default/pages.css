@@ -1169,9 +1169,9 @@
 .sprf .report-download .img-wrap {width: 27.25rem; filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.10));}
 .sprf .report-list {display: flex; flex-direction: column; gap: 1.25rem; margin-top: 3.75rem;}
 .sprf .report-list > li {display: flex; align-items: center; gap: 1.25rem; padding: 2.5rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
-.sprf .report-list > li .year {width: 5.125rem; font-size: 1.5rem; font-weight: 700; line-height: 2.25rem; color: var(--colorElement-light-text-text-default03);}
+.sprf .report-list > li .year {width: 5.125rem; font-size: 1.5rem; font-weight: 700; line-height: 2.25rem; color: var(--colorElement-light-text-text-default03); flex-shrink: 0;}
 .sprf .report-list > li .tit {flex-grow: 1; font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
-.sprf .report-list > li > div {display: flex;}
+.sprf .report-list > li > div {display: flex; flex-shrink: 0;}
 .sprf .down-icon {flex-shrink: 0; width: 2.875rem; height: 2.875rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-default04); background-image: url(../../images/icon/icon_download.svg); background-position: center center; background-size: 1.5rem 1.5rem; background-repeat: no-repeat;}
 .sprf .down-wrap {flex-grow: 0; flex-shrink: 1; display: flex; align-items: center; gap: 1.25rem; width: fit-content;}
 .sprf .down-wrap + .down-wrap {margin-left: 3.75rem;}
