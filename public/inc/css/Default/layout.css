@@ -108,7 +108,7 @@ aside > img{cursor: pointer;}
 .content-header_bg .visual-video {width: 100%; height: 36.25rem;} 
 .content-header_bg video {width: 100%; height: 100%; object-fit: fill;}
 .content-header_bg img {width: 100%; height: 100%;  object-fit: cover;}
-.content-header_text {position: absolute; bottom: 7.5rem; left: 50%; transform: translateX(-50%);}
+.content-header_text {position: absolute; top:calc(50% + 50px); left: 50%; transform: translate(-50%, -50%);}
 .content-header .title-h1  {margin-bottom: 2.5rem;}
 
 [class^="content-item"] {padding: 7.5rem 0; width: 100%;}
