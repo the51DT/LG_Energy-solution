@@ -379,6 +379,8 @@
 .cont-area-wrap.type2 .box-container .box-list > li .text-area .desc {margin-top: .5rem; font-size: .875rem; line-height: 1.3125rem;}
 
 .sust-soc:lang(en) #tab2-content .content-item02.bg-skyblue {padding-bottom: 3rem;}
+.sust-soc:lang(en) #tab3-content .content-item01 .btn-wrap > a {width: 100%; height: auto; font-size: 1rem; line-height: 1.4rem; padding-block: 1.25rem;}
+.sust-soc:lang(en) #tab3-content .content-item01 .btn-wrap > a .icon-area {flex-shrink: 0;}
 
 /* 주식정보 (stif) */
 .stif .cont-area-wrap .cont-area-sect > section {padding-bottom: 3.5rem;}
