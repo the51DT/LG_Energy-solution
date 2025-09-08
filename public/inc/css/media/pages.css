@@ -940,7 +940,8 @@
 .pfom .order-history > li > a .text-wrap .tit {width: 100%; font-size: 1.125rem; line-height: 1.75rem;}
 .pfom .order-history > li > a .text-wrap .date {font-size: 1rem; line-height: 1.6rem;}
 .pfom .order-history > li > a img {width: 100%; height: 5rem; object-fit: cover;}
-.pfom .order-history + .btn-wrap {margin-top: 3rem;}
+.pfom .order-history + .btn-wrap,
+.pfom .map-btn {margin-top: 3rem;}
 .pfom .btn-wrap {flex-direction: column; align-items: center; gap: 1rem;}
 
 .pfom [class^="content-item"] .content-sect:has(.tab-cate-wrap.type2 .tab-category li:nth-child(3)) {padding-top: 1rem;}
@@ -1005,6 +1006,9 @@
 .pfom .prod-sol-wrap .prod-sol-box > div .desc {font-size: 0.875rem; line-height: 1.3125rem;}
 
 .pfom #tab2-3-content .content-item02 {padding-top: 0;}
+
+.pfom:lang(en) .prod-features > li {padding: 1.5rem;}
+.pfom:lang(en) .prod-features > li > .tit {font-size: 1rem; line-height: 1.6rem;}
 
 /* 소재 (pmtl) */
 .pmtl [class^="content-item"] .content-sect:not(:has( > img:only-child)) {padding-top: 1.5rem;}
