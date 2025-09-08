@@ -1619,10 +1619,12 @@
 
 .serv-trading #content01 .article-img .lottie-wrap {top: 21.97rem; left: 50%; transform: translateX(-50%);}
 .service .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 0;}
-.service .tab-content-box > .service-btn-wrap:last-of-type {margin-left: 1.25rem; margin-right: 1.25rem;}
+.service .tab-content-box > .service-btn-wrap:last-of-type {margin-left: 1.25rem; margin-right: 1.25rem; margin-bottom: 6.25rem;}
 .service .service-btn-wrap > button,
 .service .service-btn-wrap > a {width: 100%;}
 .serv-trading .service-wrap .service-tit-wrap>img {width: 3.75rem; height: 3.75rem;}
+.serv-trading:lang(en) #content01 .article-img .lottie-wrap {width: 4rem; height: 4rem; top: 16rem; left: 50%; transform: translateX(-50%);}
+.serv-trading:lang(en) #content02 .article-img {margin-inline: 0;}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {margin-top: 3rem;}
