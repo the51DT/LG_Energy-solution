@@ -6,10 +6,11 @@
         <!-- <meta name="viewport" content="width=1920" /> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name=" format-detection" content="telephone=no" />
-        <title>LG에너지솔루션 - 서비스_전력 중개</title>
+        <title>LG Energy Solution - Service_VPP</title>
         <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
         <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />        
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/lottie.js"></script> <!-- 08.28 추가 : lottie 사용영역 lottie.js 추가 -->
     </head>
 
     <body>
@@ -380,18 +381,37 @@
             <!-- //header -->
             <!-- section -->
             <section id="container" class="content-wrap">
+                <!-- 09.02 수정 : 서비스 content-header_bg 추가 : S -->
+                <div class="content-header_bg">
+                    <div class="visual-video">
+                        <video src="../../../inc/images/video/visual_serv_baround01.mp4" poster="../../../inc/images/img/visual_serv_baround01.mp4.png" autoplay muted playsinline loop>
+                            <!-- 비디오 영상 소리 정보 존재시 내용 입력 (접근성 처리용) -->
+                        </video>
+                    </div>
+                    <!-- <img src="../../../inc/images/img/visual_company01.png" alt="비주얼배너" /> -->
+                    <div class="content-header_text">
+                        <p class="title-intro">
+                            <strong>
+                                Through advanced forecasting technology and integrated operations,<br>
+                                efficient management of VPPs (Virtual Power Plants) contributes to stabilizing<br>
+                                the power market and maximizing profitability for customer power plants.
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+                <!-- //09.02 수정 : 서비스 content-header_bg 추가 : E -->
                 <div class="page-map-wrap"> <!-- page-map-wrap -->
                     <div class="selectbox-wrap pc-only" role="listbox">
                         <div class="select-cate activeSelect" role="option">
-                            <button type="button" aria-haspopup="listbox">서비스</button>
+                            <button type="button" aria-haspopup="listbox">Service</button>
                             <ul class="select-menu" role="listbox">
-                                <li><a href="javascript:;" role="option" tabindex="0" class="active">서비스</a></li>
+                                <li><a href="javascript:;" role="option" tabindex="0" class="active">Service</a></li>
                             </ul>
                         </div>
                         <div class="select-cate activeSelect" role="option">
-                            <button type="button" aria-haspopup="listbox">전력 중개</button>
+                            <button type="button" aria-haspopup="listbox">VPP</button>
                             <ul class="select-menu" role="listbox">
-                                <li><a href="javascript:;" role="option" tabindex="0" class="active">전력 중개</a></li>
+                                <li><a href="javascript:;" role="option" tabindex="0" class="active">VPP</a></li>
                                 <li><a href="javascript:;" role="option" tabindex="0">B.around</a></li>
                                 <li><a href="javascript:;" role="option" tabindex="0">B-Lifecare</a></li>
                                 <li><a href="javascript:;" role="option" tabindex="0">B-once</a></li>
@@ -403,15 +423,16 @@
                 </div> <!--//page-map-wrap -->
                 <div class="content-area">
                     <div class="sticky-area-tit">
-                        <h2 class="title-h1">전력 중개</h2> <!-- title-h1 (페이지타이틀) -->
+                        <h2 class="title-h1">VPP</h2> <!-- title-h1 (페이지타이틀) -->
                     </div>
                     <div class="sticky-area">
                         <div class="side-sticky">
+                            <!-- 08.28 수정 : side-list href값 #누락으로 수정 -->
                             <ul class="side-list">
-                                <li><a href="content01" class="active">서비스 소개</a></li>
-                                <li><a href="content02" class="">Eaas란?</a></li>
-                                <li><a href="content03" class="">특장점</a></li>
-                                <li><a href="content04" class="">제공 서비스</a></li>
+                                <li><a href="#content01" class="active">Overview</a></li>
+                                <li><a href="#content02" class="">EaaS</a></li>
+                                <li><a href="#content03" class="">Key Features</a></li>
+                                <li><a href="#content04" class="">Service Offerings</a></li>
                             </ul>
                         </div>
                         <div class="content-item01 active" id="content01"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
@@ -420,16 +441,20 @@
                                     <div class="cont-area-wrap">
                                         <div class="cont-area-sect">
                                             <article>
-                                                <p class="article-tit">서비스 소개</p>
+                                                <p class="article-tit">Overview</p>
                                                 <div class="article-content">
                                                     <p class="article-desc">
-                                                        전력 중개사업은 ESS와 ICT 기반의 가상발전소(VPP) 플랫폼을 통해, 재생에너지 발전소와 전력시장을 연결하는 에너지 거래 중개 서비스입니다. 
-                                                        LG에너지솔루션은 제주 재생에너지 입찰 시범사업 1위 중개사업자로, 업계 최초 단독형 ESS 발전소 구축, ESS를 활용한 야간 과부하 해소 등 다양한 실증사업을 선도하며, 
-                                                        전력 계통 안정화와 제도 개선에 앞장서고 있습니다.
+                                                        The power brokerage business is an energy trading service that connects renewable power plants with the electricity market through an ESS- and ICT-based Virtual Power Plant (VPP) platform. As the top broker in Jeju’s renewable energy bidding pilot project, LG Energy Solution has led numerous pioneering initiatives, including the industry’s first stand-alone ESS power plant and demonstration projects that alleviate nighttime grid overload using ESS. Through these efforts, we are driving grid stability and advancing regulatory improvements.
                                                     </p>
                                                     <div class="article-img">
-                                                        <img src="../../../inc/images/img/serv01_img_01.png" alt="">
+                                                        <img src="../../../inc/images/img/serv01_img_01_en.png" alt="">
+                                                        <!-- 08.28 수정 : lottie 추가 -->
+                                                        <!-- lottie : 추후 관련 로티 디자인 수급 후 json 파일 교체 필요 -->
+                                                        <div class="lottie-wrap">
+                                                            <lottie-player src="../../../inc/images/lottie/Serv_1Eaas00.json" background="transparent"  speed="1" loop autoplay></lottie-player> <!-- 09.03 / 로티 json src 변경 -->
+                                                        </div>
                                                     </div>
+                                                    
                                                 </div>
                                             </article>
                                         </div>

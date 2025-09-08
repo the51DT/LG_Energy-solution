@@ -1928,7 +1928,9 @@
 .service [class^="content-item"] .content-sect {padding-top: 0;}
 
 .serv-trading #content01 .article-img {position: relative;}
-.serv-trading #content01 .article-img .lottie-wrap {width: 5rem; height: 5rem; position: absolute; top:21.31rem; left: 50%; transform: translateX(-50%);}
+.serv-trading #content01 .article-img .lottie-wrap {width: 5rem; height: 5rem; position: absolute; top:21.31rem; left: 30.375rem;}
+
+.serv-trading:lang(en) #content01 .article-img .lottie-wrap {top:22.41rem; left: 30.375rem;}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {display: flex; flex-direction: column; align-items: center; margin-top: 5rem;}
