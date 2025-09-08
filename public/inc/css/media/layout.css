@@ -247,3 +247,7 @@ aside.end {bottom: 390px;}
 .main-page .content-item06 .swiper-pagination-bullet {width: .625rem;height: .625rem;border: 1px solid #171819;background-color: transparent;opacity: 1;}
 .main-page .content-item06 .swiper-pagination-bullet-active {background-color: #171819;}
 .main-page .content-item06 .swiper-button-prev, .main-page .content-item06 .swiper-button-next {background-color: #fff;border: 0;}
+
+
+
+html[lang=en] .nav-wrap li.depth02 a{color: var(--text-text-default-01, #171819);font-size: var(--size-mobile-B1, 1rem);font-weight: 400;line-height: var(--line-height-mobile-B1, 1.6rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);text-align: left;}
