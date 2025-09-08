@@ -613,6 +613,7 @@
 .sust-soc .infosec-activity.ty02 {margin-top: 2.5rem;}
 .sust-soc .infosec-activity.ty02  > li {background-color: var(--colorElement-light-fill-fill-on-primary); text-align: left;}
 
+.sust-soc:lang(en) .csr-acts > img {display: block; max-width: 52.5rem; margin-inline: auto;}
 
 /* 공시정보 (disc) */
 .history-list > li {position: relative; display: flex; gap: 1.25rem;}
