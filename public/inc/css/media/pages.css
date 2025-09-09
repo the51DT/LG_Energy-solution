@@ -1878,6 +1878,11 @@
 .serv-bonce .ucd-desc-wrap p { font-size: 0.875rem; line-height: 1.3125rem; }
 .serv-bonce .service-btn-wrap { margin-bottom: 0; }
 
+.serv-bonce:lang(en) .type-process p {display: flex; align-items: center; padding: 1.5rem;}
+.serv-bonce:lang(en) .type-process p > span {text-align: center;}
+.serv-bonce:lang(en) .type-step-item {padding: 2rem 0.75rem 0; justify-content: flex-start; gap: 0.5rem;}
+.serv-bonce:lang(en) .type-step-item > p {font-size: 0.75rem; line-height: 1.2rem;}
+
 /* 서비스 > KooRoo */
 .serv-kooroo .cont-area-wrap .article-tit { font-weight: 700; }
 .serv-kooroo .article-content .content-desc { font-size: 1rem; line-height: 1.6rem; }
@@ -1925,6 +1930,10 @@
 .serv-ess .bmts-box li, .serv-kooroo .bmts-box li { font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem; }
 .serv-ess .bmts-txt > span, .serv-kooroo .bmts-txt > span { display: block; font-size: 0.8125rem; color: #858889; margin-top: 1.06rem; }
 .serv-ess .text-list-wrap .text-list > li::before, .serv-kooroo .text-list-wrap .text-list > li::before { top: 0.7rem; }
+
+.serv-kooroo:lang(en) .examp-box .examp-txt {text-align: left;}
+.serv-kooroo:lang(en) .article-tit-wrap .btn-wrap a {width: fit-content;}
+.serv-kooroo:lang(en) .bmts-box .text-list-wrap + .asterisk-text {display: flex; gap: 0.375rem; padding-left: 0.25rem;}
 
 /* 서비스 > ess si */
 .serv-ess .service-wrap { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1rem; margin-top: 1.5rem; }
