@@ -2133,7 +2133,7 @@
 .rchr .text-list-wrap .text-list > li::before { top: 0.7em; transform: 0; }
 .rchr .content-sect > p { color: #171819; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; }
 .rchr .grid-cont-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2.5rem; }
-.rchr .grid-cont-wrap > div { border: 2px solid #e1e7ea; padding: 2.5rem; border-radius: 1rem; display: grid; grid-template-columns: 5rem 1fr; gap: 0.62rem; }
+.rchr .grid-cont-wrap > div { border: 2px solid #e1e7ea; padding: 2.5rem; border-radius: 1rem; display: grid; grid-template-columns: 5rem 1fr; gap: 0.62rem; width: 100%; }
 .rchr .grid-cont-wrap > div > img { width: 5rem; padding: 1rem; }
 .rchr .grid-cont-wrap > div > div { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; }
 .rchr .grid-cont-wrap > div > div > span { color: #171819; font-size: 1.25rem; font-weight: 600; line-height: 1; }
