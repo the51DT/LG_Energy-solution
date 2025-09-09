@@ -2040,6 +2040,9 @@
 .rnd #tab3-content .content-item02 .nbdr-box-wrap.type2 .box-cont .img-wrap {margin-top: 1rem;}
 .rnd #tab3-content .content-item02 .nbdr-box-wrap.type2 .box-cont .img-wrap img {width: 100%; height: auto;}
 
+.rnd:lang(en) .structure-tit {padding-inline: 0; text-align: center;}
+.rnd:lang(en) #tab1-3-content .article-box .head-title {flex-direction: column; gap: 0.25rem;}
+.rnd:lang(en) .nbdr-box-wrap .text-box .btn-wrap > .icon-gray {width: 11.3125rem; font-size: 0.875rem; line-height: 1.225rem;}
 
 /* 검색 */
 /* 검색결과 */

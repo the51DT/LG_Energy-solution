@@ -1611,7 +1611,9 @@
 .rnd .nbdr-box-wrap .text-box .desc {color: var(--colorElement-light-text-text-default02); font-weight: 400; line-height: 1.8rem; font-size: 1.125rem; padding-top: 1rem;}
 .rnd .nbdr-box-wrap .text-box .btn-wrap {justify-content: flex-end; padding-top: 1.25rem;}
 .rnd .nbdr-box-wrap .text-box .btn-wrap > .icon-gray {width: 10.4375rem; min-width: auto;}
-.rnd .cont-list-col2 .nbdr-box-wrap {margin-top: 0; padding: 2.5rem;}
+.rnd .cont-list-col2 .nbdr-box-wrap {margin-top: 0; padding: 2.5rem; display: flex; flex-direction: column;}
+.rnd .cont-list-col2 .nbdr-box-wrap .text-box {height: 100%; display: flex; flex-direction: column;}
+.rnd .cont-list-col2 .nbdr-box-wrap .text-box .btn-wrap {margin-top: auto;}
 .rnd .cont-list-col2 .nbdr-box-wrap .text-area .tit {color: var(--colorElement-light-text-text-default01);}
 .rnd .nbdr-box-wrap .text-area .cate-group {display: flex; gap: 5rem; padding-top: 1.25rem;}
 .rnd .nbdr-box-wrap .text-area .cate-group .cate > li:not(:last-child) {margin-bottom: 1rem;}
@@ -1655,6 +1657,9 @@
 .rnd .ip-rights > div > .badge-list .badge {padding: 0.25rem 1.25rem; border-radius: 62.4375rem; background-color: var(--colorElement-light-fill-fill-primary); font-weight: 600; color: var(--colorElement-light-text-text-on-primary);}
 .rnd .ip-rights > div > .text-list-wrap {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 .rnd .ip-rights > div > .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.625rem;}
+
+.rnd:lang(en) #tab1-3-content .article-box .head-title {display: flex; gap: 1.25rem;}
+.rnd:lang(en) .nbdr-box-wrap .text-box .btn-wrap > .icon-gray {width: 22.5rem;}
 
 /* 다운로드 */
 .download .download-content-area .title-h1 {margin: 5rem 0 3.75rem;}
