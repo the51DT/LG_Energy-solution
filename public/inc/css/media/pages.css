@@ -1867,6 +1867,11 @@
 .serv-bonce .ucd-desc-wrap p { font-size: 0.875rem; line-height: 1.3125rem; }
 .serv-bonce .service-btn-wrap { margin-bottom: 0; }
 
+.serv-bonce:lang(en) .type-process p {display: flex; align-items: center; padding: 1.5rem;}
+.serv-bonce:lang(en) .type-process p > span {text-align: center;}
+.serv-bonce:lang(en) .type-step-item {padding: 2rem 0.75rem 0; justify-content: flex-start; gap: 0.5rem;}
+.serv-bonce:lang(en) .type-step-item > p {font-size: 0.75rem; line-height: 1.2rem;}
+
 /* 서비스 > KooRoo */
 .serv-kooroo .cont-area-wrap .article-tit { font-weight: 700; }
 .serv-kooroo .article-content .content-desc { font-size: 1rem; line-height: 1.6rem; }

@@ -2246,6 +2246,8 @@
 .serv-bonce .ucd-desc-wrap p:first-child { color: #171819; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
 .serv-bonce .ucd-desc-wrap p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
 
+.serv-bonce:lang(en) .type-explain > p > span {width: 5rem;}
+
 /* 서비스 > KooRooo */
 .serv-kooroo .article-content { position: relative; }
 .serv-kooroo .article-content .article-desc + .content-tit { margin-top: 3.12rem; }
