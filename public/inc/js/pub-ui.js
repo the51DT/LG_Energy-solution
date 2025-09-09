@@ -290,7 +290,7 @@ var pubUi = {
                 // 활성화 동기화
                 let anyActive = false;
                 targetContentItem.forEach((item) => {
-                    const guard = isMobile ? 152 : 600;
+                    const guard = isMobile ? 152 : 250;
                     const itemTop = topRelToScroller(item, scroller, viewportTop) - guard;
                     const itemBottom = itemTop + item.clientHeight;
 
@@ -299,13 +299,7 @@ var pubUi = {
 
                         // ★ 먼저 active 붙이기 (모바일에서도 확실히 들어오게)
                         if (!item.classList.contains("active")) item.classList.add("active");
-
-                        // 모바일: 다크/라이트 텍스트만 전환하고 종료 (side-sticky 미사용)
-                        if (isMobile) {
-                            const isDark = item.dataset.bgtype === "dark";
-                            item.style.color = isDark ? "#fff" : "";
-                            return;
-                        }
+                        
 
                         // 데스크톱: side-sticky 동기화
                         if (targetSideSticky) {
@@ -321,7 +315,6 @@ var pubUi = {
 
                         const isDark = item.dataset.bgtype === "dark";
                         if (targetSideSticky) targetSideSticky.classList.toggle("white", isDark);
-                        item.style.color = isDark ? "#fff" : "";
                     }
                 });
 

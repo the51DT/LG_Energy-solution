@@ -121,6 +121,7 @@ aside > img{cursor: pointer;}
 [class^="content-item"] .content-sect {padding-top: 2.5rem;}
 [class^="content-item"] article .content-sect {padding-top: 1.875rem;}
 [class^="content-item"].full-bg {margin-bottom: 0;}
+[class^="content-item"][data-bgtype="dark"] {color: #fff !important;}
 
 .title-h1 {font-size: 2.75rem; font-weight: 700; line-height: 3.5rem;}
 .title-h2 {font-size: 1.75rem; font-weight: 700; line-height: 3rem;} 
