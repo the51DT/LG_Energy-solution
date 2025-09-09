@@ -2261,7 +2261,7 @@
 .serv-kooroo .article-img { padding: 2.375rem 10.125rem; margin: 5rem 0; }
 .serv-kooroo .examp-wrap { display: flex; background-color: #F3F5F7; border-radius: 1rem; justify-content: center; align-items: center; padding: 2rem; }
 .serv-kooroo .examp-box { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
-.serv-kooroo .examp-box .examp-ico { width: 6.25rem; height: 6.25rem; border-radius: 50%; background: #fff; }
+.serv-kooroo .examp-box .examp-ico { width: 6.25rem; height: 6.25rem; border-radius: 50%; background: #fff; flex-shrink: 0; }
 .serv-kooroo .examp-box .examp-txt { color: #555758; font-size: 1rem; font-weight: 500; line-height: 1.6rem; }
 .serv-kooroo .content-item02 { background-color: #EAF3F8; }
 .serv-kooroo .station-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 0.62rem; z-index: 1; position: relative; }
@@ -2301,6 +2301,8 @@
 .serv-kooroo .bmts-box li:last-child > span {text-align: right; margin-top: 0.62rem;}
 .serv-ess .bmts-box li > span, .serv-kooroo .bmts-box li > span { color: #858889; font-size: 0.8125rem; font-weight: 400; }
 .serv-ess .text-list-wrap .text-list > li::before, .serv-kooroo .text-list-wrap .text-list > li::before { top: 0.7em; }
+
+.serv-kooroo:lang(en) .bmts-box .text-list-wrap + .asterisk-text {margin-top: 1.25rem;}
 
 /* 서비스 > ess si */
 .serv-ess .service-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 1.88rem; margin-bottom: 1.25rem; }
