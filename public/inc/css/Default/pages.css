@@ -155,11 +155,11 @@
 .sust-env .closed-loop-img {margin-top: 1.88rem;}
 .sust-env .tab3-content .content-item04 .battery-img {margin-top: 1.88rem;}
 .sust-env .tab3-content .recycle-wrap {display: flex; gap: 1.25rem; margin-top: 2.5rem;}
-.sust-env .tab3-content .recycle-box {flex: 1 0 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.88rem; padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem;}
+.sust-env .tab3-content .recycle-box {flex: 1 0 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 1.88rem; padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem;}
 .sust-env .tab3-content .recycle-box:nth-child(2) {flex: 2 0 0; gap: 1.25rem; padding: 1.88rem; width: 42.5rem;}
 .sust-env .tab3-content .recycle-box .recycle-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819;}
 .sust-env .tab3-content .recycle-box .recycle-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; text-align: center; color: #555758;}
-.sust-env .tab3-content .recycle-desc-wrap {display: flex; gap: .62rem; }
+.sust-env .tab3-content .recycle-desc-wrap {display: flex; gap: .62rem; height: 100%;}
 .sust-env .tab3-content .recycle-desc-wrap .box {padding: 1.25rem; width: calc(50% - .31rem); border-radius: .5rem; background-color: #F3F5F7;}
 .sust-env .tab3-content .recycle-desc-wrap .tit {display: block; font-size: 1rem; text-align: center; font-weight: 600; line-height: 1.6rem; color: #171819;}
 .sust-env .tab3-content .content-item05 {background-color: #EAF3F8;}
@@ -179,7 +179,7 @@
 .sust-env .tab4-content .content-item02 .article-content,
 .sust-env .tab4-content .content-item04 .article-content {display: flex; align-items: center; gap: 5rem;}
 .sust-env .tab4-content .content-item01 .img-wrap,
-.sust-env .tab4-content .content-item02 .img-wrap {width: 13.125rem; height: 13.125rem;}
+.sust-env .tab4-content .content-item02 .img-wrap {width: 13.125rem; height: 13.125rem; flex-shrink: 0;}
 .sust-env .tab4-content .content-item02 {background-color: #EAF3F8;}
 .sust-env .tab4-content .content-item03 .article-desc:first-child {margin-top: 0;}
 .sust-env .tab4-content .program-wrap {margin-top: 5rem;}
