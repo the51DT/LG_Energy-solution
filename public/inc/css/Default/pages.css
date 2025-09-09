@@ -1369,10 +1369,16 @@
 .comp .comp-btn-area .btn-wrap {display: inline-block; margin-top: 5rem}
 .comp .right-area .table-wrap.tb-list tbody tr > td {text-align: right;}
 .comp .right-area .table-wrap.tb-list .tb-list-sub .listbox {justify-content: flex-end;}
+.comp .right-area .table-wrap.tb-list .tb-list-sub .listbox li {white-space: nowrap;}
 .comp .comp-info .table-wrap.tb-list table tbody > tr:first-of-type > th,
 .comp .comp-info .table-wrap.tb-list table tbody > tr:first-of-type > td {border-top: 0;}
 .comp .comp-info .table-wrap table tr > th,
 .comp .comp-info .table-wrap table tr > td {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+.comp:lang(en) .comp-info .table-wrap table tr > th,
+.comp:lang(en) .comp-info .table-wrap table tr > td {padding: 1rem 0;}
+.comp:lang(en) .comp-info .table-wrap table tr > th .icon-title .title {white-space: nowrap;}
+.comp:lang(en) .comp-info .table-wrap table tr:last-child > th {position: relative;}
+.comp:lang(en) .comp-info .table-wrap table tr:last-child > th .icon-title .title {position: absolute; top: 1.63rem;}
 
 .flex-box .left-area .number {width: 8.125rem; height: auto;}
 .flex-box .left-area .content {width: 32.70769rem; height: auto; margin: 0 5.71rem;}
@@ -1827,7 +1833,6 @@
 .cont .stepper-wrapper .cont-btn-wrap > .btn:has(a) {padding: 0;}
 .cont .stepper-wrapper .cont-btn-wrap > .btn:has(a) > a {width: 100%; display: flex; justify-content: center;  gap: 0.5rem; align-items: center; margin-top: 0; padding: 1.37rem 2.5rem; height: 4.5rem;}
 
-
 .cont .stepper-wrapper .cont-btn-wrap .btn.active { background-color: #fff; border: 1px solid #33B0C6; color: #33B0C6; }
 .cont .stepper-wrapper .btn-wrap { justify-content: flex-end; gap: 0.625rem; display: flex; }
 .cont .stepper-wrapper .btn-wrap .act-btn-md > img { width: 1.5rem; height: 1.5rem; }
@@ -1874,6 +1879,7 @@
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:last-child label, 
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:nth-of-type(2) label{margin-right: 0;}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap { grid-template-columns: 9.375rem 32.5rem 1fr !important; column-gap: 1.25rem;}
+
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap.notGrid { display: flex;}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input > p { margin-left: 10.5rem; display: flex; gap: 0.25rem; font-size: 1rem; color: #33B0C6; font-weight: 400; line-height: 1.6rem; }
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input > p > span.ico-info {position: relative;}
@@ -1903,7 +1909,17 @@
 .cont .faq-list .cont-btn-wrap .icon-btn .img-wrap {width: 1.25rem; height: 1.25rem; display: inline-block; background: url(../../images/icon/icon_link_external_gr.svg) center/contain no-repeat;}
 .cont .faq-list .cont-btn-wrap .icon-btn.active .img-wrap {background-image: url(../../images/icon/icon_link_external_mt.svg);}
 
+/*09.09 문의하기 디자인 변경건 내용 */
+.cont .selection-wrapper .cont-btn-wrap.flex-wrap .quantity-input-wrap > .btn {width: 10.4375rem; padding: 0.75rem 2.5rem; font-size: 1.125rem; font-weight: 600; font-weight: 1.8rem;}
+.cont .selection-wrapper .wrap-form-input.flex-type .quantity-input {width: 22.4375rem; padding: 0;}
+.cont .selection-wrapper .sub-cont-wrap .wrap-form-input:nth-child(5).flex-type > .input-wrap {column-gap: 0; grid-template-columns:9.375rem 23.9rem 10.0625rem 1fr !important;}
+.cont .selection-wrapper .sub-cont-wrap .wrap-form-input:nth-child(5).flex-type > .input-wrap:not(.select-box-wrap) input {margin-left: 1.25rem; height: 65px;}
 
+
+.cont .selection-wrapper .sub-cont-wrap .selectbox-wrap.type3 .select-cate.size-sm > button {height: 64px;}
+.cont .email-input-box p { display: flex; gap: 0.25rem; font-size: 1rem; color: #33B0C6; font-weight: 400; line-height: 1.6rem; margin-top: 0.62rem;}
+.cont .email-input-box p > span.ico-info::before { display: block; content:""; width:0.875rem; height:0.875rem; background: url(../../../inc/images/icon/icon_info_primary.svg) no-repeat center 100%; margin-top: 0.35rem;}
+.cont .file-input-box .file-item {position: relative;}
 
 /* 서비스 - 전력 중개 */
 .serv-trading .page-map-wrap {margin-top: 6.25rem;}

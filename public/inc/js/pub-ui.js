@@ -1415,7 +1415,6 @@ var pubUi = {
             // 문의하기 아코디언 (wrap.cont 케이스)
             $(document).on("click", ".wrap.cont .acdItem .acd-btn", function (e) {
                 e.preventDefault();
-                console.log("wrap.cont");
                 const $this = $(this);
                 const accordContWrap = $this.closest(".accord-cont-wrap");
                 const item = $this.closest(".acdItem");

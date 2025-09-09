@@ -499,7 +499,8 @@
                                                     <p><span class="ico-info"></span>배터리는 오직 배터리 팩 제조사 또는 시스템 통합 사업자에게만 판매 될 수 있습니다.<br>
                                                     개인 소비자가 배터리는 취급할 수 없으며, 개별 시장에서 개인 소비자에게 판매될 수 없습니다.</p>
                                                 </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input flex-type">
+                                                <!-- 09.09 수정 : 요구 성능 selectbox 제거 : S -->
+                                                <div class="wrap-form-input">
                                                     <div class="input-wrap">
                                                         <label for="performance-input">요구 성능</label>
                                                         <div class="group-box">
@@ -508,25 +509,10 @@
                                                                     placeholder="요구 성능을 입력해주세요.">
                                                                 <button class="btn-input-del" title="입력 내용 삭제"></button>                                                                
                                                             </div>
-                                                            <div class="input-wrap selectbox-wrap type3">
-                                                                <div class="select-cate activeSelect size-sm">
-                                                                    <button type="button" aria-haspopup="listbox">단위 선택</button>
-                                                                    <ul class="select-menu" role="listbox">
-                                                                        <li><a href="javascript:;" role="option"
-                                                                                tabindex="0" class="active">단위 선택</a>
-                                                                        </li>
-                                                                        <li><a href="javascript:;" role="option"
-                                                                                tabindex="0">Kwh</a></li>
-                                                                        <li><a href="javascript:;" role="option"
-                                                                                tabindex="0">V</a></li>
-                                                                        <li><a href="javascript:;" role="option"
-                                                                                tabindex="0">Ah</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div><!--//wrap-form-input-->
+                                                <!-- 09.09 수정 : 요구 성능 selectbox 제거 : E -->
                                                 <div class="wrap-form-input">
                                                     <div class="input-wrap selectbox-wrap type3 ">
                                                         <label for="develop-detail">개발 현황</label>
@@ -549,7 +535,7 @@
                                                 <!-- 공급 예상 시기 : 25.08.18 캘린더 컴포넌트 퍼블리싱 완료  -->
                                                 <div class="wrap-form-input">
                                                     <div class="input-wrap">
-                                                        <label for="supply-input">공급 예상 시기</label>                                                            
+                                                        <label for="supply-input">공급 희망 시기</label> <!-- 09.09 수정 : 문구 변경 -->
                                                         <div class="supply-input-wrap w100">
                                                             <div class="calendar-wrap">                                                                    
                                                                 <button type="button" class="calendar-btn" id="supply-input">
@@ -700,7 +686,7 @@
                                     <div class="item" id="step-4">
                                         <div class="acd-group">
                                             <div class="align-group">
-                                                <p class="acd-tit">고객님의 정보를 입력해주세요.</p> <!-- 08.18 수정 : 문구 변경-->
+                                                <p class="acd-tit">문의자의 정보를 입력해주세요.</p> <!-- 09.09 수정 : 문구 변경 -->
                                             </div>
                                         </div>
                                         <div class="acd-panel accordion-content" role="region">
@@ -712,14 +698,18 @@
                                                         <input type="text" id="user-input" class="input-box" placeholder="이름을 입력해 주세요.">
                                                         <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                     </div>
-                                                    <div class="input-wrap">
+                                                    <!-- 09.09 수정 : (PC/MO) 이메일 영역 인풋필드내 예시문구 사라지고, 안내문구 추가 (60번 수정사항) : S -->
+                                                    <div class="input-wrap">                                                            
                                                         <label for="email-input">이메일<span>*</span></label>
-                                                        <div class="email-input-wrap">
-                                                            <input type="email" id="email-input" class="input-box" placeholder="예 : solutionpartner">@
-                                                            <input type="email" id="email-input" class="input-box" placeholder="예 : lgensol.com">
-                                                            <button class="btn-input-del" title="입력 내용 삭제"></button>
-                                                        </div>
-                                                    </div>
+                                                        <div class="email-input-box">
+                                                            <div class="email-input-wrap">
+                                                                <input type="email" id="email-input" class="input-box" placeholder="">@
+                                                                <input type="email" id="email-input" class="input-box" placeholder="">
+                                                                <button class="btn-input-del" title="입력 내용 삭제"></button>                                                                
+                                                            </div>
+                                                            <p><span class="ico-info"></span>답변은 입력하신 이메일로 발송되니 정확히 입력해 주세요.</p>                      
+                                                        </div>                                      
+                                                    </div><!-- 09.09 수정 : (PC/MO) 이메일 영역 인풋필드내 예시문구 사라지고, 안내문구 추가 (60번 수정사항) : E -->
                                                     <div class="input-wrap">
                                                         <label for="company-input">회사명<span>*</span></label>
                                                         <input type="text" id="company-input" class="input-box" placeholder="회사명을 입력해 주세요.">
@@ -790,16 +780,26 @@
                                                             <p class="byte-check"><span class="count">0</span><span class="count-total">1,000</span></p>
                                                         </div>                                                        
                                                     </div>
+                                                    <!-- 09.09 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - S-->
                                                     <div class="input-wrap">
                                                         <label for="file-input">첨부파일</label>
-                                                        <input id="file-input" class="input-box upload-name" value="첨부하실 파일이 있으시면 ‘파일첨부’로 등록해 주세요." placeholder="첨부하실 파일이 있으시면 ‘파일찾기’로 등록해 주세요.">
-                                                        <div class="btn-wrap">
-                                                            <label for="file1" class="act-btn-xs btn-outline01 btn-file-attach">파일찾기</label>
-                                                            <input type="file" id="file1" style="display: none;">
+                                                        <div class="file-input-box">
+                                                            <div class="file-item">
+                                                                <input id="file-input" class="input-box upload-name"
+                                                                    value="파일을 등록해주세요."
+                                                                    placeholder="파일을 등록해주세요.">
+                                                                <div class="btn-wrap">
+                                                                    <label for="file1"
+                                                                        class="act-btn-xs btn-outline01 btn-file-attach">파일찾기</label>
+                                                                    <input type="file" id="file1" style="display: none;">
+                                                                </div>
+                                                            </div>
+                                                            <div class="input-info on"> <!-- on 클래스 존재시 메시지 노출-->
+                                                                <span class="msg">10MB 이하 크기만 첨부 가능합니다.</span>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="input-info on"> <span class="msg"></span>
-                                                    </div>
+                                                    <!-- 09.09 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - E-->
                                                 </div>
                                             </div>
                                             <div class="btn-wrap">
