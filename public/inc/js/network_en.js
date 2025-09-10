@@ -1,15 +1,15 @@
 // locations 데이터 등록 (팝업 정보도 해당 데이터에서 연동되서 동적으로 마크업 생성됨)
 const locations = [
     {
-        place: "본사",
+        place: "LG Energy Solution",
         lat: 37.5266681,
         lng: 126.9271165,
-        address: "서울특별시 영등포구 여의대로 108",
-        tel: "02-3777-1114",
+        address: "108 Yeoui-daero, Yeongdeungpo-gu, Seoul",
+        tel: "+82-2-3777-1114",
         sort: "",
-        type: "본사",
-        country: "서울",
-        continent: "한국",
+        type: "Headquarter",
+        country: "Seoul",
+        continent: "Korea",
         year: "2020",
         img: "inc/images/img/img_popup_korea1.png",
         home: false,
@@ -20,15 +20,15 @@ const locations = [
         blog: true,
     },
     {
-        place: "마곡R&D캠퍼스 (LG사이언스파크)",
+        place: "R&D Campus Magok (LG Science Park)",
         lat: 37.5628546,
         lng: 126.83131,
-        address: "서울특별시 강서구 마곡중앙10로 30(마곡동) LG사이언스파크",
-        tel: "02-6987-4777",
+        address: "LG Science Park, 30, Magokjungang 10-ro, Gangseo-gu, Seoul",
+        tel: "+82-2-6987-4777",
         sort: "",
         type: "R&D",
-        country: "서울",
-        continent: "한국",
+        country: "Seoul",
+        continent: "Korea",
         year: "2018",
         img: "inc/images/img/img_popup_korea2.png",
         home: false,
@@ -39,15 +39,15 @@ const locations = [
         blog: false,
     },
     {
-        place: "과천R&D캠퍼스",
+        place: "R&D Campus Gwacheon",
         lat: 37.463046,
         lng: 127.0310853,
-        address: "경기도 과천시 장군마을 3길 36",
-        tel: "02-2206-0511",
+        address: "36, JangEUnmaeul-3gil, Gwacheon-si, Gyeonggi-do",
+        tel: "+82-2-2206-0511",
         sort: "",
         type: "R&D",
-        country: "과천",
-        continent: "한국",
+        country: "Gwacheon",
+        continent: "Korea",
         year: "2018",
         img: "inc/images/img/img_popup_korea3.png",
         home: false,
@@ -58,15 +58,15 @@ const locations = [
         blog: false,
     },
     {
-        place: "기술연구원",
+        place: "R&D Campus Daejeon",
         lat: 36.388109,
         lng: 127.3981654,
-        address: "대전광역시 유성구 문지로 188",
-        tel: "042-866-2114",
+        address: "188, Munji-ro, Yuseong-gu, Daejeon",
+        tel: "+82-42-866-2114",
         sort: "",
         type: "R&D",
-        country: "대전",
-        continent: "한국",
+        country: "Daejeon",
+        continent: "Korea",
         year: "1979",
         img: "inc/images/img/img_popup_korea4.png",
         home: false,
@@ -77,17 +77,17 @@ const locations = [
         blog: false,
     },
     {
-        place: "서초 R&D캠퍼스",
+        place: "R&D Campus Seocho",
         lat: 37.4611145,
         lng: 127.0347418,
-        address: "서울 서초구 양재대로 11길 19",
-        tel: "02-3777-1114",
+        address: "19, Yangjaedaero 11-gil, Seocho-gu, Seoul",
+        tel: "+82-2-3777-1114",
         sort: "",
         type: "R&D",
-        country: "서초",
-        continent: "한국",
+        country: "Seocho",
+        continent: "Korea",
         year: "2025",
-        img: "", // inc/images/img/img_popup_korea5.png
+        img: "", //inc/images/img/img_popup_korea5.png
         home: false,
         insta: false,
         facebook: false,
@@ -96,16 +96,16 @@ const locations = [
         blog: false,
     },
     {
-        place: "오창 에너지플랜트",
+        place: "Ochang Energy Plant",
         lat: 36.695833,
         lng: 127.4153271,
-        address: "충청북도 청주시 흥덕구 옥산면 과학산업3로 29",
-        tel: "043-219-7114",
-        sort: "",
-        type: "생산",
-        country: "청주",
-        continent: "한국",
-        year: "2024",
+        address: "29, Gwahaksaneop 3-ro, Oksan-myeon, Heungdeok-gu, Cheongju-si, Chungcheongbuk-do",
+        tel: "+82-43-219-7114",
+        sort: "Cylindrical Battery, Pouch Battery",
+        type: "Manufacturing",
+        country: "Cheongju",
+        continent: "Korea",
+        year: "2004",
         img: "inc/images/img/img_popup_korea6.png",
         home: false,
         insta: false,
@@ -115,16 +115,16 @@ const locations = [
         blog: false,
     },
     {
-        place: "오창 에너지플랜트 2",
+        place: "Ochang Energy Plant 2",
         lat: 36.7322241,
         lng: 127.4443533,
-        address: "충청북도 청주시 청원구 오창읍 2산단로 81",
-        tel: "043-718-0015",
-        sort: "원통형, 파우치전지, ESS전지",
-        type: "생산",
-        country: "청주",
-        continent: "한국",
-        year: "2024",
+        address: "81, 2sandan-ro, Ochang-eup, Cheongwon-gu, Cheongju-si, Chungcheongbuk-do",
+        tel: "+82-43-718-0015",
+        sort: "Cylindrical Battery, Pouch Battery",
+        type: "Manufacturing",
+        country: "Cheongju",
+        continent: "Korea",
+        year: "2012",
         img: "", //inc/images/img/img_popup_korea7.png
         home: false,
         insta: false,
@@ -139,10 +139,10 @@ const locations = [
         lng: 118.56925100611296,
         address: "No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China",
         tel: "+86-25-5878-2000",
-        sort: "자동차 전지, 소형 전지, ESS",
-        type: "생산",
-        country: "중국",
-        continent: "아시아·오세아니아",
+        sort: "Cylindrical Battery, Pouch Battery",
+        type: "Manufacturing",
+        country: "China",
+        continent: "Asia·Oceania",
         year: "2014",
         img: "",
         home: false,
@@ -156,12 +156,12 @@ const locations = [
         place: "LG Energy Solution Technology (Nanjing) Co., Ltd.",
         lat: 31.851233373477672,
         lng: 118.56839489592646,
-        address: "No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China",
+        address: "No.17-18 Hengyi Road. No.26 Hengfei Road.Nanjing Economical & Technological Development Zone,Nanjing, China",
         tel: "+86-25-5878-9000",
-        sort: "자동차 전지, 소형 전지, ESS",
-        type: "생산",
-        country: "중국",
-        continent: "아시아·오세아니아",
+        sort: "Pouch Battery",
+        type: "Manufacturing",
+        country: "China",
+        continent: "Asia·Oceania",
         year: "2018",
         img: "",
         home: false,
@@ -177,10 +177,10 @@ const locations = [
         lng: 118.88463864322954,
         address: "No.17-18 Hengyi Road. No.26 Hengfei Road.Nanjing Economical & Technological Development Zone,Nanjing, China",
         tel: "+86-25-8560-3000",
-        sort: "자동차 전지, 소형 전지, ESS",
-        type: "생산",
-        country: "중국",
-        continent: "아시아·오세아니아",
+        sort: "Cylindrical Battery, Pouch Battery",
+        type: "Manufacturing",
+        country: "China",
+        continent: "Asia·Oceania",
         year: "2003",
         img: "inc/images/img/img_popup_china3.png",
         home: false,
@@ -196,10 +196,10 @@ const locations = [
         lng: 139.74411564019047,
         address: "Holland Hills Mori Tower 17F, 5-11-2, Toranomon, Minato-ku, Tokyo, Japan",
         tel: "+81-3-6403-1861",
-        sort: "자동차 전지, 소형 전지, ESS",
-        type: "판매",
-        country: "일본",
-        continent: "아시아·오세아니아",
+        sort: "",
+        type: "Marketing",
+        country: "Japan",
+        continent: "Asia·Oceania",
         year: "2024",
         img: "",
         home: false,
@@ -216,9 +216,9 @@ const locations = [
         address: "No. 58, Ruihu Street, Neihu District, Taipei City, Taiwan",
         tel: "+886-2-8752-3225 (+188)",
         sort: "",
-        type: "판매",
-        country: "대만",
-        continent: "아시아·오세아니아",
+        type: "Marketing",
+        country: "Taiwan",
+        continent: "Asia·Oceania",
         year: "2020",
         img: "",
         home: false,
@@ -235,9 +235,9 @@ const locations = [
         address: "Unit No. 203, Worldmark 2, Asset No. 8, Aerocity, New Delhi 110037",
         tel: "+91-98-7180-4348",
         sort: "",
-        type: "판매",
-        country: "인도",
-        continent: "아시아·오세아니아",
+        type: "Marketing",
+        country: "India",
+        continent: "Asia·Oceania",
         year: "2023",
         img: "",
         home: true,
@@ -245,7 +245,7 @@ const locations = [
         facebook: true,
         youtube: false,
         linkedin: true,
-        blog: true,
+        blog: false,
     },
     {
         place: "PT. HLI GREEN POWER",
@@ -253,10 +253,10 @@ const locations = [
         lng: -86.06943931544865,
         address: "KNIC(Karawang New Industry City), Jalan Raya Trans Heksa Km 7, Wanajaya, Telukjambe Barat, Karawang, Jawa Barat, Indonesia 41361",
         tel: "+62-812-8540-0888",
-        sort: "파우치 전지",
-        type: "JV/생산",
-        country: "인도네시아",
-        continent: "아시아·오세아니아",
+        sort: "Pouch Battery",
+        type: "JV",
+        country: "Indonesia",
+        continent: "Asia·Oceania",
         year: "2024",
         img: "",
         home: false,
@@ -273,9 +273,9 @@ const locations = [
         address: "Unit 12, 35 Dunlop Rd, Mulgrave, VIC, Australia 3170",
         tel: "+61-1300-178-064",
         sort: "",
-        type: "판매",
-        country: "호주",
-        continent: "아시아·오세아니아",
+        type: "Manufacturing",
+        country: "Australia",
+        continent: "Asia·Oceania",
         year: "2017",
         img: "",
         home: false,
@@ -291,10 +291,10 @@ const locations = [
         lng: -86.06946755963091,
         address: "1 LG Way, Holland, MI 49423, USA",
         tel: "+1-616-494-7190",
-        sort: "자동차 전지",
-        type: "생산",
-        country: "미국",
-        continent: "아메리카",
+        sort: "Automotive",
+        type: "Manufacturing Facility",
+        country: "USA",
+        continent: "Americas",
         year: "2000",
         img: "inc/images/img/img_popup_usa1.png",
         home: true,
@@ -302,7 +302,7 @@ const locations = [
         facebook: true,
         youtube: true,
         linkedin: false,
-        blog: true,
+        blog: false,
     },
     {
         place: "LG Energy Solution Arizona",
@@ -310,10 +310,10 @@ const locations = [
         lng: -111.5530038150412,
         address: "US Arizona Queen Creek 335 e W Pecos Rd",
         tel: "+1-213-905-0024",
-        sort: "소형 전지, ESS",
-        type: "생산",
-        country: "미국",
-        continent: "아메리카",
+        sort: "Mobility, ES",
+        type: "Manufacturing Facility",
+        country: "USA",
+        continent: "Americas",
         year: "2020",
         img: "",
         home: true,
@@ -330,9 +330,9 @@ const locations = [
         address: "155 Flanders Road Westborough, MA 01581",
         tel: "+1-508-497-7319",
         sort: "",
-        type: "판매",
-        country: "미국",
-        continent: "아메리카",
+        type: "Sales",
+        country: "USA",
+        continent: "Americas",
         year: "2023",
         img: "",
         home: true,
@@ -340,7 +340,7 @@ const locations = [
         facebook: false,
         youtube: false,
         linkedin: true,
-        blog: true,
+        blog: false,
     },
     {
         place: "LG Energy Solution Europe GmbH",
@@ -349,9 +349,9 @@ const locations = [
         address: "Otto-Volger Str. 7C, 65843 Sulzbach (Taunus) Germany",
         tel: "+49-6196-5719-660",
         sort: "",
-        type: "판매",
-        country: "독일",
-        continent: "유럽",
+        type: "Sales",
+        country: "Germany",
+        continent: "Europe",
         year: "2020",
         img: "",
         home: false,
@@ -367,10 +367,10 @@ const locations = [
         lng: 16.88145408479877,
         address: "ul. LG 1a, Biskupice Podgorne, 55-040 Kobierzyce, NIP : 8961550941, Wroclaw, Poland",
         tel: "+48-71-733-8103",
-        sort: "자동차 전지",
-        type: "생산",
-        country: "폴란드",
-        continent: "유럽",
+        sort: "Automotive",
+        type: "Manufacturing Facilit",
+        country: "Poland",
+        continent: "Europe",
         year: "2016",
         img: "inc/images/img/img_popup_poland1.png",
         home: true,
@@ -388,8 +388,6 @@ let infowindow; // 인포윈도우 전역 선언 (중복 방지)
 let mapFilterList = document.querySelectorAll(".map-filter-list > li");
 let pcInfoBox = document.querySelector(".map-info.pc-only .map-info-content-box");
 let moInfoBox = document.querySelector(".map-info.mo-only .map-info-content-box");
-
-
 
 function bindEvents() {
     // 글로벌 네트워크
@@ -445,16 +443,16 @@ function bindEvents() {
                 item.classList.remove("active");
             });
 
-            if (targetContinent == "한국") {
+            if (targetContinent == "Korea") {
                 map.setCenter({ lat: 36.5, lng: 127.5 });
                 map.setZoom(5);
-            } else if (targetContinent == "아시아·오세아니아") {
+            } else if (targetContinent == "Asia·Oceania") {
                 map.setCenter({ lat: 34.0479, lng: 100.6197 });
                 map.setZoom(3);
-            } else if (targetContinent == "아메리카") {
+            } else if (targetContinent == "Americas") {
                 map.setCenter({ lat: 39.63935570747691, lng: -101.3754683869087 });
                 map.setZoom(4);
-            } else if (targetContinent == "유럽") {
+            } else if (targetContinent == "Europe") {
                 map.setCenter({ lat: 54.526, lng: 15.2551 });
                 map.setZoom(5.5);
             } else {
@@ -463,10 +461,9 @@ function bindEvents() {
             }
         });
     }
-
 }
 
-function initMap() {    
+function initMap() {
     const styledMapType = new google.maps.StyledMapType([
         {
             featureType: "poi",
@@ -554,13 +551,13 @@ function updateInfoList(filtered) {
 
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
-                if (targetLocation.type === "본사") {
+                if (targetLocation.type === "Headquarter") {
                     // 본사
                     html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
                 } else if (targetLocation.type === "R&D") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "생산" || "JV/생산") {
+                } else if (targetLocation.type === "Manufacturing" || "JV" || "Manufacturing Facility") {
                     //생산
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 } else {
@@ -618,14 +615,13 @@ function updateInfoList(filtered) {
                     moInfoBox.dataset.continent = targetLocation.continent;
                     moInfoBox.innerHTML = html;
                 }
-                
             } else {
                 // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
 
                 let html = "";
 
                 html += '<div class="info-content-head" style="text-align:center; margin:100% auto;">';
-                html += `"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`;
+                html += `"${clickedText}" No location or information corresponding to can be found.`;
                 html += "</div>";
 
                 if (pcInfoBox) pcInfoBox.innerHTML = html;
@@ -639,7 +635,7 @@ function updateInfoList(filtered) {
 mapFilterList.forEach((button) => {
     button.addEventListener("click", function (e) {
         const filterType = button.className.replace("filter-type", "").trim(); // 1~4
-        let typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매" };
+        let typeMap = { 1: "Headquarter", 2: "R&D", 3: "Manufacturing", 4: "Marketing" };
         const selectedType = typeMap[filterType];
 
         // 지도내 유형 필터 선택한 값에 대한 텍스트 우측 selectbox에 활성화 내용 추가
@@ -656,7 +652,6 @@ mapFilterList.forEach((button) => {
                 title: loc.place,
             });
             markers.push(marker);
-            
 
             marker.addListener("click", () => {
                 map.setCenter(marker.getPosition());
@@ -688,22 +683,22 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
 
         switch (tabId) {
             case "tab2": // 한국
-                regionFilter = ["서울", "과천", "청주", "서초", "대전"];
+                regionFilter = ["Seoul", "Gwacheon", "Cheongju", "Seocho", "Daejeon"];
                 center = { lat: 36.5, lng: 127.5 };
                 zoom = 7;
                 break;
             case "tab3": // 아시아 오세아니아
-                regionFilter = ["중국", "일본", "대만", "인도", "인도네시아", "호주"];
+                regionFilter = ["China", "Japan", "Taiwan", "India", "Indonesia", "Australia"];
                 center = { lat: 34.0479, lng: 100.6197 };
                 zoom = 3;
                 break;
             case "tab4": // 아메리카
-                regionFilter = ["미국"];
+                regionFilter = ["USA"];
                 center = { lat: 39.6393, lng: -101.3754 };
                 zoom = 4;
                 break;
             case "tab5": // 유럽
-                regionFilter = ["독일", "폴란드"];
+                regionFilter = ["Germany", "Poland"];
                 center = { lat: 54.526, lng: 15.2551 };
                 zoom = 5;
                 break;
@@ -776,13 +771,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
-                if (targetLocation.type === "본사") {
+                if (targetLocation.type === "Headquarter") {
                     // 본사
                     html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
                 } else if (targetLocation.type === "R&D") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "생산") {
+                } else if (targetLocation.type === "Manufacturing" || "JV" || "Manufacturing Facility") {
                     //생산
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 } else {
@@ -840,7 +835,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let html = "";
 
                 html += '<div class="info-content-head" style="text-align:center; margin:100% auto;">';
-                html += `"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`;
+                html += `"${clickedText}" No location or information corresponding to can be found.`;
                 html += "</div>";
 
                 if (pcInfoBox) pcInfoBox.innerHTML = html;
@@ -861,7 +856,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 2. 필터링
             let filtered = [];
-            if (selectedText === "전체") {
+            if (selectedText === "All") {
                 filtered = locations;
             } else {
                 filtered = locations.filter((loc) => loc.type === selectedText);
