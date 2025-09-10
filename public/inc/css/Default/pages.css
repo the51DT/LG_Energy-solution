@@ -243,6 +243,7 @@
 .sust-env .tab5-content .content-item04 .article-btn-wrap { margin-top: 7.5rem;}
 .sust-env .sect-cont-main > p.title-h2 {margin: 3.37rem 0 5rem;}
 
+.sust-env:lang(en) .btn-btm-wrap [class^="icon-btn"] {width: fit-content; gap: 2.5rem;}
 .sust-env:lang(en) .tab5-content .roadmap-box .btm-box .text-list-wrap {width: 100%;}
 .sust-env:lang(en) .tab5-content .roadmap-box:nth-child(2) .btm-box {height: calc(30.9375rem - 7.5rem);}
 .sust-env:lang(en) .tab5-content .roadmap-box:nth-child(3) .btm-box {height: calc(34.5rem - 7.5rem);}

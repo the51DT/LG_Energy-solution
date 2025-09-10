@@ -254,6 +254,7 @@
 .sust-env .tab5-content .table-list-wrap .tit {margin-bottom: 1rem;}
 .sust-env .tab5-content .table-list-wrap .list-box + .list-box {margin-top: 1.5rem;}
 
+.sust-env:lang(en) .btn-btm-wrap [class^="icon-btn"] {width: 100%; gap: unset; text-align: left;}
 .sust-env:lang(en) .tab5-content .roadmap-box:nth-child(2) .btm-box,
 .sust-env:lang(en) .tab5-content .roadmap-box:nth-child(3) .btm-box {height: auto;}
 
