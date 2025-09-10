@@ -123,7 +123,8 @@
 .sust-env .title-h2 {font-size: 1.25rem; line-height: 1.875rem; padding-bottom: 0;}
 .sust-env .article-content:first-child {margin-top: 0;}
 .sust-env .article-desc {font-size: 1rem; line-height: 1.6rem;}
-.sust-env .article-tit {font-size: 1.125rem; line-height: 1.75rem;}
+.sust-env .article-tit {gap: 0.5rem; font-size: 1.125rem; line-height: 1.75rem;}
+.sust-env .article-tit > span {font-size: 1.5rem; line-height: 2.0625rem;}
 .sust-env .article-sub-tit {font-size: 1rem; line-height: 1.6rem;}
 .sust-env .tab1-content .content-item01 .content-wrap {padding: 0;}
 .sust-env .tab1-content .content-item01 .article-content:first-child {padding-left: 1.25rem;}
