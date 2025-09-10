@@ -68,7 +68,7 @@
 .sust-sys .esg-wrap .esg-box2 .esg-top-box {position: relative; padding: 1.5rem; background-color: #F3F5F7; border-radius: .5rem .5rem 0 0;}
 .sust-sys .esg-wrap .esg-box2 .esg-btm-box {padding: 1.5rem; background-color: #ADECF2; border-radius: 0 0 .5rem .5rem;}
 .sust-sys .esg-wrap .esg-box2 .esg-top-box::before {content: ''; position: absolute; top: 100%; left: 50%; width: 2.5rem; height: 2.5rem; transform: translate(-50% , -50%); background-image: url(../../images/img/sust01_icon_02.png);}
-.sust-sys .esg-wrap .esg-box2::after, .sust-sys .esg-wrap .esg-box3::after {content: ''; position: absolute; left: 50%; top: 100%; height: 2.53125rem; width: 0.5625rem; background: url(../../../inc/images/img/sust01_icon_01.png) no-repeat;}
+.sust-sys .esg-wrap .esg-box2::after, .sust-sys .esg-wrap .esg-box3::after {content: ''; position: absolute; left: 50%; top: 100%; height: 2.53125rem; width: 0.5625rem; background: url(../../images/img/sust01_icon_01.png) no-repeat;}
 .sust-sys .esg-wrap .esg-box3 {margin-bottom: 2.53125rem; border: 1px solid #858889;}
 .sust-sys .esg-wrap .esg-box4 {background-color: #33B0C6;}
 .sust-sys .esg-wrap .esg-box .esg-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem; color: #171819;}
