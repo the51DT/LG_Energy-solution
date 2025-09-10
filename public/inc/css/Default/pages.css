@@ -124,7 +124,7 @@
 .sust-env .article-content3 .article-desc {margin-top: 1.25rem;}
 .sust-env .env2040-wrap {display: flex; gap: 1.25rem;}
 .sust-env .env2040-box {display: flex; flex-direction: column; align-items: center; justify-content: center; width: 25%; padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem;}
-.sust-env .env2040-box>img {width: 7.5rem;}
+.sust-env .env2040-box>img {width: 5rem;}
 .sust-env .env2040-box .tit {margin: 2.5rem 0 1.25rem; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819;}
 .sust-env .env2040-box .desc {text-align: center; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
 .sust-env .tab2-content .roadmap-wrap {padding: 3.75rem; background-color: #EAF3F8; border-radius: 1rem;}
