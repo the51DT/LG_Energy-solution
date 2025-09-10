@@ -327,7 +327,7 @@
 .sust-soc .article-content .text-wrap .desc {font-size: 1rem; line-height: 1.6rem;}
 .sust-soc .article-content .text-wrap .desc + .desc {margin-top: 1rem;}
 .sust-soc .article-content .btn-wrap {margin-top: 1rem;}
-.sust-soc .article-content .btn-wrap [class^="icon-btn"][class*="-sm"] {font-size: 0.875rem; line-height: 1.225rem; height: auto;}
+.sust-soc .article-content .btn-wrap [class^="icon-btn"][class*="-sm"] {font-size: 0.875rem; line-height: 1.225rem; height: auto; min-width: unset;}
 .sust-soc .article-content > .img-wrap img {width: 100%; height: auto; margin: 1rem 0 1.14rem;}
 .sust-soc .article-content > .img-wrap .desc {text-align: left; gap: .38rem;}
 .sust-soc .article-content > .title-h4 {margin: 1rem 0;} 
