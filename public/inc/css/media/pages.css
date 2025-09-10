@@ -1009,6 +1009,7 @@
 
 .pfom:lang(en) .prod-features > li {padding: 1.5rem;}
 .pfom:lang(en) .prod-features > li > .tit {font-size: 1rem; line-height: 1.6rem;}
+.pfom:lang(en) .prod-features > li > .tit > span {font-size: 0.75rem; line-height: 1.2rem;}
 
 /* 소재 (pmtl) */
 .pmtl [class^="content-item"] .content-sect:not(:has( > img:only-child)) {padding-top: 1.5rem;}

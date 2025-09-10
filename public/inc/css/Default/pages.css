@@ -1131,6 +1131,10 @@
 
 .pfom #tab2-3-content .content-item02 {padding-top: 0;}
 
+.pfom:lang(en) .prod-features > li {padding-inline: 2rem;}
+.pfom:lang(en) .prod-features > li > .tit {font-size: 1.125rem; line-height: 1.8rem;}
+.pfom:lang(en) .prod-features > li > .tit > span {font-size: 0.875rem; line-height: 1.4rem;}
+
 /* 소재 (pmtl) */
 .pmtl .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem;}
 .pmtl .title-h2 + .title-desc,
