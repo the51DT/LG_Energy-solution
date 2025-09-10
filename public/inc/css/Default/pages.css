@@ -2425,6 +2425,7 @@
 .foot-policy .nest-list > li + li {margin-top: 1.25rem; padding-top: 2rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default04);}
 .foot-policy .text-list-wrap {color: var(--colorElement-light-text-text-default02);}
 .foot-policy .text-list-wrap .text-list > li::before {top: 0.69rem; transform: unset;}
+.foot-policy .nest-list > li .table-wrap {margin-top: 0.5rem;}
 .foot-policy .table-wrap table thead th {color: var(--colorElement-light-text-text-default01);}
 .foot-policy .table-wrap table thead > tr:not(:first-child) > th {border-width: 1px;}
 .foot-policy .table-wrap.ty02 table tbody > tr > td[rowspan]:not(:first-child) {border-left: 1px solid var(--colorElement-light-stroke-stroke-default03);}
