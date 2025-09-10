@@ -1357,7 +1357,7 @@
 .etmg .box-link .link-img {flex-shrink: 0; display: flex; justify-content: center; align-items: center; width: 5rem; height: 5rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-default04);}
 .etmg .box-link .link-img img {width: 3.125rem; height: auto; aspect-ratio: 1 / 1;}
 .etmg .box-link .link-text {display: flex; align-items: center; gap: 0.5rem;}
-.etmg .box-link .link-text::after {content:""; display:block ;width: 1rem; height: 1rem; background: url(../../images/icon/Icon_more_pu.svg) no-repeat center;}
+.etmg .box-link .link-text::after {content:""; display:block ;width: 1rem; height: 1rem; background: url(../../images/icon/icon_more_pu.svg) no-repeat center;}
 .etmg #etmgPopup .pop-wrap {padding: 2rem 2.5rem; max-height: unset; width: 37.5rem;}
 .etmg #etmgPopup .pop-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .etmg #etmgPopup .pop-desc + .pop-btn-list {margin-top: 2rem;}
