@@ -347,7 +347,7 @@ aside > img{cursor: pointer;}
 .main-page .content-item04.active a.btn-link{opacity: 1; transition: opacity 1.5s .5s;}
 .main-page .content-item04 .cont-item01 .move-img-area{width: 13.75rem;height: auto;position:absolute;bottom:6rem;left:50%; transform: translateX(-50%);}
 .main-page .content-item04 .cont-item01 .move-img-area video{width:100%;}
-.main-page .content-item04.active .move-img-area{transition: all 1.5s 1s;width: 112.5rem;height:auto;bottom:0;}
+.main-page .content-item04.active .move-img-area{transition: all 1.5s 1s;width: 112.5rem;height:auto;bottom:0;max-height:100%;}
 .main-page .content-item04 .cont-item02{height:50rem;position: relative;display:flex; align-items: center;justify-content: center;margin-top:7.5rem}
 .main-page .content-item04 .cont-item02 .text-area{position: relative; z-index: 1;display: flex;flex-direction: column;}
 .main-page .content-item04 .cont-item02 h3{text-align:left;color: var(--text-text-on-primary, #FFF);font-size: var(--size-desktop-H1, 2.75rem);font-weight: 400;line-height: var(--line-height-desktop-H1, 3.85rem);letter-spacing: var(--letter-spacing-default, 0);}

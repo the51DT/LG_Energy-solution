@@ -262,7 +262,6 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .cont-area-wrap .sect-cont-main.nbdr:not(:last-child)::after {display: none;}
 .cont-area-wrap .sect-cont-main.nbdr:last-child {padding-bottom: 15rem;}
 .cont-area-wrap .sect-cont-sub .main-text-wrap {padding-top: 1.87rem;}
-.cont-area-wrap .sect-cont-sub .main-text-wrap .article-content .desc {color: var(--colorElement-light-text-text-default01); font-size: 1,25rem; font-weight: 400; line-height: 2rem;}
 .cont-area-wrap .sect-cont-sub .main-text-wrap + .btn-wrap {padding-top: 2.5rem;}
 .cont-area-wrap .sect-cont-sub .box-content {margin-top: 2.5rem;}
 .cont-area-wrap .article-tit {color:var(--colorElement-light-text-text-default01); font-weight: 600; line-height: 2.625rem; font-size: 1.75rem;}
@@ -553,7 +552,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .selectbox-wrap > div.select-cate > a > img {margin-top: 3px;}
 
 
-.select-menu {width: 100%; position: absolute; top:2.875rem; left:0; display:none; z-index: 50;}
+.select-menu {width: 100%; position: absolute; top:3.875rem; left:0; display:none; z-index: 50;}
 .select-menu.on {display: block;}
 .select-menu > li > a {color: #fff; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; display: block; padding: 0.875rem 1.25rem; background: #171819;}
 .select-menu > li > a.active {color:#fff; font-weight: 700;}
