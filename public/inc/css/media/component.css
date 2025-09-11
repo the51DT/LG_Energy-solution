@@ -91,7 +91,7 @@
 /* selectbox */
 .selectbox-wrap > div.select-cate > a, 
 .selectbox-wrap > div.select-cate > button {font-size: 1rem; font-weight: 500; line-height: 1.4rem;}
-.selectbox-wrap.type2 .select-cate > button {font-size: 1rem; font-weight: 500; line-height: 1.6rem;}
+.selectbox-wrap.type2 .select-cate > button {font-size: 1rem; font-weight: 500; line-height: 1.6rem; height: 3.5rem;}
 .selectbox-wrap.type2 .select-cate > button.on {font-size: 1rem;}
 .selectbox-wrap.type2 .select-menu > li > a {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
 .selectbox-wrap.type3 .select-cate > button {padding-top: 1rem;}

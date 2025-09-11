@@ -26,6 +26,12 @@ aside.end {bottom: 390px;}
 [class^="content-item"] .content-sect {padding-top: 1rem;}
 [class^="content-item"] article .content-sect {padding-top: 1rem;}
 [class^="content-item"].bg-skyblue .title-desc {color: #555758; font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem;}
+.content-wrap > .cont-intro-title {padding: 1rem 0 1.5rem;}
+.content-sect .cont-intro-title {padding: 2rem 1.25rem 1rem;}
+.content-sect .title-h2 {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
+.content-sect .cont-intro-title > .title-h2,
+.content-sect .cont-area-title > .title-h2 {font-size: 1.5rem; line-height: 2.0625rem;}
+
 
 .title-h1 {font-size: 1.875rem; line-height: 2.275rem;}
 .title-h2 {font-size: 1.5rem; line-height: 2.0625rem;} 
