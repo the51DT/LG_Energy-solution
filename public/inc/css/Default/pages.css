@@ -1401,7 +1401,7 @@
 .comp .sect-item-box .sect-item-list .img-wrap img {width: 21.5rem; height: 16.875rem;}
 .comp .sect-item-box .sect-item-list .text-wrap {display: flex; flex-direction: column; gap: 1rem; }
 .comp .sect-item-box .sect-item-list .text-wrap .link-text {font-size: 1.5rem; color: #171819; font-weight: 600; line-height: 2.25rem; width: 100%; position: relative; padding-right: 2rem;}
-.comp .sect-item-box .sect-item-list .text-wrap .link-text::after {content:""; display: block; width: 2rem; height: 2rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat center 50%; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
+.comp .sect-item-box .sect-item-list .text-wrap .link-text::after {content:""; display: block; width: 2rem; height: 2rem; background: url(../../images/icon/icon_arrow_right_bl2.svg) no-repeat center 50%; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
 .comp .sect-item-box .sect-item-list .text-wrap .info-text {font-size: 1.125rem; color: #555758; font-weight: 400; line-height: 1.8rem;}
 .comp .sect-item-box .sect-item-list:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) {justify-content: center; gap: 19.5rem; padding-inline: 14.25rem 9.938rem;}
 .comp .sect-item-box.grid-type {padding-top: 0.625rem;}

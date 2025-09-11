@@ -262,7 +262,6 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .cont-area-wrap .sect-cont-main.nbdr:not(:last-child)::after {display: none;}
 .cont-area-wrap .sect-cont-main.nbdr:last-child {padding-bottom: 15rem;}
 .cont-area-wrap .sect-cont-sub .main-text-wrap {padding-top: 1.87rem;}
-.cont-area-wrap .sect-cont-sub .main-text-wrap .article-content .desc {color: var(--colorElement-light-text-text-default01); font-size: 1,25rem; font-weight: 400; line-height: 2rem;}
 .cont-area-wrap .sect-cont-sub .main-text-wrap + .btn-wrap {padding-top: 2.5rem;}
 .cont-area-wrap .sect-cont-sub .box-content {margin-top: 2.5rem;}
 .cont-area-wrap .article-tit {color:var(--colorElement-light-text-text-default01); font-weight: 600; line-height: 2.625rem; font-size: 1.75rem;}
