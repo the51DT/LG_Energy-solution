@@ -404,3 +404,7 @@ html[lang=en] .gnb__tab-btn-wrap .depth01 > button{min-width:4.75rem;font-size: 
 html[lang=en] .nav-wrap li.depth02 a{color: var(--text-text-default-01, #171819);text-align: center;font-size: var(--size-desktop-Dense14, 0.875rem);font-weight: 400;line-height: var(--line-height-desktop-Dense14, 1.225rem); /* 140% */letter-spacing: var(--letter-spacing-default, 0);}
 html[lang=en] .util-item-cs .cs-cont a{font-size: var(--size-desktop-B3, 0.875rem);font-weight: 600;line-height: var(--line-height-desktop-B3, 1.4rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);width:max-content}
 html[lang=en] .util-item-cs .cs-cont a:after{margin: 0 0.6rem;}
+html[lang=en] .main-page .content-item01 .txt {font-size: var(--size-desktop-LT2, 4rem);}
+html[lang=en] .main-page .content-item01 .img-action01{margin-top:4.3rem; margin-left:7rem;}
+html[lang=en] .main-page .content-item01 .img-action02{right:370px;}
+html[lang=en] .main-page .content-item01.active .txt span.ani04{width:22rem}
