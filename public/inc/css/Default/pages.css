@@ -1951,7 +1951,7 @@
 .adv-wrap .adv-box img{width:5rem;height:5rem;}
 .adv-wrap .adv-box .lottie-wrap {width: 5rem; height: 5rem;}
 .adv-wrap .adv-box .adv-tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; text-align: center; }
-.adv-wrap .adv-box .adv-desc { font-size: 1rem; line-height: 1.6rem; color: #555758; text-align: center; }
+.adv-wrap .adv-box .adv-desc { font-size: 1rem; line-height: 1.6rem; color: #555758; text-align: center; flex-grow: 1; }
 .serv-trading .service-wrap .service-box { width: calc(50% - .625rem); padding: 2.5rem 2.5rem 3.75rem; border: 2px solid #E1E7EA; border-radius: 1rem; background-color: #fff; }
 .serv-trading .service-wrap .service-tit-wrap {display: flex; align-items: center; gap: 0.625rem; padding-bottom: 1.25rem; border-bottom: 1px solid #C9CED1; }
 .serv-trading .service-wrap .service-tit-wrap>img {width: 5rem; height: 5rem;}

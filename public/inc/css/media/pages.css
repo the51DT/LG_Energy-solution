@@ -812,6 +812,8 @@
 .pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list > li {width: calc(50% - (0.5rem / 2));}
 .pind .indus-bottom .bottom-list > li > img {width: 2.625rem; height: 2.625rem;}
 .pind .indus-bottom .bottom-list > li > p {font-size: 1rem; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
+.pind:lang(en) .indus-bottom .bottom-list > li > p {flex-direction: column; gap: 0; height: 2.75rem; line-height: 1;}
+.pind:lang(en) .indus-bottom .bottom-list > li {height: 8.625rem;}
 .pind .indus-bottom .bottom-col {max-width: unset;}
 .pind .indus-bottom .bottom-col > div {gap: 1rem;}
 .pind .indus-bottom .bottom-col .btn-wrap {flex-direction: column;}
@@ -825,6 +827,9 @@
 .pfom .tab-cate-wrap.full-line .tab-category > li button {width: 5.625rem;}
 .pfom [class^="content-item"]:has([class^="content-item"]) {padding-bottom: 0;}
 .pfom [class^="content-item"] [class^="content-item"] {padding-top: 2rem;}
+.pfom .tab-content-box [class^="content-item"]:not([class^="content-item01"]) {padding-top: 3rem;}
+.pfom .tab-content-box .tab-content .content-sect:has(.tab-cate-wrap.type2) {padding-top: 0;}
+.pfom .tab-content-box .tab-content .content-sect .tab-cate-wrap.type2 {margin-top: 1.5rem;}
 .pfom .title-desc {font-size: 1.125rem; line-height: 1.75rem;}
 .pfom .title-h2 + .title-desc {margin-top: 1rem;}
 .pfom .prod-visual-wrap {gap: 2rem; padding-top: 1rem;}
@@ -878,7 +883,8 @@
 .pfom .prod-chart-wrap .prod-chart-list > li .tit {font-size: 1rem; line-height: 1.6rem;}
 .pfom .prod-chart-wrap .prod-chart-list > li .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem;}
 
-.pfom [class^="content-item"] .content-sect:has(.tech-list) {padding-top: 2rem;}
+.pfom [class^="content-item"] .content-sect:has(.tech-list) {padding-top: 1rem;}
+.pfom [class^="content-item"] .tab-wrap .content-sect:has(.tech-list) {padding-top: 2rem;}
 .pfom .tech-list > div + div {margin-top: 2rem; padding-top: 0; border-top: none;}
 .pfom .tech-list .text-wrap {gap: 1rem;}
 .pfom .tech-list .text-wrap .tit {font-size: 1.25rem; line-height: 1.875rem;}
@@ -891,7 +897,7 @@
 .pfom .tech-list .tech-symbol-col .symbol-wrap > li {flex-direction: row; align-items: center; gap: 0.5rem; padding: 1rem 1.25rem; border-radius: 1rem; text-align: left;}
 .pfom .tech-list .tech-symbol-col .symbol-wrap > li > img {width: 5rem; height: 5rem;}
 .pfom .tech-list .tech-symbol-col .symbol-wrap.type2 > li > img {width: 6.25rem; height: 6.25rem;}
-.pfom .tech-list .tech-symbol-col .symbol-wrap > li > p {font-size: 1rem; line-height: 1.6rem;}
+.pfom .tech-list .tech-symbol-col .symbol-wrap > li > p {font-size: 1rem; line-height: 1.6rem; text-align: center;}
 .pfom .tech-list .tech-symbol-col .text-wrap + .symbol-wrap.type2 {margin-top: 1rem;}
 .pfom .tech-list .tech-symbol-col .symbol-wrap.type2 {flex-direction: row; flex-wrap: wrap; gap: 1rem; padding: 1rem 1.25rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
 .pfom .tech-list .tech-symbol-col .symbol-wrap.type2 > li {flex-direction: column; gap: 1rem; width: calc(50% - (1rem / 2));}
@@ -1037,6 +1043,7 @@
 .pmtl .mat-str-wrap > div .text-list-wrap {margin-top: 0.5rem;}
 .pmtl .mat-str-wrap > div .text-list-wrap .text-list > li {font-size: 0.875rem; line-height: 1.3125rem;}
 .pmtl .mat-str-wrap > div .text-list-wrap .text-list > li::before {top: 0.44rem;}
+.pmtl #tab2-content .industry-box .box-link img {height: 5.375rem; margin: 0.69rem 0;}
 
 
 /* 성과보고 (sprf) */
