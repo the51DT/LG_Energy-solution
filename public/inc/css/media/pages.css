@@ -768,6 +768,7 @@
 .rcif #tab1-content .tab-cate-wrap.full-line .tab {width: 100%;}
 .rcif #tab1-content .tab-cate-wrap.full-line .tab > button {width: 100%;}
 .rcif .tab-content > .content-sect.bg-gray {padding-block: 2rem 3rem;}
+.rcif #tab2-content .content-sect.bg-gray {padding-bottom: 6.25rem;}
 .rcif [class^="content-item"]:has(> .content-sect.bg-gray) > .content-sect.bg-gray {margin-top: 1.5rem; padding-block: 2rem 6.31rem;}
 .rcif .type-notice {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem;}
 .rcif .process-list {padding-inline: 0; gap: 1rem;}
