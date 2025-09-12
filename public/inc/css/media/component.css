@@ -63,8 +63,9 @@
 
 .accordion-list .accordion-btn .acd-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
 .accordion-list .accordion-btn .sub-tit,
+
 .accordion-list.on .accordion-btn .sub-tit {font-size: 1rem; font-weight: 600; line-height: 1.6rem; color:var(--colorElement-light-text-text-default03); width: revert; padding-right: 0;}
-.accordion-list.on .accordion-btn .acd-tit {font-weight: 700; font-size: 1.25rem; line-height: 1.875rem; padding-right: 1.7rem;}
+.accordion-list.on .accordion-btn .acd-tit {font-weight: 600; font-size: 1.25rem; line-height: 1.875rem; padding-right: 1.7rem;}
 
 .accordion-list .accordion-content {margin-top: 1.5rem;  font-size: 1rem; line-height: 1.6rem; padding: 1.5rem 1.25rem; border-radius: 0.25rem;}
 .accordion-list .accordion-content .desc-wrap > .desc {font-size: 0.875rem; line-height: 1.3125rem;}
@@ -81,6 +82,7 @@
 .accordion-list.type3 .accordion-btn .acd-group {gap: 1rem; flex-direction: row;}
 .accordion-list.type3 .accordion-content {margin-bottom: 0.75rem; margin: 1.5rem 1.25rem 0;}
 .accordion-list.type3 .accordion-btn .acd-group .acd-icon {display: block;}
+
 
 .accord-content .accordion-title {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem; padding-bottom: 1rem;}
 .accord-content .table-area .text-list-wrap {margin-top: 1rem;}
