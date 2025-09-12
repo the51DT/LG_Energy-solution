@@ -263,7 +263,7 @@
 .sust-env .tab5-content .roadmap-box .btm-box {flex-direction: column; gap: 1rem; padding: 1.5rem; border-radius: 0 0 .5rem .5rem;}
 .sust-env .tab5-content .roadmap-box:nth-child(2) .btm-box,
 .sust-env .tab5-content .roadmap-box:last-child .btm-box {height: auto;}
-.sust-env .tab5-content .text-list>li {font-size: 1rem; line-height: 1.6rem;}
+.sust-env .tab5-content .text-list>li {font-size: 0.875rem; line-height: 1.3125rem;}
 .sust-env .tab5-content .text-list.ty02>li {font-size: .875rem; line-height: 1.3125rem;}
 .sust-env .tab5-content .roadmap-box:last-child .btm-box .text-list>li {margin-top: 1rem;}
 .sust-env .tab5-content .info-inner {flex-direction: column; gap: .5rem; margin-top: 1rem;}
@@ -272,7 +272,8 @@
 .sust-env .tab5-content .content-item04 .table-wrap {margin-top: 1rem;}
 .sust-env .tab5-content .content-item04 .table-wrap table {min-width: 54.7rem;}
 .sust-env .tab5-content .content-item04 .article-btn-wrap {margin-top: 3rem;}
-.sust-env .tab5-content .table-list-wrap .tit {margin-bottom: 1rem;}
+.sust-env .tab5-content .table-wrap th, .sust-env .tab5-content .table-wrap td {font-size: 1rem; line-height: 1.6rem;}
+.sust-env .tab5-content .table-list-wrap .tit {margin-bottom: 1rem; font-size: 0.875rem; line-height: 1.3125rem;}
 .sust-env .tab5-content .table-list-wrap .list-box + .list-box {margin-top: 1.5rem;}
 
 .sust-env:lang(en) .btn-btm-wrap [class^="icon-btn"] {width: 100%; gap: unset; text-align: left;}

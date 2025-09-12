@@ -236,14 +236,15 @@
 .sust-env .tab5-content .content-item04 .content-wrap {padding-top: 7.5rem; border-top: 1px solid #C9CED1;}
 .sust-env .tab5-content .table-wrap {margin-top: 5rem;}
 .sust-env .tab5-content .table-wrap th,
-.sust-env .tab5-content .table-wrap td {text-align: center;} 
+.sust-env .tab5-content .table-wrap td {text-align: center; font-size: 1.125rem; line-height: 1.8rem;} 
 .sust-env .tab5-content .table-wrap .table-btn {display: flex; justify-content: center;}
 .sust-env .tab5-content .table-list-wrap {text-align: left;}
 .sust-env .tab5-content .table-list-wrap .list-box + .list-box {margin-top: 2.5rem;}
-.sust-env .tab5-content .table-list-wrap .tit {display: inline-block; margin-bottom: 1.25rem;}
+.sust-env .tab5-content .table-list-wrap .tit {display: inline-block; margin-bottom: 1.25rem; font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
 .sust-env .tab5-content .table-wrap li,
-.sust-env .tab5-content .table-wrap .text-list-wrap.ty02>li:last-child {text-align: left; margin-bottom: .5rem;}
-.sust-env .tab5-content .table-wrap .text-list-wrap.ty02>li {margin-bottom: 0;}
+.sust-env .tab5-content .table-wrap .text-list-wrap.ty02>li:last-child {text-align: left; margin-bottom: .5rem; font-size: 1rem; line-height: 1.6rem;}
+.sust-env .tab5-content .table-wrap li:last-child {margin-bottom: 0;}
+.sust-env .tab5-content .table-wrap .text-list-wrap .ty02>li {margin-bottom: 0;}
 .sust-env .table-wrap .btn-outline01.icon-btn {padding: 0.88rem 1.5rem; width: auto; font-size: .875rem; line-height: 1.225rem; min-width: max-content; }
 .sust-env .tab5-content .content-item04 .article-btn-wrap { margin-top: 7.5rem;}
 .sust-env .sect-cont-main > p.title-h2 {margin: 3.37rem 0 5rem;}
