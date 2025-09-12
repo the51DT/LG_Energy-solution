@@ -624,7 +624,7 @@
 .fina .table-header .table-title {font-size: 1.25rem; font-weight: 700; line-height: 1.75rem;}
 .fina .accord-content .accordion-title {font-size: 1.5rem; line-height: 2.0625rem; padding-bottom: 1.5rem;}
 .fina .accord-content .accordion-list {margin-inline: -1.25rem;}
-.fina .accordion-list .accordion-content .table-wrap table tbody > tr > th, .accordion-list .accordion-content .table-wrap table tbody > tr > td {line-height: 1.3125rem; white-space: normal;}
+.fina .accordion-list .accordion-content .table-wrap table tbody > tr > th, .fina .accordion-list .accordion-content .table-wrap table tbody > tr > td {line-height: 1.3125rem; white-space: normal;}
 .fina .accord-content .table-area .asterisk-text {margin-top: 1rem;}
 .gray-box-area:lang(en) > ul > li .box-wrap .btn-group [class^="act-btn"] {width: 7.75rem;}
 
@@ -2143,16 +2143,19 @@
 .foot-guide .warning-prohibition .text-list li::before, .foot-guide .warning-policy .text-list li::before { font-size: 0.875rem; }
 
 /* 개인정보처리방침 */
-.foot-policy.wrap:not(.main_p) .content-header { margin-top: 0; }
+.foot-policy .tab-cate-wrap {padding-inline: 1.25rem;}
+.foot-policy.wrap .content-header { margin-top: 0; }
 .foot-policy .content-header .title-h1 {margin-bottom: 1rem;}
-.foot-policy.wrap:not(.main_p) .content-header .subp-tit { font-size: 1rem; line-height: 1.6rem; }
-.foot-policy.wrap:not(.main_p) .content-header .subp-desc { font-size: 1rem; line-height: 1.6rem; margin-top: 1rem; }
+.foot-policy.wrap .content-header .subp-tit { font-size: 1rem; line-height: 1.6rem; }
+.foot-policy.wrap .content-header .subp-desc { font-size: 1rem; line-height: 1.6rem; margin-top: 1rem; }
 .foot-policy .policy-update {font-size: 1rem; line-height: 1.6rem; margin-bottom: 1.5rem;}
 .foot-policy .selectbox-wrap { margin-bottom: 1.5rem;}
 .foot-policy .selectbox-wrap.type2 .select-cate { width: 100%; }
+.foot-policy .selectbox-wrap.type2 .select-cate > button,
+.foot-policy .selectbox-wrap.type2 .select-cate .select-menu > li > a {font-size: 1rem; line-height: 1.6rem;}
 .foot-policy .accordion-list {margin-inline: -1.25rem;}
 .foot-policy .text-bold {font-size: 1rem; line-height: 1.6rem;}
-.foot-policy .text-light {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
+.foot-policy .text-light {font-size: 0.875rem; line-height: 1.3125rem;}
 .foot-policy .desc-wrap {gap: 1.5rem;}
 .foot-policy [class^="text-"]:not(.text-list-wrap) + [class^="text-"]:not(.text-list-wrap) {margin-top: -0.5rem;}
 .foot-policy .desc-wrap .text-wrap {gap: 1rem;}
@@ -2161,16 +2164,17 @@
 .foot-policy .nest-list > li > span {width: auto; flex-shrink: 0;}
 .foot-policy .nest-list > li + li {margin-top: 1.5rem; padding-top: 0; border-top: none;}
 .foot-policy .text-list-wrap {font-size: 0.875rem; line-height: 1.3125rem; color: var(--colorElement-light-text-text-default02);}
-.foot-policy .text-list-wrap .text-list > li::before {top: 0.69rem; transform: unset;}
-.foot-policy .table-wrap table thead th {color: var(--colorElement-light-text-text-default01);}
+.foot-policy .text-list-wrap .text-list > li::before {top: 0.44rem; transform: unset;}
+.foot-policy .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.5rem;}
+.foot-policy .table-wrap table thead th {color: var(--colorElement-light-text-text-default01); font-size: 1rem; line-height: 1.6rem;}
 .foot-policy .table-wrap table thead > tr:not(:first-child) > th {border-width: 1px;}
 .foot-policy .table-wrap.ty02 table tbody > tr > td[rowspan]:not(:first-child) {border-left: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .foot-policy .accordion-list .accordion-btn .acd-group {gap: 0.25rem;}
 .foot-policy .accordion-list .accordion-btn .sub-tit {width: auto;}
+.foot-policy .grid-desc {grid-template-columns: 1fr; gap: 1.5rem;}
 
 .foot-policy:lang(en) .nest-list + .text-bold {margin-top: 0.5rem;}
-.foot-policy:lang(en) .nest-list > li {padding-right: 0;}
-.foot-policy:lang(en) .nest-list .text-list-wrap .text-list > li {padding-left: 0;}
+.foot-policy .nest-list > li:not(:has(.table-wrap)) {padding-right: 0;}
 .foot-policy:lang(en) .accordion-list .accordion-btn .sub-tit {width: auto;}
 
 /* 이메일 무단 수집거부 */

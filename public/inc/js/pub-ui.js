@@ -413,7 +413,8 @@ var pubUi = {
                 if (tabContent) {
                     // || tabContentMo
                     // 모든 탭 콘텐츠 숨김 처리
-                    const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .pc-only .tab-content");
+                    // 09.11 pc-only 제거
+                    const allTabContents = map.closest(".content-wrap").querySelectorAll(".content-area .tab-content");
                     // const allTabContentsMo = map.closest(".content-wrap").querySelectorAll(".content-area .mo-only .tab-content");
                     allTabContents.forEach((content) => {
                         content.classList.remove("on");
