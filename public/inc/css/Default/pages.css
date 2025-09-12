@@ -2169,7 +2169,7 @@
 .rchr .sect-box > div > p { font-size: 1.125rem; color: #171819; font-weight: 400; line-height: 1.8rem; }
 .rchr .sect-box > div > p.desc { color: #555758; font-size: 1rem; line-height: 1.6rem; margin-top: 1.25rem; }
 .rchr .title-h2 { color: #171819; font-size: 2rem; }
-.rchr .title-h2 > span { color: #33B0C6; }
+.rchr .title-h2 > span { color: #33B0C6; margin-left: 0.5rem; }
 .rchr .flex-cont-wrap { display: flex; gap: 1.25rem; }
 .rchr .flex-cont-wrap > div { border: 2px solid #E1E7EA; border-radius: 1rem; padding: 2.5rem; display: flex; flex-direction: column; align-items: center; flex: 1; }
 .rchr .flex-cont-wrap > div > .lottie-wrap { width: 5rem; margin-bottom: 1.88rem; }

@@ -1833,8 +1833,9 @@
 .rchr .flex-cont-wrap > div > p { font-size: 0.875rem; line-height: 1.13125rem; margin-bottom: 1rem; }
 .rchr .flex-cont-wrap > div > .text-list-wrap li { font-size: 0.875rem; line-height: 1.3125rem; }
 .rchr .content-sect > p { font-size: 1rem; line-height: 1.6rem; }
-.rchr .grid-cont-wrap { display: flex; flex-direction: column; }
-.rchr .grid-cont-wrap > div { display: flex; flex-direction: column; padding: 1rem 1.5rem; }
+.rchr .grid-cont-wrap { display: flex; flex-direction: column; margin-top: 1rem; }
+.rchr .grid-cont-wrap:only-child { margin-top: 0; }
+.rchr .grid-cont-wrap > div { display: flex; flex-direction: column; padding: 1rem 1.25rem; }
 .rchr .grid-cont-wrap > div > p { font-size: 0.875rem; color: #555758; line-height: 1.3125rem; font-weight: 400; }
 .rchr .grid-cont-wrap > div > div { flex-direction: row; border-bottom: 1px solid #C9CED1; padding-bottom: 1rem; margin-bottom: 1rem; align-items: center; margin-top: 0; gap: 0.25rem; }
 .rchr .grid-cont-wrap > div > div > img { width: 3.75rem; padding: 0.75rem; }
@@ -1865,6 +1866,7 @@
 .rchr .welfare-list-wrap > div > span { font-size: 1rem; line-height: 1.6rem; margin-bottom: 0.5rem; }
 .rchr .welfare-list-wrap .text-list > li, .rchr .grid-cont-wrap .text-list > li { font-size: 0.875rem; line-height: 1.3125rem; }
 .rchr .text-list-wrap { border-bottom: none !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+.rchr #tab2-content .content-item01, .rchr #tab3-content .content-item01 {padding-top: 3rem;}
 
 /* 조직문화 */
 .rcct.wrap:not(.main_p) .content-header .subp-tit { font-size: 1rem; line-height: 1.6rem; margin-top: 1rem; }
