@@ -181,14 +181,16 @@
 .sust-env .tab4-content .content-item01 .article-content,
 .sust-env .tab4-content .content-item02 .article-content,
 .sust-env .tab4-content .content-item04 .article-content {display: flex; align-items: center; gap: 5rem;}
+.sust-env .tab4-content .content-item04 .article-content .img-wrap {width: 100%; max-width: 540px; height: 100%; object-fit: cover;}
+.sust-env .tab4-content .content-item04 .article-content .article-inner {flex-grow: 1; width: calc(100% - 540px);}
 .sust-env .tab4-content .content-item01 .img-wrap,
 .sust-env .tab4-content .content-item02 .img-wrap {width: 13.125rem; height: 13.125rem; flex-shrink: 0;}
 .sust-env .tab4-content .content-item02 {background-color: #EAF3F8;}
 .sust-env .tab4-content .content-item03 .article-desc:first-child {margin-top: 0;}
 .sust-env .tab4-content .program-wrap {margin-top: 5rem;}
-.sust-env .tab4-content .program-box {display: flex; align-items: center; gap: 2.5rem; margin-bottom: 1.25rem; padding: 2.5rem; border-radius: 1rem; border: 2px solid #E1E7EA;}
+.sust-env .tab4-content .program-box {display: flex; align-items: center; gap: 2.5rem; margin-bottom: 1.25rem; padding: 2.5rem; border-radius: 1rem; border: 2px solid #E1E7EA; }
 .sust-env .tab4-content .program-box:last-child {align-items: flex-start; margin-bottom: 0;}
-.sust-env .tab4-content .program-box .tit-wrap {display: flex; flex-direction: column; gap: 1.25rem; align-items: center; justify-content: center; width: 12.5rem;}
+.sust-env .tab4-content .program-box .tit-wrap {display: flex; flex-direction: column; gap: 1.25rem; align-items: center; justify-content: center; width: 12.5rem; min-width: 12.5rem;}
 .sust-env .tab4-content .program-box .program-icon {display: inline-flex; align-items: center; justify-content: center; width: 6.25rem; height: 6.25rem; border-radius: 50%; background-color: #F3F5F7;}
 .sust-env .tab4-content .program-box .program-icon>img {width: 3rem; height: 3rem;}
 .sust-env .tab4-content .program-box .program-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819;}
@@ -227,6 +229,7 @@
 .sust-env .tab5-content .info-inner {display: flex; gap: 1.25rem; margin-top: 1.25rem;}
 .sust-env .tab5-content .info-inner .info-img,
 .sust-env .tab5-content .info-inner .info-desc {margin-top: 0;}
+.sust-env .tab5-content .content-item03 .info-inner .info-img img {width: 17.5625rem; height: 100%; object-fit: cover;}
 .sust-env .article-btn-wrap {display: flex; align-items: center; justify-content: center; margin-top: 2.5rem;}
 
 .sust-env .tab5-content .content-item04 {padding-top: 0;}
@@ -241,7 +244,7 @@
 .sust-env .tab5-content .table-wrap li,
 .sust-env .tab5-content .table-wrap .text-list-wrap.ty02>li:last-child {text-align: left; margin-bottom: .5rem;}
 .sust-env .tab5-content .table-wrap .text-list-wrap.ty02>li {margin-bottom: 0;}
-.sust-env .table-wrap .btn-outline01.icon-btn {padding: 0.375rem 1.5rem; width: auto; font-size: .875rem; line-height: 1.225rem;}
+.sust-env .table-wrap .btn-outline01.icon-btn {padding: 0.88rem 1.5rem; width: auto; font-size: .875rem; line-height: 1.225rem; min-width: max-content; }
 .sust-env .tab5-content .content-item04 .article-btn-wrap { margin-top: 7.5rem;}
 .sust-env .sect-cont-main > p.title-h2 {margin: 3.37rem 0 5rem;}
 
