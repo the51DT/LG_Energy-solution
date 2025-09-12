@@ -283,8 +283,8 @@
 /* 지속가능경영 > 사회 */
 .article-content .list:not(:last-child) {padding-bottom: .5rem;}
 .article-content article .head-area .img-area {margin: 1.5rem 2.13rem;}
-.article-content .list > .bdr-box-wrap {flex-direction: column; padding: 1.5rem 1.25rem;}
-.article-content .list > .bdr-box-wrap > .left-area .text-group {gap: 1rem;}
+.article-content .list > .bdr-box-wrap {flex-direction: column; padding: 1.5rem 1.25rem; gap: 1rem;}
+.article-content .list > .bdr-box-wrap > .left-area .text-group {gap: 1rem; padding: 0;}
 .article-content .list > .bdr-box-wrap > .left-area .text-group .num {color:#33b0c6; font-size: 0.875rem; line-height: 1.3125rem;}
 .article-content .list > .bdr-box-wrap > .left-area .text-group .tit {font-size: 1rem; line-height: 1.6rem;}
 .article-content .list > .bdr-box-wrap > .right-area .desc {font-size: 0.875rem; line-height: 1.3125rem;}
@@ -294,7 +294,7 @@
 .sust-soc.sust-env .tab2-content .title-h2 {margin-top: 0;}
 .sust-soc .tab-content .title-h1 {font-size: 1.5rem; font-weight: 700; line-height: 2.0625rem;}
 .sust-soc .tab-content .title-h2 {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem;}
-.sust-soc .title-h3 {margin-top: 0; font-size: 1.125rem; line-height: 1.75rem;}
+.sust-soc .title-h3 {margin-top: 0; font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
 .sust-soc .article-section section .title-h3 {margin-bottom:1rem;}
 .sust-soc .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.5rem;}
 
@@ -306,7 +306,9 @@
 .box-container.grid-type .box-content .box-head .text-box .title {font-size: 1.125rem; line-height: 1.75rem;}
 .box-container.grid-type .box-content .box-head .text-box .desc {font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem;}
 
+.sust-soc #tab2-content .content-item01 .content-sect .article-section section:first-child {margin-top: 2rem;}
 .sust-soc #tab2-content .content-item02.bg-skyblue {padding-bottom: 0;}
+.sust-soc #tab2-content .content-item02.bg-skyblue .article-section {margin-top: 1rem;}
 .sust-soc #tab3-content [class^="content-item03"] .content-sect:has(.infosec-system) {padding-top: 1rem;}
 .sust-soc .content-item02 .box-container.grid-type .box-content:nth-child(1) .bdr-box-wrap, .sust-soc .content-item02 .box-container.grid-type .box-content:nth-child(2) .bdr-box-wrap {height: auto;}
 .sust-soc .content-sect-box .title-h3 {padding: 3rem 1.25rem 1.5rem;}
@@ -350,7 +352,7 @@
 .sust-soc .article-content .btn-wrap {margin-top: 1rem;}
 .sust-soc .article-content .btn-wrap [class^="icon-btn"][class*="-sm"] {font-size: 0.875rem; line-height: 1.225rem; height: auto; min-width: unset;}
 .sust-soc .article-content > .img-wrap img {width: 100%; height: auto; margin: 1rem 0 1.14rem;}
-.sust-soc .article-content > .img-wrap .desc {text-align: left; gap: .38rem;}
+.sust-soc .article-content > .img-wrap .desc {text-align: left; gap: .38rem; font-size: 0.875rem; line-height: 1.3125rem;}
 .sust-soc .article-content > .title-h4 {margin: 1rem 0;} 
 
 .sust-soc .cont-area-wrap.type2 .box-container .box-list > li {max-width: unset; width: 100%; padding: 1.5rem; border-radius: 1rem; border: 2px solid #E1E7EA;}
@@ -375,6 +377,9 @@
 .sust-soc #tab3-content .content-item01 .btn-wrap {margin:1.5rem auto 0;}
 .sust-soc #tab3-content .content-item01 .btn-wrap > a {flex-grow: 1;}
 .sust-soc #tab3-content .cont-area-wrap .sect-cont-main:not(:last-child)::after {margin:3rem 0 0; background-color: transparent;}
+.sust-soc #tab3-content .content-item04 .text-list-wrap .text-list > li {font-size: 1rem; line-height: 1.6rem;}
+.sust-soc #tab3-content .content-item04 .article-desc {color: var(--colorElement-light-text-text-default02); font-size: 0.875rem; line-height: 1.3125rem;}
+.sust-soc #tab3-content .content-item05 .cont-article-wrap section .text-area .desc {font-size: 0.875rem; line-height: 1.3125rem;}
 .sust-soc #tab3-content .content-item04 .bdr-box-wrap.nbdr,
 .sust-soc #tab3-content .content-item05 .bdr-box-wrap.nbdr {padding: 1.25rem;}
 .sust-soc #tab3-content .content-item04 .bdr-box-wrap.nbdr .info-wrap .title,
@@ -383,7 +388,7 @@
 .sust-soc #tab3-content .content-item05 .bdr-box-wrap.nbdr .info-wrap .desc  {font-size: 0.75rem; line-height: 1.2rem; }
 .sust-soc #tab3-content .content-item05 .tab-content .title-h2 {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
 .sust-soc #tab3-content .content-item05 .intro-wrap .article-desc  {margin: 1rem 0 ; font-size: .875rem; line-height: 1.3125rem;}
-.sust-soc #tab3-content .content-item05 .cont-article-wrap section:last-child .img-area {margin-top: 1rem;}
+.sust-soc #tab3-content .content-item05 .cont-article-wrap section:last-child .img-area {margin-top: 1rem; margin-inline: 1.5rem;}
 
 .sust-soc #tab4-content .content-item03 .text-list-wrap .text-list > li {font-size: 1rem; line-height: 1.6rem;}
 
