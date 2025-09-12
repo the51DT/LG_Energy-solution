@@ -1436,7 +1436,7 @@
 .news-content-area .top-bar .search-box>button{width:2.5rem;padding:0.5rem; }
 .news-content-area .top-bar .search-box > input{width: 100%; flex: 1; font-size: 1rem;}
 .news-content-area .top-bar .search-box > input::placeholder {font-size: 1rem;}
-.news-content-area .search-box > button.btn-delete {width: 1.5rem; height: 1.5rem; background: #858889; position: relative; padding: 0;}
+.news-content-area .search-box > button.btn-delete {width: 1.5rem; height: 1.5rem; background: #858889; position: relative; padding: 0; display: none;}
 .news-content-area .search-box > button.btn-delete img {width: 0.5rem; height: 0.5rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .news-content-area .top-bar .total-count{font-size:1rem}
 .news-content-area .news-list{margin-bottom:2rem}
