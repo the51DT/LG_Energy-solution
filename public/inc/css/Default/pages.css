@@ -2292,6 +2292,7 @@
 .serv-bonce .ucd-desc-wrap { display: flex; gap: 0.62rem; flex-direction: column; }
 .serv-bonce .ucd-desc-wrap p:first-child { color: #171819; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
 .serv-bonce .ucd-desc-wrap p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
+.serv-bonce .ucd-desc-wrap p.noti {color: #858889; font-size: 0.875rem; font-weight: 400; line-height: 1.4rem;}
 
 .serv-bonce:lang(en) .type-explain > p > span {width: 5rem;}
 
