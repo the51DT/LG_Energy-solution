@@ -468,6 +468,68 @@
             <!-- // footer -->
         </div>
 
+        <!-- 09.12 추가 : 쿠키 설정 팝업 - S -->
+        <!-- 메인 쿠키 설정 모달 레이어 -->
+        <div class="main-cookie" id="popupCookieLayer">
+            <div class="content-wrap">
+                <div class="desc">
+                    We use cookies to provide a convenient web browsing experience and to continuously improve our features through<br class="pc-only">
+                    traffic analysis. By selecting ‘Allow All Cookies, you consent to the use of cookies. You can choose to allow or disable specific <br class="pc-only">
+                    cookies by selecting Cookie Settings. For more details, please refer to our <a href="#" class="underline">Privacy Policy.</a>
+                </div>
+                <div class="btn-wrap">
+                    <div class="btn-group">
+                        <button type="button" class="act-btn-sm btn-primary02 btn-allow">Allow All Cookies</button>
+                        <button type="button" class="act-btn-sm btn-outline03 btn-setting" id="popupCookieSettingBtn1" onclick="pubUi.popUp.open('#popupCookieSetting', '#popupCookieSettingBtn1')">Cookie Settings</button>
+                    </div>
+                    <div class="btn-close">
+                        <button type="button"><img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- popup : 메인 쿠키 설정 팝업 - Cookie Settings -->
+        <div class="modal-pop dialog setting-cookie" id="popupCookieSetting">
+            <div class="pop-wrap">
+                <div class="pop-header">
+                    <h3 class="title">Cookie Settings</h3>
+                </div>
+                <div class="pop-content">
+                    <div class="section-wrap">
+                        <section>
+                            <div class="title-wrap">
+                                <h5 class="title">Your Privacy</h5>
+                            </div>
+                            <p class="desc">
+                                LG Energy Solution believes it is important for you to know how<br class="pc-only"> we use your personal information.<br class="pc-only">
+                                Regarding consumer data collected electronically,<br class="pc-only">
+                                LG Energy Solution provides notice, choice, access, and security<br class="pc-only"> as specified in our Privacy Policy.
+                            </p>
+                        </section>
+                        <section>
+                            <div class="title-wrap">
+                                <h5 class="title">Analytics Cookies</h5>
+                                <div class="toggle-btn">
+                                    <input type="checkbox" name="toggle" id="toggle1" class="toggle-circle">
+                                 </div>
+                            </div>
+                            <p class="desc">
+                                These cookies allows our website to keep improving functions through website traffic analysis.
+                            </p>
+                        </section> 
+                    </div>
+                </div>
+                <div class="pop-footer">
+                  <div class="btn-wrap">
+                    <button type="button" class="act-btn-md btn-primary01" onclick="pubUi.popUp.close('#popupCookieSetting','#popupCookieSettingBtn1');">Save & Proceed</button>
+                  </div>
+                </div> 
+                <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupCookieSetting','#popupCookieSettingBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+            </div>
+        </div>
+        <!-- //09.12 추가 : 쿠키 설정 팝업 - E -->
+         
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
         <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>

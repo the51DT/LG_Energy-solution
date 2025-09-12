@@ -184,6 +184,13 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .radio input[type="radio"]:checked:disabled + label .custom-radio::after,
 .radio input[type="radio"]:checked.disabled + label .custom-radio::after {background:url( ../../images/icon/icon_radio_gr.svg);}
 .radio input[type="radio"] + label .txt {font-size: calc(16 / 16 * 1rem); font-weight: 400; line-height: calc(22.4 / 16 * 1rem); color: var(--colorElement-light-text-text-default01);}
+
+/* 토글 버튼 추가 : 09.12 */
+.toggle-btn .toggle-circle {-webkit-appearance: none; appearance: none; width: 3.75rem; height: 2rem; border-radius: 62.4375rem; background: #999C9D; position: relative; cursor: pointer; outline: none; transition: background 0.3s ease; border: none;}
+.toggle-btn .toggle-circle::before {content: ""; position: absolute; top: 0.25rem; left: 0.25rem; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: #fff; box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.40); transition: transform 0.3s ease;}  
+.toggle-btn .toggle-circle:checked { background: #33B0C6; }
+.toggle-btn .toggle-circle:checked::before { transform: translateX(1.78rem);}
+
 /* input */
 .wrap-form-input {display:flex; gap:calc(8 / 16 * 1rem); flex-direction: column;}
 .wrap-form-input .input-wrap {display:flex; align-items: center; position: relative;}
