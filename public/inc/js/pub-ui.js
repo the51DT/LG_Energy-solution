@@ -304,8 +304,8 @@ var pubUi = {
                 let anyActive = false;
                 targetContentItem.forEach((item) => {
                     const guard = isMobile ? 152 : 250;
-                    const itemTop = topRelToScroller(item, scroller, viewportTop) - guard;
-                    const itemBottom = itemTop + item.clientHeight;
+                    const itemTop = topRelToScroller(item, scroller, viewportTop)* .8 - guard ;
+                    const itemBottom = itemTop + item.clientHeight ;
 
                     if (nowScroll >= itemTop && nowScroll < itemBottom) {
                         anyActive = true;
