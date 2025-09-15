@@ -724,6 +724,7 @@ table {border-collapse: collapse;}
 .modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox {display: flex; align-items: center; font-size: 1rem; font-weight: 500; line-height: 1.4rem;}
 .modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .txt > em {color: #33b0c6;}
 .modal-pop .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .btn-detail {font-size: 1rem; font-weight: 500; line-height: 1.4rem; color: #858889; margin-left: 0.5rem;}
+.modal-pop .pop-wrap.input-form .terms-item-list .terms-item {list-style: decimal; list-style-position: inside;  font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #555758;}
 .modal-pop .pop-wrap.input-form .terms-item-list .terms-item strong {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #555758;}
 .modal-pop .pop-wrap.input-form .terms-item-list .terms-item p {padding-left: 1.25rem; color: #555758; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
 .modal-pop .pop-wrap.input-form .terms-item-list .terms-item:last-child {padding-bottom: 4.06rem;}
