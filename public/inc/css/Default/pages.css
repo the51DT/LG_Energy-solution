@@ -561,7 +561,7 @@
 .sust-soc .content-item02 .infosec-protect .box-container.grid-type .box-content:nth-child(1) .bdr-box-wrap,
 .sust-soc .content-item02 .infosec-protect .box-container.grid-type .box-content:nth-child(2) .bdr-box-wrap {height: 100%;}
 .sust-soc .infosec-protect .box-container.grid-type .box-content .box-head {gap: 0.625rem;}
-.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .num {min-width: 3.375rem; font-size: 1.25rem; font-weight: 800; line-height: 2rem;}
+.sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .num {min-width: 3.375rem; font-size: 1.25rem; font-weight: 800; line-height: 2rem; flex-shrink: 0;}
 .sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .title {font-size: 1.125rem; line-height: 1.8rem;}
 .sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .desc {margin-top: 0.625rem;}
 .sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .text-list > li {font-size: 1rem; line-height: 1.6rem;}
@@ -616,10 +616,10 @@
 .sust-soc .infosec-protect + .infosec-protect {margin-top: 7.5rem; padding-top: 7.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .sust-soc [class^="content-item"] .content-sect:has(.infosec-activity) {padding-top: 1.875rem;}
 .sust-soc .infosec-a.history-btn:has(.link)ctivity {display: flex; gap: 1.25rem;}
-.sust-soc .infosec-activity > li {width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
+.sust-soc .infosec-activity > li {width: 100%; padding: 2.5rem 1.875rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
 .sust-soc .infosec-activity .num {display: flex; justify-content: center; align-items: center; margin-inline: auto; margin-bottom: 1.25rem; width: 2.5rem; height: 2.5rem; border-radius: 12.5rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-on-primary);}
 .sust-soc .infosec-activity .desc {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: #555758;}
-.sust-soc .infosec-activity.ty02 {margin-top: 2.5rem;}
+.sust-soc .infosec-activity.ty02 {margin-top: 2.5rem; display: flex; gap: 1.25rem;}
 .sust-soc .infosec-activity.ty02  > li {background-color: var(--colorElement-light-fill-fill-on-primary); text-align: left;}
 
 .sust-soc:lang(en) #tab3-content .content-item01 .btn-wrap > a {width: 32.5rem;}
@@ -648,6 +648,8 @@
 .disc .paging-wrap + .btn-wrap {margin-top: 6.25rem;}
 .disc .btn-wrap {display: flex; justify-content: center;}
 
+.sust-soc:lang(en) #tab4-content .human-mgmt {position: relative;}
+.sust-soc:lang(en) #tab4-content .human-mgmt .btn-wrap {position: absolute; top: 0; right: 0; margin: 0;}
 
 /* IR자료 (irdt) */
 .irdt .tab-content .tab-content .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 4rem;}
@@ -2186,8 +2188,8 @@
 .rchr .grid-cont-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2.5rem; }
 .rchr .grid-cont-wrap > div { border: 2px solid #e1e7ea; padding: 2.5rem; border-radius: 1rem; display: grid; grid-template-columns: 5rem 1fr; gap: 0.62rem; width: 100%; }
 .rchr .grid-cont-wrap > div > img { width: 5rem; padding: 1rem; }
-.rchr .grid-cont-wrap > div > div { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; }
-.rchr .grid-cont-wrap > div > div > span { color: #171819; font-size: 1.25rem; font-weight: 600; line-height: 1; }
+.rchr .grid-cont-wrap > div > div { display: flex; flex-direction: column; gap: 0.625rem; margin-top: 1.5rem; }
+.rchr .grid-cont-wrap > div > div > span { color: #171819; font-size: 1.25rem; font-weight: 600; line-height: 1; margin-bottom: 0.6875rem; }
 .rchr .grid-cont-wrap > div > div > span > span { font-size: 1.125rem; font-weight: 400; }
 .rchr .grid-cont-wrap > div > div > p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
 .rchr #tab1-content .content-item03 article:last-child .grid-cont-wrap { display: flex; }
