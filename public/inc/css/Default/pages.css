@@ -1339,6 +1339,7 @@
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
 .etmg [class^="content-item02"]:not(:first-child) .content-sect {padding-top: 0;}
 .etmg .content-sect > .img-area {padding-inline: 7.2rem; margin-top: 3.75rem;}
+.etmg:lang(en) #tab1-content .content-item03 .content-sect > .img-area {padding-inline: 0;}
 .etmg .sub-desc-wrap {margin-bottom: 6.25rem;}
 .etmg .sub-desc-wrap .sub-tit {font-size: 1.25rem; font-weight: 500; line-height: 1.875rem;}
 .etmg .sub-desc-wrap > .sub-tit + ul {margin-top: 1.88rem;}
@@ -1504,6 +1505,8 @@
 .comp .ci [class^="content-item02"] .content-sect {padding-top: 1.25rem;}
 .comp .ci [class^="content-item03"] .content-sect {padding-top: 0;}
 .comp .ci [class^="content-item04"] .content-sect {padding-top: 1.25rem;}
+.comp .ci [class^="content-item04"] {padding-top: 0;}
+
 
 /* 글로벌네트워크 */
 .sort [class^=filter-][class*=type1] {background-color: #555758;}

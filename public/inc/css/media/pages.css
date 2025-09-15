@@ -1351,9 +1351,9 @@
 .history-wrap .history-cont-wrap .year-container-item .list-info .img-box img {height: 13rem;}
 .history-wrap.all-view .year-container {padding: 0;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item {display: block; }
-.history-wrap.all-view .history-cont-wrap .year-container-item:last-child .year-item-list .year-item::before {height: 93%;}
+.history-wrap.all-view .history-cont-wrap .year-container-item:last-child .year-item-list .year-item::before {height: calc(100% - 45px)}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item::before {height: calc(100% - 20px); top: 10px; left: -1px;}
-.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box {padding-left: 1.81rem;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box {padding-left: 1.75rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li:before {left: -2.2rem; top: 7px;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .title {color: #33B0C6; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc {padding: 0; font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: #555758;}
