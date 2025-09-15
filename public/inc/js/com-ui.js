@@ -5,42 +5,40 @@ const LGEnSol = {
             moEventCont = document.querySelector(".header-area.mo-only .nav-pop"),
             eventParent = document.querySelector(".parent-event"),
             header_h = eventParent.offsetHeight;
-        let maxCount = 0,
+        let maxSum = 0,
             maxheight = 0;
 
         function setEvent() {
             eventParent.classList.add("on");
-            eventCont.querySelectorAll(".gnb__tab-btn-wrap ul").forEach((ul) => {
-                const count = ul.querySelectorAll("li").length;
-                if (count > maxCount) {
-                    maxCount = count;
-                    maxheight = maxCount * (0.87 + 2.68 + 0.5);
-                }
-            });
-            eventParent.style.height = maxheight + "rem";
-            eventCont.style.height = maxheight + "rem";
-
             document.querySelectorAll(".gnb__tab-btn-wrap ul").forEach((el) => {
-                el.classList.add("on");
+            el.classList.add("on");
+            el.style.removeProperty("display");
 
-                el.style.removeProperty("display");
-                let display = window.getComputedStyle(el).display;
-                if (display === "none") display = "block";
-                el.style.display = display;
-                el.style.overflow = "hidden";
-                el.style.height = "0px";
+            let display = window.getComputedStyle(el).display;
+            if (display === "none") display = "block";
+            el.style.display = display;
 
-                requestAnimationFrame(() => {
-                    el.style.transition = "height 0.3s ease";
-                    el.style.height = el.scrollHeight + "px";
-                });
+            el.style.overflow = "hidden";
+            el.style.height = "0px";
 
-                // setTimeout(() => {
-                //     el.style.height = "";
-                //     el.style.overflow = "";
-                //     el.style.transition = "";
-                // }, 300);
+            requestAnimationFrame(() => {
+                el.style.transition = "height 0.3s ease";
+
+                const maxHeight = el.scrollHeight; // 현재 ul의 실제 높이
+                el.style.height = maxHeight + "px";
+
+                // 부모/컨테이너 높이 맞추기 → 여러 ul 중 최댓값 계산
+                const allHeights = Array.from(document.querySelectorAll(".gnb__tab-btn-wrap ul"))
+                .map(ul => ul.scrollHeight);
+                const biggest = Math.max(...allHeights);
+
+                eventParent.style.height = (biggest + 124) + "px";
+                eventCont.style.height   = (biggest + 124) + "px";
+
+                // console.log("각 ul 높이:", maxHeight, "최댓값:", biggest);
             });
+            });
+            
         }
 
         function clearEvent() {
@@ -52,7 +50,7 @@ const LGEnSol = {
                 el.classList.remove("on");
                 el.style.transition = "height 0s";
                 el.style.overflow = "hidden";
-                el.style.height = "0rem";
+                // el.style.height = "0rem";
 
                 requestAnimationFrame(() => {
                     el.style.transition = "height 0s";
