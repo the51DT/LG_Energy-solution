@@ -62,6 +62,9 @@ var pubUi = {
 
         /* marquee (롤링배너) */
         this.self.track = document.querySelector(".banner-track");
+
+        /* 쿠키설정 팝업 */
+        this.self.mainCookieLayer = document.querySelector(".main-cookie");
     },
 
     bindEvents: function () {
@@ -76,8 +79,18 @@ var pubUi = {
             });
         });
 
-        // search input deleteBtn이벤트 관련 script
+
+        if (!this.self.mainCookieLayer) {
+            return
+        } else {
+            const closeBtn = this.self.mainCookieLayer.querySelector(".btn-close > button");
+            closeBtn.addEventListener("click" , (e) => {
+                this.self.mainCookieLayer.style.display = "none";
+            })
+
+        }
         if (!this.self.searchResult) {
+            // search input deleteBtn이벤트 관련 script
             return;
         } else {
             pubUi.searchTextDelEvt(this.self.searchResult);

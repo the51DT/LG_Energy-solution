@@ -781,7 +781,7 @@
 .irif .bdr-box-wrap .box-cont .text-wrap .title {color: var(--colorElement-light-text-text-default01);}
 .irif .agm-info-list > li {padding-bottom: 2.5rem; position: relative;}
 .irif .agm-info-list > li + li {padding-top: 2.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default04);}
-.irif .agm-info-list > li .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.irif .agm-info-list > li .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem;}
 .irif .agm-info-list > li .tit + .info {margin-top: 1.25rem;}
 .irif .agm-info-list > li .info {display: flex; gap: 1.25rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;color: var(--colorElement-light-text-text-default02);}
 .irif .agm-info-list > li .info .info-tit {width: 5.75rem; flex-shrink: 0; font-weight: 600;}
@@ -1271,8 +1271,8 @@
 .sgov .bod-comp .mem {display: inline-block; width: 1.25rem; height: 1.25rem; border-radius: 100%; border: 1px solid var(--colorElement-light-stroke-stroke-default01); vertical-align: middle;}
 .sgov .indep-dir .title-h2.emphasis::after {margin-left: 0.25rem;}
 .sgov .indep-dir .indep-dir-img {margin-top: 1.25rem;}
-.sgov .indep-dir .btn-wrap {margin-top: 2.5rem;}
-.sgov .indep-dir .btn-wrap [class^="icon-btn"] {width: fit-content; gap: 1.25rem;}
+.sgov .indep-dir .btn-wrap {margin-top: 2.5rem; flex-wrap: wrap;}
+.sgov .indep-dir .btn-wrap [class^="icon-btn"] {gap: 1.25rem; min-width: 22.5rem;}
 
 .sgov .comp-officer [class^="title-h"] { margin-bottom: 1.25rem;}
 .sgov .comp-officer > ol {display: flex; gap: 1.25rem;}
