@@ -1862,13 +1862,12 @@
 .cont .stepper-wrapper .faq-list .accordion-list {margin-left: 5.63rem;}
 .cont .stepper-wrapper .accordion-list .accordion-btn {padding: 1.88rem 3.75rem 1.88rem;}
 .cont .stepper-wrapper .accordion-list .accordion-btn .acd-tit { font-size: 1.5rem; }
-.cont .stepper-wrapper .accordion-list .accordion-content {margin: 1.25rem 3.75rem 1.25rem;}
+.cont .stepper-wrapper .accordion-list .accordion-content {margin: 2.5rem 3.75rem 1.25rem;}
 .cont .stepper-wrapper .accordion-list:nth-child(3) .accordion-content,
 .cont .stepper-wrapper .accordion-list:nth-child(4) .accordion-content,
 .cont .stepper-wrapper .accordion-list:nth-child(5) .accordion-content {margin-top: 0;}
-.cont .stepper-wrapper .accordion-list.on { display: flex; flex-direction: column; border:2px solid #fff;}
-.cont .stepper-wrapper .accordion-list.on .accordion-btn .acd-tit{line-height: 2rem;}
-.cont .stepper-wrapper .accordion-list.on .accordion-btn {padding-bottom: 1.25rem;}
+.cont .stepper-wrapper .accordion-list.on { display: flex; flex-direction: column; border:0;}
+.cont .stepper-wrapper .accordion-list.on .accordion-btn {padding-bottom: 0;}
 .cont .stepper-wrapper .accordion-list.on .accordion-content { display: flex !important; flex-direction: column; gap: 1.88rem; }
 .cont .stepper-wrapper .cont-btn-wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.62rem; }
 .cont .stepper-wrapper .cont-btn-wrap.flex-wrap { display: flex; }
