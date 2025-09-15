@@ -1603,7 +1603,7 @@
 .cont .selection-wrapper .selectbox-wrap.type3 .select-cate + .select-cate {margin-top: 0.5rem;}
 .cont .selection-wrapper .selectbox-wrap.type3 > div button::before {margin-top: 0;}
 .cont .selection-wrapper .selectbox-wrap.type3 .select-cate > button {padding: 0.94rem 0; font-size: 1rem; line-height: 1.6rem;}
-.cont .selection-wrapper .sub-cont-wrap .wrap-form-input > p {margin-left: 0;}
+.cont .selection-wrapper .sub-cont-wrap .wrap-form-input > p {margin-left: 0; font-size: 0.875rem; line-height: 1.3125rem;}
 .cont .selection-wrapper .cont-btn-wrap {margin-top: 0.5rem; width: 100%;}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap {gap: 0.5rem;}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .quantity-input-wrap + .selectbox-wrap {width: 5.625rem; font-weight: 400; flex-shrink: 0;}
