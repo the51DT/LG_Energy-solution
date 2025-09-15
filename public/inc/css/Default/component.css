@@ -116,9 +116,9 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 
 /* icon btn */
 [class^="icon-btn"] {display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; width: 15.625rem; min-width: 7.5rem; border-radius: 0.625rem; font-size: 1.125rem; font-weight: 500; line-height: 1.575rem; height: 3.25rem; color: var(--colorElement-light-text-text-default01); padding: 0.7rem 1.25rem 0.8rem 1.88rem;}
-[class^="icon-btn"][class*="-sm"] {font-size: 1.125rem; font-weight: 600; line-height: 1.575rem; min-width: 22.5rem; padding: 0.75rem 1.5rem; height: 3.75rem; border-radius: 0.5rem;}
-[class^="icon-btn"][class*="-md"] {font-size: 1.25rem; font-weight: 600; line-height: 1.75rem; min-width: 22.5rem; padding:1.25rem 2.5rem; height: 4.25rem; border-radius: 0.5rem;}
-[class^="icon-btn"][class*="-lg"] {font-size: 1.375rem; font-weight: 600; line-height: 2rem; min-width: 26.25rem; padding:1.25rem 2.5rem; height: 5.5rem; border-radius: 0.5rem;}
+[class^="icon-btn"][class*="-sm"] {font-size: 1.125rem; font-weight: 600; line-height: 1.575rem; min-width: 22.5rem; padding: 0.75rem 1.5rem; height: 3.75rem; border-radius: 0.5rem; width: auto;}
+[class^="icon-btn"][class*="-md"] {font-size: 1.25rem; font-weight: 600; line-height: 1.75rem; min-width: 22.5rem; padding:1.25rem 2.5rem; height: 4.25rem; border-radius: 0.5rem; width: auto;}
+[class^="icon-btn"][class*="-lg"] {font-size: 1.375rem; font-weight: 600; line-height: 2rem; min-width: 26.25rem; padding:1.25rem 2.5rem; height: 5.5rem; border-radius: 0.5rem; width: auto;}
 [class^="icon-btn"]:hover {color: #fff; background: var(--colorElement-light-fill-fill-default00);}
 [class^="icon-btn"] .icon-area {display: flex; justify-content: center; align-items: center; width: 2.25rem; height: 2.25rem; border-radius: 100%; flex-shrink: 0;}
 [class^="icon-btn"][class*="-sm"] .icon-area {width: 2.25rem; height: 2.25rem;}
