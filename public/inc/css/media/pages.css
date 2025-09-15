@@ -1209,7 +1209,7 @@
 .sgov .gov-ethics-img .btn-wrap {margin-top: 2rem;}
 .sgov .ceo-message {color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 
-.sgov:lang(en) .bod-gap [class^="icon-btn"] {min-width: unset; width: 100%; min-height: unset;}
+.sgov:lang(en) .bod-gap [class^="icon-btn"] {min-width: unset; width: 100%; gap: unset; min-height: unset;}
 .sgov:lang(en) .bod-comp .tit-wrap {flex-direction: column; align-items: flex-start; gap: 0.5rem;}
 
 /* 정도경영 (etmg) */
@@ -1294,7 +1294,7 @@
 .comp .type02Swiper .swiper-pagination {margin-top: 2rem;}
 .comp .type02Swiper .sect-box .sub-title {font-size: 1rem; line-height: 1.6rem; margin-bottom: 0.5rem;}
 .comp .type02Swiper .sect-box > h2 {margin-bottom: 1.5rem;}
-.comp .type02Swiper .sect-box .info-desc {font-size: 1rem; font-weight: 500; line-height: 1.6rem; height: 6.4375rem;}
+.comp .type02Swiper .sect-box .info-desc {font-size: 1rem; font-weight: 500; line-height: 1.6rem;}
 .comp .type02Swiper .sect-box .content {height: auto; margin: 1.5rem auto 0;}
 .comp .type02Swiper .swiper-slide:nth-child(1) .img-wrap .number {width: 2.75rem; height: auto;}
 .comp .type02Swiper .swiper-slide:nth-child(2) .img-wrap .number {width: 3.3125rem; height: auto;}
@@ -1315,8 +1315,8 @@
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap {position: absolute; top: 2rem; left: 1.25rem;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap h5 {font-size: 1.25rem; line-height: 1.875rem; font-weight: 600;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap .desc {font-size: 1rem; color: #555758; line-height: 1.6rem; font-weight: 400; margin-top: 1rem;}
-.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .img-wrap {position: absolute; bottom:76px; right: 1.25rem;}
-.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .img-wrap > img {width: 13.27631rem; height: 13.74219rem; transform: rotate(-2deg);}
+.comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .img-wrap {position: absolute; bottom:5.3rem; left:1.25rem; right: 1.25rem; width: 15.3125rem;}
+
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt {position: absolute; bottom: 2rem; left: 1.25rem; font-size: 0.875rem; font-weight: 500;line-height: 1.225rem; padding-right: 1.5rem;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt::after{content:""; width: 1.25rem; height: 1.25rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat center center / 50%; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
 

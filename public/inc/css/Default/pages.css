@@ -1412,8 +1412,9 @@
 .comp:lang(en) .comp-info .table-wrap table tr:last-child > th {position: relative;}
 .comp:lang(en) .comp-info .table-wrap table tr:last-child > th .icon-title .title {position: absolute; top: 1.63rem;}
 
-.flex-box .left-area .number {width: 8.125rem; height: auto;}
-.flex-box .left-area .content {width: 32.70769rem; height: auto; margin: 0 5.71rem;}
+.flex-box .left-area .number {width: 6rem; height: auto;}
+.flex-box .left-area .content {width: 32.70769rem; height: auto; margin: 0 0 0 5.71rem;}
+.flex-box .sect-box .info-box {max-width: 660px;}
 .comp .type02Swiper .swiper-pagination {margin-top: 2.65rem;}
 .comp .type02Swiper .flex-box {gap: 3.39rem;}
 .comp .sect-item-box {position: relative;}
