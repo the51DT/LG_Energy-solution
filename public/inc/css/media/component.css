@@ -153,6 +153,7 @@
 .bdr-box-wrap .box-head .desc {font-size: 1rem; line-height: 1.5rem;}
 .bdr-box-wrap .box-cont .text-wrap .title {font-size: 1rem; line-height: 1.5rem;}
 .bdr-box-wrap .box-cont .text-wrap .desc {font-size: 0.875rem; line-height: 1.4rem;}
+.bdr-box-wrap .info-wrap .title:before {top: 4px;}
 
 /*table-type 추가 */
 .bdr-box-wrap.table-type {padding: 1.5rem 1.25rem;}

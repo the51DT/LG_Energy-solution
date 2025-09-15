@@ -564,7 +564,7 @@ var pubUi = {
 
                 // pc일때만 적용
                 if (pubUi.self.isPc) {
-                    if (offsetTop > 400) {
+                    if (offsetTop > 0) {
                         stickyEl.classList.add("stuck");
                         if (sideStickyTit) sideStickyTit.style.paddingTop = "7.5rem";
                     } else {

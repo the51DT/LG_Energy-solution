@@ -258,8 +258,10 @@
 /* 지속가능경영 > 사회 */
 .article-content .list:not(:last-child) {padding-bottom: 1.25rem;}
 .article-content article .head-area .img-area {margin: 2.5rem 8.75rem;}
-.article-content .list > .bdr-box-wrap {padding:2.5rem; display: flex; gap: 1.25rem; margin-top: 0;}
-.article-content .list > .bdr-box-wrap > .left-area .text-group {display: flex; gap: 1.25rem; align-items: center; padding: 0 1.25rem; max-width: 10.625rem;}
+.article-content .list > .bdr-box-wrap {padding:2.5rem; display: flex; gap: 1.25rem; margin-top: 0; flex:  1 1 auto;}
+
+.article-content .list > .bdr-box-wrap > .left-area .text-group {display: flex; gap: 1.25rem; align-items: center; margin: 0 1.25rem; width: 10.625rem;}
+
 .article-content .list > .bdr-box-wrap > .left-area .text-group .num {color:#33b0c6; font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
 .article-content .list > .bdr-box-wrap > .left-area .text-group .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819;}
 
@@ -272,7 +274,9 @@
 .sust-soc .article-content .article-desc {margin-top: 1.875rem;}
 .sust-soc .box-content {margin-top: 2.5rem;} 
 .sust-soc .content-wrap .cont-area-wrap .sect-cont-main.nbdr:last-child {padding-bottom: 0;} 
+.sust-soc .content-wrap .cont-area-wrap .sect-cont-main.nbdr:last-child .title-h2 {font-size: 1.5rem; line-height: 2.375rem; padding-bottom: 0;}
 .sust-soc.sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 0;}
+.sust-soc .infosec-system .title-h2 {padding-bottom: 0;} 
 
 .sust-soc .cont-area-wrap .sect-cont-sub article:first-of-type {padding-top: 2.5rem;}
 .sust-soc .sect-cont-area {padding-bottom: 3.75rem ;}
@@ -553,6 +557,9 @@
 /* 지속가능경영 > 사회 / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
+.sust-env.sust-soc [class^="title-h"] {padding-bottom: 0;}
+.sust-soc .foot-area {padding-top: 2.5rem;} 
+
 .sust-soc .title-desc .text-list-wrap {margin-top: 1.25rem;}
 .sust-soc .title-desc .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.625rem;}
 
@@ -615,8 +622,9 @@
 .sust-soc .infosec-protect .btn-wrap [class^="icon-btn"] {width: fit-content; gap: 1.25rem;}
 .sust-soc .infosec-protect + .infosec-protect {margin-top: 7.5rem; padding-top: 7.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .sust-soc [class^="content-item"] .content-sect:has(.infosec-activity) {padding-top: 1.875rem;}
-.sust-soc .infosec-a.history-btn:has(.link)ctivity {display: flex; gap: 1.25rem;}
-.sust-soc .infosec-activity > li {width: 100%; padding: 2.5rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
+.sust-soc .infosec-a.history-btn:has(.link) {display: flex; gap: 1.25rem;}
+.sust-soc .infosec-activity { display: flex; gap: 1.25rem;}
+.sust-soc .infosec-activity > li {width: 100%; padding: 2.5rem 1.88rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
 .sust-soc .infosec-activity .num {display: flex; justify-content: center; align-items: center; margin-inline: auto; margin-bottom: 1.25rem; width: 2.5rem; height: 2.5rem; border-radius: 12.5rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1rem; font-weight: 600; line-height: 1.6rem; color: var(--colorElement-light-text-text-on-primary);}
 .sust-soc .infosec-activity .desc {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: #555758;}
 .sust-soc .infosec-activity.ty02 {margin-top: 2.5rem;}
@@ -1154,6 +1162,8 @@
 .pmtl .mat-wrap > div {width: 100%; display: flex; align-items: center; gap: 2.5rem; height: 11.625rem; padding: 1.25rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
 .pmtl .mat-wrap > div:has(.text .arrow + .arrow) {padding: 2.5rem 3.75rem;}
 .pmtl .mat-wrap > div > img {width: 7rem; height: 6rem;}
+.pmtl:lang(en) .mat-wrap > div > img {width: 5.3125rem; height: 4.625rem;}
+.pmtl:lang(en) .mat-wrap > div {gap: 1.5rem;}
 .pmtl .mat-wrap > div .tit {display: flex; align-items: center; gap: 0.25rem; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .pmtl .mat-wrap > div.Ni .tit {color: #1FB291;}
 .pmtl .mat-wrap > div.Co .tit {color: #288AFF;}
