@@ -79,13 +79,9 @@ var pubUi = {
             });
         });
 
-        if (!this.self.searchResult) {
-            // search input deleteBtn이벤트 관련 script
-            console.log("test")
-            return;
-        } else {
-            pubUi.searchTextDelEvt(this.self.searchResult);
-        }
+        if (this.self.searchResult) {
+            pubUi.searchTextDelEvt(this.self.searchResult);  
+        } 
 
         // marquee 컴포넌트(롤링배너) 관련 script
         if (this.self.track) {
