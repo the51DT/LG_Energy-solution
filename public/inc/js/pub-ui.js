@@ -79,27 +79,16 @@ var pubUi = {
             });
         });
 
-
-        if (!this.self.mainCookieLayer) {
-            return
-        } else {
-            const closeBtn = this.self.mainCookieLayer.querySelector(".btn-close > button");
-            closeBtn.addEventListener("click" , (e) => {
-                this.self.mainCookieLayer.style.display = "none";
-            })
-
-        }
         if (!this.self.searchResult) {
             // search input deleteBtn이벤트 관련 script
+            console.log("test")
             return;
         } else {
             pubUi.searchTextDelEvt(this.self.searchResult);
         }
 
         // marquee 컴포넌트(롤링배너) 관련 script
-        if (!this.self.track) {
-            return;
-        } else {
+        if (this.self.track) {
             const items = Array.from(this.self.track.querySelectorAll(".banner-item"));
             // 기존 아이템 복제
             items.forEach((item) => {
@@ -117,6 +106,13 @@ var pubUi = {
                 this.self.track.style.animationPlayState = "running";
             });
         }
+
+        if (this.self.mainCookieLayer) {
+            const closeBtn = this.self.mainCookieLayer.querySelector(".btn-close > button");
+            closeBtn.addEventListener("click", (e) => {
+                this.self.mainCookieLayer.style.display = "none";
+            });
+        } 
     },
     selectboxCtrlEvt: function (selectorOrEl) {
         // 헬퍼: 개별 select-cate에 바인딩

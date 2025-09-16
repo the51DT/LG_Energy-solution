@@ -693,6 +693,7 @@
 .history-btn-wrap:hover .history-btn:has(.download) {background-image: url(../../images/icon/icon_download_wh.svg);}
 .history-btn-wrap:hover .history-btn:has(.link) {background-image: url(../../images/icon/icon_link_external.svg);}
 .history-btn-wrap:hover .history-btn:has(.sound) {background-image: url(../../images/icon/icon_sound_wh.svg);}
+.irdt [class^="content-item"] .tab-content-box .content-wrap > .content-sect {padding-top: 5rem;}
 
 /* 재무정보 (fina) */
 .fina .box-container + .box-container {padding-top: 5rem;}
@@ -795,6 +796,7 @@
 .irif .agm-info-list > li .tit + .info {margin-top: 1.25rem;}
 .irif .agm-info-list > li .info {display: flex; gap: 1.25rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;color: var(--colorElement-light-text-text-default02);}
 .irif .agm-info-list > li .info .info-tit {width: 5.75rem; flex-shrink: 0; font-weight: 600;}
+.irif:lang(en) .agm-info-list > li .info .info-tit {width: 20rem;}
 .irif .agm-info-list > li .info .info-text {display: flex; gap: 1.25rem;}
 .irif .agm-info-list > li .info + .info {margin-top: 0.5rem;}
 .irif .asterisk-text {display: flex; gap: 0.38rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); justify-self: flex-end;}
@@ -1408,6 +1410,8 @@
 .comp .comp-info .table-wrap table tr > td {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
 .comp:lang(en) .comp-info .table-wrap table tr > th,
 .comp:lang(en) .comp-info .table-wrap table tr > td {padding: 1rem 0;}
+.comp:lang(en) .comp-info .table-wrap table tr:nth-child(2) > td,
+.comp:lang(en) .comp-info .table-wrap table tr:nth-child(3) > td {padding: 2.31rem 0;}
 .comp:lang(en) .comp-info .table-wrap table tr > th .icon-title .title {white-space: nowrap;}
 .comp:lang(en) .comp-info .table-wrap table tr:last-child > th {position: relative;}
 .comp:lang(en) .comp-info .table-wrap table tr:last-child > th .icon-title .title {position: absolute; top: 1.63rem;}
@@ -1737,6 +1741,11 @@
 .btn-download:hover .icon-download {background-image: url(../../images/icon/icon_download_wh.svg);}
 .download .btn-outline01:hover {border: 0;}
 .download .btn-outline01:hover .icon-area {background-color: #fff;}
+.tab-download .tab-content-box .tab-content .tab-wrap .tab-cate-wrap:before {display: none;}
+.tab-download .tab-content-box .tab-content .tab-wrap .tab-category > li.on button {color: #171819; font-weight: 600;}
+.tab-download .tab-content-box .tab-content .tab-wrap .tab-category > li button {color: #858889; line-height: 2rem; padding: 0; font-weight: 400;}
+.tab-download .tab-content-box .tab-content .tab-wrap .tab-category > li.on button:after {display: none;}
+.tab-download .tab-content-box .tab-content .tab-wrap .tab-category {gap: 1.87rem; padding-top: 1.88rem;}
 
 
 .download .no-result-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 2.5rem; }
@@ -2403,7 +2412,7 @@
 .search .news-content-area .search-result {margin-bottom: 0; padding: 5rem 0;}
 .search .news-content-area .search-list-wrap .news-list .news-item .news-content {gap: 1.25rem;}
 .search .news-content-area .top-bar .no-result {border-top: 2px solid #171819;}
-.search .search-list-wrap .total-count:not(.no-result) {padding-bottom: 1.25rem; color: #171819; font-size: 1.5rem; line-height: 2.25rem; font-weight: 500;}
+.search .search-list-wrap .total-count:not(.no-result) {padding-bottom: 1.25rem; color: #171819; font-size: 1.25rem; line-height: 2rem; font-weight: 500;}
 .search .search-list-wrap .total-count span {color: #33B0C6;}
 .search .search-list-wrap .news-list {position: relative;}
 .search .search-list-wrap .news-list .news-item {padding: 2.5rem 0; }
@@ -2495,6 +2504,7 @@
 #popupEmailBlock .pop-wrap {width: 37.5rem; padding: 2rem;}
 #popupEmailBlock .pop-wrap .pop-header {padding-bottom: 1rem;}
 #popupEmailBlock .pop-wrap .pop-footer .btn-wrap {width: 20rem; margin-inline: auto;}
+#popupEmailBlock .pop-wrap .pop-footer .btn-wrap button {height:3.5rem; line-height: 1;}
 .email-block {display: flex; flex-direction: column; gap: 1.25rem; padding: 2.5rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
 .email-block .img-wrap {width: 5rem; height: 5rem; padding: 0; margin-inline: auto;}
 .email-block .img-wrap > img {width: 100%; height: auto;}
