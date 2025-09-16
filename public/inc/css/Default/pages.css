@@ -1709,6 +1709,7 @@
 .rnd:lang(en) #tab1-3-content .article-box .head-title {display: flex; gap: 1.25rem;}
 .rnd:lang(en) .nbdr-box-wrap .text-box .btn-wrap > .icon-gray {width: 22.5rem;}
 
+
 /* 다운로드 */
 .download .download-content-area .title-h1 {margin: 5rem 0 3.75rem;}
 .search-box-wrap { width: 100%; display: flex; justify-content: center; align-items: center; padding:1.25rem 0 5rem 0;}  
