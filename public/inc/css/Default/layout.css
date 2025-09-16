@@ -174,6 +174,7 @@ aside > img{cursor: pointer;}
 .footer-wrap {position:relative;}
 .footer-wrap::before {content:""; width: 100%; height: 1px; display: block; background:#E1E7EA; position: absolute; left: 0; top: 0;}
 .footer-area {display: flex; justify-content: space-between; padding: 3.75rem 0 5rem; max-width: 90rem; margin: 0 auto;}
+.footer-area:not(:lang(ko)) {align-items: flex-end;}
 .footer-site_map {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
 .footer-site_map > li:not(:last-child) {padding-bottom: 1rem;}
 .footer-site_map > li a:hover {color: var(--text-text-primary, #33B0C6);}

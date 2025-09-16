@@ -764,7 +764,7 @@
 .evt-schedule-bot ul > li .left-area .date p {font-size: 2rem; font-weight: 400; line-height: 3rem; color: var(--colorElement-light-text-text-default02);}
 .evt-schedule-bot ul > li .left-area .date p .day {font-size: 1rem; line-height: 1.6rem; display: inline-block;}
 .evt-schedule-bot ul > li .left-area .date em {font-size: 1.25rem; font-weight: 400; line-height: 2rem; padding: 0 0.25rem;}
-.evt-schedule-bot ul > li .bar {width: 0.0625rem; height: 2.5rem; background: var(--colorElement-light-stroke-stroke-default03);  margin: 0 2.5rem;}
+.evt-schedule-bot ul > li .bar {width: 0.0625rem; height: 2.5rem; background: var(--colorElement-light-stroke-stroke-default03);  margin: 0 3.75rem;}
 .evt-schedule-bot ul > li .center-area {display: flex; align-items: center; gap: 0.75rem; width: 100%; max-width: 53.6875rem;}
 .evt-schedule-bot ul > li .center-area .title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
 .evt-schedule-bot ul > li .right-area {text-align: right; min-width: 9.4375rem; margin-left: 2.5rem; width: fit-content; flex-shrink: 0;}
@@ -1555,6 +1555,7 @@
 .map-info .map-info-list .map-info-item {margin-top: 1rem;}
 .map-info .map-info-list .map-info-item > li:not(:last-child) {border-bottom:1px solid #e1e7ea;}
 .map-info .map-info-list .map-info-item > li > a {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; padding: 1rem 2.5rem; display:block;}
+.map-info .map-info-list .map-info-item > li:last-child > a {margin-bottom: 1rem;}
 .map-info .map-info-list .map-info-item > li > a:hover,
 .map-info .map-info-list .map-info-item > li > a:active,
 .map-info .map-info-list .map-info-item > li > a.active {background-color:#3ec2cf; color:#fff;}
@@ -1657,8 +1658,8 @@
 .rnd .nbdr-box-wrap .text-area .tit {color: var(--colorElement-light-text-text-primary); font-weight: 600; line-height: 2.25rem; font-size: 1.5rem;}
 .rnd .nbdr-box-wrap .text-box .tit {color: var(--colorElement-light-text-text-default01); font-weight: 600; line-height: 2rem; font-size: 1.25rem;}
 .rnd .nbdr-box-wrap .text-box .desc {color: var(--colorElement-light-text-text-default02); font-weight: 400; line-height: 1.8rem; font-size: 1.125rem; padding-top: 1rem;}
-.rnd .nbdr-box-wrap .text-box .btn-wrap {justify-content: flex-end; padding-top: 1.25rem;}
-.rnd .nbdr-box-wrap .text-box .btn-wrap > .icon-gray {width: 10.4375rem; min-width: auto;}
+.rnd .nbdr-box-wrap .text-box .btn-wrap {justify-content: flex-start; padding-top: 3rem;}
+.rnd .nbdr-box-wrap .text-box .btn-wrap > .icon-gray { min-width: 17.5rem;}
 .rnd .cont-list-col2 .nbdr-box-wrap {margin-top: 0; padding: 2.5rem; display: flex; flex-direction: column;}
 .rnd .cont-list-col2 .nbdr-box-wrap .text-box {height: 100%; display: flex; flex-direction: column;}
 .rnd .cont-list-col2 .nbdr-box-wrap .text-box .btn-wrap {margin-top: auto;}
@@ -1708,6 +1709,14 @@
 
 .rnd:lang(en) #tab1-3-content .article-box .head-title {display: flex; gap: 1.25rem;}
 .rnd:lang(en) .nbdr-box-wrap .text-box .btn-wrap > .icon-gray {width: 22.5rem;}
+
+/* rnd > 오픈이노베이션 디자인 레이아웃 수정 */
+.rnd .cont-item-list .item {display: flex; gap: 2.5rem;}
+.rnd .cont-item-list .nbdr-box-wrap {margin-top: 0; padding: 2.5rem;}
+.rnd .cont-item-list .nbdr-box-wrap .text-area .tit {color: #171819; padding-bottom: 1.8rem; line-height: 2.375rem;}
+.rnd .cont-item-list .nbdr-box-wrap:not(:first-child) {margin-top: 1.25rem;}
+.rnd .cont-item-list .nbdr-box-wrap .img-box {padding: 0;}
+.rnd .cont-item-list .nbdr-box-wrap .img-box img {width: 41.25rem; height: auto;}
 
 
 /* 다운로드 */
