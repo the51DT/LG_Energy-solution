@@ -941,19 +941,26 @@
                                                                 <!-- 09.15 / 글자 수 체크 삭제 -->
                                                             </div>
                                                         </div>
+                                                        <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - S-->
                                                         <div class="input-wrap">
                                                             <label for="file-input">Attach File</label>
-                                                            <input id="file-input" class="input-box upload-name"
-                                                                value="Please upload the file."
-                                                                placeholder="Please upload the file.">
-                                                            <div class="btn-wrap">
-                                                                <label for="file1"
-                                                                    class="act-btn-xs btn-outline01 btn-file-attach">Search Files</label>
-                                                                <input type="file" id="file1" style="display: none;">
+                                                            <div class="file-input-box">
+                                                                <div class="file-item">
+                                                                    <input id="file-input" class="input-box upload-name"
+                                                                        value="Please upload the file."
+                                                                        placeholder="Please upload the file.">
+                                                                    <div class="btn-wrap">
+                                                                        <label for="file1"
+                                                                            class="act-btn-xs btn-outline01 btn-file-attach">Search Files</label>
+                                                                        <input type="file" id="file1" style="display: none;">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="input-info on"> <!-- on 클래스 존재시 메시지 노출-->
+                                                                    <span class="msg">Max. 10MB</span>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="input-info on"> <span class="msg"></span>
-                                                        </div>
+                                                        <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - E -->
                                                     </div>
                                                 </div>
                                                 <div class="btn-wrap">

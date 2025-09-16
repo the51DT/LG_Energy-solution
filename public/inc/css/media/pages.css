@@ -466,9 +466,10 @@
 .stif .cont-box-wrap .right-box::before  {left: 0;}
 .stif .cont-box-wrap .right-box::after {right: 0;}
 .stif .cont-box-wrap .right-box .keyword {flex-grow: 0; width: fit-content; padding-inline: 2.5rem; font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.03125rem; text-align: left;}
+.stif:lang(en) .cont-box-wrap .left-box .sub-desc-wrap {padding-top: 1rem;}
 
 .irif:lang(en) .btn-badge,
-.irif:lang(en) .evt-schedule-past .btn-badge {width: fit-content; padding-inline: 0.625rem;}
+.irif:lang(en) .evt-schedule-past .btn-badge {width: fit-content; max-width: unset; padding-inline: 0.625rem;}
 
 /* 지속가능경영 > 사회 > / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1rem; line-height: 1.6rem;}
@@ -688,7 +689,7 @@
 .schedule-head .sort-wrap [class^=sort] {padding-left: 0.75rem; font-size: 0.875rem; line-height: 1.4rem;}
 
 .evt-schedule-bot {padding-bottom: 3.5rem;}
-.evt-schedule-bot ul > li {padding: 1.5rem 0.5rem; border-radius: 0.5rem; display: inline-block; width: 100%; position: relative;}
+.evt-schedule-bot ul > li {padding: 1.5rem 0.5rem; display: inline-block; width: 100%; position: relative;}
 
 .evt-schedule-bot ul > li .left-area {min-width: 100%; margin-bottom: 1rem;}
 .evt-schedule-bot ul > li .left-area .date {display: inline-flex;}
@@ -1104,7 +1105,7 @@
 .sprf .down-wrap {gap: 0.5rem;}
 .sprf .down-wrap + .down-wrap {margin-left: 1.125rem;}
 .sprf .down-wrap > span  {font-size: 0.875rem; font-weight: 500; line-height: 1.1375rem;}
-.sprf .btn-wrap .icon-btn-sm {max-width: 9.75rem; min-width: unset; font-size: 0.875rem; line-height: 1.225rem;}
+.sprf .btn-wrap .icon-btn-sm {min-width: unset; width: 100%; font-size: 0.875rem; line-height: 1.225rem;}
 .sprf [class^="content-item"]:has(.btn-wrap:only-child) {padding-top: 2rem;}
 
 .sprf [class^="content-item"] .content-sect:has(.eval-status) {padding-top: 1rem;}
@@ -1600,7 +1601,7 @@
 .cont .stepper-wrapper .group-box div:first-child {width: 100%; max-width: 100%; flex-grow: 1;}
 .cont .stepper-wrapper .group-box .input-wrap {column-gap: 0; width:100%;}
 .cont .stepper-wrapper .group-box .selectbox-wrap .select-cate > button {min-width: 5.38rem;}
-.cont .stepper-wrapper .selectbox-wrap.type3 .select-cate {width: 100%;}
+.cont .stepper-wrapper .selectbox-wrap.type3 .select-cate {width: 100%; max-width: unset;}
 .cont .stepper-wrapper .selectbox-wrap.type3 .select-cate.size-sm {width: 100%;}
 
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap .group-box .performance-input-wrap{display: block;}
@@ -1649,8 +1650,9 @@
 .cont .file-input-box .file-item .btn-wrap {display: block; margin-top: 0;} 
 .cont .file-input-box .btn-file-attach {top: 50% !important;}
 .cont .file-input-box .input-info {margin-top: 0.5rem;}
-.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap.selectbox-wrap.type3 .select-cate > button {font-size: 1rem; line-height: 1.6rem;}
-
+.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap.selectbox-wrap.type3 .select-cate > button,
+.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap.selectbox-wrap.type3 .select-menu > li a {font-size: 1rem; line-height: 1.6rem;}
+.cont .selection-wrapper .sub-cont-wrap .selectbox-wrap.type3 .select-cate.size-sm .select-menu {top: 4rem;}
 
 /* 인재상 */
 .rctt [class^="content-item"] { padding-top: 2rem; }
