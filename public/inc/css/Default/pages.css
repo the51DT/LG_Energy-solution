@@ -553,6 +553,8 @@
 .stif .cont-box-wrap .right-box::after {position: absolute; top: 0.66rem; right: 0; content: ""; display:block; width: 3.625rem; height: 9.9375rem; background: url(../../images/img/sust01_img_tab2_02.png) no-repeat center center / contain;}
 .stif .cont-box-wrap .right-box .keyword {font-size: 7.3125rem; font-weight: 800; line-height: 11.25rem; letter-spacing: -0.125rem; text-align: right; color: var(--colorElement-light-text-text-default02);}
 
+.stif:lang(en) .cont-box-wrap .left-box .sub-desc-wrap {padding-top: 0;}
+
 
 /* 지속가능경영 > 사회 / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
@@ -700,6 +702,7 @@
 .fina .box-container .content-box .text-area .intro-txt {font-size: 2rem; line-height: 3rem;}
 .fina .box-container .content-box .text-area .intro-sub {margin-top: 2.5rem; font-size: 1.5rem; line-height: 2.25rem;}
 .fina .box-container .content-box.type2 {gap: 5rem; align-items: flex-start;}
+.fina .box-container .content-box.type2 > div:first-child {flex-basis: 40.625rem; flex-grow: 0;}
 .fina .box-container .content-box.type2 .img-area + .text-area .intro-txt {font-size: 1.5rem; line-height: 2.25rem;}
 .fina .box-container .content-box.type2 .text-area .desc {padding-top: 1.88rem; color: var(--colorElement-light-text-text-default01);}
 .fina .box-container .content-box.type2 .text-area .desc + .desc {padding-top: 1.25rem;}
@@ -724,9 +727,8 @@
 .gray-box-area > ul > li .box-wrap {display: flex; justify-content: space-between; align-items: center;}
 .gray-box-area > ul > li .box-wrap .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
 .history-box {padding-top: 6.25rem;}
+.gray-box-area > ul > li .box-wrap [class^="act-btn"] {padding: 0.375rem 1.5rem;}
 .gray-box-area > ul > li .box-wrap [class^="act-btn"]:not(:hover) {background-color: var(--colorElement-light-fill-fill-on-primary);}
-.gray-box-area:lang(en) > ul > li .box-wrap .btn-group {flex-direction: column;}
-.gray-box-area:lang(en) > ul > li .box-wrap .btn-group [class^="act-btn"] {width: 10.1875rem; justify-content: center;}
 
 
 /* IR행사 */
@@ -774,7 +776,7 @@
 .btn-badge[class*=_ctype08] {border-color: #276EF2;}
 .table-area.nonebdr .table-wrap tbody tr > th,
 .table-area.nonebdr .table-wrap tbody tr > td {border-right: 0 !important;}
-.irif .btn-badge {padding: 0.25rem 1rem; min-width: 6rem; max-width:6.2rem; font-size: 0.875rem; font-weight: 600; line-height: 1.4rem; height: auto; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.irif .btn-badge {padding: 0.25rem 1rem; min-width: 6rem; max-width:6.2rem; font-size: 0.875rem; font-weight: 600; line-height: 1.4rem; height: auto; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; flex-shrink: 0;}
 .irif .evt-schedule-past .btn-badge {width: 6.2rem;}
 .sub-cont-area.pc-only {margin-top: 2rem;}
 .irif .cont-area-title .selectbox-wrap {margin-left: auto; width: 20rem;}
@@ -804,7 +806,7 @@
 .irif .agm-info-list > li .btn-wrap .history-btn-wrap .history-btn {width: 2.25rem; height: 2.25rem;}
 
 .irif:lang(en) .btn-badge,
-.irif:lang(en) .evt-schedule-past .btn-badge {width: 8.5rem; padding-inline: 0;}
+.irif:lang(en) .evt-schedule-past .btn-badge {width: 8.5rem; max-width: 8.5rem; padding-inline: 0;}
 
 
 /* 채용공고 (rcpt) */
@@ -1201,10 +1203,11 @@
 .sprf .text-wrap {color: var(--colorElement-light-text-text-default01);}
 .sprf .text-wrap .tit {font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .sprf .text-wrap .sub-tit {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
-.sprf .text-wrap .desc {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
+.sprf .text-wrap .desc {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: #555758;}
 .sprf .text-wrap .tit + .sub-tit {margin-top: 1.875rem;}
 .sprf .text-wrap .sub-tit + .desc {margin-top: 1rem;}
 
+.sprf [class^="content-item"] .content-sect:has(.report-wrap) {padding-top: 0;}
 .sprf .report-wrap {color: var(--colorElement-light-text-text-default01);}
 .sprf .report-wrap > .tit {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; margin-bottom: 1.5rem;}
 .sprf .report-download {display: flex; flex-direction: column; align-items: center; gap: 3.75rem;}
@@ -1219,8 +1222,7 @@
 .sprf .down-wrap + .down-wrap {margin-left: 3.75rem;}
 .sprf .down-wrap:hover .down-icon {background-color: var(--colorElement-light-fill-fill-primary); background-image: url(../../images/icon/icon_download_wh.svg);}
 .sprf .down-wrap > span  {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
-.sprf .btn-wrap {display: flex; justify-content: center; gap: 0.625rem;}
-.sprf .btn-wrap .icon-btn-sm {max-width: 13.31249rem;}
+.sprf .btn-wrap {display: flex; justify-content: center; gap: 0.625rem; width: 100%;}
 
 .sprf [class^="content-item"] .content-sect:has(.eval-status) {padding-top: 4.625rem;}
 .sprf .eval-status-tit {display: flex; justify-content: space-between; align-items: center; width: 100%;}
@@ -1897,7 +1899,7 @@
 .cont .stepper-wrapper .accordion-list:nth-child(4) .accordion-content .sub-cont-wrap .wrap-form-input {gap: 1.25rem 2.5rem;}
 
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input.filebox { display: contents; }
-.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap { display: grid; grid-template-columns: 9.375rem 1fr; }
+.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap { display: grid; grid-template-columns: 10.625rem 1fr; }
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap > .input-wrap {display: flex !important;}
 
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap .email-input-wrap { display: flex; align-items: center; gap: 0.625rem; }
@@ -1963,6 +1965,10 @@
 
 
 .cont .selection-wrapper .sub-cont-wrap .selectbox-wrap.type3 .select-cate.size-sm > button {height: 64px;}
+.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(+ .input-wrap > .email-input-box > p),
+.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(> .email-input-box > p) {align-items: flex-start;}
+.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(+ .input-wrap > .email-input-box > p) > label,
+.cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(> .email-input-box > p) > label {margin-top: 1.09rem;}
 .cont .email-input-box p { display: flex; gap: 0.25rem; font-size: 1rem; color: #33B0C6; font-weight: 400; line-height: 1.6rem; margin-top: 0.62rem;}
 .cont .email-input-box p > span.ico-info::before { display: block; content:""; width:0.875rem; height:0.875rem; background: url(../../../inc/images/icon/icon_info_primary.svg) no-repeat center 100%; margin-top: 3px;}
 .cont .file-input-box .file-item {position: relative;}
