@@ -250,6 +250,8 @@ var pubUi = {
                 const footerH = document.querySelector(".footer-wrap").clientHeight;
                 const footerVal = footerTop - footerH;
 
+                const sideStickyList = document.querySelectorAll(".sticky-area .side-sticky .side-list");
+
                 // aside 표시/숨김
                 // console.log(nowScroll, footerTop);
                 if (nowScroll > page_h) {
@@ -261,14 +263,25 @@ var pubUi = {
                     if (aside) aside.style.display = "none";
                 }
 
-                // footer 영역 하단까지 top내려가는거 방지
+                // footer 영역 하단까지 top,  side_sticky 앵커바 내려가는거 방지
                 if (nowScroll >= footerVal - 100) {
                     if (!aside.classList.contains("end")) {
                         aside.classList.add("end");
-                        aside.style.display = "block";
                     }
+
+                    sideStickyList.forEach(list => {
+                        if(!list.classList.contains("end")) {
+                            list.classList.add("end")
+                        } 
+                    })
                 } else {
-                    aside.classList.remove("end");
+                    if (aside) {
+                        aside.classList.remove("end");
+                    }
+                    
+                    sideStickyList.forEach((list) => {
+                        list.classList.remove("end");
+                    });
                 }
 
                 // aside 클릭 시 최상단 이동
@@ -382,7 +395,7 @@ var pubUi = {
             const subCateName = subCate.innerText;
 
             if (subCateName == "연혁") {
-                pubUi.scrollToEvt(".wrap", "top");
+                // pubUi.scrollToEvt(".wrap", "top"); //09.17 스크롤 최상단 이동 제거 
                 // document.querySelector(".history-wrap.each-view").style.overflowY = "hidden";
                 if (document.querySelector(".history-wrap.each-view")) {
                     document.querySelector(".history-wrap.each-view").removeAttribute("data-scrolling");
@@ -391,7 +404,7 @@ var pubUi = {
                 }
             } else {
                 this.self.wrap.style.overflow = "auto";
-                pubUi.scrollToEvt(".wrap", "top"); //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
+                // pubUi.scrollToEvt(".wrap", "top");  //09.17 스크롤 최상단 이동 제거 //08.07 수정 page-map-wrap > selectbox 3depth 변경시, 최상단 이동 추가
             }
 
             // console.log("tab click event");
@@ -1311,9 +1324,12 @@ var pubUi = {
                         const contents = tabWrap.querySelectorAll(".tab-content-box > .tab-content");
                         const tabCateMo = tabWrap.querySelector(".tab-cate-wrap.new");
 
-                        if (tabCateMo) {
-                            pubUi.scrollToEvt(".wrap", "top");
-                        } // mobile 상단탭카테고리 클릭 변경시 맨위로 스크롤 되도록
+                        // 상단탭카테고리 클릭 변경시 맨위로 스크롤 되도록 (주석처리 - 09/17 (개발서버엔 페이지 이동형태라 불필요하여 수정))
+                        // if(document.querySelector(".mo-only")) {
+                        //     if (tabCateMo) {
+                        //         pubUi.scrollToEvt(".wrap", "top");
+                        //     }
+                        // }
 
                         //08.12 수정 mobile, pc 파일 분리로 인해 불필요해져 주석처리하였음
                         //모바일 탭 카테고리 선택시, pc selectbox caseTab도 동일한 선택영역 지정되도록 기능 추가 - S
@@ -2028,7 +2044,7 @@ var pubUi = {
         resizeTimer = requestAnimationFrame(() => {
             if (!pubUi.self) return;
             pubUi.self.isPc = window.innerWidth >= 1280;
-            pubUi.self.isMobile = window.innerWidth <= 1279;
+            pubUi.self.isMobile = window.innerWidth <= 1279; //mobile 사이즈 조정 필요해보임 (태블릿/중간사이즈 해상도(pc) 일때, PC 관련 스크립트 모바일로 인식되안먹는 문제있음)
             pubUi.tabList.scroll();
             pubUi.evtScheduleLeft();
             pubUi.mobileDeviceChk(); //모바일 체크함수 추가

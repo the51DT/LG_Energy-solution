@@ -231,6 +231,7 @@ aside > img{cursor: pointer;}
 .sticky-area [class^="content-item"]:nth-of-type(2) {padding-top: 5rem;}
 .sticky-area .side-sticky {position: sticky; top: 5rem; height: fit-content; width: calc(100vw - var(--scrollbar-width));  margin-inline: auto; z-index: 4;}
 .sticky-area .side-sticky .side-list {position: absolute; top: 5rem; left: 50%; transform: translate(-50%); max-width: 90rem; width: 100%; pointer-events: none; display: flex; flex-direction: column; gap: 0.25rem;}
+.sticky-area .side-sticky .side-list.end {top: -186px;}
 .sticky-area .side-sticky .side-list > li {width: fit-content; pointer-events: all; padding-block: 0.5rem;}
 .sticky-area .side-sticky .side-list > li > a {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
 .sticky-area .side-sticky .side-list > li > a.active {font-weight: 600; color: var(--colorElement-light-text-text-default01);}
