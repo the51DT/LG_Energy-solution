@@ -871,11 +871,14 @@
 .rcif .type-notice {font-size: 1.5rem; font-weight: 400; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.25rem;}
 .rcif .type-notice strong {font-weight: 600;}
 .rcif .process-box {display: flex; justify-content: space-between; align-items: center; padding: 2.5rem; border-radius: 18.3687rem; background-color: var(--colorElement-light-fill-fill-primary); margin-bottom: 3.75rem;}
-.rcif .process-box > li:not(.bar) {width: 15rem; height: 15rem; padding: 2.75rem 2.875rem; border-radius: 8.6875rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
+.rcif .process-box:has(+ .asterisk-text) {margin-bottom: 1.25rem;}
+.rcif .process-box + .asterisk-text {margin-bottom: 3.75rem; justify-content: flex-end; margin-right: 3.75rem; font-size: 1.125rem; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.rcif .process-box + .asterisk-text::before {margin-block: 0.61rem; height: 0.39744rem;}
+.rcif .process-box > li:not(.bar) {width: 15rem; height: 15rem; padding: 2.75rem 1.5rem; border-radius: 8.6875rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
 .rcif .process-box > li:not(.bar) .process-step {display: flex; flex-direction: column; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-disabled);}
 .rcif .process-box > li:not(.bar) .process-step > span {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-primary);}
 .rcif .process-box > li:not(.bar) .process-tit {margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
-.rcif .process-box > li:not(.bar) .process-desc {margin-top: 0.5rem; font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
+.rcif .process-box > li:not(.bar) .process-desc {margin-top: 0.25rem; font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
 .rcif .process-box > li.bar {width: 2.5rem; height: 2.5rem; background-image: url(../../images/icon/icon_link_arrow.svg); background-position: center; background-repeat: no-repeat; background-size: 2rem 2rem;}
 .rcif .asterisk-text {color: var(--colorElement-light-text-text-default03);}
 .rcif .process-list {display: flex; flex-direction: column; gap: 1.25rem; padding-inline: 5rem;}
@@ -2349,6 +2352,7 @@
 .serv-kooroo .article-content { position: relative; }
 .serv-kooroo .article-content .article-desc + .content-tit { margin-top: 3.12rem; }
 .serv-kooroo .article-content .content-tit { display: inline-flex; align-items: center; justify-content: space-between; width: 100%; margin: 5rem 0 1.25rem; font-size: 1.5rem; line-height: 2.25rem; font-weight: 600; color: #171819; }
+.serv-kooroo .article-content .article-tit + .content-tit {margin-top: 2.5rem;}
 .serv-kooroo .article-content .content-desc { color: #171819; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-bottom: 2.5rem; }
 .serv-kooroo .article-content:has(.station-battery-img) {margin-top: 2.5rem; padding: 2.5rem; border-radius: 1rem; background-color: #555758;}
 .serv-kooroo .article-content:has(.station-battery-img) .content-tit {margin-top: 0; color: var(--colorElement-light-text-text-on-primary);}
@@ -2363,7 +2367,7 @@
 .serv-kooroo .examp-box .examp-ico { width: 6.25rem; height: 6.25rem; border-radius: 50%; background: #fff; flex-shrink: 0; }
 .serv-kooroo .examp-box .examp-txt { color: #555758; font-size: 1rem; font-weight: 500; line-height: 1.6rem; }
 .serv-kooroo .content-item02 { background-color: #EAF3F8; }
-.serv-kooroo .station-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 0.62rem; z-index: 1; position: relative; }
+.serv-kooroo .station-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem; z-index: 1; position: relative; }
 .serv-kooroo .station-box { background-color: #fff; display: flex; flex-direction: column; padding: 2.5rem; border-radius: 1rem; }
 .serv-kooroo .station-box img { width: 5rem; height: 5rem; }
 .serv-kooroo .station-top { display: flex; align-items: center; gap: 0.62rem; }
