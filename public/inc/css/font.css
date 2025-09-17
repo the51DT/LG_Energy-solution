@@ -79,3 +79,77 @@
     url(../font/Pretendard-Thin.woff2) format("woff2"),
     url(../font/Pretendard-Thin.woff) format("woff");
 }
+
+/* Noto Sans SC : 중문 */
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 900;
+  font-display: swap;
+  src: local("NotoSansSC Black"),
+    url(../font/NotoSansSC-Black.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 800;
+  font-display: swap;
+  src: local("NotoSansSC ExtraBold"),
+    url(../font/NotoSansSC-ExtraBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 700;
+  font-display: swap;
+  src: local("NotoSansSC Bold"),
+    url(../font/NotoSansSC-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 600;
+  font-display: swap;
+  src: local("NotoSansSC SemiBold"),    
+    url(../font/NotoSansSC-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 500;
+  font-display: swap;
+  src: local("NotoSansSC Medium"),
+    url(../font/NotoSansSC-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 400;
+  font-display: swap;
+  src: local("NotoSansSC Regular"),
+    url(../font/NotoSansSC-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 300;
+  font-display: swap;
+  src: local("NotoSansSC Light"),
+    url(../font/NotoSansSC-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 200;
+  font-display: swap;
+  src: local("NotoSansSC ExtraLight"),
+    url(../font/NotoSansSC-ExtraLight.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  font-weight: 100;
+  font-display: swap;
+  src: local("NotoSansSC Thin"),
+    url(../font/NotoSansSC-Thin.woff) format("woff");
+}
+

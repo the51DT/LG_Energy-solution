@@ -262,3 +262,103 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/************************** 
+    Reset - 중문(zh-CN)
+***************************/
+html:lang(zh-CN) > 
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select,
+div,
+figure,
+article,
+header,
+nav,
+footer,
+section,
+aside {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-family: "NotoSansSC", sans-serif;
+}
+html,
+body {
+  overflow: hidden;
+  position: relative;
+  font-family: "NotoSansSC", sans-serif;
+  font-size: 16px;
+  color: #171819;
+  height: 100%;
+  font-weight: 400;
+  /* letter-spacing: -0.03125rem; */
+  -webkit-overflow-scrolling: touch;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "NotoSansSC", sans-serif;
+  font-weight: normal;
+}
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  resize: none;
+  font-family: "NotoSansSC", sans-serif;
+}
+button {
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "NotoSansSC", sans-serif;
+  -webkit-appearance: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  border-radius: 3px;
+  font-family: "NotoSansSC", sans-serif;
+  font-size: 17px;
+  color: #222;
+  word-break: break-all;
+}
+::-webkit-input-placeholder,
+textarea::placeholder {
+  font-family: "NotoSansSC", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #b2b2b2;
+}
