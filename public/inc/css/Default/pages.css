@@ -869,11 +869,14 @@
 .rcif .type-notice {font-size: 1.5rem; font-weight: 400; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01); margin-bottom: 1.25rem;}
 .rcif .type-notice strong {font-weight: 600;}
 .rcif .process-box {display: flex; justify-content: space-between; align-items: center; padding: 2.5rem; border-radius: 18.3687rem; background-color: var(--colorElement-light-fill-fill-primary); margin-bottom: 3.75rem;}
-.rcif .process-box > li:not(.bar) {width: 15rem; height: 15rem; padding: 2.75rem 2.875rem; border-radius: 8.6875rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
+.rcif .process-box:has(+ .asterisk-text) {margin-bottom: 1.25rem;}
+.rcif .process-box + .asterisk-text {margin-bottom: 3.75rem; justify-content: flex-end; margin-right: 3.75rem; font-size: 1.125rem; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.rcif .process-box + .asterisk-text::before {margin-block: 0.61rem; height: 0.39744rem;}
+.rcif .process-box > li:not(.bar) {width: 15rem; height: 15rem; padding: 2.75rem 1.5rem; border-radius: 8.6875rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
 .rcif .process-box > li:not(.bar) .process-step {display: flex; flex-direction: column; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-disabled);}
 .rcif .process-box > li:not(.bar) .process-step > span {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-primary);}
 .rcif .process-box > li:not(.bar) .process-tit {margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03); font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
-.rcif .process-box > li:not(.bar) .process-desc {margin-top: 0.5rem; font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
+.rcif .process-box > li:not(.bar) .process-desc {margin-top: 0.25rem; font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
 .rcif .process-box > li.bar {width: 2.5rem; height: 2.5rem; background-image: url(../../images/icon/icon_link_arrow.svg); background-position: center; background-repeat: no-repeat; background-size: 2rem 2rem;}
 .rcif .asterisk-text {color: var(--colorElement-light-text-text-default03);}
 .rcif .process-list {display: flex; flex-direction: column; gap: 1.25rem; padding-inline: 5rem;}
