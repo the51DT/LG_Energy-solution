@@ -336,6 +336,8 @@
 .sust-soc .content-item02 .accordion-list .accordion-content {background: #f3f5f7; padding: 2.5rem; }
 .sust-soc .content-item02 .accordion-list .accordion-content .desc-wrap {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #171819;}
 
+.sust-soc .content-item02 .sect-cont-main.nbdr > p.title-h2 {margin: 0;}
+.sect-cont-area > .article-content {padding-top: 3.75rem;}
 
 .esgm .title-h3 { font-size: 2rem; font-weight: 700; color: #171819; margin-top: 1.25rem; }
 .esgm .sub-title { font-size: 1.5rem; font-weight: 600; color: #171819; }

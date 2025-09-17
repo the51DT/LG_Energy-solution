@@ -300,6 +300,7 @@
 
 .sust-soc [class^="content-item"] .content-sect:has(.article-section) {padding-top: 0;}
 .sust-soc .foot-area {padding-top: 1.5rem;}
+.sect-cont-area > .article-content {padding-top: 0;}
 
 .box-container .box-content .bdr-box-wrap.nbdr {padding: 1.5rem;}
 .box-container.grid-type .box-content .box-head {flex-direction: column; gap: 1rem;}
