@@ -2350,6 +2350,7 @@
 .serv-kooroo .article-content { position: relative; }
 .serv-kooroo .article-content .article-desc + .content-tit { margin-top: 3.12rem; }
 .serv-kooroo .article-content .content-tit { display: inline-flex; align-items: center; justify-content: space-between; width: 100%; margin: 5rem 0 1.25rem; font-size: 1.5rem; line-height: 2.25rem; font-weight: 600; color: #171819; }
+.serv-kooroo .article-content .article-tit + .content-tit {margin-top: 2.5rem;}
 .serv-kooroo .article-content .content-desc { color: #171819; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-bottom: 2.5rem; }
 .serv-kooroo .article-content:has(.station-battery-img) {margin-top: 2.5rem; padding: 2.5rem; border-radius: 1rem; background-color: #555758;}
 .serv-kooroo .article-content:has(.station-battery-img) .content-tit {margin-top: 0; color: var(--colorElement-light-text-text-on-primary);}
@@ -2364,7 +2365,7 @@
 .serv-kooroo .examp-box .examp-ico { width: 6.25rem; height: 6.25rem; border-radius: 50%; background: #fff; flex-shrink: 0; }
 .serv-kooroo .examp-box .examp-txt { color: #555758; font-size: 1rem; font-weight: 500; line-height: 1.6rem; }
 .serv-kooroo .content-item02 { background-color: #EAF3F8; }
-.serv-kooroo .station-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 0.62rem; z-index: 1; position: relative; }
+.serv-kooroo .station-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem; z-index: 1; position: relative; }
 .serv-kooroo .station-box { background-color: #fff; display: flex; flex-direction: column; padding: 2.5rem; border-radius: 1rem; }
 .serv-kooroo .station-box img { width: 5rem; height: 5rem; }
 .serv-kooroo .station-top { display: flex; align-items: center; gap: 0.62rem; }
