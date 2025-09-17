@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <!-- <meta name="viewport" content="width=1920" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name=" format-detection" content="telephone=no" />
+        <title>LG Energy Solution - Service_B.around</title>
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />        
+        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    </head>
+
+    <body>
+        <div class="skip-navigation">
+            <a href="#container">Skip to content</a>
+        </div>
+        <div class="wrap service serv-baround"> <!-- wrap에 화면id(id) 관련 클래스 추가하여 사용 -->
+            
+            <!-- header -->
+            <header class="header-wrap parent-event">
+                <div class="header-area pc-only">
+                    <div class="header-cont">
+                        <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/ci_en.svg"
+                                    alt=""></a>
+                        </h1>
+                        <div class="sitemap-wrap">
+                            <nav class="nav-wrap ">
+                                <ul class="gnb__tab-btn-wrap">
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">Product</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">Applications</a></li>
+                                            <li class="depth02"><a href="#">Form Factor</a></li>
+                                            <li class="depth02"><a href="#">Material</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">Service</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">VPP</a></li>
+                                            <li class="depth02"><a href="#">B.around</a></li>
+                                            <li class="depth02"><a href="#">B-Lifecare</a></li>
+                                            <li class="depth02"><!-- 09.11 문구수정 --><a href="#">B-once</a></li>
+                                            <li class="depth02"><a href="#">KooRoo</a></li>
+                                            <li class="depth02"><a href="#">ESS SI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">Company</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">Company<br/>Introduction</a></li>
+                                            <li class="depth02"><a href="#">Jeong-Do<br/>Management</a></li>
+                                            <li class="depth02"><a href="#">Global Network</a></li>
+                                            <li class="depth02"><a href="#">R&D</a></li>
+                                            <li class="depth02"><a href="#">Newsroom</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">Sustainability</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">Framework</a></li>
+                                            <li class="depth02"><a href="#">Environmental</a></li>
+                                            <li class="depth02"><a href="#">Social</a></li>
+                                            <li class="depth02"><a href="#">Governance</a></li>
+                                            <li class="depth02"><a href="#">Performance &<br/>Reporting</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">IR</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">Financial<br/>Information</a></li>
+                                            <li class="depth02"><a href="#">Stock<br/>Information</a></li>
+                                            <li class="depth02"><a href="#">IR Activities</a></li>
+                                            <li class="depth02"><a href="#">IR Materials</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">Career</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">Ideal<br/>Employee</a></li>
+                                            <li class="depth02"><a href="#">HR Policy</a></li>
+                                            <li class="depth02"><a href="#">Job<br/>Description</a></li>
+                                            <li class="depth02"><a href="#">Job<br/>Opportunities</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="utile-wrap">
+                            <div class="utile-cont">
+                                <!-- 250717 수정 : 고객지원 / 언어선택 디자인 변경 -->
+                                <div class="util-item-cs">
+                                    <img class="icon-cs" src="../../../inc/images/icon/icon_msg_chat.svg" alt="고객지원">
+                                    <button class="menu-title" onclick="pubUi.popUp.open('.cs-cont','.menu-title');" >Inquiry</button>
+                                    <div class="cs-cont">
+                                        <div class="pop-wrap">
+                                            <a href="" class="cs-item">Download</a>
+                                            <a href="" class="cs-item">Contact Us</a>
+                                            <a href="" class="cs-item">FAQ</a>
+                                            <button class="cs-close" onclick="pubUi.popUp.close('.cs-cont','.menu-title');"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="utile-item">
+                                    <div class="lang-wrap">
+                                        <div class="select-cate activeSelect">
+                                            <button class="lang-button" aria-haspopup="listbox"><img
+                                                    src="../../../inc/images/icon/icon_global_img.svg" alt="language"><i
+                                                    class="select-btn-right-icon"></i></button>
+                                            <ul class="select-menu" role="listbox">
+                                                <li><a href="javascript:;" role="option" tabindex="0" class="active">KR</a>
+                                                </li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">EN</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">CN</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">PL</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">DE</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- //lang-wrap -->
+                                </div>
+                                <div class="utile-item02">
+                                    <button class="search-btn header_search-btn search-reset" onclick="pubUi.popUp.open('.header_search-area','.header_search-btn');"></button>
+                                </div>
+                                <!-- //250717 수정 : 고객지원 / 언어선택 디자인 변경 -->
+                                <div class="utile-item03">
+                                    <button class="nav-btn" title="menu" onclick="pubUi.popUp.open('.sitemap_pop-wrap','.nav-btn');">
+                                        <i class="x-icon">
+                                            <span class="x-line"></span>
+                                            <span class="x-line"></span>
+                                        </i>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="header_search-area target-header_search search-reset">
+                <div class="pop-wrap">
+                     <div class="search-box-wrap pc-only">
+                        <div class="search-box searchEvt">
+                            <button type="button" class="btn-search" aria-label="search" class="btn-search">
+                                <img src="../../../inc/images/icon/icon_head_search.svg" alt="search" role="button">
+                            </button>
+                            <input type="text" id="faq-search" placeholder="Please enter a keyword">
+                            <button type="button" class="btn-search-reset btn-delete" aria-label="">
+                                <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="delete">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sitemap_pop-wrap">
+                <div class="pop-wrap">
+                    <div class="sitemap_pop-header">
+                        <a class="sitemap_pop-ci" href="#"><img src="../../../inc/images/symbol/ci_en_wh.svg" alt=""></a>
+                    </div>
+                    <ul class="sitemap-area">
+                        <li class="depth01">
+                            <a href="#">Product</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">Applications</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Passenger EV</a></li>
+                                        <li class="depth03"><a href="#">Commercial EV</a></li>
+                                        <li class="depth03"><a href="#">LEV</a></li>
+                                        <li class="depth03"><a href="#">ESS</a></li>
+                                        <li class="depth03"><a href="#">Smart Devices</a></li>
+                                        <li class="depth03"><a href="#">Power Tools</a></li>
+                                        <li class="depth03"><a href="#">Heavy Equipment</a></li>
+                                        <li class="depth03"><a href="#">Robots</a></li>
+                                        <li class="depth03"><a href="#">Future Mobility</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Form Factor</a>
+                                    <ul>
+                                    <li class="depth03"><a href="#">Cylindrical </a></li>
+                                        <li class="depth03"><a href="#">Pouch</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Material</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">NCM</a></li>
+                                        <li class="depth03"><a href="#">LFP</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">Service</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">VPP</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">B.around</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">B-Lifecare</a>
+                                </li>
+                                <li class="depth02">
+                                    <!-- 09.11 문구수정 --><a href="#">B-once</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">KooRoo</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">ESS SI</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">Company</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">Company Introduction</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">About us</a></li>
+                                        <li class="depth03"><a href="#">Vision</a></li>
+                                        <li class="depth03"><a href="#">History</a></li>
+                                        <li class="depth03"><a href="#">CI</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Jeong-Do Management</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Overview</a></li>
+                                        <li class="depth03"><a href="#">LG Code of Ethics</a></li>
+                                        <li class="depth03"><a href="#">Operation Programs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Global Network</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">R&D</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">R&D Status</a></li>
+                                        <li class="depth03"><a href="#">R&D Field</a></li>
+                                        <li class="depth03"><a href="#"><!-- 09.11 문구수정 -->Future Battery </a></li>
+                                        <li class="depth03"><a href="#">Open Innovation  </a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Newsroom</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">Sustainability</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">Framework</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Vision & Strategy</a></li>
+                                        <li class="depth03"><a href="#">ESG Governance</a></li>
+                                        <li class="depth03"><a href="#">Global Partnership</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Environmental</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Environmental Management</a></li>
+                                        <li class="depth03"><a href="#">Climate Action</a></li>
+                                        <li class="depth03"><a href="#">Circular Economy</a></li>
+                                        <li class="depth03"><a href="#"><!-- 09.11 문구수정 -->Environmental Impact</a></li>
+                                        <li class="depth03"><a href="#">Biodiversity Conservation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Social</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Sustainable Value Chain</a></li>
+                                        <li class="depth03"><a href="#">Shared Growth</a></li>
+                                        <li class="depth03"><a href="#">Product Stewardship</a></li>
+                                        <li class="depth03"><a href="#"><!-- 09.11 문구수정 -->Safety and Health</a></li>
+                                        <li class="depth03"><a href="#">Empowering Our People</a></li>
+                                        <li class="depth03"><a href="#"><!-- 09.11 문구수정 -->CSR</a></li>
+                                        <li class="depth03"><a href="#">Information Security</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Governance</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Board of Directors</a></li>
+                                        <!-- 09.11 문구수정 --><li class="depth03"><a href="#">Committees</a></li>
+                                        <!-- 09.11 문구수정 --><li class="depth03"><a href="#">Compliance Management</a></li>
+                                        <!-- 09.11 문구수정 --><li class="depth03"><a href="#">Business Resilience</a></li>
+                                        <li class="depth03"><a href="#">Ethical Management</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Performance & Reporting</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">ESG Report</a></li>
+                                        <li class="depth03"><a href="#">ESG Ratings</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">IR</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">Financial Information</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Financial Statements</a></li>
+                                        <li class="depth03"><a href="#">Income Statements</a></li>
+                                        <li class="depth03"><a href="#">Cash Flow</a></li>
+                                        <li class="depth03"><a href="#">Credit Rating</a></li>
+                                        <li class="depth03"><a href="#">ESG Bonds</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Stock Information</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Stock Price Information</a></li>
+                                        <li class="depth03"><a href="#">Shareholder Return</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">IR Activities</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">IR Events</a></li>
+                                        <li class="depth03"><a href="#">Earnings Release</a></li>
+                                        <li class="depth03"><a href="#">Shareholders Meeting</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">IR Materials</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">Career</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">Ideal Employee</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">HR Policy</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">HR Principle</a></li>
+                                        <li class="depth03"><a href="#">Talent development </a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Job Description</a><!-- 영역 삭제 -->
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Job Opportunities</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="sitemap-close" onclick="pubUi.popUp.close('.sitemap_pop-wrap','.nav-btn');"><img src="../../../inc/images/icon/icon_close-md_wh.svg" alt=""></button>
+                </div>
+            </div>
+            <!-- //header -->
+            <!-- section -->
+            <section id="container" class="content-wrap">
+                <div class="content-header_bg">
+                    <div class="visual-video">
+                        <video src="../../../inc/images/video/visual_serv_baround01.mp4" poster="../../../inc/images/img/visual_serv_baround01.mp4.png" autoplay muted playsinline loop>
+                            <!-- 비디오 영상 소리 정보 존재시 내용 입력 (접근성 처리용) -->
+                        </video>
+                    </div>
+                    <!-- <img src="../../../inc/images/img/visual_company01.png" alt="비주얼배너" /> -->
+                    <div class="content-header_text">
+                        <p class="title-intro">
+                            <strong>By leveraging accumulated battery lifecycle data,<br>new value is created to build a circular battery ecosystem.</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="page-map-wrap"> <!-- page-map-wrap -->
+                    <div class="selectbox-wrap pc-only" role="listbox">
+                        <div class="select-cate activeSelect" role="option">
+                            <button type="button" aria-haspopup="listbox">Service</button>
+                            <ul class="select-menu" role="listbox">
+                                <li><a href="javascript:;" role="option" tabindex="0" class="active">Service</a></li>
+                            </ul>
+                        </div>
+                        <div class="select-cate activeSelect" role="option">
+                            <button type="button" aria-haspopup="listbox">B.around</button>
+                            <ul class="select-menu" role="listbox">
+                                <li><a href="javascript:;" role="option" tabindex="0">VPP</a></li>
+                                <li><a href="javascript:;" role="option" tabindex="0" class="active">B.around</a></li>
+                                <li><a href="javascript:;" role="option" tabindex="0">B-Lifecare</a></li>
+                                <!-- 09.11 문구수정 -->
+<li><a href="javascript:;" role="option" tabindex="0">B-once</a></li>
+                                <li><a href="javascript:;" role="option" tabindex="0">KooRoo</a></li>
+                                <li><a href="javascript:;" role="option" tabindex="0">ESS SI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!--//page-map-wrap -->
+                <div class="content-area">
+                    <div class="sticky-area-tit">
+                        <h2 class="title-h1">B.around</h2> <!-- title-h1 (페이지타이틀) -->
+                    </div>
+                    <div class="sticky-area">
+                        <div class="side-sticky">
+                            <ul class="side-list">
+                                <li><a href="#content01" class="active">Overview</a></li>
+                                <li><a href="#content02">Service Offerings</a></li>
+                                <li><a href="#content03">Technology</a></li>
+                            </ul>
+                        </div>
+                        <div class="content-item01 active" id="content01"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                            <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                <div class="content-sect">
+                                    <div class="cont-area-wrap">
+                                        <div class="cont-area-sect">
+                                            <article>
+                                                <h3 class="article-tit">Overview</h3>
+                                                <div class="article-content">
+                                                    <p class="article-desc">
+                                                        Based on LG Energy Solution’s Battery Management Total Solution (BMTS), this integrated service platform enables precise diagnosis of battery conditions and provides lifecycle-based management tailored to each battery’s state. 
+                                                    </p>
+                                                    <div class="brand-info">
+                                                        <img src="../../../inc/images/img/serv02_img_01.png" alt="B.around logo" class="brand-logo">
+                                                        <img src="../../../inc/images/img/serv02_img_02.png" alt="" class="brand-img">
+                                                        <div class="info-wrap">
+                                                            <div class="info-box">
+                                                                <div class="info-tit">
+                                                                    <span class="highlight">Battery</span>
+                                                                    <span>around</span>
+                                                                </div>
+                                                                <p class="info-desc">
+                                                                    A cutting-edge monitoring service that provides continuous oversight of key battery features throughout the entire battery lifecycle, ensuring a safer, smarter, and more efficient battery experience
+                                                                </p>
+                                                            </div>
+                                                            <div class="info-box">
+                                                                <div class="info-tit">
+                                                                    <span class="highlight">Be</span>
+                                                                    <span>around</span>
+                                                                </div>
+                                                                <p class="info-desc">
+                                                                    A brand value committed to prioritizing customer convenience by staying connected and attentive to their needs
+                                                                </p>
+                                                            </div>
+                                                            <div class="info-box">
+                                                                <div class="info-tit">
+                                                                    <span class="highlight green">Better</span>
+                                                                    <span>around</span>
+                                                                </div>
+                                                                <p class="info-desc">
+                                                                    Delivering BMTS services—an essential pillar for the future—through unparalleled excellence in service competitiveness
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="article-content">
+                                                    <p class="content-tit">Core Values</p>
+                                                    <img src="../../../inc/images/img/serv02_img_03_en.png" alt="Diagnostic Expertise, Trusted Management, Innovative Services, Intuitive Experience.">
+                                                </div>
+                                                <div class="article-content">
+                                                    <p class="content-tit">
+                                                        Target Customers & Use Cases<span>B.around is designed for:</span>
+                                                    </p>
+                                                    <div class="examp-wrap">
+                                                        <div class="examp-box">
+                                                            <div class="examp-ico">
+                                                                <img src="../../../inc/images/img/serv02_icon_01.png" alt="">
+                                                            </div>
+                                                            <p class="examp-txt">
+                                                                Automakers /<bR>Mobility<br>operators
+                                                            </p>
+                                                        </div>
+                                                        <div class="examp-box">
+                                                            <div class="examp-ico">
+                                                                <img src="../../../inc/images/img/serv02_icon_02.png" alt="">
+                                                            </div>
+                                                            <p class="examp-txt">
+                                                                Used car & Used battery trading companies
+                                                            </p>
+                                                        </div>
+                                                        <div class="examp-box">
+                                                            <div class="examp-ico">
+                                                                <img src="../../../inc/images/img/serv02_icon_03.png" alt="">
+                                                            </div>
+                                                            <p class="examp-txt">
+                                                                Individual and corporate EV operators
+                                                            </p>
+                                                        </div>
+                                                        <div class="examp-box">
+                                                            <div class="examp-ico">
+                                                                <img src="../../../inc/images/img/serv02_icon_04.png" alt="">
+                                                            </div>
+                                                            <p class="examp-txt">
+                                                                Two-wheeler sharing delivery platforms
+                                                            </p>
+                                                        </div>
+                                                        <div class="examp-box">
+                                                            <div class="examp-ico">
+                                                                <img src="../../../inc/images/img/serv02_icon_05.png" alt="">
+                                                            </div>
+                                                            <p class="examp-txt">
+                                                                Battery leasing<br>and subscription businesses
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- //content-item01 -->
+                        <div class="content-item02" id="content02"> <!-- data-bgtype : 배경타입 지정 (dark -> 컬러:흰색 / 스크롤시 해당영역 도달하면 배경타입에 맞게 컬러 적용되도록 스크립트 처리 예정)-->
+                            <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                <div class="content-sect">
+                                    <div class="cont-area-wrap">
+                                        <div class="cont-area-sect">
+                                            <article>
+                                                <h3 class="article-tit">Service Offerings</h3>
+                                                <div class="article-content">
+                                                    <p class="article-desc">
+                                                        In-vehicle battery management software that enables real-time monitoring and advanced analysis of battery conditions, optimizing operation and predicting lifespan.
+                                                    </p>
+                                                    <div class="text-list-wrap">
+                                                        <span class="list-tit">Key Customers</span>
+                                                        <ul class="text-list">
+                                                            <li>Automakers (OEMs), battery pack developers</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="article-content">
+                                                    <p class="content-tit">E4W (4-Wheele)</p>
+                                                    <div class="e4w-wrap">
+                                                        <div class="e4w-box">
+                                                            <div class="e4w-top">
+                                                                <div class="top-logo">
+                                                                    <img src="../../../inc/images/img/serv02_img_04.png" alt="B-Lifecare logo" class="b-lifecare">
+                                                                </div>
+                                                                <p class="top-desc">
+                                                                    Provides personalized battery management based on individual driving and charging habits, helping users keep batteries healthy and extend their lifespan.
+                                                                </p>
+                                                            </div>
+                                                            <div class="e4w-btm">
+                                                                <div class="btm-list">
+                                                                    <div class="text-list-wrap">
+                                                                        <span class="list-tit">Key Customer</span>
+                                                                        <ul class="text-list">
+                                                                            <li>Individual and corporate EV owners (leasing, rental, etc.)</li>
+                                                                            <li>Auto finance companies</li>
+                                                                            <li>Used car platforms & certification programs</li>
+                                                                            <li>EV fleet operators (taxis, logistics, etc.)</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="text-list-wrap">
+                                                                        <p class="asterisk-text">Proven case applied in capital lease products</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btm-btn">
+                                                                    <a href="#" class="txt-btn01 txt-btn-sm">View more</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="e4w-box">
+                                                            <div class="e4w-top">
+                                                                <div class="top-logo">
+                                                                    <img src="../../../inc/images/img/serv02_img_05.png" alt="B-once logo" class="b-once">
+                                                                </div>
+                                                                <p class="top-desc">
+                                                                    A single-use evaluation service for used EV and battery trading. Based on SoH/SoC, the evaluation report verifies battery conditions to support transparent and reliable transactions.
+                                                                </p>
+                                                            </div>
+                                                            <div class="e4w-btm">
+                                                                <div class="btm-list">
+                                                                    <div class="text-list-wrap">
+                                                                        <span class="list-tit">Key Customer</span>
+                                                                        <ul class="text-list">
+                                                                            <li>Used car auctions and dealers</li>
+                                                                            <li>Vehicle repair shops, battery distributors</li>
+                                                                            <li>individual EV sellers/buyers</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btm-btn">
+                                                                    <a href="#" class="txt-btn01 txt-btn-sm">View more</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="article-content">
+                                                    <p class="content-tit">E2W (2-Wheele)</p>
+                                                    <div class="e2w-box">
+                                                        <div class="e2w-logo-wrap">
+                                                            <div class="e2w-logo">
+                                                                <img src="../../../inc/images/img/serv02_img_06.png" alt="KooRoo logo">
+                                                            </div>
+                                                        </div>
+                                                        <div class="e2w-right">
+                                                            <p class="e2w-right-desc">
+                                                                Battery Diagnosis & Management Service for Two-Wheeler Electric Mobility. An integrated service offering battery condition monitoring, swapping, and leasing operations—optimized for real-world applications such as delivery and sharing.
+                                                            </p>
+                                                            <div class="btm-wrap">
+                                                                <div class="text-list-wrap">
+                                                                    <span class="list-tit">Key Customer</span>
+                                                                    <ul class="text-list">
+                                                                        <li>Delivery platform operators</li>
+                                                                        <li>Two-wheeler sharing and rental service providers</li>
+                                                                        <li>Logistics startups and two-wheeler manufacturers</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="btm-btn">
+                                                                    <a href="#" class="txt-btn01 txt-btn-sm">View more</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div><!-- //content-item02 -->
+                        <div class="content-item03" id="content03">
+                            <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                                <div class="content-sect">
+                                    <div class="cont-area-wrap">
+                                        <div class="cont-area-sect">
+                                            <article>
+                                                <h3 class="article-tit">Technology</h3>
+                                                <div class="article-content">
+                                                    <p class="content-tit">Key Features</p>
+                                                    <div class="bmts-wrap">
+                                                        <div class="bmts-box">
+                                                            <img src="../../../inc/images/img/serv02_img_07.png" alt="">
+                                                            <div class="bmts-txt">
+                                                                <p class="bmts-tit">Battery Management Across the Entire Lifecycle</p>
+                                                                <p class="bmts-desc">
+                                                                    From manufacturing to usage, collection, and reuse, data is collected and analyzed throughout the entire lifecycle to extend battery lifespan and maximize residual value. Beyond simple monitoring, it enables the sustainable operation of battery assets.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bmts-box">
+                                                            <img src="../../../inc/images/img/serv02_img_08.png" alt="">
+                                                            <div class="bmts-txt">
+                                                                <p class="bmts-tit">Tailored Value Through Diverse Services</p>
+                                                                <p class="bmts-desc">
+                                                                    With a wide range of services such as B-Lifecare, KooRoo, leasing solutions, and one-time evaluation, LG Energy Solution provides optimized solutions tailored to customers’ usage environments and business models.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bmts-box">
+                                                            <img src="../../../inc/images/img/serv02_img_09.png" alt="">
+                                                            <div class="bmts-txt">
+                                                                <p class="bmts-tit">AI & Cloud-based Diagnostics and Forecasting</p>
+                                                                <p class="bmts-desc">
+                                                                    Advanced AI algorithms and cloud analytics platforms predict battery safety, performance degradation, and lifespan in advance, while providing optimal operating conditions. This not only prevents failures but also enables the development of efficient maintenance strategies.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bmts-box">
+                                                            <img src="../../../inc/images/img/serv02_img_10.png" alt="">
+                                                            <div class="bmts-txt">
+                                                                <p class="bmts-tit">Battery Asset Management & Operational Efficiency</p>
+                                                                <p class="bmts-desc">
+                                                                    By transforming battery condition histories and performance data into valuable assets, integration with various financial models such as leasing and insurance becomes possible. Battery replacement timing can also be scientifically managed to improve efficiency and asset value.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="article-content">
+                                                    <p class="content-tit">Core Technologies</p>
+                                                    <p class="article-desc">
+                                                        BMTS (Battery Management Total Solution) is an innovative technology that goes beyond the role of a traditional BMS (Battery Management System), providing a comprehensive solution across the entire battery lifecycle. By integrating software, cloud technology, and artificial intelligence (AI), it delivers safer, simpler, and more efficient battery management for customers.
+                                                    </p>
+                                                    <!-- 08.27 수정 : 디자인 b.around 팝업 디자인 추가로 인한 마크업 변경 -->
+                                                    <div class="serv_baround_chart">
+                                                        <div class="model-wrap">
+                                                            <div class="left-area">
+                                                                <div class="model-box-wrap">
+                                                                    <div class="model-box"> 
+                                                                        <div class="model-icon">
+                                                                            <img src="../../../inc/images/img/bmts_cont_icon1.png" alt="">
+                                                                        </div>
+                                                                        <div class="model-group">
+                                                                            <span class="model-tit">Safety Diagnostics<br>Technology</span>
+                                                                            <button type="button" class="model-btn" id="popupModelBtn01" onclick="pubUi.popUp.open('#popupModel01','#popupModelBtn01')">
+                                                                                <span class="blind">Safety Diagnostics Technology Popup Button</span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="model-box">
+                                                                        <div class="model-icon">
+                                                                            <img src="../../../inc/images/img/bmts_cont_icon2.png" alt="">
+                                                                        </div>
+                                                                        <div class="model-group">
+                                                                            <span class="model-tit">Degradation/Lifetime<br>Prediction Technology</span>
+                                                                            <button type="button" class="model-btn" id="popupModelBtn02" onclick="pubUi.popUp.open('#popupModel02','#popupModelBtn02')">
+                                                                                <span class="blind">Degradation/Lifetime Prediction Technology Popup Button</span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="center-bdr-line">
+                                                                <img src="../../../inc/images/img/bmts_stroke_line.png" alt="중앙 점선">
+                                                            </div> 
+                                                            <div class="right-area">
+                                                                <div class="model-box-wrap">
+                                                                    <div class="model-box">
+                                                                        <div class="model-icon">
+                                                                            <img src="../../../inc/images/img/bmts_cont_icon3.png" alt="">
+                                                                        </div>
+                                                                        <div class="model-group">
+                                                                            <span class="model-tit">BMS</span>
+                                                                            <button type="button" class="model-btn" id="popupModelBtn1" onclick="pubUi.popUp.open('#popupModel1','#popupModelBtn1')">
+                                                                                <span class="blind">BMS Popup Button</span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="model-box">
+                                                                        <div class="model-icon">
+                                                                            <img src="../../../inc/images/img/bmts_cont_icon4.png" alt="">
+                                                                        </div>
+                                                                        <div class="model-group">
+                                                                            <span class="model-tit">Cloud BMS</span>
+                                                                            <button type="button" class="model-btn" id="popupModelBtn2" onclick="pubUi.popUp.open('#popupModel2','#popupModelBtn2')">
+                                                                                <span class="blind">Cloud BMS Popup Button</span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="model-box">
+                                                                        <div class="model-icon">
+                                                                            <img src="../../../inc/images/img/bmts_cont_icon5.png" alt="">
+                                                                        </div>
+                                                                        <div class="model-group">
+                                                                            <span class="model-tit">SDV BMS </span>
+                                                                            <button type="button" class="model-btn" id="popupModelBtn3" onclick="pubUi.popUp.open('#popupModel3','#popupModelBtn3')">
+                                                                                <span class="blind">SDV BMS Popup Button</span>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //08.27 수정 : 디자인 b.around 팝업 디자인 추가로 인한 마크업 변경 -->
+                                                    <div class="service-btn-wrap">
+                                                        <a href="#" target="_blank" class="icon-btn-lg icon-white icon-download btn-outline01">
+                                                            <span>Catalog</span>
+                                                            <div class="icon-area"></div>
+                                                        </a>
+                                                        <a href="#" class="icon-btn-lg icon-white icon-cs btn-outline01">
+                                                            <span>Contact Us</span>
+                                                            <div class="icon-area"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div><!-- //content-item03 -->
+                    
+                    </div>
+                </div>
+            </section>
+            <!-- // section -->
+            <aside>
+                <img src="../../../inc/images/sample/floating.png" alt="floating" />
+            </aside>
+            <!-- footer -->
+            <footer class="footer-wrap">
+                <div class="footer-area">
+                <div class="footer-item01">
+                    <ul class="footer-site_map">
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Ethics Hotline</a></li>
+<li><a href="#">Suppliers</a></li>
+                    <li><a href="#">Safety Guide</a></li>
+                    </ul><!-- 09.16 수정 : footer 최신화 (영문) -->
+                </div>
+                <div class="footer-item02">
+                    <!-- <ul class="footer-site_map">
+                        <li>
+                            <div class="footer-site_map-desc">
+                            <div class="footer-info">
+                                <p class="owner">CEO Kim Dong-myeong</p>
+                                <address class="addr">07335 108 Yeoui-daero, Yeongdeungpo-gu, Seoul</address>
+                                <a class="tel" href="tel:0237771114">Representative number : +82-2-3777-1114</a>                  
+                            </div>
+                            </div>              
+                        </li>
+                    </ul> 09.16 수정 : 주소 삭제 (영문/다국어) -->
+                    <!-- 250717 수정 : 패밀리사이트 디자인 변경으로 selectbox-wrap type3 케이스 수정 -->
+                    <div class="selectbox-wrap type3">
+                        <div class="select-cate activeSelect">
+                            <button type="button" aria-haspopup="listbox">Related Sites</button>                                                
+                            <ul class="select-menu" role="listbox">
+                                <li>
+                                    <p class="cate-title">LG Corp.</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG Chem</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG Electronics</a></li>
+                                    </ul>
+                                </li>
+                                <!-- 09.03 수정 : 패밀리사이트 메뉴 제거 -->
+                                <li>
+                                    <p class="cate-title">Family Site</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG ESS Battery</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG Energy Solution Micigan</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG Energy Solution Wroclaw Energy</a></li>
+                                        <!--<li><a href="javascript:;" role="option" tabindex="0">Virtual Experience</a></li>-->
+                                        <li><a href="javascript:;" role="option" tabindex="0">Open Innovation</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="cate-title">Business</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">Procurement Portal System</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">partners.lgensol.com</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <!-- //09.03 수정 : 패밀리사이트 메뉴 제거 -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="footer-bottom">
+                <a class="footer-logo">
+                    <img src="../../../inc/images/img/img_footer_logo.svg" alt="LG Energy Solution" />
+                </a>
+                <ul class="footer-util">
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-in.svg" alt="in"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-insta.svg" alt="instagram"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-naver.svg" alt="naver"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-youtube.svg" alt="youtube"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-blog.svg" alt="blog"></a></li>
+                </ul>
+                </div>
+            </footer>
+            <!-- // footer -->
+        </div>
+
+
+        <!-- 08.27 수정 : b.around 팝업 추가 -->
+        <!-- popup -->
+        <!-- popupModel1 : BMS -->
+        <div class="modal-pop dialog" id="popupModel1">
+            <div class="pop-wrap service bms"> <!-- 09.03 / pop-wrap 이중클래스 추가 -->
+                <div class="pop-header">
+                    <h3 class="title">BMS</h3>
+                </div>
+                <div class="pop-content">
+                    <div class="img-wrap">
+                        <img src="../../../inc/images/img/serv_bms_pop1_en.png" alt="">
+                    </div>
+                    <p class="desc">
+                        The Battery Management System (BMS) is a core control system that continuously monitors battery voltage, current, and temperature in real time, estimates the State of Charge (SoC) and State of Health (SoH), and maintains performance, lifespan, and safety through cell balancing.
+                    </p>
+                </div>
+                <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel1','#popupModelBtn1');" title="popup close"><span class="blind">popup close</span></button>
+            </div>
+        </div>
+        <!-- popupModel2 : Cloud BMS-->
+        <div class="modal-pop dialog" id="popupModel2">
+            <div class="pop-wrap service cloud">
+                <div class="pop-header">
+                    <h3 class="title">Cloud BMS</h3>
+                </div>
+                <div class="pop-content">
+                    <div class="img-wrap">
+                        <img src="../../../inc/images/img/serv_bms_pop2_en.png" alt="">
+                    </div>
+                    <p class="desc">
+                        As a global leader in better sector, LG Energy Solution has collected high-definition field data from over 20,000 EVs, securely stored on cloud servers. Continuous AI-ML-driven algorithm updates ensure enhanced analysis accuracy.
+                    </p>
+                </div>
+                <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel2','#popupModelBtn2');" title="popup close"><span class="blind">popup close</span></button>
+            </div>
+        </div>
+        <!-- popupModel3 : SDV BMS -->
+        <div class="modal-pop dialog" id="popupModel3">
+            <div class="pop-wrap service sdv"> <!-- 09.03 / pop-wrap 이중클래스 추가 -->
+                <div class="pop-header">
+                    <h3 class="title">SDV BMS</h3>
+                </div>
+                <div class="pop-content">
+                    <div class="img-wrap">
+                        <img src="../../../inc/images/img/serv_bms_pop3_en.png" alt="">
+                    </div>
+                    <p class="desc">
+                        SDV (Software Defined Vehicle) BMS is a next-generation battery management system optimized for software-defined vehicles (SDVs). By transferring BMS functions to high-performance computing (HPC) and leveraging AI-based diagnostics and control, it optimizes the functional architecture and reduces costs.
+                    </p>
+                </div>
+                <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel3','#popupModelBtn3');" title="popup close"><span class="blind">popup close</span></button>
+            </div>
+        </div>
+        <!-- popupModel01 : 안전 진단 기술 -->
+        <div class="modal-pop dialog" id="popupModel01">
+            <div class="pop-wrap service sdt"> <!-- 09.03 / pop-wrap 이중클래스 추가 -->
+                <div class="pop-header">
+                    <h3 class="title">Safety Diagnostics Technology</h3>
+                </div>
+                <div class="pop-content">
+                    <div class="img-wrap">
+                        <img src="../../../inc/images/img/serv_bms_pop4_en.png" alt="">
+                    </div>
+                    <p class="desc">
+                        Safety Diagnostics Technology is a software solution that detects and diagnoses various internal abnormalities of batteries in real time. To enhance the safety of EV batteries, it measures and analyzes battery information to detect potential issues that could lead to accidents such as fires in advance. By leveraging extensive field data, more than 130,000 cell disassembly analyses, and advanced AI technology, it achieves an accuracy rate exceeding 90%.
+                    </p>
+                </div>
+                <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel01','#popupModelBtn01');" title="popup close"><span class="blind">popup close</span></button>
+            </div>
+        </div>
+        <!-- popupModel02 : 퇴화/수명 예측 기술 -->
+        <div class="modal-pop dialog" id="popupModel02">
+            <div class="pop-wrap service dlpt"> <!-- 09.03 / pop-wrap 이중클래스 추가 -->
+                <div class="pop-header">
+                    <h3 class="title">Degradation/Lifetime Prediction Technology</h3>
+                </div>
+                <div class="pop-content">
+                    <div class="img-wrap">
+                        <img src="../../../inc/images/img/serv_bms_pop5_en.png" alt="">
+                    </div>
+                    <p class="desc">
+                        Degradation/Lifetime Prediction Technology diagnoses the current state of the battery, identifies and incorporates various factors affecting degradation, and based on this, accurately predicts future performance decline (degradation) and remaining useful life (RUL) with an error rate of just 1%.
+                    </p>
+                </div>
+                <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupModel02','#popupModelBtn02');" title="popup close"><span class="blind">popup close</span></button>
+            </div>
+        </div>
+        <!-- //popup -->
+        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
+        <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
+    </body>
+</html>
