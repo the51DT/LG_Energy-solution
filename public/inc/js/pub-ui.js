@@ -296,15 +296,20 @@ var pubUi = {
                 let anyActive = false;
                 targetContentItem.forEach((item) => {
                     const guard = isMobile ? 152 : 250;
-                    const itemTop = topRelToScroller(item, scroller, viewportTop) - guard ;
-                    const itemBottom = itemTop + item.clientHeight ;
+
+                    // sideSticky 존재하는 케이스 active 문제로 메인과 분기처리하였음
+                    if (document.querySelector(".wrap").classList.contains("main-page")) {
+                        var itemTop = topRelToScroller(item, scroller, viewportTop) * 0.8 - guard;
+                    } else {
+                        var itemTop = topRelToScroller(item, scroller, viewportTop) - guard;
+                    }
+                    const itemBottom = itemTop + item.clientHeight;
 
                     if (nowScroll >= itemTop && nowScroll < itemBottom) {
                         anyActive = true;
 
                         // ★ 먼저 active 붙이기 (모바일에서도 확실히 들어오게)
                         if (!item.classList.contains("active")) item.classList.add("active");
-                        
 
                         // 데스크톱: side-sticky 동기화
                         if (targetSideSticky) {
