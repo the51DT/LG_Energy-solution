@@ -2049,8 +2049,7 @@
 .serv-ess .flow-item::after { display: none; }
 .serv-ess .item-content .text-list > li { color: #555758; font-size: 0.875rem; }
 .serv-ess .item-content .text-list { margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.3125rem; }
-.serv-ess .bmts-wrap { margin-top: 0; }
-.serv-ess:lang(en) .bmts-wrap { margin-top: 1.5rem; }
+.serv-ess .bmts-wrap { margin-top: 1.5rem; }
 /* r&d */
 .rnd .title-h3 {font-weight: 600;}
 .rnd .sub-title { margin-top: 1rem; }
