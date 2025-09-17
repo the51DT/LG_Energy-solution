@@ -336,7 +336,7 @@ aside > img{cursor: pointer;}
 .main-page .content-item03 .cont-item a:hover:after{background:url(../../images/icon/icon_link_arrow_bl.svg) no-repeat;background-size:cover;}
 
 .main-page .content-item04{position: relative;opacity: 1;transition: all 1s;}
-.main-page .content-item04 .cont-item01{height:50rem;position:sticky;top:7.5rem;}
+.main-page .content-item04 .cont-item01{height:50rem;position:relative;top:0;}
 .main-page .content-item04 .cont-item01 .text-area{position: relative; z-index: 1;display: flex;flex-direction: column;align-items: center;padding-top:8.2rem;}
 .main-page .content-item04 .cont-item01 p{color: var(--text-text-default-01, #171819);text-align: center;font-size: var(--size-desktop-H2, 2rem);font-weight: 400;line-height: var(--line-height-desktop-H2, 3rem); /* 150% */letter-spacing: var(--letter-spacing-default, 0);}
 .main-page .content-item04 .cont-item01 p strong{font-weight: 700;}
