@@ -255,7 +255,7 @@ aside > img{cursor: pointer;}
 .main-content_header-bg .content-header_text > div{position:absolute; bottom:8.5rem;left:0;}
 .main-content_header-bg .content-header_text .title-intro{color: var(--text-text-on-primary, #FFF);font-size: var(--size-desktop-LT1, 4.5rem);font-style: normal;font-weight: 700;line-height: var(--line-height-desktop-LT1, 6.3rem); /* 140% */letter-spacing: var(--letter-spacing-small, -0.03125rem);}
 .main-content_header-bg .content-header_text .txt-intro{color: var(--text-text-on-primary, #FFF);font-size: var(--size-desktop-H4, 1.25rem);font-style: normal;font-weight: 400;line-height: var(--line-height-desktop-H4, 2rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
-.main-content_header-bg .content-header_text:after{content:"";display:block;position: absolute;width:4.5rem;height:4.5rem;background: url(../../images/icon/icon_arrow_down_wh.svg)no-repeat;background-size: 100%;bottom:8.5rem;right:0;}
+.main-content_header-bg .content-header_text:after{content:"";display:block;position: absolute;width:4.5rem;height:4.5rem;background: url(../../images/icon/icon_arrow_down_wh.svg)no-repeat;background-size: 100%;bottom:8.5rem;right:0;display: none;}
 
 .main-page .content-item01{position: relative;opacity: 0;padding:20rem 0;opacity:1;transition: all 1s;}
 .main-page .content-item01 .content-wrap{position: relative;}
@@ -349,7 +349,7 @@ aside > img{cursor: pointer;}
 .main-page .content-item04.active a.btn-link{opacity: 1; transition: opacity 1.5s .5s;}
 .main-page .content-item04 .cont-item01 .move-img-area{width: 13.75rem;height: auto;position:absolute;bottom:6rem;left:50%; transform: translateX(-50%);}
 .main-page .content-item04 .cont-item01 .move-img-area video{width:100%;}
-.main-page .content-item04.active .move-img-area{transition: all 1s .5s;width: 112.5rem;height:auto;bottom:0;max-height:100%;}
+.main-page .content-item04.active .move-img-area{transition: all 1s .5s;width: 112.5rem;height:auto;bottom:0;max-height:100%;overflow: hidden;}
 .main-page .content-item04 .cont-item02{height:50rem;position: relative;display:flex; align-items: center;justify-content: center;margin-top:7.5rem}
 .main-page .content-item04 .cont-item02 .text-area{position: relative; z-index: 1;display: flex;flex-direction: column;}
 .main-page .content-item04 .cont-item02 h3{text-align:left;color: var(--text-text-on-primary, #FFF);font-size: var(--size-desktop-H1, 2.75rem);font-weight: 400;line-height: var(--line-height-desktop-H1, 3.85rem);letter-spacing: var(--letter-spacing-default, 0);}
