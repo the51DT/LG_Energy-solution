@@ -1906,7 +1906,7 @@
 .cont .stepper-wrapper .accordion-list.on .accordion-content { display: flex !important; flex-direction: column; gap: 1.88rem; }
 .cont .stepper-wrapper .cont-btn-wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.62rem; }
 .cont .stepper-wrapper .cont-btn-wrap.flex-wrap { display: flex; }
-.cont .stepper-wrapper .cont-btn-wrap.flex-wrap > .btn {width: 15.9375rem;}
+.cont .stepper-wrapper .cont-btn-wrap.flex-wrap > .btn {width: 10.4375rem;padding: .75rem 0; font-size: var(--size-desktop-B1, 1.125rem);height: 3.75rem;}
 .cont .stepper-wrapper .cont-btn-wrap > .btn { background-color: #f3f5f7; border-radius: 0.5rem; color: #858889; font-weight: 600; font-size: 1.25rem; height: 4.5rem; padding: 1.37rem 2.5rem; line-height: 1; }
 .cont .stepper-wrapper .cont-btn-wrap > .btn:has(a) {padding: 0;}
 .cont .stepper-wrapper .cont-btn-wrap > .btn:has(a) > a {width: 100%; display: flex; justify-content: center;  gap: 0.5rem; align-items: center; margin-top: 0; padding: 1.37rem 2.5rem; height: 4.5rem;}
