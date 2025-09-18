@@ -1832,7 +1832,7 @@
 .modal-pop .pop-wrap.service.bms .img-wrap {height: 13.51669rem;}
 .modal-pop .pop-wrap.service.cloud .img-wrap {height: 8.75rem;}
 .modal-pop .pop-wrap.service.sdv .img-wrap {height: 13.125rem;}
-.modal-pop .pop-wrap.service.sdt .img-wrap {height: 10.5625rem;}
+.modal-pop .pop-wrap.service.sdt .img-wrap {height: 7.875rem;}
 .modal-pop .pop-wrap.service.dlpt .img-wrap {height: 6.94144rem;}
 
 /* 인사원칙 */
@@ -1979,7 +1979,9 @@
 .serv-kooroo .article-content:has(.station-battery-img) .content-desc {margin-bottom: 1.5rem;}
 .serv-kooroo .article-content .article-desc:has(+ .article-tit-wrap) {padding-bottom: 1rem;}
 .serv-kooroo .article-tit-wrap .btn-wrap { align-items: center; }
-.serv-kooroo .article-tit-wrap .btn-wrap a { width: 11.5rem; font-size: 0.875rem; }
+.serv-kooroo .article-tit-wrap .btn-wrap a { width: 11.5rem; font-size: 0.875rem;}
+.serv-kooroo:lang(zh-CN) .article-tit-wrap .btn-wrap a {font-size: 0.875rem; line-height: 1.225rem; font-weight: 500; width: auto;}
+.serv-kooroo:lang(zh-CN) .article-tit-wrap .btn-wrap a .icon-area {width: 1.25rem; height: 1.25rem;}
 .serv-kooroo .article-btn-wrap {margin: 0;}
 .serv-kooroo .article-img { padding: 0 2.13rem; margin: 3rem 0; }
 .serv-kooroo .article-content .content-tit { margin: 3rem 0 1.5rem; font-size: 1.125rem; line-height: 1.75rem; }
