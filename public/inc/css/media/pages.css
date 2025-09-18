@@ -1697,7 +1697,7 @@
 .serv-trading .service-wrap .service-tit-wrap {gap: 0.25rem; padding-bottom: 1rem;}
 .serv-trading .service-wrap .service-tit-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .serv-trading .service-wrap .service-desc {padding-top: 1rem; font-size: .875rem; line-height: 1.3125rem; text-align: center;}
-/* .serv-trading #content01 .article-img {max-width: 20rem; margin-inline: auto;} */
+.serv-trading #content01 .article-img {max-width: 20rem; margin-inline: auto;}
 .serv-trading #content02 .article-img {margin: .5rem 2.81rem 0;}
 
 .serv-trading #content01 .article-img .lottie-wrap {width: 4rem; height: 4rem; top: 22.47rem; left: 50%; transform: translateX(-50%);}
