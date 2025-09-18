@@ -1268,16 +1268,17 @@ var pubUi = {
             this.bindEvents();
         },
         bindEvents() {
-            $(document).on("input", ".textarea-box .textarea", function () {
-                const textarea = this;
-                const box = textarea.closest(".textarea-box");
-                const length = textarea.value.length;
-                const countEl = box.querySelector(".byte-check .count");
-                const max = parseInt(textarea.getAttribute("maxlength"), 10) || 1000;
-                countEl.innerText = Math.min(length, max);
-                box.classList.toggle("on", length > 0);
-                if (box.classList.contains("ty02")) pubUi.form.textareaResize(textarea);
-            });
+            // textarea input 입력 시, 입력텍스트 내용 카운트 내용 제거(제외 요청으로 마크업삭제하였음)
+            // $(document).on("input", ".textarea-box .textarea", function () {
+            //     const textarea = this;
+            //     const box = textarea.closest(".textarea-box");
+            //     const length = textarea.value.length;
+            //     const countEl = box.querySelector(".byte-check .count");
+            //     const max = parseInt(textarea.getAttribute("maxlength"), 10) || 1000;
+            //     countEl.innerText = Math.min(length, max);
+            //     box.classList.toggle("on", length > 0);
+            //     if (box.classList.contains("ty02")) pubUi.form.textareaResize(textarea);
+            // });
 
             // const inputBox = document.querySelectorAll(".wrap-form-input input.input-box");
             // const inputBoxDelBtn = document.querySelectorAll(".wrap-form-input input-wrap .btn-input-del");
