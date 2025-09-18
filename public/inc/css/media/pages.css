@@ -978,7 +978,6 @@
 .industry-material {flex-direction: column; align-items: flex-start; gap: 1rem;}
 .industry-material > p {font-size: 1.25rem; line-height: 1.875rem;}
 .industry-material [class^="icon-btn"] {width: 100%; height: auto; padding: 1rem; font-size: 1rem; line-height: 1.6rem;}
-.industry-material [class^="icon-btn"] > img {margin-right: 0.625rem;}
 .industry-material [class^="icon-btn"] .icon-area::before {width: 1.875rem; height: 1.875rem;}
 .industry-material:has(> div) {gap: 1rem;}
 .industry-material > div {width: 100%; gap: 1rem;}
