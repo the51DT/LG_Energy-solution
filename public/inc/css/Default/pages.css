@@ -2410,6 +2410,7 @@
 .serv-ess .bmts-box li > span, .serv-kooroo .bmts-box li > span { color: #858889; font-size: 0.8125rem; font-weight: 400; }
 .serv-ess .text-list-wrap .text-list > li::before, .serv-kooroo .text-list-wrap .text-list > li::before { top: 0.7em; }
 .serv-kooroo:lang(en) .bmts-box .text-list-wrap + .asterisk-text {margin-top: 1.25rem; color: #858889;}
+.serv-kooroo:lang(zh-CN) .bmts-box .text-list-wrap + .asterisk-text {margin-top: 0.62rem; color: #858889; font-size: 0.8125rem; line-height: 1.3rem; font-weight: 400; justify-content: flex-end;}
 
 /* 서비스 > ess si */
 .serv-ess .article-content .article-desc:has(+ img) {padding-bottom: 1.875rem;}
