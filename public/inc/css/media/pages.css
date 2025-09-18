@@ -1965,6 +1965,7 @@
 .serv-bonce .ucd-desc-wrap p { font-size: 0.875rem; line-height: 1.3125rem; }
 .serv-bonce .ucd-desc-wrap p.noti {font-size: 0.75rem; line-height: 1.2rem;}
 .serv-bonce .service-btn-wrap { margin-bottom: 0; }
+.serv-bonce .ucd-desc-wrap .text-list-wrap .text-list li {font-size: 0.75rem; line-height: 1.2rem;}
 
 .serv-bonce:lang(en) .type-process p {display: flex; align-items: center; padding: 1.5rem;}
 .serv-bonce:lang(en) .type-process p > span {text-align: center;}
