@@ -297,25 +297,12 @@ html:lang(zh-CN) header,
 html:lang(zh-CN) nav,
 html:lang(zh-CN) footer,
 html:lang(zh-CN) section,
-html:lang(zh-CN) aside {
-  margin: 0;
-  padding: 0;
-  word-break: keep-all;
-  word-wrap: break-word;
-  white-space: normal;
-  font-family: "NotoSansSC", sans-serif;
+html:lang(zh-CN) aside {  
+  font-family: "Noto Sans SC", sans-serif;
 }
 html:lang(zh-CN),
-html:lang(zh-CN) body {
-  overflow: hidden;
-  position: relative;
-  font-family: "NotoSansSC", sans-serif;
-  font-size: 16px;
-  color: #171819;
-  height: 100%;
-  font-weight: 400;
-  /* letter-spacing: -0.03125rem; */
-  -webkit-overflow-scrolling: touch;
+html:lang(zh-CN) body {  
+  font-family: "Noto Sans SC", sans-serif;  
 }
 html:lang(zh-CN) h1,
 html:lang(zh-CN) h2,
@@ -323,23 +310,13 @@ html:lang(zh-CN) h3,
 html:lang(zh-CN) h4,
 html:lang(zh-CN) h5,
 html:lang(zh-CN) h6 {
-  font-family: "NotoSansSC", sans-serif;
-  font-weight: normal;
+  font-family: "Noto Sans SC", sans-serif;
 }
 html:lang(zh-CN) textarea {
-  appearance: none;
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  resize: none;
-  font-family: "NotoSansSC", sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
 }
 html:lang(zh-CN) button {
-  box-sizing: border-box;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-family: "NotoSansSC", sans-serif;
-  -webkit-appearance: none;
+  font-family: "Noto Sans SC", sans-serif;  
 }
 html:lang(zh-CN) input[type="text"],
 html:lang(zh-CN) input[type="password"],
@@ -348,16 +325,9 @@ html:lang(zh-CN) input[type="tel"],
 html:lang(zh-CN) input[type="email"],
 html:lang(zh-CN) select,
 html:lang(zh-CN) textarea {
-  border-radius: 3px;
-  font-family: "NotoSansSC", sans-serif;
-  font-size: 17px;
-  color: #222;
-  word-break: break-all;
+  font-family: "Noto Sans SC", sans-serif;  
 }
 html:lang(zh-CN) ::-webkit-input-placeholder,
 html:lang(zh-CN) textarea::placeholder {
-  font-family: "NotoSansSC", sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  color: #b2b2b2;
+  font-family: "Noto Sans SC", sans-serif;  
 }

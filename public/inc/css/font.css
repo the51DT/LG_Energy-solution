@@ -82,74 +82,74 @@
 
 /* Noto Sans SC : 중문 */
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 900;
   font-display: swap;
-  src: local("NotoSansSC Black"),
+  src: local("Noto Sans SC Black"),
     url(../font/NotoSansSC-Black.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 800;
   font-display: swap;
-  src: local("NotoSansSC ExtraBold"),
+  src: local("Noto Sans SC ExtraBold"),
     url(../font/NotoSansSC-ExtraBold.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 700;
   font-display: swap;
-  src: local("NotoSansSC Bold"),
+  src: local("Noto Sans SC Bold"),
     url(../font/NotoSansSC-Bold.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 600;
   font-display: swap;
-  src: local("NotoSansSC SemiBold"),    
+  src: local("Noto Sans SC SemiBold"),    
     url(../font/NotoSansSC-SemiBold.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 500;
   font-display: swap;
-  src: local("NotoSansSC Medium"),
+  src: local("Noto Sans SC Medium"),
     url(../font/NotoSansSC-Medium.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 400;
   font-display: swap;
-  src: local("NotoSansSC Regular"),
+  src: local("Noto Sans SC Regular"),
     url(../font/NotoSansSC-Regular.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 300;
   font-display: swap;
-  src: local("NotoSansSC Light"),
+  src: local("Noto Sans SC Light"),
     url(../font/NotoSansSC-Light.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 200;
   font-display: swap;
-  src: local("NotoSansSC ExtraLight"),
+  src: local("Noto Sans SC ExtraLight"),
     url(../font/NotoSansSC-ExtraLight.woff) format("woff");
 }
 
 @font-face {
-  font-family: "NotoSansSC";
+  font-family: "Noto Sans SC";
   font-weight: 100;
   font-display: swap;
-  src: local("NotoSansSC Thin"),
+  src: local("Noto Sans SC Thin"),
     url(../font/NotoSansSC-Thin.woff) format("woff");
 }
 

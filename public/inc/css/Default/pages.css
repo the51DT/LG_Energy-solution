@@ -2004,7 +2004,7 @@
 .cont .file-input-box .file-item {position: relative;}
 
 /* 서비스 - 전력 중개 */
-.serv-trading .page-map-wrap {margin-top: 6.25rem;}
+/* .serv-trading .page-map-wrap {margin-top: 6.25rem;} */
 .serv-trading .content-item02 {background-color: #F3F5F7;}
 .serv-trading .content-item04 {background-color: #EAF3F8;}
 .service .content-item01 .content-sect { padding-top: 0; }
@@ -2112,7 +2112,7 @@
 
 
 /* 서비스 - B-Lifecare */
-.serv-blifecare .page-map-wrap {margin-top: 6.25rem;}
+/* .serv-blifecare .page-map-wrap {margin-top: 6.25rem;} */
 .serv-blifecare .icon-link2 {border-radius: calc(100 / 16 * 1rem); color: #fff; font-weight: 500;}
 .serv-blifecare .icon-link2:hover {background-color: var(--colorElement-light-fill-fill-primary);}
 .serv-blifecare .icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external_bl.svg);}
