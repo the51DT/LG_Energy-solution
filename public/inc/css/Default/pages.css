@@ -1626,16 +1626,17 @@
 .news-content-area .search-result>button>img{padding:0.641rem}
 .news:not(.faq) .news-content-area .search-box-wrap {padding:0 0 6.25rem;}
 .news-detail-area{background-color:#F3F5F7;padding:5rem 0 15rem}
-.news-detail-area .news-detail{background-color:#fff;max-width:90rem;margin:0 auto;display:flex;padding:6.25rem;flex-direction:column;align-items:flex-start;gap:3rem;margin-bottom:2.5rem; border-radius: 1rem;}
-.news-detail-area .news-detail .news-detail-tit{color:#171819;font-size:2.5rem;font-weight:600}
-.news-detail-area .news-detail .news-info{width:100%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #555758;padding-bottom:2.5rem}
+.news-detail-area .news-detail{background-color:#fff;max-width:90rem;margin:0 auto;display:flex;padding:6.25rem;flex-direction:column;align-items:flex-start;margin-bottom:2.5rem; border-radius: 1rem;}
+.news-detail-area .news-detail .news-detail-tit{color:#171819;font-size:2.5rem;font-weight:600;}
+.news-detail-area .news-detail .news-info{width:100%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #555758;padding:2.5rem 0;}
 .news-detail-area .news-detail .news-info button{padding:0.8125rem;border:1px solid #B4B8BA;border-radius:999px; display: flex; align-items: center; gap: 10px; color: #555758; font-size: 1rem; font-weight: 500;}
 .news-detail-area .news-detail .news-info img{width:1.3125rem}
 .news-detail-area .news-detail .news-info span {font-size: 1.125rem; color: #858889; font-weight: 600;}
-.news-detail-area .text-list-wrap{width:100%;background-color:#F3F5F7;padding:1.875rem; border-radius: 0.625rem;}
+.news-detail-area .text-list-wrap{width:100%;background-color:#F3F5F7;padding:1.875rem; border-radius: 0.625rem; margin: 3rem 0;}
 .news-detail-area .text-list-wrap li{color: #555758; font-size: 1.125rem;}
-.news-detail-area .news-image-wrapper{width:53.75rem;margin:0 auto}
+.news-detail-area .news-image-wrapper{width:53.75rem;margin:0 auto 3rem; }
 .news-detail-area .news-detail-text{color:#555758;font-size:1.125rem;line-height:160%}
+.news-detail-area .news-detail-text::after {content:""; width: 100%; height: 1px; background:#C9CED1; display: block; margin: 3rem 0;}
 .news-detail-area .news-pagination-wrap{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
 .news-detail-area .news-pagination-wrap>button{gap:2rem;flex:1 0 0;border-radius:0.625rem;background-color:#F3F5F7}
 .news-detail-area .news-pagination-wrap .news-pagination-left{display:flex;padding:1.875rem 1.5rem 1.875rem 2.5rem;text-align:left}
