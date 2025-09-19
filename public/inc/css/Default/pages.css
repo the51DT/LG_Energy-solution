@@ -2371,6 +2371,7 @@
 .serv-kooroo:lang(en) .examp-box .examp-txt {height: 6.437rem;}
 .serv-kooroo .examp-box .examp-ico { width: 6.25rem; height: 6.25rem; border-radius: 50%; background: #fff; flex-shrink: 0; }
 .serv-kooroo .examp-box .examp-txt { color: #555758; font-size: 1rem; font-weight: 500; line-height: 1.6rem; }
+.serv-kooroo:lang(pl) .examp-box .examp-txt {height: 6.4375rem;}
 .serv-kooroo .content-item02 { background-color: #EAF3F8; }
 .serv-kooroo .station-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem; z-index: 1; position: relative; }
 .serv-kooroo .station-box { background-color: #fff; display: flex; flex-direction: column; padding: 2.5rem; border-radius: 1rem; }

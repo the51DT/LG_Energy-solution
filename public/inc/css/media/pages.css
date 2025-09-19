@@ -1937,8 +1937,10 @@
 .serv-bonce .type-box-sub .type-explain > p {font-size: 0.875rem; line-height: 1.3125rem;}
 .serv-bonce .type-explain > p > span {flex-shrink: 0;}
 .serv-bonce .type-box > .type-explain > p { flex-direction: column; gap: 0.25rem; }
+.serv-bonce:lang(pl) .type-box > .type-explain > p > span {width: 100%;}
 .serv-bonce .type-step { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
 .serv-bonce .type-step-item { background-color: #f3f5f7; display: flex; flex-direction: column; gap: 1rem; padding: 1.81rem 2rem; border-radius: 50%; text-align: center; justify-content: center; aspect-ratio: 1 / 1; }
+.serv-bonce:lang(pl) .type-step-item {padding: 2rem 0.75rem;}
 .serv-bonce .type-step-item > span { color: #33B0C6; font-size: 0.75rem; font-weight: 600; line-height: 1.2rem; }
 .serv-bonce .type-step-item > p { color: #171819; font-size: 0.875rem; font-weight: 600; line-height: 1.3125rem; }
 .serv-bonce .type-process, .serv-bonce .type-timeline { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; position: relative; }
@@ -1991,6 +1993,7 @@
 .serv-kooroo .examp-box:last-child { margin: 0; padding: 0; border: none; }
 .serv-kooroo .examp-box .examp-ico { width: 4rem; height: 4rem; }
 .serv-kooroo .examp-box .examp-txt { font-size: 0.875rem; line-height: 1.3125rem; }
+.serv-kooroo:lang(pl) .examp-box .examp-txt {height: revert; text-align: left;}
 .serv-kooroo .station-img { position: relative; margin: 0 auto; width: 17.625rem; top: 0; right: 0; margin-top: 0.5rem; margin-bottom: 1.5rem; }
 .serv-kooroo .station-battery-img { position: relative; margin: 0 auto; width: 15rem; top: 0; right: 0; }
 .serv-kooroo .station-wrap { display: flex; flex-direction: column; margin-top: 1.5rem; gap: 1rem;}
@@ -2013,9 +2016,10 @@
 .serv-kooroo .scooter-top { width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); padding: 1.5rem 0.625rem; border-radius: 0.5rem; }
 .serv-kooroo .scooter-box {min-width: 0; padding: 0; width: auto; height: auto; aspect-ratio: 1/1; }
 .serv-kooroo .scooter-box p { font-size: 0.875rem; font-weight: 600; line-height: 1.3125rem; }
+.serv-kooroo:lang(pl) .scooter-box p {font-size: 0.75rem; line-height: 1.2rem; font-weight: 600;}
 .serv-kooroo .scooter-box-wrap > img { height: 2.5rem; width: fit-content; margin: 0 auto; margin-top: -1.5rem; }
 .serv-kooroo .scooter-bottom { position: relative; width: 10rem; height: 10rem; padding: 2.2rem 3.1rem; margin: 0 auto; text-align: center; margin-top: -0.3rem; }
-.serv-kooroo .scooter-bottom img { width: 3.7rem; height: 3.7rem; }
+
 .serv-kooroo .scooter-bottom p { font-size: 0.875rem; line-height: 1.3125rem; white-space: nowrap;}
 .serv-kooroo .bmts-box .bmts-tit { font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; }
 

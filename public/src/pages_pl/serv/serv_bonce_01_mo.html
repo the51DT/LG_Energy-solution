@@ -21,17 +21,72 @@
     <div class="wrap service serv-bonce"> <!-- wrap에 화면id(id) 관련 클래스 추가하여 사용 -->
 
         <!-- header -->
-        <header class="header-wrap">
-            <!-- 250717 수정 : mobile 임시 헤더 추가 : 메뉴 펼쳤을때 마크업 추가 작업 필요 -->
+        <header class="header-wrap parent-event">
             <div class="header-area mo-only">
                 <div class="header-cont">
-                    <h1 class="ci"><a href="../../cyanogen/cyanogen_main.html"><img
-                                src="../../../inc/images/symbol/ci_en.svg" alt=""></a>
-                    </h1>
+                    <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/ci_en.svg"
+                                alt="LG Energy Solution"></a></h1>
+                    <div class="nav-pop">
+                        <nav class="nav-wrap">
+                            <ul class="nav-area">
+                                <li class="depth01">
+                                    <a href="#">Produkt</a>
+                                    <ul>
+                                        <li class="depth02"><a href="#">Zastosowania</a></li>
+                                        <li class="depth02"><a href="#">Format ogniwa</a></li>
+                                        <li class="depth02"><a href="#">Materiały</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth01">
+                                    <a href="#">Serwis</a>
+                                    <ul>
+                                        <li class="depth02"><a href="#">VPP</a></li>
+                                        <li class="depth02"><a href="#">B.around</a></li>
+                                        <li class="depth02"><a href="#">B-Lifecare</a></li>
+                                        <li class="depth02"><a href="#">B.once</a></li>
+                                        <li class="depth02"><a href="#">KooRoo</a></li>
+                                        <li class="depth02"><a href="#">ESS SI</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth01">
+                                    <a href="#">Firma</a>
+                                    <ul>
+                                        <li class="depth02"><a href="#">Profil firmy</a></li>
+                                        <li class="depth02"><a href="#">Zarządzanie Jeong-Do</a></li>
+                                        <li class="depth02"><a href="#">Sieć globalna</a></li>
+                                        <li class="depth02"><a href="#">Badania i Rozwój</a></li>
+                                        <li class="depth02"><a href="#">Centrum prasowe</a></li>
+                                        <li class="depth02"><a href="#">Kariera</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="nav-pop-util">
+                            <li class="item">
+                                <a href="#">
+                                    <img src="../../../inc/images/symbol/nav_util_item01.svg" alt="">
+                                    <p>Download</p>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="../../../inc/images/symbol/nav_util_item02.svg" alt="">
+                                    <p>Inquiry</p>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="#">
+                                    <img src="../../../inc/images/symbol/nav_util_item03.svg" alt="">
+                                    <p>FAQ</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="utile-wrap">
                         <div class="utile-cont">
                             <div class="utile-item">
-                                <button class="search-btn"></button>
+                                <button class="search-btn header_search-btn search-reset"
+                                    onclick="pubUi.popUp.open('.header_search-area','.header_search-btn');"></button>
                             </div>
                             <div class="utile-item02">
                                 <div class="lang-wrap">
@@ -40,15 +95,15 @@
                                                 src="../../../inc/images/icon/icon_global_img.svg" alt="language"><i
                                                 class="select-btn-right-icon"></i></button>
                                         <ul class="select-menu" role="listbox">
-                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">KR</a>
+                                            <li><a href="javascript:;" role="option" tabindex="0">KR</a>
                                             </li>
                                             <li><a href="javascript:;" role="option" tabindex="0">EN</a></li>
                                             <li><a href="javascript:;" role="option" tabindex="0">CN</a></li>
-                                            <li><a href="javascript:;" role="option" tabindex="0">PL</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">PL</a></li>
                                             <li><a href="javascript:;" role="option" tabindex="0">DE</a></li>
                                         </ul>
                                     </div>
-                                </div><!-- //lang-wrap -->
+                                </div>
                             </div>
                             <div class="utile-item03">
                                 <button class="nav-btn" title="open menu">
@@ -65,8 +120,18 @@
                     </div>
                 </div>
             </div>
-            <!-- //250717 수정 : mobile 임시 헤더 추가 : 메뉴 펼쳤을때 마크업 추가 작업 필요 -->
         </header>
+        <div class="header_search-area target-header_search search-reset">
+            <div class="pop-wrap">
+                <div class="search-result searchEvt">
+                    <img src="../../../inc/images/icon/icon_head_search.svg" alt="">
+                    <input type="text" placeholder="Please enter a keyword">
+                    <button aria-label="delet" class="btn-delete" style="display: none;">
+                        <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
         <!-- //header -->
          <!-- 09.12 수정 : 문구 변경 - B-once -> B.once -->
         <!-- section -->
@@ -74,7 +139,7 @@
             <div class="content-area">
                 <!-- 08.28 content-area 내부 영역 레이아웃 마크업 위치 일부 수정 : S -->
                 <div class="cont-head-wrap mo-only">
-                    <h2 class="title-h1">Service</h2> <!-- title-h1 (페이지타이틀) -->
+                    <h2 class="title-h1">Serwis</h2> <!-- title-h1 (페이지타이틀) -->
                 </div>
                 <div class="tab-wrap">
                     <div class="content-area-head-tab">
@@ -83,7 +148,7 @@
                                 <li class="tab"><a href="#">VPP</a></li>
                                 <li class="tab"><a href="#">B.around</a></li>
                                 <li class="tab"><a href="#">B-Lifecare</a></li>
-                                <li class="tab on"><!-- 09.11 문구수정 --><a href="#">B.once</a></li>
+                                <li class="tab on"><a href="#">B.once</a></li>
                                 <li class="tab"><a href="#">KooRoo</a></li>
                                 <li class="tab"><a href="#">ESS SI</a></li>
                             </ul>
@@ -92,8 +157,7 @@
                     <div class="tab-content-box">
                         <div class="content-item01 active" id="content01"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
                             <div class="content-wrap"> <!-- max-width:90rem (default)-->
-                                <h3 class="title-h2"><!-- 09.11 문구수정 -->
-B.once</h3>
+                                <h3 class="title-h2"><!-- 09.11 문구수정 -->B.once</h3>
                                 <div class="content-sect">
                                     <div class="cont-area-wrap">
                                         <div class="cont-area-sect">
@@ -101,7 +165,7 @@ B.once</h3>
                                                 <p class="article-tit">Overview</p>
                                                 <div class="article-content">
                                                     <p class="article-desc">
-                                                        LG Energy Solution’s one-time battery evaluation service allows quick and convenient assessment of remaining performance and lifespan without removing the battery. In just 5–30 minutes, it delivers accurate diagnostics for used-car transactions or regular inspections, supporting reliable vehicle value assessment and faster check-ups.
+                                                        Jednorazowa usługa oceny baterii LG Energy Solution umożliwia szybkie i wygodne określenie pozostałej wydajności i żywotności bez konieczności wyjmowania baterii. W zaledwie 5–30 minut dostarcza dokładną diagnostykę na potrzeby transakcji samochodów używanych lub regularnych przeglądów, wspierając wiarygodną ocenę wartości pojazdu i szybsze kontrole.
                                                     </p>
                                                     <div class="article-img">
                                                         <img src="../../../inc/images/img/serv04_img_01.png" alt="B.once logo">
@@ -120,7 +184,7 @@ B.once</h3>
                                                             <p>App Store</p>
                                                         </a>
                                                     </div>
-                                                    <p class="adv-explain">Battery evaluation results can be delivered to customers in various ways.</p>
+                                                    <p class="adv-explain">Wyniki oceny baterii mogą być dostarczane klientom na różne sposoby:</p>
                                                     <div class="adv-wrap">
                                                         <div class="adv-box">
                                                             <!-- 08.28 수정 : lottie 추가 -->
@@ -130,10 +194,9 @@ B.once</h3>
                                                                 <lottie-player src="../../../inc/images/lottie/Serv3b_once01.json" background="transparent"  speed="1" loop autoplay></lottie-player> <!-- 09.03 / 로티 json src 변경 -->
                                                             </div>
                                                             <!--//lottie-->
-                                                            <span class="adv-tit"><!-- 09.11 문구수정 -->
-B.once App</span>
+                                                            <span class="adv-tit"><!-- 09.11 문구수정 -->B.once App</span>
                                                             <span class="adv-desc">
-                                                                The diagnostic results can be instantly checked through the app and delivered to users via mobile phones or tablets.
+                                                                Wyniki diagnostyczne można natychmiast sprawdzić w aplikacji i przekazać użytkownikom na telefonach komórkowych lub tabletach.
                                                             </span>
                                                         </div>
         
@@ -147,7 +210,7 @@ B.once App</span>
                                                             <!--//lottie-->
                                                             <span class="adv-tit">API</span>
                                                             <span class="adv-desc">
-                                                                API integration to transmit results directly into your service, platform, or database for user access.
+                                                                Integracja API w celu bezpośredniego przesyłania wyników do Twojej usługi, platformy lub bazy danych, aby użytkownicy mieli do nich dostęp.
                                                             </span>
                                                         </div>
                                                         <div class="adv-box">
@@ -160,7 +223,7 @@ B.once App</span>
                                                             <!--//lottie-->
                                                             <span class="adv-tit">Mail</span>
                                                             <span class="adv-desc">
-                                                                Email delivery to a designated company account, such as a representative address.
+                                                                Wysyłka wyników na wyznaczone konto firmowe, takie jak adres reprezentacyjny.
                                                             </span>
                                                         </div>
                                                     </div>
@@ -181,79 +244,79 @@ B.once App</span>
                                                 <p class="article-tit">Evaluation Methods</p>
                                                 <div class="article-content">
                                                     <p class="article-desc">
-                                                        The one-time evaluation service instantly issues a certificate by simply attaching the diagnostic device to the vehicle and performing a quick action. Offering both speed and ease, it provides highly accurate assessments of battery condition.
+                                                        Jednorazowa usługa oceny natychmiast wystawia certyfikat, wystarczy podłączyć urządzenie diagnostyczne do pojazdu i wykonać szybkie działanie. Dzięki szybkości i prostocie zapewnia bardzo dokładną ocenę stanu baterii.
                                                     </p>
                                                 </div>
                                                 <div class="type-wrap">
                                                     <div class="article-content">
-                                                        <p class="type-tit">QuickScan (Instant Diagnosis)</p>
+                                                        <p class="type-tit">QuickScan (Natychmiastowa diagnostyka)</p>
                                                         <p class="type-desc">
-                                                            Based on BMS data collected from the vehicle and LG Energy Solution’s extensive big data, this battery evaluation method generates accurate State of Health (SoH) estimates.
+                                                            Na podstawie danych BMS zebranych z pojazdu oraz obszernej bazy danych LG Energy Solution ta metoda oceny baterii generuje dokładne szacunki stanu zdrowia (SoH).
                                                         </p>
                                                         <div class="type-box">
                                                             <div class="type-process">
-                                                                <p><span>Speed<br>Evaluation</span>completed in as little as 2 minutes</p>
-                                                                <p><span>Simplicity</span>No battery removal required</p>
-                                                                <p><span>Efficiency</span>Evaluate multiple vehicle types with a single device</p>
+                                                                <p><span>Szybkość<br> oceny</span>zakończenie w zaledwie 2 minuty</p>
+                                                                <p><span>Prostota</span>brak konieczności demontażu baterii</p>
+                                                                <p><span>Wydajność</span>ocena wielu typów pojazdów za pomocą jednego urządzenia</p>
                                                             </div>
                                                             <div class="type-box-sub">
                                                                 <div class="type-explain">
-                                                                    <p><span>Evaluation Method</span>Plug the diagnostic scanner into the vehicle and switch the ignition ON/OFF</p>
-                                                                    <p><span>Evaluation Time</span>Minimum 2-5 minutes</p>
-                                                                    <p><span>Accuracy</span>± 5%</p>
+                                                                    <p><span>Metoda oceny</span>Podłącz skaner diagnostyczny do pojazdu i włącz/wyłącz zapłon</p>
+                                                                    <p><span>Czas oceny</span>Minimum 2–5 minut</p>
+                                                                    <p><span>Dokładność</span>± 5%</p>
                                                                 </div>
                                                                 <div class="type-step">
                                                                     <div class="type-step-item">
                                                                         <span>01</span>
-                                                                        <p>Evaluation<br>Target</p>
+                                                                        <p>Cel oceny</p>
                                                                     </div>
                                                                     <div class="type-step-item">
                                                                         <span>02</span>
-                                                                        <p>Vehicle-installed<br>diagnostic device</p>
+                                                                        <p>Pojazdowe<br> urządzenie<br> diagnostyczne</p>
                                                                     </div>
                                                                     <div class="type-step-item">
                                                                         <span>03</span>
-                                                                        <p>Ignition<br>ON/OFF</p>
+                                                                        <p>Zapłon<br>ON/OFF</p>
                                                                     </div>
                                                                     <div class="type-step-item">
                                                                         <span>04</span>
-                                                                        <p>Instant battery<br>evaluation results<br>available</p>
+                                                                        <p>Wyniki oceny baterii<br> dostępne<br> natychmiast</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="article-content">
-                                                        <p class="type-tit">PowerScan (Charge Diagnosis)</p>
+                                                        <p class="type-tit">PowerScan (Diagnostyka ładowania)</p>
                                                         <p class="type-desc">
-                                                            A battery evaluation method that calculates State of Health (SoH) by applying LG Energy Solution’s proprietary algorithm to BMS and charging data.
+                                                            Metoda oceny baterii, która oblicza stan zdrowia (SoH) poprzez zastosowanie własnego algorytmu LG Energy Solution do danych BMS i danych dotyczących ładowania.
                                                         </p>
                                                         <div class="type-box">
                                                             <div class="type-explain">
-                                                                <p><span>LGES</span>Same-day Result: No additional driving data required<br>(Battery evaluation report issued within 30 minutes after charging is completed)</p>
+                                                                <p><span>LG Energy Solution</span>Wynik tego samego dnia: brak konieczności dodatkowych danych z jazdy<br>(Raport oceny baterii wydany w ciągu 30 minut po zakończeniu ładowania)</p>
                                                             </div>
                                                             <div class="type-timeline">
-                                                                <p><span>01</span>Plug in diagnostic scanner</p>
-                                                                <p><span>02</span>Start charging</p>
-                                                                <p><span>03</span>End charging</p>
-                                                                <p><span>04</span>Driving (5–7 days)<span class="note">Not required with LG Energy Solution</span>
+                                                                <p><span>01</span>Podłącz skaner diagnostyczny</p>
+                                                                <p><span>02</span>Rozpocznij ładowanie</p>
+                                                                <p><span>03</span>Zakończ ładowanie</p>
+                                                                <p><span>04</span>Jazda (5–7 dni)<span class="note">Niewymagane w przypadku LG Energy Solution</span>
                                                                 </p>
-                                                                <p><span>05</span>Evaluation complete</p>
+                                                                <p><span>05</span>Ocena zakończona</p>
                                                             </div>
                                                             <div class="type-box-sub">
                                                                 <div class="type-explain">
-                                                                    <p><span>Evaluation Method</span>Start charging at 50% SoC and continue until fully charged<br>(Competitor A: Requires full charge from 100% to below 10% discharge)</p>
-                                                                    <p><span>Evaluation Time</span>Minimum 30–50 minutes</p>
-                                                                    <p><span>Accuracy</span>± 3%</p>
+                                                                    <p><span>Metoda oceny</span>Rozpocznij ładowanie przy 50% SoC i kontynuuj aż do pełnego naładowania<br>(Konkurent A: wymaga pełnego rozładowania od 100% do poniżej 10%)</p>
+                                                                    <p><span>Czas oceny</span>Minimum 30–50 minut</p>
+                                                                    <p><span>Dokładność</span>± 3%</p>
                                                                 </div>
                                                                 <div class="type-step">
                                                                     <div class="type-step-item">
                                                                         <span>01</span>
-                                                                        <p>Evaluation<br>Target</p>
+                                                                        <p>Cel oceny</p>
                                                                     </div>
                                                                     <div class="type-step-item">
                                                                         <span>02</span>
-                                                                        <p>Vehicle-installed<br>diagnostic device</p>
+                                                                        <p>Pojazdowe<br> urządzenie<br> diagnostyczne</p>
                                                                     </div>
                                                                     <div class="type-step-item">
                                                                         <span>03</span>
@@ -261,7 +324,7 @@ B.once App</span>
                                                                     </div>
                                                                     <div class="type-step-item">
                                                                         <span>04</span>
-                                                                        <p>Immediate result<br>confirmation after<br>charging</p>
+                                                                        <p>Immediate result<br> confirmation after<br> charging</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -283,49 +346,54 @@ B.once App</span>
                                                 <p class="article-tit">Use Cases</p>
                                                 <div class="article-content">
                                                     <p class="article-desc">
-                                                        With just a single scan, <!-- 09.11 문구수정 -->
-B.once quickly, easily, and accurately assesses an EV battery’s current condition—including State of Health (SoH), voltage, temperature, and fault information—making it highly useful for used-car transactions as well as regular maintenance and inspections.
+                                                        Dzięki pojedynczemu skanowi B.Once szybko, łatwo i dokładnie ocenia aktualny stan baterii EV — w tym stan zdrowia (SoH), napięcie, temperaturę i informacje o usterkach — co czyni go niezwykle przydatnym zarówno w transakcjach samochodów używanych, jak i w regularnej konserwacji oraz przeglądach.
                                                     </p>
                                                     <div class="scan-img"><img class="scan-img"
-                                                            src="../../../inc/images/img/serv04_img_10_en.png"
-                                                            alt="Battery Condition Scan. Battery Condition Monitoring Technology - Safety Diagnostics, Degradation Diagnostics, SoH Estimation. Battery Evaluation Report Issuance. Application in Used-Car Transactions. Application in Vehicle Maintenance & Inspection.">
+                                                            src="../../../inc/images/img/serv04_img_10_pl.png"
+                                                            alt="Skanowanie stanu akumulatora. Technologia monitorowania stanu akumulatora – diagnostyka bezpieczeństwa, diagnostyka degradacji, szacowanie stanu akumulatora (SoH). Wydawanie raportów oceny stanu akumulatora. Zastosowanie w transakcjach dotyczących samochodów używanych. Zastosowanie w konserwacji i przeglądach pojazdów.">
                                                     </div>
                                                 </div>
                                                 <div class="ucd-wrap">
                                                     <div>
-                                                        <p class="ucd-tit">Used-Car Trading Platforms</p>
+                                                        <p class="ucd-tit">Platformy handlu samochodami używanymi</p>
                                                         <div class="ucd-box-wrap">
                                                             <div class="ucd-box">
                                                                 <span>01</span>
                                                                 <div class="ucd-desc-wrap">
-                                                                    <p>Battery Certification Product Development</p>
-                                                                    <p>Enhance the perception of “high-quality, safe used EVs” by issuing certified battery evaluation reports for vehicles sold.</p>
+                                                                    <p>Rozwój produktu certyfikacji baterii</p>
+                                                                    <p>Zwiększenie postrzegania „wysokiej jakości, bezpiecznych używanych EV” poprzez wydawanie certyfikowanych raportów oceny baterii dla sprzedawanych pojazdów.</p>
                                                                 </div>
                                                             </div>
                                                             <div class="ucd-box">
                                                                 <span>02</span>
                                                                 <div class="ucd-desc-wrap">
-                                                                    <p>Value-added Monetization</p>
-                                                                    <p>Generate new revenue streams by increasing product value in the growing used EV market through verified and certified vehicles.</p>
+                                                                    <p>Monetyzacja wartości dodanej</p>
+                                                                    <p>Generowanie nowych źródeł przychodów poprzez zwiększenie wartości produktu na rosnącym rynku używanych EV dzięki zweryfikowanym i certyfikowanym pojazdom.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <p class="ucd-tit">Vehicle Maintenance & Inspection</p>
+                                                        <p class="ucd-tit">Konserwacja i przeglądy pojazdów</p>
                                                         <div class="ucd-box-wrap">
                                                             <div class="ucd-box">
                                                                 <span>01</span>
                                                                 <div class="ucd-desc-wrap">
-                                                                    <p>EWP-linked Value-added Service Launch</p>
-                                                                    <p>Provide regular battery evaluation services in connection with Extended Warranty Programs (EWP).</p>
+                                                                    <p>Uruchomienie usług wartości dodanej powiązanych z EWP</p>
+                                                                    <p>Świadczenie regularnych usług oceny baterii w powiązaniu z programami przedłużonej gwarancji (EWP).</p>
+                                                                    <!-- 09.18 수정 : 문구 추가 -->
+                                                                    <div class="text-list-wrap">
+                                                                        <ul class="text-list ty02">
+                                                                            <li>* EWP (Extended Warranty Program)</li>
+                                                                        </ul>
+                                                                    </div><!-- //09.18 수정 : 문구 추가 -->
                                                                 </div>
                                                             </div>
                                                             <div class="ucd-box">
                                                                 <span>02</span>
                                                                 <div class="ucd-desc-wrap">
-                                                                    <p>Battery Evaluation-based Add-on Services</p>
-                                                                    <p>Offer battery evaluation reports and battery management guidance at vehicle delivery.</p>
+                                                                    <p>Dodatkowe usługi oparte na ocenie baterii</p>
+                                                                    <p>Oferowanie raportów oceny baterii i wskazówek dotyczących zarządzania baterią przy dostawie pojazdu.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -335,11 +403,11 @@ B.once quickly, easily, and accurately assesses an EV battery’s current condit
                                                     <!-- 08.28 수정 : 카탈로그/문의하기 버튼 a태그로 변경 -->
                                                     <div class="service-btn-wrap">
                                                         <a href="#" target="_blank" class="icon-btn-lg icon-white icon-download btn-outline01">
-                                                            <span>Catalog</span>
+                                                            <span>Pobierz katalog</span>
                                                             <div class="icon-area"></div>
                                                         </a>
                                                         <a href="#" class="icon-btn-lg icon-white icon-cs btn-outline01">
-                                                            <span>Contact Us</span>
+                                                            <span>Skontaktuj się z nami</span>
                                                             <div class="icon-area"></div>
                                                         </a>
                                                     </div>
