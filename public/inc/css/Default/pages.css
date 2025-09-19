@@ -1421,7 +1421,7 @@
 .comp .comp-info .table-wrap.tb-list table tbody > tr:first-of-type > th,
 .comp .comp-info .table-wrap.tb-list table tbody > tr:first-of-type > td {border-top: 0;}
 .comp .comp-info .table-wrap table tr > th,
-.comp .comp-info .table-wrap table tr > td {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04);}
+.comp .comp-info .table-wrap table tr > td {border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default04); padding-inline: 0;}
 .comp:lang(en) .comp-info .table-wrap table tr > th,
 .comp:lang(en) .comp-info .table-wrap table tr > td {padding: 1rem 0;}
 .comp:lang(en) .comp-info .table-wrap table tr:nth-child(2) > td,
@@ -1873,7 +1873,8 @@
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li:before {content:''; display:inline-block; width:0.6875rem; height:0.6875rem; border-radius:100%; background: #f3f5f7; border:1px solid #3ec2cf; position:absolute; top:12px; left:-5.4rem; z-index:5;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info {display: flex; gap:1.25rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .title {color:#33B0C6; font-weight: 500; font-size: 1.5rem; line-height: 2.25rem; width: 4rem;}
-.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color:#555758; padding: 4px 0 0 0; position: relative;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color:#555758; padding: 0.625rem 0 0 0; position: relative;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc:first-child {padding: 0;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc::before {content:''; width:0.25rem; height:0.25rem; background-color:#555758; display: inline-block; border-radius: 50%; position:absolute; top:50%; left:0; transform: translateY(-50%); display: none;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .img-box img {width: 29.125rem; height:17.5rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .img-box .img-title {margin-top:1.25rem; text-align: center; font-size: 1.25rem; font-weight: 400; line-height: 2rem;}
