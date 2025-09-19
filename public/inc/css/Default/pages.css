@@ -2040,6 +2040,8 @@
 
 .serv-trading:lang(en) #content01 .article-img .lottie-wrap {top:22.41rem; left: 30.375rem;}
 
+.serv-trading:lang(zh-CN) #content01 .article-img .lottie-wrap {top: 22.41rem;}
+
 /* 서비스 - B.around */
 .serv-baround .brand-info {display: flex; flex-direction: column; align-items: center; margin-top: 5rem;}
 .serv-baround .brand-info .brand-logo {width: 40.6875rem;}
