@@ -1709,6 +1709,8 @@
 .serv-trading:lang(en) #content01 .article-img .lottie-wrap {top: 18.38rem; left: 50%; transform: translateX(-50%);}
 .serv-trading:lang(en) #content02 .article-img {margin-inline: 0;}
 
+.serv-trading:lang(pl) #content01 .article-img .lottie-wrap {top: 18.06rem;}
+
 /* 서비스 - B.around */
 .serv-baround .brand-info {margin-top: 3rem;}
 .serv-baround .brand-info .brand-logo {width: 17.5rem;}
