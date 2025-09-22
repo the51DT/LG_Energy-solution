@@ -696,8 +696,8 @@ table {border-collapse: collapse;}
 .modal-pop.dialog .pop-wrap .pop-header {padding-bottom: 1.5rem;}
 .modal-pop.dialog .pop-wrap .pop-content .desc {font-size: 1.125rem; line-height: 1.8rem;}
 .modal-pop.dialog .pop-wrap .pop-content .btn-wrap {padding-top: 1.5rem;}
-.modal-pop.dialog .pop-footer > .btn-wrap .btn-cancel {width: 13.18rem;}
-.modal-pop.dialog .pop-footer > .btn-wrap .btn-confirm {width: 18.68rem;}
+.modal-pop.dialog .pop-footer > .btn-wrap .btn-cancel {max-width: 13.18rem;}
+.modal-pop.dialog .pop-footer > .btn-wrap .btn-confirm {max-width: 18.68rem;}
 
 .modal-pop .pop-wrap.list-pop {padding: 2rem 2.5rem; width: 37.5rem;}
 .modal-pop .pop-wrap.list-pop .pop-header {padding-bottom: 1rem;}
@@ -713,8 +713,9 @@ table {border-collapse: collapse;}
 
 .modal-pop .pop-wrap.input-form  {padding: 2rem 2.5rem;}
 .modal-pop .pop-wrap.input-form .pop-header {padding-bottom: 1rem;}
-.modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap > label { min-width: 5.5rem;}
-.modal-pop .pop-wrap.input-form .wrap-form-input .input-box {padding-right: 0; margin-left: 1.25rem;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap {gap: 1.25rem;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap > label { min-width: 5.5rem; flex: 1; display: block;}
+.modal-pop .pop-wrap.input-form .wrap-form-input .input-box {padding-right: 0;}
 .modal-pop .pop-wrap.input-form .wrap-form-input .input-wrap > label > span { color: #33B0C6; font-size: 1.125rem; margin-left: 0.25rem; }
 .modal-pop .pop-wrap.input-form .terms-wrap {background: #f3f5f7; padding: 1.25rem; border-radius: 0.5rem; margin-top: 1.88rem;}
 .modal-pop .pop-wrap.input-form .terms-wrap .terms-item:not(:last-child) {margin-bottom: 1rem;}
@@ -733,6 +734,8 @@ table {border-collapse: collapse;}
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap:has(.btn-group) {display: block;}
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap button,
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap a {font-size: 1.25rem; font-weight: 500; line-height: 1.75rem;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap .btn-cancel {max-width: 11.875rem;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap .btn-confirm {max-width: revert;}
 
 /* full popup */
 .modal-pop.full .pop-wrap {padding: 1.88rem 1.5rem 2.56rem;}
