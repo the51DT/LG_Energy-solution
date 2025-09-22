@@ -2206,10 +2206,10 @@
 
 
 /* 인재상 */
-.rctt .core-cont-wrap { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; margin-bottom: 7.5rem; }
-.rctt .core-cont-wrap .core-cont { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4.0625rem; border: 4px solid #E1E7EA; padding: 2rem 2rem 1.5rem 2rem; border-radius: 1rem; flex: 1; }
-.rctt .core-cont-wrap .core-cont > span { color: #171819; font-size: 1.5rem; font-weight: 600; display: flex; gap: 0.5rem; align-items: center;}
-.rctt .core-cont-wrap .core-cont > span > span { color: #33B0C6; font-size: 1.25rem; }
+.rctt .core-cont-wrap { display: flex; justify-content: space-between; gap: 1.25rem; margin-bottom: 7.5rem; }
+.rctt .core-cont-wrap .core-cont { display: flex; flex-direction: column; align-items: center; gap: 4.0625rem; border: 4px solid #E1E7EA; padding: 2rem 2rem 1.5rem 2rem; border-radius: 1rem; flex: 1; }
+.rctt .core-cont-wrap .core-cont > span { color: #171819; font-size: 1.5rem; font-weight: 600; line-height: 2.375rem; display: flex; gap: 0.5rem; align-items: center;}
+.rctt .core-cont-wrap .core-cont > span > span { color: #33B0C6; font-size: 1.25rem; line-height: 2rem;}
 .rctt .core-cont-wrap .core-cont > img { width: 8.125rem; }
 .rctt .core-cont-wrap .core-cont > p { color: #555758; text-align: center; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; }
 .rctt .core-link-wrap { display: flex; background-image: url(../../images/img/rctt_bg.png); background-size: cover; background-position: center; height: 8.75rem; border-radius: 1rem; align-items: center; justify-content: space-between; padding: 3.0625rem 7.5rem 3.0625rem 3.75rem; color: #fff; margin-bottom: 5rem; }
@@ -2290,6 +2290,8 @@
 .rchr #tab3-content .grid-cont-wrap {margin-top: 0;}
 :lang(en).rchr #tab2-content .content-header {padding-bottom: 0;}
 :lang(en).rchr #tab2-content [class^="content-item"]:last-of-type {padding-top: 0;}
+
+:lang(pl).rctt .core-cont-wrap .core-cont > span {flex-direction: column; gap: 0;}
 
 /* 조직문화 */
 .rcct .content-sect { display: flex; flex-direction: column; gap: 5rem; padding-top: 0;}
