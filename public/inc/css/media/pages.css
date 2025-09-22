@@ -1903,6 +1903,7 @@
 .rchr .welfare-list-wrap .text-list > li, .rchr .grid-cont-wrap .text-list > li { font-size: 0.875rem; line-height: 1.3125rem; }
 .rchr .text-list-wrap { border-bottom: none !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
 .rchr #tab2-content .content-item01, .rchr #tab3-content .content-item01 {padding-top: 3rem;}
+:lang(en).rchr #tab2-content .content-header {padding-bottom: 1.5rem;} 
 
 /* 조직문화 */
 .rcct .content-sect {padding-top: 0; gap: 3rem;}
