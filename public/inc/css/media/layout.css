@@ -98,7 +98,7 @@ aside.end {bottom: 390px;}
 /* footer */
 .footer-wrap {max-width: 100%;}
 .footer-area {display: block; padding: 2.38rem 0 2rem; margin: 0 1.25rem;}
-.footer-site_map {line-height: 1.4rem;}
+.footer-site_map {line-height: 1.4rem;font-size: 1rem;}
 .footer-site_map-desc {font-size: 0.875rem; line-height: 1.4rem; text-align: left; padding: 1.5rem 0;}
 .footer-item02 {display: block;} 
 .footer-bottom {display: block; padding-bottom: 0; margin: 0 1.25rem;}
@@ -134,10 +134,10 @@ aside.end {bottom: 390px;}
 .main-page .content-item01.active .ani-diagram{height: 4.375rem;width:calc(100% - 8rem);}
 .main-page .content-item01 .action-wrap{position:static;top:0;right:0;transform: translateY(0);width:100%;height:auto;padding-top:1.8rem;}
 .main-page .content-item01 .img-action01{margin:0;max-width:360px;height:auto;left:auto;opacity:0;position:absolute;right:55%;top:-110px;z-index: 1;transform: translate(50%, -50%);transition: all 1s;}
-.main-page .content-item01.active .img-action01{opacity:1;animation: imgAni01 3s linear;animation-delay: 1s;animation-iteration-count : infinite;height:auto;width:100%;}
+.main-page .content-item01.active .img-action01{opacity:1;animation: imgAni03 3s linear;animation-delay: 1s;animation-iteration-count : infinite;height:auto;width:100%;}
 /* .main-page .content-item01 .img-action02{margin-top:0;max-width:360px;height:auto;opacity:0;position:absolute;right:30%;top:-200px;z-index: 1;transform: translateX(50%);} */
 /* .main-page .content-item01.active .img-action02{animation: imgAni02 6.3s linear;animation-delay: 3.3s;animation-iteration-count : infinite;} */
-@keyframes imgAni01 {
+@keyframes imgAni03 {
     0% {top:-110px;}
     50% {top:-120px;}
     100%{top:-110px;}
@@ -156,12 +156,6 @@ aside.end {bottom: 390px;}
 .main-page .content-item01 .icon-btn:after{content:"";display: block;width:1.88rem;height:1.88rem;background: url(../../images/icon/icon_link_arrow_bl.svg) no-repeat;}
 .main-page .content-item01 .icon-btn:hover{color:var(--text-text-on-primary, #FFF);}
 .main-page .content-item01 .icon-btn:hover:after{background: url(../../images/icon/icon_link_arrow.svg) no-repeat;}
-
-
-
-
-
-
 
 
 
