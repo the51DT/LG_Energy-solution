@@ -826,6 +826,7 @@
 .rcif .job-story + .paging-wrap {margin-top: 2rem;}
 .rcif:lang(en) .tab-content-box .job-list + .btn-wrap > a {width: 100%;}
 .rcif:lang(en) .tab-content > .content-sect.bg-gray {padding-bottom: 6.25rem;}
+.rcif #tab2-4-content .btn-wrap .icon-plus {width: 100%; min-width: revert; max-width: revert;}
 
 /* 산업별 솔루션 (pind) */
 .pind [class^="content-item"]:only-child {padding-bottom: 6.25rem;}

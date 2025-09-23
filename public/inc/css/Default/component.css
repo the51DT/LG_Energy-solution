@@ -93,9 +93,9 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .btn-primary01.icon-btn span {margin-right: 0.5rem;}
 .btn-outline01.icon-btn .icon-area,
 .btn-primary01.icon-btn .icon-area {display: flex; justify-content: center; align-items: center; width: 1.125rem; height: 1.125rem; border-radius: 100%;}
-.btn-outline01.icon-btn .icon-area::before {content: ""; display: block; width: 1.125rem; height: 1.125rem; background-position: center center; background-size: contain; background-image: url(../../images/icon/icon_download.svg);}
+.btn-outline01.icon-btn .icon-area::before {content: ""; display: block; width: 1.125rem; height: 1.125rem; background-repeat:no-repeat; background-position: center center; background-size: contain; background-image: url(../../images/icon/icon_download.svg);}
 .btn-outline01.icon-btn.icon-link .icon-area::before {background: url(../../images/icon/icon_arrow_right2.svg) no-repeat 100% center;}
-.btn-primary01.icon-btn .icon-area::before {content: ""; display: block; width: 1.125rem; height: 1.125rem; background-position: center center; background-size: contain; background-image: url(../../images/icon/icon_download_wh.svg);}
+.btn-primary01.icon-btn .icon-area::before {content: ""; display: block; width: 1.125rem; height: 1.125rem; background-repeat:no-repeat; background-position: center center; background-size: contain; background-image: url(../../images/icon/icon_download_wh.svg);}
 
 .btn-outline01.icon-btn:hover {color: #fff; background: var(--colorElement-light-fill-fill-default00);}
 .btn-primary01.icon-btn:hover {color: #fff; background: var(--colorElement-light-fill-fill-default01);}
@@ -728,14 +728,14 @@ table {border-collapse: collapse;}
 .modal-pop .pop-wrap.input-form .terms-item-list .terms-item {list-style: decimal; list-style-position: inside;  font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #555758;}
 .modal-pop .pop-wrap.input-form .terms-item-list .terms-item strong {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #555758;}
 .modal-pop .pop-wrap.input-form .terms-item-list .terms-item p {padding-left: 1.25rem; color: #555758; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
-.modal-pop .pop-wrap.input-form .terms-item-list .terms-item:last-child {padding-bottom: 4.06rem;}
+/* .modal-pop .pop-wrap.input-form .terms-item-list .terms-item:last-child {padding-bottom: 4.06rem;} */
 .modal-pop .pop-wrap.input-form .checkbox input[type="checkbox"] + label .txt {font-weight: 500;}
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap {display: flex; justify-content: center;}
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap:has(.btn-group) {display: block;}
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap button,
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap a {font-size: 1.25rem; font-weight: 500; line-height: 1.75rem;}
 .modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap .btn-cancel {max-width: 11.875rem;}
-.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap .btn-confirm {max-width: revert;}
+.modal-pop .pop-wrap.input-form .pop-footer > .btn-wrap .btn-confirm:not(:only-child) {max-width: revert;}
 
 /* full popup */
 .modal-pop.full .pop-wrap {padding: 1.88rem 1.5rem 2.56rem;}
