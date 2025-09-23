@@ -130,6 +130,9 @@ hr {
 label {
   word-break: break-all;
 }
+html:lang(en) label {
+  word-break: keep-all;
+}
 legend,
 caption {
   /* position: absolute; */

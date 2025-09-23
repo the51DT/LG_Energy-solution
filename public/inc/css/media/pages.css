@@ -2145,7 +2145,7 @@
 .rnd .article-box-wrap .article-group { flex-direction: column; }
 .rnd .article-box-wrap + .article-box-wrap {margin-top: 2rem;}
 .article-box-wrap .article-title {font-size: 1rem; line-height: 1.6rem;}
-.rnd .article-box .head-title { text-align: center; }
+.rnd .article-box .head-title { text-align: center; flex-direction: column; gap: 0.25rem; }
 .rnd .article-box .intro-title { font-size: 1rem; }
 .rnd .article-box img {max-width: 11.25rem;}
 .rnd .article-box.icon-type .img-wrap img { width: 4rem; height: 4rem; }
