@@ -200,7 +200,7 @@
 .asterisk-text::before {content: "*\00a0"; display: block; margin: 0; width: auto; height: auto; background-image: none;}
 
 /* popup */
-.pop-wrap .pop-header .title {font-size: 1.125rem; line-height: 1.575rem;}
+.pop-wrap .pop-header .title {font-size: 1.125rem; line-height: 1.575rem; padding-right: 24px;}
 .pop-wrap .pop-content .desc {font-size: 0.875rem; line-height: 1.4rem;} 
 .pop-wrap .pop-close {top: 1.88rem; right: 1.5rem; width: 1.5rem; height: 1.5rem;}
 .pop-wrap .pop-footer > .btn-wrap button {font-size: 1rem; font-weight: 500; line-height: 1.4rem; height: 2.875rem; padding: 0.375rem 1.875rem;}
