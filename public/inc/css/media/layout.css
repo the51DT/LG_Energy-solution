@@ -106,6 +106,7 @@ aside.end {bottom: 390px;}
 .footer-logo img {width: 12.125rem; margin: 0; padding: 0;}
 .footer-wrap .selectbox-wrap.type3 {height: 3.5rem;}
 .footer-wrap .selectbox-wrap.type3 .select-cate::after {margin-top: 0;}
+.footer-item02:not(:lang(ko)) {margin-top: 1.5rem;}
 
 
 
