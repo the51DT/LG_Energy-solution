@@ -2382,7 +2382,7 @@
 .serv-kooroo:lang(zh-CN) .article-tit-wrap .btn-wrap a {font-size: 1.125rem; font-weight: 500; line-height: 1.575rem;}
 .serv-kooroo:lang(zh-CN) .article-tit-wrap .btn-wrap a .icon-area {width: 1.5rem; height: 1.5rem;}
 .serv-kooroo .article-img { padding: 2.375rem 10.125rem; margin: 5rem 0; }
-.serv-kooroo .examp-wrap { display: flex; background-color: #F3F5F7; border-radius: 1rem; justify-content: center; align-items: center; padding: 2rem; }
+.serv-kooroo .examp-wrap { display: flex; background-color: #F3F5F7; border-radius: 1rem; justify-content: center;  padding: 2rem; }
 .serv-kooroo:lang(en) .examp-wrap {padding: 2.5rem; gap: 3.75rem;}
 .serv-kooroo .examp-box { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
 .serv-kooroo:lang(en) .examp-box .examp-txt {height: 6.437rem;}

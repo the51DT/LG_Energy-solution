@@ -2012,7 +2012,7 @@
 .serv-kooroo .examp-box { width: 100%; flex-direction: row; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #C9CED1; }
 .serv-kooroo .examp-box:last-child { margin: 0; padding: 0; border: none; }
 .serv-kooroo .examp-box .examp-ico { width: 4rem; height: 4rem; }
-.serv-kooroo .examp-box .examp-txt { font-size: 0.875rem; line-height: 1.3125rem; }
+.serv-kooroo .examp-box .examp-txt { font-size: 0.875rem; line-height: 1.3125rem; text-align: left; }
 .serv-kooroo:lang(pl) .examp-box .examp-txt {height: revert; text-align: left;}
 .serv-kooroo .station-img { position: relative; margin: 0 auto; width: 17.625rem; top: 0; right: 0; margin-top: 0.5rem; margin-bottom: 1.5rem; }
 .serv-kooroo .station-battery-img { position: relative; margin: 0 auto; width: 15rem; top: 0; right: 0; }
