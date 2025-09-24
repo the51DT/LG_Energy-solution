@@ -2291,7 +2291,8 @@
 :lang(en).rchr #tab2-content .content-header {padding-bottom: 0;}
 :lang(en).rchr #tab2-content [class^="content-item"]:last-of-type {padding-top: 0;}
 
-:lang(pl).rctt .core-cont-wrap .core-cont > span {flex-direction: column; gap: 0;}
+:lang(pl).rctt .core-cont-wrap .core-cont > span,
+:lang(de).rctt .core-cont-wrap .core-cont > span {flex-direction: column; gap: 0;}
 
 /* 조직문화 */
 .rcct .content-sect { display: flex; flex-direction: column; gap: 5rem; padding-top: 0;}

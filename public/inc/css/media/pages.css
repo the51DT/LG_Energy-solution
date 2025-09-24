@@ -1686,6 +1686,7 @@
 
 .rctt:lang(en) .core-cont-wrap .core-cont {gap: 0.5rem; height: auto;}
 :lang(pl).rctt .core-cont-wrap .core-cont > span {flex-direction: row; gap: 0.25rem;}
+:lang(de).rctt .core-cont-wrap .core-cont > span {align-items: flex-start;}
 
 /* 서비스 - 전력 중개 */
 .service .cont-head-wrap {margin-bottom: 0;}
