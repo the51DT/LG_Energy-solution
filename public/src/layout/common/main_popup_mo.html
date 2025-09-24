@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>LG에너지솔루션 | Component - popup - event </title>
+        <link type="text/css" rel="stylesheet" href="../../guide/inc/css/shCoreDefault.css" />
+        <link type="text/css" rel="stylesheet" href="../../guide/inc/css/guide.css" />
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />    
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/common_mo.css" /> <!-- common_mo.css 변경 : full 팝업 스타일 적용위함 -->
+    </head>
+    <body>
+
+        <div class="guide-wrapper">
+            <div class="wrap">
+                <section class="guide-section intro">
+                    <div class="guide-header">
+                      <p class="guide-title-h3">Popup : 메인 > 이벤트 팝업(mobile)</p>
+                      <div class="btn-wrap">
+                        <a href="../ui-guide.html" class="txt-btn02 txt-btn-sm">Component 페이지로 돌아가기</a>
+                      </div>
+                    </div>
+                    <ul class="guide-list">
+                      <li>
+                        <p>팝업 컴포넌트의 마크업은 .wrap 바깥에 위치합니다.</p>
+                      </li>
+                      <li>
+                        <p>
+                          팝업에 있는 ID를 버튼의 "id" 에 적용합니다.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                            pubUi.evtPopEvt(); 로 실행
+                        </p>
+                      </li>
+                    </ul>
+                  </section>
+            </div>
+        </div>
+        <!-- popupEvt : mobile -->
+        <div class="modal-pop evt" id="popupEvt1">
+            <div class="pop-wrap">
+                <div class="pop-content">
+                    <div class="img-area">
+                        <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image">                        
+                    </div>
+                    <div class="foot-area checkbox">
+                        <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
+                        <label for="chk-close" class="checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            <!-- 08.18 수정 : 문구 변경 -->
+                            <span class="txt">
+                                오늘 하루 열지않음
+                            </span>
+                        </label>
+                        <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupEvt1', '#popupEvtBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>        
+        <script>
+            pubUi.evtPopEvt();
+        </script>
+    </body>
+</html>

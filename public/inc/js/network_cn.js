@@ -440,16 +440,22 @@ function bindEvents() {
                 item.classList.remove("active");
             });
 
-            if (targetContinent == "韩国") {
-                map.setView([36.5, 127.5], 3);
+            if (targetContinent == "Korea") {
+                map.setView([36.5, 127.5], 5);
             } else if (targetContinent == "亚洲 · 大洋洲") {
                 map.setView([34.0479, 100.6197], 3);
             } else if (targetContinent == "美洲") {
-                map.setView([39.63935570747691, -101.3754683869087], 3);
+                map.setView([39.63935570747691, -101.3754683869087], 4);
             } else if (targetContinent == "欧洲") {
-                map.setView([54.526, 15.2551], 3);
+                map.setView([54.526, 15.2551], 5);
             } else {
-                map.setView([37.5266681, 126.9271165], 2);
+                // 전체 보기: 등록된 마커 위치로 bounds 계산
+                if (markers.length > 0) {
+                    let bounds = L.latLngBounds(markers.map((m) => m.getLatLng()));
+                    map.fitBounds(bounds, { padding: [50, 50] });
+                } else {
+                    map.setView([37.5266681, 126.9271165], 2); // fallback
+                }
             }
         });
     }
