@@ -2357,7 +2357,7 @@
 .serv-bonce .type-box-sub > img { width: 33.1875rem; flex: 1; }
 .serv-bonce .type-explain { display: flex; flex-direction: column; gap: 0.62rem; }
 .serv-bonce .type-explain > p { color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem; display: flex; gap: 0.62rem; }
-.serv-bonce .type-explain > p > span { display: block; width: 3.75rem; color: #33B0C6; font-weight: 600; }
+.serv-bonce .type-explain > p > span { display: block; width: 3.75rem; color: #33B0C6; font-weight: 600; flex-shrink: 0; }
 .serv-bonce .type-img-wrap { text-align: center; }
 .serv-bonce .quickscan-img { margin-bottom: 2.5rem; }
 .serv-bonce .quickscan-img img { width: 38.8rem; }
@@ -2377,6 +2377,7 @@
 .serv-bonce .ucd-desc-wrap .text-list-wrap .text-list li {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: #858889;}
 
 .serv-bonce:lang(en) .type-explain > p > span {width: 5rem;}
+.serv-bonce:lang(de) .type-explain > p > span {width: 5.5rem;}
 
 /* 서비스 > KooRooo */
 .serv-kooroo .article-content { position: relative; }
