@@ -1537,10 +1537,13 @@
 .map-conts-area .map-img .active_img {opacity:0;}
 .map-conts-area .map-img .active_img img {transition: transform 0.5s ease;}
 .map-conts-area .map-img .active_mark {display: none; position:absolute; top:50%; left:40%; transform: translate(-50%, -50%);}
+.map-conts-area .map-info .map-info-list{width: 33rem; height: 53.75rem; padding: 2.5rem 0 0; text-align: left; overflow-y: auto; overflow-x: hidden; position:absolute; background:#fff; top:0; right:0; transition: 0.5s linear; z-index:10; border-right: 1px solid #c9ced1;}
 .map-conts-area .map-img.on .active_img{opacity:1;}
 .map-conts-area .map-img.on .active_img img{transform: scale(1.2);}
 .map-conts-area .map-img.on .default_img{display: none;}
-.map-conts-area .map-info .map-info-list {width: 33rem; height: 53.75rem; padding: 2.5rem 0 0; text-align: left; overflow-y: auto; overflow-x: hidden; position:absolute; background:#fff; top:0; right:0; transition: 0.5s linear; z-index:10; border-right: 1px solid #c9ced1;}
+
+.map-conts-area .map-info-box {position: relative;}
+.map-conts-area .map-info-box .map-img {width: calc(100% - 200px);}
 
 
 .map-filter {position:absolute; left:2rem; bottom: 2rem; z-index:10;}
@@ -1571,6 +1574,13 @@
 .map-info .btn-close button {width:1.75rem; height:1.75rem; position:absolute; right: 2.5rem; top:2.5rem;}
 .map-info.on .map-info-content-box {right:0; opacity:1; transition:opacity 0.5s linear;}
 .map-info.on .map-info-list {right:26.25rem; transition: 0.5s linear;} /* right:41rem 이면, 스크롤바 숨겨진상태로 노출됨 */
+
+.netw:lang(zh-CN) .content-item01 {position: relative; display: flex;} 
+.netw:lang(zh-CN) .map-conts-area .map-img {width: 100%; z-index: -1;} 
+.netw:lang(zh-CN) .map-info .map-info-list {width: 33rem; height: 53.75rem; padding: 2.5rem 0 0; text-align: left; overflow-y: auto; overflow-x: hidden;  background:#fff; transform: translateX(0); transition: 0.5s linear; z-index:10; border-right: 1px solid #c9ced1;}
+.netw:lang(zh-CN) .map-info.on .map-info-content-box {right:0; opacity:1; transition:opacity 0.5s linear;}
+.netw:lang(zh-CN) .map-info.on .map-info-list {transform: translateX(-26.25rem); transition: 0.5s linear;} /* right:41rem 이면, 스크롤바 숨겨진상태로 노출됨 */
+
 
 .map-info-content-box .info-content-head .sort {display: flex; gap: 1rem; align-items: center;}
 .map-info-content-box .info-content-head .sort li {position: relative; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color:var(--colorElement-light-text-text-default02);}

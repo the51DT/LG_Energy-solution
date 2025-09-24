@@ -65,6 +65,9 @@ var pubUi = {
 
         /* 쿠키설정 팝업 */
         this.self.mainCookieLayer = document.querySelector(".main-cookie");
+
+        
+
     },
 
     bindEvents: function () {
@@ -108,7 +111,19 @@ var pubUi = {
             closeBtn.addEventListener("click", (e) => {
                 this.self.mainCookieLayer.style.display = "none";
             });
-        } 
+        }
+    },
+    evtPopEvt:function(){
+        var evtPop = document.querySelectorAll(".modal-pop.evt");
+        if (evtPop.length > 0) {            
+
+            evtPop.forEach((evtPop,idx) => {
+                var targetEvtPopId = evtPop.getAttribute("id")
+                console.log(targetEvtPopId);
+                pubUi.popUp.open(`#${targetEvtPopId}`);
+            })            
+        }
+
     },
     selectboxCtrlEvt: function (selectorOrEl) {
         // 헬퍼: 개별 select-cate에 바인딩

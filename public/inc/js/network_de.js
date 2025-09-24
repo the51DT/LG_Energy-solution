@@ -551,13 +551,13 @@ function updateInfoList(filtered) {
 
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
-                if (targetLocation.type === "Hauptsitz") {
+                if (targetLocation.type == "Hauptsitz") {
                     // 본사
                     html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "F&E") {
+                } else if (targetLocation.type == "F&E") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "Produktion" || "JV" || "Produktion Facility") {
+                } else if (targetLocation.type == "Produktion" || "JV" || "Produktion Facility") {
                     //생산
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 } else {
@@ -771,13 +771,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
-                if (targetLocation.type === "Hauptsitz") {
+                if (targetLocation.type == "Hauptsitz") {
                     // 본사
                     html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "F&E") {
+                } else if (targetLocation.type == "F&E") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "Produktion" || "JV" || "Produktion Facility") {
+                } else if (targetLocation.type == "Produktion" || "JV" || "Produktion Facility") {
                     //생산
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 } else {
