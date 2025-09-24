@@ -1988,10 +1988,17 @@
 .serv-bonce .service-btn-wrap { margin-bottom: 0; }
 .serv-bonce .ucd-desc-wrap .text-list-wrap .text-list li {font-size: 0.75rem; line-height: 1.2rem;}
 
-.serv-bonce:lang(en) .type-process p {display: flex; align-items: center; padding: 1.5rem;}
-.serv-bonce:lang(en) .type-process p > span {text-align: center;}
-.serv-bonce:lang(en) .type-step-item {padding: 2rem 0.75rem 0; justify-content: flex-start; gap: 0.5rem;}
-.serv-bonce:lang(en) .type-step-item > p {font-size: 0.75rem; line-height: 1.2rem;}
+.serv-bonce:lang(en) .type-process p,
+.serv-bonce:lang(de) .type-process p {display: flex; align-items: center; padding: 1.5rem;}
+.serv-bonce:lang(en) .type-process p > span,
+.serv-bonce:lang(de) .type-process p > span {text-align: center;}
+.serv-bonce:lang(en) .type-step-item,
+.serv-bonce:lang(de) .type-step-item {padding: 2rem 0.75rem 0; justify-content: flex-start; gap: 0.5rem;}
+.serv-bonce:lang(en) .type-step-item > p,
+.serv-bonce:lang(de) .type-step-item > p {font-size: 0.75rem; line-height: 1.2rem;}
+
+.serv-bonce:lang(de) .type-explain > p > span {width: 5rem;}
+.serv-bonce:lang(de) .type-box > .type-explain > p > span {width: unset;}
 
 /* 서비스 > KooRoo */
 .serv-kooroo .cont-area-wrap .article-tit { font-weight: 700; }
