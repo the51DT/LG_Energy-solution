@@ -777,12 +777,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (targetLocation.type === "F&E") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "Produktion" || "JV" || "Produktion Facility") {
+                } else if (targetLocation.type === "Vertrieb") {
                     //생산
-                    html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
+                    html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
                 } else {
                     //판매
-                    html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
+                    html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 }
                 html += '       <li class="country">' + targetLocation.country + "</li>";
                 html += '       <li class="year">' + targetLocation.year + "</li>";
