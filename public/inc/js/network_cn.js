@@ -348,7 +348,7 @@ const locations = [
         address: "Otto-Volger Str. 7C, 65843 Sulzbach (Taunus) Germany",
         tel: "+49-6196-5719-660",
         sort: "",
-        type: "Sales",
+        type: "Marketing",
         country: "Germany",
         continent: "Europe",
         year: "2020",
@@ -518,10 +518,10 @@ function updateInfoBox(targetLocation) {
         html += "       <li class='filter-type1'>" + targetLocation.type + "</li>";
     } else if (targetLocation.type === "R&D") {
         html += "       <li class='filter-type2'>" + targetLocation.type + "</li>";
-    } else if (targetLocation.type === "Manufacturing" || targetLocation.type === "JV" || targetLocation.type === "Manufacturing Facility") {
-        html += "       <li class='filter-type3'>" + targetLocation.type + "</li>";
-    } else {
+    } else if (targetLocation.type === "Marketing") {
         html += "       <li class='filter-type4'>" + targetLocation.type + "</li>";
+    } else {
+        html += "       <li class='filter-type3'>" + targetLocation.type + "</li>";
     }
     html += "       <li class='country'>" + targetLocation.country + "</li>";
     html += "       <li class='year'>" + targetLocation.year + "</li>";
@@ -610,6 +610,8 @@ document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
 
         renderMarkers(filtered);
         updateInfoList(filtered);
+        
+        bindEvents();
     });
 });
 

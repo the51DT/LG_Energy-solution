@@ -557,12 +557,12 @@ function updateInfoList(filtered) {
                 } else if (targetLocation.type === "R&D") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "Manufacturing" || "JV" || "Manufacturing Facility") {
-                    //생산
-                    html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
-                } else {
+                } else if (targetLocation.type === "Marketing") {
                     //판매
                     html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
+                } else {
+                    //생산
+                    html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 }
                 html += '       <li class="country">' + targetLocation.country + "</li>";
                 html += '       <li class="year">' + targetLocation.year + "</li>";
@@ -777,12 +777,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (targetLocation.type === "R&D") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "Manufacturing" || "JV" || "Manufacturing Facility") {
-                    //생산
-                    html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
-                } else {
+                } else if (targetLocation.type === "Marketing") {
                     //판매
                     html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
+                } else {
+                    //생산
+                    html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 }
                 html += '       <li class="country">' + targetLocation.country + "</li>";
                 html += '       <li class="year">' + targetLocation.year + "</li>";
