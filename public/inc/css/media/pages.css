@@ -1082,7 +1082,7 @@
 
 .pmtl .mat-str-wrap {flex-direction: column; gap: 0.5rem;}
 .pmtl .mat-str-wrap > div {padding: 1.5rem; border-radius: 0.5rem;}
-.pmtl .mat-str-wrap > div > img {margin-bottom: 1rem;}
+.pmtl .mat-str-wrap > div > img {margin-bottom: 1rem; width: 4rem; height: 4rem;}
 .pmtl .mat-str-wrap > div > p {font-size: 1.125rem;line-height: 1.75rem;}
 .pmtl .mat-str-wrap > div .text-list-wrap {margin-top: 0.5rem;}
 .pmtl .mat-str-wrap > div .text-list-wrap .text-list > li {font-size: 0.875rem; line-height: 1.3125rem;}
@@ -1219,6 +1219,7 @@
 .sgov [class^="icon-btn"][class*="-sm"] {width: 100%; font-size: 0.875rem; line-height: 1.225rem;}
 .sgov .gov-ethics-btn {margin-top: 1rem;}
 .sgov .gov-ethics-img .btn-wrap {margin-top: 2rem;}
+.sgov .gov-ethics-img .btn-wrap [class^="icon-btn"] {width: 100%; min-width: unset;}
 .sgov .ceo-message {color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 
 .sgov #tab3-content .content-item04 .title-desc {font-size: 0.875rem; line-height: 1.3125rem;}
