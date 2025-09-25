@@ -1738,7 +1738,7 @@
 .serv-baround .examp-wrap .examp-ico>img {width: 2.5rem; height: 2.5rem;}
 .serv-baround .examp-wrap .examp-txt {font-size: .875rem; color: #555758; text-align: left;}
 .e4w-box {width: 100%;}
-.e4w-box .e4w-top {gap: 1.5rem; padding: 1.5rem 1.25rem;}
+.e4w-box .e4w-top {gap: 1.5rem; padding: 1.5rem 1.25rem; height: auto;}
 .e4w-box .e4w-top .top-logo {width: 7.5rem; height: 7.5rem;}
 .e4w-box .e4w-top .top-logo>img {object-fit: contain;}
 .e4w-box .e4w-top .top-logo .b-lifecare, .e4w-box .e4w-top .top-logo .b-once {width: 5.1875rem;}
@@ -1764,7 +1764,8 @@
 .serv-baround article .article-content + .article-content:has(.content-tit) {padding-top: 1rem;}
 .serv-baround .article-content .article-desc {padding: 1rem 0 0;}
 
-.e4w-box:lang(pl) .e4w-top, .e4w-box:lang(pl) .e4w-btm {height: auto;}
+.e4w-box:lang(pl) .e4w-top, .e4w-box:lang(pl) .e4w-btm,
+.e4w-box:lang(pl) .e4w-top, .e4w-box:lang(de) .e4w-btm {height: auto;}
 
 /* B.around 다이어그램 이미지 팝업영역 */
 
