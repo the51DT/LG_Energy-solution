@@ -1230,6 +1230,8 @@
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1rem;}
 .etmg .content-sect > .img-area {max-width: 20rem; width: 100%; margin-inline: auto; padding-inline: 0; margin-top: 2rem;}
+.etmg .content-item02.bg-gray .content-sect {padding-top: 1.5rem;}
+.etmg .content-item02.bg-gray .content-sect > .img-area {margin-top: 0;}
 .etmg .sub-desc-wrap {margin-bottom: 0;}
 .etmg .sub-desc-wrap .sub-tit {font-size: 1.125rem; line-height: 1.75rem;}
 .etmg .sub-desc-wrap > .sub-tit + ul {margin-top: 2rem;}
@@ -1285,6 +1287,22 @@
 .etmg #etmgPopup .pop-btn-list {gap: 0.5rem;}
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] {height: 2.375rem; padding-inline: 1rem 0.75rem; font-size: 0.8125rem; font-weight: 500; line-height: 1.1375rem;}
 
+.etmg:lang(zh-CN) .cont-head-wrap,
+.etmg:lang(pl) .cont-head-wrap,
+.etmg:lang(de) .cont-head-wrap {padding: 2rem 1.25rem 2rem;}
+.etmg:lang(zh-CN) .tab-content-box .content-item01,
+.etmg:lang(pl) .tab-content-box .content-item01,
+.etmg:lang(de) .tab-content-box .content-item01 {padding-top: 0;}
+.etmg:lang(zh-CN) .tab-content-box .content-item01 .content-sect,
+.etmg:lang(pl) .tab-content-box .content-item01 .content-sect,
+.etmg:lang(de) .tab-content-box .content-item01 .content-sect {padding-top: 0;}
+
+/* 정도경영 추가레이아웃 (다국어용 - 중,폴,독) */
+.ethics_list_container {padding-top: 1.5rem;}
+.ethics_list_container li:not(:first-child) {margin-top: 0.25rem;}
+.ethics_list_container li {border-radius:.25rem; padding: 1.5rem 1.25rem;}
+.ethics_list_container li .group {flex-direction:column; gap: 0.25rem; font-size: 1.125rem; line-height: 1.75rem;}
+.ethics_list_wrap .btn-wrap {padding-top: 3rem; display: block;}
 
 /* 회사정보 회사소개 */
 .comp .comp-btn-area .btn-wrap {display: inline-block; margin-top: 5rem}
@@ -1412,7 +1430,7 @@
 .comp .ci-terms-wrap .terms-list .terms-sub-tit { font-size: 1rem; font-weight: 1.6rem;}
 .comp .content-wrap:has(.accordion-list) { padding-left: 0; padding-right: 0; }
 .comp .caution-content {padding:0 1.25rem 0;}
-.comp:lang(en) .caution-content {padding-left:0; padding-right: 0;}
+.comp:not(:lang(ko)) .caution-content {padding-left:0; padding-right: 0;}
 .comp .caution-content h2, 
 .comp .caution-content .ci-text { padding-left:0; padding-right: 0; }
 .comp .accordion-list .accordion-content { background-color: transparent; padding: 0; }
