@@ -1235,6 +1235,9 @@
 .sprf .down-wrap:hover .down-icon {background-color: var(--colorElement-light-fill-fill-primary); background-image: url(../../images/icon/icon_download_wh.svg);}
 .sprf .down-wrap > span  {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
 .sprf .btn-wrap {display: flex; justify-content: center; gap: 0.625rem; width: 100%;}
+.sprf .content-item03 .report-wrap{display:flex;align-items: center;}
+.sprf .content-item03 .report-wrap p {width:100%;color: var(--text-text-default-02, #555758);text-align: center;font-size: var(--size-desktop-B1, 1.125rem);font-weight: 400;line-height: var(--line-height-desktop-B1, 1.8rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
+
 
 .sprf [class^="content-item"] .content-sect:has(.eval-status) {padding-top: 4.625rem;}
 .sprf .eval-status-tit {display: flex; justify-content: space-between; align-items: center; width: 100%;}

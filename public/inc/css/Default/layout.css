@@ -298,6 +298,11 @@ aside > img{cursor: pointer;}
 .main-page .content-item01 .icon-btn:after{content:"";display: block;width:1.88rem;height:1.88rem;background: url(../../images/icon/icon_link_arrow_bl.svg) no-repeat;}
 .main-page .content-item01 .icon-btn:hover{color:var(--text-text-on-primary, #FFF);}
 .main-page .content-item01 .icon-btn:hover:after{background: url(../../images/icon/icon_link_arrow.svg) no-repeat;}
+html:lang(ko) .main-page .content-item01 .icon-btn{width:22rem;}
+html:lang(en) .main-page .content-item01 .icon-btn{width:20rem;}
+html:lang(zh-CN) .main-page .content-item01 .icon-btn{width:350px;}
+html:lang(de) .main-page .content-item01 .icon-btn{width:350px;}
+html:lang(pl) .main-page .content-item01 .icon-btn{width:350px;}
 
 .main-page .content-item02{height:50rem;position: relative;padding:0;opacity:1;margin-top:0;transition: all 1s;}
 
