@@ -1361,7 +1361,7 @@
 .etmg .sub-desc-wrap > ul {display: flex; flex-direction: column; gap: 1.88rem;}
 .etmg .sub-desc-wrap .sub-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .etmg .info-text-area .subtit {font-size: 1.25rem; font-weight: 400; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01);}
-.etmg .info-text-area .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);  margin-top: 1.88rem;}
+.etmg .info-text-area .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02);  margin-top: 1.88rem;}
 .etmg .info-text-area .desc.ty02 {color: #171819;}
 .etmg .info-text-area +.img-area {margin-top: 3.75rem;}
 .etmg .intro-banner {position: relative;}
