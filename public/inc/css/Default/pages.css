@@ -2318,6 +2318,9 @@
 
 :lang(pl).rctt .core-cont-wrap .core-cont > span,
 :lang(de).rctt .core-cont-wrap .core-cont > span {flex-direction: column; gap: 0;}
+.post:lang(zh-CN) .content-item01:only-child {padding-bottom:0;}
+.post:lang(zh-CN) .content-item01 .content-sect {margin-top: 2.5rem;} 
+.post:lang(zh-CN) .content-item01 .content-sect.bg-gray .content-wrap {padding-bottom: 7.5rem;}
 
 /* 조직문화 */
 .rcct .content-sect { display: flex; flex-direction: column; gap: 5rem; padding-top: 0;}
