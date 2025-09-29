@@ -1098,6 +1098,8 @@
 .pmtl .mat-str-wrap > div .text-list-wrap .text-list > li::before {top: 0.44rem;}
 .pmtl #tab2-content .industry-box .box-link img {height: 5.375rem; margin: 0.69rem 0;}
 
+.pmtl:lang(pl) .mat-wrap > div {gap: 1rem; padding: 1.5rem 1rem;}
+.pmtl:lang(pl) .mat-wrap > div > img {width: 6rem; object-fit: contain;}
 
 /* 성과보고 (sprf) */
 .sprf [class^="content-item"] .content-sect:has(.text-wrap) {padding-top: 1rem;}
