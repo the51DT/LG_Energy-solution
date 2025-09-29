@@ -955,7 +955,7 @@
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"].gray {background-color: var(--colorElement-light-fill-fill-default02);}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"]:hover {background: var(--primary-primary-pressed, #0C9CAB);}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"].gray:hover {background: var(--coolgray-600, #707273);}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] > img {width: 2.5rem; height: 2.5rem; margin-right: 1.25rem;}
+.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] > img {width: 2.5rem; height: 2.5rem;}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] .icon-area {margin-left: auto; width: 1.875rem; height: 1.875rem;}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] .icon-area::before {background-image: url(../../images/icon/icon_arrow_right_wh.svg); width: 1.875rem; height: 1.875rem;}
 .pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list {gap: 1.25rem;}
