@@ -858,14 +858,14 @@
 .pind .indus-bottom .bottom-list > li {width: 100%; height: 9.625rem; border-radius: 0.5rem; gap: 1.5rem;}
 .pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list > li {width: calc(50% - (0.5rem / 2));}
 .pind .indus-bottom .bottom-list > li > img {width: 2.625rem; height: 2.625rem;}
-.pind .indus-bottom .bottom-list > li > p {font-size: 1rem; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01);}
+.pind .indus-bottom .bottom-list > li > p {font-size: 1rem; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01); display: initial;}
+.pind .indus-bottom .bottom-list > li > p > span {font-size: 0.75rem; line-height: 1.2rem; color: var(--colorElement-light-text-text-default03);}
 .pind:lang(en) .indus-bottom .bottom-list > li > p {flex-direction: column; gap: 0; height: 2.75rem; line-height: 1;}
 .pind:lang(en) .indus-bottom .bottom-list > li {height: 8.625rem;}
 .pind .indus-bottom .bottom-col {max-width: unset;}
 .pind .indus-bottom .bottom-col > div {gap: 1rem;}
 .pind .indus-bottom .bottom-col .btn-wrap {flex-direction: column;}
 .pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] {padding: 1rem 1.5rem; font-size: 1rem; line-height: 1.6rem;}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] > img {margin-right: 1rem;}
 
 
 /* 폼팩터 (.pfom) */
