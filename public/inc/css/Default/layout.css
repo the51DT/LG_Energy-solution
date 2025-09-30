@@ -78,8 +78,6 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 /* .header-wrap + .header_search-area{display: block;} */
 .header-wrap + .header_search-area .search-box-wrap .search-box {width: 40rem;}
 .header-wrap + .header_search-area .search-box-wrap .search-box input {width: calc(100% - 120px);}
-.news-content-area .search-result {width: 40rem;}
-
 
 .header-wrap + .header_search-area .search-result{display:flex;gap:2.5rem;justify-content:center;align-items:center; flex: 1 1 auto;}
 .header-wrap + .header_search-area .search-result>input,
