@@ -314,7 +314,7 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .main-page .content-item01 .icon-btn:hover:after{background: url(../../images/icon/icon_link_arrow.svg) no-repeat;}
 html:lang(ko) .main-page .content-item01 .icon-btn{width:22rem;}
 html:lang(en) .main-page .content-item01 .icon-btn{width:20rem;}
-html:lang(zh-CN) .main-page .content-item01 .icon-btn{width:350px;}
+html:lang(zh-CN) .main-page .content-item01 .icon-btn{width:18.75rem;}
 html:lang(de) .main-page .content-item01 .icon-btn{width:350px;}
 html:lang(pl) .main-page .content-item01 .icon-btn{width:350px;}
 
@@ -444,3 +444,6 @@ html[lang=en] .main-page .content-item01 .txt {font-size: var(--size-desktop-LT2
 html[lang=en] .main-page .content-item01 .img-action01{margin-top:4.3rem; margin-left:7rem;}
 /* html[lang=en] .main-page .content-item01 .img-action02{right:370px;} */
 html[lang=en] .main-page .content-item01.active .txt span.ani04{width:22rem}
+
+/* 중문 */
+html[lang=zh-cn] .main-page .content-item01 .txt {width:910px;margin: 0 auto;;}
