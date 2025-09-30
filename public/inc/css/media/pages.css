@@ -1073,8 +1073,18 @@
 
 .pfom:lang(zh-CN) .tech-list .tech-col3-box .col3-box > div .desc {font-size: 0.875rem; line-height: 1.3125rem;}
 
+.pfom:lang(pl) .tab-cate-wrap.full-line .tab-category {gap: 1rem;}
+.pfom:lang(pl) .tab-cate-wrap.full-line .tab-category > li button {font-size: 1rem; line-height: 1.4rem;}
+.pfom:lang(pl) .tab-cate-wrap.full-line .tab-category > li:first-child button {width: 6.3125rem;}
+.pfom:lang(pl) .prod-features.col4 > li {padding-inline: 2rem;}
 .pfom:lang(pl) .prod-features > li > .tit {font-size: 1rem; line-height: 1.6rem;}
 .pfom:lang(pl) .prod-features > li > .tit > span {font-size: 0.75rem; line-height: 1.2rem;}
+.pfom:lang(pl) .tech-list .tech-box-col .box-wrap .box-col > p {white-space: normal;}
+.pfom:lang(pl) .tech-list .tech-box-col .box-wrap .box-col:has(.inner-wrap .inner-box:only-child) .inner-wrap .inner-box {width: 100%;}
+.pfom:lang(pl) .tech-list .tech-col3-box .text-wrap + .col3-box {gap :1rem;}
+.pfom:lang(pl) .tech-list .tech-col3-box .col3-box > div {width: 100%;}
+.pfom:lang(pl) .tab-cate-wrap.type2 .tab-category:has(li:nth-child(3)) > li,
+.pfom:lang(pl) .tab-cate-wrap.type2 .tab-category:has(li:nth-child(3)) > li button {width: fit-content;}
 
 /* 소재 (pmtl) */
 .pmtl [class^="content-item"] .content-sect:not(:has( > img:only-child)) {padding-top: 1.5rem;}

@@ -1170,10 +1170,10 @@
 .pfom:lang(en) .prod-features > li > .tit {font-size: 1.125rem; line-height: 1.8rem;}
 .pfom:lang(en) .prod-features > li > .tit > span {font-size: 0.875rem; line-height: 1.4rem;}
 
-.pfom .prod-features.col4 > li {padding-inline: 1.5rem;}
+.pfom:lang(pl) .prod-features.col4 > li {padding-inline: 1.5rem;}
 .pfom:lang(pl) .prod-features > li > .tit {font-size: 1.125rem; line-height: 1.8rem;}
 .pfom:lang(pl) .prod-features > li > .tit > span {font-size: 0.875rem; line-height: 1.4rem;}
-.pfom .tech-list .tech-box-col .box-wrap .box-col > p {white-space: nowrap;}
+.pfom:lang(pl) .tech-list .tech-box-col .box-wrap .box-col > p {white-space: nowrap;}
 .pfom:lang(pl) .tech-list .tech-box-col .box-wrap .box-col:has(.inner-wrap .inner-box:nth-child(2)) .inner-wrap .inner-box {width: 100%;}
 .pfom:lang(pl) .tech-list .tech-box-col .box-wrap .box-col:has(.inner-wrap .inner-box:only-child) .inner-wrap .inner-box {width: 20.625rem;}
 .pfom:lang(pl) .tech-list .tech-col3-box .text-wrap + .col3-box {gap :1.25rem;}
