@@ -2057,6 +2057,7 @@
 .serv-trading .content-item04 {background-color: #EAF3F8;}
 .service .content-item01 .content-sect { padding-top: 0; }
 .service .article-content .article-desc { padding: 1.88rem 0 2.5rem; font-size: 1.25rem; line-height: 2rem; }
+.service:lang(zh-CN) .article-content .article-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem;}
 .adv-wrap, .serv-trading .service-wrap { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.88rem;}
 .adv-wrap .adv-box {display: flex;flex-direction: column; align-items: center; gap: 1.25rem; width: calc(33.33% - 1rem); padding: 2.5rem; border: 2px solid #E1E7EA; border-radius: 1rem; }
 .adv-wrap .adv-box img{width:5rem;height:5rem;}
