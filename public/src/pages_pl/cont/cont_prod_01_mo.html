@@ -117,680 +117,699 @@
         <!-- //header -->
         <!-- section -->
         <section id="container" class="content-wrap">
-            <div class="content-header">
-                <div class="content-header-cont">
-                    <h2 class="title-h1">Inquiry</h2>
-                    <div class="subp-tit-area">
-                        <!-- 08.18 수정 : 문구 변경-->
-                        <h3 class="subp-tit">
-                            Odpowiemy na Twoje zapytanie tak szybko, jak to możliwe.
-                        </h3>
-                    </div>
+            <!-- 09.30 수정 : 모바일 레이아웃 변경(고객지원) : S -->
+            <div class="content-area">
+                <div class="cont-head-wrap mo-only">
+                    <h2 class="title-h1">Wsparcie</h2>
                 </div>
-            </div>
-            <div class="content-area">                
-                <div class="mo-only">
-                    <div class="stepper-wrapper">
-                        <div class="tab-content-box">
-                            <div class="content-wrap">
-                                <div class="step-indicator">
-                                    <button href="#" class="step-indicator-btn" data-type="step-1">
-                                        <span class="step active">1</span> <!-- active 클래스 : 활성화 step인 경우, active 클래스 추가 필요 -->
-                                    </button>                                    
-                                    <span class="arrow">
-                                        <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                    </span>
-                                    <button href="#" class="step-indicator-btn" data-type="step-2">
-                                        <span class="step">2</span>
-                                    </button>
-                                    <span class="arrow">
-                                        <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                    </span>
-                                    <button href="#" class="step-indicator-btn" data-type="step-3">
-                                        <span class="step">3</span>
-                                    </button>
-                                    <span class="arrow">
-                                        <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                    </span>
-                                    <button href="#" class="step-indicator-btn" data-type="step-4">
-                                        <span class="step">4</span>
-                                    </button>                                   
-                                    <span class="arrow">
-                                        <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                    </span>
-                                    <button href="#" class="step-indicator-btn" data-type="step-5">
-                                        <span class="step">5</span>
-                                    </button>
-                                    <span class="arrow">
-                                        <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
-                                    </span>
-                                    <button href="#" class="step-indicator-btn" data-type="step-6">
-                                        <span class="step">6</span>
-                                    </button>
+                <div class="tab-wrap">
+                    <div class="content-area-head-tab">
+                        <div class="tab-cate-wrap new">
+                            <ul class="tab-category">
+                                <li class="tab"><a href="#">Download</a></li>
+                                <li class="tab on"><a href="#">Kontakt</a></li>
+                                <li class="tab"><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content-box">
+                        <div class="content-header">
+                            <div class="content-header-cont">
+                                <h2 class="title-h1">Kontakt</h2>
+                                <div class="subp-tit-area">
+                                    <!-- 08.18 수정 : 문구 변경-->
+                                    <h3 class="subp-tit">
+                                        Odpowiemy na Twoje zapytanie tak szybko, jak to możliwe.
+                                    </h3>
                                 </div>
-                                <ol class="faq-list">                                
-                                    <div class="item on" id="step-1"> <!-- item : on 클래스 none, block 처리용 클래스, 활성화된 step에 on 클래스 추가 필요 -->
-                                        <div class="acd-group">
-                                            <div class="align-group">
-                                                <p class="acd-tit">Proszę wybrać kategorię zapytania.</p>
-                                            </div>
-                                        </div>
-                                        <div class="acd-panel accordion-content" role="region">
-                                            <div class="cont-btn-wrap">
-                                                <button type="button" class="btn">Produkt</button> <!-- 선택시 class="active" 추가됨 -->
-                                                <button type="button" class="btn">Serwis</button>
-                                                <button type="button" class="btn">Media</button>
-                                                <button type="button" class="btn">Technologia</button>
-                                                <button type="button" class="btn">Kariera</button>
-                                                <!-- 09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
-                                                <div class="btn icon-btn">
-                                                    <a href="https://procurement-les.singlex.com/supplierWelcome/idea-proposal.html" target="_blank" title="Open in new window">
-                                                        Dostawca
-                                                        <div class="img-wrap"></div>
-                                                    </a>
-                                                </div><!-- //09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
-                                                <button type="button" class="btn">Inne</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item" id="step-2">
-                                        <div class="acd-group">
-                                            <div class="align-group">
-                                                <p class="acd-tit">Proszę wybrać podkategorię.</p>
-                                            </div>
-                                        </div>
-                                        <!-- 08.27 수정 : 버튼 위치 변경 : S -->
-                                        <div class="acd-panel accordion-content" role="region">
-                                            <div class="cont-btn-wrap sub-btn-wrap">
-                                                <div class="btn-box">
-                                                    <button type="button" class="btn" id="btn-prd1">Materiały produktowe</button>                                                
-                                                </div>
-                                                <div class="btn-box">
-                                                    <button type="button" class="btn" id="btn-prd2">Katalog produktów</button>                                                                                                    
-                                                </div>
-                                                <div class="btn-box">
-                                                    <button type="button" class="btn" id="btn-prd3">Zakup produktu</button>
-                                                </div>
-                                                <div class="btn-box">
-                                                    <button type="button" class="btn" id="btn-prd4">Wycena produktu</button>
-                                                    <!-- 제품 견적 내용 -->
-                                                    <div class="sub-cont-wrap btn-content" id="btn-prd4-content">
-                                                        <p><strong>Najczęściej zadawane pytania</strong></p>
-                                                        <ul class="sub-list">
-                                                            <li>
-                                                                <a href="#" target="_blank">
-                                                                    <span>Q</span>
-                                                                    <p>I would like to receive MSDS and UL certifications.</p>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#" target="_blank">
-                                                                    <span>Q</span>
-                                                                    <p>Can I purchase battery cells for personal use or sample procurement purposes?</p>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#" target="_blank">
-                                                                    <span>Q</span>
-                                                                    <p>How can I purchase a small quantity of battery cells?</p>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#" target="_blank">
-                                                                    <span>Q</span>
-                                                                    <p>Is there a discount for bulk purchases?</p>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#" target="_blank">
-                                                                    <span>Q</span>
-                                                                    <p>Is it possible to manufacture customized products according to specific requirements?</p>
-                                                                </a>
-                                                            </li>
-                                                            <div class="list-alret">
-                                                                <img src="../../../inc/images/icon/icon_info_fill_mint.svg">
-                                                                <p>Jeśli nie znajdziesz odpowiedzi, której szukasz, kliknij „Dalej”! </p>
-                                                            </div>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="btn-box">
-                                                    <button type="button" class="btn" id="btn-prd5">Technologia produktu</button>
-                                                </div>                                                
-                                                <div class="btn-box">
-                                                    <button type="button" class="btn" id="btn-prd6">Serwis produktu</button>
-                                                </div>
-                                            </div>    
-                                            <div class="btn-wrap">
-                                                <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
-                                                    <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                    Wstecz
+                            </div>
+                        </div>
+                        <div class="content-area">                
+                            <div class="mo-only">
+                                <div class="stepper-wrapper">
+                                    <div class="tab-content-box">
+                                        <div class="content-wrap">
+                                            <div class="step-indicator">
+                                                <button href="#" class="step-indicator-btn" data-type="step-1">
+                                                    <span class="step active">1</span> <!-- active 클래스 : 활성화 step인 경우, active 클래스 추가 필요 -->
+                                                </button>                                    
+                                                <span class="arrow">
+                                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
+                                                </span>
+                                                <button href="#" class="step-indicator-btn" data-type="step-2">
+                                                    <span class="step">2</span>
                                                 </button>
-                                                <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 선택시 disabled 클래스 제거-->
-                                                    Dalej
-                                                    <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
+                                                <span class="arrow">
+                                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
+                                                </span>
+                                                <button href="#" class="step-indicator-btn" data-type="step-3">
+                                                    <span class="step">3</span>
                                                 </button>
-                                            </div>                                        
-                                        </div><!-- //08.27 수정 : 버튼 위치 변경 : E -->
-                                    </div>
-                                    <div class="item selection-wrapper" id="step-3">
-                                        <div class="acd-group">
-                                            <div class="align-group">
-                                                <p class="acd-tit">Proszę wprowadzić szczegółowe informacje.</p> <!-- 08.18 수정 : 문구 변경-->
+                                                <span class="arrow">
+                                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
+                                                </span>
+                                                <button href="#" class="step-indicator-btn" data-type="step-4">
+                                                    <span class="step">4</span>
+                                                </button>                                   
+                                                <span class="arrow">
+                                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
+                                                </span>
+                                                <button href="#" class="step-indicator-btn" data-type="step-5">
+                                                    <span class="step">5</span>
+                                                </button>
+                                                <span class="arrow">
+                                                    <img src="../../../inc/images/icon/icon_arrow_right_gr.svg">
+                                                </span>
+                                                <button href="#" class="step-indicator-btn" data-type="step-6">
+                                                    <span class="step">6</span>
+                                                </button>
                                             </div>
-                                        </div>
-                                        <div class="acd-panel accordion-content" role="region">
-                                            <span class="required-field-text">* Pole wymagane</span>
-                                            <div class="sub-cont-wrap">
-                                                <div class="wrap-form-input flex-type">
-                                                    <!-- 09.16 수정 : Application 영문명 업데이트 - S -->
-                                                    <div class="input-wrap selectbox-wrap type3 ">
-                                                        <label for="app-select">Aplikacja</label>
-                                                        <div class="select-cate activeSelect">
-                                                            <button type="button" aria-haspopup="listbox" id="app-select">Wybierz aplikację.</button>
-                                                            <ul class="select-menu" role="listbox">
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0" class="active">Samochody elektryczne</a>
-                                                                </li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Samochody użytkowe elektryczne</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">ESS</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">LEV</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Urządzenia inteligentne</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Elektronarzędzia</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Maszyny ciężkie elektryczne</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Roboty</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Mobilność przyszłości</a></li>
-                                                            </ul>
-                                                        </div>
-
-                                                        <div class="select-cate activeSelect">
-                                                            <button type="button" aria-haspopup="listbox">Proszę wybrać podkategorię.</button>
-                                                            <ul class="select-menu" role="listbox">
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0" class="active">BEV</a>
-                                                                </li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">PHEV/EREV</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">HEV</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">MHEV</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Elektryczna ciężarówka</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Elektryczny autobus</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Elektryczny van</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Pojazd rekreacyjny (RV)</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">ESS sieciowe</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">ESS domowe</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">ESS C&I</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">ESS UPS</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">E-Motocyk</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">E-Hulajnogi</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">E-Rowery</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">E-Wózki golfowe</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Smartfony</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Smart monitory / Telewizory</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Laptopy
-                                                                    </a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Elektronarzędzia przemysłowe
-                                                                    </a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Elektronarzędzia domowe</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Narzędzia ogrodnicze</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Koparki elektryczne</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Wózki widłowe elektryczne</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Traktory elektryczne</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Robot humanoidalny</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Robot czworonożny</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Roboty usługowe</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Robot logistyczny
-                                                                    </a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Drony</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">UAM</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Statki elektryczne</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div><!-- //09.16 수정 : Application 영문명 업데이트 - E -->           
-                                                    <!-- ESS 항목 선택 시 세부 항목에 대한 필수 선택 안내 메세지 출력 문구 -->
-                                                    <p><span class="ico-info"></span>Wybór podkategorii dla ESS jest wymagany.</p>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input">
-                                                    <div class="input-wrap notGrid">
-                                                        <p class="label">Format ogniwa
-                                                        </p>
-                                                        <div class="cont-btn-wrap multi-btn flex-wrap">
-                                                            <button type="button" class="btn ty02">Cylindrical</button>
-                                                            <button type="button" class="btn ty02">Pouch</button>
+                                            <ol class="faq-list">                                
+                                                <div class="item on" id="step-1"> <!-- item : on 클래스 none, block 처리용 클래스, 활성화된 step에 on 클래스 추가 필요 -->
+                                                    <div class="acd-group">
+                                                        <div class="align-group">
+                                                            <p class="acd-tit">Proszę wybrać kategorię zapytania.</p>
                                                         </div>
                                                     </div>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input">
-                                                    <div class="input-wrap notGrid">
-                                                        <p class="label">Materiały</p>
-                                                        <div class="cont-btn-wrap multi-btn flex-wrap">
-                                                            <button type="button" class="btn ty02">NCM</button>
-                                                            <button type="button" class="btn ty02">LFP</button>
+                                                    <div class="acd-panel accordion-content" role="region">
+                                                        <div class="cont-btn-wrap">
+                                                            <button type="button" class="btn">Produkt</button> <!-- 선택시 class="active" 추가됨 -->
+                                                            <button type="button" class="btn">Serwis</button>
+                                                            <button type="button" class="btn">Media</button>
+                                                            <button type="button" class="btn">Technologia</button>
+                                                            <button type="button" class="btn">Kariera</button>
+                                                            <!-- 09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
+                                                            <div class="btn icon-btn">
+                                                                <a href="https://procurement-les.singlex.com/supplierWelcome/idea-proposal.html" target="_blank" title="Open in new window">
+                                                                    Dostawca
+                                                                    <div class="img-wrap"></div>
+                                                                </a>
+                                                            </div><!-- //09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
+                                                            <button type="button" class="btn">Inne</button>
                                                         </div>
                                                     </div>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input">
-                                                    <div class="input-wrap notGrid">
-                                                        <p class="label">Produkt</p>
-                                                        <div class="cont-btn-wrap multi-btn flex-wrap">
-                                                            <button type="button" class="btn ty02">Zellen</button>
-                                                            <button type="button" class="btn ty02">Module</button>
-                                                            <button type="button" class="btn ty02">Pack</button>
+                                                </div>
+                                                <div class="item" id="step-2">
+                                                    <div class="acd-group">
+                                                        <div class="align-group">
+                                                            <p class="acd-tit">Proszę wybrać podkategorię.</p>
                                                         </div>
                                                     </div>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input flex-type">
-                                                    <div class="input-wrap">
-                                                        <label for="quantity-input">Szacowana ilość(rocznie)<span>*</span></label>
-                                                        <div class="group-box">
-                                                            <div class="quantity-input-wrap input-wrap">
-                                                                <input type="number" id="quantity-input" class="input-box"
-                                                                    placeholder="Wprowadź liczbę.">
-                                                                
+                                                    <!-- 08.27 수정 : 버튼 위치 변경 : S -->
+                                                    <div class="acd-panel accordion-content" role="region">
+                                                        <div class="cont-btn-wrap sub-btn-wrap">
+                                                            <div class="btn-box">
+                                                                <button type="button" class="btn" id="btn-prd1">Materiały produktowe</button>                                                
                                                             </div>
-                                                            <div class="input-wrap selectbox-wrap type3">
-                                                                <div class="select-cate activeSelect size-sm">
-                                                                    <button type="button" aria-haspopup="listbox">Kwh</button>
-                                                                    <ul class="select-menu" role="listbox">
-                                                                        <li><a href="javascript:;" role="option"
-                                                                                tabindex="0" class="active">Kwh</a>
+                                                            <div class="btn-box">
+                                                                <button type="button" class="btn" id="btn-prd2">Katalog produktów</button>                                                                                                    
+                                                            </div>
+                                                            <div class="btn-box">
+                                                                <button type="button" class="btn" id="btn-prd3">Zakup produktu</button>
+                                                            </div>
+                                                            <div class="btn-box">
+                                                                <button type="button" class="btn" id="btn-prd4">Wycena produktu</button>
+                                                                <!-- 제품 견적 내용 -->
+                                                                <div class="sub-cont-wrap btn-content" id="btn-prd4-content">
+                                                                    <p><strong>Najczęściej zadawane pytania</strong></p>
+                                                                    <ul class="sub-list">
+                                                                        <li>
+                                                                            <a href="#" target="_blank">
+                                                                                <span>Q</span>
+                                                                                <p>I would like to receive MSDS and UL certifications.</p>
+                                                                            </a>
                                                                         </li>
-                                                                        <li><a href="javascript:;" role="option"
-                                                                                tabindex="0">Mwh</a></li>
-                                                                        <li><a href="javascript:;" role="option"
-                                                                                tabindex="0">Gwh</a></li>
+                                                                        <li>
+                                                                            <a href="#" target="_blank">
+                                                                                <span>Q</span>
+                                                                                <p>Can I purchase battery cells for personal use or sample procurement purposes?</p>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" target="_blank">
+                                                                                <span>Q</span>
+                                                                                <p>How can I purchase a small quantity of battery cells?</p>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" target="_blank">
+                                                                                <span>Q</span>
+                                                                                <p>Is there a discount for bulk purchases?</p>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" target="_blank">
+                                                                                <span>Q</span>
+                                                                                <p>Is it possible to manufacture customized products according to specific requirements?</p>
+                                                                            </a>
+                                                                        </li>
+                                                                        <div class="list-alret">
+                                                                            <img src="../../../inc/images/icon/icon_info_fill_mint.svg">
+                                                                            <p>Jeśli nie znajdziesz odpowiedzi, której szukasz, kliknij „Dalej”! </p>
+                                                                        </div>
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <p><span class="ico-info"></span>Akumulatory mogą być sprzedawane wyłącznie producentom pakietów akumulatorowych lub integratorom systemów. Akumulatory nie mogą być obsługiwane przez indywidualnych konsumentów i nie mogą być sprzedawane indywidualnym konsumentom na poszczególnych rynkach.</p>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input flex-type">
-                                                    <div class="input-wrap">
-                                                        <label for="performance-input">Wymagana wydajność</label>
-                                                        <div class="group-box">
-                                                            <div class="performance-input-wrap input-wrap">
-                                                                <input type="text" id="performance-input" class="input-box"
-                                                                    placeholder="Wybierz kWh, V, Ah">
-                                                                
+                                                            <div class="btn-box">
+                                                                <button type="button" class="btn" id="btn-prd5">Technologia produktu</button>
+                                                            </div>                                                
+                                                            <div class="btn-box">
+                                                                <button type="button" class="btn" id="btn-prd6">Serwis produktu</button>
                                                             </div>
+                                                        </div>    
+                                                        <div class="btn-wrap">
+                                                            <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
+                                                                <img src="../../../inc/images/icon/icon_arrow_left.svg">
+                                                                Wstecz
+                                                            </button>
+                                                            <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 선택시 disabled 클래스 제거-->
+                                                                Dalej
+                                                                <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
+                                                            </button>
+                                                        </div>                                        
+                                                    </div><!-- //08.27 수정 : 버튼 위치 변경 : E -->
+                                                </div>
+                                                <div class="item selection-wrapper" id="step-3">
+                                                    <div class="acd-group">
+                                                        <div class="align-group">
+                                                            <p class="acd-tit">Proszę wprowadzić szczegółowe informacje.</p> <!-- 08.18 수정 : 문구 변경-->
                                                         </div>
                                                     </div>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input">
-                                                    <div class="input-wrap selectbox-wrap type3 ">
-                                                        <label for="develop-detail">Status rozwoju</label>
-                                                        <!-- 09.16 수정 : Development Status 영문명 업데이트 - S -->
-                                                        <div class="select-cate activeSelect">
-                                                            <button type="button" aria-haspopup="listbox" id="develop-detail">Wybierz.</button>
-                                                            <ul class="select-menu" role="listbox">                                                                    
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0" class="active">rzegląd rozwojowy</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">pilotaż</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">produkcja masowa</a></li>
-                                                            </ul>
-                                                        </div><!-- //09.16 수정 : Development Status 영문명 업데이트 - E -->
-                                                    </div>
-                                                </div><!--//wrap-form-input-->
-                                                <!-- 공급 예상 시기 : 25.08.18 캘린더 컴포넌트 퍼블리싱 완료  -->
-                                                <div class="wrap-form-input">
-                                                    <div class="input-wrap">
-                                                        <label for="supply-input">Przewidywana<br> data dostawy</label>
-                                                        <div class="supply-input-wrap w100">
-                                                            <div class="calendar-wrap">                                                                    
-                                                                <button type="button" class="calendar-btn" id="supply-input">
-                                                                    <p class="title">Wybierz datę.</p>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input">
-                                                    <div class="input-wrap">
-                                                        <label for="supply-battery-input">Dostawca baterii</label>
-                                                        <div class="supply-battery-input-wrap">
-                                                            <div class="wrap-form-box supply-battery-radio">
-                                                                <div class="radio">
-                                                                  <input type="radio" id="radio-1-1" name="radio-vertical" checked>
-                                                                  <label for="radio-1-1" class="radio-label">
-                                                                    <span class="custom-radio"></span>
-                                                                    <span class="txt">Y</span>
-                                                                  </label>
+                                                    <div class="acd-panel accordion-content" role="region">
+                                                        <span class="required-field-text">* Pole wymagane</span>
+                                                        <div class="sub-cont-wrap">
+                                                            <div class="wrap-form-input flex-type">
+                                                                <!-- 09.16 수정 : Application 영문명 업데이트 - S -->
+                                                                <div class="input-wrap selectbox-wrap type3 ">
+                                                                    <label for="app-select">Aplikacja</label>
+                                                                    <div class="select-cate activeSelect">
+                                                                        <button type="button" aria-haspopup="listbox" id="app-select">Wybierz aplikację.</button>
+                                                                        <ul class="select-menu" role="listbox">
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0" class="active">Samochody elektryczne</a>
+                                                                            </li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Samochody użytkowe elektryczne</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">ESS</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">LEV</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Urządzenia inteligentne</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Elektronarzędzia</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Maszyny ciężkie elektryczne</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Roboty</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Mobilność przyszłości</a></li>
+                                                                        </ul>
+                                                                    </div>
+            
+                                                                    <div class="select-cate activeSelect">
+                                                                        <button type="button" aria-haspopup="listbox">Proszę wybrać podkategorię.</button>
+                                                                        <ul class="select-menu" role="listbox">
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0" class="active">BEV</a>
+                                                                            </li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">PHEV/EREV</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">HEV</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">MHEV</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Elektryczna ciężarówka</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Elektryczny autobus</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Elektryczny van</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Pojazd rekreacyjny (RV)</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">ESS sieciowe</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">ESS domowe</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">ESS C&I</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">ESS UPS</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">E-Motocyk</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">E-Hulajnogi</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">E-Rowery</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">E-Wózki golfowe</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Smartfony</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Smart monitory / Telewizory</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Laptopy
+                                                                                </a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Elektronarzędzia przemysłowe
+                                                                                </a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Elektronarzędzia domowe</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Narzędzia ogrodnicze</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Koparki elektryczne</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Wózki widłowe elektryczne</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Traktory elektryczne</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Robot humanoidalny</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Robot czworonożny</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Roboty usługowe</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Robot logistyczny
+                                                                                </a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Drony</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">UAM</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Statki elektryczne</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div><!-- //09.16 수정 : Application 영문명 업데이트 - E -->           
+                                                                <!-- ESS 항목 선택 시 세부 항목에 대한 필수 선택 안내 메세지 출력 문구 -->
+                                                                <p><span class="ico-info"></span>Wybór podkategorii dla ESS jest wymagany.</p>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input">
+                                                                <div class="input-wrap notGrid">
+                                                                    <p class="label">Format ogniwa
+                                                                    </p>
+                                                                    <div class="cont-btn-wrap multi-btn flex-wrap">
+                                                                        <button type="button" class="btn ty02">Cylindrical</button>
+                                                                        <button type="button" class="btn ty02">Pouch</button>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="radio">
-                                                                  <input type="radio" id="radio-2-1" name="radio-vertical">
-                                                                  <label for="radio-2-1" class="radio-label">
-                                                                    <span class="custom-radio"></span>
-                                                                    <span class="txt">N</span>
-                                                                  </label>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input">
+                                                                <div class="input-wrap notGrid">
+                                                                    <p class="label">Materiały</p>
+                                                                    <div class="cont-btn-wrap multi-btn flex-wrap">
+                                                                        <button type="button" class="btn ty02">NCM</button>
+                                                                        <button type="button" class="btn ty02">LFP</button>
+                                                                    </div>
                                                                 </div>
-                                                            </div>       
-                                                        </div>
-                                                    </div>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input">
-                                                    <div class="input-wrap">
-                                                        <label for="lges-trade-input">Współpraca z LG Energy Solution</label>
-                                                        <div class="lges-trade-input-wrap">
-                                                            <div class="wrap-form-box lges-trade-radio">
-                                                                <div class="radio">
-                                                                  <input type="radio" id="radio-1-2" name="radio-vertical2" checked>
-                                                                  <label for="radio-1-2" class="radio-label">
-                                                                    <span class="custom-radio"></span>
-                                                                    <span class="txt">Y</span>
-                                                                  </label>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input">
+                                                                <div class="input-wrap notGrid">
+                                                                    <p class="label">Produkt</p>
+                                                                    <div class="cont-btn-wrap multi-btn flex-wrap">
+                                                                        <button type="button" class="btn ty02">Zellen</button>
+                                                                        <button type="button" class="btn ty02">Module</button>
+                                                                        <button type="button" class="btn ty02">Pack</button>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="radio">
-                                                                  <input type="radio" id="radio-2-2" name="radio-vertical2">
-                                                                  <label for="radio-2-2" class="radio-label">
-                                                                    <span class="custom-radio"></span>
-                                                                    <span class="txt">N</span>
-                                                                  </label>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input flex-type">
+                                                                <div class="input-wrap">
+                                                                    <label for="quantity-input">Szacowana ilość(rocznie)<span>*</span></label>
+                                                                    <div class="group-box">
+                                                                        <div class="quantity-input-wrap input-wrap">
+                                                                            <input type="number" id="quantity-input" class="input-box"
+                                                                                placeholder="Wprowadź liczbę.">
+                                                                            
+                                                                        </div>
+                                                                        <div class="input-wrap selectbox-wrap type3">
+                                                                            <div class="select-cate activeSelect size-sm">
+                                                                                <button type="button" aria-haspopup="listbox">Kwh</button>
+                                                                                <ul class="select-menu" role="listbox">
+                                                                                    <li><a href="javascript:;" role="option"
+                                                                                            tabindex="0" class="active">Kwh</a>
+                                                                                    </li>
+                                                                                    <li><a href="javascript:;" role="option"
+                                                                                            tabindex="0">Mwh</a></li>
+                                                                                    <li><a href="javascript:;" role="option"
+                                                                                            tabindex="0">Gwh</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                            </div>       
+                                                                <p><span class="ico-info"></span>Akumulatory mogą być sprzedawane wyłącznie producentom pakietów akumulatorowych lub integratorom systemów. Akumulatory nie mogą być obsługiwane przez indywidualnych konsumentów i nie mogą być sprzedawane indywidualnym konsumentom na poszczególnych rynkach.</p>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input flex-type">
+                                                                <div class="input-wrap">
+                                                                    <label for="performance-input">Wymagana wydajność</label>
+                                                                    <div class="group-box">
+                                                                        <div class="performance-input-wrap input-wrap">
+                                                                            <input type="text" id="performance-input" class="input-box"
+                                                                                placeholder="Wybierz kWh, V, Ah">
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input">
+                                                                <div class="input-wrap selectbox-wrap type3 ">
+                                                                    <label for="develop-detail">Status rozwoju</label>
+                                                                    <!-- 09.16 수정 : Development Status 영문명 업데이트 - S -->
+                                                                    <div class="select-cate activeSelect">
+                                                                        <button type="button" aria-haspopup="listbox" id="develop-detail">Wybierz.</button>
+                                                                        <ul class="select-menu" role="listbox">                                                                    
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0" class="active">rzegląd rozwojowy</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">pilotaż</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">produkcja masowa</a></li>
+                                                                        </ul>
+                                                                    </div><!-- //09.16 수정 : Development Status 영문명 업데이트 - E -->
+                                                                </div>
+                                                            </div><!--//wrap-form-input-->
+                                                            <!-- 공급 예상 시기 : 25.08.18 캘린더 컴포넌트 퍼블리싱 완료  -->
+                                                            <div class="wrap-form-input">
+                                                                <div class="input-wrap">
+                                                                    <label for="supply-input">Przewidywana<br> data dostawy</label>
+                                                                    <div class="supply-input-wrap w100">
+                                                                        <div class="calendar-wrap">                                                                    
+                                                                            <button type="button" class="calendar-btn" id="supply-input">
+                                                                                <p class="title">Wybierz datę.</p>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input">
+                                                                <div class="input-wrap">
+                                                                    <label for="supply-battery-input">Dostawca baterii</label>
+                                                                    <div class="supply-battery-input-wrap">
+                                                                        <div class="wrap-form-box supply-battery-radio">
+                                                                            <div class="radio">
+                                                                              <input type="radio" id="radio-1-1" name="radio-vertical" checked>
+                                                                              <label for="radio-1-1" class="radio-label">
+                                                                                <span class="custom-radio"></span>
+                                                                                <span class="txt">Y</span>
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="radio">
+                                                                              <input type="radio" id="radio-2-1" name="radio-vertical">
+                                                                              <label for="radio-2-1" class="radio-label">
+                                                                                <span class="custom-radio"></span>
+                                                                                <span class="txt">N</span>
+                                                                              </label>
+                                                                            </div>
+                                                                        </div>       
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input">
+                                                                <div class="input-wrap">
+                                                                    <label for="lges-trade-input">Współpraca z LG Energy Solution</label>
+                                                                    <div class="lges-trade-input-wrap">
+                                                                        <div class="wrap-form-box lges-trade-radio">
+                                                                            <div class="radio">
+                                                                              <input type="radio" id="radio-1-2" name="radio-vertical2" checked>
+                                                                              <label for="radio-1-2" class="radio-label">
+                                                                                <span class="custom-radio"></span>
+                                                                                <span class="txt">Y</span>
+                                                                              </label>
+                                                                            </div>
+                                                                            <div class="radio">
+                                                                              <input type="radio" id="radio-2-2" name="radio-vertical2">
+                                                                              <label for="radio-2-2" class="radio-label">
+                                                                                <span class="custom-radio"></span>
+                                                                                <span class="txt">N</span>
+                                                                              </label>
+                                                                            </div>
+                                                                        </div>       
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--//wrap-form-input-->
+                                                            <div class="wrap-form-input"> 
+                                                                <div class="input-wrap selectbox-wrap type3">
+                                                                    <label for="website-nation">Rynek docelowy (Region)</label>
+                                                                    <div class="select-cate activeSelect">
+                                                                        <button type="button" aria-haspopup="listbox" id="website-nation">Wybierz region.</button>
+                                                                        <ul class="select-menu" role="listbox">
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Asia</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Europe</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Oceania</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">America</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Africa</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="select-cate activeSelect">
+                                                                        <button type="button" aria-haspopup="listbox">Wybierz kraj</button>
+                                                                        <ul class="select-menu" role="listbox">
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">USA</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Republic of Korea</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!--//wrap-form-input-->
                                                         </div>
-                                                    </div>
-                                                </div><!--//wrap-form-input-->
-                                                <div class="wrap-form-input"> 
-                                                    <div class="input-wrap selectbox-wrap type3">
-                                                        <label for="website-nation">Rynek docelowy (Region)</label>
-                                                        <div class="select-cate activeSelect">
-                                                            <button type="button" aria-haspopup="listbox" id="website-nation">Wybierz region.</button>
-                                                            <ul class="select-menu" role="listbox">
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Asia</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Europe</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Oceania</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">America</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Africa</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="select-cate activeSelect">
-                                                            <button type="button" aria-haspopup="listbox">Wybierz kraj</button>
-                                                            <ul class="select-menu" role="listbox">
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">USA</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Republic of Korea</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div><!--//wrap-form-input-->
-                                            </div>
-                                            <div class="btn-wrap">
-                                                <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
-                                                    <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                    Wstecz
-                                                </button>
-                                                <button type="button" class="act-btn-md btn-primary01 btn-step-next">
-                                                    Dalej
-                                                    <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item" id="step-4">
-                                        <div class="acd-group">
-                                            <div class="align-group">
-                                                <p class="acd-tit">Proszę podać swoje dane kontaktowe.</p>
-                                            </div>
-                                        </div>
-                                        <div class="acd-panel accordion-content" role="region">
-                                            <span class="required-field-text">* Pole wymagane</span>
-                                            <div class="sub-cont-wrap">
-                                                <div class="wrap-form-input ty02">
-                                                    <div class="input-wrap">
-                                                        <label for="user-input">Imię i nazwisko<span>*</span></label>
-                                                        <input type="text" id="user-input" class="input-box" placeholder="Wprowadź swoje imię i nazwisko."> <!-- 09.16 / 플레이스홀더 한글 번역 -->
-                                                        
-                                                    </div>
-                                                    <div class="input-wrap">
-                                                        <label for="email-input">E-mail<span>*</span></label>
-                                                        <div class="email-input-box">
-                                                            <div class="email-input-wrap">
-                                                                <input type="email" id="email-input" class="input-box" placeholder="">@
-                                                                <input type="email" id="email-input" class="input-box" placeholder="">
-                                                                
-                                                            </div>
-                                                            <p><span class="ico-info"></span>Please enter your email accurately to receive a response.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="input-wrap">
-                                                        <label for="company-input">Nazwa firmy<span>*</span></label>
-                                                        <input type="text" id="company-input" class="input-box" placeholder="Wprowadź nazwę firmy.">
-                                                        
-                                                    </div>
-                                                    <div class="input-wrap">
-                                                        <label for="website-input">Strona internetowa</label> <!-- 09.12 수정 : 홈페이지 필수값 제거 -->
-                                                        <input type="text" id="website-input" class="input-box" placeholder="Wprowadź adres strony internetowej.">
-                                                        
-                                                    </div>
-                                                    <div class="input-wrap selectbox-wrap type3">
-                                                        <label for="website-input">Lokalizacja<span>*</span></label>
-                                                        <div class="select-cate activeSelect">
-                                                            <button type="button" class="btn" aria-haspopup="listbox">Wybierz region.</button> <!-- 09.16 / 플레이스홀더 한글 번역 -->
-                                                            <ul class="select-menu" role="listbox">
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">Korea</a></li>
-                                                                <li><a href="javascript:;" role="option"
-                                                                        tabindex="0">USA</a></li>
-                                                            </ul>
+                                                        <div class="btn-wrap">
+                                                            <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
+                                                                <img src="../../../inc/images/icon/icon_arrow_left.svg">
+                                                                Wstecz
+                                                            </button>
+                                                            <button type="button" class="act-btn-md btn-primary01 btn-step-next">
+                                                                Dalej
+                                                                <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="btn-wrap">
-                                                <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
-                                                    <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                    Wstecz
-                                                </button>
-                                                <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
-                                                    Dalej
-                                                    <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item" id="step-5">
-                                        <div class="acd-group">
-                                            <div class="align-group">
-                                                <p class="acd-tit">Proszę wprowadzić treść zapytania.</p>
-                                            </div>
-                                        </div>
-                                        <div class="acd-panel accordion-content" role="region">
-                                            <span class="required-field-text">* Pole wymagane.</span>
-                                            <div class="sub-cont-wrap">
-                                                <div class="wrap-form-input filebox">
-                                                    <div class="input-wrap">
-                                                        <label for="title-input">Temat<span>*</span></label>
-                                                        <input type="text" id="title-input" class="input-box" placeholder="Wprowadź temat.">
-                                                        
-                                                    </div>
-                                                    <div class="input-wrap textarea-box">
-                                                        <label for="cont-input">Treść<span>*</span></label>
-                                                        <div class="textarea-box w100">
-                                                            <textarea id="cont-input" class="textarea" placeholder="Wprowadź treść." maxlength="1000"></textarea>
-                                                            <!-- 09.15 / 글자 수 체크 삭제 -->
-                                                        </div>                                                        
-                                                    </div>
-                                                    <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - S-->
-                                                    <div class="input-wrap">
-                                                        <label for="file-input">Załączniki</label>
-                                                        <div class="file-input-box">
-                                                            <div class="file-item">
-                                                                <input id="file-input" class="input-box upload-name"
-                                                                    value="Proszę przesłać plik."
-                                                                    placeholder="Proszę przesłać plik.">
-                                                                <div class="btn-wrap">
-                                                                    <label for="file1"
-                                                                        class="act-btn-xs btn-outline01 btn-file-attach">Dateien suchen</label>
-                                                                    <input type="file" id="file1" style="display: none;">
-                                                                </div>
-                                                            </div>
-                                                            <div class="input-info on"> <!-- on 클래스 존재시 메시지 노출-->
-                                                                <span class="msg">Max. 10MB</span>
-                                                            </div>
+                                                <div class="item" id="step-4">
+                                                    <div class="acd-group">
+                                                        <div class="align-group">
+                                                            <p class="acd-tit">Proszę podać swoje dane kontaktowe.</p>
                                                         </div>
                                                     </div>
-                                                    <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - E-->
+                                                    <div class="acd-panel accordion-content" role="region">
+                                                        <span class="required-field-text">* Pole wymagane</span>
+                                                        <div class="sub-cont-wrap">
+                                                            <div class="wrap-form-input ty02">
+                                                                <div class="input-wrap">
+                                                                    <label for="user-input">Imię i nazwisko<span>*</span></label>
+                                                                    <input type="text" id="user-input" class="input-box" placeholder="Wprowadź swoje imię i nazwisko."> <!-- 09.16 / 플레이스홀더 한글 번역 -->
+                                                                    
+                                                                </div>
+                                                                <div class="input-wrap">
+                                                                    <label for="email-input">E-mail<span>*</span></label>
+                                                                    <div class="email-input-box">
+                                                                        <div class="email-input-wrap">
+                                                                            <input type="email" id="email-input" class="input-box" placeholder="">@
+                                                                            <input type="email" id="email-input" class="input-box" placeholder="">
+                                                                            
+                                                                        </div>
+                                                                        <p><span class="ico-info"></span>Please enter your email accurately to receive a response.</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="input-wrap">
+                                                                    <label for="company-input">Nazwa firmy<span>*</span></label>
+                                                                    <input type="text" id="company-input" class="input-box" placeholder="Wprowadź nazwę firmy.">
+                                                                    
+                                                                </div>
+                                                                <div class="input-wrap">
+                                                                    <label for="website-input">Strona internetowa</label> <!-- 09.12 수정 : 홈페이지 필수값 제거 -->
+                                                                    <input type="text" id="website-input" class="input-box" placeholder="Wprowadź adres strony internetowej.">
+                                                                    
+                                                                </div>
+                                                                <div class="input-wrap selectbox-wrap type3">
+                                                                    <label for="website-input">Lokalizacja<span>*</span></label>
+                                                                    <div class="select-cate activeSelect">
+                                                                        <button type="button" class="btn" aria-haspopup="listbox">Wybierz region.</button> <!-- 09.16 / 플레이스홀더 한글 번역 -->
+                                                                        <ul class="select-menu" role="listbox">
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">Korea</a></li>
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                    tabindex="0">USA</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-wrap">
+                                                            <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
+                                                                <img src="../../../inc/images/icon/icon_arrow_left.svg">
+                                                                Wstecz
+                                                            </button>
+                                                            <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
+                                                                Dalej
+                                                                <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="btn-wrap">
-                                                <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
-                                                    <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                    Wstecz
-                                                </button>
-                                                <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
-                                                    Dalej
-                                                    <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
-                                                </button>
-                                            </div>
+                                                <div class="item" id="step-5">
+                                                    <div class="acd-group">
+                                                        <div class="align-group">
+                                                            <p class="acd-tit">Proszę wprowadzić treść zapytania.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="acd-panel accordion-content" role="region">
+                                                        <span class="required-field-text">* Pole wymagane.</span>
+                                                        <div class="sub-cont-wrap">
+                                                            <div class="wrap-form-input filebox">
+                                                                <div class="input-wrap">
+                                                                    <label for="title-input">Temat<span>*</span></label>
+                                                                    <input type="text" id="title-input" class="input-box" placeholder="Wprowadź temat.">
+                                                                    
+                                                                </div>
+                                                                <div class="input-wrap textarea-box">
+                                                                    <label for="cont-input">Treść<span>*</span></label>
+                                                                    <div class="textarea-box w100">
+                                                                        <textarea id="cont-input" class="textarea" placeholder="Wprowadź treść." maxlength="1000"></textarea>
+                                                                        <!-- 09.15 / 글자 수 체크 삭제 -->
+                                                                    </div>                                                        
+                                                                </div>
+                                                                <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - S-->
+                                                                <div class="input-wrap">
+                                                                    <label for="file-input">Załączniki</label>
+                                                                    <div class="file-input-box">
+                                                                        <div class="file-item">
+                                                                            <input id="file-input" class="input-box upload-name"
+                                                                                value="Proszę przesłać plik."
+                                                                                placeholder="Proszę przesłać plik.">
+                                                                            <div class="btn-wrap">
+                                                                                <label for="file1"
+                                                                                    class="act-btn-xs btn-outline01 btn-file-attach">Dateien suchen</label>
+                                                                                <input type="file" id="file1" style="display: none;">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="input-info on"> <!-- on 클래스 존재시 메시지 노출-->
+                                                                            <span class="msg">Max. 10MB</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - E-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-wrap">
+                                                            <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
+                                                                <img src="../../../inc/images/icon/icon_arrow_left.svg">
+                                                                Wstecz
+                                                            </button>
+                                                            <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
+                                                                Dalej
+                                                                <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item" id="step-6">
+                                                    <div class="acd-group">
+                                                        <div class="align-group">
+                                                            <p class="acd-tit consent-title">Zgoda na zbieranie i wykorzystywanie danych osobowych</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="acd-panel accordion-content" role="region">
+                                                        <div class="sub-cont-wrap consent-cont-wrap">
+                                                            <!-- 08.18 수정 : 문구 변경 - S -->
+                                                            <div class="text-list-wrap terms-wrap">
+                                                                <ol class="text-list">
+                                                                    <li>
+                                                                        <strong><span>1.</span>Cel zbierania</strong>
+                                                                        <p>Zbieranie i wykorzystywanie informacji w celu odpowiedzi na zapytania klientów</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong><span>2.</span>Zakres zbieranych danych</strong>
+                                                                        <p>Imię i nazwisko, e-mail, numer telefonu, nazwa firmy</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong><span>3.</span>Okres przechowywania i wykorzystania</strong>
+                                                                        <p>6 miesięcy</p>
+                                                                    </li>
+                                                                    <span><span>*</span>Usługa zapytań jest dostępna wyłącznie w przypadku wyrażenia zgody na zbieranie, wykorzystywanie i udostępnianie danych osobowy.</span>
+                                                                </ol>
+                                                            </div><!-- //08.18 수정 : 문구 변경 - E -->  
+                                                        </div>
+                                                        <div class="terms-chk-wrap">
+                                                            <div class="checkbox chk-terms-wrap">
+                                                                <input type="checkbox" class="checkbox" id="checkbox-5"
+                                                                    name="checkbox-5">
+                                                                <label for="checkbox-5" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                    <!-- 08.18 수정 : 문구 변경 -->
+                                                                    <span class="txt">
+                                                                        Wyrażam zgodę na zbieranie i wykorzystywanie moich danych osobowych.
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-wrap">                                               
+                                                            <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
+                                                                <img src="../../../inc/images/icon/icon_arrow_left.svg">
+                                                                Wstecz
+                                                            </button>
+                                                            <button type="button" class="act-btn-md btn-primary01 btn-step-accept disabled" id="popupAcceptBtn1" onclick="pubUi.popUp.open('#popupAccept1','#popupAcceptBtn1');">Send</button>  <!-- 체크값 미선택시, disabled 클래스 활성화, 체크값선택시 disabled 제거-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ol>
                                         </div>
                                     </div>
-                                    <div class="item" id="step-6">
-                                        <div class="acd-group">
-                                            <div class="align-group">
-                                                <p class="acd-tit consent-title">Zgoda na zbieranie i wykorzystywanie danych osobowych</p>
-                                            </div>
-                                        </div>
-                                        <div class="acd-panel accordion-content" role="region">
-                                            <div class="sub-cont-wrap consent-cont-wrap">
-                                                <!-- 08.18 수정 : 문구 변경 - S -->
-                                                <div class="text-list-wrap terms-wrap">
-                                                    <ol class="text-list">
-                                                        <li>
-                                                            <strong><span>1.</span>Cel zbierania</strong>
-                                                            <p>Zbieranie i wykorzystywanie informacji w celu odpowiedzi na zapytania klientów</p>
-                                                        </li>
-                                                        <li>
-                                                            <strong><span>2.</span>Zakres zbieranych danych</strong>
-                                                            <p>Imię i nazwisko, e-mail, numer telefonu, nazwa firmy</p>
-                                                        </li>
-                                                        <li>
-                                                            <strong><span>3.</span>Okres przechowywania i wykorzystania</strong>
-                                                            <p>6 miesięcy</p>
-                                                        </li>
-                                                        <span><span>*</span>Usługa zapytań jest dostępna wyłącznie w przypadku wyrażenia zgody na zbieranie, wykorzystywanie i udostępnianie danych osobowy.</span>
-                                                    </ol>
-                                                </div><!-- //08.18 수정 : 문구 변경 - E -->  
-                                            </div>
-                                            <div class="terms-chk-wrap">
-                                                <div class="checkbox chk-terms-wrap">
-                                                    <input type="checkbox" class="checkbox" id="checkbox-5"
-                                                        name="checkbox-5">
-                                                    <label for="checkbox-5" class="checkbox-label">
-                                                        <span class="custom-checkbox"></span>
-                                                        <!-- 08.18 수정 : 문구 변경 -->
-                                                        <span class="txt">
-                                                            Wyrażam zgodę na zbieranie i wykorzystywanie moich danych osobowych.
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="btn-wrap">                                               
-                                                <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
-                                                    <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                    Wstecz
-                                                </button>
-                                                <button type="button" class="act-btn-md btn-primary01 btn-step-accept disabled" id="popupAcceptBtn1" onclick="pubUi.popUp.open('#popupAccept1','#popupAcceptBtn1');">Send</button>  <!-- 체크값 미선택시, disabled 클래스 활성화, 체크값선택시 disabled 제거-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- //09.30 수정 : 모바일 레이아웃 변경(고객지원) E -->
         </section>
         <!-- // section -->
         <aside>

@@ -1540,7 +1540,11 @@
 /* FAQ */
 .faq [class^="content-item"] {padding-top: 2rem; padding-bottom: 0;}
 .faq h3 {margin: 0;}
-.faq .tab-content-box {padding: 1.5rem 0 2rem;}
+.faq:lang(zh-CN) .tab-content-box,
+.faq:lang(pl) .tab-content-box,
+.faq:lang(de) .tab-content-box {padding: 1rem 0 0;}
+.faq .news-content-area .tab-content-box {padding: 2rem 0;}
+
 .faq .paging-wrap {padding-bottom: 6rem;}
 .faq .content-area {padding-top: 0;}
 .faq .head-area,
@@ -1578,6 +1582,8 @@
 .download .search-box .btn-search-reset { width: 1.5rem; height: 1.5rem; }
 .download .search-box .btn-search-reset img { width: .5rem; height: .5rem; }
 .download .tab-category { padding-left: 0; }
+.download .content-area-head-tab .tab-cate-wrap.new .tab-category {padding-left:1.25rem; padding-top: 1.5rem;}
+.download .tab-content-box .content-wrap .title-h2 {padding-top: 3rem;}
 .download #tab5-content .tab-cate-wrap { margin-top: 1.25rem; }
 .tab-cate-wrap.type3 .tab-category > li button { align-items: center; height: 2.5rem; padding: .375rem 1.5rem; font-size: 1rem; line-height: 1.4rem; }
 .download .cont-area-wrap .cont-area-sect > section {padding-top: 1rem;}

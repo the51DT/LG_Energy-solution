@@ -83,7 +83,8 @@
 .accordion-list.type3:not(:last-child) {margin-bottom: 0.5rem;}
 .accordion-list.type3 .accordion-btn {padding-block: 1.25rem;}
 .accordion-list.type3.on .accordion-btn {padding-bottom: 0;}
-.accordion-list.type3 .accordion-btn .acd-tit {font-size: 1rem; line-height: 1.6rem;}
+.accordion-list .accordion-btn .align-group {width:100%; padding-right: 2rem;}
+.accordion-list.type3 .accordion-btn .acd-tit {font-size: 1rem; line-height: 1.6rem; width: 100%;}
 .accordion-list.type3.on .accordion-btn .acd-tit {font-size: 1.125rem; line-height: 1.75rem;}
 .accordion-list.type3 .accordion-btn .sub-tit {font-size: 0.875rem; line-height: 1.3125rem;}
 .accordion-list.type3 .accordion-btn .acd-group {gap: 1rem; flex-direction: row;}

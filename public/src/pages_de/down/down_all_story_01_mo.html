@@ -157,953 +157,964 @@
     <!-- //header -->
     <!-- section -->
     <section id="container" class="content-wrap">
+        <!-- 09.30 수정 : 모바일 레이아웃 변경(고객지원) : S -->
         <div class="content-area download-content-area">
             <div class="cont-head-wrap mo-only">
-                <h2 class="title-h1">Download</h2> <!-- title-h1 (페이지타이틀) -->
+                <h2 class="title-h1">Support</h2> <!-- title-h1 (페이지타이틀) -->
             </div>
-            <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
-                <div class="content-wrap"> <!-- max-width:90rem (default)-->
-                    <h2 class="title-h1 pc-only">Download</h2> <!-- title-h1 (페이지타이틀) -->
-                    <div class="search-box-wrap">
-                        <div class="search-box searchEvt">
-                            <button type="button" class="btn-search" aria-label="검색" class="btn-search">
-                                <img src="../../../inc/images/icon/icon_head_search.svg" alt="검색 아이콘">
-                            </button>
-                            <input type="text" id="download-search" placeholder="Stichwort eingeben.">
-                            <button type="button" class="btn-search-reset btn-delete" aria-label="검색어 초기화">
-                                <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="삭제 아이콘">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="tab-wrap tab-download">
-                        <!-- 09.15 / 탭 순서 변경 [s] -->
-                        <div class="tab-cate-wrap type3"> <!-- type3 -->
-                            <ul class="tab-category activeTab" role="tablist">
-                                <li class="tab on" id="tab1"><button role="tab" aria-selected="true"
-                                    aria-controls="tab1-content">Alle</button>
-                                </li>
-                                <li class="tab" id="tab2"><button role="tab" aria-selected="false"
-                                    aria-controls="tab2-content">Produkt</button>
-                                </li>
-                                <li class="tab" id="tab3"><button role="tab" aria-selected="false"
-                                    aria-controls="tab3-content">Service</button>
-                                </li>
-                                <li class="tab" id="tab4"><button role="tab" aria-selected="false"
-                                    aria-controls="tab4-content">Unternehmen</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-content-box">
-                            <!-- <div class="total-wrap result-total-wrap" style="display: none;"><p class="total">총 <span>32</span>의 검색결과가 있습니다.</p></div> -->
-                            <!-- 검색결과없음 -->
-                            <div class="no-result-wrap" style="display: none;">
-                                <p class="no-result">
-                                    Keine Ergebnisse gefunden.
-                                </p>
-                                <button type="button" class="act-btn-md btn-outline01">Alle anzeigen</button>
-                            </div>
-                            <div class="tab-content on" id="tab1-content">
-                                <div class="cont-area-wrap">
-                                    <div class="total-wrap"><p class="total"><span>201</span> Ergebnisse gefunden</p></div>
-                                    <div class="cont-area-sect">
-                                        <section>
-                                            <ul class="download-list">
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-1" name="checkbox-1">
-                                                        <label for="checkbox-1" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Produkt </p>
-                                                                <span class="download-tit">1865 Catalogue</span> 
-                                                            </div>
-                                                            <a href="#" class="btn-download" id="popupFormBtn1" onclick="pubUi.popUp.open('#popupForm1','#popupFormBtn1');"> <!-- 08.26 추가 : popup 이벤트 추가 -->
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
-                                                        <label for="checkbox-2" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Produkt </p>
-                                                                <span class="download-tit">2170 Catalogue</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-3" name="checkbox-3">
-                                                        <label for="checkbox-3" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Company </p>
-                                                                <span class="download-tit">Title</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-4" name="checkbox-4">
-                                                        <label for="checkbox-4" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Company </p>
-                                                                <span class="download-tit">CI</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-5" name="checkbox-5">
-                                                        <label for="checkbox-5" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Company</p>
-                                                                <span class="download-tit">Title</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-6" name="checkbox-6">
-                                                        <label for="checkbox-6" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Company</p>
-                                                                <span class="download-tit">Title</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-7" name="checkbox-7">
-                                                        <label for="checkbox-7" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Sustainability</p>
-                                                                <span class="download-tit">Title</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-8" name="checkbox-8">
-                                                        <label for="checkbox-8" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Sustainability</p>
-                                                                <span class="download-tit">Title</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-9" name="checkbox-9">
-                                                        <label for="checkbox-9" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Sustainability</p>
-                                                                <span class="download-tit">Title</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-10" name="checkbox-10">
-                                                        <label for="checkbox-10" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Company </p>
-                                                                <span class="download-tit">Title</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <div class="btm-btn-area">
-                                                <div class="paging-wrap">
-                                                    <ul class="paging pc-only">
-                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li class=""><a href="#">2</a></li>
-                                                        <li class=""><a href="#">3</a></li>
-                                                        <li class=""><a href="#">4</a></li>
-                                                        <li class=""><a href="#">5</a></li>
-                                                        <li class=""><a href="#">...</a></li>
-                                                        <li class=""><a href="#">30</a></li>
-                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="btm-btn">
-                                                    <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> <!-- 09.15 / 하단버튼 클래스 변경 -->
-                                                        <span>Download selected</span>
-                                                        <div class="icon-area"></div>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content" id="tab2-content">
-                                <div class="cont-area-wrap">
-                                    <div class="total-wrap"><p class="total"><span>201</span> Ergebnisse gefunden</p></div>
-                                    <div class="cont-area-sect">
-                                            <section>
-                                            <ul class="download-list">
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-1" name="checkbox-1">
-                                                        <label for="checkbox-1" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Produkt </p>
-                                                                <span class="download-tit">1865 Catalogue</span> 
-                                                            </div>
-                                                            <a href="#" class="btn-download" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
-                                                        <label for="checkbox-2" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Produkt </p>
-                                                                <span class="download-tit">2170 Catalogue</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-3" name="checkbox-3">
-                                                        <label for="checkbox-3" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Produkt </p>
-                                                                <span class="download-tit">4680 Catalogue</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-4" name="checkbox-4">
-                                                        <label for="checkbox-4" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Produkt </p>
-                                                                <span class="download-tit">4695 Catalogue</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-5" name="checkbox-5">
-                                                        <label for="checkbox-5" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Produkt </p>
-                                                                <span class="download-tit">46120 Catalogue</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-6" name="checkbox-6">
-                                                        <label for="checkbox-6" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> Produkt </p>
-                                                                <span class="download-tit">Pouch Cell Catalogue</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                
-
-                                            </ul>
-                                            <div class="btm-btn-area">
-                                                <div class="paging-wrap">
-                                                    <ul class="paging pc-only">
-                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li class=""><a href="#">2</a></li>
-                                                        <li class=""><a href="#">3</a></li>
-                                                        <li class=""><a href="#">4</a></li>
-                                                        <li class=""><a href="#">5</a></li>
-                                                        <li class=""><a href="#">...</a></li>
-                                                        <li class=""><a href="#">30</a></li>
-                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                    </ul>
-                                                    <ul class="paging mo-only">
-                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li class=""><a href="#">2</a></li>
-                                                        <li class=""><a href="#">3</a></li>
-                                                        <li class=""><a href="#">...</a></li>
-                                                        <li class=""><a href="#">20</a></li>
-                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="btm-btn">
-                                                    <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> <!-- 09.15 / 하단버튼 클래스 변경 -->
-                                                        <span>Download selected</span>
-                                                        <div class="icon-area"></div>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>                            
-                            <div class="tab-content" id="tab3-content">
-                                <div class="cont-area-wrap">
-                                    <div class="total-wrap"><p class="total"><span>201</span> Ergebnisse gefunden</p></div>
-                                    <div class="cont-area-sect">
-                                        <section>
-                                            <ul class="download-list">
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-1" name="checkbox-1">
-                                                        <label for="checkbox-1" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">회사소개서</span> 
-                                                            </div>
-                                                            <a href="#" class="btn-download" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
-                                                        <label for="checkbox-2" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">회사 로고 CI</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-3" name="checkbox-3">
-                                                        <label for="checkbox-3" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">윤리규범(한국어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-4" name="checkbox-4">
-                                                        <label for="checkbox-4" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">윤리규범(중국어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-5" name="checkbox-5">
-                                                        <label for="checkbox-5" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">윤리규범(일본어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-6" name="checkbox-6">
-                                                        <label for="checkbox-6" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">윤리규범(영어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-7" name="checkbox-7">
-                                                        <label for="checkbox-7" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">윤리규범(프랑스어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-8" name="checkbox-8">
-                                                        <label for="checkbox-8" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">윤리규범(독일어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-9" name="checkbox-9">
-                                                        <label for="checkbox-9" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">윤리규범(그리스어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-10" name="checkbox-10">
-                                                        <label for="checkbox-10" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 회사소개 </p>
-                                                                <span class="download-tit">윤리규범(이탈리아어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                            </ul>
-                                            <div class="btm-btn-area">
-                                                <div class="paging-wrap">
-                                                    <ul class="paging pc-only">
-                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li class=""><a href="#">2</a></li>
-                                                        <li class=""><a href="#">3</a></li>
-                                                        <li class=""><a href="#">4</a></li>
-                                                        <li class=""><a href="#">5</a></li>
-                                                        <li class=""><a href="#">...</a></li>
-                                                        <li class=""><a href="#">30</a></li>
-                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                    </ul>
-                                                    <ul class="paging mo-only">
-                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li class=""><a href="#">2</a></li>
-                                                        <li class=""><a href="#">3</a></li>
-                                                        <li class=""><a href="#">...</a></li>
-                                                        <li class=""><a href="#">20</a></li>
-                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="btm-btn">
-                                                    <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> <!-- 09.15 / 하단버튼 클래스 변경 -->
-                                                        <span>Download selected</span>
-                                                        <div class="icon-area"></div>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content" id="tab4-content">
-                                <div class="cont-area-wrap">
-                                    <div class="total-wrap"><p class="total"><span>201</span> Ergebnisse gefunden</p></div>
-                                    <div class="cont-area-sect">
-                                        <section>
-                                            <ul class="download-list">
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-1" name="checkbox-1">
-                                                        <label for="checkbox-1" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">글로벌 환경정책</span> 
-                                                            </div>
-                                                            <a href="#" class="btn-download" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
-                                                        <label for="checkbox-2" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">전사 품질 선언</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-3" name="checkbox-3">
-                                                        <label for="checkbox-3" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">생물다양성 정책</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-4" name="checkbox-4">
-                                                        <label for="checkbox-4" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">협력사 행동규범</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-5" name="checkbox-5">
-                                                        <label for="checkbox-5" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">2024 지속 가능한 공급망 관리 보고서 (한국어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-6" name="checkbox-6">
-                                                        <label for="checkbox-6" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">2024 지속 가능한 공급망 관리 보고서 (영어)</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-7" name="checkbox-7">
-                                                        <label for="checkbox-7" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">글로벌 인권노동 정책</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-8" name="checkbox-8">
-                                                        <label for="checkbox-8" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">다양성, 공정성, 포용성 정책</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-9" name="checkbox-9">
-                                                        <label for="checkbox-9" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">글로벌 안전보건 정책</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-10" name="checkbox-10">
-                                                        <label for="checkbox-10" class="checkbox-label">
-                                                            <span class="custom-checkbox"></span>
-                                                        </label>
-                                                    </div>
-                                                    <ul class="download-desc">
-                                                        <li>
-                                                            <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 지속가능경영 </p>
-                                                                <span class="download-tit">준법지침서</span>
-                                                            </div>
-                                                            <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
-                                                                <span class="icon-download"></span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                            </ul>
-                                            <div class="btm-btn-area">
-                                                <div class="paging-wrap">
-                                                    <ul class="paging pc-only">
-                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li class=""><a href="#">2</a></li>
-                                                        <li class=""><a href="#">3</a></li>
-                                                        <li class=""><a href="#">4</a></li>
-                                                        <li class=""><a href="#">5</a></li>
-                                                        <li class=""><a href="#">...</a></li>
-                                                        <li class=""><a href="#">30</a></li>
-                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                    </ul>
-                                                    <ul class="paging mo-only">
-                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
-                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
-                                                        <li class="active"><a href="#">1</a></li>
-                                                        <li class=""><a href="#">2</a></li>
-                                                        <li class=""><a href="#">3</a></li>
-                                                        <li class=""><a href="#">...</a></li>
-                                                        <li class=""><a href="#">20</a></li>
-                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
-                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="btm-btn">
-                                                    <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> <!-- 09.15 / 하단버튼 클래스 변경 -->
-                                                        <span>Download selected</span>
-                                                        <div class="icon-area"></div>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- //tab-content-box -->
-                        <!-- 09.15 / 탭 순서 변경 [s] -->
+            <div class="tab-wrap">
+                <div class="content-area-head-tab">
+                    <div class="tab-cate-wrap new">
+                        <ul class="tab-category">
+                            <li class="tab on"><a href="#">Download</a></li>
+                            <li class="tab"><a href="#">Kontakt</a></li>
+                            <li class="tab"><a href="#">FAQ</a></li>
+                        </ul>
                     </div>
                 </div>
-            </div><!-- //content-item01 -->
-
-
-
-        </div>
+                <div class="tab-content-box">
+                    <div class="content-item01 active"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
+                        <div class="content-wrap"> <!-- max-width:90rem (default)-->
+                            <h2 class="title-h2">Download</h2> <!-- title-h1 (페이지타이틀) -->
+                            <div class="search-box-wrap">
+                                <div class="search-box searchEvt">
+                                    <button type="button" class="btn-search" aria-label="검색" class="btn-search">
+                                        <img src="../../../inc/images/icon/icon_head_search.svg" alt="검색 아이콘">
+                                    </button>
+                                    <input type="text" id="download-search" placeholder="Wpisz słowo kluczowe.">
+                                    <button type="button" class="btn-search-reset btn-delete" aria-label="검색어 초기화">
+                                        <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="삭제 아이콘">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tab-wrap tab-download">
+                                <!-- 09.15 / 탭 순서 변경 [s] -->
+                                <div class="tab-cate-wrap type3"> <!-- type3 -->
+                                    <ul class="tab-category activeTab" role="tablist">
+                                        <li class="tab on" id="tab1"><button role="tab" aria-selected="true"
+                                            aria-controls="tab1-content">Alle</button>
+                                        </li>
+                                        <li class="tab" id="tab2"><button role="tab" aria-selected="false"
+                                            aria-controls="tab2-content">Produkt</button>
+                                        </li>
+                                        <li class="tab" id="tab3"><button role="tab" aria-selected="false"
+                                            aria-controls="tab3-content">Service</button>
+                                        </li>
+                                        <li class="tab" id="tab4"><button role="tab" aria-selected="false"
+                                            aria-controls="tab4-content">Unternehmen</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content-box">
+                                    <!-- <div class="total-wrap result-total-wrap" style="display: none;"><p class="total">총 <span>32</span>의 검색결과가 있습니다.</p></div> -->
+                                    <!-- 검색결과없음 -->
+                                    <div class="no-result-wrap" style="display: none;">
+                                        <p class="no-result">
+                                            Keine Ergebnisse gefunden.
+                                        </p>
+                                        <button type="button" class="act-btn-md btn-outline01">Alle anzeigen</button>
+                                    </div>
+                                    <div class="tab-content on" id="tab1-content">
+                                        <div class="cont-area-wrap">
+                                            <div class="total-wrap"><p class="total"><span>201</span> Ergebnisse gefunden</p></div>
+                                            <div class="cont-area-sect">
+                                                <section>
+                                                    <ul class="download-list">
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-1" name="checkbox-1">
+                                                                <label for="checkbox-1" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Produkt </p>
+                                                                        <span class="download-tit">1865 Catalogue</span> 
+                                                                    </div>
+                                                                    <a href="#" class="btn-download" id="popupFormBtn1" onclick="pubUi.popUp.open('#popupForm1','#popupFormBtn1');"> <!-- 08.26 추가 : popup 이벤트 추가 -->
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-2" name="checkbox-2">
+                                                                <label for="checkbox-2" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Produkt </p>
+                                                                        <span class="download-tit">2170 Catalogue</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-3" name="checkbox-3">
+                                                                <label for="checkbox-3" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Company </p>
+                                                                        <span class="download-tit">Title</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-4" name="checkbox-4">
+                                                                <label for="checkbox-4" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Company </p>
+                                                                        <span class="download-tit">CI</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-5" name="checkbox-5">
+                                                                <label for="checkbox-5" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Company</p>
+                                                                        <span class="download-tit">Title</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-6" name="checkbox-6">
+                                                                <label for="checkbox-6" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Company</p>
+                                                                        <span class="download-tit">Title</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-7" name="checkbox-7">
+                                                                <label for="checkbox-7" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Sustainability</p>
+                                                                        <span class="download-tit">Title</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-8" name="checkbox-8">
+                                                                <label for="checkbox-8" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Sustainability</p>
+                                                                        <span class="download-tit">Title</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-9" name="checkbox-9">
+                                                                <label for="checkbox-9" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Sustainability</p>
+                                                                        <span class="download-tit">Title</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-10" name="checkbox-10">
+                                                                <label for="checkbox-10" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Company </p>
+                                                                        <span class="download-tit">Title</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="btm-btn-area">
+                                                        <div class="paging-wrap">
+                                                            <ul class="paging pc-only">
+                                                                <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li class=""><a href="#">2</a></li>
+                                                                <li class=""><a href="#">3</a></li>
+                                                                <li class=""><a href="#">4</a></li>
+                                                                <li class=""><a href="#">5</a></li>
+                                                                <li class=""><a href="#">...</a></li>
+                                                                <li class=""><a href="#">30</a></li>
+                                                                <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="btm-btn">
+                                                            <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> <!-- 09.15 / 하단버튼 클래스 변경 -->
+                                                                <span>Download selected</span>
+                                                                <div class="icon-area"></div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content" id="tab2-content">
+                                        <div class="cont-area-wrap">
+                                            <div class="total-wrap"><p class="total"><span>201</span> Ergebnisse gefunden</p></div>
+                                            <div class="cont-area-sect">
+                                                    <section>
+                                                    <ul class="download-list">
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-1" name="checkbox-1">
+                                                                <label for="checkbox-1" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Produkt </p>
+                                                                        <span class="download-tit">1865 Catalogue</span> 
+                                                                    </div>
+                                                                    <a href="#" class="btn-download" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-2" name="checkbox-2">
+                                                                <label for="checkbox-2" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Produkt </p>
+                                                                        <span class="download-tit">2170 Catalogue</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-3" name="checkbox-3">
+                                                                <label for="checkbox-3" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Produkt </p>
+                                                                        <span class="download-tit">4680 Catalogue</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-4" name="checkbox-4">
+                                                                <label for="checkbox-4" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Produkt </p>
+                                                                        <span class="download-tit">4695 Catalogue</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-5" name="checkbox-5">
+                                                                <label for="checkbox-5" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Produkt </p>
+                                                                        <span class="download-tit">46120 Catalogue</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-6" name="checkbox-6">
+                                                                <label for="checkbox-6" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> Produkt </p>
+                                                                        <span class="download-tit">Pouch Cell Catalogue</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        
+        
+                                                    </ul>
+                                                    <div class="btm-btn-area">
+                                                        <div class="paging-wrap">
+                                                            <ul class="paging pc-only">
+                                                                <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li class=""><a href="#">2</a></li>
+                                                                <li class=""><a href="#">3</a></li>
+                                                                <li class=""><a href="#">4</a></li>
+                                                                <li class=""><a href="#">5</a></li>
+                                                                <li class=""><a href="#">...</a></li>
+                                                                <li class=""><a href="#">30</a></li>
+                                                                <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                            </ul>
+                                                            <ul class="paging mo-only">
+                                                                <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li class=""><a href="#">2</a></li>
+                                                                <li class=""><a href="#">3</a></li>
+                                                                <li class=""><a href="#">...</a></li>
+                                                                <li class=""><a href="#">20</a></li>
+                                                                <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="btm-btn">
+                                                            <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> <!-- 09.15 / 하단버튼 클래스 변경 -->
+                                                                <span>Download selected</span>
+                                                                <div class="icon-area"></div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>                            
+                                    <div class="tab-content" id="tab3-content">
+                                        <div class="cont-area-wrap">
+                                            <div class="total-wrap"><p class="total"><span>201</span> Ergebnisse gefunden</p></div>
+                                            <div class="cont-area-sect">
+                                                <section>
+                                                    <ul class="download-list">
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-1" name="checkbox-1">
+                                                                <label for="checkbox-1" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">회사소개서</span> 
+                                                                    </div>
+                                                                    <a href="#" class="btn-download" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-2" name="checkbox-2">
+                                                                <label for="checkbox-2" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">회사 로고 CI</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-3" name="checkbox-3">
+                                                                <label for="checkbox-3" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">윤리규범(한국어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-4" name="checkbox-4">
+                                                                <label for="checkbox-4" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">윤리규범(중국어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-5" name="checkbox-5">
+                                                                <label for="checkbox-5" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">윤리규범(일본어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-6" name="checkbox-6">
+                                                                <label for="checkbox-6" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">윤리규범(영어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-7" name="checkbox-7">
+                                                                <label for="checkbox-7" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">윤리규범(프랑스어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-8" name="checkbox-8">
+                                                                <label for="checkbox-8" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">윤리규범(독일어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-9" name="checkbox-9">
+                                                                <label for="checkbox-9" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">윤리규범(그리스어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-10" name="checkbox-10">
+                                                                <label for="checkbox-10" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 회사소개 </p>
+                                                                        <span class="download-tit">윤리규범(이탈리아어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+        
+                                                    </ul>
+                                                    <div class="btm-btn-area">
+                                                        <div class="paging-wrap">
+                                                            <ul class="paging pc-only">
+                                                                <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li class=""><a href="#">2</a></li>
+                                                                <li class=""><a href="#">3</a></li>
+                                                                <li class=""><a href="#">4</a></li>
+                                                                <li class=""><a href="#">5</a></li>
+                                                                <li class=""><a href="#">...</a></li>
+                                                                <li class=""><a href="#">30</a></li>
+                                                                <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                            </ul>
+                                                            <ul class="paging mo-only">
+                                                                <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li class=""><a href="#">2</a></li>
+                                                                <li class=""><a href="#">3</a></li>
+                                                                <li class=""><a href="#">...</a></li>
+                                                                <li class=""><a href="#">20</a></li>
+                                                                <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="btm-btn">
+                                                            <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> <!-- 09.15 / 하단버튼 클래스 변경 -->
+                                                                <span>Download selected</span>
+                                                                <div class="icon-area"></div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-content" id="tab4-content">
+                                        <div class="cont-area-wrap">
+                                            <div class="total-wrap"><p class="total"><span>201</span> Ergebnisse gefunden</p></div>
+                                            <div class="cont-area-sect">
+                                                <section>
+                                                    <ul class="download-list">
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-1" name="checkbox-1">
+                                                                <label for="checkbox-1" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">글로벌 환경정책</span> 
+                                                                    </div>
+                                                                    <a href="#" class="btn-download" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-2" name="checkbox-2">
+                                                                <label for="checkbox-2" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">전사 품질 선언</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-3" name="checkbox-3">
+                                                                <label for="checkbox-3" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">생물다양성 정책</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-4" name="checkbox-4">
+                                                                <label for="checkbox-4" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">협력사 행동규범</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-5" name="checkbox-5">
+                                                                <label for="checkbox-5" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">2024 지속 가능한 공급망 관리 보고서 (한국어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-6" name="checkbox-6">
+                                                                <label for="checkbox-6" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">2024 지속 가능한 공급망 관리 보고서 (영어)</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-7" name="checkbox-7">
+                                                                <label for="checkbox-7" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">글로벌 인권노동 정책</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-8" name="checkbox-8">
+                                                                <label for="checkbox-8" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">다양성, 공정성, 포용성 정책</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-9" name="checkbox-9">
+                                                                <label for="checkbox-9" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">글로벌 안전보건 정책</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="checkbox-10" name="checkbox-10">
+                                                                <label for="checkbox-10" class="checkbox-label">
+                                                                    <span class="custom-checkbox"></span>
+                                                                </label>
+                                                            </div>
+                                                            <ul class="download-desc">
+                                                                <li>
+                                                                    <div class="desc-tit-wrap">
+                                                                        <p class="tab-cont-name"> 지속가능경영 </p>
+                                                                        <span class="download-tit">준법지침서</span>
+                                                                    </div>
+                                                                    <a href="#" class="btn-download disabled" download>
+                                                                        <span class="btn-download-txt">PDF</span>
+                                                                        <span class="icon-download"></span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+        
+                                                    </ul>
+                                                    <div class="btm-btn-area">
+                                                        <div class="paging-wrap">
+                                                            <ul class="paging pc-only">
+                                                                <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li class=""><a href="#">2</a></li>
+                                                                <li class=""><a href="#">3</a></li>
+                                                                <li class=""><a href="#">4</a></li>
+                                                                <li class=""><a href="#">5</a></li>
+                                                                <li class=""><a href="#">...</a></li>
+                                                                <li class=""><a href="#">30</a></li>
+                                                                <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                            </ul>
+                                                            <ul class="paging mo-only">
+                                                                <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="처음"></a></li>
+                                                                <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="이전"></a></li>
+                                                                <li class="active"><a href="#">1</a></li>
+                                                                <li class=""><a href="#">2</a></li>
+                                                                <li class=""><a href="#">3</a></li>
+                                                                <li class=""><a href="#">...</a></li>
+                                                                <li class=""><a href="#">20</a></li>
+                                                                <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="다음"><span class="blind">다음</span></a></li>
+                                                                <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="마지막"><span class="blind">마지막</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="btm-btn">
+                                                            <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> <!-- 09.15 / 하단버튼 클래스 변경 -->
+                                                                <span>Download selected</span>
+                                                                <div class="icon-area"></div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- //tab-content-box -->
+                                <!-- 09.15 / 탭 순서 변경 [s] -->
+                            </div>
+                        </div>
+                    </div><!-- //content-item01 -->
+                </div>
+            </div>
+        </div><!-- //09.30 수정 : 모바일 레이아웃 변경(고객지원) : S -->
     </section>
     <!-- // section -->
     <aside>
