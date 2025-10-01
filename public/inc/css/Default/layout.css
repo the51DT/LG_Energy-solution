@@ -446,4 +446,5 @@ html[lang=en] .main-page .content-item01 .img-action01{margin-top:4.3rem; margin
 html[lang=en] .main-page .content-item01.active .txt span.ani04{width:22rem}
 
 /* 중문 */
-html[lang=zh-cn] .main-page .content-item01 .txt {width:910px;margin: 0 auto;;}
+html[lang=zh-cn] .main-page .content-item01 .txt {width:920px;margin: 0 auto;max-width: 100%;}
+
