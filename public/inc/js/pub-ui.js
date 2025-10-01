@@ -66,6 +66,8 @@ var pubUi = {
         /* 쿠키설정 팝업 */
         this.self.mainCookieLayer = document.querySelector(".main-cookie");
 
+        /* global network(사업장) 관련 */
+        this.self.mapInfoSort = document.querySelectorAll(".map-info-content-box .info-content-head .sort");
         
 
     },
@@ -147,6 +149,7 @@ var pubUi = {
                         otherTargetBtn.classList.remove("active");
                         if (otherCate) otherCate.querySelector(".select-menu")?.classList.remove("on");
                     });
+                
 
                     // ★ 변경: 이전 상태에 따라 토글
                     // 이미 active였으면 방금 모두 닫혔으니 "그대로 닫힌 상태" 유지
@@ -154,6 +157,22 @@ var pubUi = {
                     if (!wasActive) {
                         e.currentTarget.classList.add("active");
                         menu?.classList.add("on");
+                        
+                        if (this.self.mapInfoSort.length > 0) {
+                            this.self.mapInfoSort.forEach((i, idx) => {
+                                if(idx == 0) {
+                                    i.classList.add("idx"); //첫번째 sort만 idx클래스 적용
+                                }                            
+                            });
+                        }
+                    } else {
+                        if (this.self.mapInfoSort.length > 0) {
+                            this.self.mapInfoSort.forEach((i, idx) => {
+                                if (idx == 0) {
+                                    i.classList.remove("idx"); //첫번째 적용된 sort idx클래스 해제
+                                }
+                            });
+                        }
                     }
                 });
             }
@@ -172,6 +191,15 @@ var pubUi = {
                         const parentCate = targetMenu.closest(".select-cate");
                         parentCate?.querySelector(".btn-select, button")?.classList.remove("active");
                         targetMenu.classList.remove("on");
+
+                        // 글로벌네트워크 - 중국 전용 script                        
+                        if (this.self.mapInfoSort.length > 0) {
+                            this.self.mapInfoSort.forEach((i, idx) => {
+                                if (idx == 0) {
+                                    i.classList.remove("idx"); //첫번째 적용된 sort idx클래스 해제
+                                }
+                            });
+                        }
                     });
                 });
             }
