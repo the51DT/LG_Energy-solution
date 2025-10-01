@@ -679,10 +679,31 @@
                                                                     <input type="text" id="website-input" class="input-box" placeholder="请输入您的网站地址。">
                                                                     
                                                                 </div>
+                                                                <!-- 10.01 수정 : 전력중개 선택 시, 문의 유형 표시 노출 케이스 추가됨(다국어 공통 추가 사항 - 중,폴,독) : S -->
                                                                 <div class="input-wrap selectbox-wrap type3">
-                                                                    <label for="website-input">地区<span>*</span></label>
+                                                                    <label for="website-select1">类别<span>*</span></label>
                                                                     <div class="select-cate activeSelect">
-                                                                        <button type="button" class="btn" aria-haspopup="listbox">请选择地区。</button> <!-- 09.16 / 플레이스홀더 한글 번역 -->
+                                                                        <button type="button" class="btn" aria-haspopup="listbox" id="website-select1">请选择咨询类别。</button> <!-- 09.16 / 플레이스홀더 한글 번역 -->
+                                                                        <ul class="select-menu" role="listbox">
+                                                                            <li><a href="javascript:;" role="option"
+                                                                                tabindex="0" class="active">可再生能源竞价系统</a>
+                                                                        </li>
+                                                                        <li><a href="javascript:;" role="option"
+                                                                            tabindex="0">发电量预测系统</a></li>
+                                                                        <li><a href="javascript:;" role="option"
+                                                                                tabindex="0">济州示范项目</a></li>
+                                                                        <li><a href="javascript:;" role="option"
+                                                                                tabindex="0">RE100（直接购电协议）</a></li>
+                                                                        <li><a href="javascript:;" role="option"
+                                                                                tabindex="0">其他</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- //10.01 수정 : 전력중개 선택 시, 문의 유형 표시 노출 케이스 추가됨(다국어 공통 추가 사항 - 중,폴,독) : E -->
+                                                                <div class="input-wrap selectbox-wrap type3">
+                                                                    <label for="website-select2">地区<span>*</span></label>
+                                                                    <div class="select-cate activeSelect">
+                                                                        <button type="button" class="btn" aria-haspopup="listbox" id="website-select2">请选择地区。</button> <!-- 09.16 / 플레이스홀더 한글 번역 -->
                                                                         <ul class="select-menu" role="listbox">
                                                                             <li><a href="javascript:;" role="option"
                                                                                 tabindex="0" class="active">请选择地区。</a>
