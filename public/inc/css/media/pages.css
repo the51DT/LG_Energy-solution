@@ -1826,7 +1826,7 @@
 .serv-baround article .article-content + .article-content:has(.content-tit) {padding-top: 1rem;}
 .serv-baround .article-content .article-desc {padding: 1rem 0 0;}
 
-.e4w-box:lang(pl) .e4w-top, .e4w-box:lang(pl) .e4w-btm,
+.e4w-box:lang(pl) .e4w-top, .e4w-box:lang(de) .e4w-btm,
 .e4w-box:lang(pl) .e4w-top, .e4w-box:lang(de) .e4w-btm {height: auto;}
 
 /* B.around 다이어그램 이미지 팝업영역 */
@@ -1854,6 +1854,8 @@
 
 .serv_baround_chart:lang(pl) .left-area .model-box .model-icon {width: 2.25rem; height: 2.25rem; top: 1rem;}
 .serv_baround_chart:lang(pl) .left-area .model-box .model-group {top: 3.75rem;}
+
+.serv_baround_chart:lang(de) .left-area .model-box .model-tit {font-size: 0.75rem; line-height: 1.2rem;}
 
 /* 서비스 - B-Lifecare */
 .serv-blifecare .icon-link2 {gap: .25rem; margin: 0 auto; width: 12.375rem; font-size: .875rem; font-weight: 500; line-height: 1.225rem;}
@@ -2129,6 +2131,9 @@
 .serv-kooroo:lang(en) .article-tit-wrap .btn-wrap a {width: fit-content;}
 .serv-kooroo:not(:lang(ko)) .bmts-box .text-list-wrap + .asterisk-text {display: flex; gap: 0.375rem; padding-left: 0.25rem;}
 .serv-kooroo:lang(zh-CN) .bmts-box .text-list-wrap + .asterisk-text {justify-content: flex-start; padding-left: 0; margin-top: 0.75rem;}
+
+.serv-kooroo:lang(de) .article-tit-wrap .btn-wrap a {width: 11.5625rem;}
+.serv-kooroo:lang(de) .scooter-box {height: 12rem; border-radius: 4.6875rem; aspect-ratio: unset; justify-content: flex-start; padding-top: 1.5rem;}
 
 /* 서비스 > ess si */
 .serv-ess .article-content .article-desc:has(+ img) {padding-bottom: 1rem;}

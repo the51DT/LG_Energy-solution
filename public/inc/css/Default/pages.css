@@ -2149,6 +2149,9 @@
 
 .e4w-box:lang(pl) .e4w-top {height: 25.5rem;}
 .e4w-box:lang(pl) .e4w-btm {height: 23.75rem;}
+.serv-baround:lang(de) .examp-wrap {gap: 2.5rem}
+.serv-baround:lang(de) .examp-box {width: 10.4375rem;}
+.e4w-box:lang(de) .e4w-btm {height: 22.125rem;}
 
 /* B.around 다이어그램 이미지 팝업영역 */
 .serv_baround_chart .model-wrap {width: 100%; height: 18.75rem; padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: center; background-color: #F3F5F7; border-radius: 62.4375rem; position: relative;}
@@ -2173,6 +2176,8 @@
 
 .serv_baround_chart:lang(pl) .left-area .model-box .model-icon {width: 3rem; height: 3rem; top: 2rem;}
 .serv_baround_chart:lang(pl) .left-area .model-box .model-group {top: 6rem;}
+
+.serv_baround_chart:lang(de) .left-area .model-box .model-tit {font-size: 0.875rem; line-height: 1.4rem;}
 
 /* 서비스 - B-Lifecare */
 /* .serv-blifecare .page-map-wrap {margin-top: 6.25rem;} */
