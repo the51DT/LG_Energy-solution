@@ -1769,7 +1769,7 @@
 .serv-trading #content01 .article-img {max-width: 20rem; margin-inline: auto;}
 .serv-trading #content02 .article-img {margin: .5rem 2.81rem 0;}
 
-.serv-trading #content01 .article-img .lottie-wrap {width: 4rem; height: 4rem; top: 22.47rem; left: 50%; transform: translateX(-50%);}
+.serv-trading #content01 .article-img .lottie-wrap {width: 4rem; height: 4rem; top: 17.47rem; left: 50%; transform: translateX(-50%);}
 .service .service-btn-wrap {flex-direction: column; align-items: center; gap: .5rem; margin: 3rem 0 0;}
 .service .tab-content-box > .service-btn-wrap:last-of-type {margin-left: 1.25rem; margin-right: 1.25rem; margin-bottom: 6.25rem;}
 .service .service-btn-wrap > button,
@@ -1779,8 +1779,8 @@
 .serv-trading:lang(en) #content02 .article-img {margin-inline: 0;}
 
 .serv-trading:lang(zh-CN) #content01 .article-img .lottie-wrap {top: 19.44rem;}
-
 .serv-trading:lang(pl) #content01 .article-img .lottie-wrap {top: 18.06rem;}
+.serv-trading:lang(de) #content01 .article-img .lottie-wrap {top: 18.38rem;}
 
 /* 서비스 - B.around */
 .serv-baround .brand-info {margin-top: 3rem;}
