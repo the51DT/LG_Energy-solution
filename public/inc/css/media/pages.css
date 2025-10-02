@@ -1906,6 +1906,7 @@
 .serv-blifecare .service-btn-wrap {padding-bottom: 0;}
 .serv-blifecare .content-item01 .article-content .content-tit {margin-top: 3rem;}
 
+.serv-blifecare:lang(zh-CN) .icon-link2 {width: 9.25rem; min-width: unset;}
 .serv-blifecare:lang(de) .model-tit {font-size: 0.75rem; line-height: 1.2rem;}
 /* 서비스 공통 팝업 */
 .modal-pop .pop-wrap.service {gap: 1.5rem; max-height: unset;}
@@ -2027,6 +2028,7 @@
 
 .serv-bonce:lang(pl) .type-box > .type-explain > p > span,
 .serv-bonce:lang(en) .type-box > .type-explain > p > span {width: 100%;}
+.serv-bonce:lang(zh-CN) .type-explain > p > span {width: 3.75rem;}
 .serv-bonce .type-step { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
 .serv-bonce .type-step-item { background-color: #f3f5f7; display: flex; flex-direction: column; gap: 1rem; padding: 1.81rem 2rem; border-radius: 50%; text-align: center; justify-content: center; aspect-ratio: 1 / 1; }
 .serv-bonce:lang(pl) .type-step-item {padding: 2rem 0.75rem;}
@@ -2068,6 +2070,8 @@
 
 .serv-bonce:lang(de) .type-explain > p > span {width: 5rem;}
 .serv-bonce:lang(de) .type-box > .type-explain > p > span {width: unset;}
+
+.serv-bonce:lang(zh-CN) .type-step-item {padding-inline: 0;}
 
 /* 서비스 > KooRoo */
 .serv-kooroo .cont-area-wrap .article-tit { font-weight: 700; }
@@ -2134,6 +2138,7 @@
 
 .serv-kooroo:lang(de) .article-tit-wrap .btn-wrap a {width: 11.5625rem;}
 .serv-kooroo:lang(de) .scooter-box {height: 12rem; border-radius: 4.6875rem; aspect-ratio: unset; justify-content: flex-start; padding-top: 1.5rem;}
+
 
 /* 서비스 > ess si */
 .serv-ess .article-content .article-desc:has(+ img) {padding-bottom: 1rem;}

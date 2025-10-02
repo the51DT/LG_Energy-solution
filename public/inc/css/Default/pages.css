@@ -2244,6 +2244,8 @@
 .serv-blifecare:lang(en) .article-tit-wrap .tit-desc .asterisk-text {color: var(--colorElement-light-text-text-default03); gap: 0.375rem;}
 .serv-blifecare:lang(en) .article-tit-wrap .tit-desc .asterisk-text::before {-webkit-mask: url(../../images/icon/icon_asterisk.svg) no-repeat center; mask: url(../../images/icon/icon_asterisk.svg) no-repeat center; background-color: var(--colorElement-light-text-text-default03); background-image: unset;}
 
+.serv-blifecare:lang(zh-CN) .icon-link2 {min-width: unset; gap: 0.25rem;}
+
 /* 서비스 공통 팝업 */
 .modal-pop .pop-wrap.service {width: 62.5rem; max-width: 62.5rem;}
 .modal-pop .pop-wrap.service .pop-header {padding-bottom: 2.5rem;}
@@ -2424,6 +2426,7 @@
 .serv-bonce .ucd-desc-wrap .text-list-wrap .text-list li {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: #858889;}
 
 .serv-bonce:lang(en) .type-explain > p > span {width: 5rem;}
+.serv-bonce:lang(zh-CN) .type-explain > p > span {width: 4rem;}
 .serv-bonce:lang(de) .type-explain > p > span {width: 5.5rem;}
 
 /* 서비스 > KooRooo */
