@@ -448,3 +448,19 @@ html[lang=en] .main-page .content-item01.active .txt span.ani04{width:22rem}
 /* 중문 */
 html[lang=zh-cn] .main-page .content-item01 .txt {width:920px;margin: 0 auto;max-width: 100%;}
 
+/* 폴란드 */
+html:lang(pl) .main-page .content-item01.active .move-txt,
+html:lang(de) .main-page .content-item01.active .move-txt {right: 0;}
+html[lang=pl] .main-page .content-item01 .img-action01 {margin-top: 3.5rem;}
+html[lang=pl] .main-page .content-item01.active .txt span {font-size: 4rem; line-height: 5.6rem; font-weight: 700;}
+html[lang=pl] .main-page .content-item01.active .txt span.ani02,
+html[lang=pl] .main-page .content-item01.active .txt span.ani03 {white-space: nowrap;}
+html[lang=pl] .main-cookie .btn-group > button {width: 19.9375rem;}
+
+
+/* 독일 */
+html[lang=de] .main-page .content-item01 .img-action01 {margin-top: 3.5rem;}
+html[lang=de] .main-page .content-item01.active .txt span {font-size: 4rem; line-height: 5.6rem; font-weight: 700;}
+html[lang=de] .main-page .content-item01.active .txt span.ani02,
+html[lang=de] .main-page .content-item01.active .txt span.ani03 {white-space: nowrap;}
+html[lang=de] .main-cookie .btn-group > button {width: 14.125rem;}

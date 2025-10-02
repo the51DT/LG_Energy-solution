@@ -245,10 +245,10 @@ aside.end {bottom: 390px;}
 /* 메인 쿠키 설정 팝업 관련 css */
 .main-cookie {position: fixed; padding: 2.5rem 1.25rem 2rem; }
 .main-cookie .content-wrap {width: 100%; align-items: flex-end; flex-direction: column; gap: 2rem; position: relative; padding-top: 1.5rem; }
-.main-cookie .content-wrap .desc {font-size: .875rem; font-weight: 600; line-height: 1.3125rem;}
+.main-cookie .content-wrap .desc {font-size: .875rem; line-height: 1.3125rem;}
 .main-cookie .btn-wrap {display: block; width: 100%; margin-top: auto;}
-.main-cookie .btn-group {display: flex; gap: 0.5rem; }
-.main-cookie .btn-group > button {padding: 0.56rem 0.81rem; font-size: .875rem; line-height: 1.225rem; font-weight: 500; width: 50%; max-width: revert; min-width: revert;}
+.main-cookie .btn-group {display: flex; gap: 0.5rem; flex-direction: column;}
+.main-cookie .btn-group > button {padding: 0.56rem 0.81rem; font-size: .875rem; line-height: 1.225rem; font-weight: 500; width: 100% !important; max-width: revert; min-width: revert;}
 .main-cookie .btn-close {position: absolute; top:-1rem; right: 0;}
 .main-cookie .btn-close > button {width: 1.5rem; height: 1.5rem;}
 .main-cookie .btn-close > button img {padding: 0.27rem;}
@@ -261,7 +261,9 @@ aside.end {bottom: 390px;}
 .setting-cookie .pop-content .section-wrap section .desc {font-size: 1.125rem; color: #555758; line-height: 1.8rem; font-weight: 400;}
 
 html[lang=en] .nav-wrap li.depth02 a{color: var(--text-text-default-01, #171819);font-size: var(--size-mobile-B1, 1rem);font-weight: 400;line-height: var(--line-height-mobile-B1, 1.6rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);text-align: left;}
-html[lang=en] .main-page .content-item01 .txt {font-size: var(--size-mobile-H2, 1.5rem);line-height: var(--line-height-mobile-H2, 2.0625rem); /* 137.5% */
+html[lang=en] .main-page .content-item01 .txt,
+html[lang=pl] .main-page .content-item01 .txt,
+html[lang=de] .main-page .content-item01 .txt {font-size: var(--size-mobile-H2, 1.5rem);line-height: var(--line-height-mobile-H2, 2.0625rem); /* 137.5% */
 letter-spacing: var(--letter-spacing-default, 0);}
 html[lang=en] .main-page .content-item01 .txt span{flex-direction: column;}
 html[lang=en] .main-page .content-item01 .txt span strong{font-size: var(--size-mobile-H1, 1.875rem);font-weight: 700;line-height: var(--line-height-mobile-H1, 2.275rem);}
@@ -280,6 +282,20 @@ html[lang=zh-cn] .main-page .content-item01.active .ani-diagram{width:calc(100% 
 /* html[lang=zh-cn] .main-page .content-item01.active .img-action01{animation: imgAni01_en 6.3s linear;animation-iteration-count : infinite;} */
 html[lang=zh-cn] .main-page .content-item01 .img-action01{top:-130px;}
 html[lang=zh-cn] .main-page .content-item01.active .img-action01{opacity:1;animation: imgAni03 3s linear;animation-delay: 1s;animation-iteration-count : infinite;height:auto;width:100%;}
+
+html[lang=pl] .main-page .content-item01 .img-action01 {margin-top: 0;}
+html[lang=pl] .main-page .content-item01.active .txt span,
+html[lang=de] .main-page .content-item01.active .txt span {font-size: 1.5rem; line-height: 2.0625rem; font-weight: 700;}
+html[lang=pl] .main-page .content-item01.active .txt span:nth-child(1),
+html[lang=de] .main-page .content-item01.active .txt span:nth-child(1) {flex-direction: column; justify-content: flex-start;}
+html[lang=pl] .main-page .content-item01.active .txt span:nth-child(2),
+html[lang=de] .main-page .content-item01.active .txt span:nth-child(2) {text-align: right;}
+html[lang=pl] .main-page .content-item01.active .txt span > strong,
+html[lang=de] .main-page .content-item01.active .txt span > strong {font-size: 1.875rem; line-height: 2.275rem; font-weight: 700; white-space: nowrap;}
+html[lang=pl] .main-page .content-item01.active .txt span.ani02,
+html[lang=pl] .main-page .content-item01.active .txt span.ani03,
+html[lang=de] .main-page .content-item01.active .txt span.ani02,
+html[lang=de] .main-page .content-item01.active .txt span.ani03 {white-space: revert;}
 
 @keyframes imgAni02 {
     0% {top:-160px;}
