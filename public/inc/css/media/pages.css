@@ -1903,6 +1903,8 @@
 .serv-blifecare .modal-pop.dialog .pop-wrap .desc {padding-top: 1.88rem; font-size: 1rem; line-height: 1.6rem;}
 .serv-blifecare .service-btn-wrap {padding-bottom: 0;}
 .serv-blifecare .content-item01 .article-content .content-tit {margin-top: 3rem;}
+
+.serv-blifecare:lang(de) .model-tit {font-size: 0.75rem; line-height: 1.2rem;}
 /* 서비스 공통 팝업 */
 .modal-pop .pop-wrap.service {gap: 1.5rem; max-height: unset;}
 .modal-pop .pop-wrap.service .pop-header {padding-bottom: 0;}
