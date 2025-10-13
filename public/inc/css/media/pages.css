@@ -822,6 +822,9 @@
 .rcif .job-list > li .job-tit > img {width: 3.75rem; height: 3.75rem; padding: 0.75rem;}
 .rcif .job-list > li .job-tit > p {font-size: 1.125rem; line-height: 1.75rem; word-break: break-word;}
 .rcif .job-list > li .text-list-wrap {padding-top: 1rem; font-size: 0.875rem; line-height: 1.3125rem;}
+.rcif:lang(en) .job-list > li .text-list-wrap,
+.rcif:lang(pl) .job-list > li .text-list-wrap,
+.rcif:lang(de) .job-list > li .text-list-wrap {font-size: 0.875rem; line-height: 1.3125rem;}
 .rcif .text-list-wrap .text-list > li::before {top: 0.44rem; left: 0.25rem;}
 .rcif .job-list + .btn-wrap:not(:has([class^="act-btn"][class*="-md"])) {margin-top: 3rem;}
 .rcif .job-list + .btn-wrap:has([class^="act-btn"][class*="-md"]) {margin-top: 2rem;}
@@ -1719,6 +1722,7 @@
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input:nth-child(5).flex-type > .input-wrap:not(.select-box-wrap) input {margin-left: 0;}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input:nth-child(5).flex-type .group-box {gap: 0;}
 .cont .email-input-box p { font-size: .875rem; line-height: 1.3125rem; margin-top: 0.5rem;}
+.cont .email-input-box p > span.ico-info::before {margin-top: 3px;}
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(.file-input-box) {display: block;}
 .cont .file-input-box .file-item .btn-wrap {display: block; margin-top: 0;} 
 .cont .file-input-box .btn-file-attach {top: 50% !important;}
@@ -2173,11 +2177,12 @@
 .rnd .article .sub { color: #555758; font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem; margin-top: 1rem; }
 .rnd .cont-tit, .rnd .sect-cont-main { padding: 0 1.25rem; }
 .rnd .content-wrap.w100 .tab-content .cont-area-wrap { padding-top: 3rem; }
-.rnd #tab2-content .content-item01, .rnd #tab3-content .content-item01 { padding-bottom: 1.5rem; }
+.rnd #tab3-content .content-item01 { padding-bottom: 1.5rem; }
 .rnd #tab1-4-content .sect-cont-main.nbdr:last-child .bdr-box-wrap.nbdr {background: #fff;}
 .rnd .cont-area-wrap .cont-area-sect > .cont-tit { font-size: 1.25rem; font-size: 600; line-height: 1.875rem; padding-bottom: 1rem; }
 .rnd .cont-area-wrap .sect-cont-sub .main-text-wrap { padding-top: 1rem; }
-.rnd .cont-area-wrap .sect-cont-sub .main-text-wrap .article-content .desc { font-size: 1rem; line-height: 1.6rem; }
+.rnd .cont-area-wrap .sect-cont-sub .main-text-wrap .article-content .desc,
+.rnd .tab-content .sect-cont-main:first-of-type .main-text-wrap > .article-content .desc { font-size: 1rem; line-height: 1.6rem; }
 .rnd .cont-area-wrap .sect-cont-sub .box-content { margin-top: 1rem; }
 .rnd .cont-area-wrap .sect-cont-sub .box-content.type2 { margin-top: 2rem !important; }
 .rnd .cont-area-wrap .article-tit { font-size: 1.125rem; font-weight: 600; line-height: 1.75rem; }
@@ -2257,10 +2262,13 @@
 .rnd .article-box:first-child .head-title + .img-wrap > img {height: 5.9375rem; max-width: unset;}
 .rnd .article-box:last-child .head-title + .img-wrap > img {height: 6.92rem; width: auto;}
 .rnd .nbdr-box-list > .nbdr-box-wrap .text-area {margin-bottom: 2rem;}
+.rnd #tab2-content .content-item01 {padding-bottom:3rem;}
 .rnd #tab2-content .content-item02 {padding-top: 3rem;}
 .rnd #tab2-content .content-item02 .nbdr-box-list > .nbdr-box-wrap:last-child .text-area .cate-group {height: auto;}
 .rnd #tab3-content .content-item02 .nbdr-box-wrap.type2 .box-cont .img-wrap {margin-top: 1rem;}
 .rnd #tab3-content .content-item02 .nbdr-box-wrap.type2 .box-cont .img-wrap img {width: 100%; height: auto;}
+.rnd #tab4-content .content-item01 {padding-bottom: 3rem;}
+.rnd #tab4-content .content-item02 {padding-top: 3rem;}
 
 .rnd:lang(en) .structure-tit {padding-inline: 0; text-align: center;}
 .rnd:lang(en) #tab1-3-content .article-box .head-title {flex-direction: column; gap: 0.25rem;}

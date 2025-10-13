@@ -68,8 +68,6 @@ var pubUi = {
 
         /* global network(사업장) 관련 */
         this.self.mapInfoSort = document.querySelectorAll(".map-info-content-box .info-content-head .sort");
-        
-
     },
 
     bindEvents: function () {
@@ -85,8 +83,8 @@ var pubUi = {
         });
 
         if (this.self.searchResult) {
-            pubUi.searchTextDelEvt(this.self.searchResult);  
-        } 
+            pubUi.searchTextDelEvt(this.self.searchResult);
+        }
 
         // marquee 컴포넌트(롤링배너) 관련 script
         if (this.self.track) {
@@ -115,17 +113,15 @@ var pubUi = {
             });
         }
     },
-    evtPopEvt:function(){
+    evtPopEvt: function () {
         var evtPop = document.querySelectorAll(".modal-pop.evt");
-        if (evtPop.length > 0) {            
-
-            evtPop.forEach((evtPop,idx) => {
-                var targetEvtPopId = evtPop.getAttribute("id")
+        if (evtPop.length > 0) {
+            evtPop.forEach((evtPop, idx) => {
+                var targetEvtPopId = evtPop.getAttribute("id");
                 console.log(targetEvtPopId);
                 pubUi.popUp.open(`#${targetEvtPopId}`);
-            })            
+            });
         }
-
     },
     selectboxCtrlEvt: function (selectorOrEl) {
         // 헬퍼: 개별 select-cate에 바인딩
@@ -149,7 +145,6 @@ var pubUi = {
                         otherTargetBtn.classList.remove("active");
                         if (otherCate) otherCate.querySelector(".select-menu")?.classList.remove("on");
                     });
-                
 
                     // ★ 변경: 이전 상태에 따라 토글
                     // 이미 active였으면 방금 모두 닫혔으니 "그대로 닫힌 상태" 유지
@@ -157,12 +152,12 @@ var pubUi = {
                     if (!wasActive) {
                         e.currentTarget.classList.add("active");
                         menu?.classList.add("on");
-                        
+
                         if (this.self.mapInfoSort.length > 0) {
                             this.self.mapInfoSort.forEach((i, idx) => {
-                                if(idx == 0) {
+                                if (idx == 0) {
                                     i.classList.add("idx"); //첫번째 sort만 idx클래스 적용
-                                }                            
+                                }
                             });
                         }
                     } else {
@@ -192,7 +187,7 @@ var pubUi = {
                         parentCate?.querySelector(".btn-select, button")?.classList.remove("active");
                         targetMenu.classList.remove("on");
 
-                        // 글로벌네트워크 - 중국 전용 script                        
+                        // 글로벌네트워크 - 중국 전용 script
                         if (this.self.mapInfoSort.length > 0) {
                             this.self.mapInfoSort.forEach((i, idx) => {
                                 if (idx == 0) {
@@ -312,16 +307,16 @@ var pubUi = {
                         aside.classList.add("end");
                     }
 
-                    sideStickyList.forEach(list => {
-                        if(!list.classList.contains("end")) {
-                            list.classList.add("end")
-                        } 
-                    })
+                    sideStickyList.forEach((list) => {
+                        if (!list.classList.contains("end")) {
+                            list.classList.add("end");
+                        }
+                    });
                 } else {
                     if (aside) {
                         aside.classList.remove("end");
                     }
-                    
+
                     sideStickyList.forEach((list) => {
                         list.classList.remove("end");
                     });
@@ -438,7 +433,7 @@ var pubUi = {
             const subCateName = subCate.innerText;
 
             if (subCateName == "연혁") {
-                // pubUi.scrollToEvt(".wrap", "top"); //09.17 스크롤 최상단 이동 제거 
+                // pubUi.scrollToEvt(".wrap", "top"); //09.17 스크롤 최상단 이동 제거
                 // document.querySelector(".history-wrap.each-view").style.overflowY = "hidden";
                 if (document.querySelector(".history-wrap.each-view")) {
                     document.querySelector(".history-wrap.each-view").removeAttribute("data-scrolling");
@@ -1322,10 +1317,8 @@ var pubUi = {
             //     box.classList.toggle("on", length > 0);
             //     if (box.classList.contains("ty02")) pubUi.form.textareaResize(textarea);
             // });
-
             // const inputBox = document.querySelectorAll(".wrap-form-input input.input-box");
             // const inputBoxDelBtn = document.querySelectorAll(".wrap-form-input input-wrap .btn-input-del");
-
             // inputBox.forEach((el) => {
             //     el.addEventListener("input", function (e) {
             //         if (e.target != "") {
@@ -1335,13 +1328,11 @@ var pubUi = {
             //         }
             //     });
             // });
-
             // inputBoxDelBtn.forEach(el => {
             //     el.addEventListener("click", function(){
             //         console.log(el.currentTarget);
             //         el.currentTarget.closest(".input-wrap").classList.remove("on");
             //     })
-
             // })
         },
         textareaResize(obj) {
@@ -1678,6 +1669,7 @@ var pubUi = {
             this.type02Swiper();
             this.type03Swiper();
             this.bAroundMoSwiper();
+            this.mainPopBnrSwiper();
         },
         // swiper default 타입 : type01Swiper
         type01Swiper() {
@@ -1767,6 +1759,35 @@ var pubUi = {
                         clickable: true,
                     },
                     loop: true,
+                });
+            } else {
+                return;
+            }
+        },
+        mainPopBnrSwiper() {
+            const targetSwiper = document.querySelectorAll(".mainPopBnrSwiper");
+
+            if (targetSwiper.length > 0) {
+                //회사소개 > 소개 사용중
+                var mainPopBnrSwiper = new Swiper(".mainPopBnrSwiper", {
+                    pagination: {
+                        el: ".mainPopBnrSwiper .swiper-pagination",
+                        clickable: true,
+                        type: "fraction",
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    on: {
+                        init: function (idx) {
+                            if (idx.el.swiper.slides.length > 1) {
+                                document.querySelector(".swiper-paging-wrap").style.display = "block";
+                            } else {
+                                document.querySelector(".swiper-paging-wrap").style.display = "none";
+                            }
+                        },
+                    },
                 });
             } else {
                 return;

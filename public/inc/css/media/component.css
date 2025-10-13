@@ -325,3 +325,7 @@
 .swiper-button-next {width: 2rem; height: 2rem;}
 .swiper-download-btn.mo-only { display: flex !important; position: relative; margin-top: 1rem; width: fit-content; background-color: #171819; font-size: 0.8125rem; position:absolute; bottom: -55px;}
 
+.mainPopBnrSwiper .swiper-paging-wrap {width: 7.75rem; bottom:1rem; height: 2.75rem; margin-top: 0;}
+.mainPopBnrSwiper .swiper-button-prev,
+.mainPopBnrSwiper .swiper-button-next {top: 32px;}
+.mainPopBnrSwiper .swiper-pagination {font-size: 0.75rem; line-height: 1.2rem; min-height:revert; top:revert; transform: translateX(-50%); margin-bottom:3px;}

@@ -7,7 +7,7 @@ const locations = [
         address: "108 Yeoui-daero, Yeongdeungpo-gu, Seoul",
         tel: "+82-2-3777-1114",
         sort: "",
-        type: "Hauptsitz",
+        type: "Sprzedaż",
         country: "Seoul",
         continent: "Korea",
         year: "2020",
@@ -26,7 +26,7 @@ const locations = [
         address: "LG Science Park, 30, Magokjungang 10-ro, Gangseo-gu, Seoul",
         tel: "+82-2-6987-4777",
         sort: "",
-        type: "F&E",
+        type: "B+R",
         country: "Seoul",
         continent: "Korea",
         year: "2018",
@@ -45,7 +45,7 @@ const locations = [
         address: "36, JangEUnmaeul-3gil, Gwacheon-si, Gyeonggi-do",
         tel: "+82-2-2206-0511",
         sort: "",
-        type: "F&E",
+        type: "B+R",
         country: "Gwacheon",
         continent: "Korea",
         year: "2018",
@@ -64,7 +64,7 @@ const locations = [
         address: "188, Munji-ro, Yuseong-gu, Daejeon",
         tel: "+82-42-866-2114",
         sort: "",
-        type: "F&E",
+        type: "B+R",
         country: "Daejeon",
         continent: "Korea",
         year: "1979",
@@ -83,7 +83,7 @@ const locations = [
         address: "19, Yangjaedaero 11-gil, Seocho-gu, Seoul",
         tel: "+82-2-3777-1114",
         sort: "",
-        type: "F&E",
+        type: "B+R",
         country: "Seocho",
         continent: "Korea",
         year: "2025",
@@ -102,7 +102,7 @@ const locations = [
         address: "29, Gwahaksaneop 3-ro, Oksan-myeon, Heungdeok-gu, Cheongju-si, Chungcheongbuk-do",
         tel: "+82-43-219-7114",
         sort: "Cylindrical Battery, Pouch Battery",
-        type: "Produktion",
+        type: "Produkcja",
         country: "Cheongju",
         continent: "Korea",
         year: "2004",
@@ -121,7 +121,7 @@ const locations = [
         address: "81, 2sandan-ro, Ochang-eup, Cheongwon-gu, Cheongju-si, Chungcheongbuk-do",
         tel: "+82-43-718-0015",
         sort: "Cylindrical Battery, Pouch Battery",
-        type: "Produktion",
+        type: "Produkcja",
         country: "Cheongju",
         continent: "Korea",
         year: "2012",
@@ -140,7 +140,7 @@ const locations = [
         address: "No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China",
         tel: "+86-25-5878-2000",
         sort: "Cylindrical Battery, Pouch Battery",
-        type: "Produktion",
+        type: "Produkcja",
         country: "China",
         continent: "Asien · Ozeanien",
         year: "2014",
@@ -159,7 +159,7 @@ const locations = [
         address: "No.16 Hongli Road. Jiangning Street. Jiangning Zone,Nanjing, China",
         tel: "+86-25-5878-9000",
         sort: "Pouch Battery",
-        type: "Produktion",
+        type: "Produkcja",
         country: "China",
         continent: "Asien · Ozeanien",
         year: "2018",
@@ -178,7 +178,7 @@ const locations = [
         address: "No.17-18 Hengyi Road. No.26 Hengfei Road.Nanjing Economical & Technological Development Zone,Nanjing, China",
         tel: "+86-25-8560-3000",
         sort: "Cylindrical Battery, Pouch Battery",
-        type: "Produktion",
+        type: "Produkcja",
         country: "China",
         continent: "Asien · Ozeanien",
         year: "2003",
@@ -197,7 +197,7 @@ const locations = [
         address: "Holland Hills Mori Tower 17F, 5-11-2, Toranomon, Minato-ku, Tokyo, Japan",
         tel: "+81-3-6403-1861",
         sort: "",
-        type: "Vertrieb",
+        type: "Sprzedaż",
         country: "Japan",
         continent: "Asien · Ozeanien",
         year: "2024",
@@ -216,7 +216,7 @@ const locations = [
         address: "No. 58, Ruihu Street, Neihu District, Taipei City, Taiwan",
         tel: "+886-2-8752-3225 (+188)",
         sort: "",
-        type: "Vertrieb",
+        type: "Sprzedaż",
         country: "Taiwan",
         continent: "Asien · Ozeanien",
         year: "2020",
@@ -235,7 +235,7 @@ const locations = [
         address: "Unit No. 203, Worldmark 2, Asset No. 8, Aerocity, New Delhi 110037",
         tel: "+91-98-7180-4348",
         sort: "",
-        type: "Vertrieb",
+        type: "Sprzedaż",
         country: "India",
         continent: "Asien · Ozeanien",
         year: "2023",
@@ -273,7 +273,7 @@ const locations = [
         address: "Unit 12, 35 Dunlop Rd, Mulgrave, VIC, Australia 3170",
         tel: "+61-1300-178-064",
         sort: "",
-        type: "Produktion",
+        type: "Produkcja",
         country: "Australia",
         continent: "Asien · Ozeanien",
         year: "2017",
@@ -292,7 +292,7 @@ const locations = [
         address: "1 LG Way, Holland, MI 49423, USA",
         tel: "+1-616-494-7190",
         sort: "Automotive",
-        type: "Produktion Facility",
+        type: "Produkcja Facility",
         country: "USA",
         continent: "Amerika",
         year: "2000",
@@ -311,7 +311,7 @@ const locations = [
         address: "US Arizona Queen Creek 335 e W Pecos Rd",
         tel: "+1-213-905-0024",
         sort: "Mobility, ES",
-        type: "Produktion Facility",
+        type: "Produkcja Facility",
         country: "USA",
         continent: "Amerika",
         year: "2020",
@@ -330,7 +330,7 @@ const locations = [
         address: "155 Flanders Road Westborough, MA 01581",
         tel: "+1-508-497-7319",
         sort: "",
-        type: "Vertrieb",
+        type: "Sprzedaż",
         country: "USA",
         continent: "Amerika",
         year: "2023",
@@ -349,7 +349,7 @@ const locations = [
         address: "Otto-Volger Str. 7C, 65843 Sulzbach (Taunus) Germany",
         tel: "+49-6196-5719-660",
         sort: "",
-        type: "Vertrieb",
+        type: "Sprzedaż",
         country: "Germany",
         continent: "Europa",
         year: "2020",
@@ -368,7 +368,7 @@ const locations = [
         address: "ul. LG 1a, Biskupice Podgorne, 55-040 Kobierzyce, NIP : 8961550941, Wroclaw, Poland",
         tel: "+48-71-733-8103",
         sort: "Automotive",
-        type: "Produktion Facilit",
+        type: "Produkcja Facilit",
         country: "Poland",
         continent: "Europa",
         year: "2016",
@@ -551,15 +551,15 @@ function updateInfoList(filtered) {
 
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
-                if (targetLocation.type == "Hauptsitz") {
+                if (targetLocation.type == "Sprzedaż") {
                     // 본사
                     html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type == "F&E") {
+                } else if (targetLocation.type == "B+R") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type == "Vertrieb") {
+                } else if (targetLocation.type == "Sprzedaż") {
                     //판매
-                    html += '       <li class="filter-type4">' + targetLocation.type + "</li>";                    
+                    html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
                 } else {
                     //생산
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
@@ -635,7 +635,7 @@ function updateInfoList(filtered) {
 mapFilterList.forEach((button) => {
     button.addEventListener("click", function (e) {
         const filterType = button.className.replace("filter-type", "").trim(); // 1~4
-        let typeMap = { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb" };
+        let typeMap = { 1: "Sprzedaż", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż" };
         const selectedType = typeMap[filterType];
 
         // 지도내 유형 필터 선택한 값에 대한 텍스트 우측 selectbox에 활성화 내용 추가
@@ -771,13 +771,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
-                if (targetLocation.type == "Hauptsitz") {
+                if (targetLocation.type == "Sprzedaż") {
                     // 본사
                     html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type == "F&E") {
+                } else if (targetLocation.type == "B+R") {
                     // R&D
                     html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "Vertrieb") {
+                } else if (targetLocation.type === "Sprzedaż") {
                     //생산
                     html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
                 } else {

@@ -317,13 +317,15 @@
                         <div class="tab-content-box">
                             <div class="tab-content on" id="tab1-content">
                                 <div class="content-item01">
+
                                     <div class="map-conts-area">
+                                        <!-- 10.13 수정 : 필터값 폴란드어로 업데이트 : s -->
                                         <div class="map-filter">
                                             <ul class="map-filter-list pc-only">
-                                                <li class="filter-type1"><button type="button">Headquarter</button></li>
-                                                <li class="filter-type2"><button type="button">R&D</button></li>
-                                                <li class="filter-type3"><button type="button">Manufacturing</button></li>
-                                                <li class="filter-type4"><button type="button">Marketing</button></li>                                              
+                                                <li class="filter-type1"><button type="button">Sprzedaż</button></li>
+                                                <li class="filter-type2"><button type="button">B+R</button></li>
+                                                <li class="filter-type3"><button type="button">Produkcja</button></li>
+                                                <li class="filter-type4"><button type="button">Sprzedaż</button></li>                                                
                                             </ul>
                                         </div>
                                         <div class="map-img">
@@ -342,14 +344,10 @@
                                                         <button type="button">All</button>
                                                         <ul class="select-menu" role="listbox">
                                                             <li><a href="javascript:;" role="option" tabindex="0" class="active">All</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Headquarter</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0" >R&D</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Manufacturing</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Marketing</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">JV</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Manufacturing Facility</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Marketing</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Sales</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">Sprzedaż</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0" >B+R</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">Produkcja</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">Sprzedaż</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -417,19 +415,22 @@
                                                 <button type="button"><img src="../../../inc/images/icon/icon_close_btn.svg" alt="닫기 버튼"/></button>
                                             </div>
                                         </div>
+                                        <!-- 10.13 수정 : 필터값 폴란드어로 업데이트 : e -->
                                         <div class="map-info mo-only">
                                             <!-- 모바일 filter -->
                                             <div class="map-info-list">                                                
                                                 <div class="selectbox-wrap type2">
                                                     <div class="select-cate activeSelect">
+                                                        <!-- 10.13 수정 : 필터값 폴란드어로 업데이트 : s -->
                                                         <button type="button">All</button>
                                                         <ul class="select-menu" role="listbox">
                                                             <li><a href="javascript:;" role="option" tabindex="0" class="active">All</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0" >Headquarter</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Manufacturing</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Marketing</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0" >Sprzedaż</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">B+R</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">Produkcja</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">Sprzedaż</a></li>
                                                         </ul>
+                                                        <!-- 10.13 수정 : 필터값 폴란드어로 업데이트 : e -->
                                                     </div>
                                                 </div>
                                             </div> <!--//map-info-list-->
@@ -1114,7 +1115,7 @@
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
         <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
-        <script type="text/javascript" src="../../../inc/js/network_en.js"></script> <!-- network_en.js 로 적용 -->
+        <script type="text/javascript" src="../../../inc/js/network_pl.js"></script> <!-- 10.13 수정 : network_pl.js 로 적용 (필터값 변경으로인해 스크립트 예외 적용 필요) -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCGPb0OvoyK12mykHZXhb1qeXUt7u8AeM&callback=initMap&libraries=places"></script>
     </body>
 </html>

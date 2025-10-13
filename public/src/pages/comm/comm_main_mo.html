@@ -8,7 +8,7 @@
         <meta name=" format-detection" content="telephone=no" />
         <title>LG에너지솔루션 - 레이아웃_Tab-case</title>
         <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
-        <link type="text/css" rel="stylesheet" href="../../../inc/css/common_mo.css" />        
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/common_mo.css" />
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/lottie.js"></script>
 
@@ -546,9 +546,32 @@
         <div class="modal-pop evt" id="popupEvt1">
             <div class="pop-wrap">
                 <div class="pop-content">
-                    <div class="img-area">
-                        <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image">                        
-                    </div>
+                    <!-- 10.13 수정 : swiper 형태로 변경 [start] -->
+                    <div class="swiper mainPopBnrSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">                                    
+                                    <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image">
+                                </div>
+                            </div>
+                        </div>                    
+                        <div class="swiper-paging-wrap">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>                        
+                    </div><!-- //mainPopBnrSwiper -->
+                    <!-- //10.13 수정 : swiper 형태로 변경 [end] -->
                     <div class="foot-area checkbox">
                         <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
                         <label for="chk-close" class="checkbox-label">
@@ -564,7 +587,7 @@
             </div>
         </div>   
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
-        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
+        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
         <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
         <script>

@@ -39,10 +39,36 @@
         <div class="modal-pop evt" id="popupEvt1">
             <div class="pop-wrap">
                 <div class="pop-content">
-                    <div class="img-area">
-                        <img src="../../public/inc/images/img/evt_pop_img.png" alt="pc image">
-                        <!-- <img src="../../public/inc/images/img/evt_pop_img_mo.png" alt="mobile image"> mobile 일때 -->
-                    </div>
+                    <!-- 10.13 수정 : swiper 형태로 변경 [start] -->
+                    <div class="swiper mainPopBnrSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../public/inc/images/img/evt_pop_img.png" alt="pc image">
+                                    <!-- <img src="../../public/inc/images/img/evt_pop_img_mo.png" alt="mobile image"> mobile 일때 -->
+                                </div>
+                            </div>
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../public/inc/images/img/evt_pop_img.png" alt="pc image">
+                                    <!-- <img src="../../public/inc/images/img/evt_pop_img_mo.png" alt="mobile image"> mobile 일때 -->
+                                </div>
+                            </div>
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../public/inc/images/img/evt_pop_img.png" alt="pc image">
+                                    <!-- <img src="../../public/inc/images/img/evt_pop_img_mo.png" alt="mobile image"> mobile 일때 -->
+                                </div>
+                            </div>
+                        </div>                    
+                        <div class="swiper-paging-wrap">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>                        
+                    </div><!-- //mainPopBnrSwiper -->
+                    <!-- //10.13 수정 : swiper 형태로 변경 [end] -->
+
                     <div class="foot-area checkbox">
                         <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
                         <label for="chk-close" class="checkbox-label">
@@ -58,6 +84,7 @@
             </div>
         </div>        
         <script type="text/javascript" src="../../public/inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../public/inc/js/swiper.min.js"></script>        
         <script type="text/javascript" src="../../public/inc/js/pub-ui.js"></script>        
         <script>
             pubUi.evtPopEvt();

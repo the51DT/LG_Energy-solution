@@ -910,6 +910,9 @@
 .rcif .job-list > li .job-tit > img {flex-shrink: 0; width: 5rem; height: 5rem; padding: 1rem; object-fit: contain;}
 .rcif .job-list > li .job-tit > p {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
 .rcif .job-list > li .text-list-wrap {padding-top: 1.875rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.rcif:lang(en) .job-list > li .text-list-wrap,
+.rcif:lang(pl) .job-list > li .text-list-wrap,
+.rcif:lang(de) .job-list > li .text-list-wrap {font-size: 1rem; line-height: 1.6rem;}
 .rcif .text-list-wrap .text-list > li::before {left: 0.25rem; top: 0.69rem; transform: translate(0, 0);}
 .rcif .job-list + .btn-wrap {margin-top: 5rem;}
 .rcif .job-story {display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;}
@@ -1615,6 +1618,8 @@
 .netw:lang(zh-CN) .map-info.on .map-info-list {transform: translateX(-26.25rem); transition: 0.5s linear;} /* right:41rem 이면, 스크롤바 숨겨진상태로 노출됨 */
 .netw:lang(zh-CN) .map-img::after { pointer-events: none;}
 
+.netw .content-header .title-h1 {margin-bottom: 0;}
+
 .map-info-content-box .info-content-head .sort {display: flex; gap: 1rem; align-items: center;}
 .map-info-content-box:lang(zh-CN) .info-content-head .sort.idx {position: relative; z-index: -1;}
 .map-info-content-box .info-content-head .sort li {position: relative; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color:var(--colorElement-light-text-text-default02);}
@@ -1735,6 +1740,9 @@
 .rnd #tab3-content .content-item02 .nbdr-box-wrap.type2 .box-cont .img-wrap img {height: 23rem; width: auto;}
 .rnd #tab2-content .content-item02 .nbdr-box-list > .nbdr-box-wrap:last-child .text-area .cate-group {height: 87.19px;}
 .rnd #tab2-content .content-item02 .nbdr-box-list > .nbdr-box-wrap:last-child .text-area .cate-group .cate {display: flex; gap: 5rem;}
+.rnd .tab-content .sect-cont-main:first-of-type .main-text-wrap > .article-content .desc {font-size: 1.25rem; line-height: 2rem; font-weight: 400;}
+.rnd #tab4-content .content-item01 {padding-bottom: 5rem;}
+.rnd #tab4-content .content-item02 {padding-top: 5rem;}
 
 .status-wrap {display: flex;}
 .status-wrap .status-item:not(:last-child) {margin-right: 1.25rem;}
@@ -2055,7 +2063,7 @@
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(+ .input-wrap > .email-input-box > p) > label,
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(> .email-input-box > p) > label {margin-top: 1.09rem;}
 .cont .email-input-box p { display: flex; gap: 0.25rem; font-size: 1rem; color: #33B0C6; font-weight: 400; line-height: 1.6rem; margin-top: 0.62rem;}
-.cont .email-input-box p > span.ico-info::before { display: block; content:""; width:0.875rem; height:0.875rem; background: url(../../../inc/images/icon/icon_info_primary.svg) no-repeat center 100%; margin-top: 3px;}
+.cont .email-input-box p > span.ico-info::before { display: block; content:""; width:0.875rem; height:0.875rem; background: url(../../../inc/images/icon/icon_info_primary.svg) no-repeat center 100%; margin-top: 6px;}
 .cont .file-input-box .file-item {position: relative;}
 
 /* 서비스 - 전력 중개 */
@@ -2117,6 +2125,8 @@
 .serv-baround .text-list-wrap .text-list>li {font-size: 1rem; line-height: 1.6rem; color: #555758;}
 .e4w-wrap {display: flex; gap: 1.25rem;}
 .e4w-box {border-radius: 1rem; width: 50%;}
+.e2w-box .text-list-wrap .text-list > li::before,
+.e4w-box .text-list-wrap .text-list > li::before {top:11px; transform: revert;}
 .e4w-box .e4w-top {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem; background-color: #33B0C6; border-radius: 1rem 1rem 0 0; height: 23.5rem;}
 .e4w-box .e4w-top .top-logo {display: inline-flex; align-items: center; justify-content: center; width: 11.25rem; height: 11.25rem; background-color: #fff; border-radius: 50%;}
 .e4w-box .e4w-top .top-logo .b-lifecare {width: 9.3125rem; height: 2.5rem;}
