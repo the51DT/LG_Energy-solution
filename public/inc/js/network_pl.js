@@ -7,7 +7,7 @@ const locations = [
         address: "108 Yeoui-daero, Yeongdeungpo-gu, Seoul",
         tel: "+82-2-3777-1114",
         sort: "",
-        type: "Sprzedaż",
+        type: "Siedziba główna",
         country: "Seoul",
         continent: "Korea",
         year: "2020",
@@ -551,7 +551,7 @@ function updateInfoList(filtered) {
 
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
-                if (targetLocation.type == "Sprzedaż") {
+                if (targetLocation.type == "Siedziba główna") {
                     // 본사
                     html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
                 } else if (targetLocation.type == "B+R") {
@@ -635,7 +635,7 @@ function updateInfoList(filtered) {
 mapFilterList.forEach((button) => {
     button.addEventListener("click", function (e) {
         const filterType = button.className.replace("filter-type", "").trim(); // 1~4
-        let typeMap = { 1: "Sprzedaż", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż" };
+        let typeMap = { 1: "Siedziba główna", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż" };
         const selectedType = typeMap[filterType];
 
         // 지도내 유형 필터 선택한 값에 대한 텍스트 우측 selectbox에 활성화 내용 추가
@@ -771,7 +771,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
-                if (targetLocation.type == "Sprzedaż") {
+                if (targetLocation.type == "Siedziba główna") {
                     // 본사
                     html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
                 } else if (targetLocation.type == "B+R") {
