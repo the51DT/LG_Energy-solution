@@ -1484,7 +1484,7 @@
 .netw .tab-category {max-width: 100%; margin: 0;}
 .wrap.netw .content-header .subp-tit {font-size: 1.125rem; line-height: 1.75rem;}
 
-.map-conts-area {display: block; padding: 1.5rem 1.25rem 6.25rem; background: var(--colorElement-light-fill-fill-default04); border-bottom: 0;}
+.map-conts-area {display: block; padding: 1.5rem 1.25rem 6.25rem; background: var(--colorElement-light-fill-fill-default04); border-bottom: 0; overflow: revert;}
 .map-conts-area .map-img {display: none;}
 .map-conts-area .map-info .map-info-list,
 .netw:lang(zh-CN) .map-conts-area .map-info .map-info-list {position: static; width: 100%; height: 100%; background: none; overflow: revert; padding:0 0 1rem; border-right: 0;}
@@ -1492,7 +1492,7 @@
 .map-info .map-info-list .selectbox-wrap.type2 {margin: 0; padding-top: 0; height: auto;}
 .map-info .map-info-list .selectbox-wrap.type2 .select-cate > button {min-width: 100%; max-width: 100%; background-color: #fff; padding: 0.5rem 1.5rem; height: 3.5rem;}
 .map-info .selectbox-wrap.type2 .select-cate .select-menu > li > a {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
-.map-info .map-info-list .selectbox-wrap.type2 .select-cate .select-menu {top: 3.8125rem; max-width: 100%;}
+.map-info .map-info-list .selectbox-wrap.type2 .select-cate .select-menu {top: 3.8125rem; max-width: 100%; height: 13rem; overflow-y: scroll;}
 .map-info {display: block;}
 .map-info .map-info-content-box {position: static; width: 100%; height: 100%; opacity: 1; backdrop-filter: revert; box-shadow: revert; border: 1px solid var(--colorElement-light-stroke-stroke-default04); border-radius: 0.5rem; padding: 1.5rem;}
 .map-info-content .map-info-content-box:not(:last-child) {margin-bottom: 1rem;}
