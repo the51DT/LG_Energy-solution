@@ -711,6 +711,9 @@ table {border-collapse: collapse;}
 
 .modal-pop.ty-black .pop-wrap {background:rgba(0, 0, 0, 0.90); padding: 3.25rem 1.25rem 2rem !important; border-radius: 0; color: #fff;}
 .modal-pop.ty-black .pop-close {background: url('../../images/icon/icon_close_btn_wh.svg') no-repeat center center / 50%; top: 1rem;}
+.modal-pop.ty-black .pop-wrap .pop-content .desc {color: #fff;}
+.modal-pop.ty-black .pop-wrap .img-wrap img {filter: invert(100%);} /* 이미지 색상 반전처리(filter:invert(100%) 0%는 원상복귀 */
+.modal-pop.ty-black .pop-wrap .pop-footer > .btn-wrap [class*=btn-outline] {filter:invert(100%);}
 
 .modal-pop .pop-wrap.input-form  {padding: 2rem 2.5rem;}
 .modal-pop .pop-wrap.input-form .pop-header {padding-bottom: 1rem;}
