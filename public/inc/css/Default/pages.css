@@ -1057,6 +1057,14 @@
 .pfom .tech-list .tech-half-img .img-wrap > img {height: 100%; width: 100%; object-fit: cover;}
 .pfom .tech-list .tech-symbol-col .text-wrap + .symbol-wrap {margin-top: 2.5rem;}
 .pfom .tech-list .tech-symbol-col .text-wrap + .symbol-wrap.type2 {margin-top: 1.875rem;}
+
+.pfom .tech-list .tech-symbol-col .text-wrap + .symbol-wrap:not(.type2) {background: #fff; border-radius: 1rem;}
+
+.pfom .tech-list .tech-symbol-col .text-wrap + .symbol-wrap:not(.type2) > li,
+.pfom .line-up-box .line-up-wrap .line-up-col.ty02 > li {position: relative;}
+.pfom .tech-list .tech-symbol-col .text-wrap + .symbol-wrap:not(.type2) > li:not(:last-child):after,
+.pfom .line-up-box .line-up-wrap .line-up-col.ty02 > li:not(:last-child):after {content:""; width: 1.5rem; height: 1.5rem; display:block; background: url(../../images/icon/icon_arrow_next1_gr.svg) no-repeat center 100%; position:absolute; top:4.88rem; right: -2.02rem; z-index: 10;}
+
 .pfom .tech-list .tech-symbol-col .symbol-wrap {display: flex; gap: 1.25rem;}
 .pfom .tech-list .tech-symbol-col .symbol-wrap > li {display: flex; flex-direction: column; align-items: center; gap: 1.25rem; width: 100%; padding: 2.5rem 1.25rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
 .pfom .tech-list .tech-symbol-col .symbol-wrap > li > img {width: 6.25rem; height: 6.25rem;}
