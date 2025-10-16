@@ -1503,7 +1503,7 @@
 .map-info {display: block;}
 .map-info .map-info-content-box {position: static; width: 100%; height: 100%; opacity: 1; backdrop-filter: revert; box-shadow: revert; border: 1px solid var(--colorElement-light-stroke-stroke-default04); border-radius: 0.5rem; padding: 1.5rem;}
 .map-info-content .map-info-content-box:not(:last-child) {margin-bottom: 1rem;}
-.map-info-content-box .info-content-body .img-area {margin: 1rem 0; height: 5rem;}
+.map-info-content-box .info-content-body .img-area {margin: 1rem 0;}
 .map-info-content-box .info-content-body .img-area img {width: 100%; height: 100%;}
 .map-info-content-box .info-content-head .sort li {font-size: 0.875rem; line-height: 1.4rem;}
 .map-info-content-box .info-content-head .sort li.badge {font-size: 0.75rem; line-height: 1.2rem;}
