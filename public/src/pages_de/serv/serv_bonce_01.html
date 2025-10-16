@@ -16,8 +16,7 @@
         <div class="skip-navigation">
             <a href="#container">Skip to content</a>
         </div>
-        <div class="wrap service serv-bonce"> 
-            <!-- header -->
+        <div class="wrap service serv-bonce"> <!-- header -->
             <header class="header-wrap parent-event">
                 <div class="header-area pc-only">
                     <div class="header-cont">
@@ -28,11 +27,11 @@
                             <nav class="nav-wrap ">
                                 <ul class="gnb__tab-btn-wrap">
                                     <li class="depth01">
-                                        <button class="parent-event_btn">Produkt</button>
+                                        <button class="parent-event_btn">Product</button>
                                         <ul>
-                                            <li class="depth02"><a href="#">Anwendungen</a></li>
-                                            <li class="depth02"><a href="#">Bauform</a></li>
-                                            <li class="depth02"><a href="#">Materialien</a></li>
+                                            <li class="depth02"><a href="#">Applications</a></li>
+                                            <li class="depth02"><a href="#">Form Factor</a></li>
+                                            <li class="depth02"><a href="#">Materials</a></li>
                                         </ul>
                                     </li>
                                     <li class="depth01">
@@ -41,28 +40,53 @@
                                             <li class="depth02"><a href="#">VPP</a></li>
                                             <li class="depth02"><a href="#">B.around</a></li>
                                             <li class="depth02"><a href="#">B-Lifecare</a></li>
-                                            <li class="depth02"><a href="#">B.once</a></li>
+                                            <li class="depth02"><!-- 09.11 문구수정 --><a href="#">B.once</a></li>
                                             <li class="depth02"><a href="#">KooRoo</a></li>
                                             <li class="depth02"><a href="#">ESS SI</a></li>
                                         </ul>
                                     </li>
                                     <li class="depth01">
-                                        <button class="parent-event_btn">Unternehmen</button>
+                                        <button class="parent-event_btn">Company</button>
                                         <ul>
-                                            <li class="depth02"><a href="#">Unternehmensübersicht</a></li>
-                                            <li class="depth02"><a href="#">Jeong-Do Management</a></li>
-                                            <li class="depth02"><a href="#">Globales Netzwerk</a></li>
-                                            <li class="depth02"><a href="#">F&E</a></li>
+                                            <li class="depth02"><a href="#">Company<br/>Introduction</a></li>
+                                            <li class="depth02"><a href="#">Jeong-Do<br/>Management</a></li>
+                                            <li class="depth02"><a href="#">Global Network</a></li>
+                                            <li class="depth02"><a href="#">R&D</a></li>
                                             <li class="depth02"><a href="#">Newsroom</a></li>
-                                            <li class="depth02"><a href="#">Karriere</a></li>
                                         </ul>
                                     </li>
                                     <li class="depth01">
-                                        <button class="parent-event_btn">Support</button>
+                                        <button class="parent-event_btn">Sustainability</button>
                                         <ul>
-                                            <li class="depth02"><a href="#">Download</a></li>
-                                            <li class="depth02"><a href="#">Kontakt</a></li>
-                                            <li class="depth02"><a href="#">FAQ</a></li>
+                                            <li class="depth02"><a href="#">Framework</a></li>
+                                            <li class="depth02"><a href="#">Environmental</a></li>
+                                            <li class="depth02"><a href="#">Social</a></li>
+                                            <li class="depth02"><a href="#">Governance</a></li>
+                                            <li class="depth02"><a href="#">Performance &<br/>Reporting</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">IR</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">Financial<br/>Information</a></li>
+                                            <li class="depth02"><a href="#">Stock<br/>Information</a></li>
+                                            <li class="depth02"><a href="#">IR Activities</a></li>
+                                            <li class="depth02"><a href="#">IR Materials</a>
+<ul>
+                                        <li class="depth03"><a href="#">Consolidated Statements
+</a></li>
+                                        <li class="depth03"><a href="#">Separate Statements
+</a></li>               
+                                    </ul></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">Career</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">Ideal<br/>Employee</a></li>
+                                            <li class="depth02"><a href="#">HR Policy</a></li>
+                                            <li class="depth02"><a href="#">Job<br/>Description</a></li>
+                                            <li class="depth02"><a href="#">Job<br/>Opportunities</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -70,6 +94,19 @@
                         </div>
                         <div class="utile-wrap">
                             <div class="utile-cont">
+                                <!-- 250717 수정 : 고객지원 / 언어선택 디자인 변경 -->
+                                <div class="util-item-cs">
+                                    <img class="icon-cs" src="../../../inc/images/icon/icon_msg_chat.svg" alt="고객지원">
+                                    <button class="menu-title" onclick="pubUi.popUp.open('.cs-cont','.menu-title');" >Inquiry</button>
+                                    <div class="cs-cont">
+                                        <div class="pop-wrap">
+                                            <a href="" class="cs-item">Download</a>
+                                            <a href="" class="cs-item">Contact Us</a>
+                                            <a href="" class="cs-item">FAQ</a>
+                                            <button class="cs-close" onclick="pubUi.popUp.close('.cs-cont','.menu-title');"></button>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="utile-item">
                                     <div class="lang-wrap">
                                         <div class="select-cate activeSelect">
@@ -77,12 +114,12 @@
                                                     src="../../../inc/images/icon/icon_global_img.svg" alt="language"><i
                                                     class="select-btn-right-icon"></i></button>
                                             <ul class="select-menu" role="listbox">
-                                                <li><a href="javascript:;" role="option" tabindex="0">KR</a>
+                                                <li><a href="javascript:;" role="option" tabindex="0" class="active">KR</a>
                                                 </li>
                                                 <li><a href="javascript:;" role="option" tabindex="0">EN</a></li>
                                                 <li><a href="javascript:;" role="option" tabindex="0">CN</a></li>
                                                 <li><a href="javascript:;" role="option" tabindex="0">PL</a></li>
-                                                <li><a href="javascript:;" role="option" tabindex="0" class="active">DE</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">DE</a></li>
                                             </ul>
                                         </div>
                                     </div><!-- //lang-wrap -->
@@ -129,32 +166,32 @@
                     </div>
                     <ul class="sitemap-area">
                         <li class="depth01">
-                            <a href="#">Produkt</a>
+                            <a href="#">Product</a>
                             <ul>
                                 <li class="depth02">
-                                    <a href="#">Anwendungen</a>
+                                    <a href="#">Applications</a>
                                     <ul>
-                                        <li class="depth03"><a href="#">Personen-EV</a></li>
-                                        <li class="depth03"><a href="#">Nutzfahrzeug-EV</a></li>
-                                        <li class="depth03"><a href="#">ESS</a></li>
+                                        <li class="depth03"><a href="#">Passenger EV</a></li>
+                                        <li class="depth03"><a href="#">Commercial EV</a></li>
                                         <li class="depth03"><a href="#">LEV</a></li>
-                                        <li class="depth03"><a href="#">Smart Devices</a></li>                                       
-                                        <li class="depth03"><a href="#">Elektrowerkzeuge</a></li>
-                                        <li class="depth03"><a href="#">Schwergeräte</a></li>
-                                        <li class="depth03"><a href="#">Roboter</a></li>
-                                        <li class="depth03"><a href="#">Zukunfts­mobilität</a></li>
+                                        <li class="depth03"><a href="#">ESS</a></li>
+                                        <li class="depth03"><a href="#">Smart Devices</a></li>
+                                        <li class="depth03"><a href="#">Power Tools</a></li>
+                                        <li class="depth03"><a href="#">Heavy Equipment</a></li>
+                                        <li class="depth03"><a href="#">Robots</a></li>
+                                        <li class="depth03"><a href="#">Future Mobility</a></li>
                                     </ul>
                                 </li>
                                 <li class="depth02">
-                                    <a href="#">Bauform</a>
+                                    <a href="#">Form Factor</a>
                                     <ul>
-                                    <li class="depth03"><a href="#">Zylindrisch</a></li>
+                                    <li class="depth03"><a href="#">Cylindrical </a></li>
                                         <li class="depth03"><a href="#">Pouch</a></li>
                                         
                                     </ul>
                                 </li>
                                 <li class="depth02">
-                                    <a href="#">Materialien</a>
+                                    <a href="#">Materials</a>
                                     <ul>
                                         <li class="depth03"><a href="#">NCM</a></li>
                                         <li class="depth03"><a href="#">LFP</a></li>
@@ -175,7 +212,7 @@
                                     <a href="#">B-Lifecare</a>
                                 </li>
                                 <li class="depth02">
-                                    <a href="#">B.once</a>
+                                    <!-- 09.11 문구수정 --><a href="#">B.once</a>
                                 </li>
                                 <li class="depth02">
                                     <a href="#">KooRoo</a>
@@ -186,57 +223,151 @@
                             </ul>
                         </li>
                         <li class="depth01">
-                            <a href="#">Unternehmen</a>
+                            <a href="#">Company</a>
                             <ul>
                                 <li class="depth02">
-                                    <a href="#">Unternehmensübersicht</a>
+                                    <a href="#">Company Overview</a>
                                     <ul>
-                                        <li class="depth03"><a href="#">Über uns</a></li>
+                                        <li class="depth03"><a href="#">About us</a></li>
                                         <li class="depth03"><a href="#">Vision</a></li>
-                                        <li class="depth03"><a href="#">Geschichte</a></li>
+                                        <li class="depth03"><a href="#">History</a></li>
                                         <li class="depth03"><a href="#">CI</a></li>
                                     </ul>
                                 </li>
                                 <li class="depth02">
-                                    <a href="#">Jeong-Do Management</a><!-- 10.16 수정 : 정도경영 하위 서브 메뉴 제거 -->
-                                </li>
-                                <li class="depth02">
-                                    <a href="#">Globales Netzwerk</a>
-                                </li>
-                                <li class="depth02">
-                                    <a href="#">F&E</a>
+                                    <a href="#">Jeong-Do Management</a>
                                     <ul>
-                                        <li class="depth03"><a href="#">F&E-Status</a></li>
-                                        <li class="depth03"><a href="#">F&E-Bereiche</a></li>
-                                        <li class="depth03"><a href="#">Batterien der nächsten Generation</a></li>
-                                        <li class="depth03"><a href="#">Open Innovation</a></li>
+                                        <li class="depth03"><a href="#">Overview</a></li>
+                                        <li class="depth03"><a href="#">LG Code of Ethics</a></li>
+                                        <li class="depth03"><a href="#">Operation Programs</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Global Network</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">R&D</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">R&D Status</a></li>
+                                        <li class="depth03"><a href="#">R&D Field</a></li>
+                                        <li class="depth03"><a href="#"><!-- 09.11 문구수정 -->Future Battery </a></li>
+                                        <li class="depth03"><a href="#">Open Innovation  </a></li>
                                     </ul>
                                 </li>
                                 <li class="depth02">
                                     <a href="#">Newsroom</a>
                                 </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">Sustainability</a>
+                            <ul>
                                 <li class="depth02">
-                                    <a href="#">Karriere</a>
+                                    <a href="#">Framework</a>
                                     <ul>
-                                        <li class="depth03"><a href="#">Idealer Mitarbeiter</a></li>
-                                        <li class="depth03"><a href="#">Personalpolitik</a></li>
-                                        <li class="depth03"><a href="#">Stellenbeschreibung</a></li>
-                                        <li class="depth03"><a href="#">Stellenangebote</a></li>
+                                        <li class="depth03"><a href="#">Vision & Strategy</a></li>
+                                        <li class="depth03"><a href="#">ESG Governance</a></li>
+                                        <li class="depth03"><a href="#">Global Partnership</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Environmental</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Environmental Management</a></li>
+                                        <li class="depth03"><a href="#">Climate Action</a></li>
+                                        <li class="depth03"><a href="#">Circular Economy</a></li>
+                                        <li class="depth03"><a href="#"><!-- 09.11 문구수정 -->Environmental Impact</a></li>
+                                        <li class="depth03"><a href="#">Biodiversity Conservation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Social</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Sustainable Value Chain</a></li>
+                                        <li class="depth03"><a href="#">Shared Growth</a></li>
+                                        <li class="depth03"><a href="#">Product Stewardship</a></li>
+                                        <li class="depth03"><a href="#"><!-- 09.11 문구수정 -->Safety and Health</a></li>
+                                        <li class="depth03"><a href="#">Empowering Our People</a></li>
+                                        <li class="depth03"><a href="#"><!-- 09.11 문구수정 -->CSR</a></li>
+                                        <li class="depth03"><a href="#">Information Security</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Governance</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Board of Directors</a></li>
+                                        <!-- 09.11 문구수정 --><li class="depth03"><a href="#">Committees</a></li>
+                                        <!-- 09.11 문구수정 --><li class="depth03"><a href="#">Compliance Management</a></li>
+                                        <!-- 09.11 문구수정 --><li class="depth03"><a href="#">Business Resilience</a></li>
+                                        <li class="depth03"><a href="#">Ethical Management</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Performance & Reporting</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">ESG Report</a></li>
+                                        <li class="depth03"><a href="#">ESG Ratings</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li class="depth01">
-                            <a href="#">Support</a>
+                            <a href="#">IR</a>
                             <ul>
                                 <li class="depth02">
-                                    <a href="#">Download</a>
+                                    <a href="#">Financial Information</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Financial Statements</a></li>
+                                        <li class="depth03"><a href="#">Income Statements</a></li>
+                                        <li class="depth03"><a href="#">Cash Flow</a></li>
+                                        <li class="depth03"><a href="#">Credit Rating</a></li>
+                                        <li class="depth03"><a href="#">ESG Bonds</a></li>
+                                    </ul>
                                 </li>
                                 <li class="depth02">
-                                    <a href="#">Kontakt</a>
+                                    <a href="#">Stock Information</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">Stock Price Information</a></li>
+                                        <li class="depth03"><a href="#">Shareholder Return</a></li>
+                                    </ul>
                                 </li>
                                 <li class="depth02">
-                                    <a href="#">FAQ</a>
+                                    <a href="#">IR Activities</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">IR Events</a></li>
+                                        <li class="depth03"><a href="#">Earnings Release</a></li>
+                                        <li class="depth03"><a href="#">Shareholders Meeting</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">IR Materials</a>
+<ul>
+                                        <li class="depth03"><a href="#">Consolidated Statements
+</a></li>
+                                        <li class="depth03"><a href="#">Separate Statements
+</a></li>               
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">Career</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">Ideal Employee</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">HR Policy</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">HR Principle</a></li>
+                                        <li class="depth03"><a href="#">Talent development </a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Job Description</a><!-- 영역 삭제 -->
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">Job Opportunities</a>
                                 </li>
                             </ul>
                         </li>
