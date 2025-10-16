@@ -1577,12 +1577,7 @@ var pubUi = {
 
                 popEl.querySelectorAll(".pop-s, .pop-e").forEach((el) => {
                     el.addEventListener("focus", () => popEl.querySelector(".pop-wrap").focus());
-                });
-
-                const closeBtn = popEl.querySelector("[data-action=close]");
-                if (closeBtn) {
-                    closeBtn.addEventListener("click", () => pubUi.popUp.close(pop, btn));
-                }
+                });               
 
                 if (popEl.classList.contains("tooltip")) {
                     pubUi.popUp.setTooltipPosition(popEl, btn);
