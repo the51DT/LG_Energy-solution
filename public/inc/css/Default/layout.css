@@ -77,6 +77,8 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .header-wrap + .header_search-area{width:100%;height: 14.9375rem;padding:5rem 0 6.44rem;background: var(--fill-fill-on-primary, #FFF);position: absolute;top:100px; border-top:1px solid var(--stroke-stroke-default-03, #C9CED1);display: none;box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.12);}
 /* .header-wrap + .header_search-area{display: block;} */
 .header-wrap + .header_search-area .search-box-wrap .search-box {width: 40rem;}
+.header-wrap + .header_search-area .search-box-wrap .search-box:lang(pl),
+.header-wrap + .header_search-area .search-box-wrap .search-box:lang(de){width: 45rem;}
 .header-wrap + .header_search-area .search-box-wrap .search-box input {width: calc(100% - 120px);}
 
 .header-wrap + .header_search-area .search-result{display:flex;gap:2.5rem;justify-content:center;align-items:center; flex: 1 1 auto;}
