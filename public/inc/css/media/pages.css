@@ -1798,6 +1798,7 @@
 .serv-trading:lang(de) #content01 .article-img .lottie-wrap {top: 18.38rem;}
 
 /* 서비스 - B.around */
+
 .serv-baround .brand-info {margin-top: 3rem;}
 .serv-baround .brand-info .brand-logo {width: 17.5rem;}
 .serv-baround .info-wrap {flex-direction: column; align-items: center; gap: 1rem; margin-top: 1rem;}
@@ -1840,6 +1841,14 @@
 
 .serv-baround article .article-content + .article-content:has(.content-tit) {padding-top: 1rem;}
 .serv-baround .article-content .article-desc {padding: 1rem 0 0;}
+
+.serv-baround .content-item02 .content-wrap {padding:0;}
+.serv-baround .content-item02 .content-wrap article .article-tit {padding: 0 1.25rem;}
+.serv-baround .content-item02 .content-wrap article .article-content {padding:0 1.25rem;}
+.serv-baround .content-item02 .content-wrap article .article-content:nth-child(3) {padding: 0;}
+.serv-baround .content-item02 .content-wrap article .article-content:nth-child(3) {padding-left: 1.25rem;}
+.serv-baround .content-item02 .content-wrap article .article-content:nth-child(3) .baround-swiper .swiper-slide {padding-right: 1.25rem;}
+.serv-baround .content-item02 .content-wrap .e4w-box:lang(pl) .e4w-top {min-height: 339px;}
 
 .e4w-box:lang(pl) .e4w-top, .e4w-box:lang(de) .e4w-btm,
 .e4w-box:lang(pl) .e4w-top, .e4w-box:lang(de) .e4w-btm {height: auto;}
@@ -2075,13 +2084,17 @@
 .serv-bonce .ucd-desc-wrap .text-list-wrap .text-list li {font-size: 0.75rem; line-height: 1.2rem;}
 
 .serv-bonce:lang(en) .type-process p,
-.serv-bonce:lang(de) .type-process p {display: flex; align-items: center; padding: 1.5rem;}
+.serv-bonce:lang(de) .type-process p,
+.serv-bonce:lang(pl) .type-process p {display: flex; align-items: center; padding: 1.5rem;}
 .serv-bonce:lang(en) .type-process p > span,
-.serv-bonce:lang(de) .type-process p > span {text-align: center;}
+.serv-bonce:lang(de) .type-process p > span,
+.serv-bonce:lang(pl) .type-process p > span {text-align: center;}
 .serv-bonce:lang(en) .type-step-item,
-.serv-bonce:lang(de) .type-step-item {padding: 2rem 0.75rem 0; justify-content: flex-start; gap: 0.5rem;}
+.serv-bonce:lang(de) .type-step-item,
+.serv-bonce:lang(pl) .type-step-item {padding: 2rem 0.75rem 0; justify-content: flex-start; gap: 0.5rem;}
 .serv-bonce:lang(en) .type-step-item > p,
-.serv-bonce:lang(de) .type-step-item > p {font-size: 0.75rem; line-height: 1.2rem;}
+.serv-bonce:lang(de) .type-step-item > p,
+.serv-bonce:lang(pl) .type-step-item > p {font-size: 0.75rem; line-height: 1.2rem;}
 
 .serv-bonce:lang(de) .type-explain > p > span {width: 5rem;}
 .serv-bonce:lang(de) .type-box > .type-explain > p > span {width: unset;}
@@ -2096,6 +2109,7 @@
 .serv-kooroo .article-content .article-desc:has(+ .article-tit-wrap) {padding-bottom: 1rem;}
 .serv-kooroo .article-tit-wrap .btn-wrap { align-items: center; }
 .serv-kooroo .article-tit-wrap .btn-wrap a { width: 11.5rem; font-size: 0.875rem;}
+.serv-kooroo .article-tit-wrap .btn-wrap a span {white-space: nowrap;}
 .serv-kooroo:lang(zh-CN) .article-tit-wrap .btn-wrap a {font-size: 0.875rem; line-height: 1.225rem; font-weight: 500; width: auto;}
 .serv-kooroo:lang(zh-CN) .article-tit-wrap .btn-wrap a .icon-area {width: 1.25rem; height: 1.25rem;}
 .serv-kooroo .article-btn-wrap {margin: 0;}

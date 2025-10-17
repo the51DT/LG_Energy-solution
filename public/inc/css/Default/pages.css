@@ -2539,6 +2539,8 @@
 .search .search-list-wrap {margin-top: 3.75rem; }
 .search .news-content-area {padding-top: 0; margin-bottom: 0;}
 .search .news-content-area .search-result {margin-bottom: 0; padding: 5rem 0; display: block; max-width: 37.5rem; margin: 0 auto; position: relative;}
+.search .news-content-area .search-result:lang(pl),
+.search .news-content-area .search-result:lang(de) {max-width:58rem;}
 .search .news-content-area .search-result > input {width: 100%; margin-left:2.5rem; padding-left: 2.5rem; padding-right: 2.5rem;}
 .search .news-content-area .search-result > input::placeholder {font-size: 3rem; color: #B4B8BA;}
 .search .news-content-area .search-result > a {width: 2.5rem; height: 2.5rem; margin-right: 2.5rem; position: absolute; left:0; top: 50%; transform: translateY(-50%);}

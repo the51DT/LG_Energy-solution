@@ -1751,6 +1751,8 @@ var pubUi = {
                     pagination: {
                         el: ".swiper-pagination",
                         type: "bullets",
+                        slidesPerView: 2.5,
+                        spaceBetween: 20,
                         clickable: true,
                     },
                     loop: true,
@@ -1768,7 +1770,7 @@ var pubUi = {
                     pagination: {
                         el: ".mainPopBnrSwiper .swiper-pagination",
                         clickable: true,
-                        type: "fraction",
+                        type: "fraction",                        
                     },
                     navigation: {
                         nextEl: ".swiper-button-next",
