@@ -635,7 +635,7 @@ var pubUi = {
 
         if (type === "left") {
             // 가로 스크롤 이동 type
-            document.querySelector(target).scrollTo({ left: value, behavior: "smooth" });
+            target.scrollTo({ left: value, behavior: "smooth" });
         } else if (type === "top") {
             //세로 스크롤 이동 type
             document.querySelector(target).scrollTo({ top: value, behavior: "smooth" });
@@ -1422,11 +1422,13 @@ var pubUi = {
                         const secondTab = content?.querySelector("[data-tab-type='secondTab']");
                         pubUi.secondTabChk(secondTab);
 
-                        if (this.closest(".tab-cate-wrap").classList.contains("new")) {
+                        if (this.closest(".tab-cate-wrap").classList.contains("scroll")) {
+                            const tabOnId = document.querySelector(`#${id}`)
+                            const targetCategory = tabOnId.closest(".tab-category");
                             const tabOnLeftValue = document.querySelector(`#${id}`).offsetLeft;
                             setTimeout(() => {
                                 requestAnimationFrame(() => {
-                                    pubUi.scrollToEvt(".tab-cate-wrap.new .tab-category", "left", tabOnLeftValue);
+                                    pubUi.scrollToEvt(targetCategory, "left", tabOnLeftValue);
                                 });
                             }, 0);
                         }
