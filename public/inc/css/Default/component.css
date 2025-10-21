@@ -838,6 +838,7 @@ table {border-collapse: collapse;}
 .mainPopBnrSwiper .swiper-pagination .swiper-pagination-current {color: #fff;}
 .mainPopBnrSwiper .swiper-button-next.swiper-button-disabled, 
 .mainPopBnrSwiper .swiper-button-prev.swiper-button-disabled {opacity: 1;}
+.mainPopBnrSwiper .banr-item .img-area a {width: 100%;}
 
 /* marquee */
 .rolling-banner { position: relative; width: 100%; overflow: hidden; background: #fff; min-height:50px; display: flex; align-items: center;  border:1px solid #ccc;}
