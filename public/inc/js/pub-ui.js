@@ -336,7 +336,7 @@ var pubUi = {
                 // 최종 스코프
                 const scope = resolveDeepestScope(wrap);
 
-                // 스코프 내부 영역 수집 (sticky-area 없으면 스코프 전체에서 아이템 찾기)
+                // 스코프 내부 영역 수집 (sticky-area 없으면 스코프 전체에서 아이템 찾기*
                 const stickyArea = scope.querySelector(":scope .sticky-area");
                 const targetSideSticky = stickyArea && !isMobile ? stickyArea.querySelector(":scope .side-sticky") : null; // 모바일은 항상 null
                 const targetContentItem = stickyArea ? stickyArea.querySelectorAll(":scope [class^='content-item']") : scope.querySelectorAll(":scope [class^='content-item']");
@@ -350,7 +350,12 @@ var pubUi = {
 
                     // sideSticky 존재하는 케이스 active 문제로 메인과 분기처리하였음
                     if (document.querySelector(".wrap").classList.contains("main-page")) {
-                        var itemTop = topRelToScroller(item, scroller, viewportTop) * 0.8 - guard;
+                        if (this.self.isMobile || this.self.mobileDevice) {
+                            var itemTop = topRelToScroller(item, scroller, viewportTop + 400 ) - guard;
+                        }else{
+                            var itemTop = topRelToScroller(item, scroller, viewportTop + 600 ) - guard;
+                        }
+                        
                     } else {
                         var itemTop = topRelToScroller(item, scroller, viewportTop) - guard;
                     }

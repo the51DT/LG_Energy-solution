@@ -211,10 +211,10 @@ aside.end {bottom: 390px;}
 .main-page .content-item04.active .move-img-area{transition: all 1.5s 1s;width:100% ;height:100%;overflow: unset;}
 .main-page .content-item04.active .move-img-area video{height:100%;width:auto;}
 
-.main-page .content-item05{height:40rem;position: relative;margin-top:2rem;opacity: 0;transition: all 0s;overflow: hidden;padding: 0;}
-.main-page .content-item05.active{margin-top:0rem;opacity: 1;width:100%;border-radius: 0;}
+.main-page .content-item05{height:40rem;position: relative;margin-top:0;overflow: hidden;padding: 0;width:100%;border-radius: 0;}
+.main-page .content-item05.active{margin-top:0rem;width:100%;border-radius: 0;height:40rem;}
 .main-page .content-item05 .content-wrap{width:100%; margin:0 auto;height:100%;position: relative;}
-.main-page .content-item05 .text-area{position: absolute;bottom:-5rem; z-index: 1;display: flex;flex-direction: column;margin-top:0;transition: all 1s 1s;}
+.main-page .content-item05 .text-area{position: absolute;bottom:-5rem; z-index: 1;display: flex;flex-direction: column;margin-top:0;transition: all 1s .2s;}
 .main-page .content-item05 h3{color: var(--text-text-on-primary, #FFF);font-size: var(--size-mobile-H2, 1.5rem);font-weight: 400;line-height: var(--line-height-mobile-H2, 2.0625rem); /* 137.5% */letter-spacing: var(--letter-spacing-default, 0);padding-top:0;}
 .main-page .content-item05 h3 strong{font-weight: 700;}
 .main-page .content-item05 p{color: var(--text-text-on-primary, #FFF);font-size: var(--size-mobile-H2, 1.5rem);font-weight: 400;line-height: var(--line-height-mobile-H2, 2.0625rem); /* 137.5% */letter-spacing: var(--letter-spacing-default, 0);padding-top:0;}
@@ -249,7 +249,7 @@ aside.end {bottom: 390px;}
 
 /* 메인 쿠키 설정 팝업 관련 css */
 .main-cookie {position: fixed; padding: 2.5rem 1.25rem 2rem; }
-.main-cookie .content-wrap {width: 100%; align-items: flex-end; flex-direction: column; gap: 2rem; position: relative; padding-top: 1.5rem; }
+.main-cookie .content-wrap {width: 100%; align-items: flex-start; flex-direction: column; gap: 2rem; position: relative; padding-top: 1.5rem; }
 .main-cookie .content-wrap .desc {font-size: .875rem; line-height: 1.3125rem;}
 .main-cookie .btn-wrap {display: block; width: 100%; margin-top: auto;}
 .main-cookie .btn-group {display: flex; gap: 0.5rem; flex-direction: column;}
