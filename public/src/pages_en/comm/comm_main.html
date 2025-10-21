@@ -710,8 +710,58 @@
             </div>
         </div>
         <!-- //09.12 추가 : 쿠키 설정 팝업 - E -->
-         
+        <!-- 10.21 추가 : 영문 모달팝업 추가 -->
+         <!-- popupEvt -->
+        <div class="modal-pop evt" id="popupEvt1">
+            <div class="pop-wrap">
+                <div class="pop-content">
+                    <!-- 10.13 수정 : swiper 형태로 변경 [start] -->
+                    <div class="swiper mainPopBnrSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide banr-item">
+                                <a href="#">
+                                    <div class="img-area">
+                                        <img src="../../../inc/images/img/evt_pop_img.png" alt="pc image">
+                                        <!-- <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image"> mobile 일때 -->
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../../inc/images/img/evt_pop_img.png" alt="pc image">
+                                    <!-- <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image"> mobile 일때 -->
+                                </div>
+                            </div>
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../../inc/images/img/evt_pop_img.png" alt="pc image">
+                                    <!-- <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image"> mobile 일때 -->
+                                </div>
+                            </div>
+                        </div>                    
+                        <div class="swiper-paging-wrap">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>                        
+                    </div><!-- //mainPopBnrSwiper -->
+                    <!-- //10.13 수정 : swiper 형태로 변경 [end] -->
+                    <div class="foot-area checkbox">
+                        <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
+                        <label for="chk-close" class="checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            <!-- 08.18 수정 : 문구 변경 -->
+                            <span class="txt">
+                                Don't show again today
 
+                            </span>
+                        </label>
+                        <button type="button" class="pop-close" onclick="pubUi.popUp.close('#popupEvt1', '#popupEvtBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <!-- // 10.21 추가 : 영문 모달팝업 추가 -->
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
         <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>

@@ -538,7 +538,49 @@
             </div>
         </div>
         <!-- //09.12 추가 : 쿠키 설정 팝업 - E -->
-         
+        <!-- 10.21 추가 : 영문 모달팝업 추가 -->
+        <!-- popupEvt : mobile -->
+        <div class="modal-pop evt" id="popupEvt1">
+            <div class="pop-wrap">
+                <div class="pop-content">
+                    <div class="swiper mainPopBnrSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">                                    
+                                    <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide banr-item">
+                                <div class="img-area">
+                                    <img src="../../../inc/images/img/evt_pop_img_mo.png" alt="mobile image">
+                                </div>
+                            </div>
+                        </div>                    
+                        <div class="swiper-paging-wrap">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>                        
+                    </div><!-- //mainPopBnrSwiper -->
+                    <div class="foot-area checkbox">
+                        <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
+                        <label for="chk-close" class="checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            <span class="txt">
+                                Don't show again today
+                            </span>
+                        </label>
+                        <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupEvt1', '#popupEvtBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <!-- // 10.21 추가 : 영문 모달팝업 추가 -->
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
         <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
