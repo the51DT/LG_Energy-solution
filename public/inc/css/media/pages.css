@@ -2088,7 +2088,7 @@
 .serv-bonce:lang(pl) .type-process p {display: flex; align-items: center; padding: 1.5rem;}
 .serv-bonce:lang(en) .type-process p > span,
 .serv-bonce:lang(de) .type-process p > span,
-.serv-bonce:lang(pl) .type-process p > span {text-align: center;}
+.serv-bonce:lang(pl) .type-process p > span {text-align: center; min-width: 5.5rem;}
 .serv-bonce:lang(en) .type-step-item,
 .serv-bonce:lang(de) .type-step-item,
 .serv-bonce:lang(pl) .type-step-item {padding: 2rem 0.75rem 0; justify-content: flex-start; gap: 0.5rem;}
