@@ -21,7 +21,7 @@ html,body {
 .mo-only {display: none !important;}
 
 /* aside */
-aside{position:fixed;bottom:100px;right:30px;display: none; z-index:100}
+aside{position:fixed;bottom:100px;right:30px;display: none; z-index:98}
 aside.end {bottom: 520px; display: block;}
 aside > img{cursor: pointer;}
 
