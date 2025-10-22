@@ -329,4 +329,4 @@
 .mainPopBnrSwiper .swiper-button-prev,
 .mainPopBnrSwiper .swiper-button-next {top: 32px;}
 .mainPopBnrSwiper .swiper-pagination {font-size: 0.75rem; line-height: 1.2rem; min-height:revert; top:revert; transform: translateX(-50%); margin-bottom:3px;}
-.mainPopBnrSwiper .banr-item .img-area {height: auto;}
+.mainPopBnrSwiper .banr-item .img-area a {height: 26.875rem;}
