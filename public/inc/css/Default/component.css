@@ -521,7 +521,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .accord-cont-wrap.horizontal .accordion-list .accordion-btn .acd-group .img-area {width: 6rem; height: 6rem; position:absolute; bottom: 1.5rem; right: 1.5rem;}
 .accord-cont-wrap.horizontal .accordion-list.on .accordion-btn .acd-group .img-area {right: 2.25rem; bottom: 3.13rem; width: 12rem; height: 12rem;}
 .accord-cont-wrap.horizontal .accordion-list .accordion-content {margin: 0; padding: 0; position: absolute; bottom: 0; top: 6.75rem; left: 3rem; max-width: 16rem; height: 190px;}
-.accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; width: 257px;}
+.accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; width: 312px; word-break: break-all;}
 .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .sub {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; padding-top: 0.75rem;}
 
 :lang(en) .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {width: 17.5625rem;}
