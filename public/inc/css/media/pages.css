@@ -132,6 +132,7 @@
 /* 지속가능경영 > 환경 */
 .sust-env .content-wrap > .title-h2 {margin-top: 0 !important;}
 .sust-env .content-item01 .content-wrap > .title-h2 { font-size: 1.5rem; font-weight: 700; line-height: 2.0625rem; padding-bottom: 0 !important; }
+.sust-env .content-item01 .article-desc.intro {padding: 0 1.25rem; margin-top: 1rem;}
 .sust-env .title-h2 {font-size: 1.25rem; line-height: 1.875rem; padding-bottom: 0;}
 .sust-env .article-content:first-child {margin-top: 0;}
 .sust-env .article-desc {font-size: 1rem; line-height: 1.6rem;}
@@ -489,7 +490,8 @@
 .sust-soc .infosec-protect .box-container.grid-type .box-content .box-head .text-box .text-list > li {font-size: 0.875rem; line-height: 1.3125rem;}
 .sust-soc .infosec-protect .box-container.grid-type.grid3 .box-head {display: grid; grid-template-columns: 3rem 1fr; column-gap: 0.25rem; row-gap: 0.5rem;}
 .sust-soc .infosec-protect .box-container.grid-type.grid3 .box-head > .desc {grid-column: 1 / 3;}
-.sust-soc .infosec-protect .img-wrap {width: 20rem; margin: 1.5rem auto;}
+.sust-soc .infosec-protect .img-wrap {width: 100%; margin: 1.5rem auto;}
+.sust-soc .infosec-protect .desc-info-txt {font-size: 1rem; line-height: 1.6rem; color: #555758; padding-top: 1rem;}
 .sust-soc .box-container.grid-type .box-content .box-head .num > img {width: 3rem; height: 3rem;}
 .sust-soc .box-container.grid-type .box-content .box-head:has(.num > img) .text-box .title {margin-top: 0.875rem;}
 .sust-soc .box-container.grid-type .box-content .box-head:has(.num > img) .text-box .desc {margin-top: 0.5rem;}
@@ -510,7 +512,7 @@
 .sust-soc .safety-improve .csr-detail:only-child > img {width: 100%; height: auto; aspect-ratio: 139 / 72;}
 
 .sust-soc [class^="content-item"] .content-sect:has(.human-mgmt) {padding-top: 2rem;}
-.sust-soc .human-mgmt .img-wrap {width: 20rem; margin-top: 1rem;}
+.sust-soc .human-mgmt .img-wrap {width: 100%; margin-top: 1rem;}
 .sust-soc .human-mgmt .btn-wrap {margin-top: 1.5rem;}
 .sust-soc .human-mgmt .btn-wrap [class^="icon-btn"] {width: 100%; font-size: 0.875rem; line-height: 1.225rem;}
 .sust-soc .human-mgmt .human-mgmt-list {flex-direction: column; margin-top: 3rem;}
@@ -539,7 +541,7 @@
 .sust-soc .infosec-protect .btn-wrap [class^="icon-btn"] {width: 100%; font-size: 0.875rem; line-height: 1.225rem;}
 .sust-soc .infosec-protect + .infosec-protect {margin-top: 3rem; padding-top: 0; border: none;}
 .sust-soc [class^="content-item"] .content-sect:has(.infosec-activity) {padding-top: 1rem;}
-.sust-soc .infosec-activity {flex-direction: column; margin-bottom: 3rem;}
+.sust-soc .infosec-activity {flex-direction: column;}
 .sust-soc .infosec-activity > li {display: flex; align-items: center; gap: 1rem; padding: 1.5rem; border-radius: 0.5rem; text-align: left;}
 .sust-soc .infosec-activity .num {flex-shrink: 0; margin-inline: 0; margin-bottom: 0; width: 2rem; height: 2rem; font-size: 0.875rem; line-height: 1.3125rem;}
 .sust-soc .infosec-activity .desc {font-size: 1rem; line-height: 1.6rem;}
@@ -1172,6 +1174,13 @@
 .sprf .eval-status > li > div .grade {width: 5.1875rem; margin-left: 1rem; font-size: 2.75rem; line-height: 3.85rem; word-wrap: normal;}
 .sprf .eval-status > li > div .grade::before {height: 5rem; left: -1rem;}
 
+
+.sprf .eval-status > li > div.group > .tit {font-size: 1.125rem; line-height: 1.75rem;}
+.sprf .eval-status > li > div.group > .desc {font-size: 0.875rem; line-height: 1.3125rem;}
+.sprf .eval-status > li > .info-txt {font-size: 0.875rem; line-height: 1.3125rem;}
+.sprf .eval-status > li > div .grade .sub {position: static; white-space: nowrap; transform: revert; font-size: 0.875rem; line-height: 1.3125rem;}
+.sprf #tab2-content .content-item02.bg-gray .title-h2 {font-size: 1.25rem; line-height: 1.875rem;} 
+
 .sprf [class^="content-item"] .content-sect:has(.sust-rating) {padding-top: 2rem;}
 .sprf .sust-rating {padding: 1.5rem; border-radius: 0.25rem;}
 .sprf .sust-rating > li {flex-direction: column; align-items: flex-start; gap: 0.5rem;}
@@ -1279,7 +1288,7 @@
 .etmg .content-sect > .img-area {max-width: 20rem; width: 100%; margin-inline: auto; padding-inline: 0; margin-top: 2rem;}
 .etmg .content-item02.bg-gray .content-sect {padding-top: 1.5rem;}
 .etmg .content-item02.bg-gray .content-sect > .img-area {margin-top: 0;}
-.etmg .sub-desc-wrap {margin-bottom: 0;}
+.etmg .sub-desc-wrap {margin-bottom: 0; margin-top: 3rem;}
 .etmg .sub-desc-wrap .sub-tit {font-size: 1.125rem; line-height: 1.75rem;}
 .etmg .sub-desc-wrap > .sub-tit + ul {margin-top: 2rem;}
 .etmg .sub-desc-wrap > ul {gap: 1rem;}
