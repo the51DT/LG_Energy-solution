@@ -367,7 +367,7 @@ const locations = [
         address: "ul. LG 1a, Biskupice Podgorne, 55-040 Kobierzyce, NIP : 8961550941, Wroclaw, Poland",
         tel: "+48-71-733-8103",
         sort: "Automotive",
-        type: "Manufacturing Facilit",
+        type: "Manufacturing Facility",
         country: "Poland",
         continent: "Europe",
         year: "2016",
