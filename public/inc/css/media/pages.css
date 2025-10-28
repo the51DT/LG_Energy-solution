@@ -775,7 +775,7 @@
 .post-grid > li .bottom-wrap {gap: 1rem;}
 .post-grid > li .bottom-wrap .link-wrap {gap: 0.5rem;}
 .post-grid > li .bottom-wrap .link-wrap .link-btn {width: calc(50% - (0.5rem / 2)); height: 3rem; padding: 0.38rem 1rem; font-size: 0.875rem; line-height: 1.225rem;}
-.post-grid > li .bottom-wrap .link-wrap .link-btn[target="_blank"] .icon-area {width: 1.25rem; height: 1.25rem; background-size: 1.25rem 1.25rem;}
+.post-grid > li .bottom-wrap .link-wrap .link-btn .icon-area {width: 1.25rem; height: 1.25rem; background-size: 1.25rem 1.25rem;}
 .post:lang(zh-CN) .content-item01 {padding-bottom: 0;}
 .post:lang(zh-CN) .content-item01 .content-sect.bg-gray {margin-top: 1rem; padding-top: 2rem;} 
 .post:lang(zh-CN) .content-item01 .content-sect.bg-gray .content-wrap {padding-bottom: 6.25rem;}
@@ -1445,7 +1445,7 @@
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li:before {left: -2.2rem; top: 7px;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info {gap: 0.25rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .title {color: #33B0C6; font-weight: 600; font-size: 1.125rem; line-height: 1.75rem; flex-shrink: 0;}
-.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc {padding: 0 ; font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: #555758;}
+.history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc {padding: 0 ; font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: #555758;margin-top:1.5px}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc + .desc {padding-top: 0.5rem;}
 .history-wrap.all-view .history-cont-wrap .year-item-list .year-item .year-info-box .sub-list > li .sub-list-info .desc::before {display: none;}
 
@@ -1606,6 +1606,7 @@
 .faq .news-content-area .search-result>input {font-size: 1.125rem;}
 .faq .news-content-area .search-result>input::placeholder {font-size: 1.25rem; line-height: 1.925rem;}
 .faq .desc-wrap > a {margin-top: 1.5rem;}
+.faq .no-result-wrap{padding-bottom:6rem}
 .faq .no-result-wrap .no-result { font-size: 1rem; line-height: 1.6rem; padding: 5rem 0; }
 .faq .no-result-wrap>button { width: 20rem; margin: 1.5rem 0 6.25rem; }
 .paging-wrap > .paging.mo-only {display: flex !important; justify-content: center;}

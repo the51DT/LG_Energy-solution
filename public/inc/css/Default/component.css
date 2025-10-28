@@ -808,6 +808,7 @@ table {border-collapse: collapse;}
 
 /* search */
 .search-result .btn-delete {display: none;}
+.search-result .btn-delete.on {display: block;}
 
 /* swiper.js */
 .swiper {width: 100%; position: relative;}
