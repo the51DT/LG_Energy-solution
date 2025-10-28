@@ -368,7 +368,7 @@ const locations = [
         address: "ul. LG 1a, Biskupice Podgorne, 55-040 Kobierzyce, NIP : 8961550941, Wroclaw, Poland",
         tel: "+48-71-733-8103",
         sort: "Automotive",
-        type: "Produkcja Facilit",
+        type: "Produkcja Facility",
         country: "Poland",
         continent: "Europa",
         year: "2016",
@@ -479,18 +479,29 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
     map.mapTypes.set("styled_map", styledMapType);
-    map.setMapTypeId("styled_map");
-
-    const makerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)); //지도 마커 아이콘 변경시 해당 소스 변경 필요
+    map.setMapTypeId("styled_map");    
 
     infowindow = new google.maps.InfoWindow(); // 하나의 인포윈도우 재사용
 
     // 마커 생성 및 클릭 이벤트
     locations.forEach((location) => {
+        // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+        let markerIcon = "";
+
+        if (location.type == "Siedziba główna") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+        } else if (location.type == "B+R") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+        } else if (location.type == "Sprzedaż") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+        } else {
+            //Produkcja
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+        }
         const marker = new google.maps.Marker({
             map: map,
             position: new google.maps.LatLng(location.lat, location.lng),
-            icon: makerIcon,
+            icon: markerIcon,
             title: location.place,
         });
 
@@ -644,13 +655,29 @@ mapFilterList.forEach((button) => {
 
         const filtered = locations.filter((loc) => loc.type === selectedType);
         clearMarkers();
+        
+
         filtered.forEach((loc) => {
+            // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+            let markerIcon = "";
+    
+            if (loc.type == "Siedziba główna") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "B+R") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "Sprzedaż") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+            } else {
+                //Produkcja
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+            }
             const marker = new google.maps.Marker({
                 map: map,
                 position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                icon: markerIcon,
                 title: loc.place,
             });
+
             markers.push(marker);
 
             marker.addListener("click", () => {
@@ -712,10 +739,23 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
 
         clearMarkers();
         filtered.forEach((loc) => {
+            // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+            let markerIcon = "";
+
+            if (loc.type == "Siedziba główna") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "B+R") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "Sprzedaż") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+            } else {
+                //Produkcja
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+            }
             const marker = new google.maps.Marker({
                 map: map,
                 position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                icon: markerIcon,
                 title: loc.place,
             });
             markers.push(marker);
@@ -865,10 +905,23 @@ document.addEventListener("DOMContentLoaded", function () {
             // 3. 마커 리셋 및 새로 그림
             clearMarkers();
             filtered.forEach((loc) => {
+                // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+                let markerIcon = "";
+
+                if (loc.type == "Siedziba główna") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "B+R") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "Sprzedaż") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+                } else {
+                    //Produkcja
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+                }
                 const marker = new google.maps.Marker({
                     map: map,
                     position: new google.maps.LatLng(loc.lat, loc.lng),
-                    icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                    icon: markerIcon,
                     title: loc.place,
                 });
                 markers.push(marker);

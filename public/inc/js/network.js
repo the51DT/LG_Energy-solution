@@ -484,16 +484,29 @@ function initMap() {
     map.mapTypes.set("styled_map", styledMapType);
     map.setMapTypeId("styled_map");
 
-    const makerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)); //지도 마커 아이콘 변경시 해당 소스 변경 필요
-
     infowindow = new google.maps.InfoWindow(); // 하나의 인포윈도우 재사용
 
     // 마커 생성 및 클릭 이벤트
     locations.forEach((location) => {
+
+        // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+        let markerIcon = "";
+
+        if(location.type == "본사") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32)); 
+        } else if (location.type == "R&D") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32)); 
+        } else if (location.type == "판매") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32)); 
+        } else {
+            //생산 , JV/생산
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32)); 
+        } 
+
         const marker = new google.maps.Marker({
             map: map,
             position: new google.maps.LatLng(location.lat, location.lng),
-            icon: makerIcon,
+            icon: markerIcon,
             title: location.place,
         });
 
@@ -564,7 +577,7 @@ function updateInfoList(filtered) {
                     //판매
                     html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
                 } else {
-                    //생산
+                    //생산, JV생산
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 }
                 html += '       <li class="country">' + targetLocation.country + "</li>";
@@ -641,6 +654,7 @@ mapFilterList.forEach((button) => {
         const filterType = button.className.replace("filter-type", "").trim(); // 1~4
         let typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매" };
         const selectedType = typeMap[filterType];
+        let mapInfoListBtn = document.querySelector(".map-info.pc-only .map-info-list .select-cate button").innerText;
 
         // 지도내 유형 필터 선택한 값에 대한 텍스트 우측 selectbox에 활성화 내용 추가
         document.querySelector(".map-info.pc-only .map-info-list .select-cate button").innerText = selectedType;
@@ -649,21 +663,28 @@ mapFilterList.forEach((button) => {
         const filtered = locations.filter((loc) => loc.type === selectedType);
         clearMarkers();
         filtered.forEach((loc) => {
-            let iconValue = "";
-            if(loc.type == "본사") {
-                iconValue = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57))
-            } else {
-                iconValue = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57))
-            }
             
+            // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+            let markerIcon = "";
+
+            if (loc.type == "본사") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "R&D") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "판매") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+            } else {
+                //생산 , JV/생산
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+            } 
+
             const marker = new google.maps.Marker({
                 map: map,
                 position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: iconValue,
+                icon: markerIcon,
                 title: loc.place,
             });
             markers.push(marker);
-            
 
             marker.addListener("click", () => {
                 map.setCenter(marker.getPosition());
@@ -724,10 +745,24 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
 
         clearMarkers();
         filtered.forEach((loc) => {
+            // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+            let markerIcon = "";
+
+            if (loc.type == "본사") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "R&D") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "판매") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+            } else {
+                //생산 , JV/생산
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+            } 
+
             const marker = new google.maps.Marker({
                 map: map,
                 position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                icon: markerIcon,
                 title: loc.place,
             });
             markers.push(marker);
@@ -877,10 +912,25 @@ document.addEventListener("DOMContentLoaded", function () {
             // 3. 마커 리셋 및 새로 그림
             clearMarkers();
             filtered.forEach((loc) => {
+                
+                // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+                let markerIcon = "";
+
+                if (loc.type == "본사") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "R&D") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "판매") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+                } else {
+                    //생산 , JV/생산
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+                } 
+
                 const marker = new google.maps.Marker({
                     map: map,
                     position: new google.maps.LatLng(loc.lat, loc.lng),
-                    icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                    icon: markerIcon,
                     title: loc.place,
                 });
                 markers.push(marker);

@@ -487,9 +487,23 @@ function renderMarkers(list) {
 }
 
 function addMarker(location) {
+    // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+    let markerImg = "";
+
+    if (location.type == "Headquarter") {
+        markerImg = "../../../inc/images/icon/icon_mark_black.svg";
+    } else if (location.type == "R&D") {
+        markerImg = "../../../inc/images/icon/icon_mark_blue.svg"
+    } else if (location.type == "Marketing") {
+        markerImg = "../../../inc/images/icon/icon_mark_pink.svg";
+    } else {
+        //생산 , JV/생산
+        markerImg = "../../../inc/images/icon/icon_mark_green.svg"
+    }
+
     const markerIcon = L.icon({
-        iconUrl: "../../../inc/images/icon/icon_mark_red.svg",
-        iconSize: [50, 57],
+        iconUrl: markerImg,
+        iconSize: [32, 32],
         iconAnchor: [25, 57],
     });
 

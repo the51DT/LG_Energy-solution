@@ -481,16 +481,27 @@ function initMap() {
     map.mapTypes.set("styled_map", styledMapType);
     map.setMapTypeId("styled_map");
 
-    const makerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)); //지도 마커 아이콘 변경시 해당 소스 변경 필요
-
     infowindow = new google.maps.InfoWindow(); // 하나의 인포윈도우 재사용
 
     // 마커 생성 및 클릭 이벤트
     locations.forEach((location) => {
+        // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+        let markerIcon = "";
+
+        if (location.type == "Hauptsitz") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+        } else if (location.type == "F&E") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+        } else if (location.type == "Vertrieb") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+        } else {
+            //Produktion
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+        }
         const marker = new google.maps.Marker({
             map: map,
             position: new google.maps.LatLng(location.lat, location.lng),
-            icon: makerIcon,
+            icon: markerIcon,
             title: location.place,
         });
 
@@ -644,11 +655,27 @@ mapFilterList.forEach((button) => {
 
         const filtered = locations.filter((loc) => loc.type === selectedType);
         clearMarkers();
+
+        
         filtered.forEach((loc) => {
+            // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+            let markerIcon = "";
+
+            if (loc.type == "Hauptsitz") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "F&E") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "Vertrieb") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+            } else {
+                //Produktion
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+            }
+
             const marker = new google.maps.Marker({
                 map: map,
                 position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                icon: markerIcon,
                 title: loc.place,
             });
             markers.push(marker);
@@ -712,10 +739,24 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
 
         clearMarkers();
         filtered.forEach((loc) => {
+            // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+            let markerIcon = "";
+
+            if (loc.type == "Hauptsitz") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "F&E") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "Vertrieb") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+            } else {
+                //Produktion
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+            }
+
             const marker = new google.maps.Marker({
                 map: map,
                 position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                icon: markerIcon,
                 title: loc.place,
             });
             markers.push(marker);
@@ -865,10 +906,24 @@ document.addEventListener("DOMContentLoaded", function () {
             // 3. 마커 리셋 및 새로 그림
             clearMarkers();
             filtered.forEach((loc) => {
+                // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
+                let markerIcon = "";
+
+                if (loc.type == "Hauptsitz") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "F&E") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "Vertrieb") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+                } else {
+                    //Produktion
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+                }
+
                 const marker = new google.maps.Marker({
                     map: map,
                     position: new google.maps.LatLng(loc.lat, loc.lng),
-                    icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                    icon: markerIcon,
                     title: loc.place,
                 });
                 markers.push(marker);
