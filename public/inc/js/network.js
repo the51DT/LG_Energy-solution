@@ -649,10 +649,17 @@ mapFilterList.forEach((button) => {
         const filtered = locations.filter((loc) => loc.type === selectedType);
         clearMarkers();
         filtered.forEach((loc) => {
+            let iconValue = "";
+            if(loc.type == "본사") {
+                iconValue = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57))
+            } else {
+                iconValue = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57))
+            }
+            
             const marker = new google.maps.Marker({
                 map: map,
                 position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)),
+                icon: iconValue,
                 title: loc.place,
             });
             markers.push(marker);

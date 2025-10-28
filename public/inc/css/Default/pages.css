@@ -1638,6 +1638,9 @@
 .netw:lang(zh-CN) .map-img::after { pointer-events: none;}
 
 .netw .content-header .title-h1 {margin-bottom: 0;}
+.netw .subp-tit-area {margin-top: 5rem;}
+.netw:lang(zh-CN) .subp-tit-area {margin-top: 2.5rem;}
+
 
 .map-info-content-box .info-content-head .sort {display: flex; gap: 1rem; align-items: center;}
 .map-info-content-box:lang(zh-CN) .info-content-head .sort.idx {position: relative; z-index: -1;}
