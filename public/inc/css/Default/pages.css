@@ -89,6 +89,7 @@
 .sust-env .vision-img::after {content: ''; position: absolute; right: 100%; bottom: 4.19rem; transform: translateX(5.5rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
 .sust-env .tab1-content .content-item02 {background-color: #F3F5F7;}
 .sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 1.88rem; padding-bottom: 0;}
+.sust-env .title-h1 + .article-desc {margin-top: 1.88rem;}
 .sust-env .article-desc {font-size: 1.25rem; line-height: 2rem; font-weight: 400; color: #171819;}
 .sust-env .article-desc.intro {margin-top: 1.88rem;}
 .sust-env .intro-wrap .article-desc {margin: 1.25rem 0;}
@@ -1292,7 +1293,8 @@
 .sprf .eval-status > li > div > img {height: 100%; width: auto;}
 .sprf .eval-status > li > div .grade {position: relative; width: 12.5rem; margin-left: 1.25rem; font-size: 4.5rem; font-weight: 800; line-height: 6.3rem; letter-spacing: -0.03125rem; color: var(--colorElement-light-text-text-primary); text-align: center;}
 .sprf .eval-status > li > div .grade::before {content: ""; position: absolute; top: 50%; left: -1.25rem; transform: translateY(-50%); display: block; width: 0.0625rem; height: 8.125rem; background-color: var(--colorElement-light-stroke-stroke-default03);}
-.sprf .eval-status > li > div .grade .sub {display: block; color: #33b0c6; font-size: 1.125rem; line-height: 1.8rem; font-weight: 500; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);}
+.sprf .eval-status > li > div .grade .sub {display: block; color: #33b0c6; font-size: 1.125rem; line-height: 1.8rem; font-weight: 500; position: absolute; bottom: -1rem; left: 50%; transform: translateX(-50%); white-space: nowrap;}
+.sprf .eval-status > li > div .grade .sub.before {bottom: 0; top: -1rem;}
 
 .sprf [class^="content-item"] .content-sect:has(.sust-rating) {padding-top: 1.875rem;}
 .sprf .sust-rating {padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}

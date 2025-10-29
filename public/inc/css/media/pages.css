@@ -1178,7 +1178,8 @@
 .sprf .eval-status > li > div.group > .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .sprf .eval-status > li > div.group > .desc {font-size: 0.875rem; line-height: 1.3125rem;}
 .sprf .eval-status > li > .info-txt {font-size: 0.875rem; line-height: 1.3125rem;}
-.sprf .eval-status > li > div .grade .sub {position: static; white-space: nowrap; transform: revert; font-size: 0.875rem; line-height: 1.3125rem;}
+.sprf .eval-status > li > div .grade .sub {position: static; white-space: nowrap; transform: translateY(-5px); font-size: 0.875rem; line-height: 1.3125rem;}
+.sprf .eval-status > li > div .grade .sub.before {transform: translateY(5px);}
 .sprf #tab2-content .content-item02.bg-gray .title-h2 {font-size: 1.25rem; line-height: 1.875rem;} 
 
 .sprf [class^="content-item"] .content-sect:has(.sust-rating) {padding-top: 2rem;}
