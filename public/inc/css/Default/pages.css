@@ -933,42 +933,44 @@
 
 /* 산업별 솔루션 (pind) */
 .pind [class^="content-item"]:only-child {padding-bottom: 7.5rem;}
+.pind [class^="content-item01"] {position: relative;}
+.pind [class^="content-item01"]:before {content:""; width: 100%; height: 34.1875rem; background: #f3f5f7; display: block; position: absolute; bottom: 0; left: 0; z-index: -1;}
 .pind [class^="content-item"] .content-sect {padding-top: 5rem;}
 .pind .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem;}
-.pind .indus-list {display: flex; gap: 1.25rem;}
-.pind .indus-list > li {width: 100%; height: 18.75rem; display: flex; flex-direction: column; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-default04);}
-.pind .indus-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem; margin-left: 1.875rem;}
-.pind .indus-list > li > img {width: 17.8125rem; height: 13.125rem; object-fit: cover; margin: auto 2.5rem 2.5rem auto;}
-.pind .indus-list.col4 > li > img {margin: auto 1.875rem 2.5rem auto;}
-.pind .indus-list + .indus-box {margin-top: 2.5rem;}
-.pind .indus-box {display: flex; justify-content: space-between; padding: 2.5rem; border-radius: 1rem; border: 2px solid #9988DF; background-color: var(--colorElement-light-fill-fill-on-primary);}
-.pind .indus-box .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
-.pind .indus-box > ul {display: flex; gap: 2.5rem;}
-.pind .indus-box > ul > li {position: relative; min-width: 10rem; text-align: center;}
-.pind .indus-box > ul > li + li::before {content: ""; position: absolute; left: -1.25rem; display: block; width: 1px; height: 100%; background-color: var(--colorElement-light-stroke-stroke-default04);}
-.pind .indus-box > ul > li > img {width: 3.5rem; height: 3.5rem; margin-bottom: 1.25rem;}
-.pind .indus-box > ul > li > p {font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-secondary-secondary-enabled);}
-.pind .indus-bottom {position: relative; margin-top: 5rem;}
-.pind .indus-bottom::before {content: ""; position: absolute; bottom: -7.5rem; left: 50%; transform: translateX(-50%); display: block; height: calc(100% + 7.5rem + 10.5rem); width: calc(100vw - var(--scrollbar-width)); background-color: var(--colorElement-light-fill-fill-default04); z-index: -1;}
-.pind .indus-bottom {display: flex; gap: 7rem; justify-content: space-between;}
-.pind .indus-bottom .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
-.pind .indus-bottom .bottom-list {flex-shrink: 0; display: flex; gap: 2.5rem; margin-top: 1.875rem;}
-.pind .indus-bottom .bottom-list > li {display: flex; flex-direction: column; justify-content: center; gap: 1.25rem; align-items: center; width: 13.75rem; height: 13.75rem; border-radius: 100%; background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
-.pind .indus-bottom .bottom-list > li > img {width: 3.75rem; height: 3.75rem; object-fit: cover;}
-.pind .indus-bottom .bottom-list > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); display: flex; gap: 0.25rem;}
-.pind .indus-bottom .bottom-list > li > p > span {display: block; font-size: 0.875rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default02);}
-.pind .indus-bottom .bottom-col {flex-grow: 1; display: flex; flex-direction: column; gap: 2.5rem; max-width: 24.25rem;}
-.pind .indus-bottom .bottom-col > div {display: flex; flex-direction: column; gap: 0.625rem;}
-.pind .indus-bottom .bottom-col .btn-wrap {display: flex; gap: 0.625rem; flex-direction: column; }
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] {justify-content: flex-start; width: 100%; min-width: unset; height: auto; padding: 1.25rem; background-color: var(--colorElement-light-fill-fill-primary); font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-on-primary);}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"].gray {background-color: var(--colorElement-light-fill-fill-default02);}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"]:hover {background: var(--primary-primary-pressed, #0C9CAB);}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"].gray:hover {background: var(--coolgray-600, #707273);}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] > img {width: 2.5rem; height: 2.5rem;}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] .icon-area {margin-left: auto; width: 1.875rem; height: 1.875rem;}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] .icon-area::before {background-image: url(../../images/icon/icon_arrow_right_wh.svg); width: 1.875rem; height: 1.875rem;}
-.pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list {gap: 1.25rem;}
-.pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-col .btn-wrap {flex-direction: column;}
+.pind .content-box-wrap {padding-top: 7.5rem;}
+.pind .content-box-wrap .indus-list-wrap .indus-list {display: flex; gap: 3.81rem; justify-content: space-evenly; align-items: center;}
+.pind .content-box-wrap .indus-list-wrap .indus-list > li {width: 19.625rem; text-align: center;}
+.pind .content-box-wrap .indus-list-wrap .indus-list > li p {border-radius: 62.4375rem; background: #e1e7ea; padding: 0.5rem 1.5rem; display:inline-block; margin-bottom: 1rem; font-size: 1.125rem; line-height: 1.8rem; font-weight: 600; white-space: nowrap;}
+.pind .content-box-wrap .indus-item-wrap {padding-top: 5rem;}
+.pind .content-box-wrap .indus-item-wrap .tit {font-size: 1.25rem; line-height: 2rem; font-weight: 600;}
+.pind .content-box-wrap .indus-item-wrap .indus-item {display: flex; gap: 1rem; justify-content: center; align-items: center; padding-top: 1.25rem;}
+.pind .content-box-wrap .indus-item-wrap .indus-item > li {padding: 2.75rem 0.5rem 2.94rem 0.5rem; width: 17.2rem; text-align: center; background: #fff; border: 2px solid #e0dbf9; border-radius: 1rem; display: flex; gap: 1rem; flex-direction: column; align-items: center; max-height: 11.5rem;}
+.pind .content-box-wrap .indus-item-wrap .indus-item > li img {width: 3rem; height: auto}
+.pind .content-box-wrap .indus-item-wrap .indus-item > li p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #554596;}
+.pind .sect-box-wrap {display: flex; gap: 4rem;}
+.pind .sect-box-wrap .box {display:flex; flex-direction: column; gap: 1.25rem;}
+.pind .sect-box-wrap .box .tit {font-size: 1.25rem; line-height: 2rem; font-weight: 600;} 
+.pind .sect-box-wrap .box .btn-wrap {flex-direction: column; justify-content: flex-start; gap: 0.62rem;}
+.pind .sect-box-wrap .box .btn-wrap span {font-size: 1.125rem; line-height: 1.8rem; font-weight: 600;}
+.pind .sect-box-wrap .box .btn-wrap .icon-right2 {background: #33b0c6; color: #fff; padding: 1.25rem; gap: 1.25rem; height: 5rem;}
+.pind .sect-box-wrap .box .btn-wrap .icon-right2.gray {background: #999C9D;}
+.pind .sect-box-wrap .box .btn-wrap .icon-right2 > img {width: 2.5rem; height: 2.5rem;}
+.pind .sect-box-wrap .box .btn-wrap .icon-right2 > .icon-area {flex-grow: 1; width: 1.875rem; height: 1.875rem; justify-content: flex-end;}
+.pind .sect-box-wrap .box .form-list {display: grid; gap: 0.62rem; grid-template-columns: 13.3125rem 1fr;}
+.pind .sect-box-wrap .box .form-list > li {border: 4px solid #eaf3f8; border-radius: 62.4375rem; background: #fff; padding: 1.25rem; width: 13.3125rem; height: 5rem;}
+.pind .sect-box-wrap .box .form-list > li p {font-size: 1.125rem; line-height: 1.8rem; font-weight: 600; color: #555758; text-align: center; display: flex; justify-content: center; align-items: center; gap: .25rem;}
+.pind .sect-box-wrap .box .form-list > li > p > span {display: block; font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: #555758;}
+
+.pind [class^="content-item"] .content-sect:has(.order-history) {padding-top: 1.875rem;}
+.pind .order-history {display: flex; flex-direction: column; gap: 1.25rem;}
+.pind .order-history > li > a {display: flex; gap: 1.875rem; justify-content: space-between; padding: 1.875rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-on-primary); border:2px solid var(--colorElement-light-fill-fill-on-primary);}
+.pind .order-history > li > a:hover {border-color: #33B0C6;}
+.pind .order-history > li > a .text-wrap {display: flex; flex-direction: column; gap: 1.25rem;}
+.pind .order-history > li > a .text-wrap .tit {width: 51.5625rem; font-size: 1.25rem; font-weight: 500; line-height: 2rem; color: var(--colorElement-light-text-text-default01); }
+.pind .order-history > li > a .text-wrap .date {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.pind .order-history > li > a img {width: 10rem; height: 5rem; object-fit: cover; flex-shrink: 0;}
+.pind .order-history + .btn-wrap {margin-top: 7.5rem;}
+.pind .btn-wrap {display: flex; justify-content: center; gap: 1.25rem;}
 
 /* 폼팩터 (.pfom) */
 .pfom .title-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
@@ -1104,7 +1106,7 @@
 .pfom .tech-list .tech-desc-box .desc-box > div > img {width: 22.5625rem; height: auto;}
 .pfom .tech-list .tech-desc-box .desc-box > div .desc {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: var(--colorElement-light-text-text-default02);}
 
-.pfom [class^="content-item"] .content-sect:has(.order-histoy) {padding-top: 1.875rem;}
+.pfom [class^="content-item"] .content-sect:has(.order-history) {padding-top: 1.875rem;}
 .pfom .order-history {display: flex; flex-direction: column; gap: 1.25rem;}
 .pfom .order-history > li > a {display: flex; gap: 1.875rem; justify-content: space-between; padding: 1.875rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-on-primary); border:2px solid var(--colorElement-light-fill-fill-on-primary);}
 .pfom .order-history > li > a:hover {border-color: #33B0C6;}

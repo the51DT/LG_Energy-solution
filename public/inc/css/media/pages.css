@@ -844,36 +844,59 @@
 /* 산업별 솔루션 (pind) */
 .pind [class^="content-item"]:only-child {padding-bottom: 6.25rem;}
 .pind [class^="content-item"] .content-sect {padding-top: 1rem;}
+.pind [class^="content-item01"]:before {height: 32.75rem;}
+.pind:lang(pl) [class^="content-item01"]:before {height: 36.6875rem;}
+
+.pind [class^="content-item01"] .content-wrap.w100 .title-h1,
+.pind [class^="content-item01"] .content-wrap.w100 .title-desc {padding: 0 1.25rem;}
+
 .pind .title-desc {font-size: 1.125rem; line-height: 1.75rem; margin-top: 1rem;}
-.pind .indus-list {gap: 0.5rem; overflow-x: scroll; margin-inline: -1.25rem; padding-inline: 1.25rem;}
-.pind .indus-list > li {width: auto; height: 15rem; aspect-ratio: 1 / 1;}
-.pind .indus-list > li > p {font-size: 1rem; line-height: 1.6rem; margin-top: 1.5rem; margin-left: 1.5rem;}
-.pind .indus-list > li > img,
-.pind .indus-list.col4 > li > img {width: 12.5rem; height: 8.125rem; margin: auto 1.25rem 1.25rem auto;}
-.pind .indus-list + .indus-box {margin-top: 1.5rem;}
-.pind .indus-box {flex-direction: column; gap: 1rem; padding: 1.5rem;}
-.pind .indus-box .tit {font-size: 1.125rem; line-height: 1.75em;}
-.pind .indus-box > ul {flex-wrap: wrap; row-gap: 1.5rem; column-gap: 0.625rem;}
-.pind .indus-box > ul > li {width: calc(50% - (0.625rem / 2)); min-width: unset;}
-.pind .indus-box > ul > li + li::before {content: unset;}
-.pind .indus-box > ul > li > img {margin-bottom: 1rem;}
-.pind .indus-box > ul > li > p {font-size: 0.875rem; line-height: 1.3125rem;}
-.pind .indus-bottom {margin-top: 3rem; padding-top: 3rem; flex-direction: column; gap: 3rem;}
-.pind .indus-bottom::before {bottom: -6.25rem; height: calc(100% + 6.25rem);}
-.pind .indus-bottom .tit {font-size: 1.125rem; line-height: 1.75rem;}
-.pind .indus-bottom .bottom-list {gap: 0.5rem; margin-top: 1rem;}
-.pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list {gap: 0.5rem; flex-wrap: wrap;}
-.pind .indus-bottom .bottom-list > li {width: 100%; height: 9.625rem; border-radius: 0.5rem; gap: 1.5rem;}
-.pind .indus-bottom:has(.bottom-list > li:nth-child(4)) .bottom-list > li {width: calc(50% - (0.5rem / 2));}
-.pind .indus-bottom .bottom-list > li > img {width: 2.625rem; height: 2.625rem;}
-.pind .indus-bottom .bottom-list > li > p {font-size: 1rem; line-height: 1.6rem; color: var(--colorElement-light-text-text-default01); display: initial;}
-.pind .indus-bottom .bottom-list > li > p > span {font-size: 0.75rem; line-height: 1.2rem; color: var(--colorElement-light-text-text-default03);}
-.pind:lang(en) .indus-bottom .bottom-list > li > p {flex-direction: column; gap: 0; height: auto; line-height: 1;}
-.pind:lang(en) .indus-bottom .bottom-list > li {height: 8.625rem;}
-.pind .indus-bottom .bottom-col {max-width: unset;}
-.pind .indus-bottom .bottom-col > div {gap: 1rem;}
-.pind .indus-bottom .bottom-col .btn-wrap {flex-direction: column;}
-.pind .indus-bottom .bottom-col .btn-wrap [class^="icon-btn"] {padding: 1rem 1.5rem; font-size: 1rem; line-height: 1.6rem;}
+
+.pind .content-box-wrap {padding-top: 3rem;}
+.pind .content-box-wrap .indus-list-wrap {overflow-x: scroll; overflow-y: hidden; padding-left: 1.25rem;}
+.pind .content-box-wrap .indus-list-wrap .indus-list {justify-content: flex-start; gap: 0;}
+.pind .content-box-wrap .indus-list-wrap .indus-list > li {width: 100%; max-width: 17.2rem; margin-right: 1rem;}
+.pind .content-box-wrap .indus-list-wrap .indus-list > li:last-child {padding-right: 1.25rem;}
+.pind .content-box-wrap .indus-list-wrap .indus-list > li p {margin-bottom: 0.5rem; font-size: 1rem; line-height: 1.6rem;}
+.pind .content-box-wrap .indus-list-wrap .indus-list > li img {width: 12.5rem; height: 8.125rem;}
+.pind .content-box-wrap .indus-item-wrap {padding: 3rem 1.25rem 0; }
+.pind .content-box-wrap .indus-item-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
+.pind .content-box-wrap .indus-item-wrap .indus-item {display: grid; gap: .75rem; padding-top: 1rem; grid-template-columns: 1fr 1fr;}
+.pind .content-box-wrap .indus-item-wrap .indus-item > li {padding: 1.25rem 0.5rem; border-radius:0.5rem; display: flex; gap: 0.5rem; width: 100%; height: 6.25rem; border:1px solid #E0DBF9;}
+.pind:not(:lang(ko)) .content-box-wrap .indus-item-wrap .indus-item > li {height: auto;}
+
+
+
+.pind .content-box-wrap .indus-item-wrap .indus-item > li img {width: 2rem; height: auto}
+.pind .content-box-wrap .indus-item-wrap .indus-item > li p {font-size: .875rem; font-weight: 600; line-height: 1.3125rem; color: #554596;}
+.pind:not(:lang(ko)) .content-box-wrap .indus-item-wrap .indus-item > li p {height: 2.625rem;}
+
+.pind .sect-box-wrap {display: block;}
+.pind .sect-box-wrap .box {display: block;}
+.pind .sect-box-wrap .box:not(:last-child) {padding-bottom: 2.5rem;}
+.pind .sect-box-wrap .box .tit {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem;} 
+.pind .sect-box-wrap .box .btn-wrap {gap: 0.5rem;}
+.pind .sect-box-wrap .box .btn-wrap span {font-size: 1rem; line-height: 1.6rem; font-weight: 600;}
+.pind .sect-box-wrap .box .btn-wrap .icon-right2 {padding: 1rem 1.5rem; gap: 1rem; height: 4.5rem;}
+.pind .sect-box-wrap .box .form-list {gap: 0.5rem; grid-template-columns: 9.75rem 1fr;}
+.pind .sect-box-wrap .box .form-list > li {border: 4px solid #eaf3f8; width: 9.75rem; height: 4.5rem;}
+.pind .sect-box-wrap .box .form-list > li p {font-size: 1.125rem; line-height: 1.75rem; font-weight: 500; color: #555758; text-align: center;}
+.pind .sect-box-wrap .box .form-list > li > p > span {font-size: 0.875rem; line-height: 1.3125rem; display: initial;}
+.pind .sect-box-wrap .box .form-list > li:has(p > span) {padding: 0.78rem 0;}
+.pind .sect-box-wrap .box .form-list > li p:has(span) {flex-direction: column; align-items: center; gap:0; transform: translateY(-7px);}
+
+
+
+.pind [class^="content-item"] .content-sect:has(.order-history) {padding-top: 1rem;}
+.pind .order-history {gap: 1rem;}
+.pind .order-history > li > a {flex-direction: column; gap: 1rem; justify-content: space-between; padding: 1.5rem;}
+.pind .order-history > li > a .text-wrap {gap: 0.5rem;}
+.pind .order-history > li > a .text-wrap .tit {width: 100%; font-size: 1.125rem; line-height: 1.75rem;}
+.pind .order-history > li > a .text-wrap .date {font-size: 1rem; line-height: 1.6rem;}
+.pind .order-history > li > a img {width: 100%; height: auto; object-fit: cover; display: none;}
+.pind .order-history + .btn-wrap {flex-direction:column; margin-top: 3rem;}
+.pind .order-history + .btn-wrap [class^="icon-btn"][class*="-lg"] {width: 100%;}
+
 
 
 /* 폼팩터 (.pfom) */
@@ -1004,7 +1027,7 @@
 .industry-material:has(> div) {gap: 1rem;}
 .industry-material > div {width: 100%; gap: 1rem;}
 
-.pfom [class^="content-item"] .content-sect:has(.order-histoy) {padding-top: 1rem;}
+.pfom [class^="content-item"] .content-sect:has(.order-history) {padding-top: 1rem;}
 .pfom .order-history {gap: 1rem;}
 .pfom .order-history > li > a {flex-direction: column; gap: 1rem; justify-content: space-between; padding: 1.5rem;}
 .pfom .order-history > li > a .text-wrap {gap: 0.5rem;}
