@@ -254,7 +254,7 @@ const locations = [
         address: "KNIC(Karawang New Industry City), Jalan Raya Trans Heksa Km 7, Wanajaya, Telukjambe Barat, Karawang, Jawa Barat, Indonesia 41361",
         tel: "+62-812-8540-0888",
         sort: "파우치 전지",
-        type: "JV/생산",
+        type: "JV",
         country: "인도네시아",
         continent: "아시아·오세아니아",
         year: "2024",
@@ -476,8 +476,8 @@ function initMap() {
     ]);
 
     const mapOptions = {
-        center: new google.maps.LatLng(37.5266681, 126.9271165),
-        zoom: 4,
+        center: new google.maps.LatLng(28.5266681, 70.24512),
+        zoom: 2.8,
     };
 
     map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
@@ -492,16 +492,19 @@ function initMap() {
         // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
         let markerIcon = "";
 
-        if(location.type == "본사") {
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32)); 
+
+        if (location.type == "본사") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
         } else if (location.type == "R&D") {
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32)); 
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
         } else if (location.type == "판매") {
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32)); 
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+        } else if (location.type == "JV") {
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
         } else {
-            //생산 , JV/생산
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32)); 
-        } 
+            //생산
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+        }
 
         const marker = new google.maps.Marker({
             map: map,
@@ -576,8 +579,11 @@ function updateInfoList(filtered) {
                 } else if (targetLocation.type === "판매") {
                     //판매
                     html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
+                } else if (targetLocation.type === "JV") {
+                    //JV
+                    html += '       <li class="filter-type5">' + targetLocation.type + "</li>";
                 } else {
-                    //생산, JV생산
+                    //생산, 기타
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
                 }
                 html += '       <li class="country">' + targetLocation.country + "</li>";
@@ -651,8 +657,8 @@ function updateInfoList(filtered) {
 // ✅ 기능 1: 유형 필터
 mapFilterList.forEach((button) => {
     button.addEventListener("click", function (e) {
-        const filterType = button.className.replace("filter-type", "").trim(); // 1~4
-        let typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매" };
+        const filterType = button.className.replace("filter-type", "").trim(); // 1~5
+        let typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매", 5: "JV" };
         const selectedType = typeMap[filterType];
         let mapInfoListBtn = document.querySelector(".map-info.pc-only .map-info-list .select-cate button").innerText;
 
@@ -673,8 +679,10 @@ mapFilterList.forEach((button) => {
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
             } else if (loc.type == "판매") {
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "JV") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
             } else {
-                //생산 , JV/생산
+                //생산
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
             } 
 
@@ -754,8 +762,10 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
             } else if (loc.type == "판매") {
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+            } else if (loc.type == "JV") {
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
             } else {
-                //생산 , JV/생산
+                //생산
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
             } 
 
@@ -827,6 +837,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (targetLocation.type === "판매") {
                     //판매
                     html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
+                } else if (targetLocation.type === "JV") {
+                    //JV
+                    html += '       <li class="filter-type5">' + targetLocation.type + "</li>";
                 } else {
                     //생산
                     html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
@@ -891,7 +904,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ✅ 기능 3: selectbox (전체/본사/R&D/생산/판매) 선택 시 필터링
+    // ✅ 기능 3: selectbox (전체/본사/R&D/생산/판매/기타) 선택 시 필터링
     document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
         option.addEventListener("click", function () {
             // 1. 모든 항목에서 active 제거 후 클릭한 곳에 active 부여
@@ -922,8 +935,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
                 } else if (loc.type == "판매") {
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "JV") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
                 } else {
-                    //생산 , JV/생산
+                    //생산
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
                 } 
 

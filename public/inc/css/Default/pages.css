@@ -1594,6 +1594,7 @@
 .sort [class^=filter-][class*=type2] {background-color: #276EF2;}
 .sort [class^=filter-][class*=type3] {background-color: #3EC2CF;}
 .sort [class^=filter-][class*=type4] {background-color: #E12991;}
+.sort [class^=filter-][class*=type5] {background-color: #554596;}
 
 .map-conts-area {display:flex; width: 100%; position: relative; overflow: hidden; border-bottom: 1px solid #E1E7EA;}
 .map-conts-area .map-img {position:relative; height: 53.75rem;} 
@@ -1619,6 +1620,7 @@
 .map-filter .map-filter-list > li[class^=filter-][class*=type2] button::after {background-color: #276EF2;}
 .map-filter .map-filter-list > li[class^=filter-][class*=type3] button::after {background-color: #3EC2CF;}
 .map-filter .map-filter-list > li[class^=filter-][class*=type4] button::after {background-color: #E12991;}
+.map-filter .map-filter-list > li[class^=filter-][class*=type5] button::after {background-color: #554596;}
 
 .map-info {display: flex; position: relative;}
 .map-info .map-info-list .selectbox-wrap.type2 {margin:0 2.5rem;}
