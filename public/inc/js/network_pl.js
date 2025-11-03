@@ -397,10 +397,12 @@ function bindEvents() {
         const networkMapInfo = networkMap.querySelector(".map-info");
         const mapInfoItem = networkMapInfo.querySelectorAll(".map-info-item > li > a");
         const mapImg = networkMap.querySelector(".map-img");
+        const networkMapWidth = mapImg.querySelector(".default_img");
         const mapMarking = networkMap.querySelector(".map-img .active_img .active_mark");
         const mapCloseBtn = networkMapInfo.querySelector(".btn-close > button");
 
         let checkingInterval; // 깜빡임을 위한 인터벌 변수
+        networkMapWidth.style.width = "calc(100vw - 33rem)"
 
         mapInfoItem.forEach((item) => {
             item.addEventListener("click", function (e) {

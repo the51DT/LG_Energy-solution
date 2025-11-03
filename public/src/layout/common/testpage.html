@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- <meta name="viewport" content="width=1920" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name=" format-detection" content="telephone=no" />
+    <title>LG에너지솔루션 - 레이아웃_Tab-case</title>
+    <!-- <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />         -->
+    <style>
+        html {
+            scroll-behavior: auto;
+        }
+
+        /* Lenis와 충돌 방지 */
+        .top-item {
+            height: 100vh;
+        }
+
+        .scroll-area {
+            height: 100vh;
+            overflow: auto;
+            position: relative;
+        }
+
+        .scroll-content {
+            min-height: 100%;
+        }
+
+        .anim-section {
+            padding: 120px 24px;
+            border-bottom: 1px solid #eee;
+            height: 50vh
+        }
+
+        .anim-item {
+            margin: 80px 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #4aa3ff;
+            color: #fff;
+            border: 1px solid #4aa3ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            will-change: transform, width, height, opacity, filter, border-radius, background-position;
+            transform-origin: center center;
+            backface-visibility: hidden;
+        }
+
+        /* 진행바 스타일 (예제 4) */
+        .progress {
+            width: 100%;
+            height: 8px;
+            background: #eee;
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .progress>.bar {
+            width: 0%;
+            height: 100%;
+            background: #4aa3ff;
+            transition: width 0s;
+            /* JS로 제어 */
+        }
+
+        /* 패럴랙스 배경 (예제 5) */
+        .parallax {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        /* 고정 핀(스티키) 느낌 (예제 7) — 실제 고정은 JS 진행도로 흉내 */
+        .pin {
+            position: relative;
+        }
+
+        /* 숫자 카운터용 (예제 8) */
+        .counter {
+            font: 700 48px/1.2 system-ui, sans-serif;
+        }
+    </style>
+    <!-- <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/lottie.js"></script> -->
+
+</head>
+
+<body>
+
+    <div class="scroll-area">
+        <div class="top-item"></div>
+        <div class="scroll-content">
+            <section class="anim-section">
+                <div class="anim-item" data-start="10%" data-end="20%" data-w0="100vw" data-w1="10vw" data-h0="100%"
+                    data-h1="10%" data-x0="0" data-x1="120" data-o0="0.2" data-o1="1" data-span="800">
+                    <div class="box">보이는 즉시 시작!</div>
+                </div>
+            </section>
+            <section class="anim-section">
+                <div class="anim-item" data-start="10%" data-end="80%" data-x0="-200" data-x1="0" data-y0="80"
+                    data-y1="0" data-s0="0.7" data-s1="1" data-o0="0" data-o1="1">
+                    <div class="box">Move+Scale+Fade</div>
+                </div>
+            </section>
+            <section class="anim-section">
+                <div class="anim-item" data-start="0%" data-end="100%" data-w0="100%" data-w1="70%" data-h0="120"
+                    data-h1="200">
+                    <div class="box">W/H</div>
+                </div>
+            </section>
+            <section class="anim-section">
+                <div class="anim-item" data-start="20%" data-end="90%" data-r0="-45" data-r1="180" data-br0="0"
+                    data-br1="32">
+                    <div class="box">Rotate + Radius</div>
+                </div>
+            </section>
+            <section class="anim-section">
+                <div class="anim-item" data-start="10%" data-end="100%" data-p0="0" data-p1="100">
+                    <div class="progress">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="anim-section">
+                <div class="anim-item" data-start="0%" data-end="100%" data-bgx0="0" data-bgx1="200" data-bgy0="0"
+                    data-bgy1="-150">
+                    <div class="box parallax" style="background-image:url('https://picsum.photos/1200/800?random=1')">
+                        Parallax BG
+                    </div>
+                </div>
+            </section>
+            <section class="anim-section">
+                <div class="anim-item" data-start="10%" data-end="90%" data-ry0="-90" data-ry1="0" data-o0="0"
+                    data-o1="1">
+                    <div class="box">3D Flip</div>
+                </div>
+            </section>
+            <section class="anim-section">
+                <div class="anim-item" data-start="10%" data-end="100%" data-c0="0" data-c1="50000">
+                    <div class="counter">0</div>
+                </div>
+            </section>
+            <section class="anim-section">
+                <div class="anim-item pin" data-start="0%" data-end="100%" data-y0="0" data-y1="0" data-s0="1"
+                    data-s1="1">
+                    <div class="box" style="width:240px;">Pinned-look</div>
+                </div>
+            </section>
+
+            <section class="anim-section">
+                <div class="anim-item" data-start="10%" data-end="80%" data-bl0="10" data-bl1="0" data-o0="0.2"
+                    data-o1="1">
+                    <div class="box">Unblur</div>
+                </div>
+            </section>
+            <section class="anim-section">
+                <div class="anim-item" data-start="0%" data-end="100%" data-x0="-300" data-x1="200" data-y0="120"
+                    data-y1="-80" data-r0="-90" data-r1="90" data-s0="0.6" data-s1="1.3" data-o0="0.3" data-o1="1">
+                    <div class="box">BIG MIX</div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="https://unpkg.com/lenis@1.3.13/dist/lenis.min.js"></script>
+    <script>
+        // ── 유틸 ─────────────────────────────────────────
+        const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+        const lerp = (s, e, t) => s + (e - s) * t;
+        const easeInOut = t => 0.5 - Math.cos(Math.PI * t) / 2;
+        const pxOrPercent = (str, base) => {
+            if (!str) return 0;
+            str = String(str).trim();
+            if (str.endsWith('%')) return (parseFloat(str) || 0) * base / 100;
+            return parseFloat(str) || 0;
+        };
+
+        // ── 컨테이너/Lenis ───────────────────────────────
+        const wrapper = document.querySelector('.scroll-area');
+        const content = wrapper.querySelector('.scroll-content');
+
+        const lenis = new Lenis({
+            wrapper, content,
+            duration: 1.0,
+            smoothWheel: true,
+            autoRaf: true
+        });
+
+        // ── 아이템 수집 (px/%, rem 단위는 문자열로 보관) ──
+        const items = Array.from(content.querySelectorAll('.anim-item')).map(el => {
+        const section = el.closest('.anim-section');
+        const box = el.querySelector('.box') || el;
+        const ds = el.dataset;
+
+        const num = k => (k in ds ? +ds[k] : undefined);
+        const str = k => (k in ds ? String(ds[k]) : undefined);
+
+        return {
+            el, section, box,
+
+            startStr: ds.start || '0%',
+            endStr:   ds.end   || '100%',
+
+            start: 0, end: 0,
+
+            // 단위 포함 값
+            W0: str('w0'), W1: str('w1'),
+            H0: str('h0'), H1: str('h1'),
+
+            // 숫자 값
+            X0: num('x0'), X1: num('x1'),
+            Y0: num('y0'), Y1: num('y1'),
+            S0: ('s0' in ds ? +ds.s0 : undefined), S1: ('s1' in ds ? +ds.s1 : undefined),
+            O0: ('o0' in ds ? +ds.o0 : undefined), O1: ('o1' in ds ? +ds.o1 : undefined),
+            R0: num('r0'), R1: num('r1'),
+            RX0: num('rx0'), RX1: num('rx1'),
+            RY0: num('ry0'), RY1: num('ry1'),
+
+            BR0: str('br0'),  BR1: str('br1'),
+            BRTL0: str('brtl0'), BRTL1: str('brtl1'),
+            BRTR0: str('brtr0'), BRTR1: str('brtr1'),
+            BRBR0: str('brbr0'), BRBR1: str('brbr1'),
+            BRBL0: str('brbl0'), BRBL1: str('brbl1'),
+
+            BGX0: num('bgx0'), BGX1: num('bgx1'),
+            BGY0: num('bgy0'), BGY1: num('bgy1'),
+
+            bar: el.querySelector('.progress .bar'),
+            P0: num('p0'), P1: num('p1'),
+            counterEl: el.querySelector('.counter'),
+            C0: num('c0'), C1: num('c1'),
+
+            // ⬇⬇ 추가: 센터 모드 ('x' | 'y' | 'both')
+            center: (ds.center || '').toLowerCase(),  // '', 'x', 'y', 'both'
+
+            spanPx: num('span'),
+            repeat: ds.repeat === '1',
+            armed:false, visible:false,
+            __centerInit:false  // 내부 플래그: 한 번만 position/left/top 세팅
+        };
+        }).filter(it => it.section);
+
+
+        // ── 초기 상태 0으로 세팅 ─────────────────────────
+        function apply(it, tRaw) {
+            const t = clamp(tRaw, 0, 1);
+            const e = easeInOut(t);
+
+            // width/height
+            // width / height — 단위까지 반영
+            const parseValueWithUnit = (val) => {
+                if (val === undefined || val === null) return null;
+                const str = String(val).trim();
+                const match = str.match(/^(-?\d+(?:\.\d+)?)(.*)$/);
+                return match ? { num: parseFloat(match[1]), unit: match[2] || 'px' } : null;
+            };
+
+            const w0 = parseValueWithUnit(it.W0);
+            const w1 = parseValueWithUnit(it.W1);
+            const h0 = parseValueWithUnit(it.H0);
+            const h1 = parseValueWithUnit(it.H1);
+
+            if (w0 && w1) {
+                const unit = w1.unit || w0.unit || 'px';
+                it.box.style.width = lerp(w0.num, w1.num, e) + unit;
+            }
+            if (h0 && h1) {
+                const unit = h1.unit || h0.unit || 'px';
+                it.box.style.height = lerp(h0.num, h1.num, e) + unit;
+            }
+
+            // transform
+            const tr = [];
+            if (it.X0 !== undefined || it.Y0 !== undefined || it.X1 !== undefined || it.Y1 !== undefined) {
+                const x = lerp(it.X0 || 0, it.X1 || 0, e);
+                const y = lerp(it.Y0 || 0, it.Y1 || 0, e);
+                tr.push(`translate3d(${x}px, ${y}px, 0)`);
+            }
+            if (it.S0 !== undefined && it.S1 !== undefined) tr.push(`scale(${lerp(it.S0, it.S1, e)})`);
+            if (it.R0 !== undefined && it.R1 !== undefined) tr.push(`rotate(${lerp(it.R0, it.R1, e)}deg)`);
+            if (it.RX0 !== undefined && it.RX1 !== undefined) tr.push(`rotateX(${lerp(it.RX0, it.RX1, e)}deg)`);
+            if (it.RY0 !== undefined && it.RY1 !== undefined) tr.push(`rotateY(${lerp(it.RY0, it.RY1, e)}deg)`);
+            if (tr.length) it.box.style.transform = tr.join(' ');
+
+            if (it.O0 !== undefined && it.O1 !== undefined) it.box.style.opacity = String(lerp(it.O0, it.O1, e));
+            // --- Border Radius (개별 모서리 대응) ---
+            const parseRadius = (val) => {
+                if (val === undefined || val === null) return null;
+                const str = String(val).trim();
+                const match = str.match(/^(-?\d+(?:\.\d+)?)(.*)$/);
+                return match ? { num: parseFloat(match[1]), unit: match[2] || 'px' } : null;
+            };
+
+            // 기본 전체 반경
+            const brAll0 = parseRadius(it.BR0);
+            const brAll1 = parseRadius(it.BR1);
+
+            // 개별 모서리
+            const brTL0 = parseRadius(it.BRTL0);
+            const brTL1 = parseRadius(it.BRTL1);
+            const brTR0 = parseRadius(it.BRTR0);
+            const brTR1 = parseRadius(it.BRTR1);
+            const brBR0 = parseRadius(it.BRBR0);
+            const brBR1 = parseRadius(it.BRBR1);
+            const brBL0 = parseRadius(it.BRBL0);
+            const brBL1 = parseRadius(it.BRBL1);
+
+            // 실제 적용할 네 모서리 값 계산
+            const tl = brTL0 && brTL1
+                ? lerp(brTL0.num, brTL1.num, e) + (brTL1.unit || brTL0.unit || 'px')
+                : brAll0 && brAll1
+                    ? lerp(brAll0.num, brAll1.num, e) + (brAll1.unit || brAll0.unit || 'px')
+                    : '';
+
+            const brtr = brTR0 && brTR1
+                ? lerp(brTR0.num, brTR1.num, e) + (brTR1.unit || brTR0.unit || 'px')
+                : brAll0 && brAll1
+                    ? lerp(brAll0.num, brAll1.num, e) + (brAll1.unit || brAll0.unit || 'px')
+                    : '';
+
+            const br = brBR0 && brBR1
+                ? lerp(brBR0.num, brBR1.num, e) + (brBR1.unit || brBR0.unit || 'px')
+                : brAll0 && brAll1
+                    ? lerp(brAll0.num, brAll1.num, e) + (brAll1.unit || brAll0.unit || 'px')
+                    : '';
+
+            const bl = brBL0 && brBL1
+                ? lerp(brBL0.num, brBL1.num, e) + (brBL1.unit || brBL0.unit || 'px')
+                : brAll0 && brAll1
+                    ? lerp(brAll0.num, brAll1.num, e) + (brAll1.unit || brAll0.unit || 'px')
+                    : '';
+
+            if (tl || brtr || br || bl) {
+                it.box.style.borderRadius = `${tl} ${brtr} ${br} ${bl}`;
+            }
+            if (it.BL0 !== undefined && it.BL1 !== undefined) it.box.style.filter = `blur(${lerp(it.BL0, it.BL1, e)}px)`;
+
+            // Parallax BG
+            if ((it.BGX0 !== undefined && it.BGX1 !== undefined) || (it.BGY0 !== undefined && it.BGY1 !== undefined)) {
+                const bx = lerp(it.BGX0 || 0, it.BGX1 || 0, e);
+                const by = lerp(it.BGY0 || 0, it.BGY1 || 0, e);
+                it.box.style.backgroundPosition = `${bx}px ${by}px`;
+            }
+
+            // Progress bar
+            if (it.bar && it.P0 !== undefined && it.P1 !== undefined) {
+                it.bar.style.width = lerp(it.P0, it.P1, e) + '%';
+            }
+
+            // Counter
+            if (it.counterEl && it.C0 !== undefined && it.C1 !== undefined) {
+                const n = Math.round(lerp(it.C0, it.C1, e));
+                it.counterEl.textContent = n.toLocaleString();
+            }
+        }
+        items.forEach(it => apply(it, 0)); // 초기 적용
+
+        // ── spanPx가 없으면 기존 start/end “참고값”으로 길이 산출 ──
+        function computeFallbackSpan(it) {
+            const secH = it.section.offsetHeight;
+            const s = pxOrPercent(it.startStr, secH);
+            const e = pxOrPercent(it.endStr, secH);
+            const span = Math.max(1, Math.abs(e - s));
+            return span;
+        }
+
+        // ── IO: "보이는 순간" start/end 고정 ─────────────────
+        const byEl = new Map(items.map(it => [it.el, it]));
+        const io = new IntersectionObserver((entries) => {
+            const cur = lenis.scroll; // 컨테이너 기준 스크롤 값
+            entries.forEach(entry => {
+                const it = byEl.get(entry.target);
+                if (!it) return;
+
+                if (entry.isIntersecting) {
+                    it.visible = true;
+                    if (!it.armed || it.repeat) {
+                        const span = it.spanPx ?? computeFallbackSpan(it);
+                        it.start = cur;          // 보이는 그 프레임을 start로
+                        it.end = cur + span;   // span 만큼 진행
+                        it.armed = true;
+                        apply(it, 0);            // 깜빡임 방지
+                    }
+                } else {
+                    it.visible = false;
+                    // repeat=1 이면 다음에 다시 들어올 때 재시작하기 위해 armed 해제
+                    if (it.repeat) it.armed = false;
+                }
+            });
+        }, {
+            root: wrapper,
+            threshold: 0,                 // 1px만 보여도 트리거
+            rootMargin: '0px 0px -10%'    // 필요시 조절(조금 빠르게 시작)
+        });
+        items.forEach(it => io.observe(it.el));
+
+        // ── 스크롤 진행도 반영 ───────────────────────────
+        lenis.on('scroll', ({ scroll }) => {
+            items.forEach(it => {
+                if (!it.armed) {
+                    // 아직 한 번도 보이지 않음 → 초기 상태 유지
+                    apply(it, 0);
+                    return;
+                }
+                if (scroll <= it.start) { apply(it, 0); return; }
+                if (scroll >= it.end) { apply(it, 1); return; }
+                const t = (scroll - it.start) / Math.max(1, (it.end - it.start));
+                apply(it, t);
+            });
+        });
+
+        // 레이아웃 변경 시: 이미 armed된 아이템은 현 상태 유지(필요하면 전략 조정)
+        window.addEventListener('resize', () => {
+            // 보통 IO 기반에선 재계산 불필요. 섹션 크기 크게 바꾸면 by design 다시 armed 해제 후 재관찰해도 됨.
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

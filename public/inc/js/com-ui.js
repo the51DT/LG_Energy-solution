@@ -120,5 +120,7 @@ const LGEnSol = {
 };
 
 $(document).ready(function($) {
-    LGEnSol.headerEvent();    
+    LGEnSol.headerEvent();
+    
+    
 });
