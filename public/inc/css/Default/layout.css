@@ -305,7 +305,7 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .main-page .content-item01 .text-area p{color: var(--text-text-default-01, #171819);font-size: var(--size-desktop-H4, 1.25rem);font-weight: 500;line-height: var(--line-height-desktop-H4, 2rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);margin-top:4rem;}
 .main-page .content-item01 .cont-area-item .bg-area{position:absolute;right:0;background-color: #171819;}
 /* .main-page .content-item01 .link-area{opacity: 0;transition: all 1s;} */
-.main-page .content-item01 .link-area > div{transition: all 1s;position:absolute;left:0;top:60%;overflow: hidden;transform: translateY(-50%);display: flex;gap:1.75rem;justify-content: space-between;width:calc(73.25rem - 7.5rem);padding:0 3.75rem;height: 13.375rem;opacity: 0;transition: all 1s;}
+.main-page .content-item01 .link-area > div{transition: all 1s;position:absolute;left:0;top:60%;overflow: hidden;transform: translateY(-50%);display: flex;gap:1.75rem;justify-content: space-between;width:100%;max-width:73.75rem ;padding:0 3.75rem;height: 13.375rem;opacity: 0;transition: all 1s;}
 .main-page .content-item01 .link-area .is-active{top:50%; opacity: 1;}
 .main-page .content-item01 .link-area .is-active a{top:0%;}
 .main-page .content-item01 .link-area a{transition: all 1s;position:relative;top:30%;flex:0 50%;display: flex;padding: 3.75rem;justify-content: space-between;align-items: center;color: var(--text-text-on-primary, #FFF);font-size: 2.5rem;font-style: normal;font-weight: 700;line-height: var(--line-height-desktop-H1, 3.85rem); /* 154% */letter-spacing: var(--letter-spacing-default, 0);border: 1px solid var(--stroke-stroke-default-01, #555758);background: rgba(0, 0, 0, 0.10);backdrop-filter: blur(3px);}
@@ -445,7 +445,7 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .main-cookie .content-wrap .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 .main-cookie .btn-wrap {width: 30rem; display: flex; gap: 6rem; flex-grow: 1; align-items: center; justify-content: space-between;}
 .main-cookie .btn-group {gap: 0.75rem;}
-.main-cookie .btn-group > button {width: 10.4375rem; padding: 0.69rem 0.81rem;}
+.main-cookie .btn-group > button {width: 10.4375rem; padding: 0.69rem 0.81rem; height:auto;}
 .main-cookie .btn-close > button {width: 1.875rem; height: 1.875rem;}
 .main-cookie .btn-close > button img {padding: 0.33rem;}
 .setting-cookie .pop-wrap {max-width: 37.5rem !important;}
