@@ -26,12 +26,12 @@ const parseRadius = parseValueWithUnit;
 /* ──────────────────────────────────────────
 Lenis (컨테이너: .wrap)
 ────────────────────────────────────────── */
-const wrapper = document.querySelector(".wrap");
+const wrapper = document.querySelector(".main-page");
 const content = wrapper.querySelector(".main-scroll-area");
 const lenis = new Lenis({
   wrapper,
   content,
-  duration: 1.0,
+  duration: 1.2,
   smoothWheel: true,
   autoRaf: true,
 });
