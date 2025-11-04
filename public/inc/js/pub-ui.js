@@ -31,8 +31,8 @@ var pubUi = {
     settings: function () {
         this.self = {};
         this.self.mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-        this.self.isPc = window.innerWidth >= 1280;
-        this.self.isMobile = window.innerWidth <= 1279;
+        this.self.isPc = document.querySelector(".wrap").offsetWidth >= 1280;
+        this.self.isMobile = document.querySelector(".wrap").offsetWidth <= 1279;
 
         this.self.tabCategory = document.querySelector(".activeTab");
         this.self.tabLists = document.querySelectorAll(".tab-cate-wrap [role=tablist]");
@@ -1571,7 +1571,7 @@ var pubUi = {
                 }, 2000);
             } else {
                 document.body.querySelector(".wrap").classList.add("noScroll");
-                if (document.body.querySelector(".wrap").classList.contains("main-page")) {
+                if (document.body.querySelector(".wrap").classList.contains("main-page") && document.body.querySelector(".wrap").classList.contains("pc")) {
                     lenis.stop();
                 }
 
@@ -1600,7 +1600,7 @@ var pubUi = {
         close(pop, btn) {
             const popEl = document.querySelector(pop);
             document.body.querySelector(".wrap").classList.remove("noScroll");
-            if (document.body.querySelector(".wrap").classList.contains("main-page")) {
+            if (document.body.querySelector(".wrap").classList.contains("main-page") && document.body.querySelector(".wrap").classList.contains("pc")) {
                 lenis.start();
             }
             popEl.classList.remove("open");
@@ -1636,7 +1636,7 @@ var pubUi = {
 
             let top = 0;
             let left = 0;
-            if (document.body.querySelector(".wrap").classList.contains("main-page")) {
+            if (document.body.querySelector(".wrap").classList.contains("main-page") && document.body.querySelector(".wrap").classList.contains("pc")) {
                 lenis.start();
             }
             document.body.querySelector(".wrap").classList.remove("noScroll");
@@ -2120,8 +2120,8 @@ var pubUi = {
         if (resizeTimer) cancelAnimationFrame(resizeTimer);
         resizeTimer = requestAnimationFrame(() => {
             if (!pubUi.self) return;
-            pubUi.self.isPc = window.innerWidth >= 1280;
-            pubUi.self.isMobile = window.innerWidth <= 1279; //mobile 사이즈 조정 필요해보임 (태블릿/중간사이즈 해상도(pc) 일때, PC 관련 스크립트 모바일로 인식되안먹는 문제있음)
+            pubUi.self.isPc = document.querySelector(".wrap").offsetWidth >= 1280;
+            pubUi.self.isMobile = document.querySelector(".wrap").offsetWidth <= 1279; //mobile 사이즈 조정 필요해보임 (태블릿/중간사이즈 해상도(pc) 일때, PC 관련 스크립트 모바일로 인식되안먹는 문제있음)
             pubUi.tabList.scroll();
             pubUi.evtScheduleLeft();
             pubUi.mobileDeviceChk(); //모바일 체크함수 추가
