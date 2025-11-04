@@ -294,7 +294,7 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .anim-item{ transition: all .2s ease}
 .main-page .content-item01{position: relative;padding:0;}
 .main-page .content-item01 .content-wrap{width:100%;max-width: none;}
-.main-page .content-item01 .cont-area{position:relative;height:120vh}
+.main-page .content-item01 .cont-area{position:relative;height:150vh}
 .main-page .content-item01 .cont-area-item{position: sticky;top:0;right:0;left:auto;width:100%;height:100vh;overflow: hidden;}
 .main-page .content-item01 .text-area{opacity:0;display:flex; align-items: flex-start;justify-content: center;flex-direction: column;width:90rem;position: absolute; top:60%;left:50%;transform: translate(-50%, -50%);overflow: hidden;transition: all 1s;}
 .main-page .content-item01 .text-area.is-active{opacity:1;top:50%}

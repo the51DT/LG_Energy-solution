@@ -19,6 +19,8 @@
             <a href="#container">Skip to content</a>
         </div>
         <div class="wrap main-page"> <!-- wrap에 화면id(id) 관련 클래스 추가하여 사용 -->
+        <!-- 11.4  main-scroll-area 스크롤 영역 추가-->
+        <div class="main-scroll-area">
             <!-- header -->
             <header class="header-wrap parent-event">
                 <div class="header-area pc-only">
@@ -270,26 +272,38 @@
                 </div>
                 <div class="content-area">
                     <div class="pc-only">
-                        <div class="content-item01"> <!-- active 클래스 유무에 따라 scroll 시 효과 적용 -->
-                            <div class="content-wrap cont-grid">
-                                <!-- 9.1 레이아웃 수정 -->
-                                <p class="txt"><span class="ani01">Energia dla przyszłości</span> <em><span class="ani02">LG Energy Solution</span> <span class="ani04"><i class="ani-diagram"></i></span><span class="ani03">jest obecne wszędzie</span></em></p>
-                                <div class="action-wrap">
-                                    <img src="../../../inc/images/img/main_img1.png" class="img-action01" alt="">
-                                    <img src="../../../inc/images/img/main_img2.png" class="img-action02" alt="">
-                                    <p class="move-txt">
-                                        Dzięki globalnemu przywództwu technologicznemu <br/>
-                                        dostarczamy baterie zoptymalizowane dla wszystkich <br/>
-                                        zastosowań i branż
-                                    </p>
-                                </div>
-                                <!-- // end 9.1 레이아웃 수정 -->
-                                <div class="btn-wrap">
-                                    <a href="#" class="icon-btn icon-link">Zastosowania</a>
-                                    <a href="#" class="icon-btn icon-link">Serwis</a>
+                        
+                        <!-- 11.4 content-item01 레이아웃 변경 -->
+                        <div class="content-item01">
+                            <div class="content-wrap">
+                                <div class="cont-area anim-section">
+                                    <div class="cont-area-item">
+                                        <div class="text-area anim-item" data-start="100px" data-end="100%">
+                                            <span>Our Solution</span>
+                                            <h3>Energia dla przyszłości<br /><strong> LG Energy Solution<br/>jest obecne wszędzie</strong></h3>
+                                            <p>Dzięki globalnemu przywództwu<br />technologicznemu dostarczamy baterie<br />zoptymalizowane dla wszystkich <br />zastosowań i branż</p>
+                                        </div>
+                                        <div class="anim-item" 
+                                        data-center="y"
+                                        data-start="5%" data-end="50%"
+                                        data-w0="100%" data-w1="53.25%"
+                                        data-brtl0="0" data-brtl1="20">
+                                            <div class="bg-area anim-box">
+                                                <img src="../../../inc/images/img/main_img1.png" art=""/>
+                                                <div class="link-area anim-item" data-start="0%" data-end="100%">
+                                                    <div class="anim-box">
+                                                        <a href="#">Zastosowania</a>
+                                                        <a href="#">Serwis</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div><!-- //content-item01 -->
+                        </div>
+                        <!-- //content-item01 -->
+                         <!-- // 11.4 content-item01 레이아웃 변경 -->
                         <div class="content-item02"> 
                             <div class="cont_bg-area">
                                 <div class="cont_bg01"><img src="../../../inc/images/img/main_img3.png" alt=""></div>
@@ -526,6 +540,8 @@
             </footer>
             <!-- // footer -->
         </div>
+        <!-- //11.4  main-scroll-area 스크롤 영역 추가-->
+        </div>
 
         <!-- 09.12 추가 : 쿠키 설정 팝업 - S -->
         <!-- 메인 쿠키 설정 모달 레이어 -->
@@ -590,10 +606,13 @@
         </div>
         <!-- //09.12 추가 : 쿠키 설정 팝업 - E -->
          
-
-        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
-        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
-        <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
-        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
+    <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
+    <!-- 11.4 lenis.min.js 스크립트 파일 추가 -->
+    <script type="text/javascript" src="../../../inc/js/lenis.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
+    <!-- 11.4 main-ani.js 스크립트 파일 추가 -->
+    <script type="text/javascript" src="../../../inc/js/main-ani.js"></script>
     </body>
 </html>
