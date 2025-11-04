@@ -15,6 +15,7 @@ min-width: 1280px;
 .wrap.pc {position: relative;}
 .wrap.pc {position: relative;scroll-behavior: smooth;}
 .wrap:has(.sticky-area) {scroll-behavior: smooth;}
+.wrap.main-page {position: relative;scroll-behavior: auto !important;}
 
 .w100 {width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important;}
 .noScroll {touch-action:none; -webkit-overflow-scrolling:none; overflow:hidden; overscroll-behavior:none;}
@@ -96,7 +97,7 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .header-wrap + .header_search-area .search-result>button>img{padding:0.641rem}
 .header-wrap + .header_search-area.open{display: block; z-index:101;}
 
-.sitemap_pop-wrap{position: absolute;width:100vw;height:100vh;z-index: 1000;background: var(--fill-fill-default-01, #555758);padding: 3.75rem 10rem;overflow-y: auto;display: none;;}
+.sitemap_pop-wrap{position: absolute;width:100vw;height:100vh;z-index: 1000;background: var(--fill-fill-default-01, #555758);padding: 3.75rem 10rem;overflow-y: auto;display: none;;top:0;}
 .sitemap_pop-wrap.open{display: block;}
 .sitemap_pop-wrap .pop-wrap{width:100%;max-width:100rem;position: relative;display: flex;gap: 3.75rem;flex-direction: column;margin:0 auto;opacity:0;transition: all 2.3s;padding-bottom:6rem;}
 .sitemap_pop-wrap.open .pop-wrap{opacity:1 ;}

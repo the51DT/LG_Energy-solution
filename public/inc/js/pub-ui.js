@@ -1571,6 +1571,9 @@ var pubUi = {
                 }, 2000);
             } else {
                 document.body.querySelector(".wrap").classList.add("noScroll");
+                if (document.body.querySelector(".wrap").classList.contains("main-page")) {
+                    lenis.stop();
+                }
 
                 ["pop-s", "pop-e"].forEach((cls) => {
                     const div = document.createElement("div");
@@ -1597,13 +1600,16 @@ var pubUi = {
         close(pop, btn) {
             const popEl = document.querySelector(pop);
             document.body.querySelector(".wrap").classList.remove("noScroll");
+            if (document.body.querySelector(".wrap").classList.contains("main-page")) {
+                lenis.start();
+            }
             popEl.classList.remove("open");
             popEl.removeAttribute("style");
             popEl.querySelector(".pop-s")?.remove();
             popEl.querySelector(".pop-e")?.remove();
             popEl.querySelector(".pop-wrap").removeAttribute("tabindex");
             if (!popEl.classList.contains("tooltip")) {
-                document.querySelector(btn).focus();
+                // document.querySelector(btn).focus();
             }
         },
 
@@ -1630,7 +1636,9 @@ var pubUi = {
 
             let top = 0;
             let left = 0;
-
+            if (document.body.querySelector(".wrap").classList.contains("main-page")) {
+                lenis.start();
+            }
             document.body.querySelector(".wrap").classList.remove("noScroll");
             popEl.style.position = "absolute";
             popEl.style.zIndex = 100;

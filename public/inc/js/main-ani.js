@@ -1,6 +1,6 @@
 /* ──────────────────────────────────────────
-            유틸
-            ────────────────────────────────────────── */
+유틸
+────────────────────────────────────────── */
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const lerp = (s, e, t) => s + (e - s) * t;
 const easeInOut = (t) => 0.5 - Math.cos(Math.PI * t) / 2;
@@ -24,8 +24,8 @@ const parseValueWithUnit = (val) => {
 const parseRadius = parseValueWithUnit;
 
 /* ──────────────────────────────────────────
-            Lenis (컨테이너: .wrap)
-            ────────────────────────────────────────── */
+Lenis (컨테이너: .wrap)
+────────────────────────────────────────── */
 const wrapper = document.querySelector(".wrap");
 const content = wrapper.querySelector(".main-scroll-area");
 const lenis = new Lenis({
@@ -37,8 +37,8 @@ const lenis = new Lenis({
 });
 
 /* ──────────────────────────────────────────
-            아이템 수집
-            ────────────────────────────────────────── */
+아이템 수집
+────────────────────────────────────────── */
 const items = Array.from(wrapper.querySelectorAll(".anim-item")).map((el) => {
   const section = el.closest(".anim-section"); // 없으면 화면 기준
   const ds = el.dataset;
@@ -142,8 +142,8 @@ const items = Array.from(wrapper.querySelectorAll(".anim-item")).map((el) => {
 });
 
 /* ──────────────────────────────────────────
-            클래스 토글 (영역 도달 시에만)
-            ────────────────────────────────────────── */
+클래스 토글 (영역 도달 시에만)
+────────────────────────────────────────── */
 function updateClasses(it, scroll) {
   // 아직 armed 전이면 어떤 클래스도 붙지 않게
   if (!it.armed) {
@@ -157,8 +157,8 @@ function updateClasses(it, scroll) {
   it.classTarget.classList.toggle("passed-end", scroll >= it.end);
 }
 /* ──────────────────────────────────────────
-            1프레임 적용
-            ────────────────────────────────────────── */
+1프레임 적용
+────────────────────────────────────────── */
 function apply(it, tRaw) {
   const t01 = clamp(tRaw, 0, 1);
   // 속도 감각(느리게/빠르게) → t^speed 후 ease
@@ -292,8 +292,8 @@ function apply(it, tRaw) {
 }
 
 /* ──────────────────────────────────────────
-            도우미: span 추정 / start/end 오프셋 계산
-            ────────────────────────────────────────── */
+도우미: span 추정 / start/end 오프셋 계산
+────────────────────────────────────────── */
 function computeFallbackSpan(it) {
   const secH = it.section?.offsetHeight || 0;
   const s = pxOrPercent(it.startStr, secH);
@@ -310,9 +310,9 @@ function endOffsetPx(it) {
 }
 
 /* ──────────────────────────────────────────
-            IO: "한 번이라도 보이면" start/end 기준만 세팅
-            실제 동작 여부는 아래 스크롤/뷰포트 게이트에서 판단
-            ────────────────────────────────────────── */
+IO: "한 번이라도 보이면" start/end 기준만 세팅
+실제 동작 여부는 아래 스크롤/뷰포트 게이트에서 판단
+────────────────────────────────────────── */
 const byEl = new Map(items.map((it) => [it.el, it]));
 const io = new IntersectionObserver(
   (entries) => {
@@ -347,8 +347,8 @@ const io = new IntersectionObserver(
 items.forEach((it) => io.observe(it.el));
 
 /* ──────────────────────────────────────────
-            스크롤 진행도 + 뷰포트 게이트로 “영역 도달 시만” 작동
-            ────────────────────────────────────────── */
+스크롤 진행도 + 뷰포트 게이트로 “영역 도달 시만” 작동
+────────────────────────────────────────── */
 lenis.on("scroll", ({ scroll }) => {
   const vh = window.innerHeight;
 
@@ -397,13 +397,13 @@ lenis.on("scroll", ({ scroll }) => {
 });
 
 /* ──────────────────────────────────────────
-            초기 1프레임 적용
-            ────────────────────────────────────────── */
+초기 1프레임 적용
+────────────────────────────────────────── */
 items.forEach((it) => apply(it, 0));
 
 /* ──────────────────────────────────────────
-            리사이즈(필요 시 전략 확장 가능)
-            ────────────────────────────────────────── */
+리사이즈(필요 시 전략 확장 가능)
+────────────────────────────────────────── */
 window.addEventListener("resize", () => {
   // armed 유지. 필요 시 여기서 재계산 로직 추가 가능
 });
