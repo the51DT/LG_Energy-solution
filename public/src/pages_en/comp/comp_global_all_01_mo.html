@@ -271,13 +271,13 @@
                                     <div class="map-conts-area">
                                         <div class="map-filter">
                                             <ul class="map-filter-list pc-only">
+                                                <!-- 11.04 수정 : JV 필터 추가 -->
                                                 <li class="filter-type1"><button type="button">Headquarter</button></li>
                                                 <li class="filter-type2"><button type="button">R&D</button></li>
-                                                <li class="filter-type3"><button type="button">Manufacturing</button></li>
-                                                <li class="filter-type3"><button type="button">JV</button></li>
-                                                <li class="filter-type3"><button type="button">Manufacturing Facility</button></li>
+                                                <li class="filter-type3"><button type="button">Manufacturing</button></li>                                                
                                                 <li class="filter-type4"><button type="button">Marketing</button></li>
-                                                <li class="filter-type4"><button type="button">Sales</button></li>
+                                                <li class="filter-type5"><button type="button">JV</button></li>
+                                                <!-- 11.04 수정 : //JV 필터 추가 -->
                                             </ul>
                                         </div>
                                         <div class="map-img">
@@ -293,15 +293,17 @@
                                             <div class="map-info-list">
                                                 <div class="selectbox-wrap type2">
                                                     <div class="select-cate activeSelect">
-                                                        <button type="button">All</button>
+                                                        <!-- 11.04 수정 : JV 필터 추가 -->
+                                                        <button type="button">Headquarter</button>
                                                         <!-- 09.15 사업장 : 셀렉트 박스 영문 적용 - S -->
-                                                        <ul class="select-menu" role="listbox">
-                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">All</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">Headquarter</a></li>
+                                                        <ul class="select-menu" role="listbox">                                                            
+                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">Headquarter</a></li>
                                                             <li><a href="javascript:;" role="option" tabindex="0" >R&D</a></li>
                                                             <li><a href="javascript:;" role="option" tabindex="0">Manufacturing</a></li>
                                                             <li><a href="javascript:;" role="option" tabindex="0">Marketing</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">JV</a></li>
                                                         </ul><!-- //09.15 사업장 : 셀렉트 박스 영문 적용 - E -->
+                                                        <!-- //11.04 수정 : JV 필터 추가 -->
                                                     </div>
                                                 </div>
 
@@ -373,14 +375,17 @@
                                             <div class="map-info-list">                                                
                                                 <div class="selectbox-wrap type2">
                                                     <div class="select-cate activeSelect">
-                                                        <button type="button">전체</button>
-                                                        <ul class="select-menu" role="listbox">
-                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">전체</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0" >본사</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">R&D</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">생산</a></li>
-                                                            <li><a href="javascript:;" role="option" tabindex="0">판매</a></li>
-                                                        </ul>
+                                                        <!-- 11.04 수정 : JV 필터 추가 -->
+                                                        <button type="button">Headquarter</button>
+                                                        <!-- 09.15 사업장 : 셀렉트 박스 영문 적용 - S -->
+                                                        <ul class="select-menu" role="listbox">                                                            
+                                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">Headquarter</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0" >R&D</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">Manufacturing</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">Marketing</a></li>
+                                                            <li><a href="javascript:;" role="option" tabindex="0">JV</a></li>
+                                                        </ul><!-- //09.15 사업장 : 셀렉트 박스 영문 적용 - E -->
+                                                        <!-- //11.04 수정 : JV 필터 추가 -->
                                                     </div>
                                                 </div>
                                             </div> <!--//map-info-list-->                                            
@@ -754,7 +759,7 @@
                                                 <div class="map-info-content-box">
                                                     <div class="info-content-head">
                                                         <ul class="sort">
-                                                            <li class="filter-type3">JV</li>
+                                                            <li class="filter-type5">JV</li> <!-- 11.04 수정 : JV 필터 추가 : filter-type5 클래스 -->
                                                             <li class="country">Indonesia</li>
                                                             <li class="year">2024</li>
                                                         </ul>

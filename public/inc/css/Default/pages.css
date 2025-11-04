@@ -959,6 +959,7 @@
 .pind .sect-box-wrap .box .form-list {display: grid; gap: 0.62rem; grid-template-columns: 13.3125rem 1fr;}
 .pind .sect-box-wrap .box .form-list > li {border: 4px solid #eaf3f8; border-radius: 62.4375rem; background: #fff; padding: 1.25rem; width: 13.3125rem; height: 5rem;}
 .pind .sect-box-wrap .box .form-list > li p {font-size: 1.125rem; line-height: 1.8rem; font-weight: 600; color: #555758; text-align: center; display: flex; justify-content: center; align-items: center; gap: .25rem;}
+.pind .sect-box-wrap .box .form-list > li p:lang(zh-CN) {font-size: 1rem; line-height: 1.6rem;}
 .pind .sect-box-wrap .box .form-list > li > p > span {display: block; font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: #555758;}
 
 .pind [class^="content-item"] .content-sect:has(.order-history) {padding-top: 1.875rem;}

@@ -6,7 +6,7 @@ const locations = [
         address: "108 Yeoui-daero, Yeongdeungpo-gu, Seoul",
         tel: "+82-2-3777-1114",
         sort: "",
-        type: "Headquarter",
+        type: "本社",
         country: "Seoul",
         continent: "Korea",
         year: "2020",
@@ -101,7 +101,7 @@ const locations = [
         address: "29, Gwahaksaneop 3-ro, Oksan-myeon, Heungdeok-gu, Cheongju-si, Chungcheongbuk-do",
         tel: "+82-43-219-7114",
         sort: "Cylindrical Battery, Pouch Battery",
-        type: "Manufacturing",
+        type: "生产",
         country: "Cheongju",
         continent: "Korea",
         year: "2004",
@@ -120,7 +120,7 @@ const locations = [
         address: "81, 2sandan-ro, Ochang-eup, Cheongwon-gu, Cheongju-si, Chungcheongbuk-do",
         tel: "+82-43-718-0015",
         sort: "Cylindrical Battery, Pouch Battery",
-        type: "Manufacturing",
+        type: "生产",
         country: "Cheongju",
         continent: "Korea",
         year: "2012",
@@ -139,7 +139,7 @@ const locations = [
         address: "No.79 Hengtong Road, Nanjing Economical&Technological Development Zone,Nanjing, China",
         tel: "+86-25-5878-2000",
         sort: "Cylindrical Battery, Pouch Battery",
-        type: "Manufacturing",
+        type: "生产",
         country: "China",
         continent: "Asia·Oceania",
         year: "2014",
@@ -158,7 +158,7 @@ const locations = [
         address: "No.17-18 Hengyi Road. No.26 Hengfei Road.Nanjing Economical & Technological Development Zone,Nanjing, China",
         tel: "+86-25-5878-9000",
         sort: "Pouch Battery",
-        type: "Manufacturing",
+        type: "生产",
         country: "China",
         continent: "Asia·Oceania",
         year: "2018",
@@ -177,7 +177,7 @@ const locations = [
         address: "No.17-18 Hengyi Road. No.26 Hengfei Road.Nanjing Economical & Technological Development Zone,Nanjing, China",
         tel: "+86-25-8560-3000",
         sort: "Cylindrical Battery, Pouch Battery",
-        type: "Manufacturing",
+        type: "生产",
         country: "China",
         continent: "Asia·Oceania",
         year: "2003",
@@ -196,7 +196,7 @@ const locations = [
         address: "Holland Hills Mori Tower 17F, 5-11-2, Toranomon, Minato-ku, Tokyo, Japan",
         tel: "+81-3-6403-1861",
         sort: "",
-        type: "Marketing",
+        type: "销售",
         country: "Japan",
         continent: "Asia·Oceania",
         year: "2024",
@@ -215,7 +215,7 @@ const locations = [
         address: "No. 58, Ruihu Street, Neihu District, Taipei City, Taiwan",
         tel: "+886-2-8752-3225 (+188)",
         sort: "",
-        type: "Marketing",
+        type: "销售",
         country: "Taiwan",
         continent: "Asia·Oceania",
         year: "2020",
@@ -234,7 +234,7 @@ const locations = [
         address: "Unit No. 203, Worldmark 2, Asset No. 8, Aerocity, New Delhi 110037",
         tel: "+91-98-7180-4348",
         sort: "",
-        type: "Marketing",
+        type: "销售",
         country: "India",
         continent: "Asia·Oceania",
         year: "2023",
@@ -272,7 +272,7 @@ const locations = [
         address: "Unit 12, 35 Dunlop Rd, Mulgrave, VIC, Australia 3170",
         tel: "+61-1300-178-064",
         sort: "",
-        type: "Manufacturing",
+        type: "生产",
         country: "Australia",
         continent: "Asia·Oceania",
         year: "2017",
@@ -291,7 +291,7 @@ const locations = [
         address: "1 LG Way, Holland, MI 49423, USA",
         tel: "+1-616-494-7190",
         sort: "Automotive",
-        type: "Manufacturing Facility",
+        type: "生产",
         country: "USA",
         continent: "Americas",
         year: "2000",
@@ -310,7 +310,7 @@ const locations = [
         address: "US Arizona Queen Creek 335 e W Pecos Rd",
         tel: "+1-213-905-0024",
         sort: "Mobility, ES",
-        type: "Manufacturing Facility",
+        type: "生产",
         country: "USA",
         continent: "Americas",
         year: "2020",
@@ -329,7 +329,7 @@ const locations = [
         address: "155 Flanders Road Westborough, MA 01581",
         tel: "+1-508-497-7319",
         sort: "",
-        type: "Sales",
+        type: "销售",
         country: "USA",
         continent: "Americas",
         year: "2023",
@@ -348,7 +348,7 @@ const locations = [
         address: "Otto-Volger Str. 7C, 65843 Sulzbach (Taunus) Germany",
         tel: "+49-6196-5719-660",
         sort: "",
-        type: "Marketing",
+        type: "销售",
         country: "Germany",
         continent: "Europe",
         year: "2020",
@@ -367,7 +367,7 @@ const locations = [
         address: "ul. LG 1a, Biskupice Podgorne, 55-040 Kobierzyce, NIP : 8961550941, Wroclaw, Poland",
         tel: "+48-71-733-8103",
         sort: "Automotive",
-        type: "Manufacturing Facility",
+        type: "生产",
         country: "Poland",
         continent: "Europe",
         year: "2016",
@@ -394,12 +394,10 @@ function bindEvents() {
         const networkMapInfo = networkMap.querySelector(".map-info");
         const mapInfoItem = networkMapInfo.querySelectorAll(".map-info-item > li > a");
         const mapImg = networkMap.querySelector(".map-img");
-        const networkMapWidth = mapImg.querySelector(".default_img");
         const mapMarking = networkMap.querySelector(".map-img .active_img .active_mark");
         const mapCloseBtn = networkMapInfo.querySelector(".btn-close > button");
 
         let checkingInterval; // 깜빡임을 위한 인터벌 변수
-        networkMapWidth.style.width = "calc(100vw - 33rem)"
 
         mapInfoItem.forEach((item) => {
             item.addEventListener("click", function (e) {
@@ -426,6 +424,9 @@ function bindEvents() {
                 //         mapMarking.style.display = "block";
                 //     }
                 // }, 1000);
+
+                // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
+                defaultMapSizeChk();
             });
         });
 
@@ -459,13 +460,19 @@ function bindEvents() {
                     map.setView([37.5266681, 126.9271165], 2); // fallback
                 }
             }
+
+            // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
+            defaultMapSizeChk();
         });
+
+        // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
+        defaultMapSizeChk();
     }
 }
 
 // ===== 지도 초기화 =====
 function initMap() {
-    map = L.map("googleMap", { zoomControl: false }).setView([37.5266681, 126.9271165], 3);
+    map = L.map("googleMap", { zoomControl: false }).setView([28.5266681, 59.24512], 2.8);
 
     // OSM 타일
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -482,6 +489,22 @@ function initMap() {
     bindEvents();
 }
 
+// 공통 : 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 함수 추가 (11.04)
+// 중국은 다른 마크업이라 별도로 처리 (중국은 구글맵 사용불가로 leaflet + OSM 사용중 마크업 구조 다름)
+function defaultMapSizeChk() {
+    const networkMap = document.querySelector(".map-conts-area");
+    const networkMapInfo = document.querySelector(".map-info"); 
+    const mapImg = networkMap.querySelector(".map-img");
+    const networkMapWidth = mapImg.querySelector(".default_img"); 
+    
+    if (networkMapInfo.classList.contains("on")) {
+        networkMapWidth.style.width = "calc(100vw - 59.25rem)";
+    } else {
+        networkMapWidth.style.width = "calc(100vw - 33rem)";
+    }
+}
+
+
 // ===== 마커 렌더링 =====
 function renderMarkers(list) {
     clearMarkers();
@@ -492,15 +515,17 @@ function addMarker(location) {
     // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
     let markerImg = "";
 
-    if (location.type == "Headquarter") {
+    if (location.type == "本社") {
         markerImg = "../../../inc/images/icon/icon_mark_black.svg";
     } else if (location.type == "R&D") {
-        markerImg = "../../../inc/images/icon/icon_mark_blue.svg"
-    } else if (location.type == "Marketing") {
+        markerImg = "../../../inc/images/icon/icon_mark_blue.svg";
+    } else if (location.type == "销售") {
         markerImg = "../../../inc/images/icon/icon_mark_pink.svg";
+    } else if (location.type == "JV") {
+        markerImg = "../../../inc/images/icon/icon_mark_purple.svg";
     } else {
         //생산 , JV/생산
-        markerImg = "../../../inc/images/icon/icon_mark_green.svg"
+        markerImg = "../../../inc/images/icon/icon_mark_green.svg";
     }
 
     const markerIcon = L.icon({
@@ -530,13 +555,17 @@ function updateInfoBox(targetLocation) {
 
     html += '<div class="info-content-head">';
     html += "   <ul class='sort'>";
-    if (targetLocation.type === "Headquarter") {
+    if (targetLocation.type === "本社") {
         html += "       <li class='filter-type1'>" + targetLocation.type + "</li>";
     } else if (targetLocation.type === "R&D") {
         html += "       <li class='filter-type2'>" + targetLocation.type + "</li>";
-    } else if (targetLocation.type === "Marketing") {
+    } else if (targetLocation.type === "销售") {
         html += "       <li class='filter-type4'>" + targetLocation.type + "</li>";
+    } else if (targetLocation.type === "JV") {
+        //JV
+        html += '       <li class="filter-type5">' + targetLocation.type + "</li>";
     } else {
+        //생산(生产)
         html += "       <li class='filter-type3'>" + targetLocation.type + "</li>";
     }
     html += "       <li class='country'>" + targetLocation.country + "</li>";
@@ -592,14 +621,14 @@ document.querySelectorAll(".map-filter-list > li button").forEach((btn) => {
     btn.addEventListener("click", function () {
         const selectedText = this.textContent.trim();
 
-        let typeMap = { 本社: "Headquarter", "R&D": "R&D", 生产: "Manufacturing", 销售: "Marketing" };
+        let typeMap = { 本社: "本社", "R&D": "R&D", 生产: "生产", 销售: "销售", JV: "JV" };
         const selectedType = typeMap[selectedText] || "";
 
         let filtered = locations.filter((loc) => loc.type === selectedType);
 
         renderMarkers(filtered);
         updateInfoList(filtered);
-
+        
         bindEvents();
     });
 });
@@ -612,16 +641,16 @@ document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
         option.classList.add("active");
 
         let filtered = [];
-        if (selectedText === "全部" || selectedText === "All") {
-            filtered = locations;
-        } else if (selectedText === "本社") {
-            filtered = locations.filter((loc) => loc.type === "Headquarter");
+        if (selectedText === "本社") {
+            filtered = locations.filter((loc) => loc.type === "本社");
         } else if (selectedText === "R&D") {
             filtered = locations.filter((loc) => loc.type === "R&D");
         } else if (selectedText === "生产") {
-            filtered = locations.filter((loc) => loc.type === "Manufacturing");
+            filtered = locations.filter((loc) => loc.type === "生产");
         } else if (selectedText === "销售") {
-            filtered = locations.filter((loc) => loc.type === "Marketing");
+            filtered = locations.filter((loc) => loc.type === "销售");
+        } else if (selectedText === "JV") {
+            filtered = locations.filter((loc) => loc.type === "JV");
         }
 
         renderMarkers(filtered);
@@ -631,7 +660,86 @@ document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
     });
 });
 
-// ===== 대륙별 탭 =====
+// ===== CN 라벨 ↔ Type 매핑 =====
+const cnTypeMap = {
+    "本社": "本社",
+    "R&D": "R&D",
+    "生产": "生产",
+    "销售": "销售",
+    "JV": "JV",
+};
+const typeToCn = Object.fromEntries(Object.entries(cnTypeMap).map(([k, v]) => [v, k]));
+
+// ===== type에 따라 중국어 라벨 리턴 =====
+function getCnLabel(type) {
+    return typeToCn[type] || type;
+}
+
+// ===== 지역에 존재하는 type 리스트 추출 =====
+function getAvailableTypes(list) {
+    const typeSet = new Set(list.map((loc) => loc.type));
+    return Array.from(typeSet);
+}
+
+// ===== map-info-list 안의 select-cate 갱신 및 초기화 =====
+function resetSelectCateDynamic(baseList) {
+    const infoListWrap = document.querySelector(".map-info-list");
+    if (!infoListWrap) return baseList;
+
+    const selectCates = infoListWrap.querySelectorAll(".select-cate");
+    let finalFiltered = baseList;
+
+    // 현재 지역에서 존재하는 type만 추출
+    const availableTypes = getAvailableTypes(baseList);
+
+    selectCates.forEach((cate) => {
+        const btn = cate.querySelector("button");
+        const menu = cate.querySelector(".select-menu");
+        if (!btn || !menu) return;
+
+        // 메뉴 초기화
+        menu.innerHTML = "";
+        availableTypes.forEach((type, i) => {
+            const cnText = getCnLabel(type);
+            const isActive = i === 0 ? "active" : "";
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="javascript:;" role="option" tabindex="0" class="${isActive}">${cnText}</a>`;
+            menu.appendChild(li);
+        });
+
+        // 첫 번째 옵션 활성화 및 버튼 텍스트 변경
+        const firstOption = menu.querySelector("a");
+        if (firstOption) {
+            btn.textContent = firstOption.textContent.trim();
+            const firstType = cnTypeMap[firstOption.textContent.trim()];
+            if (firstType) {
+                finalFiltered = baseList.filter((loc) => loc.type === firstType);
+            }
+        }
+
+        // 클릭 이벤트 재바인딩 (다시 선택 가능하도록)
+        menu.querySelectorAll("a").forEach((a) => {
+            a.addEventListener("click", () => {
+                menu.querySelectorAll("a").forEach((el) => el.classList.remove("active"));
+                a.classList.add("active");
+                btn.textContent = a.textContent.trim();
+
+                const selectedType = cnTypeMap[a.textContent.trim()];
+                const filtered = selectedType
+                    ? baseList.filter((loc) => loc.type === selectedType)
+                    : baseList;
+
+                renderMarkers(filtered);
+                updateInfoList(filtered);
+                bindEvents();
+            });
+        });
+    });
+
+    return finalFiltered;
+}
+
+// ===== 지역 탭 핸들러 =====
 document.querySelectorAll(".tab-category .tab").forEach((tab) => {
     tab.addEventListener("click", function () {
         document.querySelectorAll(".tab-category .tab").forEach((el) => el.classList.remove("on"));
@@ -666,15 +774,27 @@ document.querySelectorAll(".tab-category .tab").forEach((tab) => {
                 regionFilter = [];
         }
 
-        let filtered = regionFilter.length > 0 ? locations.filter((loc) => regionFilter.includes(loc.country)) : locations;
+        // 1️⃣ 지역 기준 필터링
+        const regionFiltered = regionFilter.length
+            ? locations.filter((loc) => regionFilter.includes(loc.country))
+            : locations;
 
-        renderMarkers(filtered);
-        updateInfoList(filtered);
+        // 2️⃣ map-info-list의 select-cate 동적으로 구성 + 첫 항목 기준 필터
+        const finalFiltered = resetSelectCateDynamic(regionFiltered);
+
+        // 3️⃣ 리스트/마커 갱신
+        renderMarkers(finalFiltered);
+        updateInfoList(finalFiltered);
         bindEvents();
 
+        // 4️⃣ 지도 이동
         if (regionFilter.length === 0) {
-            let bounds = L.latLngBounds(filtered.map((loc) => [loc.lat, loc.lng]));
-            map.fitBounds(bounds);
+            if (finalFiltered.length) {
+                const bounds = L.latLngBounds(finalFiltered.map((loc) => [loc.lat, loc.lng]));
+                map.fitBounds(bounds);
+            } else {
+                map.setView([28.5266681, 59.24512], 2.8);
+            }
         } else {
             map.setView(center, zoom);
         }

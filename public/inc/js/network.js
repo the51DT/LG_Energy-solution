@@ -389,6 +389,7 @@ let mapFilterList = document.querySelectorAll(".map-filter-list > li");
 let pcInfoBox = document.querySelector(".map-info.pc-only .map-info-content-box");
 let moInfoBox = document.querySelector(".map-info.mo-only .map-info-content-box");
 
+let currentRegionLocations = [...locations]; //11.04 추가: 현재 선택된 지역의 사업장 정보를 담는 배열
 
 
 function bindEvents() {
@@ -399,12 +400,11 @@ function bindEvents() {
         const networkMapInfo = networkMap.querySelector(".map-info");
         const mapInfoItem = networkMapInfo.querySelectorAll(".map-info-item > li > a");
         const mapImg = networkMap.querySelector(".map-img");
-        const networkMapWidth = mapImg.querySelector(".default_img");
         const mapMarking = networkMap.querySelector(".map-img .active_img .active_mark");
         const mapCloseBtn = networkMapInfo.querySelector(".btn-close > button");
 
         let checkingInterval; // 깜빡임을 위한 인터벌 변수
-        networkMapWidth.style.width = "calc(100vw - 33rem)"
+
         mapInfoItem.forEach((item) => {
             item.addEventListener("click", function (e) {
                 mapInfoItem.forEach((otherItem) => {
@@ -430,6 +430,9 @@ function bindEvents() {
                 //         mapMarking.style.display = "block";
                 //     }
                 // }, 1000);
+
+                // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
+                defaultMapSizeChk();
             });
         });
 
@@ -462,7 +465,13 @@ function bindEvents() {
                 map.setCenter({ lat: 37.5266681, lng: 126.9271165 });
                 map.setZoom(2);
             }
+
+            // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
+            defaultMapSizeChk();
         });
+
+        // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
+        defaultMapSizeChk();        
     }
 
 }
@@ -478,7 +487,7 @@ function initMap() {
 
     const mapOptions = {
         center: new google.maps.LatLng(28.5266681, 70.24512),
-        zoom: 2.8,
+        zoom: 2.8, //11.04 수정
     };
 
     map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
@@ -493,7 +502,7 @@ function initMap() {
         // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
         let markerIcon = "";
 
-
+        //11.04 JV 추가
         if (location.type == "본사") {
             markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
         } else if (location.type == "R&D") {
@@ -532,6 +541,21 @@ function initMap() {
 }
 
 let markers = []; // 모든 마커 저장
+
+
+// 공통 : 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 함수 추가 (11.04)
+function defaultMapSizeChk() {
+    const networkMap = document.querySelector(".map-conts-area");
+    const networkMapInfo = networkMap.querySelector(".map-info"); 
+    const mapImg = networkMap.querySelector(".map-img");
+    const networkMapWidth = mapImg.querySelector(".default_img"); 
+    
+    if (networkMapInfo.classList.contains("on")) {
+        networkMapWidth.style.width = "calc(100vw - 59.25rem)";
+    } else {
+        networkMapWidth.style.width = "calc(100vw - 33rem)";
+    }
+}
 
 // 공통: 마커 클리어 함수
 function clearMarkers() {
@@ -659,9 +683,8 @@ function updateInfoList(filtered) {
 mapFilterList.forEach((button) => {
     button.addEventListener("click", function (e) {
         const filterType = button.className.replace("filter-type", "").trim(); // 1~5
-        let typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매", 5: "JV" };
+        let typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매", 5: "JV" }; // 11.04 JV 추가
         const selectedType = typeMap[filterType];
-        let mapInfoListBtn = document.querySelector(".map-info.pc-only .map-info-list .select-cate button").innerText;
 
         // 지도내 유형 필터 선택한 값에 대한 텍스트 우측 selectbox에 활성화 내용 추가
         document.querySelector(".map-info.pc-only .map-info-list .select-cate button").innerText = selectedType;
@@ -670,10 +693,9 @@ mapFilterList.forEach((button) => {
         const filtered = locations.filter((loc) => loc.type === selectedType);
         clearMarkers();
         filtered.forEach((loc) => {
-            
             // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
             let markerIcon = "";
-
+            // 11.04 JV 추가
             if (loc.type == "본사") {
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
             } else if (loc.type == "R&D") {
@@ -685,7 +707,7 @@ mapFilterList.forEach((button) => {
             } else {
                 //생산
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-            } 
+            }
 
             const marker = new google.maps.Marker({
                 map: map,
@@ -706,7 +728,81 @@ mapFilterList.forEach((button) => {
             });
         });
 
+        defaultMapSizeChk(); //11.04 추가
+
         updateInfoList(filtered);
+
+        /* 2025.11.04 추가 : map-filter-list 클릭 시 selectbox 값도 동기화 */
+        const selectWrap = document.querySelector(".map-info.pc-only .select-cate");
+        if (selectWrap) {
+            const menu = selectWrap.querySelector(".select-menu");
+            const btn = selectWrap.querySelector("button");
+
+            // 1️⃣ 모든 a에서 active 제거
+            menu.querySelectorAll("a").forEach((a) => a.classList.remove("active"));
+
+            // 2️⃣ 클릭한 type과 동일한 항목 찾아 active 처리
+            let targetOption = Array.from(menu.querySelectorAll("a")).find((a) => a.textContent.trim() === selectedType);
+
+            // 3️⃣ 만약 해당 타입이 selectbox에 없다면(지역 필터로 사라졌을 수도 있음),
+            // selectbox를 현재 지역의 존재 type들로 다시 구성
+            if (!targetOption) {
+                const typeSet = new Set(currentRegionLocations.map((loc) => loc.type));
+                const availableTypes = Array.from(typeSet);
+                menu.innerHTML = "";
+                availableTypes.forEach((type) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `<a href="javascript:;" role="option" tabindex="0" class="${type === selectedType ? "active" : ""}">${type}</a>`;
+                    menu.appendChild(li);
+                });
+                targetOption = Array.from(menu.querySelectorAll("a")).find((a) => a.textContent.trim() === selectedType);
+            }
+
+            // 4️⃣ 버튼 라벨 변경 및 active 처리
+            if (targetOption) {
+                targetOption.classList.add("active");
+                btn.textContent = selectedType;
+            }
+
+            // 5️⃣ selectbox 내 메뉴 클릭 이벤트 재바인딩
+            menu.querySelectorAll("a").forEach((a) => {
+                a.addEventListener("click", () => {
+                    menu.querySelectorAll("a").forEach((el) => el.classList.remove("active"));
+                    a.classList.add("active");
+                    btn.textContent = a.textContent.trim();
+
+                    const clickedType = a.textContent.trim();
+                    const filteredBySelect = currentRegionLocations.filter((loc) => loc.type === clickedType);
+
+                    clearMarkers();
+                    filteredBySelect.forEach((loc) => {
+                        let markerIcon = "";
+                        if (loc.type == "본사") {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+                        } else if (loc.type == "R&D") {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+                        } else if (loc.type == "판매") {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+                        } else if (loc.type == "JV") {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                        } else {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+                        }
+
+                        const marker = new google.maps.Marker({
+                            map: map,
+                            position: new google.maps.LatLng(loc.lat, loc.lng),
+                            icon: markerIcon,
+                            title: loc.place,
+                        });
+                        markers.push(marker);
+                    });
+
+                    updateInfoList(filteredBySelect);
+                });
+            });
+        }
+        /* // 2025.11.04 추가 끝 */
     });
 });
 
@@ -752,11 +848,14 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
 
         let filtered = regionFilter.length > 0 ? locations.filter((loc) => regionFilter.includes(loc.country)) : locations;
 
+        // ✅ 현재 선택된 지역 데이터 저장 (selectbox용) - 11.04 추가
+        currentRegionLocations = filtered;
+
         clearMarkers();
         filtered.forEach((loc) => {
             // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
             let markerIcon = "";
-
+            // 11.04 JV 추가
             if (loc.type == "본사") {
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
             } else if (loc.type == "R&D") {
@@ -768,7 +867,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
             } else {
                 //생산
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-            } 
+            }
 
             const marker = new google.maps.Marker({
                 map: map,
@@ -799,7 +898,102 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
             map.setZoom(zoom);
         }
 
+        defaultMapSizeChk(); //11.04 추가
+
         updateInfoList(filtered);
+
+        /* 2025.11.04 추가 : 지역별 selectbox 동적 업데이트 + 첫 번째 값 자동 선택 */
+        const selectWrap = document.querySelector(".map-info.pc-only .select-cate");
+        if (selectWrap) {
+            const menu = selectWrap.querySelector(".select-menu");
+            const btn = selectWrap.querySelector("button");
+
+            // 1️⃣ 현재 지역에서 존재하는 type 추출
+            const typeSet = new Set(filtered.map((loc) => loc.type));
+            const availableTypes = Array.from(typeSet);
+
+            // 2️⃣ select 메뉴 초기화
+            menu.innerHTML = "";
+            availableTypes.forEach((type, i) => {
+                const li = document.createElement("li");
+                li.innerHTML = `<a href="javascript:;" role="option" tabindex="0" class="${i === 0 ? "active" : ""}">${type}</a>`;
+                menu.appendChild(li);
+            });
+
+            // 3️⃣ 첫 번째 type을 버튼 라벨로 표시
+            if (availableTypes.length > 0) {
+                btn.textContent = availableTypes[0];
+            } else {
+                btn.textContent = "전체";
+            }
+
+            // 4️⃣ 첫 번째 type 기준으로 리스트/마커 갱신
+            let firstFiltered = availableTypes.length > 0 ? filtered.filter((loc) => loc.type === availableTypes[0]) : filtered;
+
+            clearMarkers();
+            firstFiltered.forEach((loc) => {
+                let markerIcon = "";
+                if (loc.type == "본사") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "R&D") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "판매") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+                } else if (loc.type == "JV") {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                } else {
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+                }
+
+                const marker = new google.maps.Marker({
+                    map: map,
+                    position: new google.maps.LatLng(loc.lat, loc.lng),
+                    icon: markerIcon,
+                    title: loc.place,
+                });
+                markers.push(marker);
+            });
+
+            updateInfoList(firstFiltered);
+
+            // 5️⃣ selectbox 메뉴 클릭 시 필터 적용 이벤트 재등록
+            menu.querySelectorAll("a").forEach((a) => {
+                a.addEventListener("click", () => {
+                    menu.querySelectorAll("a").forEach((el) => el.classList.remove("active"));
+                    a.classList.add("active");
+                    const selectedType = a.textContent.trim();
+                    btn.textContent = selectedType;
+
+                    const filteredByType = filtered.filter((loc) => loc.type === selectedType);
+                    clearMarkers();
+                    filteredByType.forEach((loc) => {
+                        let markerIcon = "";
+                        if (loc.type == "본사") {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
+                        } else if (loc.type == "R&D") {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
+                        } else if (loc.type == "판매") {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
+                        } else if (loc.type == "JV") {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                        } else {
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
+                        }
+
+                        const marker = new google.maps.Marker({
+                            map: map,
+                            position: new google.maps.LatLng(loc.lat, loc.lng),
+                            icon: markerIcon,
+                            title: loc.place,
+                        });
+                        markers.push(marker);
+                    });
+
+                    updateInfoList(filteredByType);
+                });
+            });
+        }
+        /* // 2025.11.04 추가 끝 */
     });
 });
 
@@ -826,7 +1020,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // 2. html 초기화 및 동적 생성
                 let html = "";
-
+                // 11.04 JV 추가
                 html += '<div class="info-content-head">';
                 html += '   <ul class="sort">';
                 if (targetLocation.type === "본사") {
@@ -901,7 +1095,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (pcInfoBox) pcInfoBox.innerHTML = html;
                 if (moInfoBox) moInfoBox.innerHTML = html;
-            }
+            }            
         });
     });
 
@@ -918,18 +1112,20 @@ document.addEventListener("DOMContentLoaded", function () {
             // 2. 필터링
             let filtered = [];
             if (selectedText === "전체") {
-                filtered = locations;
+                filtered = currentRegionLocations; //currentRegionLocations로 현재 선택된 지역기준으로 변경 (11.04 수정)
             } else {
-                filtered = locations.filter((loc) => loc.type === selectedText);
+                filtered = currentRegionLocations.filter((loc) => loc.type === selectedText); //currentRegionLocations로 현재 선택된 지역기준으로 변경 (11.04 수정)
             }
 
-            // 3. 마커 리셋 및 새로 그림
+            // 3. 가나다 / 알파벳 순 정렬 (한글, 영문 모두 대응)
+            filtered.sort((a, b) => a.place.localeCompare(b.place, "ko", { sensitivity: "base" }));
+
+            // 4. 마커 리셋 및 새로 그림
             clearMarkers();
             filtered.forEach((loc) => {
-                
                 // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
                 let markerIcon = "";
-
+                // 11.04 JV 추가
                 if (loc.type == "본사") {
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
                 } else if (loc.type == "R&D") {
@@ -941,7 +1137,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     //생산
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                } 
+                }
 
                 const marker = new google.maps.Marker({
                     map: map,
@@ -963,7 +1159,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             // 4. 리스트도 업데이트
-            updateInfoList(filtered);
+            updateInfoList(filtered);            
         });
     });
 });
