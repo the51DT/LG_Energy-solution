@@ -63,6 +63,7 @@
 .btn-group {display: flex; gap: 0.62rem; justify-content: center; align-items: center;}
 .btn-group > button {flex: 1 1 auto;}
 .table-wrap .btn-group {gap: 1.25rem; justify-content: flex-start;}
+.btn-more .txt-btn01:after {background-image: url(../../images/icon/ico_btn_more.svg);}
 
 /* action btn */
 a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
@@ -148,7 +149,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 [class^="icon-btn"].icon-black:hover .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
 [class^="icon-btn"].icon-black:hover .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
 [class^="icon-btn"].icon-link .icon-area::before {background-image: url(../../images/icon/icon_link_external.svg);}
-[class^="icon-btn"].icon-link:hover .icon-area::before {background-image:  url(../../images/icon/icon_link_external_bl.svg);}
+/* [class^="icon-btn"].icon-link:hover .icon-area::before {background-image:  url(../../images/icon/icon_link_external_bl.svg);} */
 [class^="icon-btn"].icon-link2 .icon-area::before {background-image: url(../../images/icon/icon_link_external.svg);}
 [class^="icon-btn"].icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external_bl.svg);}
 

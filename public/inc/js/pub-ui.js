@@ -68,6 +68,9 @@ var pubUi = {
 
         /* global network(사업장) 관련 */
         this.self.mapInfoSort = document.querySelectorAll(".map-info-content-box .info-content-head .sort");
+
+        /* 내용 더보기 버튼 관련 변수 */
+        this.self.moreBtn = document.querySelectorAll(".btn-more .txt-btn01");
     },
 
     bindEvents: function () {
@@ -81,6 +84,23 @@ var pubUi = {
                 menu.classList.remove("on");
             });
         });
+
+        // 내용더보기 버튼 이벤트 추가 - 제품 > 폼팩터 (11.05 추가)
+        this.self.moreBtn.forEach(btn => {
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                const prodSolWrap = btn.closest(".prod-sol-wrap");
+                prodSolWrap.classList.toggle("on");
+
+                if (prodSolWrap.classList.contains("on")) {
+                    btn.innerText = "접기";
+                    btn.classList.add("open");
+                } else {
+                    btn.innerText = "내용 더 보기";
+                    btn.classList.remove("open");
+                }
+            });
+        })                                     
 
         if (this.self.searchResult) {
             pubUi.searchTextDelEvt(this.self.searchResult);
