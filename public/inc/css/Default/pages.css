@@ -1645,12 +1645,14 @@
 .sort [class^=filter-][class*=type4] {background-color: #E12991;}
 .sort [class^=filter-][class*=type5] {background-color: #554596;}
 
-.map-conts-area {display:flex; width: 100%; position: relative; overflow: hidden; border-bottom: 1px solid #E1E7EA;}
-.map-conts-area .map-img {position:relative; height: 53.75rem;} 
+.wrap.netw:not(.main_p) .content-header{padding-bottom:2rem}
+.wrap.netw .tab-cate-wrap{padding-top:3rem;position: sticky;top:5.2rem;background-color: #fff;z-index: 11;}
+.map-conts-area {display:flex; width: 100%; position: relative; border-bottom: 1px solid #E1E7EA;}
+.map-conts-area .map-img {position:sticky;top:12.075rem; height: calc(100vh - 12.075rem);} 
 .map-conts-area .map-img .active_img {opacity:0;}
 .map-conts-area .map-img .active_img img {transition: transform 0.5s ease;}
 .map-conts-area .map-img .active_mark {display: none; position:absolute; top:50%; left:40%; transform: translate(-50%, -50%);}
-.map-conts-area .map-info .map-info-list{width: 33rem; height: 53.75rem; padding: 2.5rem 0 0; text-align: left; overflow-y: auto; overflow-x: hidden; position:absolute; background:#fff; top:0; right:0; transition: 0.5s linear; z-index:10; border-right: 1px solid #c9ced1;}
+.map-conts-area .map-info .map-info-list{width: 33rem;  padding: 2.5rem 0 0; text-align: left; overflow-y: auto; overflow-x: hidden; position:relative; background:#fff; top:0; right:0; transition: 0.5s linear; z-index:10; border-right: 1px solid #c9ced1;}
 .map-conts-area .map-img.on .active_img{opacity:1;}
 .map-conts-area .map-img.on .active_img img{transform: scale(1.2);}
 .map-conts-area .map-img.on .default_img{display: none;}
@@ -1659,7 +1661,7 @@
 .map-conts-area .map-info-box .map-img {width: calc(100% - 200px);}
 
 
-.map-filter {position:absolute; left:2rem; bottom: 2rem; z-index:10;}
+.map-filter {position:absolute; left:2rem; top: 30rem; z-index:10;width:fit-content}
 .map-filter .map-filter-list {display: flex; text-align:left; flex-direction: column; gap: 0.625rem; align-items: center;}
 .map-filter .map-filter-list > li {display:flex; align-items:center; justify-content: space-between;}
 
