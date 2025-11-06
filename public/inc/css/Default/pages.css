@@ -1662,12 +1662,12 @@
 .map-conts-area .map-info-box .map-img {width: calc(100% - 200px);}
 
 
-.map-filter {position:absolute; left:2rem; top: 30rem; z-index:10;width:fit-content}
-.map-filter .map-filter-list {display: flex; text-align:left; flex-direction: column; gap: 0.625rem; align-items: center;}
+.map-filter {position:absolute; left:2rem; top: 4rem; z-index:10;width:fit-content}
+.map-filter .map-filter-list {display: flex; text-align:left; flex-direction: row; gap: 0.625rem; align-items: center;}
 .map-filter .map-filter-list > li {display:flex; align-items:center; justify-content: space-between;}
 
-.map-filter .map-filter-list > li > button {font-size: 1rem; font-weight: 600; line-height: 1.6rem; display: block; text-align: left;  padding: 0.625rem 1rem 0.625rem 1.25rem; width:11.25rem; height:3.5rem; border-radius: 5.625rem; box-shadow: 0px 0.25rem 0.5rem 0px rgba(0, 0, 0, 0.10); background-color:#fff;  position: relative;}
-.map-filter .map-filter-list > li[class^=filter-] button::after {content:''; display:block; min-width: 1.25rem; height:1.25rem; background-color:#f5f5f5; border-radius:6.25rem; position: absolute; right: 1.13rem; top: 50%; transform: translateY(-50%);}
+.map-filter .map-filter-list > li > button {font-size: 0.875rem; font-weight: 600; line-height: 1.4rem; display: block; text-align: left;  padding: 0.53rem 2.5rem 0.53rem 1rem; width:fit-content; min-width: 7.5rem; height: 2.5rem; border-radius: 5.625rem; box-shadow: 0px 0.25rem 0.5rem 0px rgba(0, 0, 0, 0.10); background-color:#fff;  position: relative;}
+.map-filter .map-filter-list > li[class^=filter-] button::after {content:''; display:block; min-width: 1rem; height:1rem; background-color:#f5f5f5; border-radius:6.25rem; position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%);}
 .map-filter .map-filter-list > li[class^=filter-][class*=type1] button::after {background-color: #555758;}
 .map-filter .map-filter-list > li[class^=filter-][class*=type2] button::after {background-color: #276EF2;}
 .map-filter .map-filter-list > li[class^=filter-][class*=type3] button::after {background-color: #3EC2CF;}
