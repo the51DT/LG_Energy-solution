@@ -847,7 +847,7 @@ table {border-collapse: collapse;}
 
 /* marquee */
 .rolling-banner { position: relative; width: 100%; overflow: hidden; background: #fff; min-height:50px; display: flex; align-items: center;  border:1px solid #ccc;}
-.banner-track {display: flex; width: max-content; animation: scroll-left 30s linear infinite;}
+.banner-track {display: flex; width: max-content; animation: scroll-left 50s linear infinite;}
 .banner-track:hover { animation-play-state: paused; /* 마우스 오버 시 멈춤 */}
 .banner-item { flex: 0 0 auto; padding: 0 2rem; font-size: 1rem;  white-space: nowrap;}
 @keyframes scroll-left {

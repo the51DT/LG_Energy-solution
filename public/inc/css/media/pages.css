@@ -196,8 +196,7 @@
 .sust-env .graph-desc-wrap {padding: 1.5rem 1.25rem; }
 .sust-env .graph-desc-wrap .desc {padding: .5rem .62rem 0;}
 .sust-env .graph-desc-wrap .tit::before {width: .125rem; height: 2.625rem;}
-.sust-env .tab2-content .article-content:first-child {margin-top: 0;}
-.sust-env .tab2-content .article-content:last-child 
+.sust-env .tab2-content .article-content:first-child {margin-top: 0;} 
 .sust-env .tab2-content .content-item02 .content-wrap .title-h2 {padding-bottom: 1.5rem; margin-top: 0;}
 .sust-env .tab2-content .content-item02 .article-inner .article-tit {padding-bottom: revert;}
 .sust-env .article-btn-wrap button,
@@ -1204,7 +1203,7 @@
 .pfom .article-mtrl-wrap .desc-wrap {margin-bottom: 1rem;}
 .pfom .article-mtrl-wrap .desc-wrap .intro {color: #fff; font-size: 0.875rem; line-height: 1.3125rem; font-weight: 400;}
 .pfom .article-mtrl-wrap .box-cont-wrap .icon-link {margin: 1rem auto 0; font-size: 0.875rem; line-height: 1.225rem; font-weight: 500; color: #fff; min-width: revert; border-radius: 62.4375rem; width: fit-content;}
-.pfom .article-mtrl-wrap .box-cont-wrap .icon-link:hover {background: #33B0C6; color: #171819;}
+.pfom .article-mtrl-wrap .box-cont-wrap .icon-link:hover {background: #33B0C6;}
 
 .article-mtrl-wrap .box-cont-wrap .img-wrap {width: 7rem; height: 7rem;}
 .article-mtrl-wrap .list-item-wrap {background: #fff; padding: 1.5rem; border-radius: 0.5rem;}
@@ -1844,7 +1843,7 @@
 .rctt .core-cont-wrap .core-cont { width: 100%; align-items: flex-start; gap: 0.625rem; padding: 1.5rem; border: 1px solid #C9CED1; }
 .rctt .core-cont-wrap .core-cont > span { font-size: 1.25rem; font-weight: 700; line-height: 1.875rem; align-items: center; gap: 4px; }
 .rctt .core-cont-wrap .core-cont > span > span { font-size: 1rem; font-weight: 600; line-height: 1.6rem; }
-.rctt .core-cont-wrap .core-cont > p { text-align: left; font-size: 0.875rem; line-height: 1.3125rem; }
+.rctt .core-cont-wrap .core-cont > p { text-align: left; font-size: 0.875rem; line-height: 1.3125rem; white-space: revert;}
 .rctt .core-cont-wrap .core-cont .img-wrap { width: 100%; text-align: right; }
 .rctt .core-cont-wrap .core-cont .img-wrap > img { width: 7rem; height: 7rem; }
 .rctt .core-link-wrap { height: 11.5rem; flex-direction: column; padding: 1.5rem; align-items: flex-start; justify-content: space-between; background-image: url(../../images/img/rctt_bg_mo.png); margin-bottom: 2rem; }

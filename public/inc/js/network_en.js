@@ -507,7 +507,7 @@ function initMap() {
         } else if (location.type == "Marketing") {
             markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
         } else if (location.type == "JV") {
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
         } else {
             //Manufacturing
             markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
@@ -672,6 +672,8 @@ function updateInfoList(filtered) {
             }
         });
     });
+
+    bindEvents();
 }
 
 // ✅ 기능 1: 유형 필터
@@ -698,7 +700,7 @@ mapFilterList.forEach((button) => {
             } else if (loc.type == "Marketing") {
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
             } else if (loc.type == "JV") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
             } else {
                 //Manufacturing
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
@@ -779,7 +781,7 @@ mapFilterList.forEach((button) => {
                         } else if (loc.type == "판매") {
                             markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
                         } else if (loc.type == "JV") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
                         } else {
                             markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
                         }
@@ -858,7 +860,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
             } else if (loc.type == "Marketing") {
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
             } else if (loc.type == "JV") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
             } else {
                 //Manufacturing
                 markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
@@ -935,7 +937,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
                 } else if (loc.type == "판매") {
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
                 } else if (loc.type == "JV") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
                 } else {
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
                 }
@@ -970,7 +972,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
                         } else if (loc.type == "판매") {
                             markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
                         } else if (loc.type == "JV") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
                         } else {
                             markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
                         }
@@ -1126,7 +1128,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (loc.type == "Marketing") {
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
                 } else if (loc.type == "JV") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_purple.svg", null, null, null, new google.maps.Size(32, 32));
+                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
                 } else {
                     //Manufacturing
                     markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));

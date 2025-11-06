@@ -522,7 +522,7 @@ function addMarker(location) {
     } else if (location.type == "销售") {
         markerImg = "../../../inc/images/icon/icon_mark_pink.svg";
     } else if (location.type == "JV") {
-        markerImg = "../../../inc/images/icon/icon_mark_purple.svg";
+        markerImg = "../../../inc/images/icon/icon_mark_green.svg";
     } else {
         //생산 , JV/생산
         markerImg = "../../../inc/images/icon/icon_mark_green.svg";
@@ -641,7 +641,9 @@ document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
         option.classList.add("active");
 
         let filtered = [];
-        if (selectedText === "本社") {
+        if (selectedText === "全部") {
+            filtered = locations;
+        } else if (selectedText === "本社") {
             filtered = locations.filter((loc) => loc.type === "本社");
         } else if (selectedText === "R&D") {
             filtered = locations.filter((loc) => loc.type === "R&D");
