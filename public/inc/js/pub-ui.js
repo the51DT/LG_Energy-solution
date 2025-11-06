@@ -93,19 +93,20 @@ var pubUi = {
                 prodSolWrap.classList.toggle("on");
 
                 if (prodSolWrap.classList.contains("on")) {
-                    if(document.querySelector("html").getAttribute("lang") == "en") {
-                        btn.innerText = "접기";
+                    if (document.querySelector("html").getAttribute("lang") == "en") {
+                        btn.innerText = "Collapse";
                     } else {
-                        btn.innerText = "접기";                        
+                        btn.innerText = "접기";
                     }
                     btn.classList.add("open");
                     
                 } else {
-                    if(document.querySelector("html").getAttribute("lang") == "en") {
+                    if (document.querySelector("html").getAttribute("lang") == "en") {
                         btn.innerText = "View more";
                     } else {
                         btn.innerText = "내용 더 보기";
                     }
+                    
                     
                     btn.classList.remove("open");
                 }
