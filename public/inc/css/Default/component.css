@@ -657,6 +657,10 @@ table {border-collapse: collapse;}
 .text-list-wrap ul.text-list.ty02 > li {padding-left: 0;}
 .text-list-wrap ol.text-list > li::before,
 .text-list-wrap ul.text-list.ty02 > li::before {display:none;}
+.text-list-wrap ol.text-list > li,
+.text-list-wrap ul.text-list.ty03 > li {padding-left: 1.3rem;}
+.text-list-wrap ul.text-list.ty03 > li *{text-indent: 0;}
+.text-list-wrap ul.text-list.ty03 > li::before {display:none;}
 .table-notice-area .text-list-wrap .text-list > li {font-size: 1rem; line-height: 1.6rem; font-weight: 400; color: var(--colorElement-light-text-text-default02);}
 
 .cont-list li {display: flex; gap: 1.25rem; font-size: 1.25rem; line-height: 1.875rem; color: var(--colorElement-light-text-text-default02);}
