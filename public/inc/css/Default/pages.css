@@ -1653,7 +1653,7 @@
 .wrap.netw .tab-cate-wrap{padding-top:3rem;position: sticky;top:5.2rem;background-color: #fff;z-index: 11;}
 .map-conts-area {display:flex; width: 100%; position: relative; border-bottom: 1px solid #E1E7EA;}
 .map-conts-area .map-img {position:sticky;top:12.075rem; height: calc(100vh - 12.075rem);} 
-.map-conts-area .map-img .active_img {opacity:0;}
+.map-conts-area .map-img .active_img {opacity:0;display: none;}
 .map-conts-area .map-img .active_img img {transition: transform 0.5s ease;}
 .map-conts-area .map-img .active_mark {display: none; position:absolute; top:50%; left:40%; transform: translate(-50%, -50%);}
 .map-conts-area .map-info .map-info-list{width: 33rem;  padding: 2.5rem 0 0; text-align: left; overflow-y: auto; overflow-x: hidden; position:relative; background:#fff; top:0; right:0; transition: 0.5s linear; z-index:10; border-right: 1px solid #c9ced1;}
