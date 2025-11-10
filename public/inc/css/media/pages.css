@@ -847,6 +847,7 @@
 .pind:lang(pl) [class^="content-item01"]:before {height: 36.6875rem;}
 
 .pind [class^="content-item01"] .content-wrap.w100 .title-h1,
+.pind [class^="content-item01"] .content-wrap.w100 .title-h2,
 .pind [class^="content-item01"] .content-wrap.w100 .title-desc {padding: 0 1.25rem;}
 
 .pind .title-desc {font-size: 1.125rem; line-height: 1.75rem; margin-top: 1rem;}
@@ -881,8 +882,8 @@
 .pind .sect-box-wrap .box .btn-wrap {gap: 0.5rem;}
 .pind .sect-box-wrap .box .btn-wrap span {font-size: 1rem; line-height: 1.6rem; font-weight: 600;}
 .pind .sect-box-wrap .box .btn-wrap .icon-right2 {padding: 1rem 1.5rem; gap: 1rem; height: 4.5rem;}
-.pind .sect-box-wrap .box .form-list {gap: 0.5rem; grid-template-columns: 9.75rem 1fr;}
-.pind .sect-box-wrap .box .form-list > li {border: 4px solid #eaf3f8; width: 9.75rem; height: 4.5rem;}
+.pind .sect-box-wrap .box .form-list {gap: 0.5rem; grid-template-columns: repeat(2, 1fr);}
+.pind .sect-box-wrap .box .form-list > li {border: 4px solid #eaf3f8; width: 100%; height: 4.5rem;}
 .pind .sect-box-wrap .box .form-list > li p {font-size: 1.125rem; line-height: 1.75rem; font-weight: 500; color: #555758; text-align: center;}
 .pind .sect-box-wrap .box .form-list > li > p > span {font-size: 0.875rem; line-height: 1.3125rem; display: initial;}
 .pind .sect-box-wrap .box .form-list > li:has(p > span) {padding: 0.78rem 0;}

@@ -1726,7 +1726,8 @@
 .map-info-content-box .info-content-body .img-area img {width: 32.5rem; height: 12.5rem;  flex-grow:1;}
 .map-info-content-box .info-content-body .sns-area {margin: 1.5rem 0;}
 .map-info-content-box .info-content-body .sns-area > ul {display: flex; justify-content: flex-end; gap:0.5rem; flex-direction: row;}
-.map-info-content-box .info-content-body .sns-area > ul > li > a {width: 2.5rem; height: 2.5rem; border-radius: 4rem; background-color : #858889;}
+.map-info-content-box .info-content-body .sns-area > ul > li {width: 2rem; height: 2rem;}
+.map-info-content-box .info-content-body .sns-area > ul > li > a {width: 2rem; height: 2rem; border-radius: 4rem; background-color : #858889;}
 
 /* 뉴스룸 */
 .news .news-image-wrapper { position: relative; width: fit-content;}

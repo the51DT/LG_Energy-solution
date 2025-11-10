@@ -10,6 +10,7 @@ var pubUi = {
         this.fileboxInputEvt();
         this.exceptionStickyEvt();
 
+        // 퍼블 폼,ui 이벤트 관련 함수 선언
         this.form.init();
         this.tabList.init();
         this.acdItem.init();
@@ -95,18 +96,30 @@ var pubUi = {
                 if (prodSolWrap.classList.contains("on")) {
                     if (document.querySelector("html").getAttribute("lang") == "en") {
                         btn.innerText = "Collapse";
+                    } else if (document.querySelector("html").getAttribute("lang") == "pl") {
+                        btn.innerText = "Zwiń";
+                    } else if (document.querySelector("html").getAttribute("lang") == "de") {
+                        btn.innerText = "Einklappen"; 
+                    } else if (document.querySelector("html").getAttribute("lang") == "zh-CN") {
+                        btn.innerText = "收起"; 
                     } else {
                         btn.innerText = "접기";
                     }
+
                     btn.classList.add("open");
                     
                 } else {
                     if (document.querySelector("html").getAttribute("lang") == "en") {
-                        btn.innerText = "View more";
+                        btn.innerText = "Expand";
+                    } else if (document.querySelector("html").getAttribute("lang") == "pl") { 
+                        btn.innerText = "Rozwiń";
+                    } else if (document.querySelector("html").getAttribute("lang") == "de") { 
+                        btn.innerText = "Ausklappen"; 
+                    } else if (document.querySelector("html").getAttribute("lang") == "zh-CN") {
+                        btn.innerText = "展开";
                     } else {
                         btn.innerText = "내용 더 보기";
                     }
-                    
                     
                     btn.classList.remove("open");
                 }
