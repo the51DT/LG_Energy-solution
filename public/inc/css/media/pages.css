@@ -1032,7 +1032,7 @@
 .industry-box .box-link > div {flex-direction: column; align-items: flex-start; gap: 0.5rem;}
 .industry-box .box-link .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .industry-box .box-link > img,
-.industry-box .box-link.col3 > img {position: absolute; top: auto; left: auto; bottom: 1rem; right: 1rem; transform: unset; width: auto; height: 6.75rem;}
+.industry-box .box-link.col3 > img {position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); width: auto; height: 6.75rem;}
 .industry-box .box-link .more {justify-content: flex-start;}
 .industry-material {flex-direction: column; align-items: flex-start; gap: 1rem;}
 .industry-material > p {font-size: 1.25rem; line-height: 1.875rem;}

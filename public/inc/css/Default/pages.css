@@ -958,6 +958,7 @@
 .pind .sect-box-wrap .box .btn-wrap .icon-right2.gray {background: #999C9D;}
 .pind .sect-box-wrap .box .btn-wrap .icon-right2 > img {width: 2.5rem; height: 2.5rem;}
 .pind .sect-box-wrap .box .btn-wrap .icon-right2 > .icon-area {flex-grow: 1; width: 1.875rem; height: 1.875rem; justify-content: flex-end;}
+.pind .sect-box-wrap .box .btn-wrap .icon-right2 > .icon-area::before{width:1.875rem;height:1.875rem}
 .pind .sect-box-wrap .box .form-list {display: grid; gap: 0.62rem; grid-template-columns: 13.3125rem 1fr;}
 .pind .sect-box-wrap .box .form-list > li {border: 4px solid #eaf3f8; border-radius: 62.4375rem; background: #fff; padding: 1.25rem; width: 13.3125rem; height: 5rem;}
 .pind .sect-box-wrap .box .form-list > li p {font-size: 1.125rem; line-height: 1.8rem; font-weight: 600; color: #555758; text-align: center; display: flex; justify-content: center; align-items: center; gap: .25rem;}
@@ -1297,7 +1298,7 @@
 .article-mtrl-wrap .list-item-wrap .list-item > li > p {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
 .article-mtrl-wrap .desc-wrap {display: flex; align-items: center; justify-content: space-between; gap: 0.62rem; margin-top: 0.62rem; margin-bottom: 1.25rem;}
 .article-mtrl-wrap .desc-wrap .intro {color: #171819; font-size: 1rem; line-height: 1.6rem; font-weight: 400;}
-.article-mtrl-wrap .desc-wrap .icon-link {color: #fff; border-radius: 62.4375rem; padding: 1rem 1.75rem;}
+.article-mtrl-wrap .desc-wrap .icon-link {color: #fff; border-radius: 62.4375rem; padding: 1rem 1.75rem;flex:0 0 14rem;font-weight:500;width:14rem;min-width:fit-content;}
 .article-mtrl-wrap .desc-wrap .icon-link:hover {background:var(--colorElement-light-fill-fill-primary);}
 
 /* 성과보고 (sprf) */
@@ -2494,7 +2495,7 @@
 .rcct .evaluation-wrap { display: flex; align-items: center; }
 .rcct .evaluation-wrap > div { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; padding: 2.5rem; gap: 1.88rem; border-right: 1px solid #C9CED1; }
 .rcct .evaluation-wrap > div:last-child { border: none; }
-.rcct .evaluation-wrap > div img { height: 11.25rem; width: max-content; }
+.rcct .evaluation-wrap > div img { height: 11.25rem; width: auto; }
 .rcct .evaluation-wrap > div p { font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; }
 .rcct .evaluation-tit { border-bottom: none; padding: 0; }
 
@@ -2731,7 +2732,7 @@
 #popupEmailBlock .pop-wrap {width: 37.5rem; padding: 2rem;}
 #popupEmailBlock .pop-wrap .pop-header {padding-bottom: 1rem;}
 #popupEmailBlock .pop-wrap .pop-footer .btn-wrap {width: 20rem; margin-inline: auto;}
-#popupEmailBlock .pop-wrap .pop-footer .btn-wrap button {height:3.5rem; line-height: 1;}
+#popupEmailBlock .pop-wrap .pop-footer .btn-wrap button {height:3.5rem; line-height: 1;font-size: 1.25rem;}
 .email-block {display: flex; flex-direction: column; gap: 1.25rem; padding: 2.5rem; border-radius: 0.5rem; background-color: var(--colorElement-light-fill-fill-default04);}
 .email-block .img-wrap {width: 5rem; height: 5rem; padding: 0; margin-inline: auto;}
 .email-block .img-wrap > img {width: 100%; height: auto;}
@@ -2756,7 +2757,7 @@
 .foot-dsgvo  .content-header .subp-tit-area{margin-bottom:2.5rem;}
 .foot-dsgvo .content-wrap .content-sect { padding-top: 0; }
 .foot-dsgvo a.text-link{color: var(--text-text-primary, #33B0C6);font-size: var(--size-desktop-B1, 1.125rem);font-weight: 400;line-height: var(--line-height-desktop-B1, 1.8rem);letter-spacing: var(--letter-spacing-default, 0);text-decoration-line: underline;text-decoration-style: solid;text-decoration-skip-ink: auto;text-decoration-thickness: auto;text-underline-offset: auto;text-underline-position: from-font;}
-.foot-dsgvo .content-item01 .content-sect {padding-top: 1.25rem;}
+/* .foot-dsgvo .content-item01 .content-sect {padding-top: 1.25rem;} */
 .foot-dsgvo .content-sect { padding-top: 5rem; }
 .foot-dsgvo .safety-guide-wrap { border: 1px solid #c9ced1; border-radius: 1rem; padding: 2.5rem; margin-top: 1.875rem; }
 .foot-dsgvo .safety-guide { display: grid; grid-template-columns: 13rem 1fr; gap: 2rem; padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid #e1e7ea; }
