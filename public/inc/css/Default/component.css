@@ -74,7 +74,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 [class^="act-btn"][class*="-lg"] {font-size: 1.5rem; line-height: 2rem; padding: 1rem 2.5rem; height:4rem; font-weight: 600;}
 .btn-primary01 {background-color: var(--colorElement-light-fill-fill-default00);}
 .btn-primary01.disabled, .btn-primary01:disabled {background-color: var(--colorElement-light-fill-fill-disabled);}
-.btn-primary02 {background-color: var(--colorElement-light-fill-fill-primary);}
+.btn-primary02 {background-color:#33b0c6;}
 .btn-primary02.disabled, .btn-primary02:disabled {background-color: #ADECF2;} /* 토큰키값으로 컬러코드 수정 필요 : (variables.scss)에 update 되어있지않아 추후 수정예정 */
 .btn-primary03 {font-size:1.125rem; font-weight: 600; line-height: 1.8rem; background-color: var(--colorElement-light-fill-fill-default00); border-radius: calc(9 / 16 * 1rem); color: #fff; padding: 0.75rem 4.75rem 0.75rem 1.25rem !important;}
 .btn-white-bg {background-color: var(--colorElement-light-fill-fill-on-primary);}
@@ -118,7 +118,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 
 /* icon btn */
 [class^="icon-btn"] {display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; width: 15.625rem; min-width: 7.5rem; border-radius: 0.625rem; font-size: 1.125rem; font-weight: 500; line-height: 1.575rem; height: 3.25rem; color: var(--colorElement-light-text-text-default01); padding: 0.7rem 1.25rem 0.8rem 1.88rem;}
-[class^="icon-btn"][class*="-sm"] {font-size: 1.125rem; font-weight: 600; line-height: 1.575rem; min-width: 22.5rem; padding: 0.75rem 1.5rem; height: 3.75rem; border-radius: 0.5rem; width: auto;}
+[class^="icon-btn"][class*="-sm"] {font-size: 1.125rem; font-weight: 600; line-height: 1.575rem; min-width: 22.5rem; padding: 0.75rem 1.5rem; height: 3.625rem; border-radius: 0.5rem; width: auto;}
 [class^="icon-btn"][class*="-md"] {font-size: 1.25rem; font-weight: 600; line-height: 1.75rem; min-width: 22.5rem; padding:1.25rem 2.5rem; height: 4.25rem; border-radius: 0.5rem; width: auto;}
 [class^="icon-btn"][class*="-lg"] {font-size: 1.375rem; font-weight: 600; line-height: 2rem; min-width: 26.25rem; padding:1.25rem 2.5rem; height: 5.5rem; border-radius: 0.5rem; width: auto;}
 [class^="icon-btn"]:hover {color: #fff; background: var(--colorElement-light-fill-fill-default00);}
