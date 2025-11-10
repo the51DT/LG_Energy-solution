@@ -62,11 +62,13 @@ const LGEnSol = {
         function setEventMo() {
             moEventCont.classList.add("on");
             moEventBtn.classList.add("on");
+            document.querySelector(".wrap").classList.add("noScroll")
         }
 
         function clearEventMo() {
             moEventCont.classList.remove("on");
             moEventBtn.classList.remove("on");
+            document.querySelector(".wrap").classList.remove("noScroll")
         }
 
         function event() {
