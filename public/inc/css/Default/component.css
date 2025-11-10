@@ -162,8 +162,8 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 [class^="icon-btn"].icon-cs:hover .icon-area::before {background-image: url(../../images/icon/icon_cs.svg);}
 [class^="icon-btn"].btn-primary01 {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); padding: 1.25rem 1.88rem; background: var(--colorElement-light-fill-fill-default04); border-radius: 0.5rem;}
 
-.icon-right2:hover {background-color: var(--colorElement-light-fill-fill-primary) !important;}
-.icon-right2.gray:hover {background-color:var(--coolgray-600, #707273) !important;}
+.icon-right2:hover {background-color: #0C9CAB !important;}
+.icon-right2.gray:hover {background-color:#707273 !important;}
 
 /* form */
 .wrap-form-box {display:flex; gap:calc(12 / 16 * 1rem);}
