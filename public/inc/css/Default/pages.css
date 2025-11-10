@@ -2285,6 +2285,7 @@
 .serv-blifecare .icon-link2 {border-radius: calc(100 / 16 * 1rem); color: #fff; font-weight: 500; min-width: auto; gap: 0.25rem; min-width: revert;}
 .serv-blifecare .icon-link2:hover {background-color: var(--colorElement-light-fill-fill-primary);}
 .serv-blifecare .icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external_bl.svg);}
+.serv-blifecare .btn-primary02.icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external.svg);}
 .serv-blifecare .brand-info {margin: 5rem 0;}
 .serv-blifecare .brand-info .brand-logo {max-width: 44.44rem; margin: 0 auto; padding: 2.31rem 0;}
 .serv-blifecare .brand-info .brand-desc {margin-top: 1.25rem; font-size: 1.125rem; line-height: 1.8rem; color: #171819;}
@@ -2546,6 +2547,7 @@
 .serv-kooroo .article-content:has(.station-battery-img) .content-desc {color: var(--colorElement-light-text-text-on-primary);}
 .serv-kooroo .article-tit-wrap { display: flex; justify-content: space-between; }
 .serv-kooroo .article-tit-wrap .btn-wrap a { display: flex; align-items: center; background-color: #33B0C6; padding: 1rem 1.75rem; border-radius: 62rem; gap: 0.25rem; color: #fff; font-size: 1.125rem; font-weight: 500; line-height: 1; height: 3.625rem; }
+.serv-kooroo .article-tit-wrap .btn-wrap a:hover {background-color:var(--colorElement-light-fill-fill-primary);}
 .serv-kooroo:lang(zh-CN) .article-tit-wrap .btn-wrap a {font-size: 1.125rem; font-weight: 500; line-height: 1.575rem;}
 .serv-kooroo:lang(zh-CN) .article-tit-wrap .btn-wrap a .icon-area {width: 1.5rem; height: 1.5rem;}
 .serv-kooroo .article-img { padding: 2.375rem 10.125rem; margin: 5rem 0; }
