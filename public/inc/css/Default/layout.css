@@ -107,7 +107,7 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .sitemap_pop-wrap .sitemap-area{display: flex;justify-content: space-between;align-items: flex-start;align-self: stretch;}
 .sitemap_pop-wrap .sitemap-area .depth01 > a:hover{color: var(--text-text-on-primary, #FFF);cursor: default;}
 .sitemap_pop-wrap .sitemap-area a:hover{color: var(--text-text-primary, #33B0C6);}
-.sitemap_pop-wrap .depth02{padding-top:2.5rem;}
+.sitemap_pop-wrap .depth02{padding-top:2rem;}
 .sitemap_pop-wrap .depth02 > ul{padding-top:.44rem;}
 .sitemap_pop-wrap .depth03{padding-top:.5rem;}
 .sitemap_pop-wrap .depth01 a{display:block;text-align:left;color: var(--text-text-on-primary, #FFF);font-size: var(--size-desktop-H3, 1.5rem);font-weight: 600;line-height: var(--line-height-desktop-H3, 2.25rem); /* 150% */letter-spacing: var(--letter-spacing-default, 0);}
@@ -215,11 +215,11 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .footer-wrap .selectbox-wrap.type3 .select-menu .cate-title {color: #fff; padding: 0 1.5rem 0.5rem;}
 .footer-wrap .selectbox-wrap.type3 .select-menu .cate-item > li {position: relative; padding-left:0.75rem;}
 .footer-wrap .selectbox-wrap.type3 .select-menu .cate-item > li:not(:last-child){margin-bottom: 0.5rem; padding-bottom: 0;}
-.footer-wrap .selectbox-wrap.type3 .select-menu .cate-item > li::before {content:""; display: block; width:4px; height:1px; background:#fff; position: absolute; left:1.5rem; top: 50%; transform: translateY(-50%);}
+.footer-wrap .selectbox-wrap.type3 .select-menu .cate-item > li::before {content:""; display: block; width:4px; height:1px; background:#fff; position: absolute; left:1.5rem; top: 50%; transform: translateY(-50%);z-index: 1;}
 .footer-wrap .selectbox-wrap.type3 .select-menu > li:not(:last-child) {padding-bottom: 1.5rem;}
 .footer-wrap .selectbox-wrap.type3 .select-menu > li a {font-weight: 400; line-height: 1.6rem; font-size: 1rem; padding: 0 1.5rem; background: #171819;}
-.footer-wrap .selectbox-wrap.type3 .select-menu > li a.active {color: #fff; font-weight: 600; line-height: 1.8rem; position: relative;}
-.footer-wrap .selectbox-wrap.type3 .select-menu > li a:hover {background: transparent; }
+.footer-wrap .selectbox-wrap.type3 .select-menu > li a.active {color: #fff; font-weight: 400; line-height: 1.6rem; position: relative;}
+.footer-wrap .selectbox-wrap.type3 .select-menu > li a:hover {background: transparent; font-weight: 600;}
 
 
 /* 컨텐츠 */
