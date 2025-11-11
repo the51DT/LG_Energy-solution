@@ -1694,7 +1694,7 @@
 .map-info .map-info-list .map-info-item > li > a.active {background-color:#3ec2cf; color:#fff;}
 .map-info .map-info-content-box {position:absolute; top:0; right:0; width:26.25rem; height: 100%; padding:2.5rem; background:#fff; box-shadow: inset 2px 0 5px 0px rgba(0, 0, 0, 0.10); opacity:0; transition:opacity 0.5s linear;}
 .map-info.pc-only .map-info-content-box .info-conts-wrap {position: sticky; top: 225px; padding-top: 1.75rem;}
-.map-info .btn-close {width: 1.75rem; height: 1.75rem;  position:absolute; right: 0; top:0;}
+.map-info .btn-close {width: 1.75rem; height: 1.75rem;  position:absolute; right: 2.5rem; top:2.5rem;} /* as-is 마크업 영향 받아 수정하였음 , network.js 반영 시, top, right값 0으로 변경 필요 */
 .map-info .btn-close button {width:100%; height: 100%; position:absolute; right: 0; top:0;}
 .map-info.on .map-info-content-box {right:0; opacity:1; transition:opacity 0.5s linear;}
 .map-info.on .map-info-list {right:26.25rem; transition: 0.2s linear;} /* right:41rem 이면, 스크롤바 숨겨진상태로 노출됨 */
