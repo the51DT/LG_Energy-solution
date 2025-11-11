@@ -47,7 +47,7 @@
 .tab-category > li button {font-size: 1.125rem; line-height: 1.6875rem; padding:0.75rem 0;}
 .tab-category > li.on button:after {height: 0.125rem;}
 .tab-cate-wrap.full-line:has(.tab-category > li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li)::after {content: none;}
-.tab-cate-wrap.full-line .tab-category:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) {width: 100%; gap: 1;}
+.tab-cate-wrap.full-line .tab-category:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) {width: 100%; gap: 1rem;}
 .tab-cate-wrap.full-line .tab-category:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) > li {width: calc(50%);}
 .tab-cate-wrap.full-line .tab-category:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) > li button {width: 100%;}
 

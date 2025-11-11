@@ -906,7 +906,7 @@
 /* 폼팩터 (.pfom) */
 .pfom .tab-cate-wrap.full-line::after {content: none;}
 .pfom .tab-cate-wrap.full-line .tab-category {width: 100%;}
-.pfom .tab-cate-wrap.full-line .tab-category > li button {width: 5.625rem;}
+.pfom .tab-cate-wrap.full-line .tab-category > li button {min-width: 5.625rem;width:max-content;}
 .pfom [class^="content-item"]:has([class^="content-item"]) {padding-bottom: 0;}
 .pfom [class^="content-item"] [class^="content-item"] {padding-top: 2rem;}
 .pfom .tab-content-box [class^="content-item"]:not([class^="content-item01"]) {padding-top: 3rem;}
@@ -1144,7 +1144,7 @@
 
 .pfom:lang(pl) .tab-cate-wrap.full-line .tab-category {gap: 1rem;}
 .pfom:lang(pl) .tab-cate-wrap.full-line .tab-category > li button {font-size: 1rem; line-height: 1.4rem;}
-.pfom:lang(pl) .tab-cate-wrap.full-line .tab-category > li:first-child button {width: 6.3125rem;}
+/* .pfom:lang(pl) #tab2-content .tab-cate-wrap.full-line .tab-category > li:first-child button {width: 6.3125rem;} */
 .pfom:lang(pl) .prod-features > li,
 .pfom:lang(de) .prod-features > li {padding-inline: 2rem;}
 .pfom:lang(pl) .prod-features > li > .tit,
