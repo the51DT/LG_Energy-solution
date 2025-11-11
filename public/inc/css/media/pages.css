@@ -1730,6 +1730,7 @@
 .download-desc>li .desc-tit-wrap { flex-direction: column; align-items: flex-start; gap: .25rem;}
 .download-desc .tab-cont-name { font-size: 0.875rem; line-height: 1.3125rem; width: 6rem; }
 .download-desc .download-tit { font-size: 1rem; line-height: 1.6rem; }
+.download-desc .download-tit > b {line-height: 1.6rem; font-size: 1rem;}
 .download .btm-btn-area {display: flex; flex-direction: column-reverse;}
 .download .btm-btn { margin-top: 2rem; }
 .download #tab5-content .tab-category { gap: 1rem; }

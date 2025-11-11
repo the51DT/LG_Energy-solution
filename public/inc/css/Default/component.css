@@ -133,6 +133,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 [class^="icon-btn"][class*="-sm"] .icon-area::before {width: 1.25rem; height: 1.25rem;}
 [class^="icon-btn"][class*="-md"] .icon-area::before {width: 1.5rem; height: 1.5rem;}
 [class^="icon-btn"][class*="-lg"] .icon-area::before {width: 1.75rem; height: 1.75rem;}
+
 [class^="icon-btn"].icon-gray .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
 [class^="icon-btn"]:hover .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
 [class^="icon-btn"].icon-white .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
@@ -143,14 +144,17 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 [class^="icon-btn"].icon-gray {border-color: var(--colorElement-light-stroke-stroke-default03); color: var(--colorElement-light-text-text-default02);}
 [class^="icon-btn"].icon-gray:hover {color: var(--colorElement-light-text-text-default01); background: var(--colorElement-light-fill-fill-default04);}
 [class^="icon-btn"].icon-gray:hover .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
+
 [class^="icon-btn"].icon-black.icon-link2:hover .icon-area,
 [class^="icon-btn"].icon-gray.icon-link2:hover .icon-area {background-color: #fff;}
+[class^="icon-btn"].icon-gray.icon-link2:hover .icon-area {background-color: var(--colorElement-light-fill-fill-default01);}
 [class^="icon-btn"].icon-black .icon-area {background-color: #fff;}
 [class^="icon-btn"].icon-black .icon-area::before {background-image: url(../../images/icon/icon_download.svg);}
 [class^="icon-btn"].icon-black:hover .icon-area {background-color: var(--colorElement-light-fill-fill-default00);}
 [class^="icon-btn"].icon-black:hover .icon-area::before {background-image: url(../../images/icon/icon_download_wh.svg);}
 [class^="icon-btn"].icon-link .icon-area::before {background-image: url(../../images/icon/icon_link_external.svg);}
 /* [class^="icon-btn"].icon-link:hover .icon-area::before {background-image:  url(../../images/icon/icon_link_external_bl.svg);} */
+[class^="icon-btn"].icon-gray.icon-link2:hover .icon-area::before,
 [class^="icon-btn"].icon-link2 .icon-area::before {background-image: url(../../images/icon/icon_link_external.svg);}
 [class^="icon-btn"].icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external_bl.svg);}
 
