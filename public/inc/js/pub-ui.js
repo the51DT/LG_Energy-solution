@@ -370,6 +370,14 @@ var pubUi = {
                 if (aside && !aside.dataset.bound) {
                     aside.addEventListener("click", () => {
                         scroller.scrollTo({ top: 0, behavior: "smooth" });
+                        if(document.querySelector(".wrap").classList.contains("main-page") && document.querySelector(".wrap").classList.contains("pc")){
+                            lenis.scrollTo(0, {
+                                duration: 0.3,   // 1초 동안
+                                easing: (t) => t // 여기서 커스텀 easing 도 가능
+                            });
+                        }else{
+                            scroller.scrollTo({ top: 0, behavior: "smooth" });
+                        }
                         if (wrapEl) wrapEl.style.overflow = "auto";
                         aside.style.display = "none";
                         aside.style.opacity = "0";
