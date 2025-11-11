@@ -1909,6 +1909,9 @@
 .btn-download .icon-download {width: 1.5rem; height: 1.5rem; background: url(../../images/icon/icon_download.svg) center/contain no-repeat;}
 .btn-download:hover { background-color: var(--colorElement-light-stroke-stroke-primary); color: #fff; }
 .btn-download:hover .icon-download {background-image: url(../../images/icon/icon_download_wh.svg);}
+.checkbox:has(input[type="checkbox"]:checked) + .download-desc .btn-download{background-color: var(--colorElement-light-stroke-stroke-primary); color: #fff; }
+.checkbox:has(input[type="checkbox"]:checked) + .download-desc .btn-download .icon-download{background-image: url(../../images/icon/icon_download_wh.svg);}
+
 .download .btn-outline01:hover {border: 0;}
 .download .btn-outline01:hover .icon-area {background-color: #fff;}
 .tab-download .tab-content-box .tab-content .tab-wrap .tab-cate-wrap:before {display: none;}
