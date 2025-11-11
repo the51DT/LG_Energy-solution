@@ -8,15 +8,15 @@
   text-size-adjust: 100%;
   box-sizing: border-box;
   -ms-overflow-style: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -webkit-user-select:unset;
+  -moz-user-select: unset;
+  -ms-user-select: unset;
+  user-select: unset;
   box-sizing: border-box;
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
+  -webkit-user-drag: unset;
+  -khtml-user-drag: unset;
+  -moz-user-drag: unset;
+  -o-user-drag: unset;
   /* user-drag: none; */
 }
 body,
