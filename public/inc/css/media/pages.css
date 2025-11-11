@@ -1584,10 +1584,12 @@
 .netw:lang(de) .content-header .title-h1 {margin-bottom: 0;}
 .netw .content-area-head-tab {position: sticky;}
 .netw .tab-category {max-width: 100%; margin: 0;}
+.wrap.netw .tab-cate-wrap {padding-top: 0; top: 52px;}
 .wrap.netw .content-header .subp-tit {font-size: 1.125rem; line-height: 1.75rem;}
 
 .map-conts-area {display: block; padding: 1.5rem 1.25rem 6.25rem; background: var(--colorElement-light-fill-fill-default04); border-bottom: 0; overflow: revert;}
 .map-conts-area .map-img {display: none;}
+.map-conts-area .map-info {width: 100%;}
 .map-conts-area .map-info .map-info-list,
 .netw:lang(zh-CN) .map-conts-area .map-info .map-info-list {position: static; width: 100%; height: 100%; background: none; overflow: revert; padding:0 0 1rem; border-right: 0;}
 

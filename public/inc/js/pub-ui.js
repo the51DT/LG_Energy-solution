@@ -608,15 +608,18 @@ var pubUi = {
 
                 // 첫 번째 하위 탭 on 처리
                 const firstsecondTab = secondTabs[0];
-                const firstVerticalContentId = firstsecondTab.getAttribute("id") + "-content";
+                let firstVerticalContentId = "";
 
-                firstsecondTab.classList.add("on");
-                firstsecondTab.querySelector("button").setAttribute("aria-selected", true);
+                if (firstsecondTab) {
+                    firstVerticalContentId = firstsecondTab.getAttribute("id") + "-content";
+                    firstsecondTab.classList.add("on");
+                    firstsecondTab.querySelector("button").setAttribute("aria-selected", true);
 
-                const firstVerticalContent = secondTab.querySelector(`#${firstVerticalContentId}`);
-                if (firstVerticalContent) {
-                    firstVerticalContent.classList.add("on");
-                    firstVerticalContent.setAttribute("aria-expanded", true);
+                    const firstVerticalContent = secondTab.querySelector(`#${firstVerticalContentId}`);
+                    if (firstVerticalContent) {
+                        firstVerticalContent.classList.add("on");
+                        firstVerticalContent.setAttribute("aria-expanded", true);
+                    }
                 }
             }
         }
@@ -1477,10 +1480,13 @@ var pubUi = {
 
                         // 3. 만약 하위 탭이 있다면, 첫 번째 하위 탭도 초기화 처리
                         const secondTab = content?.querySelector("[data-tab-type='secondTab']");
-                        pubUi.secondTabChk(secondTab);
+
+                        if (secondTab) {
+                            pubUi.secondTabChk(secondTab);
+                        }
 
                         if (this.closest(".tab-cate-wrap").classList.contains("scroll")) {
-                            const tabOnId = document.querySelector(`#${id}`)
+                            const tabOnId = document.querySelector(`#${id}`);
                             const targetCategory = tabOnId.closest(".tab-category");
                             const tabOnLeftValue = document.querySelector(`#${id}`).offsetLeft;
                             setTimeout(() => {
@@ -1489,7 +1495,6 @@ var pubUi = {
                                 });
                             }, 0);
                         }
-                        // console.log(tabOnLeftValue);
                     });
                 });
             });
@@ -1513,8 +1518,24 @@ var pubUi = {
                     if (list.classList.contains("on")) {
                         let listLeftValue = list.offsetLeft;
                         let listParent = list.closest(".tab-category");
-                        // console.log(listLeftValue);
                         listParent.scrollTo({ left: listLeftValue, behavior: "smooth" });
+                    }
+                });
+            } else {
+                // 탭형태가(role=tablist 사용)  페이지 이동 형식일때, on 클래스가 존재하는 탭으로 가로스크롤 이동 (서비스 mobile 해당)
+                pubUi.self.tabLists.forEach((tabList) => {
+                    const tabCateWrap = tabList.closest(".tab-cate-wrap");
+                    if (tabCateWrap.classList.contains("scroll")) {
+                        // mobile 일 때만 실행,
+                        const tabOnId = tabCateWrap.querySelectorAll(".tab-category li");
+                        const targetCategory = tabCateWrap.querySelector(".tab-category");
+                        tabOnId.forEach((tab) => {
+                            if (tab.classList.contains("on")) {
+                                const targetId = tab.id;
+                                const tabOnLeftValue = document.querySelector(`#${targetId}`).offsetLeft;
+                                pubUi.scrollToEvt(targetCategory, "left", tabOnLeftValue);
+                            }
+                        });
                     }
                 });
             }
