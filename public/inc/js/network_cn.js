@@ -817,6 +817,13 @@ document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
 
         const pcSelectMenu = document.querySelectorAll(".map-info.pc-only .map-info-list .select-menu > li");
 
+        /* 11.11 수정 : 지역탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
+        const mapInfo = document.querySelector(".map-info.pc-only");
+        if (mapInfo.classList.contains("on")) {
+            mapInfo.classList.remove("on");
+        } /* 11.11 수정 : 지역탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
+
+        
         if (pcSelectBtn) {
             pcSelectBtn.innerText = selectedText;
             pcSelectBtn.classList.add("on");
