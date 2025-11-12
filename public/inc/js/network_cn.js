@@ -925,10 +925,9 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
             map.setView(center, zoom);
         }
 
-        // 11.12 추가 : 지역탭 선택 시, 해당 지역의 type만 Selectbox와 필터에 표시 - S
-
-        // 1. 현재 지역 데이터에서 존재하는 type 추출
-        const availableTypes = [...new Set(filtered.map((loc) => loc.type))];
+        // 11.12 추가 : 지역탭 선택 시, 해당 지역의 type만 Selectbox와 필터에 표시 - S        
+        const availableTypes = [...new Set(filtered.map((loc) => loc.type))]; // 현재 지역에 존재하는 type 추출
+        const isAllTab = tabId === "tab1"; // 전체 탭 체크용
 
         // 2. 언어별 type 매핑 정의
         const typeMapping = {
@@ -942,6 +941,11 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
 
         // 3. 유형 필터 버튼 표시/숨김
         document.querySelectorAll(".map-filter-list > li").forEach((li) => {
+            if (isAllTab) {
+                // 전체 탭일 때는 전부 표시
+                li.style.display = "block";
+                return;
+            }
             const className = li.className.replace("filter-type", "").trim();
             const typeText = activeTypeMap[className];
             if (availableTypes.includes(typeText)) {
@@ -956,6 +960,8 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
             const text = li.textContent.trim();
             // “전체”, “All” 등은 항상 보이게 처리
             if (["전체", "All", "全部", "Alle", "Wszystkie"].includes(text) || availableTypes.includes(text)) {
+                li.style.display = "block";
+            } else if (isAllTab) {
                 li.style.display = "block";
             } else {
                 li.style.display = "none";

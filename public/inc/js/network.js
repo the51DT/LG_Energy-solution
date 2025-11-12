@@ -995,9 +995,8 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
         updateInfoList(filtered);
 
         // 11.12 추가 : 지역탭 선택 시, 해당 지역의 type만 Selectbox와 필터에 표시 - S
-
-        // 현재 지역에 존재하는 type 추출
-        const availableTypes = [...new Set(filtered.map((loc) => loc.type))];
+        const availableTypes = [...new Set(filtered.map((loc) => loc.type))]; // 현재 지역에 존재하는 type 추출
+        const isAllTab = tabId === "tab1"; // 전체 탭 체크용
 
         // 언어별로 표시되는 타입 리스트 정의 (표준화)
         const typeMapping = {
@@ -1011,6 +1010,12 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
 
         // 유형 필터 버튼 표시/숨김 처리
         document.querySelectorAll(".map-filter-list > li").forEach((li) => {
+            if (isAllTab) {
+                // 전체 탭일 때는 전부 표시
+                li.style.display = "block";
+                return;
+            }
+
             const className = li.className.replace("filter-type", "").trim();
             const typeText = activeTypeMap[className];
 
@@ -1026,6 +1031,8 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
             const text = li.textContent.trim();
             if (text === "전체" || text === "All" || text === "全部" || text === "Alle" || text === "Wszystkie") {
                 li.style.display = "block"; // 전체 항목은 항상 표시
+            } else if (isAllTab) {
+                li.style.display = "block";
             } else if (availableTypes.includes(text)) {
                 li.style.display = "block";
             } else {
@@ -1190,13 +1197,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 2. 필터링
             let filtered = [];
-            if (selectedText === "전체" || selectedText === "All" || selectedText === "全部" || selectedText === "Alle" || selectedText === "Wszystkie") {
+            if (selectedText === "전체" || selectedText === "All" || selectedText === "全部" || selectedText === "Alle" || selectedText === "Wszystkie") {                
                 filtered = locations;
             } else {
                 filtered = locations.filter((loc) => loc.type === selectedText);
             }
-
-            if (targetContinent != "") filtered = filtered.filter((loc) => regionFilter.includes(loc.country));
 
             /* 11.12 수정 : selectbox 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
             const mapInfo = document.querySelector(".map-info.pc-only");
@@ -1220,6 +1225,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 $(".map-info-item").append('<li><a href="javascript:;">' + location.place + "</a></li>");
+                
                 const marker = new google.maps.Marker({
                     map: map,
                     position: new google.maps.LatLng(location.lat, location.lng),
