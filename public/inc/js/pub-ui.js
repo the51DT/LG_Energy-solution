@@ -27,6 +27,11 @@ var pubUi = {
         this.scrollWrapEvt();
         this.sideStickyEvt();
         this.selectboxCtrlEvt();
+
+        // 11.12 추가 : 사업장 스크롤 시 필터 위치 체크 관련 함수 - S
+        this.networkFilterMeasure();
+        this.networkFilterUpdate();
+        // 11.12 추가 : 사업장 스크롤 시 필터 위치 체크 관련 함수 - E
     },
 
     settings: function () {
@@ -72,6 +77,13 @@ var pubUi = {
 
         /* 내용 더보기 버튼 관련 변수 */
         this.self.moreBtn = document.querySelectorAll(".btn-more .txt-btn01");
+
+        /* 사업장 필터 관련 변수 : 11.12 추가 - S */
+        this.self.root = document.querySelector(".wrap.netw"); // 스크롤 주체
+        this.self.area = document.querySelector(".map-conts-area");
+        this.self.box = document.querySelector(".map-filter");
+        (this.self.areaTop = 0), (this.self.areaH = 0), (this.self.boxH = 0), (this.self.rootTop = 0), (this.self.boxTop = 0);
+        /* 사업장 필터 관련 변수 : 11.12 추가 - E */
     },
 
     bindEvents: function () {
@@ -87,7 +99,7 @@ var pubUi = {
         });
 
         // 내용더보기 버튼 이벤트 추가 - 제품 > 폼팩터 (11.05 추가)
-        this.self.moreBtn.forEach(btn => {
+        this.self.moreBtn.forEach((btn) => {
             btn.addEventListener("click", function (e) {
                 e.preventDefault();
                 const prodSolWrap = btn.closest(".prod-sol-wrap");
@@ -99,32 +111,31 @@ var pubUi = {
                     } else if (document.querySelector("html").getAttribute("lang") == "pl") {
                         btn.innerText = "Zwiń";
                     } else if (document.querySelector("html").getAttribute("lang") == "de") {
-                        btn.innerText = "Einklappen"; 
+                        btn.innerText = "Einklappen";
                     } else if (document.querySelector("html").getAttribute("lang") == "zh-CN") {
-                        btn.innerText = "收起"; 
+                        btn.innerText = "收起";
                     } else {
                         btn.innerText = "접기";
                     }
 
                     btn.classList.add("open");
-                    
                 } else {
                     if (document.querySelector("html").getAttribute("lang") == "en") {
                         btn.innerText = "Expand";
-                    } else if (document.querySelector("html").getAttribute("lang") == "pl") { 
+                    } else if (document.querySelector("html").getAttribute("lang") == "pl") {
                         btn.innerText = "Rozwiń";
-                    } else if (document.querySelector("html").getAttribute("lang") == "de") { 
-                        btn.innerText = "Ausklappen"; 
+                    } else if (document.querySelector("html").getAttribute("lang") == "de") {
+                        btn.innerText = "Ausklappen";
                     } else if (document.querySelector("html").getAttribute("lang") == "zh-CN") {
                         btn.innerText = "展开";
                     } else {
                         btn.innerText = "내용 더 보기";
                     }
-                    
+
                     btn.classList.remove("open");
                 }
             });
-        })                                     
+        });
 
         if (this.self.searchResult) {
             pubUi.searchTextDelEvt(this.self.searchResult);
@@ -156,7 +167,53 @@ var pubUi = {
                 this.self.mainCookieLayer.style.display = "none";
             });
         }
+
+        /* 11.12 수정 : 사업장 스크롤 이벤트 추가 : 스크롤시, 유형 필터 위치값 처리하기 위함 - S */
+        if (document.querySelector(".wrap.netw")) {
+            const rootEl = document.querySelector(".wrap.netw");
+            rootEl.addEventListener("scroll", () => requestAnimationFrame(() => pubUi.networkFilterUpdate()), { passive: true });
+
+            window.addEventListener("resize", () => {
+                pubUi.networkFilterMeasure();
+                pubUi.networkFilterUpdate();
+            });
+        }
+        /* 11.12 수정 : 사업장 스크롤 이벤트 추가 : 스크롤시, 유형 필터 위치값 처리하기 위함 - E */
     },
+    /* 11.12 추가 : 사업장 : 유형 필터 관련 함수 - S */
+    networkFilterUpdate: function () {
+        if (!pubUi.self.root || !pubUi.self.area || !pubUi.self.box) return;
+
+        const rel = pubUi.self.root.scrollTop - pubUi.self.areaTop;
+
+        if (pubUi.self.root.scrollTop + 195 > pubUi.self.areaTop && pubUi.self.root.scrollTop - pubUi.self.boxTop + 195 < 131) {
+            let y = pubUi.networkFilterClamp(rel, 0, Math.max(0, pubUi.self.areaH - pubUi.self.boxH)) + pubUi.self.root.scrollTop - pubUi.self.boxTop + 259;
+            pubUi.self.box.style.top = `${y + 64}px`;
+        } else if (pubUi.self.root.scrollTop + 131.2 > pubUi.self.areaTop && pubUi.self.root.scrollTop - pubUi.self.boxTop + 195 >= 131) {
+            let y = pubUi.networkFilterClamp(rel, 0, Math.max(0, pubUi.self.areaH - pubUi.self.boxH)) + 195;
+            pubUi.self.box.style.top = `${y + 64}px`;
+        } else {
+            const y = pubUi.networkFilterClamp(rel, 0, Math.max(0, pubUi.self.areaH - pubUi.self.boxH));
+            pubUi.self.box.style.top = `64px`;
+        }
+    },
+    networkFilterClamp: function (v, min, max) {
+        return Math.max(min, Math.min(max, v));
+    },
+    networkFilterMeasure: function () {
+        if (!pubUi.self.area || !pubUi.self.root || !pubUi.self.box) return;
+
+        const a = pubUi.self.area.getBoundingClientRect();
+        const r = pubUi.self.root.getBoundingClientRect();
+        const b = pubUi.self.box.getBoundingClientRect();
+
+        pubUi.self.areaTop = a.top - r.top + pubUi.self.root.scrollTop;
+        pubUi.self.rootTop = r.top;
+        pubUi.self.boxTop = b.top;
+        pubUi.self.areaH = pubUi.self.area.offsetHeight;
+        pubUi.self.boxH = pubUi.self.box.offsetHeight;
+    },
+    /* 11.12 추가 : 사업장 : 유형 필터 관련 함수 - E */
     evtPopEvt: function () {
         var evtPop = document.querySelectorAll(".modal-pop.evt");
         if (evtPop.length > 0) {
@@ -370,12 +427,12 @@ var pubUi = {
                 if (aside && !aside.dataset.bound) {
                     aside.addEventListener("click", () => {
                         scroller.scrollTo({ top: 0, behavior: "smooth" });
-                        if(document.querySelector(".wrap").classList.contains("main-page") && document.querySelector(".wrap").classList.contains("pc")){
+                        if (document.querySelector(".wrap").classList.contains("main-page") && document.querySelector(".wrap").classList.contains("pc")) {
                             lenis.scrollTo(0, {
-                                duration: 0.3,   // 1초 동안
-                                easing: (t) => t // 여기서 커스텀 easing 도 가능
+                                duration: 0.3, // 1초 동안
+                                easing: (t) => t, // 여기서 커스텀 easing 도 가능
                             });
-                        }else{
+                        } else {
                             scroller.scrollTo({ top: 0, behavior: "smooth" });
                         }
                         if (wrapEl) wrapEl.style.overflow = "auto";
@@ -403,11 +460,10 @@ var pubUi = {
                     // sideSticky 존재하는 케이스 active 문제로 메인과 분기처리하였음
                     if (document.querySelector(".wrap").classList.contains("main-page")) {
                         if (this.self.isMobile || this.self.mobileDevice) {
-                            var itemTop = topRelToScroller(item, scroller, viewportTop + 400 ) - guard;
-                        }else{
-                            var itemTop = topRelToScroller(item, scroller, viewportTop + 600 ) - guard;
+                            var itemTop = topRelToScroller(item, scroller, viewportTop + 400) - guard;
+                        } else {
+                            var itemTop = topRelToScroller(item, scroller, viewportTop + 600) - guard;
                         }
-                        
                     } else {
                         var itemTop = topRelToScroller(item, scroller, viewportTop) - guard;
                     }
@@ -1660,7 +1716,7 @@ var pubUi = {
 
                 popEl.querySelectorAll(".pop-s, .pop-e").forEach((el) => {
                     el.addEventListener("focus", () => popEl.querySelector(".pop-wrap").focus());
-                });               
+                });
 
                 if (popEl.classList.contains("tooltip")) {
                     pubUi.popUp.setTooltipPosition(popEl, btn);
@@ -1858,7 +1914,7 @@ var pubUi = {
                     pagination: {
                         el: ".mainPopBnrSwiper .swiper-pagination",
                         clickable: true,
-                        type: "fraction",                        
+                        type: "fraction",
                     },
                     navigation: {
                         nextEl: ".swiper-button-next",

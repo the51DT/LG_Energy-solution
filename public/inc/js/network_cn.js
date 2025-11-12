@@ -734,6 +734,12 @@ document.querySelectorAll(".map-filter-list > li").forEach((btn) => {
         const pcSelectBtn = document.querySelector(".map-info.pc-only .map-info-list .select-cate button");
         const pcSelectMenu = document.querySelectorAll(".map-info.pc-only .map-info-list .select-menu > li");
 
+        /* 11.12 수정 : 유형필터 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
+        const mapInfo = document.querySelector(".map-info.pc-only");
+        if (mapInfo.classList.contains("on")) {
+            mapInfo.classList.remove("on");
+        } /* 11.12 수정 : 유형필터 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
+
         if (pcSelectBtn) {
             console.log(selectedType);
             pcSelectBtn.innerText = selectedType;
@@ -817,13 +823,13 @@ document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
 
         const pcSelectMenu = document.querySelectorAll(".map-info.pc-only .map-info-list .select-menu > li");
 
-        /* 11.11 수정 : 지역탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
+        /* 11.12 수정 : selectbox 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
         const mapInfo = document.querySelector(".map-info.pc-only");
         if (mapInfo.classList.contains("on")) {
             mapInfo.classList.remove("on");
-        } /* 11.11 수정 : 지역탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
+        } /* 11.12 수정 : selectbox 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
 
-        
+
         if (pcSelectBtn) {
             pcSelectBtn.innerText = selectedText;
             pcSelectBtn.classList.add("on");
@@ -889,10 +895,12 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
         // 탭 클릭 시 Selectbox 텍스트를 “전체”로 초기화
         const pcSelectBtn = document.querySelector(".map-info.pc-only .map-info-list .select-cate button");
         const pcSelectMenu = document.querySelectorAll(".map-info.pc-only .map-info-list .select-menu > li");
+
+        /* 11.12 수정 : 대륙탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
         const mapInfo = document.querySelector(".map-info.pc-only");
         if (mapInfo.classList.contains("on")) {
             mapInfo.classList.remove("on");
-        }
+        } /* 11.12 수정 : 대륙탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
 
         if (pcSelectBtn) {
             pcSelectBtn.innerText = languageCode === "ZH" ? "全部" : "전체";
