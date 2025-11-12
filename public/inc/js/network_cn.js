@@ -924,6 +924,44 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
         } else {
             map.setView(center, zoom);
         }
+
+        // 11.12 추가 : 지역탭 선택 시, 해당 지역의 type만 Selectbox와 필터에 표시 - S
+
+        // 1. 현재 지역 데이터에서 존재하는 type 추출
+        const availableTypes = [...new Set(filtered.map((loc) => loc.type))];
+
+        // 2. 언어별 type 매핑 정의
+        const typeMapping = {
+            KO: { 1: "본사", 2: "R&D", 3: "생산", 4: "판매" },
+            EN: { 1: "Headquarter", 2: "R&D", 3: "Manufacturing", 4: "Marketing" },
+            ZH: { 1: "本社", 2: "R&D", 3: "生产", 4: "销售" },
+            PL: { 1: "Siedziba główna", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż" },
+            DE: { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb" },
+        };
+        const activeTypeMap = typeMapping[languageCode] || typeMapping["KO"];
+
+        // 3. 유형 필터 버튼 표시/숨김
+        document.querySelectorAll(".map-filter-list > li").forEach((li) => {
+            const className = li.className.replace("filter-type", "").trim();
+            const typeText = activeTypeMap[className];
+            if (availableTypes.includes(typeText)) {
+                li.style.display = "block";
+            } else {
+                li.style.display = "none";
+            }
+        });
+
+        // 4. Selectbox 메뉴 표시/숨김
+        document.querySelectorAll(".map-info .select-menu > li").forEach((li) => {
+            const text = li.textContent.trim();
+            // “전체”, “All” 등은 항상 보이게 처리
+            if (["전체", "All", "全部", "Alle", "Wszystkie"].includes(text) || availableTypes.includes(text)) {
+                li.style.display = "block";
+            } else {
+                li.style.display = "none";
+            }
+        });
+        // 11.12 추가 : 지역탭 선택 시, 해당 지역의 type만 Selectbox와 필터에 표시 - E
     });
 });
 
