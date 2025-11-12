@@ -1666,7 +1666,7 @@
 .map-conts-area .map-info-box .map-img {width: calc(100% - 200px);}
 
 
-.map-filter {position:absolute; left:2rem; top: 4rem; z-index:10;width:fit-content}
+.map-filter {position:absolute; left:2rem; top: 4rem; z-index:10;width:fit-content;will-change: transform;}
 .map-filter .map-filter-list {display: flex; text-align:left; flex-direction: row; gap: 0.625rem; align-items: center;}
 .map-filter .map-filter-list > li {display:flex; align-items:center; justify-content: space-between;}
 
