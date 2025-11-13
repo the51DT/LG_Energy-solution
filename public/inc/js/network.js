@@ -1197,10 +1197,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 2. 필터링
             let filtered = [];
-            if (selectedText === "전체" || selectedText === "All" || selectedText === "全部" || selectedText === "Alle" || selectedText === "Wszystkie") {                
-                filtered = locations;
+
+            // 현재 활성화된 지역 탭 확인
+            const activeTab = document.querySelector(".netw .tab-category .tab.on");
+            let activeRegionFilter = [];
+            if (activeTab) {
+                const tabId = activeTab.id;
+                switch (tabId) {
+                    case "tab2": // 한국
+                        activeRegionFilter = ["서울", "과천", "청주", "서초", "대전", "Seoul", "Korea"];
+                        break;
+                    case "tab3": // 아시아 오세아니아
+                        activeRegionFilter = ["중국", "일본", "대만", "인도", "인도네시아", "호주", "China", "Japan", "Taiwan", "India", "Indonesia", "Hongkong", "Australia", "Thailand"];
+                        break;
+                    case "tab4": // 아메리카
+                        activeRegionFilter = ["미국", "USA", "Mexico", "Canada"];
+                        break;
+                    case "tab5": // 유럽
+                        activeRegionFilter = ["독일", "폴란드", "Germany", "Poland", "France"];
+                        break;
+                    default: // 전체 탭
+                        activeRegionFilter = [];
+                }
+            }
+
+            // ✅ 전체선택 시: 해당 지역(탭)에 해당하는 전체만 노출
+            if (["전체", "All", "全部", "Alle", "Wszystkie"].includes(selectedText)) {
+                if (activeRegionFilter.length > 0) {
+                    filtered = locations.filter((loc) => activeRegionFilter.includes(loc.country));
+                } else {
+                    filtered = locations; // 전체 탭은 전부 노출
+                }
             } else {
-                filtered = locations.filter((loc) => loc.type === selectedText);
+                // ✅ 특정 유형 선택 시: 해당 지역 + 선택된 유형만 노출
+                if (activeRegionFilter.length > 0) {
+                    filtered = locations.filter((loc) => activeRegionFilter.includes(loc.country) && loc.type === selectedText);
+                } else {
+                    filtered = locations.filter((loc) => loc.type === selectedText);
+                }
             }
 
             /* 11.12 수정 : selectbox 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */

@@ -757,7 +757,7 @@ document.querySelectorAll(".map-filter-list > li").forEach((btn) => {
         renderMarkers(filtered);
         updateInfoList(filtered);
         bindEvents();
-        defaultMapSizeChk();
+        defaultMapSizeChk();        
 
         // 지도 자동 이동 (해당 지역 기준)
         if (regionFilter.length > 0) {
