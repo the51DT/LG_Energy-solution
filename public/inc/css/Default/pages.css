@@ -1048,7 +1048,7 @@
 .industry-box .box-link .more {display: flex; justify-content: flex-end; gap: 0.25rem; font-size: 0.875rem; font-weight: 500; line-height: 1.225rem;}
 .industry-box .box-link .more::after {content: ""; display: block; width: 1.25rem; height: 1.25rem; background-image: url(../../images/icon/icon_arrow_right_bl2.svg); background-position: center; background-size: cover;}
 .industry-box .box-link:only-child {width: 100%;}
-.industry-box .box-link:hover {border-color: #33B0C6;}
+.industry-box a.box-link:hover {border-color: #33B0C6;}
 .industry-material {display: flex; justify-content: space-between; align-items: center;}
 .industry-material > p {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
 .industry-material [class^="icon-btn"] {justify-content: flex-start; width: 32.9375rem; min-width: unset; height: auto; padding: 1.25rem; background-color: var(--colorElement-light-fill-fill-default02); font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-on-primary);}
