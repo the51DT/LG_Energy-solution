@@ -914,6 +914,7 @@
 .pfom .tab-content-box .tab-content .content-sect .tab-cate-wrap.type2 {margin-top: 1.5rem; margin-inline: -1.25rem; width: calc(100vw - var(--scrollbar-width));}
 .pfom .title-desc {font-size: 1.125rem; line-height: 1.75rem;}
 .pfom .title-h2 + .title-desc {margin-top: 1rem;}
+.pfom .content-sect .title-h2 {font-size: 1.5rem; line-height: 2.0625rem;}
 .pfom .prod-visual-wrap {gap: 2rem; padding-top: 1rem;}
 .pfom #tab2-2-content .prod-visual-wrap {padding-top: 0rem;}
 .pfom .prod-visual {margin-right: -1.25rem; text-align: center;}
@@ -1054,6 +1055,8 @@
 .pfom .btn-wrap {flex-direction: column; align-items: center; gap: 1rem;}
 
 .pfom [class^="content-item"] .content-sect:has(.tab-cate-wrap.type2 .tab-category li:nth-child(3)) {padding-top: 1rem;}
+.pfom [class^="content-item"] .content-sect:has(.tab-cate-wrap.type2 .tab-category li:nth-child(3)) .tab-cate-wrap {margin-top: 0;}
+.pfom [class^="content-item"] .content-sect:has(.tab-cate-wrap.type2 .tab-category li:nth-child(3)) .tab-wrap .tab-cate-wrap {margin-top: 1.5rem;}
 .pfom .tab-cate-wrap.type2 {margin-top: 2rem;}
 .pfom .tab-cate-wrap.type2::after {content: none;}
 .pfom .tab-cate-wrap.type2 .tab-category {gap: 0.5rem; padding-inline: 1.25rem; width: 100%;}
@@ -1209,8 +1212,8 @@
 .article-mtrl-wrap .box-cont-wrap .img-wrap {width: 7rem; height: 7rem;}
 .article-mtrl-wrap .list-item-wrap {background: #fff; padding: 1.5rem; border-radius: 0.5rem;}
 .article-mtrl-wrap .list-item-wrap .list-item {display: grid; gap: 1.25rem; grid-template-columns: 1fr 1fr;}
-.article-mtrl-wrap .list-item-wrap .list-item > li {display:block; padding: 0 0.44rem;}
-.article-mtrl-wrap .list-item-wrap .list-item > li > p {font-size: 1rem; line-height: 1.6rem; text-align: center; margin-top: 1rem;}
+.article-mtrl-wrap .list-item-wrap .list-item > li {gap: 1rem;}
+.article-mtrl-wrap .list-item-wrap .list-item > li > p {font-size: 1rem; line-height: 1.6rem; text-align: center;}
 
 .mat-cont-wrap .box-wrap {display:flex; padding: 1.5rem 1.25rem; border-radius: 0.5rem; flex-direction: column; gap: 1.5rem;}
 .mat-cont-wrap .box-wrap .box-col {padding:1rem 1.25rem; border-radius: 0.5rem; background-color:#F3F5F7;}

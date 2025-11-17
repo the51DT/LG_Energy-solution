@@ -1221,7 +1221,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            // ✅ 전체선택 시: 해당 지역(탭)에 해당하는 전체만 노출
+            // 전체선택 시: 해당 지역(탭)에 해당하는 전체만 노출
             if (["전체", "All", "全部", "Alle", "Wszystkie"].includes(selectedText)) {
                 if (activeRegionFilter.length > 0) {
                     filtered = locations.filter((loc) => activeRegionFilter.includes(loc.country));
@@ -1229,7 +1229,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     filtered = locations; // 전체 탭은 전부 노출
                 }
             } else {
-                // ✅ 특정 유형 선택 시: 해당 지역 + 선택된 유형만 노출
+                // 특정 유형 선택 시: 해당 지역 + 선택된 유형만 노출
                 if (activeRegionFilter.length > 0) {
                     filtered = locations.filter((loc) => activeRegionFilter.includes(loc.country) && loc.type === selectedText);
                 } else {
