@@ -1192,7 +1192,7 @@
 .pfom .prod-sol-wrap .prod-sol-text > img {width: auto; height: auto; align-self: flex-start;}
 .pfom .prod-sol-wrap .prod-sol-text > img.verti {width: 9.9375rem;}
 .pfom .prod-sol-wrap .prod-sol-text > img.horiz {width: 15.5rem;}
-.pfom .prod-sol-wrap .prod-sol-text > div {display: flex; flex-direction: column; justify-content:center; gap: 1.25rem; width: 100%;}
+.pfom .prod-sol-wrap .prod-sol-text > div {display: flex; flex-direction: column; justify-content:center; gap: 2.5rem; width: 100%;}
 .pfom .prod-sol-wrap .prod-sol-text .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .pfom .prod-sol-wrap .prod-sol-text .desc > .desc {margin-top: 0.62rem;}
 .pfom .prod-sol-wrap .prod-sol-text .desc > span {color: var(--colorElement-light-text-text-primary);}
