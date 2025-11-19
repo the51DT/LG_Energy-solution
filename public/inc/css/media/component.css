@@ -124,6 +124,8 @@
 .cont-list li > strong {min-width: 4.75rem;}
 .cont-list li .noti-desc {padding-left: 1.12rem; font-size: 0.875rem; line-height: 1.4rem; font-weight: 400;}
 .cont-list li .noti-desc::before {left: 0; top: 0; transform: revert;}
+.text-list-wrap ol.text-list.ty04 li{padding:0; display: flex;justify-content: flex-start;gap:0.5rem;}
+.text-list-wrap ol.text-list.ty04 li span{flex:0 0 1.25rem;color: var(--text-text-primary, #33B0C6);font-size: var(--size-mobile-B2, 0.875rem);font-weight: 600;line-height: var(--line-height-mobile-B2, 1.3125rem); /* 150% */letter-spacing: var(--letter-spacing-default, 0);}
 
 /* content */
 .cont-area-wrap .cont-area-sect > section:first-child {padding-top: 1.5rem;}

@@ -673,6 +673,9 @@ table {border-collapse: collapse;}
 .text-list-wrap ul.text-list.ty03 > li {padding-left: 1.3rem;}
 .text-list-wrap ul.text-list.ty03 > li *{text-indent: 0;}
 .text-list-wrap ul.text-list.ty03 > li::before {display:none;}
+.text-list-wrap ol.text-list.ty04 li{padding:0; display: flex;justify-content: flex-start;gap:0.75rem;}
+.text-list-wrap ol.text-list.ty04 li span{flex:0 0 1.625rem;;color: var(--text-text-primary, #33B0C6);font-size: var(--size-desktop-H4, 1.25rem);font-weight: 600;line-height: var(--line-height-desktop-H4, 2rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
+
 .table-notice-area .text-list-wrap .text-list > li {font-size: 1rem; line-height: 1.6rem; font-weight: 400; color: var(--colorElement-light-text-text-default02);}
 
 .cont-list li {display: flex; gap: 1.25rem; font-size: 1.25rem; line-height: 1.875rem; color: var(--colorElement-light-text-text-default02);}
