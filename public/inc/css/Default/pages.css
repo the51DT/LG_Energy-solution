@@ -22,8 +22,8 @@
 .content-box.type2 {gap: 5rem;}
 .content-box:not(:first-child) {margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid #d9d9d9;}
 .content-box .text-area .sub {font-size: 1.125rem; font-weight: 600; color: #33B0C6; line-height: 1.8rem;}
-.content-box .text-area .tit {font-size: 2rem; font-weight: 400; color:var(--colorElement-light-text-text-default01); line-height: 2rem; padding-top: 1.25rem;}
-.content-box .text-area .tit .subtit {font-size: 1.25rem; font-weight: 400; display: inline-block; line-height: 2rem; color: #171819;}
+.content-box .text-area .tit {font-size: 2rem; font-weight: 400; color:var(--colorElement-light-text-text-default01); line-height: 3rem; padding-top: 1.25rem;}
+.content-box .text-area .tit .subtit {font-size: 1.25rem; font-weight: 400;line-height: 2rem; color: #171819; display: block;}
 .content-box .text-area .desc {font-size: 1rem; font-weight: 400; color: var(--colorElement-light-text-text-default02); line-height: 1.6rem; padding-top: 1.25rem;}
 .content-box .text-area .intro-txt {font-size: 1.75rem; font-weight: 400; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
 .content-box .text-area .intro-sub {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01); margin-top: 2rem;}
@@ -1222,7 +1222,7 @@
 .bg-navy .prod-sol-wrap .btn-more .txt-btn01 {color: #fff;}
 .bg-navy .btn-more .txt-btn01:after {background-image:url(../../images/icon/ico_btn_more.svg);}
 .prod-sol-wrap .btn-more .txt-btn01.open:after {transform: translateY(-50%) rotate(-180deg);}
-.prod-sol-wrap .table-wrap .btn-more {margin-top: 2.5rem;}
+.prod-sol-wrap .table-wrap + .btn-more {margin-top: 2.5rem;}
 .pfom #tab2-3-content .content-item02 {padding-top: 0;}
 
 .pfom:lang(en) .prod-features > li {padding-inline: 2rem;}
@@ -1465,9 +1465,14 @@
 .sgov:lang(en) .gov-profile .profile-col .profile-text .tit {flex-direction: column; align-items: flex-start; gap: 0;}
 .sgov:lang(en) .gov-profile .profile-col .profile-text .position {white-space: nowrap;}
 .sgov:lang(en) .bod-gap [class^="icon-btn"] {min-width: 22.5rem; width: fit-content; gap: 1.25rem; min-height: 3.75rem; height: auto;}
+/* 11.18 수정 : 역할 관련 css 추가 */
+.sgov .role-box-wrap {padding-top: 3.75rem;}
+.sgov .role-box-wrap .role-box-content {background: #f3f5f7; border-radius: 1rem; padding: 1.88rem 3.75rem; margin-top: 1.25rem;}
+.sgov .role-box-wrap .role-box-content .role-box-list {display: flex; flex-direction: column; gap: 1.88rem;}
+.sgov .role-box-wrap .role-box-content .role-box-list li .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
+.sgov .role-box-wrap .role-box-content .role-box-list li .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; padding-top: 0.5rem; color:#555758;}
 
-.sgov .role-box-wrap {padding-top: 1.875rem;}
-.sgov .role-box-wrap .text-list-wrap {margin-top: 1.25rem;}
+
 /* 11.18 수정 : 공정거래 관련 css 추가 */
 .growth-gap .content-sect {padding-top: 5rem;}
 .growth-gap .article-section section {padding-top: 5rem; padding-bottom: 0;}
@@ -2394,12 +2399,15 @@
 
 
 /* 인재상 */
-.rctt .core-cont-wrap { display: flex; justify-content: space-between; gap: 1.25rem; margin-bottom: 7.5rem; }
-.rctt .core-cont-wrap .core-cont { display: flex; flex-direction: column; align-items: center; gap: 4.0625rem; border: 4px solid #E1E7EA; padding: 2rem 2rem 1.5rem 2rem; border-radius: 1rem; flex: 1; }
-.rctt .core-cont-wrap .core-cont > span { color: #171819; font-size: 1.5rem; font-weight: 600; line-height: 2.375rem; display: flex; gap: 0.5rem; align-items: center;}
-.rctt .core-cont-wrap .core-cont > span > span { color: #33B0C6; font-size: 1.25rem; line-height: 2rem;}
-.rctt .core-cont-wrap .core-cont > img { width: 8.125rem; }
-.rctt .core-cont-wrap .core-cont > p { color: #555758; text-align: center; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; white-space: nowrap;}
+/* 11.19 수정 : 인재상 레이아웃 변경으로 인한 css 수정 - S */
+.rctt .core-cont-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; padding-bottom: 7.5rem;}
+.rctt .core-cont-wrap .core-cont {border-radius: 1rem; border: 4px solid #e1e7ea; background-color:#fff; padding: 3rem 4rem; max-width: 44rem; display: flex; gap: 2.5rem; justify-content: space-between; align-items: center;}
+.rctt .core-cont-wrap .core-cont .txt-box span { color: #171819; font-size: 1.5rem; font-weight: 600; line-height: 2.375rem; display: flex; gap: 0.5rem; align-items: center;}
+.rctt .core-cont-wrap .core-cont .txt-box span > span { color: #33B0C6; font-size: 1.25rem; line-height: 2rem;}
+.rctt .core-cont-wrap .core-cont .img-box { width: 8.125rem; height: 8.125rem;}
+.rctt .core-cont-wrap .core-cont .img-box img {width: 100%; height: 100%; object-fit: cover;}
+.rctt .core-cont-wrap .core-cont .txt-box p { color: #555758; text-align: left; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; white-space: nowrap; margin-top: 1.25rem;}
+/* 11.19 수정 : 인재상 레이아웃 변경으로 인한 css 수정 - E */
 .rctt .core-link-wrap { display: flex; background-image: url(../../images/img/rctt_bg.png); background-size: cover; background-position: center; height: 8.75rem; border-radius: 1rem; align-items: center; justify-content: space-between; padding: 3.0625rem 7.5rem 3.0625rem 3.75rem; color: #fff; margin-bottom: 5rem; }
 .rctt .core-link-wrap > p { font-size: 1.75rem; font-weight: 400; }
 .rctt .core-link-wrap > p > strong { font-weight: 600; }
@@ -2410,8 +2418,6 @@
 .rctt .btn-wrap [class^="icon-btn"][class*="-sm"] { font-size: 1.375rem; padding: 1.25rem 2.5rem; }
 .rctt .btn-wrap [class^="icon-btn"][class*="-sm"] .icon-area { width: 3rem; height: 3rem; }
 .rctt .btn-wrap [class^="icon-btn"][class*="-sm"] .icon-area::before { width: 1.75rem; height: 1.75rem; }
-.rctt:lang(en) .core-cont-wrap .core-cont {gap: 2.5rem; height: 29.6875rem;}
-.rctt:lang(en) .core-cont-wrap .core-cont > p {flex-grow: 1;}
 .rctt .content-wrap .intro-desc.ty-light {font-size: 1.5rem; line-height: 2.25rem; padding-top: 2.5rem; font-weight: 400;}
 .rctt .content-wrap .intro-desc.ty-light strong {font-weight: 600;}
 /* 인사원칙 */
