@@ -76,7 +76,7 @@ var pubUi = {
         this.self.mapInfoSort = document.querySelectorAll(".map-info-content-box .info-content-head .sort");
 
         /* 내용 더보기 버튼 관련 변수 */
-        this.self.moreBtn = document.querySelectorAll(".btn-more .txt-btn01");
+        this.self.moreBtn = document.querySelectorAll(".btn-more > a");
 
         /* 사업장 필터 관련 변수 : 11.12 추가 - S */
         this.self.root = document.querySelector(".wrap.netw"); // 스크롤 주체
@@ -98,41 +98,57 @@ var pubUi = {
             });
         });
 
-        // 내용더보기 버튼 이벤트 추가 - 제품 > 폼팩터 (11.05 추가)
+        // 내용더보기 버튼 이벤트 추가 - 제품 > 폼팩터 (11.05 추가 + table 확장 11.17)
         this.self.moreBtn.forEach((btn) => {
             btn.addEventListener("click", function (e) {
                 e.preventDefault();
+                
                 const prodSolWrap = btn.closest(".prod-sol-wrap");
+                const lang = document.documentElement.getAttribute("lang");
                 prodSolWrap.classList.toggle("on");
 
-                if (prodSolWrap.classList.contains("on")) {
-                    if (document.querySelector("html").getAttribute("lang") == "en") {
-                        btn.innerText = "Collapse";
-                    } else if (document.querySelector("html").getAttribute("lang") == "pl") {
-                        btn.innerText = "Zwiń";
-                    } else if (document.querySelector("html").getAttribute("lang") == "de") {
-                        btn.innerText = "Einklappen";
-                    } else if (document.querySelector("html").getAttribute("lang") == "zh-CN") {
-                        btn.innerText = "收起";
-                    } else {
-                        btn.innerText = "접기";
-                    }
+                const isOpen = prodSolWrap.classList.contains("on");
+
+                // -----------------------------
+                // ▼ 기존 언어별 버튼 처리 로직
+                // -----------------------------
+                if (isOpen) {
+                    if (lang == "en") btn.innerText = "Collapse";
+                    else if (lang == "pl") btn.innerText = "Zwiń";
+                    else if (lang == "de") btn.innerText = "Einklappen";
+                    else if (lang == "zh-CN") btn.innerText = "收起";
+                    else btn.innerText = "접기";
 
                     btn.classList.add("open");
                 } else {
-                    if (document.querySelector("html").getAttribute("lang") == "en") {
-                        btn.innerText = "Expand";
-                    } else if (document.querySelector("html").getAttribute("lang") == "pl") {
-                        btn.innerText = "Rozwiń";
-                    } else if (document.querySelector("html").getAttribute("lang") == "de") {
-                        btn.innerText = "Ausklappen";
-                    } else if (document.querySelector("html").getAttribute("lang") == "zh-CN") {
-                        btn.innerText = "展开";
-                    } else {
-                        btn.innerText = "내용 더 보기";
-                    }
+                    if (lang == "en") btn.innerText = "Expand";
+                    else if (lang == "pl") btn.innerText = "Rozwiń";
+                    else if (lang == "de") btn.innerText = "Ausklappen";
+                    else if (lang == "zh-CN") btn.innerText = "展开";
+                    else btn.innerText = "내용 더 보기";
 
                     btn.classList.remove("open");
+                }
+
+                // ---------------------------------
+                // ▼ table-wrap 내부 tbody 열기/닫기
+                // ---------------------------------
+                const tableWrap = prodSolWrap.querySelector(".table-wrap");
+
+                if (tableWrap) {
+                    const tbodys = tableWrap.querySelectorAll("tbody");
+
+                    tbodys.forEach((tbody, idx) => {
+                        if (isOpen) {
+                            tbody.classList.remove("none");   // 펼쳐짐 → tbody 전체활성화
+                        } else {
+                            if(idx === 0) {
+                                tbody.classList.remove("none"); //처음 tbody만 활성화
+                            } else {
+                                tbody.classList.add("none"); // 나머지 tbody 비활성화
+                            }
+                        }
+                    });
                 }
             });
         });

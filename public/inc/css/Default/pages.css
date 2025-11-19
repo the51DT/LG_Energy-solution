@@ -22,7 +22,8 @@
 .content-box.type2 {gap: 5rem;}
 .content-box:not(:first-child) {margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid #d9d9d9;}
 .content-box .text-area .sub {font-size: 1.125rem; font-weight: 600; color: #33B0C6; line-height: 1.8rem;}
-.content-box .text-area .tit {font-size: 2rem; font-weight: 400; color:var(--colorElement-light-text-text-default01); line-height: 3rem; padding-top: 1.25rem;}
+.content-box .text-area .tit {font-size: 2rem; font-weight: 400; color:var(--colorElement-light-text-text-default01); line-height: 2rem; padding-top: 1.25rem;}
+.content-box .text-area .tit .subtit {font-size: 1.25rem; font-weight: 400; display: inline-block; line-height: 2rem; color: #171819;}
 .content-box .text-area .desc {font-size: 1rem; font-weight: 400; color: var(--colorElement-light-text-text-default02); line-height: 1.6rem; padding-top: 1.25rem;}
 .content-box .text-area .intro-txt {font-size: 1.75rem; font-weight: 400; line-height: 2.625rem; color: var(--colorElement-light-text-text-default01);}
 .content-box .text-area .intro-sub {font-size: 1.25rem; font-weight: 600; line-height: 1.875rem; color: var(--colorElement-light-text-text-default01); margin-top: 2rem;}
@@ -340,11 +341,13 @@
 .sust-soc .content-item02 .accordion-list .accordion-content {background: #f3f5f7; padding: 2.5rem; }
 .sust-soc .content-item02 .accordion-list .accordion-content .desc-wrap {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #171819;}
 
-
+.sust-soc #tab2-content .content-item01 {padding-bottom: 5rem;}
 .sust-soc .content-item02 .sect-cont-main.nbdr > p.title-h2 {margin: 0;}
-.sust-soc:lang(en) .content-item04 .sect-cont-report .btn-wrap {padding-top: 5.62rem !important;}
-.sust-soc:lang(en) .content-item04 .sect-cont-report .btn-wrap > a {font-size: 1.375rem; color: #171819 !important; font-weight: 600; padding: 1.25rem 2.5rem; height: 5.5rem; border-radius: 0.5rem; max-width: 26.25rem !important;}
+/* .sust-soc:lang(en) .content-item04 .sect-cont-report .btn-wrap {padding-top: 5.62rem !important;} */
+/* .sust-soc:lang(en) .content-item04 .sect-cont-report .btn-wrap > a {font-size: 1.375rem; color: #171819 !important; font-weight: 600; padding: 1.25rem 2.5rem; height: 5.5rem; border-radius: 0.5rem; max-width: 26.25rem !important;} */
 .sect-cont-area > .article-content {padding-top: 3.75rem;}
+.btn-second-box {padding-top: 1.88rem;}
+.btn-second-box .btn-wrap {margin-top: 0;}
 
 .esgm .title-h3 { font-size: 2rem; font-weight: 700; color: #171819; margin-top: 1.25rem; }
 .esgm .sub-title { font-size: 1.5rem; font-weight: 600; color: #171819; }
@@ -641,6 +644,10 @@
 .sust-soc .infosec-activity .desc {font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; color: #555758;}
 .sust-soc .infosec-activity.ty02 {margin-top: 2.5rem; display: flex; gap: 1.25rem;}
 .sust-soc .infosec-activity.ty02  > li {background-color: var(--colorElement-light-fill-fill-on-primary); text-align: left;}
+.sust-soc .infosec-subbox {padding-top: 3.75rem;}
+.sust-soc .infosec-subbox .title-h2 {font-size: 1.25rem; line-height: 2rem; color: #171819; font-weight: 600; }
+.sust-soc .infosec-subbox .content-sect:has(.infosec-activity) {padding-top: 1.25rem;}
+.sust-soc .infosec-subbox .infosec-activity > li {background-color: #fff;}
 
 .sust-soc:lang(en) #tab3-content .content-item01 .btn-wrap > a {width: 32.5rem;}
 .sust-soc:lang(en) .csr-acts > img {display: block; max-width: 52.5rem; margin-inline: auto;}
@@ -1210,10 +1217,12 @@
 .pfom .prod-sol-wrap .prod-sol-box .item-list > ul > li .title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819; text-align: center; justify-content: space-between;}
 .pfom .prod-sol-wrap .prod-sol-box .item-list > ul > li .desc {flex-grow: 1; font-size: 1rem; line-height: 1.6rem; font-weight: 400; color: #171819;}
 
+/* 11.17 수정사항 : 더보기 버튼 디자인 변경 (제품>폼팩터, 지배구조>이사회) */
 .prod-sol-wrap .btn-more {margin-top: 0.5rem;}
-.prod-sol-wrap .btn-more .txt-btn01 {color: #fff;}
+.bg-navy .prod-sol-wrap .btn-more .txt-btn01 {color: #fff;}
+.bg-navy .btn-more .txt-btn01:after {background-image:url(../../images/icon/ico_btn_more.svg);}
 .prod-sol-wrap .btn-more .txt-btn01.open:after {transform: translateY(-50%) rotate(-180deg);}
-
+.prod-sol-wrap .table-wrap .btn-more {margin-top: 2.5rem;}
 .pfom #tab2-3-content .content-item02 {padding-top: 0;}
 
 .pfom:lang(en) .prod-features > li {padding-inline: 2rem;}
@@ -1398,9 +1407,11 @@
 .sgov .bod-comp .text-list-wrap .text-list > li::before {top: 0.69rem; transform: unset;}
 .sgov .bod-comp .chr {display: inline-block; width: 1.25rem; height: 1.25rem; border-radius: 100%; background-color: var(--colorElement-light-icon-icon-default01); vertical-align: middle;}
 .sgov .bod-comp .mem {display: inline-block; width: 1.25rem; height: 1.25rem; border-radius: 100%; border: 1px solid var(--colorElement-light-stroke-stroke-default01); vertical-align: middle;}
-.sgov .indep-dir .title-h2.emphasis::after {margin-left: 0.25rem;}
+.sgov .indep-dir-wrap {margin-top: 3.75rem;}
+.sgov .indep-dir-wrap .emphasis {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
+.sgov .indep-dir-wrap .emphasis::after {margin-left: 0.25rem;}
 .sgov .indep-dir .indep-dir-img {margin-top: 1.25rem;}
-.sgov .indep-dir .btn-wrap {margin-top: 2.5rem; flex-wrap: wrap;}
+.sgov .indep-dir .btn-wrap {margin-top: 3.75rem; flex-wrap: wrap;}
 .sgov .indep-dir .btn-wrap [class^="icon-btn"] {gap: 1.25rem; min-width: 22.5rem;}
 
 .sgov .comp-officer [class^="title-h"] { margin-bottom: 1.25rem;}
@@ -1455,6 +1466,14 @@
 .sgov:lang(en) .gov-profile .profile-col .profile-text .position {white-space: nowrap;}
 .sgov:lang(en) .bod-gap [class^="icon-btn"] {min-width: 22.5rem; width: fit-content; gap: 1.25rem; min-height: 3.75rem; height: auto;}
 
+.sgov .role-box-wrap {padding-top: 1.875rem;}
+.sgov .role-box-wrap .text-list-wrap {margin-top: 1.25rem;}
+/* 11.18 수정 : 공정거래 관련 css 추가 */
+.growth-gap .content-sect {padding-top: 5rem;}
+.growth-gap .article-section section {padding-top: 5rem; padding-bottom: 0;}
+.growth-gap .comp-officer ol {display: grid; grid-template-columns: repeat(4, 1fr);}
+.growth-gap .comp-officer > ol > li {flex-direction: row; background-color: #F3F5F7;}
+.msg-box-wrap {background-color: #fff; border-radius: 1rem; padding: 3.125rem 3.75rem; font-size: 1.25rem; font-weight: 400; line-height: 2rem; margin-top: 1.88rem;}
 /* 정도경영 (etmg) */
 .etmg [class^="content-item"]:not(:first-child) .content-sect {padding-top: 1.88rem;}
 .etmg [class^="content-item02"]:not(:first-child) .content-sect {padding-top: 0;}
@@ -2393,6 +2412,8 @@
 .rctt .btn-wrap [class^="icon-btn"][class*="-sm"] .icon-area::before { width: 1.75rem; height: 1.75rem; }
 .rctt:lang(en) .core-cont-wrap .core-cont {gap: 2.5rem; height: 29.6875rem;}
 .rctt:lang(en) .core-cont-wrap .core-cont > p {flex-grow: 1;}
+.rctt .content-wrap .intro-desc.ty-light {font-size: 1.5rem; line-height: 2.25rem; padding-top: 2.5rem; font-weight: 400;}
+.rctt .content-wrap .intro-desc.ty-light strong {font-weight: 600;}
 /* 인사원칙 */
 .rchr.wrap .content-header {padding: 7.5rem 0 3.75rem;}
 .rchr .subp-tit-area > p { color: #171819; font-size: 1.25rem; font-weight: 400; margin-top: 1.25rem; }
