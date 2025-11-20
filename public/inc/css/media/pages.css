@@ -2062,6 +2062,7 @@
 .serv-blifecare .content-item03::before {display: none;}
 .serv-blifecare .content-item03 {background-color: #374656;}
 .serv-blifecare .article-tit-wrap {flex-direction: column; gap: 2rem; padding-left: 0;}
+.serv-blifecare .content-item03 .article-tit-wrap {padding:0}
 .serv-blifecare .article-tit-wrap .tit-desc {align-items: flex-start; gap: 0.5rem;}
 .serv-blifecare .article-tit-wrap .tit-desc .top-txt {font-size: 1.125rem; line-height: 1.75rem;}
 .serv-blifecare .article-tit-wrap .tit-desc .btm-txt {font-size: .875rem; line-height: 1.3125rem;}

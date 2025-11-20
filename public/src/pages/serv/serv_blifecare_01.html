@@ -600,10 +600,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="article-content">
-                                                    <div class="rolling-banner">
-                                                        <div class="banner-track">
-                                                            <!-- 09.11 / 리뷰 영역 수정 [s] -->
-                                                            <div class="banner-item">
+                                                    <!-- 11.20 : 레이아웃 변경 -->
+                                                    <div class="rolling-banner swiper">
+                                                        <div class="banner-track swiper-wrapper">
+                                                            <div class="banner-item swiper-slide">
                                                                 <div class="review-box review-box01">
                                                                     <p class="review-txt">
                                                                         전기차 배터리 관리가 막막했는데, B-Lifecare를 사용하고 
@@ -616,7 +616,7 @@
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                            <div class="banner-item">
+                                                            <div class="banner-item swiper-slide">
                                                                 <div class="review-box review-box02">
                                                                     <p class="review-txt">
                                                                         B-Lifecare 아주 잘 쓰고 있습니다. 차량 배터리 상태를 
@@ -625,7 +625,7 @@
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                            <div class="banner-item">
+                                                            <div class="banner-item swiper-slide">
                                                                 <div class="review-box review-box03">
                                                                     <p class="review-txt">
                                                                         하루 운행 거리가 긴 전기택시 운행하는 입장에서, 
@@ -634,7 +634,7 @@
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                            <div class="banner-item">
+                                                            <div class="banner-item swiper-slide">
                                                                 <div class="review-box review-box01">
                                                                     <p class="review-txt">
                                                                         첫 전기차를 구입한 이후 배터리 관리가 어려웠는데 
@@ -644,7 +644,7 @@
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                            <div class="banner-item">
+                                                            <div class="banner-item swiper-slide">
                                                                 <div class="review-box review-box02">
                                                                     <p class="review-txt">
                                                                         전기차는 배터리 관리가 핵심인데, 배터리 관리를 B-Lifecare 다 해줍니다. 충전 스타일 분석, 배터리 관리 점수, 주행 효율 등 다양한 정보를 제공해 주어 배터리를 오래 사용할 수 
@@ -653,7 +653,7 @@
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                            <div class="banner-item">
+                                                            <div class="banner-item swiper-slide">
                                                                 <div class="review-box review-box03">
                                                                     <p class="review-txt">
                                                                         BMS가 없는 차량이라 B-Lifecare 서비스가 더욱 
@@ -663,10 +663,16 @@
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                            <!-- 09.11 / 리뷰 영역 수정 [e] -->
                                                         </div>
+                                                        <div class="swiper-paging-wrap">
+                                                            <div class="swiper-button-prev"></div>
+                                                            <div class="swiper-pagination"></div>
+                                                            <div class="swiper-button-next"></div>
+                                                        </div>
+                                                        <div class="rolling-banner-gradient-left"></div>
+                                                        <div class="rolling-banner-gradient-right"></div>
                                                     </div>
-                                                    <!-- 08.28 수정 : 카탈로그/문의하기 버튼 a태그로 변경 -->
+                                                    <!-- //11.20 : 레이아웃 변경 -->
                                                     <div class="service-btn-wrap">
                                                         <a href="#" target="_blank" class="icon-btn-lg icon-white icon-download btn-outline01" download>
                                                             <span>카탈로그</span>
@@ -683,9 +689,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
                         </div><!-- //content-item03 -->
-                    
                     </div>
                 </div>
             </section>
@@ -777,5 +781,23 @@
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
         <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
         <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
+        
+        <!-- <script>
+            var swiper = new Swiper(".rolling-banner", {
+            slidesPerView: 3.5,
+            centeredSlides: true,
+            spaceBetween: 20,
+            // grabCursor: true,
+            loop: true,
+            pagination: {
+                el: ".swiper-paging-wrap .swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+        </script> -->
     </body>
 </html>

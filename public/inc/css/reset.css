@@ -85,6 +85,12 @@ iframe {
   border: 0;
   vertical-align: top;
 }
+span{
+  -webkit-user-select:unset;
+  -moz-user-select: unset;
+  -ms-user-select: unset;
+  user-select: unset;
+}
 img {
   width: 100%;
   height: auto;

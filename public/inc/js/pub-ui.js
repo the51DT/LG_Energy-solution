@@ -67,7 +67,7 @@ var pubUi = {
         this.self.searchResult = document.querySelectorAll(".searchEvt");
 
         /* marquee (롤링배너) */
-        this.self.track = document.querySelector(".banner-track");
+        // this.self.track = document.querySelector(".banner-track");
 
         /* 쿠키설정 팝업 */
         this.self.mainCookieLayer = document.querySelector(".main-cookie");
@@ -158,24 +158,24 @@ var pubUi = {
         }
 
         // marquee 컴포넌트(롤링배너) 관련 script
-        if (this.self.track) {
-            const items = Array.from(this.self.track.querySelectorAll(".banner-item"));
-            // 기존 아이템 복제
-            items.forEach((item) => {
-                const clone = item.cloneNode(true);
-                this.self.track.appendChild(clone);
-            });
+        // if (this.self.track) {
+        //     const items = Array.from(this.self.track.querySelectorAll(".banner-item"));
+        //     // 기존 아이템 복제
+        //     items.forEach((item) => {
+        //         const clone = item.cloneNode(true);
+        //         this.self.track.appendChild(clone);
+        //     });
 
-            // 터치 시작 시 애니메이션 멈춤
-            this.self.track.addEventListener("touchstart", () => {
-                this.self.track.style.animationPlayState = "paused";
-            });
+        //     // 터치 시작 시 애니메이션 멈춤
+        //     this.self.track.addEventListener("touchstart", () => {
+        //         this.self.track.style.animationPlayState = "paused";
+        //     });
 
-            // 터치 끝나면 다시 재생
-            this.self.track.addEventListener("touchend", () => {
-                this.self.track.style.animationPlayState = "running";
-            });
-        }
+        //     // 터치 끝나면 다시 재생
+        //     this.self.track.addEventListener("touchend", () => {
+        //         this.self.track.style.animationPlayState = "running";
+        //     });
+        // }
 
         if (this.self.mainCookieLayer) {
             const closeBtn = this.self.mainCookieLayer.querySelector(".btn-close > button");
@@ -1824,6 +1824,7 @@ var pubUi = {
             this.type02Swiper();
             this.type03Swiper();
             this.bAroundMoSwiper();
+            this.rollingSwiper();
             this.mainPopBnrSwiper();
         },
         // swiper default 타입 : type01Swiper
@@ -1908,6 +1909,7 @@ var pubUi = {
             if (targetSwiper.length > 0) {
                 //newsroom 상세 사용중
                 var swiper2 = new Swiper(".baround-swiper", {
+                    spaceBetween: 20,
                     pagination: {
                         el: ".swiper-pagination",
                         type: "bullets",
@@ -1916,6 +1918,29 @@ var pubUi = {
                         clickable: true,
                     },
                     loop: true,
+                });
+            } else {
+                return;
+            }
+        },
+        rollingSwiper() {
+            const targetSwiper = document.querySelectorAll(".rolling-banner");
+
+            if (targetSwiper.length > 0) {
+                var rolling = new Swiper(".rolling-banner", {
+                    slidesPerView: 3.5,
+                    centeredSlides: true,
+                    spaceBetween: 20,
+                    // grabCursor: true,
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-paging-wrap .swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
                 });
             } else {
                 return;
