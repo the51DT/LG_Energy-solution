@@ -485,6 +485,7 @@
 .irif:lang(en) .evt-schedule-past .btn-badge {width: fit-content; max-width: unset; padding-inline: 0.625rem;}
 
 /* 지속가능경영 > 사회 > / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
+.sust-soc [class^="content-item"].bg-skyblue .title-h2 + .title-desc {font-size: 1rem; line-height: 1.6rem; color: #171819;}
 .sust-soc .title-desc {font-size: 1rem; line-height: 1.6rem;}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1rem;}
 .sust-soc #tab4-content [class^="content-item"] .content-sect:has(.human-mgmt) {padding-top: 3rem;}
