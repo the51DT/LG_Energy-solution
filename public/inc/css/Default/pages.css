@@ -2364,6 +2364,14 @@
 .rolling-banner-gradient-right::after{content:"";display:block;width:100%;height:50%;background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);}
 .rolling-banner-gradient-left::before{content:"";display:block;width:100%;height:187px;background: linear-gradient(90deg, #374656 0%, rgba(55, 70, 86, 0.00) 100%);}
 .rolling-banner-gradient-right::before{content:"";display:block;width:100%;height:187px;background: linear-gradient(90deg, rgba(55, 70, 86, 0.00) 0%, #374656 100%);}
+html:lang(de) .rolling-banner-gradient-left::before{height:258px;}
+html:lang(de) .rolling-banner-gradient-right::before{height:258px;}
+html:lang(zh-CN) .rolling-banner-gradient-left::before{height:258px;}
+html:lang(zh-CN) .rolling-banner-gradient-right::before{height:258px;}
+html:lang(pl) .rolling-banner-gradient-left::before{height:258px;}
+html:lang(pl) .rolling-banner-gradient-right::before{height:258px;}
+html:lang(en) .rolling-banner-gradient-left::before{height:258px;}
+html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .serv-blifecare .rolling-banner .banner-item .review-box02 {margin-top: 5.06rem;}
 .serv-blifecare .rolling-banner .banner-item .review-box03 {margin-top: 3.12rem;}
 
