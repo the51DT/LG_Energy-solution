@@ -4,12 +4,11 @@
 .esgm.sust-env .content-item02 .article-content:first-child {margin-top: 0;}
 .esgm #tab3-content .article-content:first-child {margin-top: 0rem;}
 .esgm .article-content + .article-content {padding-top: 5rem;}
-.sust-sys .vision-wrap {position: relative; display: flex; flex-direction: column; align-items: flex-end; padding-top: 8.6875rem;}
-.sust-sys .vision-wrap:lang(en) {padding-top: 2.875rem;}
-.sust-sys .vision-wrap .vision-tit {position: absolute; left: 0; top: 0; font-size: 6.25rem; font-weight: 200; line-height: 6.875rem; letter-spacing: -.125rem; color: #171819;}
-.sust-sys .vision-wrap .vision-tit>strong {font-weight: 900; color: #33B0C6;}
-.sust-sys .vision-wrap .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; font-weight: 400;}
-.sust-sys .vision-wrap .vision-img {margin-top: 2.5rem;}
+
+.sust-sys .vision-wrap .article-content:not(:last-child):after {content:""; width: 100%; height: 1px; background: #c9ced1; display: block; margin: 5rem 0;}
+.sust-sys .vision-wrap .article-content {padding-top:0;}
+.sust-sys .vision-wrap .article-content:last-child {margin-bottom: 5rem;}
+.sust-sys .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; font-weight: 400; margin: 2.5rem 0 5rem;}
 .sust-sys .accordion-list .accordion-btn {display: flex; align-items: center; justify-content: space-between; padding: .967rem 2.5rem;}
 .sust-sys .accordion-list.on .accordion-btn {padding: 3.75rem 2.5rem 0 2.5rem;}
 .sust-sys .accordion-list .accordion-btn::after {position: unset; transform: unset;}
@@ -2404,7 +2403,7 @@
 .rctt .core-cont-wrap .core-cont {border-radius: 1rem; border: 4px solid #e1e7ea; background-color:#fff; padding: 3rem 4rem; max-width: 44rem; display: flex; gap: 2.5rem; justify-content: space-between; align-items: center;}
 .rctt .core-cont-wrap .core-cont .txt-box span { color: #171819; font-size: 1.5rem; font-weight: 600; line-height: 2.375rem; display: flex; gap: 0.5rem; align-items: center;}
 .rctt .core-cont-wrap .core-cont .txt-box span > span { color: #33B0C6; font-size: 1.25rem; line-height: 2rem;}
-.rctt .core-cont-wrap .core-cont .img-box { width: 8.125rem; height: 8.125rem;}
+.rctt .core-cont-wrap .core-cont .img-box {min-width: 8.125rem; width: 8.125rem; height: 8.125rem;}
 .rctt .core-cont-wrap .core-cont .img-box img {width: 100%; height: 100%; object-fit: cover;}
 .rctt .core-cont-wrap .core-cont .txt-box p { color: #555758; text-align: left; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; white-space: nowrap; margin-top: 1.25rem;}
 /* 11.19 수정 : 인재상 레이아웃 변경으로 인한 css 수정 - E */

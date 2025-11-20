@@ -22,11 +22,12 @@
 .sust-sys .tab1-content .title-h2, .sust-sys .tab1-content .article-content:nth-child(2) {padding: 0 1.25rem;}
 .sust-sys .tab1-content .article-content:nth-child(2) {padding-top: 3rem;}
 .sust-sys .tab1-content .article-content:first-child {padding-left: 1.25rem;}
-.sust-sys .vision-wrap {align-items: flex-start; padding: 0;}
-.sust-sys .vision-wrap:lang(en) {padding-top: 0;}
-.sust-sys .vision-wrap .vision-tit {position: unset; font-size: 2.75rem; line-height: 2.875rem; padding: .62rem 1.25rem .62rem 0;}
-.sust-sys .vision-wrap .vision-desc {text-align: left; margin-top: 1rem; padding-right: 1.25rem; font-size: 0.875rem; line-height: 1.3125rem;}
-.sust-sys:lang(en) .vision-wrap .vision-desc {font-size: 0.875rem; line-height: 1.3125rem;}
+
+.sust-sys .vision-desc {margin: 1rem 0 0; font-size: 0.875rem; line-height: 1.3125rem; padding:0 1.25rem;}
+.sust-sys .vision-wrap .article-content:not(:last-child):after {display: none;}
+.sust-sys .vision-wrap .article-content {padding:3rem 1.25rem 0;}
+.sust-sys .vision-wrap .article-content:last-child {margin-bottom:0;}
+
 .sust-sys:lang(en) .cont-box-wrap .left-box .intro-desc {font-size: 1.125rem; line-height: 1.75rem;}
 .sust-sys:lang(en) .cont-box-wrap .left-box .sub-desc-wrap .sub-desc {font-size: 1rem; line-height: 1.6rem; color: #555758;}
 .sust-sys .vision-wrap .vision-img {width: 100%;}
@@ -1899,7 +1900,7 @@
 .rctt .core-cont-wrap .core-cont .txt-box {align-self: flex-start;}
 .rctt .core-cont-wrap .core-cont .txt-box span { color: #171819; font-size: 1.25rem; font-weight: 700; line-height: 1.875rem; flex-direction: column; gap: 0.25rem; text-align: left; display: inline;}
 .rctt .core-cont-wrap .core-cont .txt-box span > span { color: #33B0C6; font-size: 1rem; line-height: 1.6rem; font-weight: 600; margin-left: 0.25rem;}
-.rctt .core-cont-wrap .core-cont .img-box { width: 7rem; height: 7rem; align-self:flex-end;}
+.rctt .core-cont-wrap .core-cont .img-box {min-width:7rem; width: 7rem; height: 7rem; align-self:flex-end;}
 .rctt .core-cont-wrap .core-cont .txt-box p { font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem;}
 /* 11.19 수정 : 인재상 레이아웃 변경으로 인한 css 수정 - E */
 

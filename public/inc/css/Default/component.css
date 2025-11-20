@@ -112,7 +112,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .btn-outline01.icon-btn.icon-link2 .icon-area::before,
 .btn-primary01.icon-btn.icon-link2 .icon-area::before  {background-image: url(../../images/icon/icon_link_external_bl.svg);}
 .btn-outline01.icon-btn.icon-link2:hover .icon-area::before,
-.btn-primary01.icon-btn.icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_arrow_right_wh.svg);}
+.btn-primary01.icon-btn.icon-link2:hover .icon-area::before {background-image: url(../../images/icon/icon_link_external.svg);}
 
 .btn-outline01.icon-btn.icon-plus .icon-area::before,
 .btn-primary01.icon-btn.icon-plus .icon-area::before  {background-image: url(../../images/icon/icon_plus.svg);}
