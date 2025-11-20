@@ -261,7 +261,7 @@
 .sust-env .tab4-content .content-item04 .article-inner {margin-top: 1rem;}
 .sust-env .tab4-content .content-item04 .article-desc + .article-desc {margin-top: 1rem;}
 
-.sust-env .tab5-content .article-desc:first-child {margin-top: 1rem; font-size: 1.125rem; line-height: 1.75rem; font-weight: 400;}
+.sust-env .tab5-content .article-desc:first-child {margin-top: 1rem; font-weight: 400;}
 .sust-env .tab5-content .info-inner .info-desc {padding: 0;}
 .sust-env .tab5-content .roadmap-wrap {flex-direction: column; align-items: flex-start; gap: 3.5rem; margin-top: 3.5rem;}
 .sust-env .tab5-content .roadmap-box {width: 100%;}
