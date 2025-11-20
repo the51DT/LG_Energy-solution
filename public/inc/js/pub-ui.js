@@ -1438,34 +1438,34 @@ var pubUi = {
             this.bindEvents();
         },
         bindEvents() {
-            // textarea input 입력 시, 입력텍스트 내용 카운트 내용
-            $(document).on("input", ".textarea-box .textarea", function () {
-                const textarea = this;
-                const box = textarea.closest(".textarea-box");
-                const length = textarea.value.length;
-                const countEl = box.querySelector(".byte-check .count");
-                const max = parseInt(textarea.getAttribute("maxlength"), 10) || 1000;
-                countEl.innerText = Math.min(length, max);
-                box.classList.toggle("on", length > 0);
-                if (box.classList.contains("ty02")) pubUi.form.textareaResize(textarea);
-            });
-            const inputBox = document.querySelectorAll(".wrap-form-input input.input-box");
-            const inputBoxDelBtn = document.querySelectorAll(".wrap-form-input input-wrap .btn-input-del");
-            inputBox.forEach((el) => {
-                el.addEventListener("input", function (e) {
-                    if (e.target != "") {
-                        e.target.closest(".input-wrap").classList.add("on");
-                    } else {
-                        e.target.closest(".input-wrap").classList.remove("on");
-                    }
-                });
-            });
-            inputBoxDelBtn.forEach(el => {
-                el.addEventListener("click", function(){
-                    console.log(el.currentTarget);
-                    el.currentTarget.closest(".input-wrap").classList.remove("on");
-                })
-            })
+            // textarea input 입력 시, 입력텍스트 내용 카운트 내용 제거(제외 요청으로 마크업삭제하였음)
+            // $(document).on("input", ".textarea-box .textarea", function () {
+            //     const textarea = this;
+            //     const box = textarea.closest(".textarea-box");
+            //     const length = textarea.value.length;
+            //     const countEl = box.querySelector(".byte-check .count");
+            //     const max = parseInt(textarea.getAttribute("maxlength"), 10) || 1000;
+            //     countEl.innerText = Math.min(length, max);
+            //     box.classList.toggle("on", length > 0);
+            //     if (box.classList.contains("ty02")) pubUi.form.textareaResize(textarea);
+            // });
+            // const inputBox = document.querySelectorAll(".wrap-form-input input.input-box");
+            // const inputBoxDelBtn = document.querySelectorAll(".wrap-form-input input-wrap .btn-input-del");
+            // inputBox.forEach((el) => {
+            //     el.addEventListener("input", function (e) {
+            //         if (e.target != "") {
+            //             e.target.closest(".input-wrap").classList.add("on");
+            //         } else {
+            //             e.target.closest(".input-wrap").classList.remove("on");
+            //         }
+            //     });
+            // });
+            // inputBoxDelBtn.forEach(el => {
+            //     el.addEventListener("click", function(){
+            //         console.log(el.currentTarget);
+            //         el.currentTarget.closest(".input-wrap").classList.remove("on");
+            //     })
+            // })
         },
         textareaResize(obj) {
             obj.style.height = "auto";
