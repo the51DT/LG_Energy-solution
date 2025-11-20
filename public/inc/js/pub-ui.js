@@ -1928,6 +1928,10 @@ var pubUi = {
 
             if (targetSwiper.length > 0) {
                 var rolling = new Swiper(".rolling-banner", {
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
                     slidesPerView: 3.5,
                     centeredSlides: true,
                     spaceBetween: 20,
