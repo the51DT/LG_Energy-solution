@@ -46,8 +46,8 @@
 
 .content-box {flex-direction: column; gap: 1.5rem;}
 .content-box:not(:first-child) {margin-top: 0; border: none;}
-:lang(ko) .content-box:not(:first-child) {padding-top: 0; gap:0;}
-:lang(ko) .content-box:not(:first-child):before {content:""; width: 100%; height: 1px; background: #858889; display: block; margin: 2rem 0;}
+.content-box:not(:first-child) {padding-top: 0; gap:0;}
+.content-box:not(:first-child):before {content:""; width: 100%; height: 1px; background: #858889; display: block; margin: 2rem 0;}
 /* .content-box:not(:first-child) .text-area {margin-top: 2rem;} */
 .content-box .text-area .sub {font-size: 1rem; font-weight: 600; color:var(--colorElement-light-text-text-primary); line-height: 1.5rem;}
 .content-box .text-area .tit {font-size: 1.5rem; font-weight: 500; color:var(--colorElement-light-text-text-default01); line-height: 1.8rem; padding-top: 0.5rem;}
