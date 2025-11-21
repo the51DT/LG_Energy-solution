@@ -849,7 +849,7 @@ table {border-collapse: collapse;}
 .swiper-wrapper .swiper-slide .swiper-download-btn img { width: 1.25rem; height: 1.25rem; }
 
 
-.type02Swiper .swiper-paging-wrap {display: block; width: 100%; max-width: revert; position: absolute; top:50%; margin: 0; transform: translateY(-100%);}
+.type02Swiper .swiper-paging-wrap {display: block; width: 100%; max-width: revert; position: absolute; top:50%; margin: 0; transform: translateY(-150%);}
 .type02Swiper .swiper-pagination {position: unset; display: flex; align-items: center; justify-content: center; margin-top: 1rem; transform: translate(0, 0); min-height: unset;}
 .type02Swiper .swiper-pagination-bullet {width: .625rem; height: .625rem; border: 1px solid #171819; background-color: transparent; opacity: 1;}
 .type02Swiper .swiper-pagination-bullet-active {background-color: #171819;}
