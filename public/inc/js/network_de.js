@@ -382,780 +382,1327 @@ const locations = [
     },
 ];
 
+// 페이지 언어 감지 + 표준화 (KO/EN/ZH/PL/DE), 기본값 KO
+const languageCode = (() => {
+  const attrLang = (
+    document.documentElement.getAttribute("lang") || ""
+  ).toLowerCase();
+  const dataLang = (document.body?.dataset?.lang || "").toLowerCase();
+  const lang = attrLang || dataLang; // <html lang="en"> 또는 <body data-lang="en">
+  if (lang.startsWith("ko")) return "KO";
+  if (lang.startsWith("en")) return "EN";
+  if (
+    lang.startsWith("zh-CH") ||
+    lang.startsWith("zh") ||
+    lang.startsWith("cn")
+  )
+    return "ZH";
+  if (lang.startsWith("pl")) return "PL";
+  if (lang.startsWith("de")) return "DE";
+  return "KO";
+})();
+// - 퍼블테스트용(개발은 따로 존재) - E
+
+//11.12 수정 - 해당 영역부터 적용 필요 : S
 let map; // 전역 map 객체
 let infowindow; // 인포윈도우 전역 선언 (중복 방지)
 
 let mapFilterList = document.querySelectorAll(".map-filter-list > li");
-let pcInfoBox = document.querySelector(".map-info.pc-only .map-info-content-box");
-let moInfoBox = document.querySelector(".map-info.mo-only .map-info-content-box");
+let pcInfoBox = document.querySelector(
+  ".map-info.pc-only .map-info-content-box"
+);
+let moInfoBox = document.querySelector(
+  ".map-info.mo-only .map-info-content-box"
+);
+let selectedText = ""; // '전체', '본사', 'R&D' 등
+let targetContinent = "";
+let selectedType = "";
+let regionFilter = [];
+let center, zoom;
 
-let currentRegionLocations = [...locations]; //11.04 추가: 현재 선택된 지역의 사업장 정보를 담는 배열
-
+// 11.11 수정 : bindEvents 변경
 function bindEvents() {
-    // 글로벌 네트워크
-    let networkMap = document.querySelector(".map-conts-area");
+  // 글로벌 네트워크
+  let networkMap = document.querySelector(".map-conts-area");
 
-    if (networkMap != null && networkMap != "") {
-        const networkMapInfo = networkMap.querySelector(".map-info");
-        const mapInfoItem = networkMapInfo.querySelectorAll(".map-info-item > li > a");
-        const mapImg = networkMap.querySelector(".map-img");
-        const mapMarking = networkMap.querySelector(".map-img .active_img .active_mark");
-        const mapCloseBtn = networkMapInfo.querySelector(".btn-close > button");
+  if (networkMap != null && networkMap != "") {
+    const networkMapInfo = networkMap.querySelector(".map-info");
+    const mapInfoItem = networkMapInfo.querySelectorAll(
+      ".map-info-item > li > a"
+    );
+    const mapImg = networkMap.querySelector(".map-img");
+    const mapMarking = networkMap.querySelector(
+      ".map-img .active_img .active_mark"
+    );
+    const mapCloseBtn = networkMapInfo.querySelector(
+      ".map-info-content-box .btn-close > button"
+    ); // 11.11 수정 : mapCloseBtn 변수 선택자 변경
 
-        let checkingInterval; // 깜빡임을 위한 인터벌 변수
+    let checkingInterval; // 깜빡임을 위한 인터벌 변수
 
-        mapInfoItem.forEach((item) => {
-            item.addEventListener("click", function (e) {
-                mapInfoItem.forEach((otherItem) => {
-                    if (otherItem !== e.currentTarget) {
-                        otherItem.classList.remove("active");
-                    } else {
-                        e.currentTarget.classList.add("active");
-                    }
-                });
-
-                networkMapInfo.classList.add("on");
-                // mapImg.classList.add("on");
-                // mapMarking.style.display = "block";
-
-                // 기존 깜빡임 인터벌 제거 (중복 방지)
-                // if (checkingInterval) clearInterval(checkingInterval);
-
-                // // 깜빡임 시작secondTab
-                // checkingInterval = setInterval(() => {
-                //     if (mapMarking.style.display === "block") {
-                //         mapMarking.style.display = "none";
-                //     } else {
-                //         mapMarking.style.display = "block";
-                //     }
-                // }, 1000);
-
-                // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
-                defaultMapSizeChk();
-            });
+    mapInfoItem.forEach((item) => {
+      item.addEventListener("click", function (e) {
+        mapInfoItem.forEach((otherItem) => {
+          if (otherItem !== e.currentTarget) {
+            otherItem.classList.remove("active");
+          } else {
+            e.currentTarget.classList.add("active");
+          }
         });
 
-        mapCloseBtn.addEventListener("click", function (e) {
-            const targetMap = e.currentTarget.closest(".map-info");
-            const targetContinent = targetMap.querySelector(".map-info-content-box").dataset.continent;
-            // console.log(targetContinent);
+        networkMapInfo.classList.add("on");
+        // mapImg.classList.add("on");
+        // mapMarking.style.display = "block";
 
-            targetMap.classList.remove("on");
+        // 기존 깜빡임 인터벌 제거 (중복 방지)
+        // if (checkingInterval) clearInterval(checkingInterval);
 
-            // mapImg.classList.remove("on");
-            // mapMarking.style.display = "none";
-            mapInfoItem.forEach((item) => {
-                item.classList.remove("active");
-            });
-
-            if (targetContinent == "Korea") {
-                map.setCenter({ lat: 36.5, lng: 127.5 });
-                map.setZoom(5);
-            } else if (targetContinent == "Asien · Ozeanien") {
-                map.setCenter({ lat: 34.0479, lng: 100.6197 });
-                map.setZoom(3);
-            } else if (targetContinent == "Amerika") {
-                map.setCenter({ lat: 39.63935570747691, lng: -101.3754683869087 });
-                map.setZoom(4);
-            } else if (targetContinent == "Europa") {
-                map.setCenter({ lat: 54.526, lng: 15.2551 });
-                map.setZoom(5.5);
-            } else {
-                map.setCenter({ lat: 37.5266681, lng: 126.9271165 });
-                map.setZoom(2);
-            }
-
-            // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
-            defaultMapSizeChk();
-        });
+        // // 깜빡임 시작secondTab
+        // checkingInterval = setInterval(() => {
+        //     if (mapMarking.style.display === "block") {
+        //         mapMarking.style.display = "none";
+        //     } else {
+        //         mapMarking.style.display = "block";
+        //     }
+        // }, 1000);
 
         // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
         defaultMapSizeChk();
-    }
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (e.target.closest(".map-info-content-box .btn-close > button")) {
+        const targetMap = e.target.closest(".map-info");
+        const continentBox = targetMap.querySelector(".map-info-content-box");
+        const targetContinent = continentBox?.dataset.continent || "";
+
+        targetMap.classList.remove("on");
+
+        // 지도 위치 복원
+        if (
+          targetContinent == "한국" ||
+          targetContinent == "Korea" ||
+          targetContinent == "韩国"
+        ) {
+          map.setCenter({ lat: 36.5, lng: 127.5 });
+          map.setZoom(5);
+        } else if (
+          [
+            "아시아·오세아니아",
+            "Asia·Oceania",
+            "亚洲 · 大洋洲",
+            "Asien · Ozeanien",
+            "Azja · Oceania",
+          ].includes(targetContinent)
+        ) {
+          map.setCenter({ lat: 34.0479, lng: 100.6197 });
+          map.setZoom(3);
+        } else if (
+          ["아메리카", "Americas", "美洲", "Amerika", "Ameryki"].includes(
+            targetContinent
+          )
+        ) {
+          map.setCenter({ lat: 39.6393, lng: -101.3754 });
+          map.setZoom(4);
+        } else if (
+          ["유럽", "Europe", "欧洲", "Europa"].includes(targetContinent)
+        ) {
+          map.setCenter({ lat: 54.526, lng: 15.2551 });
+          map.setZoom(5.5);
+        } else {
+          map.setCenter({ lat: 37.5266681, lng: 126.9271165 });
+          map.setZoom(2);
+        }
+
+        defaultMapSizeChk();
+      }
+    });
+
+    // 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 추가 (11.04)
+    defaultMapSizeChk();
+  }
+
+  // COUNT
+  let filter = [];
+  filter = ["서울", "과천", "청주", "서초", "대전", "Seoul", "Korea"];
+  let countryCount = locations.filter((loc) =>
+    filter.includes(loc.country)
+  ).length;
+  $("#tab2 .count").text("(" + countryCount + ")");
+
+  filter = [
+    "중국",
+    "일본",
+    "대만",
+    "인도",
+    "인도네시아",
+    "호주",
+    "China",
+    "Japan",
+    "Taiwan",
+    "India",
+    "Indonesia",
+    "Hongkong",
+    "Australia",
+    "Thailand",
+  ];
+  countryCount = locations.filter((loc) => filter.includes(loc.country)).length;
+  $("#tab3 .count").text("(" + countryCount + ")");
+
+  filter = ["미국", "USA", "Mexico", "Canada"];
+  countryCount = locations.filter((loc) => filter.includes(loc.country)).length;
+  $("#tab4 .count").text("(" + countryCount + ")");
+
+  filter = ["독일", "폴란드", "Germany", "Poland", "France"];
+  countryCount = locations.filter((loc) => filter.includes(loc.country)).length;
+  $("#tab5 .count").text("(" + countryCount + ")");
+
+  countryCount = locations.length;
+  $("#tab1 .count").text("(" + countryCount + ")");
 }
 
 function initMap() {
-    const styledMapType = new google.maps.StyledMapType([
-        {
-            featureType: "poi",
-            elementType: "labels.icon",
-            stylers: [{ visibility: "off" }],
-        },
-    ]);
+  const styledMapType = new google.maps.StyledMapType([
+    {
+      featureType: "poi",
+      elementType: "labels.icon",
+      stylers: [{ visibility: "off" }],
+    },
+    {
+      featureType: "water",
+      elementType: "labels",
+      stylers: [{ visibility: "off" }],
+    },
+  ]);
 
-    const mapOptions = {
-        center: new google.maps.LatLng(37.5266681, 126.9271165),
-        zoom: 2.8, //11.04 수정
-    };
+  const mapOptions = {
+    center: new google.maps.LatLng(37.5266681, 126.9271165),
+    zoom: 4,
+  };
 
-    map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
-    map.mapTypes.set("styled_map", styledMapType);
-    map.setMapTypeId("styled_map");
+  map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+  map.mapTypes.set("styled_map", styledMapType);
+  map.setMapTypeId("styled_map");
 
-    infowindow = new google.maps.InfoWindow(); // 하나의 인포윈도우 재사용
+  infowindow = new google.maps.InfoWindow(); // 하나의 인포윈도우 재사용
 
-    // 마커 생성 및 클릭 이벤트
-    locations.forEach((location) => {
-        // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
-        let markerIcon = "";
+  let markerIcon = "";
 
-        //11.04 JV 추가
-        if (location.type == "Hauptsitz") {
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
-        } else if (location.type == "F&E") {
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
-        } else if (location.type == "Vertrieb") {
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
-        } else if (location.type == "JV") {
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-        } else {
-            //Produktion
-            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-        }
-        const marker = new google.maps.Marker({
-            map: map,
-            position: new google.maps.LatLng(location.lat, location.lng),
-            icon: markerIcon,
-            title: location.place,
-        });
+  //const makerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_red.svg", null, null, null, new google.maps.Size(50, 57)); //지도 마커 아이콘 변경시 해당 소스 변경 필요
 
-        // ❗️중요: markers 배열에 저장
-        markers.push(marker);
+  // 마커 생성 및 클릭 이벤트
+  locations.forEach((location) => {
+    if (
+      location.type === "본사" ||
+      location.type === "Headquarter" ||
+      location.type === "本社" ||
+      location.type === "Siedziba główna" ||
+      location.type === "Hauptsitz"
+    ) {
+      markerIcon = new google.maps.MarkerImage(
+        "../../../inc/images/icon/icon_mark_black.svg",
+        null,
+        null,
+        null,
+        new google.maps.Size(32, 32)
+      );
+    } else if (
+      location.type === "R&D" ||
+      location.type === "B+R" ||
+      location.type === "F&E"
+    ) {
+      markerIcon = new google.maps.MarkerImage(
+        "../../../inc/images/icon/icon_mark_blue.svg",
+        null,
+        null,
+        null,
+        new google.maps.Size(32, 32)
+      );
+      // 11.25 수정 : JV/생산 추가 - S
+    } else if (
+      location.type === "생산" ||
+      location.type === "Manufacturing" ||
+      location.type === "生产" ||
+      location.type === "Produkcja" ||
+      location.type === "Produktion" ||
+      location.type == "JV" ||
+      location.type == "JV/생산"
+    ) {
+      //생산 , JV/생산
+      markerIcon = new google.maps.MarkerImage(
+        "../../../inc/images/icon/icon_mark_green.svg",
+        null,
+        null,
+        null,
+        new google.maps.Size(32, 32)
+      );
+      // 11.25 수정 : JV/생산 추가 - E
+    } else {
+      markerIcon = new google.maps.MarkerImage(
+        "../../../inc/images/icon/icon_mark_pink.svg",
+        null,
+        null,
+        null,
+        new google.maps.Size(32, 32)
+      );
+    }
 
-        marker.addListener("click", () => {
-            map.setCenter(marker.getPosition());
-            map.setZoom(15);
-
-            // 마커클릭시, 노출되는 infowindow
-            //infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
-            // infowindow.setContent(`<strong>${location.place}</strong>`);
-            // infowindow.open(map, marker);
-        });
+    $(".map-info-item").append(
+      '<li><a href="javascript:;">' + location.place + "</a></li>"
+    );
+    const marker = new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(location.lat, location.lng),
+      icon: markerIcon,
+      title: location.place,
     });
-    
-    bindEvents();
+
+    // ❗️중요: markers 배열에 저장
+    markers.push(marker);
+
+    marker.addListener("click", () => {
+      map.setCenter(marker.getPosition());
+      map.setZoom(15);
+
+      // 마커클릭시, 노출되는 infowindow
+      //infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
+      // infowindow.setContent(`<strong>${location.place}</strong>`);
+      // infowindow.open(map, marker);
+    });
+  });
+
+  bindEvents();
 }
 
 let markers = []; // 모든 마커 저장
 
-
 // 공통 : 네트워크(사업장) 정보 영역 활성화/비활성화에 따라 지도 너비값 변경 함수 추가 (11.04)
 function defaultMapSizeChk() {
-    const networkMap = document.querySelector(".map-conts-area");
-    const networkMapInfo = networkMap.querySelector(".map-info"); 
-    const mapImg = networkMap.querySelector(".map-img");
-    const networkMapWidth = mapImg.querySelector(".default_img"); 
-    
-    if (networkMapInfo.classList.contains("on")) {
-        networkMapWidth.style.width = "calc(100vw - 59.25rem)";
-    } else {
-        networkMapWidth.style.width = "calc(100vw - 33rem)";
-    }
+  const networkMap = document.querySelector(".map-conts-area");
+  const networkMapInfo = networkMap.querySelector(".map-info");
+  const mapImg = networkMap.querySelector(".map-img");
+  const networkMapWidth = mapImg.querySelector(".default_img");
+
+  if (networkMapInfo.classList.contains("on")) {
+    networkMapWidth.style.width = "calc(100vw - 59.25rem)";
+  } else {
+    networkMapWidth.style.width = "calc(100vw - 33rem)";
+  }
 }
 
 // 공통: 마커 클리어 함수
 function clearMarkers() {
-    markers.forEach((marker) => marker.setMap(null));
-    markers = [];
+  markers.forEach((marker) => marker.setMap(null));
+  markers = [];
 }
 
 // 공통: 리스트 갱신 함수
 function updateInfoList(filtered) {
-    const infoList = document.querySelector(".map-info-item");
-    if (!infoList) return;
-    infoList.innerHTML = "";
+  const infoList = document.querySelector(".map-info-item");
+  if (!infoList) return;
+  infoList.innerHTML = "";
 
-    // 1. 리스트 다시 그리기
-    filtered.forEach((loc) => {
-        const html = `<li><a href="javascript:;">${loc.place}</a></li>`;
-        infoList.insertAdjacentHTML("beforeend", html);
+  // 1. 리스트 다시 그리기
+  filtered.forEach((loc) => {
+    const html = `<li><a href="javascript:;">${loc.place}</a></li>`;
+    infoList.insertAdjacentHTML("beforeend", html);
+  });
+
+  // 2. 리스트 항목 클릭 이벤트 재등록
+  const listItems = document.querySelectorAll(".map-info-item li");
+  listItems.forEach(function (li) {
+    li.addEventListener("click", function () {
+      const clickedText = li.textContent.trim();
+      const targetLocation = locations.find(
+        (loc) => loc.place.trim() === clickedText.replace("&", "&amp;").trim()
+      );
+      map.setZoom(15);
+      if (targetLocation) {
+        console.log("HERE3");
+        console.log(targetLocation.lat + ", " + targetLocation.lng);
+        const targetLatLng = new google.maps.LatLng(
+          targetLocation.lat,
+          targetLocation.lng
+        );
+        let projection = map.getProjection();
+        if (projection) {
+          const scale = Math.pow(2, map.getZoom());
+          const worldPoint = projection.fromLatLngToPoint(targetLatLng);
+
+          const pixelOffset = 250 / scale; // ← 오른쪽 이동량 (픽셀 기준, 조정 가능)
+          const newPoint = new google.maps.Point(
+            worldPoint.x + pixelOffset, // ← 왼쪽으로 중심 이동 (마커가 오른쪽으로 보임)
+            worldPoint.y
+          );
+
+          const newCenter = projection.fromPointToLatLng(newPoint);
+          map.setCenter(newCenter);
+        } else {
+          // projection 준비 전일 경우, idle 이벤트로 지연 실행
+          google.maps.event.addListenerOnce(map, "idle", () => {
+            const scale = Math.pow(2, map.getZoom());
+            const worldPoint = map
+              .getProjection()
+              .fromLatLngToPoint(targetLatLng);
+            const pixelOffset = 250 / scale;
+            const newPoint = new google.maps.Point(
+              worldPoint.x + pixelOffset,
+              worldPoint.y
+            );
+            map.setCenter(map.getProjection().fromPointToLatLng(newPoint));
+          });
+        }
+
+        //map.setCenter(new google.maps.LatLng(targetLocation.lat, targetLocation.lng));
+
+        // ✅ active 클래스 적용
+        listItems.forEach((el) => el.classList.remove("active"));
+        li.classList.add("active");
+        li.closest(".map-info-item").closest(".map-info").classList.add("on");
+
+        html = "";
+        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - S
+        html += '<div class="info-conts-wrap">';
+        html += '<div class="info-content-head">';
+        html += '   <ul class="sort">';
+        if (
+          targetLocation.type === "본사" ||
+          targetLocation.type === "Headquarter" ||
+          targetLocation.type === "本社" ||
+          targetLocation.type === "Siedziba główna" ||
+          targetLocation.type === "Hauptsitz"
+        ) {
+          // 본사
+          html +=
+            '       <li class="filter-type1">' + targetLocation.type + "</li>";
+        } else if (
+          targetLocation.type === "R&D" ||
+          targetLocation.type === "B+R" ||
+          targetLocation.type === "F&E"
+        ) {
+          // R&D
+          html +=
+            '       <li class="filter-type2">' + targetLocation.type + "</li>";
+          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - S*/
+        } else if (
+          targetLocation.type === "생산" ||
+          targetLocation.type === "生产" ||
+          targetLocation.type === "Produkcja" ||
+          targetLocation.type === "Produktion" ||
+          targetLocation.type === "JV" ||
+          targetLocation.type === "JV/생산" ||
+          targetLocation.type === "Manufacturing"
+        ) {
+          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - E  */
+          //생산
+          html +=
+            '       <li class="filter-type3">' + targetLocation.type + "</li>";
+        } else {
+          //판매
+          html +=
+            '       <li class="filter-type4">' + targetLocation.type + "</li>";
+        }
+        html +=
+          '       <li class="country">' + targetLocation.country + "</li>";
+        html += '       <li class="year">' + targetLocation.year + "</li>";
+        html += "   </ul>";
+        html += '   <h3 class="title">' + targetLocation.place + "</h3>";
+        html += "</div>";
+        html += '<div class="info-content-body">';
+        html += "   <ul>";
+        html +=
+          '       <li><img src="../../../inc/images/icon/icon_address.svg" alt="" /><p>' +
+          targetLocation.address +
+          "</p></li>";
+        html +=
+          '       <li><img src="../../../inc/images/icon/icon_phone.svg" alt="" /><p>' +
+          targetLocation.tel +
+          "</p></li>";
+        if (targetLocation.sort) {
+          html +=
+            '       <li><img src="../../../inc/images/icon/icon_package.svg" alt="" /><p>' +
+            targetLocation.sort +
+            "</p></li>";
+        }
+        html += "   </ul>";
+        if (targetLocation.img) {
+          html += '   <div class="img-area">';
+          html += '       <img src="' + targetLocation.img + '" alt="" />';
+          html += "   </div>";
+        }
+        html += '   <div class="sns-area">';
+        html += "       <ul>";
+        if (targetLocation.home) {
+          html += `<li><a href="${targetLocation.homeUrl}" target="_blank"><img src="../../../inc/images/icon/icon_sns_home.svg" alt="home"></a></li>`;
+        }
+        if (targetLocation.facebook) {
+          html += `<li><a href="${targetLocation.facebookUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_facebook.svg" alt="facebook"></a></li>`;
+        }
+        if (targetLocation.insta) {
+          html += `<li><a href="${targetLocation.instaUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_insta.svg" alt="instagram"></a></li>`;
+        }
+        if (targetLocation.linkedin) {
+          html += `<li><a href="${targetLocation.linkedinUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_in.svg" alt="linkedin"></a></li>`;
+        }
+        if (targetLocation.youtube) {
+          html += `<li><a href="${targetLocation.youtubeUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_youtube.svg" alt="youtube"></a></li>`;
+        }
+        if (targetLocation.blog) {
+          html += `<li><a href="${targetLocation.blogUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_blog.svg" alt="blog"></a></li>`;
+        }
+        html += "           </ul>";
+        html += "       </div>";
+        html += "   </div>";
+        html += "   <div class='btn-close'>";
+        html +=
+          "       <button type='button'><img src='../../../inc/images/icon/icon_close_btn.svg' alt='닫기 버튼'/></button>";
+        html += "   </div>";
+        html += "</div>";
+        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - E
+
+        // 3. PC + Mobile info 영역 모두 갱신
+        if (pcInfoBox) {
+          pcInfoBox.dataset.continent = targetLocation.continent;
+          pcInfoBox.innerHTML = html;
+        }
+        if (moInfoBox) {
+          moInfoBox.dataset.continent = targetLocation.continent;
+          moInfoBox.innerHTML = html;
+        }
+      } else {
+        // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
+
+        let html = "";
+        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - S
+        html += '<div class="info-conts-wrap">';
+        html += '   <div class="info-content-head" style="margin-top:100%;">';
+        html += `   "${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`;
+        html += "   </div>";
+        html += "   <div class='btn-close'>";
+        html +=
+          "       <button type='button'><img src='../../../inc/images/icon/icon_close_btn.svg' alt='닫기 버튼'/></button>";
+        html += "   </div>";
+        html += "</div>";
+        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - E
+
+        if (pcInfoBox) pcInfoBox.innerHTML = html;
+        if (moInfoBox) moInfoBox.innerHTML = html;
+      }
     });
-
-    // 2. 리스트 항목 클릭 이벤트 재등록
-    const listItems = document.querySelectorAll(".map-info-item li");
-    listItems.forEach(function (li) {
-        li.addEventListener("click", function () {
-            const clickedText = li.textContent.trim();
-            const targetLocation = locations.find((loc) => loc.place === clickedText);
-
-            if (targetLocation) {
-                map.setCenter(new google.maps.LatLng(targetLocation.lat, targetLocation.lng));
-                map.setZoom(18);
-
-                // ✅ active 클래스 적용
-                listItems.forEach((el) => el.classList.remove("active"));
-                li.classList.add("active");
-                li.closest(".map-info-item").closest(".map-info").classList.add("on");
-
-                html = "";
-
-                html += '<div class="info-content-head">';
-                html += '   <ul class="sort">';
-                if (targetLocation.type == "Hauptsitz") {
-                    // 본사
-                    html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type == "F&E") {
-                    // R&D
-                    html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type == "Vertrieb") {
-                    //판매
-                    html += '       <li class="filter-type4">' + targetLocation.type + "</li>";                    
-                } else {
-                    //Vertrieb
-                    html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
-                }
-                html += '       <li class="country">' + targetLocation.country + "</li>";
-                html += '       <li class="year">' + targetLocation.year + "</li>";
-                html += "   </ul>";
-                html += '   <h3 class="title">' + targetLocation.place + "</h3>";
-                html += "</div>";
-                html += '<div class="info-content-body">';
-                html += "   <ul>";
-                html += '       <li><img src="../../../inc/images/icon/icon_address.svg" alt="" /><p>' + targetLocation.address + "</p></li>";
-                html += '       <li><img src="../../../inc/images/icon/icon_phone.svg" alt="" /><p>' + targetLocation.tel + "</p></li>";
-                if (targetLocation.sort) {
-                    html += '       <li><img src="../../../inc/images/icon/icon_package.svg" alt="" /><p>' + targetLocation.sort + "</p></li>";
-                }
-                html += "   </ul>";
-                if (targetLocation.img) {
-                    html += '   <div class="img-area">';
-                    html += '       <img src="../../../' + targetLocation.img + '" alt="" />';
-                    html += "   </div>";
-                }
-                html += '   <div class="sns-area">';
-                html += "       <ul>";
-                if (targetLocation.home) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_sns_home.svg" alt="home"></a></li>';
-                }
-                if (targetLocation.facebook) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_facebook.svg" alt="facebook"></a></li>';
-                }
-                if (targetLocation.insta) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_insta.svg" alt="instagram"></a></li>';
-                }
-                if (targetLocation.linkedin) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_in.svg" alt="linkedin"></a></li>';
-                }
-                if (targetLocation.youtube) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_youtube.svg" alt="youtube"></a></li>';
-                }
-                if (targetLocation.blog) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_blog.svg" alt="blog"></a></li>';
-                }
-                html += "       </ul>";
-                html += "   </div>";
-                html += "</div>";
-
-                // 3. PC + Mobile info 영역 모두 갱신
-                if (pcInfoBox) {
-                    pcInfoBox.dataset.continent = targetLocation.continent;
-                    pcInfoBox.innerHTML = html;
-                }
-                if (moInfoBox) {
-                    moInfoBox.dataset.continent = targetLocation.continent;
-                    moInfoBox.innerHTML = html;
-                }
-            } else {
-                // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
-
-                let html = "";
-
-                html += '<div class="info-content-head" style="text-align:center; margin:100% auto;">';
-                html += `"${clickedText}" No location or information corresponding to can be found.`;
-                html += "</div>";
-
-                if (pcInfoBox) pcInfoBox.innerHTML = html;
-                if (moInfoBox) moInfoBox.innerHTML = html;
-            }
-        });
-    });
-    bindEvents();
+  });
+  bindEvents();
 }
 
+// 11.11 수정 : 유형 필터 클릭시, 활성화된 지역 기준으로, 선택한 필터값에맞는 리스트 출력되도록 구조 변경 - S
 // ✅ 기능 1: 유형 필터
 mapFilterList.forEach((button) => {
-    button.addEventListener("click", function (e) {
-        const filterType = button.className.replace("filter-type", "").trim(); // 1~4
-        let typeMap = { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb", 5: "JV" }; // 11.04 JV 추가
-        const selectedType = typeMap[filterType];
+  button.addEventListener("click", function (e) {
+    const filterType = button.className.replace("filter-type", "").trim(); // 1~4
 
-        // 지도내 유형 필터 선택한 값에 대한 텍스트 우측 selectbox에 활성화 내용 추가
-        document.querySelector(".map-info.pc-only .map-info-list .select-cate button").innerText = selectedType;
-        document.querySelector(".map-info.pc-only .map-info-list .select-cate button").classList.add("on");
+    // 언어별 유형 맵핑 - JV 추가 : S (11.25 수정)
+    let typeMap = {};
+    if (languageCode == "KO")
+		typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매", 5: "JV" };
+	else if (languageCode == "EN")
+		typeMap = { 1: "Headquarter", 2: "R&D", 3: "Manufacturing", 4: "Marketing", 5: "JV" };
+	else if (languageCode == "ZH")
+		typeMap = { 1: "本社", 2: "R&D", 3: "生产", 4: "销售", 5: "JV" };
+	else if (languageCode == "PL")
+		typeMap = { 1: "Siedziba główna", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż", 5: "JV" };
+	else if (languageCode == "DE")
+		typeMap = { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb", 5: "JV" };
+	// 언어별 유형 맵핑 - JV 추가 : E (11.25 수정)
 
-        const filtered = locations.filter((loc) => loc.type === selectedType);
-        clearMarkers();
+    selectedType = typeMap[filterType];
 
-        filtered.forEach((loc) => {
-            // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
-            let markerIcon = "";
-            // 11.04 JV 추가
-            if (loc.type == "Hauptsitz") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
-            } else if (loc.type == "F&E") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
-            } else if (loc.type == "Vertrieb") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
-            } else if (loc.type == "JV") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-            } else {
-                //Produktion
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-            }
+	// 유형 필터 분기처리 추가 (생산+JV / JV / 이외) : S (11.25 수정)
+	let filterTypes = [];
+	if (["생산","Manufacturing","生产","Produkcja","Produktion"].includes(selectedType)) {
+		filterTypes = [selectedType, "JV"]; // 생산 + JV
+	} else if (selectedType === "JV") {
+		filterTypes = ["JV"]; // JV
+	} else {
+		filterTypes = [selectedType]; // 이외
+	}
 
-            const marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: markerIcon,
-                title: loc.place,
-            });
-            markers.push(marker);
+	let filtered = locations.filter((loc) => filterTypes.includes(loc.type));
+	// 유형 필터 분기처리 추가 (생산+JV / JV / 이외) : E (11.25 수정)
 
-            marker.addListener("click", () => {
-                map.setCenter(marker.getPosition());
-                map.setZoom(15);
+    console.log(selectedText + "^" + targetContinent + "^" + selectedType + " CHECK3");
 
-                // 마커클릭시, 노출되는 infowindow
-                // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
-                // infowindow.setContent(`<strong>${location.place}</strong>`);
-                // infowindow.open(map, marker);
-            });
-        });
+    // ✅ 현재 활성화된 지역 탭 확인
+    const activeTab = document.querySelector(".netw .tab-category .tab.on");
+    let activeRegionFilter = [];
+    if (activeTab) {
+      const tabId = activeTab.id;
+      switch (tabId) {
+        case "tab2": // 한국
+          activeRegionFilter = [
+            "서울",
+            "과천",
+            "청주",
+            "서초",
+            "대전",
+            "Seoul",
+            "Korea",
+          ];
+          break;
+        case "tab3": // 아시아 오세아니아
+          activeRegionFilter = [
+            "중국",
+            "일본",
+            "대만",
+            "인도",
+            "인도네시아",
+            "호주",
+            "China",
+            "Japan",
+            "Taiwan",
+            "India",
+            "Indonesia",
+            "Hongkong",
+            "Australia",
+            "Thailand",
+          ];
+          break;
+        case "tab4": // 아메리카
+          activeRegionFilter = ["미국", "USA", "Mexico", "Canada"];
+          break;
+        case "tab5": // 유럽
+          activeRegionFilter = [
+            "독일",
+            "폴란드",
+            "Germany",
+            "Poland",
+            "France",
+          ];
+          break;
+        default:
+          activeRegionFilter = []; // 전체
+      }
+    }
+	
+    
 
-        defaultMapSizeChk(); //11.04 추가
+    if (activeRegionFilter.length > 0) {
+      filtered = filtered.filter((loc) =>
+        activeRegionFilter.includes(loc.country)
+      );
+    }
 
-        updateInfoList(filtered);
+    // ✅ 우측 selectbox 업데이트 (언어별 텍스트 표시)
+    const pcSelectBtn = document.querySelector(
+      ".map-info.pc-only .map-info-list .select-cate button"
+    );
+    const moSelectBtn = document.querySelector(
+      ".map-info.mo-only .map-info-list .select-cate button"
+    );
+    const pcSelectMenu = document.querySelectorAll(
+      ".map-info.pc-only .map-info-list .select-menu > li"
+    );
 
-        /* 2025.11.04 추가 : map-filter-list 클릭 시 selectbox 값도 동기화 */
-        const selectWrap = document.querySelector(".map-info.pc-only .select-cate");
-        if (selectWrap) {
-            const menu = selectWrap.querySelector(".select-menu");
-            const btn = selectWrap.querySelector("button");
+    /* 11.12 수정 : 유형탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
+    const mapInfo = document.querySelector(".map-info.pc-only");
+    if (mapInfo.classList.contains("on")) {
+      mapInfo.classList.remove("on");
+    } /* 11.12 수정 : 유형탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
 
-            // 1️⃣ 모든 a에서 active 제거
-            menu.querySelectorAll("a").forEach((a) => a.classList.remove("active"));
-
-            // 2️⃣ 클릭한 type과 동일한 항목 찾아 active 처리
-            let targetOption = Array.from(menu.querySelectorAll("a")).find((a) => a.textContent.trim() === selectedType);
-
-            // 3️⃣ 만약 해당 타입이 selectbox에 없다면(지역 필터로 사라졌을 수도 있음),
-            // selectbox를 현재 지역의 존재 type들로 다시 구성
-            if (!targetOption) {
-                const typeSet = new Set(currentRegionLocations.map((loc) => loc.type));
-                const availableTypes = Array.from(typeSet);
-                menu.innerHTML = "";
-                availableTypes.forEach((type) => {
-                    const li = document.createElement("li");
-                    li.innerHTML = `<a href="javascript:;" role="option" tabindex="0" class="${type === selectedType ? "active" : ""}">${type}</a>`;
-                    menu.appendChild(li);
-                });
-                targetOption = Array.from(menu.querySelectorAll("a")).find((a) => a.textContent.trim() === selectedType);
-            }
-
-            // 4️⃣ 버튼 라벨 변경 및 active 처리
-            if (targetOption) {
-                targetOption.classList.add("active");
-                btn.textContent = selectedType;
-            }
-
-            // 5️⃣ selectbox 내 메뉴 클릭 이벤트 재바인딩
-            menu.querySelectorAll("a").forEach((a) => {
-                a.addEventListener("click", () => {
-                    menu.querySelectorAll("a").forEach((el) => el.classList.remove("active"));
-                    a.classList.add("active");
-                    btn.textContent = a.textContent.trim();
-
-                    const clickedType = a.textContent.trim();
-                    const filteredBySelect = currentRegionLocations.filter((loc) => loc.type === clickedType);
-
-                    clearMarkers();
-                    filteredBySelect.forEach((loc) => {
-                        let markerIcon = "";
-                        if (loc.type == "본사") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
-                        } else if (loc.type == "R&D") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
-                        } else if (loc.type == "판매") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
-                        } else if (loc.type == "JV") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                        } else {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                        }
-
-                        const marker = new google.maps.Marker({
-                            map: map,
-                            position: new google.maps.LatLng(loc.lat, loc.lng),
-                            icon: markerIcon,
-                            title: loc.place,
-                        });
-                        markers.push(marker);
-                    });
-
-                    updateInfoList(filteredBySelect);
-                });
-            });
+    if (pcSelectBtn) {
+      pcSelectBtn.innerText = selectedType;
+      pcSelectBtn.classList.add("on");
+      pcSelectMenu.forEach((menu) => {
+        const menuText = menu.querySelector("a").innerText;
+        menu.querySelector("a").classList.remove("active");
+        if (menuText == pcSelectBtn.innerText) {
+          menu.querySelector("a").classList.add("active");
         }
-        /* // 2025.11.04 추가 끝 */
-    });
-});
+      });
+    }
+    if (moSelectBtn) {
+      moSelectBtn.innerText = selectedType;
+      moSelectBtn.classList.add("on");
+    }
 
+    // ✅ 마커 갱신
+    clearMarkers();
+    filtered.forEach((loc) => {
+      let markerIcon = "";
+      if (
+        [
+          "본사",
+          "Headquarter",
+          "本社",
+          "Siedziba główna",
+          "Hauptsitz",
+        ].includes(loc.type)
+      ) {
+        markerIcon = new google.maps.MarkerImage(
+          "../../../inc/images/icon/icon_mark_black.svg",
+          null,
+          null,
+          null,
+          new google.maps.Size(32, 32)
+        );
+      } else if (["R&D", "B+R", "F&E"].includes(loc.type)) {
+        markerIcon = new google.maps.MarkerImage(
+          "../../../inc/images/icon/icon_mark_blue.svg",
+          null,
+          null,
+          null,
+          new google.maps.Size(32, 32)
+        );
+      } else if (
+        [
+          "생산",
+          "Manufacturing",
+          "生产",
+          "Produkcja",
+          "Produktion",
+          "JV",
+        ].includes(loc.type)
+      ) {
+        markerIcon = new google.maps.MarkerImage(
+          "../../../inc/images/icon/icon_mark_green.svg",
+          null,
+          null,
+          null,
+          new google.maps.Size(32, 32)
+        );
+      } else {
+        markerIcon = new google.maps.MarkerImage(
+          "../../../inc/images/icon/icon_mark_pink.svg",
+          null,
+          null,
+          null,
+          new google.maps.Size(32, 32)
+        );
+      }
+
+      const marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(loc.lat, loc.lng),
+        icon: markerIcon,
+        title: loc.place,
+      });
+      markers.push(marker);
+
+      marker.addListener("click", () => {
+        map.setZoom(15);
+        map.setCenter(marker.getPosition());
+      });
+    });
+
+    // ✅ 리스트 갱신
+    updateInfoList(filtered);
+
+    // ✅ 지도 크기 조정
+    defaultMapSizeChk();
+  });
+});
+// 11.11 수정 : 유형 필터 클릭시, 활성화된 지역 기준으로, 선택한 필터값에맞는 리스트 출력되도록 구조 변경 - E
+
+// 11.11 수정 - 기능 2 구조 변경(지역탭 선택시 해당 국가에 맞는 전체값 리스트 노출되도록 구조 변경) - S
 // ✅ 기능 2: 탭 클릭 시 지역 필터
 document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
-    tab.addEventListener("click", function () {
-        document.querySelectorAll(".netw .tab-category .tab").forEach((el) => el.classList.remove("on"));
-        tab.classList.add("on");
+  tab.addEventListener("click", function () {
+    // 탭 active 처리
+    document
+      .querySelectorAll(".netw .tab-category .tab")
+      .forEach((el) => el.classList.remove("on"));
+    tab.classList.add("on");
 
-        const tabId = tab.id;
-        const tabContryText = document.querySelector(`#${tabId} > button`).innerText;
-        console.log(tabContryText);
+    const tabId = tab.id;
+    targetContinent = document
+      .querySelector(`#${tabId} > button`)
+      .innerText.trim();
 
-        let regionFilter = [];
-        let center, zoom;
+    // 지역별 필터 조건
+    switch (tabId) {
+      case "tab2": // 한국
+        regionFilter = [
+          "서울",
+          "과천",
+          "청주",
+          "서초",
+          "대전",
+          "Seoul",
+          "Korea",
+        ];
+        center = { lat: 36.5, lng: 127.5 };
+        zoom = 7;
+        break;
+      case "tab3": // 아시아 오세아니아
+        regionFilter = [
+          "중국",
+          "일본",
+          "대만",
+          "인도",
+          "인도네시아",
+          "호주",
+          "China",
+          "Japan",
+          "Taiwan",
+          "India",
+          "Indonesia",
+          "Hongkong",
+          "Australia",
+          "Thailand",
+        ];
+        center = { lat: 34.0479, lng: 100.6197 };
+        zoom = 3;
+        break;
+      case "tab4": // 아메리카
+        regionFilter = ["미국", "USA", "Mexico", "Canada"];
+        center = { lat: 39.6393, lng: -101.3754 };
+        zoom = 4;
+        break;
+      case "tab5": // 유럽
+        regionFilter = ["독일", "폴란드", "Germany", "Poland", "France"];
+        center = { lat: 54.526, lng: 15.2551 };
+        zoom = 5;
+        break;
+      default: // 전체
+        regionFilter = [];
+        center = null;
+        zoom = null;
+    }
 
-        switch (tabId) {
-            case "tab2": // 한국
-                regionFilter = ["Seoul", "Gwacheon", "Cheongju", "Seocho", "Daejeon"];
-                center = { lat: 36.5, lng: 127.5 };
-                zoom = 7;
-                break;
-            case "tab3": // 아시아 오세아니아
-                regionFilter = ["China", "Japan", "Taiwan", "India", "Indonesia", "Australia"];
-                center = { lat: 34.0479, lng: 100.6197 };
-                zoom = 3;
-                break;
-            case "tab4": // 아메리카
-                regionFilter = ["USA"];
-                center = { lat: 39.6393, lng: -101.3754 };
-                zoom = 4;
-                break;
-            case "tab5": // 유럽
-                regionFilter = ["Germany", "Poland"];
-                center = { lat: 54.526, lng: 15.2551 };
-                zoom = 5;
-                break;
-            default: // 전체
-                regionFilter = []; // 전체 보여주기
-                center = null;
-                zoom = null;
-        }
+    // selectbox 및 필터 초기화
+    selectedText = ""; // type 필터 해제
 
-        let filtered = regionFilter.length > 0 ? locations.filter((loc) => regionFilter.includes(loc.country)) : locations;
+    const langMap = {
+      KO: "전체",
+      EN: "All",
+      ZH: "全部",
+      PL: "Wszystkie",
+      DE: "Alle",
+    };
+    const resetText = langMap[languageCode] || "전체";
 
-        // ✅ 현재 선택된 지역 데이터 저장 (selectbox용) - 11.04 추가
-        currentRegionLocations = filtered;
+    const pcSelectBtn = document.querySelector(
+      ".map-info.pc-only .map-info-list .select-cate button"
+    );
+    const moSelectBtn = document.querySelector(
+      ".map-info.mo-only .map-info-list .select-cate button"
+    );
 
-        clearMarkers();
-        filtered.forEach((loc) => {
-            // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
-            let markerIcon = "";
-            // 11.04 JV 추가
-            if (loc.type == "Hauptsitz") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
-            } else if (loc.type == "F&E") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
-            } else if (loc.type == "Vertrieb") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
-            } else if (loc.type == "JV") {
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-            } else {
-                //Produktion
-                markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-            }
+    const pcSelectMenu = document.querySelectorAll(
+      ".map-info.pc-only .map-info-list .select-menu > li"
+    );
 
-            const marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(loc.lat, loc.lng),
-                icon: markerIcon,
-                title: loc.place,
-            });
-            markers.push(marker);
+    /* 11.12 수정 : 지역탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
+    const mapInfo = document.querySelector(".map-info.pc-only");
+    if (mapInfo.classList.contains("on")) {
+      mapInfo.classList.remove("on");
+    } /* 11.12 수정 : 지역탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
 
-            marker.addListener("click", () => {
-                map.setCenter(marker.getPosition());
-                map.setZoom(15);
+    if (pcSelectBtn) {
+      pcSelectBtn.innerText = resetText;
+      pcSelectBtn.classList.remove("on");
 
-                // 마커클릭시, 노출되는 infowindow
-                // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
-                // infowindow.setContent(`<strong>${location.place}</strong>`);
-                // infowindow.open(map, marker);
-            });
-        });
+      pcSelectMenu.forEach((menu) => {
+        menu.querySelector("a").classList.remove("active");
+      });
+      pcSelectMenu[0].querySelector("a").classList.add("active");
+    }
+    if (moSelectBtn) {
+      moSelectBtn.innerText = resetText;
+      moSelectBtn.classList.remove("on");
+    }
 
-        // 🔹 전체 탭일 때는 fitBounds 로 자동 줌아웃
-        if (tabId === "tab1") {
-            let bounds = new google.maps.LatLngBounds();
-            markers.forEach((m) => bounds.extend(m.getPosition()));
-            map.fitBounds(bounds);
-        } else {
-            map.setCenter(center);
-            map.setZoom(zoom);
-        }
+    // 실제 데이터도 전체 기준으로 필터링
+    let filtered = [];
+    if (regionFilter.length > 0) {
+      filtered = locations.filter((loc) => regionFilter.includes(loc.country));
+    } else {
+      filtered = locations; // 전체
+    }
 
-        defaultMapSizeChk(); //11.04 추가
+    // 마커/리스트 초기화 및 갱신
+    clearMarkers();
+    filtered.forEach((loc) => {
+      let iconPath = "../../../inc/images/icon/";
+      let iconFile = "icon_mark_pink.svg";
+      if (
+        [
+          "본사",
+          "Headquarter",
+          "本社",
+          "Siedziba główna",
+          "Hauptsitz",
+        ].includes(loc.type)
+      ) {
+        iconFile = "icon_mark_black.svg";
+      } else if (["R&D", "B+R", "F&E"].includes(loc.type)) {
+        iconFile = "icon_mark_blue.svg";
+      } else if (
+        [
+          "생산",
+          "Manufacturing",
+          "生产",
+          "Produkcja",
+          "Produktion",
+          "JV",
+        ].includes(loc.type)
+      ) {
+        iconFile = "icon_mark_green.svg";
+      }
+      const marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(loc.lat, loc.lng),
+        icon: new google.maps.MarkerImage(
+          iconPath + iconFile,
+          null,
+          null,
+          null,
+          new google.maps.Size(32, 32)
+        ),
+        title: loc.place,
+      });
+      markers.push(marker);
 
-        updateInfoList(filtered);
-
-        /* 2025.11.04 추가 : 지역별 selectbox 동적 업데이트 + 첫 번째 값 자동 선택 */
-        const selectWrap = document.querySelector(".map-info.pc-only .select-cate");
-        if (selectWrap) {
-            const menu = selectWrap.querySelector(".select-menu");
-            const btn = selectWrap.querySelector("button");
-
-            // 1️⃣ 현재 지역에서 존재하는 type 추출
-            const typeSet = new Set(filtered.map((loc) => loc.type));
-            const availableTypes = Array.from(typeSet);
-
-            // 2️⃣ select 메뉴 초기화
-            menu.innerHTML = "";
-            availableTypes.forEach((type, i) => {
-                const li = document.createElement("li");
-                li.innerHTML = `<a href="javascript:;" role="option" tabindex="0" class="${i === 0 ? "active" : ""}">${type}</a>`;
-                menu.appendChild(li);
-            });
-
-            // 3️⃣ 첫 번째 type을 버튼 라벨로 표시
-            if (availableTypes.length > 0) {
-                btn.textContent = availableTypes[0];
-            } else {
-                btn.textContent = "전체";
-            }
-
-            // 4️⃣ 첫 번째 type 기준으로 리스트/마커 갱신
-            let firstFiltered = availableTypes.length > 0 ? filtered.filter((loc) => loc.type === availableTypes[0]) : filtered;
-
-            clearMarkers();
-            firstFiltered.forEach((loc) => {
-                let markerIcon = "";
-                if (loc.type == "본사") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
-                } else if (loc.type == "R&D") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
-                } else if (loc.type == "판매") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
-                } else if (loc.type == "JV") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                } else {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                }
-
-                const marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(loc.lat, loc.lng),
-                    icon: markerIcon,
-                    title: loc.place,
-                });
-                markers.push(marker);
-            });
-
-            updateInfoList(firstFiltered);
-
-            // 5️⃣ selectbox 메뉴 클릭 시 필터 적용 이벤트 재등록
-            menu.querySelectorAll("a").forEach((a) => {
-                a.addEventListener("click", () => {
-                    menu.querySelectorAll("a").forEach((el) => el.classList.remove("active"));
-                    a.classList.add("active");
-                    const selectedType = a.textContent.trim();
-                    btn.textContent = selectedType;
-
-                    const filteredByType = filtered.filter((loc) => loc.type === selectedType);
-                    clearMarkers();
-                    filteredByType.forEach((loc) => {
-                        let markerIcon = "";
-                        if (loc.type == "본사") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
-                        } else if (loc.type == "R&D") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
-                        } else if (loc.type == "판매") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
-                        } else if (loc.type == "JV") {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                        } else {
-                            markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                        }
-
-                        const marker = new google.maps.Marker({
-                            map: map,
-                            position: new google.maps.LatLng(loc.lat, loc.lng),
-                            icon: markerIcon,
-                            title: loc.place,
-                        });
-                        markers.push(marker);
-                    });
-
-                    updateInfoList(filteredByType);
-                });
-            });
-        }
-        /* // 2025.11.04 추가 끝 */
+      marker.addListener("click", () => {
+        map.setZoom(15);
+        map.setCenter(marker.getPosition());
+      });
     });
+
+    // 줌/센터 조정
+    if (tabId === "tab1") {
+      let bounds = new google.maps.LatLngBounds();
+      markers.forEach((m) => bounds.extend(m.getPosition()));
+      map.fitBounds(bounds);
+    } else {
+      map.setCenter(center);
+      map.setZoom(zoom);
+    }
+
+    defaultMapSizeChk();
+    updateInfoList(filtered);
+
+    // 11.12 추가 : 지역탭 선택 시, 해당 지역의 type만 Selectbox와 필터에 표시 - S
+    const availableTypes = [...new Set(filtered.map((loc) => loc.type))]; // 현재 지역에 존재하는 type 추출
+    const isAllTab = tabId === "tab1"; // 전체 탭 체크용
+
+    // 언어별로 표시되는 타입 리스트 정의 (표준화)
+    const typeMapping = {
+      KO: { 1: "본사", 2: "R&D", 3: "생산", 4: "판매" },
+      EN: { 1: "Headquarter", 2: "R&D", 3: "Manufacturing", 4: "Marketing" },
+      ZH: { 1: "本社", 2: "R&D", 3: "生产", 4: "销售" },
+      PL: { 1: "Siedziba główna", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż" },
+      DE: { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb" },
+    };
+    const activeTypeMap = typeMapping[languageCode] || typeMapping["KO"];
+
+    // 유형 필터 버튼 표시/숨김 처리
+    document.querySelectorAll(".map-filter-list > li").forEach((li) => {
+      if (isAllTab) {
+        // 전체 탭일 때는 전부 표시
+        li.style.display = "block";
+        return;
+      }
+
+      const className = li.className.replace("filter-type", "").trim();
+      const typeText = activeTypeMap[className];
+
+      if (availableTypes.includes(typeText)) {
+        li.style.display = "block";
+      } else {
+        li.style.display = "none";
+      }
+    });
+
+    // Selectbox 메뉴 표시/숨김 처리
+    document.querySelectorAll(".map-info .select-menu > li").forEach((li) => {
+      const text = li.textContent.trim();
+      if (
+        text === "전체" ||
+        text === "All" ||
+        text === "全部" ||
+        text === "Alle" ||
+        text === "Wszystkie"
+      ) {
+        li.style.display = "block"; // 전체 항목은 항상 표시
+      } else if (isAllTab) {
+        li.style.display = "block";
+      } else if (availableTypes.includes(text)) {
+        li.style.display = "block";
+      } else {
+        li.style.display = "none";
+      }
+    });
+    // 11.12 추가 : 지역탭 선택 시, 해당 지역의 type만 Selectbox와 필터에 표시 - E
+  });
 });
+// 11.11 수정 - 기능 2 구조 변경(지역탭 선택시 해당 국가에 맞는 전체값 리스트 노출되도록 구조 변경) - E
 
 // li 클릭 → 지도 이동
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".map-info-item li").forEach(function (li) {
-        li.addEventListener("click", function () {
-            const clickedText = li.textContent.trim();
-            const targetLocation = locations.find((loc) => loc.place === clickedText);
+  document.querySelectorAll(".map-info-item li").forEach(function (li) {
+    li.addEventListener("click", function () {
+      const clickedText = li.textContent.trim();
+      targetLocation = locations.find(
+        (loc) => loc.place.trim() === clickedText.replace("&", "&amp;").trim()
+      );
 
-            // 1. li.active 클래스 처리
-            document.querySelectorAll(".map-info-item li").forEach((el) => el.classList.remove("active"));
-            li.classList.add("active");
+      // 1. li.active 클래스 처리
+      document
+        .querySelectorAll(".map-info-item li")
+        .forEach((el) => el.classList.remove("active"));
+      li.classList.add("active");
 
-            if (targetLocation) {
-                const targetLatLng = new google.maps.LatLng(targetLocation.lat, targetLocation.lng);
-                map.setCenter(targetLatLng);
-                map.setZoom(15);
+      if (targetLocation) {
+        console.log("HERE4");
+        const targetLatLng = new google.maps.LatLng(
+          targetLocation.lat,
+          targetLocation.lng
+        );
+        map.setZoom(15);
 
-                // 리스트 내 place 클릭시, 노출되는 infowindow
-                // infowindow.setContent(`<strong>${targetLocation.place}</strong>`);
-                // infowindow.setPosition(targetLatLng);
-                // infowindow.open(map);
+        let projection = map.getProjection();
+        if (projection) {
+          const scale = Math.pow(2, map.getZoom());
+          const worldPoint = projection.fromLatLngToPoint(targetLatLng);
 
-                // 2. html 초기화 및 동적 생성
-                let html = "";
-                // 11.04 JV 추가
-                html += '<div class="info-content-head">';
-                html += '   <ul class="sort">';
-                if (targetLocation.type == "Hauptsitz") {
-                    // 본사
-                    html += '       <li class="filter-type1">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type == "F&E") {
-                    // R&D
-                    html += '       <li class="filter-type2">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "Vertrieb") {
-                    //Vertrieb
-                    html += '       <li class="filter-type4">' + targetLocation.type + "</li>";
-                } else if (targetLocation.type === "JV") {
-                    //JV
-                    html += '       <li class="filter-type5">' + targetLocation.type + "</li>";
-                } else {
-                    //Produktion
-                    html += '       <li class="filter-type3">' + targetLocation.type + "</li>";
-                }
-                html += '       <li class="country">' + targetLocation.country + "</li>";
-                html += '       <li class="year">' + targetLocation.year + "</li>";
-                html += "   </ul>";
-                html += '   <h3 class="title">' + targetLocation.place + "</h3>";
-                html += "</div>";
-                html += '<div class="info-content-body">';
-                html += "   <ul>";
-                html += '       <li><img src="../../../inc/images/icon/icon_address.svg" alt="" /><p>' + targetLocation.address + "</p></li>";
-                html += '       <li><img src="../../../inc/images/icon/icon_phone.svg" alt="" /><p>' + targetLocation.tel + "</p></li>";
-                if (targetLocation.sort) {
-                    html += '       <li><img src="../../../inc/images/icon/icon_package.svg" alt="" /><p>' + targetLocation.sort + "</p></li>";
-                }
-                html += "   </ul>";
-                if (targetLocation.img) {
-                    html += '   <div class="img-area">';
-                    html += '       <img src="../../../' + targetLocation.img + '" alt="" />';
-                    html += "   </div>";
-                }
-                html += '   <div class="sns-area">';
-                html += "       <ul>";
-                if (targetLocation.home) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_sns_home.svg" alt="home"></a></li>';
-                }
-                if (targetLocation.facebook) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_facebook.svg" alt="facebook"></a></li>';
-                }
-                if (targetLocation.insta) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_insta.svg" alt="instagram"></a></li>';
-                }
-                if (targetLocation.linkedin) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_in.svg" alt="linkedin"></a></li>';
-                }
-                if (targetLocation.youtube) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_youtube.svg" alt="youtube"></a></li>';
-                }
-                if (targetLocation.blog) {
-                    html += '<li><a href="#"><img src="../../../inc/images/icon/icon_blog.svg" alt="blog"></a></li>';
-                }
-                html += "       </ul>";
-                html += "   </div>";
-                html += "</div>";
+          const pixelOffset = 250 / scale; // ← 오른쪽 이동량 (픽셀 기준, 조정 가능)
+          const newPoint = new google.maps.Point(
+            worldPoint.x + pixelOffset, // ← 왼쪽으로 중심 이동 (마커가 오른쪽으로 보임)
+            worldPoint.y
+          );
 
-                // 3. PC + Mobile info 영역 모두 갱신
-                if (pcInfoBox) pcInfoBox.innerHTML = html;
-                if (moInfoBox) moInfoBox.innerHTML = html;
-            } else {
-                // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
+          const newCenter = projection.fromPointToLatLng(newPoint);
+          map.setCenter(newCenter);
+        } else {
+          // projection 준비 전일 경우, idle 이벤트로 지연 실행
+          google.maps.event.addListenerOnce(map, "idle", () => {
+            const scale = Math.pow(2, map.getZoom());
+            const worldPoint = map
+              .getProjection()
+              .fromLatLngToPoint(targetLatLng);
+            const pixelOffset = 250 / scale;
+            const newPoint = new google.maps.Point(
+              worldPoint.x + pixelOffset,
+              worldPoint.y
+            );
+            map.setCenter(map.getProjection().fromPointToLatLng(newPoint));
+          });
+        }
+        //map.setCenter(targetLatLng);
 
-                let html = "";
+        // 리스트 내 place 클릭시, 노출되는 infowindow
+        // infowindow.setContent(`<strong>${targetLocation.place}</strong>`);
+        // infowindow.setPosition(targetLatLng);
+        // infowindow.open(map);
 
-                html += '<div class="info-content-head" style="text-align:center; margin:100% auto;">';
-                html += `"${clickedText}" No location or information corresponding to can be found.`;
-                html += "</div>";
+        // 2. html 초기화 및 동적 생성
+        let html = "";
 
-                if (pcInfoBox) pcInfoBox.innerHTML = html;
-                if (moInfoBox) moInfoBox.innerHTML = html;
-            }
-        });
+        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - S
+        html += '<div class="info-conts-wrap">';
+        html += '<div class="info-content-head">';
+        html += '   <ul class="sort">';
+        if (
+          targetLocation.type === "본사" ||
+          targetLocation.type === "Headquarter" ||
+          targetLocation.type === "本社" ||
+          targetLocation.type === "Siedziba główna" ||
+          targetLocation.type === "Hauptsitz"
+        ) {
+          // 본사
+          html +=
+            '       <li class="filter-type1">' + targetLocation.type + "</li>";
+        } else if (
+          targetLocation.type === "R&D" ||
+          targetLocation.type === "B+R" ||
+          targetLocation.type === "F&E"
+        ) {
+          // R&D
+          html +=
+            '       <li class="filter-type2">' + targetLocation.type + "</li>";
+          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - S*/
+        } else if (
+          targetLocation.type === "생산" ||
+          targetLocation.type === "生产" ||
+          targetLocation.type === "Produkcja" ||
+          targetLocation.type === "Produktion" ||
+          targetLocation.type === "JV" ||
+          targetLocation.type === "JV/생산" ||
+          targetLocation.type === "Manufacturing"
+        ) {
+          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - E  */
+          html +=
+            '       <li class="filter-type3">' + targetLocation.type + "</li>";
+        } else {
+          //생산
+          html +=
+            '       <li class="filter-type4">' + targetLocation.type + "</li>";
+        }
+        html +=
+          '       <li class="country">' + targetLocation.country + "</li>";
+        html += '       <li class="year">' + targetLocation.year + "</li>";
+        html += "   </ul>";
+        html += '   <h3 class="title">' + targetLocation.place + "</h3>";
+        html += "</div>";
+        html += '<div class="info-content-body">';
+        html += "   <ul>";
+        html +=
+          '       <li><img src="../../../inc/images/icon/icon_address.svg" alt="" /><p>' +
+          targetLocation.address +
+          "</p></li>";
+        html +=
+          '       <li><img src="../../../inc/images/icon/icon_phone.svg" alt="" /><p>' +
+          targetLocation.tel +
+          "</p></li>";
+        if (targetLocation.sort) {
+          html +=
+            '       <li><img src="../../../inc/images/icon/icon_package.svg" alt="" /><p>' +
+            targetLocation.sort +
+            "</p></li>";
+        }
+        html += "   </ul>";
+        if (targetLocation.img) {
+          html += '   <div class="img-area">';
+          html += '       <img src="' + targetLocation.img + '" alt="" />';
+          html += "   </div>";
+        }
+        html += '   <div class="sns-area">';
+        html += "       <ul>";
+        if (targetLocation.home) {
+          html += `<li><a href="${targetLocation.homeUrl}" target="_blank"><img src="../../../inc/images/icon/icon_sns_home.svg" alt="home"></a></li>`;
+        }
+        if (targetLocation.facebook) {
+          html += `<li><a href="${targetLocation.facebookUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_facebook.svg" alt="facebook"></a></li>`;
+        }
+        if (targetLocation.insta) {
+          html += `<li><a href="${targetLocation.instaUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_insta.svg" alt="instagram"></a></li>`;
+        }
+        if (targetLocation.linkedin) {
+          html += `<li><a href="${targetLocation.linkedinUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_in.svg" alt="linkedin"></a></li>`;
+        }
+        if (targetLocation.youtube) {
+          html += `<li><a href="${targetLocation.youtubeUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_youtube.svg" alt="youtube"></a></li>`;
+        }
+        if (targetLocation.blog) {
+          html += `<li><a href="${targetLocation.blogUrl}"  target="_blank"><img src="../../../inc/images/icon/icon_blog.svg" alt="blog"></a></li>`;
+        }
+        html += "           </ul>";
+        html += "       </div>";
+        html += "   </div>";
+        html += "<div class='btn-close'>";
+        html +=
+          "   <button type='button'><img src='../../../inc/images/icon/icon_close_btn.svg' alt='닫기 버튼'/></button>";
+        html += "</div>";
+        html += "</div>";
+        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - E
+
+        // 3. PC + Mobile info 영역 모두 갱신
+        if (pcInfoBox) pcInfoBox.innerHTML = html;
+        if (moInfoBox) moInfoBox.innerHTML = html;
+      } else {
+        // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
+
+        let html = "";
+        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - S
+        html += '<div class="info-conts-wrap">';
+        html += '   <div class="info-content-head" style="margin-top:100%;">';
+        html += `   "${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`;
+        html += "   </div>";
+        html += "   <div class='btn-close'>";
+        html +=
+          "       <button type='button'><img src='../../../inc/images/icon/icon_close_btn.svg' alt='닫기 버튼'/></button>";
+        html += "   </div>";
+        html += "</div>";
+        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - E
+
+        if (pcInfoBox) pcInfoBox.innerHTML = html;
+        if (moInfoBox) moInfoBox.innerHTML = html;
+      }
     });
+  });
 
-    // ✅ 기능 3: selectbox (전체/본사/R&D/생산/판매) 선택 시 필터링
-    document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
-        option.addEventListener("click", function () {
-            // 1. 모든 항목에서 active 제거 후 클릭한 곳에 active 부여
-            const allOptions = option.closest("ul").querySelectorAll("a");
-            allOptions.forEach((opt) => opt.classList.remove("active"));
-            option.classList.add("active");
+  // ✅ 기능 3: selectbox (전체/본사/R&D/생산/판매) 선택 시 필터링
+  document.querySelectorAll(".map-info .select-menu a").forEach((option) => {
+    option.addEventListener("click", function () {
+      // 1. 모든 항목에서 active 제거 후 클릭한 곳에 active 부여
+      const allOptions = option.closest("ul").querySelectorAll("a");
+      allOptions.forEach((opt) => opt.classList.remove("active"));
+      option.classList.add("active");
 
-            const selectedText = option.textContent.trim(); // '전체', '본사', 'R&D' 등
+      selectedText = option.textContent.trim(); // '전체', '본사', 'R&D' 등
+      console.log(
+        selectedText + "^" + targetContinent + "^" + selectedType + "CHECK1"
+      );
 
-            // 2. 필터링
-            let filtered = [];
-            if (selectedText === "Alle") {
-                filtered = currentRegionLocations; //currentRegionLocations로 현재 선택된 지역기준으로 변경 (11.04 수정)
-            } else {
-                filtered = currentRegionLocations.filter((loc) => loc.type === selectedText); //currentRegionLocations로 현재 선택된 지역기준으로 변경 (11.04 수정)
-            }
+      // 2. 필터링
+      let filtered = [];
 
-            // 3. 가나다 / 알파벳 순 정렬 (한글, 영문 모두 대응)
-            filtered.sort((a, b) => a.place.localeCompare(b.place, "ko", { sensitivity: "base" }));
+      // 현재 활성화된 지역 탭 확인
+      const activeTab = document.querySelector(".netw .tab-category .tab.on");
+      let activeRegionFilter = [];
+      if (activeTab) {
+        const tabId = activeTab.id;
+        switch (tabId) {
+          case "tab2": // 한국
+            activeRegionFilter = [
+              "서울",
+              "과천",
+              "청주",
+              "서초",
+              "대전",
+              "Seoul",
+              "Korea",
+            ];
+            break;
+          case "tab3": // 아시아 오세아니아
+            activeRegionFilter = [
+              "중국",
+              "일본",
+              "대만",
+              "인도",
+              "인도네시아",
+              "호주",
+              "China",
+              "Japan",
+              "Taiwan",
+              "India",
+              "Indonesia",
+              "Hongkong",
+              "Australia",
+              "Thailand",
+            ];
+            break;
+          case "tab4": // 아메리카
+            activeRegionFilter = ["미국", "USA", "Mexico", "Canada"];
+            break;
+          case "tab5": // 유럽
+            activeRegionFilter = [
+              "독일",
+              "폴란드",
+              "Germany",
+              "Poland",
+              "France",
+            ];
+            break;
+          default: // 전체 탭
+            activeRegionFilter = [];
+        }
+      }
 
-            // 4. 마커 리셋 및 새로 그림
-            clearMarkers();
-            filtered.forEach((loc) => {
-                // 각 나라별 마커 아이콘 다르게 적용 - 10.28 수정
-                let markerIcon = "";
-                // 11.04 JV 추가
-                if (loc.type == "Hauptsitz") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_black.svg", null, null, null, new google.maps.Size(32, 32));
-                } else if (loc.type == "F&E") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_blue.svg", null, null, null, new google.maps.Size(32, 32));
-                } else if (loc.type == "Vertrieb") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_pink.svg", null, null, null, new google.maps.Size(32, 32));
-                } else if (loc.type == "JV") {
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                } else {
-                    //Produktion
-                    markerIcon = new google.maps.MarkerImage("../../../inc/images/icon/icon_mark_green.svg", null, null, null, new google.maps.Size(32, 32));
-                }
+      // 전체선택 시: 해당 지역(탭)에 해당하는 전체만 노출
+      if (["전체", "All", "全部", "Alle", "Wszystkie"].includes(selectedText)) {
+        if (activeRegionFilter.length > 0) {
+          filtered = locations.filter((loc) =>
+            activeRegionFilter.includes(loc.country)
+          );
+        } else {
+          filtered = locations; // 전체 탭은 전부 노출
+        }
+      } else {
+        // 특정 유형 선택 시: 해당 지역 + 선택된 유형만 노출
+        if (activeRegionFilter.length > 0) {
+          filtered = locations.filter(
+            (loc) =>
+              activeRegionFilter.includes(loc.country) &&
+              loc.type === selectedText
+          );
+        } else {
+          filtered = locations.filter((loc) => loc.type === selectedText);
+        }
+      }
 
-                const marker = new google.maps.Marker({
-                    map: map,
-                    position: new google.maps.LatLng(loc.lat, loc.lng),
-                    icon: markerIcon,
-                    title: loc.place,
-                });
-                markers.push(marker);
+      /* 11.12 수정 : selectbox 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
+      const mapInfo = document.querySelector(".map-info.pc-only");
+      if (mapInfo.classList.contains("on")) {
+        mapInfo.classList.remove("on");
+      } /* 11.12 수정 : selectbox 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
 
-                marker.addListener("click", () => {
-                    map.setCenter(marker.getPosition());
-                    map.setZoom(15);
+      // 3. 마커 리셋 및 새로 그림
+      clearMarkers();
+      filtered.forEach((loc) => {
+        let location = loc;
+        if (
+          location.type === "본사" ||
+          location.type === "Headquarter" ||
+          location.type === "本社" ||
+          location.type === "Siedziba główna" ||
+          location.type === "Hauptsitz"
+        ) {
+          markerIcon = new google.maps.MarkerImage(
+            "../../../inc/images/icon/icon_mark_black.svg",
+            null,
+            null,
+            null,
+            new google.maps.Size(32, 32)
+          );
+        } else if (
+          location.type === "R&D" ||
+          location.type === "B+R" ||
+          location.type === "F&E"
+        ) {
+          markerIcon = new google.maps.MarkerImage(
+            "../../../inc/images/icon/icon_mark_blue.svg",
+            null,
+            null,
+            null,
+            new google.maps.Size(32, 32)
+          );
+        } else if (
+          location.type === "생산" ||
+          location.type === "JV" ||
+          location.type === "JV/생산" || // 11.25 수정 : JV/생산 추가
+          location.type === "Manufacturing" ||
+          location.type === "生产" ||
+          location.type === "Produkcja" ||
+          location.type === "Produktion"
+        ) {
+          //생산 , JV/생산
+          markerIcon = new google.maps.MarkerImage(
+            "../../../inc/images/icon/icon_mark_green.svg",
+            null,
+            null,
+            null,
+            new google.maps.Size(32, 32)
+          );
+        } else {
+          markerIcon = new google.maps.MarkerImage(
+            "../../../inc/images/icon/icon_mark_pink.svg",
+            null,
+            null,
+            null,
+            new google.maps.Size(32, 32)
+          );
+        }
 
-                    // 마커클릭시, 노출되는 infowindow
-                    // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
-                    // infowindow.setContent(`<strong>${location.place}</strong>`);
-                    // infowindow.open(map, marker);
-                });
-            });
+        $(".map-info-item").append(
+          '<li><a href="javascript:;">' + location.place + "</a></li>"
+        );
 
-            // 4. 리스트도 업데이트
-            updateInfoList(filtered);
+        const marker = new google.maps.Marker({
+          map: map,
+          position: new google.maps.LatLng(location.lat, location.lng),
+          icon: markerIcon,
+          title: location.place,
         });
+
+        markers.push(marker);
+
+        marker.addListener("click", () => {
+          map.setZoom(15);
+          map.setCenter(marker.getPosition());
+
+          // 마커클릭시, 노출되는 infowindow
+          // infowindow 레이어팝업 미노출 : 노출 필요 시 주석해제
+          // infowindow.setContent(`<strong>${location.place}</strong>`);
+          // infowindow.open(map, marker);
+        });
+      });
+
+      // 4. 리스트도 업데이트
+      updateInfoList(filtered);
     });
+  });
 });
 
 window.initMap = initMap;
+//11.12 수정 - 해당 영역부터 적용 필요 : E
