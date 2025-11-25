@@ -685,20 +685,39 @@ document.querySelectorAll(".map-filter-list > li").forEach((btn) => {
     btn.addEventListener("click", function (e) {
         const filterType = btn.className.replace("filter-type", "").trim(); // 1~4
 
-        // 언어별 유형 맵핑
+        // 언어별 유형 맵핑 - JV 추가 : S (11.25 수정)
         let typeMap = {};
+        
         if (languageCode == "KO")
-            typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매" }; //11.11 수정 : JV 제거
+		    typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매", 5: "JV" };
         else if (languageCode == "EN")
-            typeMap = { 1: "Headquarter", 2: "R&D", 3: "Manufacturing", 4: "Marketing" }; //11.11 수정 : JV 제거
+            typeMap = { 1: "Headquarter", 2: "R&D", 3: "Manufacturing", 4: "Marketing", 5: "JV" };
         else if (languageCode == "ZH")
-            typeMap = { 1: "本社", 2: "R&D", 3: "生产", 4: "销售" }; //11.11 수정 : JV 제거
+            typeMap = { 1: "本社", 2: "R&D", 3: "生产", 4: "销售", 5: "JV" };
         else if (languageCode == "PL")
-            typeMap = { 1: "Siedziba główna", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż" }; //11.11 수정 : JV 제거
-        else if (languageCode == "DE") typeMap = { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb" }; //11.11 수정 : JV 제거
+            typeMap = { 1: "Siedziba główna", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż", 5: "JV" };
+        else if (languageCode == "DE")
+            typeMap = { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb", 5: "JV" };
+        // 언어별 유형 맵핑 - JV 추가 : E (11.25 수정)
 
         selectedType = typeMap[filterType];
 
+        // 유형 필터 분기처리 추가 (생산+JV / JV / 이외) : S (11.25 수정)
+        let filterTypes = [];
+        if (["생산","Manufacturing","生产","Produkcja","Produktion"].includes(selectedType)) {
+            filterTypes = [selectedType, "JV"]; // 생산 + JV
+        } else if (selectedType === "JV") {
+            filterTypes = ["JV"]; // JV
+        } else {
+            filterTypes = [selectedType]; // 이외
+        }
+
+        let filtered = locations.filter((loc) => filterTypes.includes(loc.type));
+         // 유형 + 대륙 기준으로 데이터 필터
+        if (regionFilter.length > 0) {
+            filtered = filtered.filter((loc) => regionFilter.includes(loc.country));
+        }
+        // 유형 필터 분기처리 추가 (생산+JV / JV / 이외) : E (11.25 수정)
         console.log(selectedType);
 
         // 현재 활성화된 대륙 탭 기준 필터링
@@ -724,11 +743,7 @@ document.querySelectorAll(".map-filter-list > li").forEach((btn) => {
             }
         }
 
-        // 유형 + 대륙 기준으로 데이터 필터
-        let filtered = locations.filter((loc) => loc.type === selectedType);
-        if (regionFilter.length > 0) {
-            filtered = filtered.filter((loc) => regionFilter.includes(loc.country));
-        }
+       
 
         // 우측 selectbox 업데이트 (언어별 텍스트 표시)
         const pcSelectBtn = document.querySelector(".map-info.pc-only .map-info-list .select-cate button");
