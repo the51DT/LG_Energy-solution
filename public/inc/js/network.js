@@ -647,7 +647,7 @@ function initMap() {
         null,
         new google.maps.Size(32, 32)
       );
-      // 25.11.25 수정 : JV/생산 추가 - S
+      // 11.25 수정 : JV/생산 추가 - S
     } else if (
       location.type === "생산" ||
       location.type === "Manufacturing" ||
@@ -665,7 +665,7 @@ function initMap() {
         null,
         new google.maps.Size(32, 32)
       );
-      // 25.11.25 수정 : JV/생산 추가 - E
+      // 11.25 수정 : JV/생산 추가 - E
     } else {
       markerIcon = new google.maps.MarkerImage(
         "../../../inc/images/icon/icon_mark_pink.svg",
@@ -812,7 +812,7 @@ function updateInfoList(filtered) {
           // R&D
           html +=
             '       <li class="filter-type2">' + targetLocation.type + "</li>";
-          /* 25.11.25 : JV/생산 추가 / 중복 JV 분기처리 제거 - S*/
+          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - S*/
         } else if (
           targetLocation.type === "생산" ||
           targetLocation.type === "生产" ||
@@ -822,7 +822,7 @@ function updateInfoList(filtered) {
           targetLocation.type === "JV/생산" ||
           targetLocation.type === "Manufacturing"
         ) {
-          /* 25.11.25 : JV/생산 추가 / 중복 JV 분기처리 제거 - E  */
+          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - E  */
           //생산
           html +=
             '       <li class="filter-type3">' + targetLocation.type + "</li>";
@@ -1448,7 +1448,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // R&D
           html +=
             '       <li class="filter-type2">' + targetLocation.type + "</li>";
-          /* 25.11.25 : JV/생산 추가 / 중복 JV 분기처리 제거 - S*/
+          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - S*/
         } else if (
           targetLocation.type === "생산" ||
           targetLocation.type === "生产" ||
@@ -1458,7 +1458,7 @@ document.addEventListener("DOMContentLoaded", function () {
           targetLocation.type === "JV/생산" ||
           targetLocation.type === "Manufacturing"
         ) {
-          /* 25.11.25 : JV/생산 추가 / 중복 JV 분기처리 제거 - E  */
+          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - E  */
           html +=
             '       <li class="filter-type3">' + targetLocation.type + "</li>";
         } else {
@@ -1678,7 +1678,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (
           location.type === "생산" ||
           location.type === "JV" ||
-          location.type === "JV/생산" || // 25.11.25 수정 : JV/생산 추가
+          location.type === "JV/생산" || // 11.25 수정 : JV/생산 추가
           location.type === "Manufacturing" ||
           location.type === "生产" ||
           location.type === "Produkcja" ||
