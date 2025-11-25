@@ -158,7 +158,6 @@
                 <div class="content-header-cont">
                     <h2 class="title-h1">Inquiry</h2>
                     <div class="subp-tit-area">
-                        <!-- 08.18 수정 : 문구 변경-->
                         <h3 class="subp-tit">
                             We will respond to your inquiry as soon as possible.
                         </h3>
@@ -221,13 +220,12 @@
                                                 <button type="button" class="btn">Technology</button>
                                                 <button type="button" class="btn">Career</button>
                                                 <button type="button" class="btn">Sustainability</button>
-                                                <!-- 09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
                                                 <div class="btn icon-btn">
                                                     <a href="https://procurement-les.singlex.com/supplierWelcome/idea-proposal.html" target="_blank" title="Open in new window">
                                                         Suppliers
                                                         <div class="img-wrap"></div>
                                                     </a>
-                                                </div><!-- //09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
+                                                </div>
                                                 <button type="button" class="btn">ETC</button>
                                             </div>
                                         </div>
@@ -238,7 +236,7 @@
                                                 <p class="acd-tit">Please select a subcategory.</p>
                                             </div>
                                         </div>
-                                        <!-- 08.27 수정 : 버튼 위치 변경 : S -->
+                                        
                                         <div class="acd-panel accordion-content" role="region">
                                             <div class="cont-btn-wrap sub-btn-wrap">
                                                 <div class="btn-box">
@@ -310,19 +308,18 @@
                                                     <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
                                                 </button>
                                             </div>                                        
-                                        </div><!-- //08.27 수정 : 버튼 위치 변경 : E -->
+                                        </div>
                                     </div>
                                     <div class="item selection-wrapper" id="step-3">
                                         <div class="acd-group">
                                             <div class="align-group">
-                                                <p class="acd-tit">Please enter the detailed information.</p> <!-- 08.18 수정 : 문구 변경-->
+                                                <p class="acd-tit">Please enter the detailed information.</p>
                                             </div>
                                         </div>
                                         <div class="acd-panel accordion-content" role="region">
                                             <span class="required-field-text">* Required Field</span>
                                             <div class="sub-cont-wrap">
                                                 <div class="wrap-form-input flex-type">
-                                                    <!-- 09.16 수정 : Application 영문명 업데이트 - S -->
                                                     <div class="input-wrap selectbox-wrap type3 ">
                                                         <label for="app-select">Applications</label>
                                                         <div class="select-cate activeSelect">
@@ -420,7 +417,7 @@
                                                                         tabindex="0">e-Vessel</a></li>
                                                             </ul>
                                                         </div>
-                                                    </div><!-- //09.16 수정 : Application 영문명 업데이트 - E -->           
+                                                    </div>     
                                                     <!-- ESS 항목 선택 시 세부 항목에 대한 필수 선택 안내 메세지 출력 문구 -->
                                                     <p><span class="ico-info"></span>Selecting a subcategory for ESS is required.</p>
                                                 </div><!--//wrap-form-input-->
@@ -463,10 +460,13 @@
                                                             </div>
                                                             <div class="input-wrap selectbox-wrap type3">
                                                                 <div class="select-cate activeSelect size-sm">
-                                                                    <button type="button" aria-haspopup="listbox">Kwh</button>
+                                                                    <button type="button" aria-haspopup="listbox">Select</button><!-- 11.25 / 문구 수정 -->
                                                                     <ul class="select-menu" role="listbox">
                                                                         <li><a href="javascript:;" role="option"
-                                                                                tabindex="0" class="active">Kwh</a>
+                                                                                tabindex="0" class="active">Select</a><!-- 11.25 / 문구 수정 -->
+                                                                        </li>
+                                                                        <li><a href="javascript:;" role="option"
+                                                                                tabindex="0">Kwh</a>
                                                                         </li>
                                                                         <li><a href="javascript:;" role="option"
                                                                                 tabindex="0">Mwh</a></li>
@@ -495,7 +495,6 @@
                                                 <div class="wrap-form-input">
                                                     <div class="input-wrap selectbox-wrap type3 ">
                                                         <label for="develop-detail">Development<br> Status</label>
-                                                        <!-- 09.16 수정 : Development Status 영문명 업데이트 - S -->
                                                         <div class="select-cate activeSelect">
                                                             <button type="button" aria-haspopup="listbox" id="develop-detail">Please select.</button>
                                                             <ul class="select-menu" role="listbox">                                                                    
@@ -506,10 +505,9 @@
                                                                 <li><a href="javascript:;" role="option"
                                                                         tabindex="0">Mass Production</a></li>
                                                             </ul>
-                                                        </div><!-- //09.16 수정 : Development Status 영문명 업데이트 - E -->
+                                                        </div>
                                                     </div>
                                                 </div><!--//wrap-form-input-->
-                                                <!-- 공급 예상 시기 : 25.08.18 캘린더 컴포넌트 퍼블리싱 완료  -->
                                                 <div class="wrap-form-input">
                                                     <div class="input-wrap">
                                                         <label for="supply-input">Expected Supply Date</label>                                                            
@@ -663,7 +661,7 @@
                                     <div class="item" id="step-4">
                                         <div class="acd-group">
                                             <div class="align-group">
-                                                <p class="acd-tit">Please enter your contact information.</p> <!-- 08.18 수정 : 문구 변경-->
+                                                <p class="acd-tit">Please enter your contact information.</p>
                                             </div>
                                         </div>
                                         <div class="acd-panel accordion-content" role="region">
@@ -672,7 +670,7 @@
                                                 <div class="wrap-form-input ty02">
                                                     <div class="input-wrap">
                                                         <label for="user-input">Name<span>*</span></label>
-                                                        <input type="text" id="user-input" class="input-box" placeholder="Please enter your name."> <!-- 09.16 / 플레이스홀더 한글 번역 -->
+                                                        <input type="text" id="user-input" class="input-box" placeholder="Please enter your name.">
                                                         <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                     </div>
                                                     <div class="input-wrap">
@@ -692,14 +690,14 @@
                                                         <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                     </div>
                                                     <div class="input-wrap">
-                                                        <label for="website-input">Official Website</label> <!-- 09.12 수정 : 홈페이지 필수값 제거 -->
+                                                        <label for="website-input">Official Website</label>
                                                         <input type="text" id="website-input" class="input-box" placeholder="Please enter your website address.">
                                                         <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                     </div>
                                                     <div class="input-wrap selectbox-wrap type3">
                                                         <label for="website-select1">Region<span>*</span></label>
                                                         <div class="select-cate activeSelect">
-                                                            <button type="button" class="btn" aria-haspopup="listbox" id="website-select1">Please select a region.</button> <!-- 09.16 / 플레이스홀더 한글 번역 -->
+                                                            <button type="button" class="btn" aria-haspopup="listbox" id="website-select1">Please select a region.</button>
                                                             <ul class="select-menu" role="listbox">
                                                                 <li><a href="javascript:;" role="option"
                                                                     tabindex="0" class="active">USA</a>
@@ -748,10 +746,8 @@
                                                         <label for="cont-input">Message<span>*</span></label>
                                                         <div class="textarea-box w100">
                                                             <textarea id="cont-input" class="textarea" placeholder="Please enter the content." maxlength="1000"></textarea>
-                                                            <!-- 09.15 / 글자 수 체크 삭제 -->
                                                         </div>                                                        
                                                     </div>
-                                                    <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - S-->
                                                     <div class="input-wrap">
                                                         <label for="file-input">Attach File</label>
                                                         <div class="file-input-box">
@@ -770,7 +766,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - E-->
                                                 </div>
                                             </div>
                                             <div class="btn-wrap">
@@ -793,7 +788,6 @@
                                         </div>
                                         <div class="acd-panel accordion-content" role="region">
                                             <div class="sub-cont-wrap consent-cont-wrap">
-                                                <!-- 08.18 수정 : 문구 변경 - S -->
                                                 <div class="text-list-wrap terms-wrap">
                                                     <ol class="text-list">
                                                         <li>
@@ -810,7 +804,7 @@
                                                         </li>
                                                         <span><span>*</span>The inquiry service is available only if you consent to the collection, use, and provision of personal information.</span>
                                                     </ol>
-                                                </div><!-- //08.18 수정 : 문구 변경 - E -->  
+                                                </div>
                                             </div>
                                             <div class="terms-chk-wrap">
                                                 <div class="checkbox chk-terms-wrap">
@@ -818,7 +812,6 @@
                                                         name="checkbox-5">
                                                     <label for="checkbox-5" class="checkbox-label">
                                                         <span class="custom-checkbox"></span>
-                                                        <!-- 08.18 수정 : 문구 변경 -->
                                                         <span class="txt">
                                                             I agree to the collection and use of my personal information
                                                         </span>
@@ -864,7 +857,7 @@
                                 <p class="owner">CEO Kim Dong-myeong</p>
                                 <address class="addr">07335 108 Yeoui-daero, <br/>Yeongdeungpo-gu, Seoul</address>
                                 <a class="tel" href="tel:0237771114">Representative number : +82-2-3777-1114</a>                  
-                            </div> 09.16 삭제 (영문,다국어 주소 삭제) -->
+                            </div>  -->
                             </div>              
                         </li>
                     </ul>
@@ -944,7 +937,7 @@
         </div>
     </div>
 
-    <!-- 캘린더 팝업 : 25.08.18 추가
+    <!-- 캘린더 팝업
     * 컴포넌트 사용시 유의사항
     캘린더팝업 id값 정의시: 대상 캘린더 버튼과 id값 동일 + Calendar 명명규칙 맞춰서 사용할것 
     ex)캘린더 버튼 id가 supply-input이면 캘린더팝업 id supply-inputCalendar로 정의 

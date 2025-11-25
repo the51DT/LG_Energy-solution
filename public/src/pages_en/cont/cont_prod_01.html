@@ -352,7 +352,7 @@
                                     </ul>
                                 </li>
                                 <li class="depth02">
-                                    <a href="#">Job Description</a><!-- 영역 삭제 -->
+                                    <a href="#">Job Description</a>
                                 </li>
                                 <li class="depth02">
                                     <a href="#">Job Opportunities</a>
@@ -370,7 +370,6 @@
                 <div class="content-header-cont">
                     <h2 class="title-h1">Inquiry</h2>
                     <div class="subp-tit-area">
-                        <!-- 08.18 수정 : 문구 변경-->
                         <h3 class="subp-tit">
                             We will respond to your inquiry as soon as possible.
                         </h3>
@@ -402,13 +401,12 @@
                                                     <button type="button" class="btn">Technology</button>
                                                     <button type="button" class="btn">Career</button>
                                                     <button type="button" class="btn">Sustainability</button>
-                                                    <!-- 09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
                                                     <div class="btn icon-btn">
                                                         <a href="https://procurement-les.singlex.com/supplierWelcome/idea-proposal.html" target="_blank" title="Open in new window">
                                                             Suppliers
                                                             <div class="img-wrap"></div>
                                                         </a>
-                                                    </div><!-- //09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
+                                                    </div>
                                                     <button type="button" class="btn">ETC</button>
                                                 </div>
                                                 <div class="btn-wrap">
@@ -501,7 +499,6 @@
                                                 <span class="required-field-text">* Required Field</span>
                                                 <div class="sub-cont-wrap">
                                                     <div class="wrap-form-input flex-type">
-                                                        <!-- 09.16 수정 : Application 영문명 업데이트 - S -->
                                                         <div class="input-wrap selectbox-wrap type3 ">
                                                             <label for="app-select">Applications</label>
                                                             <div class="select-cate activeSelect">
@@ -599,7 +596,7 @@
                                                                             tabindex="0">e-Vessel</a></li>
                                                                 </ul>
                                                             </div>
-                                                        </div><!-- //09.16 수정 : Application 영문명 업데이트 - E -->                                                        
+                                                        </div>                                           
                                                         <!-- ESS 항목 선택 시 세부 항목에 대한 필수 선택 안내 메세지 출력 문구 -->
                                                         <p><span class="ico-info"></span>Selecting a subcategory for ESS is required.</p>
                                                     </div><!--//wrap-form-input-->
@@ -637,14 +634,17 @@
                                                             <div class="quantity-input-wrap input-wrap">
                                                                 <input type="number" id="quantity-input" class="input-box"
                                                                     placeholder="Please enter a number.">
-                                                                <button class="btn-input-del" title="입력 내용 삭제"></button>                                                                
+                                                                <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                             </div>
                                                             <div class="input-wrap selectbox-wrap type3">
                                                                 <div class="select-cate activeSelect size-sm">
-                                                                    <button type="button" aria-haspopup="listbox">Kwh</button>
+                                                                    <button type="button" aria-haspopup="listbox">Select</button><!-- 11.25 / 문구 수정 -->
                                                                     <ul class="select-menu" role="listbox">
                                                                         <li><a href="javascript:;" role="option"
-                                                                                tabindex="0" class="active">Kwh</a>
+                                                                                tabindex="0" class="active">Select</a><!-- 11.25 / 문구 수정 -->
+                                                                        </li>
+                                                                        <li><a href="javascript:;" role="option"
+                                                                                tabindex="0">Kwh</a>
                                                                         </li>
                                                                         <li><a href="javascript:;" role="option"
                                                                                 tabindex="0">Mwh</a></li>
@@ -673,7 +673,6 @@
                                                     <div class="wrap-form-input">                                                        
                                                         <div class="input-wrap selectbox-wrap type3 ">
                                                             <label for="develop-detail">Development<br> Status</label>
-                                                            <!-- 09.16 수정 : Development Status 영문명 업데이트 - S -->
                                                             <div class="select-cate activeSelect">
                                                                 <button type="button" aria-haspopup="listbox" id="develop-detail">Please select.</button>
                                                                 <ul class="select-menu" role="listbox">                                                                    
@@ -684,10 +683,9 @@
                                                                     <li><a href="javascript:;" role="option"
                                                                             tabindex="0">Mass Production</a></li>
                                                                 </ul>
-                                                            </div><!-- //09.16 수정 : Development Status 영문명 업데이트 - E -->
+                                                            </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
-                                                    <!-- 공급 예상 시기 : 25.08.18 캘린더 컴포넌트 퍼블리싱 완료  -->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
                                                             <label for="supply-input">Expected Supply <br>Date</label>
@@ -746,7 +744,7 @@
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
-                                                    <div class="wrap-form-input flex-type"> <!-- 09.09 수정 : 클래스 추가 -->
+                                                    <div class="wrap-form-input flex-type"> 
                                                         <div class="input-wrap selectbox-wrap type3">
                                                             <label for="website-nation">Target Market </label>
                                                             <div class="select-cate activeSelect">
@@ -875,7 +873,7 @@
                                                             <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                         </div>
                                                         <div class="input-wrap">
-                                                            <label for="website-input">Official Website</label> <!-- 09.12 수정 : 홈페이지 필수값 제거 -->
+                                                            <label for="website-input">Official Website</label>
                                                             <input type="text" id="website-input" class="input-box"
                                                                 placeholder="Please enter your website address.">
                                                             <button class="btn-input-del" title="입력 내용 삭제"></button>
@@ -938,10 +936,8 @@
                                                             <div class="textarea-box">
                                                                 <textarea id="cont-input" class="textarea"
                                                                     placeholder="Please enter the content." maxlength="1000"></textarea>
-                                                                <!-- 09.15 / 글자 수 체크 삭제 -->
                                                             </div>
                                                         </div>
-                                                        <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - S-->
                                                         <div class="input-wrap">
                                                             <label for="file-input">Attach File</label>
                                                             <div class="file-input-box">
@@ -960,7 +956,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- 09.16 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - E -->
                                                     </div>
                                                 </div>
                                                 <div class="btn-wrap">
@@ -986,7 +981,6 @@
                                             </a>
                                             <div class="acd-panel accordion-content" role="region">
                                                 <div class="sub-cont-wrap">
-                                                    <!-- 08.18 수정 : 문구 변경 - S -->
                                                     <div class="text-list-wrap terms-wrap">
                                                         <ol class="text-list">
                                                             <li>
@@ -1003,7 +997,7 @@
                                                             </li>
                                                             <span><span>*</span>The inquiry service is available only if you consent to the collection, use, and provision of personal information.</span>
                                                         </ol>
-                                                    </div><!-- //08.18 수정 : 문구 변경 - E -->                                            
+                                                    </div>                                   
                                                 </div>
                                                 <div class="sub-cont-wrap">
                                                     <div class="checkbox chk-terms-wrap">
@@ -1011,7 +1005,6 @@
                                                             name="checkbox-5">
                                                         <label for="checkbox-5" class="checkbox-label">
                                                             <span class="custom-checkbox"></span>
-                                                            <!-- 08.18 수정 : 문구 변경 -->
                                                             <span class="txt">
                                                                 I agree to the collection and use of my personal information
                                                             </span>
@@ -1129,7 +1122,7 @@
         </div>
     </div>
 
-    <!-- 캘린더 팝업 : 25.08.18 추가
+    <!-- 캘린더 팝업
     * 컴포넌트 사용시 유의사항
     - 캘린더팝업 id값 정의시: 대상 캘린더 버튼과 id값 동일 + Calendar 명명규칙 맞춰서 사용할것 
     ex)캘린더 버튼 id가 supply-input이면 캘린더팝업 id supply-inputCalendar로 정의 

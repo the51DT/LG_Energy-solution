@@ -2184,7 +2184,7 @@
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input:nth-child(5).flex-type > .input-wrap:not(.select-box-wrap) input {margin-left: 1.25rem; height: 65px;}
 
 
-.cont .selection-wrapper .sub-cont-wrap .selectbox-wrap.type3 .select-cate.size-sm > button {height: 65px;}
+.cont .selection-wrapper .sub-cont-wrap .selectbox-wrap.type3 .select-cate.size-sm > button {height: 65px;padding-right:30px;}
 .cont .selectbox-wrap.type3 .select-cate {position: relative;}
 .cont .selectbox-wrap.type3 .select-cate::after {position: absolute; bottom: 0; left: 0;}
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(+ .input-wrap > .email-input-box > p),

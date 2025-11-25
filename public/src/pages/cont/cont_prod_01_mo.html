@@ -218,7 +218,6 @@
                 <div class="content-header-cont">
                     <h2 class="title-h1">문의하기</h2>
                     <div class="subp-tit-area">
-                        <!-- 08.18 수정 : 문구 변경-->
                         <h3 class="subp-tit">
                             문의사항을 남겨 주시면 빠른 시일 내에 답변드리겠습니다. 
                         </h3>
@@ -281,13 +280,12 @@
                                                 <button type="button" class="btn">기술</button>
                                                 <button type="button" class="btn">채용</button>
                                                 <button type="button" class="btn">지속가능경영</button>
-                                                <!-- 09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
                                                 <div class="btn icon-btn">
                                                     <a href="https://procurement-les.singlex.com/supplierWelcome/idea-proposal.html" target="_blank" title="협력사 등록 페이지 새창 이동">
                                                         협력사 등록
                                                         <div class="img-wrap"></div>
                                                     </a>
-                                                </div><!-- //09.03 수정 : img 아이콘 bg로 변경(hover 아이콘 디자인 추가로 인한 수정) -->
+                                                </div>
                                                 <button type="button" class="btn">기타</button>
                                             </div>
                                         </div>
@@ -298,7 +296,6 @@
                                                 <p class="acd-tit">세부 카테고리를 선택해주세요.</p>
                                             </div>
                                         </div>
-                                        <!-- 08.27 수정 : 버튼 위치 변경 : S -->
                                         <div class="acd-panel accordion-content" role="region">
                                             <div class="cont-btn-wrap sub-btn-wrap">
                                                 <div class="btn-box">
@@ -376,12 +373,12 @@
                                                     <img src="../../../inc/images/icon/icon_arrow_right_wh.svg">
                                                 </button>
                                             </div>                                        
-                                        </div><!-- //08.27 수정 : 버튼 위치 변경 : E -->
+                                        </div>
                                     </div>
                                     <div class="item selection-wrapper" id="step-3">
                                         <div class="acd-group">
                                             <div class="align-group">
-                                                <p class="acd-tit">상세 정보를 작성해주세요.</p> <!-- 08.18 수정 : 문구 변경-->
+                                                <p class="acd-tit">상세 정보를 작성해주세요.</p> 
                                             </div>
                                         </div>
                                         <div class="acd-panel accordion-content" role="region">
@@ -478,17 +475,16 @@
                                                             </div>
                                                             <div class="input-wrap selectbox-wrap type3">
                                                                 <div class="select-cate activeSelect size-sm">
-                                                                    <button type="button" aria-haspopup="listbox">단위선택</button> <!-- 09.15 / 문구 수정 -->
+                                                                    <button type="button" aria-haspopup="listbox">단위선택</button> <!-- 11.25 / 문구 수정 -->
                                                                     <ul class="select-menu" role="listbox">
-                                                                        <!-- 09.15 / 단위 선택 셀렉트 값 삭제 -->
+                                                                        <li><a href="javascript:;" role="option"
+                                                                                tabindex="0" class="active">단위선택</a></li> <!-- 11.25 / 문구 수정 -->
                                                                         <li><a href="javascript:;" role="option"
                                                                                 tabindex="0">Kwh</a></li>
                                                                         <li><a href="javascript:;" role="option"
                                                                                 tabindex="0">Mwh</a></li>
                                                                         <li><a href="javascript:;" role="option"
                                                                                 tabindex="0">Gwh</a></li>
-                                                                        <li><a href="javascript:;" role="option"
-                                                                                tabindex="0">#</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -497,7 +493,6 @@
                                                     <p><span class="ico-info"></span>배터리는 오직 배터리 팩 제조사 또는 시스템 통합 사업자에게만 판매 될 수 있습니다.<br>
                                                     개인 소비자가 배터리는 취급할 수 없으며, 개별 시장에서 개인 소비자에게 판매될 수 없습니다.</p>
                                                 </div><!--//wrap-form-input-->
-                                                <!-- 09.09 수정 : 요구 성능 selectbox 제거 : S -->
                                                 <div class="wrap-form-input">
                                                     <div class="input-wrap">
                                                         <label for="performance-input">요구 성능</label>
@@ -510,7 +505,6 @@
                                                         </div>
                                                     </div>
                                                 </div><!--//wrap-form-input-->
-                                                <!-- 09.09 수정 : 요구 성능 selectbox 제거 : E -->
                                                 <div class="wrap-form-input">
                                                     <div class="input-wrap selectbox-wrap type3 ">
                                                         <label for="develop-detail">개발 현황</label>
@@ -530,10 +524,9 @@
                                                         </div>
                                                     </div>
                                                 </div><!--//wrap-form-input-->
-                                                <!-- 공급 예상 시기 : 25.08.18 캘린더 컴포넌트 퍼블리싱 완료  -->
                                                 <div class="wrap-form-input">
                                                     <div class="input-wrap">
-                                                        <label for="supply-input">공급 희망 시기</label> <!-- 09.09 수정 : 문구 변경 -->
+                                                        <label for="supply-input">공급 희망 시기</label>
                                                         <div class="supply-input-wrap w100">
                                                             <div class="calendar-wrap">                                                                    
                                                                 <button type="button" class="calendar-btn" id="supply-input">
@@ -549,7 +542,6 @@
                                                         <div class="supply-battery-input-wrap">
                                                             <div class="wrap-form-box supply-battery-radio">
                                                                 <div class="radio">
-                                                                <!-- 10.28 // checked 삭제 -->
                                                                   <input type="radio" id="radio-1-1" name="radio-vertical">
                                                                   <label for="radio-1-1" class="radio-label">
                                                                     <span class="custom-radio"></span>
@@ -686,7 +678,7 @@
                                     <div class="item" id="step-4">
                                         <div class="acd-group">
                                             <div class="align-group">
-                                                <p class="acd-tit">문의자의 정보를 입력해주세요.</p> <!-- 09.09 수정 : 문구 변경 -->
+                                                <p class="acd-tit">문의자의 정보를 입력해주세요.</p>
                                             </div>
                                         </div>
                                         <div class="acd-panel accordion-content" role="region">
@@ -698,7 +690,6 @@
                                                         <input type="text" id="user-input" class="input-box" placeholder="이름을 입력해 주세요.">
                                                         <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                     </div>
-                                                    <!-- 09.09 수정 : (PC/MO) 이메일 영역 인풋필드내 예시문구 사라지고, 안내문구 추가 (60번 수정사항) : S -->
                                                     <div class="input-wrap">                                                            
                                                         <label for="email-input">이메일<span>*</span></label>
                                                         <div class="email-input-box">
@@ -709,14 +700,14 @@
                                                             </div>
                                                             <p><span class="ico-info"></span>답변은 입력하신 이메일로 발송되니 정확히 입력해 주세요.</p>                      
                                                         </div>                                      
-                                                    </div><!-- 09.09 수정 : (PC/MO) 이메일 영역 인풋필드내 예시문구 사라지고, 안내문구 추가 (60번 수정사항) : E -->
+                                                    </div>
                                                     <div class="input-wrap">
                                                         <label for="company-input">회사명<span>*</span></label>
                                                         <input type="text" id="company-input" class="input-box" placeholder="회사명을 입력해 주세요.">
                                                         <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                     </div>
                                                     <div class="input-wrap">
-                                                        <label for="website-input">홈페이지</label> <!-- 09.12 수정 : 홈페이지 필수값 제거 -->
+                                                        <label for="website-input">홈페이지</label>
                                                         <input type="text" id="website-input" class="input-box" placeholder="홈페이지 주소를 입력해 주세요.">
                                                         <button class="btn-input-del" title="입력 내용 삭제"></button>
                                                     </div>
@@ -776,10 +767,8 @@
                                                         <label for="cont-input">문의내용<span>*</span></label>
                                                         <div class="textarea-box w100">
                                                             <textarea id="cont-input" class="textarea" placeholder="내용을 입력해주세요." maxlength="1000"></textarea>
-                                                            <!-- 09.15 / 글자 수 체크 삭제 -->
                                                         </div>                                                        
                                                     </div>
-                                                    <!-- 09.09 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - S-->
                                                     <div class="input-wrap">
                                                         <label for="file-input">첨부파일</label>
                                                         <div class="file-input-box">
@@ -798,7 +787,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- 09.09 수정 : 하단 문구 추가로 인한 첨부파일 레이아웃 구조 변경 - E-->
                                                 </div>
                                             </div>
                                             <div class="btn-wrap">
@@ -821,7 +809,6 @@
                                         </div>
                                         <div class="acd-panel accordion-content" role="region">
                                             <div class="sub-cont-wrap consent-cont-wrap">
-                                                <!-- 08.18 수정 : 문구 변경 - S -->
                                                 <div class="text-list-wrap terms-wrap">
                                                     <ol class="text-list">
                                                         <li>
@@ -830,7 +817,6 @@
                                                         </li>
                                                         <li>
                                                             <strong><span>2.</span>개인정보 수집 항목</strong>
-                                                            <!-- 10.28 // 문구수정 연락처 삭제-->
                                                             <p>이름, 이메일, 회사명, 홈페이지 주소, 문의내용, 회사 소재 대륙과 국가, 서비스 이용기록(접속일시), 접속 IP 정보</p>
                                                         </li>
                                                         <li>
@@ -841,7 +827,7 @@
                                                         </li>
                                                         <span><span>*</span>개인정보 수집, 이용, 제공에 동의한 경우에 한해 문의 서비스를 이용하실 수 있습니다.</span>
                                                     </ol>
-                                                </div><!-- //08.18 수정 : 문구 변경 - E -->  
+                                                </div>
                                             </div>
                                             <div class="terms-chk-wrap">
                                                 <div class="checkbox chk-terms-wrap">
@@ -849,7 +835,6 @@
                                                         name="checkbox-5">
                                                     <label for="checkbox-5" class="checkbox-label">
                                                         <span class="custom-checkbox"></span>
-                                                        <!-- 08.18 수정 : 문구 변경 -->
                                                         <span class="txt">
                                                             본인은 개인정보 수집ㆍ이용에 동의합니다.
                                                         </span>
@@ -979,7 +964,7 @@
         </div>
     </div>
 
-    <!-- 캘린더 팝업 : 25.08.18 추가
+    <!-- 캘린더 팝업 : 
     * 컴포넌트 사용시 유의사항
     캘린더팝업 id값 정의시: 대상 캘린더 버튼과 id값 동일 + Calendar 명명규칙 맞춰서 사용할것 
     ex)캘린더 버튼 id가 supply-input이면 캘린더팝업 id supply-inputCalendar로 정의 -->
