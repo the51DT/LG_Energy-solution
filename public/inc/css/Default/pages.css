@@ -1284,7 +1284,8 @@
 .pmtl .industry-material [class^="icon-btn"] {background-color: #33B0C6;}
 .pmtl .industry-material [class^="icon-btn"]:hover {background-color: #0c9cAB;}
 
-.pmtl:lang(pl) .mat-wrap > div {gap: 0.625rem;}
+.pmtl:lang(pl) .mat-wrap > div,
+.pmtl:lang(de) .mat-wrap > div {gap: 0.625rem;}
 /* 소재 추가 css (LG에너지솔루션 차별화역량) */
 .mat-cont-wrap {margin-top: 3.75rem;}
 .mat-cont-wrap .tit {font-size: 1.5rem; line-height: 2.375rem; font-weight: 600; margin-bottom: 1.25rem;}
