@@ -1131,8 +1131,10 @@
 .pfom .prod-sol-wrap .prod-sol-text .text-list-wrap {font-size: 0.875rem; line-height: 1.3125rem;}
 .pfom .prod-sol-wrap .prod-sol-text .text-list-wrap .text-list > li::before {top: 0.4375rem; transform: unset;}
 .pfom .prod-sol-wrap .prod-sol-text [class^="icon-btn"] {width: 100%; font-size: 0.875rem; line-height: 1.225rem;}
-.pfom .prod-sol-wrap .prod-sol-text-list {padding:1.25rem;;margin-top:0;display: flex;flex-direction: column;align-items: flex-start;gap: 1.25rem;border-radius: var(--Desktop-radius-04, 1rem);background: var(--fill-fill-default-04, #F3F5F7);font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.pfom .prod-sol-wrap .prod-sol-text-list {display: flex;flex-direction: column;align-items: flex-start;gap: 1.25rem;}
+.pfom .prod-sol-wrap .prod-sol-text-list .text-list-wrap {padding: 0.62rem; border-radius: var(--Desktop-radius-04, 1rem);background: var(--fill-fill-default-04, #F3F5F7);font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
 .pfom .prod-sol-wrap .prod-sol-text-list .text-list > li::before {top: 0.69rem; left: 0.25rem; transform: unset;}
+.pfom .prod-sol-wrap .prod-sol-text-list .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.5rem;}
 .pfom .prod-sol-wrap .prod-sol-text-list li{color: var(--text-text-default-02, #555758);font-size: var(--size-mobile-B2, 0.875rem);font-weight: 400;line-height: var(--line-height-mobile-B2, 1.3125rem); /* 150% */letter-spacing: var(--letter-spacing-default, 0);}
 .pfom .prod-sol-wrap .prod-sol-box {flex-direction: column; gap: 0.5rem;}
 .pfom .prod-sol-wrap .prod-sol-box > div {padding: 1.5rem;}
@@ -1184,12 +1186,10 @@
 .pfom:lang(de) .tab-cate-wrap.type2 .tab-category:has(li:nth-child(3)) > li,
 .pfom:lang(de) .tab-cate-wrap.type2 .tab-category:has(li:nth-child(3)) > li button {width: fit-content;}
 
-.pfom .prod-sol-wrap .prod-sol-text-list {display: none;}
-.pfom .prod-sol-wrap.on .prod-sol-text-list {display: flex;}
 .prod-sol-wrap .prod-sol-box-wrap {display: none;}
 .prod-sol-wrap.on .prod-sol-box-wrap {display: block;}
-.prod-sol-wrap .prod-sol-box-wrap .prod-sol-box {display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;}
-.prod-sol-wrap .prod-sol-box-wrap .prod-sol-box > div {padding: 1.5rem 0.75rem;}
+.prod-sol-wrap .prod-sol-box-wrap .prod-sol-box {display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;}
+.prod-sol-wrap .prod-sol-box-wrap .prod-sol-box > div {padding: 1.5rem 0.75rem; min-width: 9.75rem;}
 
 /* 11.17 수정사항 : 더보기 버튼 디자인 변경 (제품>폼팩터, 지배구조>이사회) */
 .prod-sol-wrap .table-wrap + .btn-more {margin-top: 1.5rem; flex-direction: row;}

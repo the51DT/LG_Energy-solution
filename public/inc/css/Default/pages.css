@@ -2156,6 +2156,7 @@
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap .performance-input-wrap { display: grid; grid-template-columns: 32.5rem 1fr; column-gap: 1.25rem; align-items: end; }
 /* 숫자 + 인터랙션 관련 코드 */
 .cont .stepper-wrapper { position: relative; padding: 0; }
+.cont .stepper-wrapper .wrap-form-input .input-wrap.on .btn-input-del {display: none;}
 .cont .stepper-wrapper .selectbox-wrap.type3 .select-cate {max-width: 32.375rem;}
 .cont .stepper-wrapper .selectbox-wrap.type3 .select-cate.size-sm {width: 10.0625rem;}
 .cont .stepper-wrapper .selectbox-wrap.type3 .select-cate.size-sm > button {min-width: 100%;}
@@ -2182,7 +2183,9 @@
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input:nth-child(5).flex-type > .input-wrap:not(.select-box-wrap) input {margin-left: 1.25rem; height: 65px;}
 
 
-.cont .selection-wrapper .sub-cont-wrap .selectbox-wrap.type3 .select-cate.size-sm > button {height: 64px;}
+.cont .selection-wrapper .sub-cont-wrap .selectbox-wrap.type3 .select-cate.size-sm > button {height: 65px;}
+.cont .selectbox-wrap.type3 .select-cate {position: relative;}
+.cont .selectbox-wrap.type3 .select-cate::after {position: absolute; bottom: 0; left: 0;}
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(+ .input-wrap > .email-input-box > p),
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(> .email-input-box > p) {align-items: flex-start;}
 .cont .stepper-wrapper .sub-cont-wrap .wrap-form-input .input-wrap:has(+ .input-wrap > .email-input-box > p) > label,
