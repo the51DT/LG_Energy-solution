@@ -8,7 +8,7 @@
 .sust-sys .vision-wrap .article-content:not(:last-child):after {content:""; width: 100%; height: 1px; background: #c9ced1; display: block; margin: 5rem 0;}
 .sust-sys .vision-wrap .article-content {padding-top:0;}
 .sust-sys .vision-wrap .article-content:last-child {margin-bottom: 5rem;}
-.sust-sys .vision-desc {font-size: 1.25rem; line-height: 2rem; color: #171819; font-weight: 400; margin: 2.5rem 0 5rem;}
+.sust-sys .vision-desc {font-size: 1.5rem; line-height: 2.375rem; color: #171819; font-weight: 400; margin: 2.5rem 0 5rem;}
 .sust-sys .accordion-list .accordion-btn {display: flex; align-items: center; justify-content: space-between; padding: .967rem 2.5rem;}
 .sust-sys .accordion-list.on .accordion-btn {padding: 3.75rem 2.5rem 0 2.5rem;}
 .sust-sys .accordion-list .accordion-btn::after {position: unset; transform: unset;}
@@ -64,7 +64,7 @@
 /* 지속가능경영 > 추진체계 > 글로벌 파트너십 */
 .sust-sys .tab3-content .content-item01 {padding-bottom: 3.75rem;}
 .sust-sys .tab3-content .cont-area-intro {margin-top: 1.88rem;}
-.sust-sys .tab3-content .cont-area-intro .intro-desc {font-size: 1.25rem; font-weight: 400; line-height: 2rem; color: #171819;}
+.sust-sys .tab3-content .cont-area-intro .intro-desc {font-size: 1.5rem; font-weight: 400; line-height: 2.375rem; color: #171819;}
 .sust-sys .tab3-content .content-item02 {background-color: #F3F5F7;}
 .sust-sys .box-list {display: flex; flex-wrap: wrap; gap: 1.25rem;}
 .sust-sys .box-list>li {position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 1.88rem; padding: 2.5rem; width: calc(50% - .625rem); background-color: #fff; border-radius: 1rem;}
@@ -89,9 +89,11 @@
 .sust-env .vision-img::after {content: ''; position: absolute; right: 100%; bottom: 4.19rem; transform: translateX(5.5rem); width: 20rem; height: .375rem; background-color: #33B0C6;}
 .sust-env .tab1-content .content-item02 {background-color: #F3F5F7;}
 .sust-env .tab1-content .content-item02 .title-h2 {margin-bottom: 1.88rem; padding-bottom: 0;}
-.sust-env .title-h1 + .article-desc {margin-top: 1.88rem;}
+.sust-env .title-h1 + .article-desc {margin-top: 1.88rem;font-size: 1.5rem; line-height: 2.375rem;}
 .sust-env .article-desc {font-size: 1.25rem; line-height: 2rem; font-weight: 400; color: #171819;}
 .sust-env .article-desc.intro {margin-top: 1.88rem;}
+.sust-env .tab3-content .content-item01 .article-desc{font-size: 1.5rem; line-height: 2.375rem;}
+.sust-env .tab5-content .content-item01 .article-desc{font-size: 1.5rem; line-height: 2.375rem;}
 .sust-env .intro-wrap .article-desc {margin: 1.25rem 0;}
 .sust-env .eiass-wrap {display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 2.5rem;}
 .sust-env .eiass-box {display: flex; flex-direction: column; align-items: center; gap: 1.88rem; width: calc(33.33% - .85rem); padding: 2.5rem; background-color: #fff; border: 2px solid #E1E7EA; border-radius: 1rem;}
@@ -570,6 +572,7 @@
 /* 지속가능경영 > 사회 / 뒤쪽 내용 충돌 방지를 위해 아래쪽에 작성 */
 .sust-soc .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .sust-soc [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
+.sust-soc .title-h1 + .title-desc {font-size: 1.5rem; font-weight: 400; line-height:  2.375rem;}
 .sust-env.sust-soc [class^="title-h"] {padding-bottom: 0;}
 .sust-soc .foot-area {padding-top: 2.5rem;} 
 
@@ -1372,6 +1375,7 @@
 .sgov .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .sgov .title-desc + .title-desc {margin-top: 1rem;}
 .sgov [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
+.sgov .title-h1 + .title-desc {font-size: 1.5rem;line-height: 2.375rem;}
 .sgov .emphasis::after {content: "*"; color: var(--colorElement-light-text-text-primary);}
 .sgov [class^="content-item"] .content-sect:has(> .accordion-list.type2) {padding-top: 1.25rem;}
 
