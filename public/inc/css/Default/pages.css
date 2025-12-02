@@ -1371,7 +1371,7 @@
 .sprf .sust-rating > li .tit {width: 12.25rem; font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-primary);}
 .sprf .sust-rating > li .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 
-/* 지배구조 (sgov) */
+/* 거버넌스 (sgov) */
 .sgov .title-desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01);}
 .sgov .title-desc + .title-desc {margin-top: 1rem;}
 .sgov [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
@@ -2574,7 +2574,7 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .rcct .evaluation-wrap > div p { font-size: 1.125rem; font-weight: 500; line-height: 1.8rem; }
 .rcct .evaluation-tit { border-bottom: none; padding: 0; }
 
-/* 서비스 > B-once */
+/* 서비스 > B.once */
 .service .article-btn-wrap { display: flex; justify-content: center; gap: 0.62rem; margin-bottom: 5rem; }
 .service .article-btn-wrap > a { display: flex; gap: 0.62rem; padding: 0.75rem 1.25rem; border: 1px solid #c9ced1; border-radius: 0.5625rem; align-items: center; justify-content: center; width: 16.25rem; }
 .service .article-btn-wrap > a > img { width: 1.5rem; }

@@ -1308,7 +1308,7 @@
 .sprf .sust-rating > li .desc {font-size: 1rem; line-height: 1.6rem;}
 
 
-/* 지배구조 (sgov) */
+/* 거버넌스 (sgov) */
 .sgov .title-desc {font-size: 1rem; line-height: 1.6rem;}
 .sgov .title-desc + .title-desc {margin-top: 0.5rem;}
 .sgov [class^="title-h"] + .title-desc {margin-top: 1rem;}
@@ -2204,7 +2204,7 @@
 .rcct #tab1-content .content-item01 {padding-bottom: 7.75rem;}
 .rcct #tab2-content .content-item01 {padding-top: 3rem; padding-bottom: 6.75rem;}
 
-/* 서비스 > B-once */
+/* 서비스 > B.once */
 .service .article-btn-wrap { flex-direction: column; gap: 0.5rem; margin-bottom: 3rem; }
 .service .article-btn-wrap > a { width: 100%; }
 .serv-bonce .article-img { padding: 0 1.63rem; margin: 1.5rem 0 3rem 0; }
