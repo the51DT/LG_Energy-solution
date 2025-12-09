@@ -1376,7 +1376,7 @@
 .sgov .title-desc + .title-desc {margin-top: 1rem;}
 .sgov [class^="title-h"] + .title-desc {margin-top: 1.875rem;}
 .sgov .title-h1 + .title-desc {font-size: 1.5rem;line-height: 2.375rem;}
-.sgov .emphasis::after {content: "*"; color: var(--colorElement-light-text-text-primary);}
+/* .sgov .emphasis::after {content: "*"; color: var(--colorElement-light-text-text-primary);} */
 .sgov [class^="content-item"] .content-sect:has(> .accordion-list.type2) {padding-top: 1.25rem;}
 
 .sgov [class^="content-item"] .content-sect:has(.bod-status) {padding-top: 4.625rem;}
@@ -1413,7 +1413,7 @@
 .sgov .bod-comp .mem {display: inline-block; width: 1.25rem; height: 1.25rem; border-radius: 100%; border: 1px solid var(--colorElement-light-stroke-stroke-default01); vertical-align: middle;}
 .sgov .indep-dir-wrap {margin-top: 3.75rem;}
 .sgov .indep-dir-wrap .emphasis {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
-.sgov .indep-dir-wrap .emphasis::after {margin-left: 0.25rem;}
+/* .sgov .indep-dir-wrap .emphasis::after {margin-left: 0.25rem;} */
 .sgov .indep-dir .indep-dir-img {margin-top: 1.25rem;}
 .sgov .indep-dir .btn-wrap {margin-top: 3.75rem; flex-wrap: wrap;}
 .sgov .indep-dir .btn-wrap [class^="icon-btn"] {gap: 1.25rem; min-width: 22.5rem;}
