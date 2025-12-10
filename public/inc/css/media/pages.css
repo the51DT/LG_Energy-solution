@@ -1178,7 +1178,7 @@
 .pfom:lang(pl) .prod-features > li,
 .pfom:lang(de) .prod-features > li {padding-inline: 2rem;}
 .pfom:lang(pl) .prod-features > li > .tit,
-.pfom:lang(de) .prod-features > li > .tit {font-size: 1rem; line-height: 1.6rem;}
+.pfom:lang(de) .prod-features > li > .tit {font-size: 1rem; line-height: 1.6rem; min-width:250px;}
 .pfom:lang(pl) .prod-features > li > .tit > span,
 .pfom:lang(de) .prod-features > li > .tit > span {font-size: 0.75rem; line-height: 1.2rem;}
 .pfom:lang(pl) .tech-list .tech-box-col .box-wrap .box-col > p {white-space: normal;}

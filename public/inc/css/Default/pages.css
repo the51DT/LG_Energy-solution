@@ -1003,7 +1003,8 @@
 .pfom .prod-core-box > li + li {margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .pfom .prod-core-box > li .core-text .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .prod-core-box > li .core-text .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
-.pfom .prod-core-box > li .core-icon {display: flex; align-items: center; gap: 1.875rem;}
+.pfom .prod-core-box > li .core-icon {display: flex; align-items: flex-start; gap: 1.875rem;} /* 12.10 수정 */
+.pfom .prod-core-box > li .core-icon:has(.more) {align-items: center;} /* 12.10 수정 */
 .pfom .prod-core-box > li .core-icon .icon-wrap {display: flex; flex-direction: column; gap: 0.625rem; text-align: center;}
 .pfom .prod-core-box > li .core-icon .icon-wrap img {width: 6.25rem; height: 6.25rem;}
 .pfom .prod-core-box > li .core-icon .icon-wrap > p {display: flex; justify-content: center; align-items: center; font-size: 1rem; font-weight: 500; line-height: 1.6rem; color: var(--colorElement-light-secondary-secondary-enabled);}
@@ -2610,7 +2611,7 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .serv-bonce .ucd-desc-wrap .text-list-wrap .text-list li {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem; color: #858889;}
 
 .serv-bonce:lang(en) .type-explain > p > span {width: 5rem;}
-.serv-bonce:lang(zh-CN) .type-explain > p > span {width: 4rem;}
+.serv-bonce:lang(zh-CN) .type-explain > p > span {width: 5rem;}
 .serv-bonce:lang(de) .type-explain > p > span {width: 5.5rem;}
 
 /* 서비스 > KooRooo */
