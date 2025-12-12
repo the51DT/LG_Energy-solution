@@ -350,6 +350,21 @@
 .btn-second-box {padding-top: 1.88rem;}
 .btn-second-box .btn-wrap {margin-top: 0;}
 
+/* 신규 디자인 추가건 (12.11) */
+/* 밸류체인 ESG 경영 */
+.global-box-wrap {padding-top: 2.5rem;}
+.global-box-wrap .global-box-area {padding: 1.88rem; border-radius: 1rem; background: #EAF3F8;}
+.global-box-wrap .global-box-area .box-title-area {display: flex; justify-content: center; align-items: center; gap: 0.5rem; flex-direction: column;}
+.global-box-wrap .global-box-area .box-title-area .box-title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819;}
+.global-box-wrap .global-box-area .box-title-area .sub-title {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
+.global-box-wrap .global-box-area .box-list-area {padding-top:1.5rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem;}
+.global-box-wrap .global-box-area .box-list-area > li {padding: 2rem; background:#fff; border-radius: 0.5rem;}
+.global-box-wrap .global-box-area .box-list-area > li.col2 {grid-column: span 2;}
+.global-box-wrap .global-box-area .box-list-area > li .item-title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819; display: block;}
+.global-box-wrap .global-box-area .box-list-area > li .item-type {margin-top: 0.62rem; background:#33b0c6; color: #fff; border-radius:0.5rem; font-size: 1.125rem; line-height: 1.8rem; font-weight: 600; padding: 0.375rem 0.625rem; display: inline-block;}
+.global-box-wrap .global-box-area .box-list-area > li .item-desc {margin-top: 1.5rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555578;}
+.global-box-wrap .global-box-area .box-list-area > li .item-desc-info {margin-top: 0.62rem; font-size: 1rem; color: #33B0C6; font-weight: 400; line-height: 1.6rem;}
+
 .esgm .title-h3 { font-size: 2rem; font-weight: 700; color: #171819; margin-top: 1.25rem; }
 .esgm .sub-title { font-size: 1.5rem; font-weight: 600; color: #171819; }
 .esgm .sub-title-lg { font-size: 1.75rem; font-weight: 600; color: #171819; }
@@ -596,7 +611,8 @@
 .sust-soc .safety-improve {display: flex; flex-direction: column; gap: 5rem;}
 .sust-soc .safety-improve [class^="title-h"] + .title-desc {margin-top: 1.25rem; margin-bottom: 2.5rem;}
 .sust-soc .safety-improve .safety-improve-box {display: flex; justify-content: center; gap: 5rem; padding: 3.75rem 2.5rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
-.sust-soc .safety-improve .safety-improve-box > div > img {width: 6.25rem; height: 6.25rem;}
+.sust-soc .safety-improve .safety-improve-box > div > .img-wrap {width: 5rem; height: 5rem; margin: 0 auto; padding: 1rem; background-color: #fff; border-radius: 50%;}
+.sust-soc .safety-improve .safety-improve-box > div > .img-wrap > img {width: 3rem; height: 3rem; object-fit: cover;}
 .sust-soc .safety-improve .safety-improve-box .tit {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.875rem;}
 .sust-soc .safety-improve .safety-improve-box .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 0.625rem;}
 .sust-soc .safety-improve .safety-improve-ico {display: flex; gap: 1.25rem;}
@@ -609,6 +625,19 @@
 .sust-soc .safety-improve .safety-improve-img > div > img {height: 18.75rem; width: 100%; object-fit: cover;}
 .sust-soc .safety-improve .safety-improve-img > div > p {margin-top: 1.25rem; font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); text-align: center;}
 .sust-soc .safety-improve .csr-detail:only-child > img {width: 43.4375rem; height: 22.5rem;}
+/* 12.11 디자인 레이아웃 변경으로 인한 신규 추가 css - S */
+.sust-soc .safety-improve .safety-improve-box-wrap .title-h3 {font-weight: 600; line-height: 2.375rem;}
+.sust-soc .safety-improve .safety-improve-box-wrap .title-h3 strong {color: #33b0c6;}
+.sust-soc .safety-improve .safety-improve-box-wrap .safety-improve-box {gap: 1.25rem; background-color: #fff; padding: 0; justify-content: space-between;}
+.sust-soc .safety-improve .safety-improve-box-wrap .safety-improve-box .tit {margin-top: 1rem;}
+.sust-soc .safety-improve .safety-improve-box-wrap .safety-improve-box .improve-box-content {display: flex; justify-content: space-between; gap: 2.5rem; background: none; width: 100%; padding: 1.88rem 0 0;}
+.sust-soc .safety-improve .safety-improve-box-wrap .safety-improve-box .improve-box-content > img {width: 27.5rem; height: auto;}
+.sust-soc .safety-improve .safety-improve-box-wrap .safety-improve-box .improve-box-content .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758; margin-top: 0; min-width: 55rem; text-align: left;}
+.sust-soc .safety-improve .safety-improve-box-wrap .safety-improve-box > div {background: #F3F5F7; padding: 2.5rem 1.25rem; width: calc(100% / 5); border-radius: 0.5rem;}
+.sust-soc .safety-improve .safety-improve-box-wrap .safety-improve-box.item3 > div {width: calc(100% / 3);}
+.sust-soc .safety-improve .safety-improve-box-wrap > div {border: 2px solid #e1e7ea; border-radius: 1rem; padding: 2.5rem;  justify-content: space-between; }
+.sust-soc .safety-improve .safety-improve-box-wrap > div:not(:last-child) {margin-bottom: 1.25rem;}
+/* 12.11 디자인 레이아웃 변경으로 인한 신규 추가 css - E */
 
 .sust-soc [class^="content-item"] .content-sect:has(.human-mgmt) {padding-top: 5rem;}
 .sust-soc .human-mgmt .img-wrap {width: 70rem; height: auto; margin-inline: auto; margin-top: 2.5rem;}
