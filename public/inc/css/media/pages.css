@@ -2209,6 +2209,54 @@
 
 :lang(pl).rchr .sect-box > div {padding-inline: 0;}
 
+/* 인재육성 디자인 레이아웃 변경으로 css 추가 (12.15) */
+.rchr #tab2-content.hr .content-header {padding-bottom: 0;}
+.rchr #tab2-content .content-header .title-h1:has( + .subp-tit-area) {margin-bottom: 1rem; margin-top: 1rem; font-size: 1.5rem; line-height: 2.0625rem;}
+.rchr.wrap:not(.main_p) .hr .content-header .subp-tit {font-size: 1.125rem; font-weight: 400; line-height: 1.75rem;}
+.rchr .hr .content-item01 {padding-top: 2rem !important;}
+.rchr .hr [class^="content-item"]:not(:last-child) {padding-bottom: 0;}
+.rchr .hr [class^="content-item"] + [class^="content-item"] {padding-top: 3rem !important;}
+.rchr .hr [class^="content-item"]:not(:last-child) .content-wrap:after {margin-top: 3rem;}
+.step-box-area .title,
+.container-box-area .title {font-size: 1rem; line-height: 1.6rem;}
+.step-box-area .title > span,
+.container-box-area .title > span {font-size: 0.875rem; line-height: 1.3125rem;}
+
+.process-cont-wrap .title-h3 {margin-bottom: 1rem !important;}
+.process-cont-wrap .desc {font-size: 1rem; line-height: 1.6rem; }
+.program-conts-wrap > .desc {font-size: 1rem; line-height: 1.6rem; padding-top: 0.62rem;}
+
+.program-conts-wrap .program-img-box {padding: 3rem 0;}
+.program-conts-wrap .program-cont-box > ul > li:not(:last-child) {padding-bottom: 3rem;}
+.program-conts-wrap .program-cont-box > ul {display: block;}
+.program-conts-wrap .program-cont-box > ul > li {display: block;}
+.program-conts-wrap .program-cont-box > ul > li .left-area {position: relative; padding:0; width:calc(100% - 2.97rem);}
+.program-conts-wrap .program-cont-box > ul > li .left-area:after {content:""; position: absolute; top:50%; right: revert; left: 2.2rem; width: 100%; height: 2px; background-color: #33B0C6; transform: translateY(-50%);}
+.program-conts-wrap .program-cont-box > ul > li .left-area .num {font-size: 2.5rem; width: 1.1875rem; height: 2.5rem; }
+.program-conts-wrap .program-cont-box > ul > li .right-area {margin-top: 0.5rem;}
+.program-conts-wrap .program-cont-box > ul > li .right-area .text-wrap .sub {font-size: 1.125rem; line-height: 1.75rem;}
+.program-conts-wrap .program-cont-box > ul > li .right-area .text-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
+.program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap {margin-top: 1.5rem;}
+.program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item {padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;}
+.program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .tit {font-size: 1rem; line-height: 1.6rem; text-align: center;}
+.program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .desc {padding-top: 0.5rem; font-size: 0.875rem; line-height: 1.3125rem; text-align: center;}
+.step-box-area {padding: 1.5rem; border-radius: 0.5rem;}
+.step-box-area > ul {flex-direction: column;}
+.step-box-area > ul > li:not(:last-child) {padding-right: 0; padding-bottom: 5rem;}
+.step-box-area > ul > li:not(:last-child):after {content:""; width: 100%; height: 2.88rem; margin: 1rem 0; background: url(../../images/img/recr_arrow_new_mo.png) no-repeat center center / contain; bottom: 0; left: 0; right: revert; top: revert;}
+.step-box-area .cont-body .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem; padding-top: 0;}
+.container-box-area {display: block;}
+.container-box-area .container-item:not(:last-child) {margin-bottom: 0.5rem;}
+.container-box-area .container-item {padding: 1rem; border-radius: 0.5rem;}
+.container-box-area .container-item .cont-head .title {font-size: 1rem; line-height: 1.6rem;}
+.container-box-area .container-item .cont-head .desc {font-size: 0.875rem; line-height: 1.3125rem;}
+.container-box-area .container-item .item-box-list,
+.container-box-area .container-item .item-box-list.col3 {grid-template-columns: repeat(2, 1fr);}
+.container-box-area .container-item .item-box-list .item,
+.container-box-area .container-item .item-box-list.col3 .item {width:100%;}
+.container-box-area .container-item .item-box-list .item .img-area {width: 2rem; height: 2rem;}
+.container-box-area .container-item .item-box-list .item .tit {font-size: 0.875rem; line-height: 1.3125rem;}
+
 /* 조직문화 */
 .rcct .content-sect {padding-top: 0; gap: 3rem;}
 .rcct.wrap:not(.main_p) .content-header .subp-tit { font-size: 1rem; line-height: 1.6rem; margin-top: 1rem; }
