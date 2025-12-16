@@ -2995,3 +2995,31 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .foot-guide_de .content-area .text-list-tynum li{display: flex;align-items: flex-start;font-size: var(--size-desktop-B1, 1.125rem);font-weight: 400;line-height: var(--line-height-desktop-B1, 1.8rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
 .foot-guide_de .content-area .text-list-tynum li span{flex:0 0 1.25rem;}
 .foot-guide_de .content-area .text-cont02{margin-top:5rem;display: flex;padding: 2.5rem;flex-direction: column;gap: 2.5rem;border-radius: var(--Desktop-radius-04, 1rem);background: var(--fill-fill-default-04, #F3F5F7);}
+
+
+/* 영상정보처리방침 */
+.foot-video-policy .header-wrap {height:revert; border-bottom: 0;}
+.foot-video-policy .header-area {height: revert;}
+.foot-video-policy .header-cont {display: flex; justify-content: center; height: revert; border-bottom: 1px solid #C9CED1; padding: 5rem 0;}
+.foot-video-policy .header-cont > .ci {width: 25.25rem; height: 4rem;}
+.foot-video-policy .header-cont > .ci a {width: 100%; height: 100%;}
+.foot-video-policy .content-wrap .content-header {padding: 19rem 0 6.25rem;}
+.foot-video-policy .content-wrap .content-header .title-h1 {margin-bottom: 1.87rem;}
+.foot-video-policy .content-header .desc {font-size: 1.25rem; line-height: 2rem; font-weight: 400;}
+.foot-video-policy .content-area {max-width: 90rem; margin: 0 auto; padding-bottom: 7.5rem;}
+.video-policy-wrap > section:not(:last-child) {padding-bottom: 5rem;}
+.video-policy-wrap > section .table-wrap {margin-top: 1.25rem; text-align: center;}
+.video-policy-wrap > section .table-wrap table thead > tr > th {font-size: 1.125rem; line-height: 1.8rem; text-align: center;}
+.video-policy-wrap > section .table-wrap table tbody > tr > th {text-align: center;}
+.video-policy-wrap > section .table-wrap table tbody tr > td {text-align: center; color: #555758; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; border-right: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.video-policy-wrap > section .table-wrap table tbody tr > td:last-child {border-right: 0;}
+.video-policy-wrap > section .table-wrap table tbody tr > td:first-of-type {border-right: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+
+.video-policy-wrap > section .subp-tit {font-size: 1.5rem; line-height: 2.375rem; font-weight: 600;}
+.video-policy-wrap > section .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; margin-top: 1.25rem;}
+.video-policy-wrap > section .table-wrap .col-site { width: 228px; }
+.video-policy-wrap > section .table-wrap .col-time,
+.video-policy-wrap > section .table-wrap .col-period,
+.video-policy-wrap > section .table-wrap .col-place { width: 208px; }
+.video-policy-wrap > section .table-wrap .col-process { width: auto; }
+.video-policy-wrap > section:nth-child(6) .table-wrap table tbody tr > td:last-child {border-right: 0;}
