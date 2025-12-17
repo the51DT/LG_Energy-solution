@@ -273,6 +273,15 @@ button {
   overflow: hidden;
 }
 
+
+html:lang(en) *,
+html:lang(pl) *,
+html:lang(de) *{
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 /************************** 
     Reset - 중문(zh-CN)
 ***************************/
