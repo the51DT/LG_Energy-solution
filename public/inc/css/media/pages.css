@@ -2241,9 +2241,9 @@
 .program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .tit {font-size: 1rem; line-height: 1.6rem; text-align: center;}
 .program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .desc {padding-top: 0.5rem; font-size: 0.875rem; line-height: 1.3125rem; text-align: center;}
 .step-box-area {padding: 1.5rem; border-radius: 0.5rem;}
-.step-box-area > ul {flex-direction: column;}
-.step-box-area > ul > li:not(:last-child) {padding-right: 0; padding-bottom: 5rem;}
-.step-box-area > ul > li:not(:last-child):after {content:""; width: 100%; height: 2.88rem; margin: 1rem 0; background: url(../../images/img/recr_arrow_new_mo.png) no-repeat center center / contain; bottom: 0; left: 0; right: revert; top: revert;}
+.step-box-area > ul {flex-direction: column;gap:5rem;}
+.step-box-area > ul > li:not(:last-child) {padding-right: 0;}
+.step-box-area > ul > li:not(:last-child):after {content:""; width: 100%; height: 2.88rem; margin: 1rem 0; background: url(../../images/img/recr_arrow_new_mo.png) no-repeat center center / contain; top:revert;bottom: -7rem; left: 0; right: revert; top: revert;}
 .step-box-area .cont-body .desc {font-size: 0.875rem; line-height: 1.3125rem; margin-top: 0.5rem; padding-top: 0;}
 .container-box-area {display: block;}
 .container-box-area .container-item:not(:last-child) {margin-bottom: 0.5rem;}
