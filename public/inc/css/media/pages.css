@@ -2211,7 +2211,7 @@
 
 /* 인재육성 디자인 레이아웃 변경으로 css 추가 (12.15) */
 .rchr #tab2-content.hr .content-header {padding-bottom: 0;}
-.rchr #tab2-content .content-header .title-h1:has( + .subp-tit-area) {margin-bottom: 1rem; margin-top: 1rem; font-size: 1.5rem; line-height: 2.0625rem;}
+.rchr #tab2-content .content-header .title-h1:has( + .subp-tit-area) {margin-bottom: 1rem;  font-size: 1.5rem; line-height: 2.0625rem;}
 .rchr.wrap:not(.main_p) .hr .content-header .subp-tit {font-size: 1.125rem; font-weight: 400; line-height: 1.75rem;}
 .rchr .hr .content-item01 {padding-top: 2rem !important;}
 .rchr .hr [class^="content-item"]:not(:last-child) {padding-bottom: 0;}

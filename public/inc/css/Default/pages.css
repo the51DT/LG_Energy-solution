@@ -609,6 +609,8 @@
 .sust-soc .box-container.grid-type .box-content .box-head:has(.num > img) .text-box .title {margin-top: 1.5rem;}
 .sust-soc .box-container.grid-type .box-content .box-head:has(.num > img) .text-box .desc {margin-top: 1.5rem;}
 .sust-soc .safety-improve {display: flex; flex-direction: column; gap: 5rem;}
+.sust-soc .safety-improve .img-wrap{text-align:center}
+.sust-soc .safety-improve .img-wrap img{max-width: 56.3rem;}
 .sust-soc .safety-improve [class^="title-h"] + .title-desc {margin-top: 1.25rem; margin-bottom: 2.5rem;}
 .sust-soc .safety-improve .safety-improve-box {display: flex; justify-content: center; gap: 5rem; padding: 3.75rem 2.5rem; border-radius: 1rem; background-color: #EAF3F8; text-align: center;}
 .sust-soc .safety-improve .safety-improve-box > div > .img-wrap {width: 5rem; height: 5rem; margin: 0 auto; padding: 1rem; background-color: #fff; border-radius: 50%;}
