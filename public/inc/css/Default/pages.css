@@ -2605,7 +2605,8 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .step-box-area > ul {display: flex; gap: 6rem; justify-content: space-between;}
 .step-box-area > ul > li{width:33.3%;}
 .step-box-area > ul > li:not(:last-child) {position: relative;}
-.step-box-area > ul > li:not(:last-child):after {content:""; width: 2rem; height: 100%; background: url(../../images/img/recr_arrow_new.png) no-repeat center / contain; display: block; position: absolute; top:50%; right: -5.5rem; margin: auto 2rem; transform: translateY(-50%);}
+.step-box-area > ul > li:not(:last-child):after {content:""; width: 1px; height: 100%;display:block;position: absolute;right:-2.5rem;top:0; background-color: #C9CED1;}
+.step-box-area > ul > li:not(:last-child)::before {content:""; width: 2rem; height: 3.125rem; background: url(../../images/img/recr_arrow_new_icon.svg) no-repeat center / contain; display: block; position: absolute; top:50%; right: -91px; margin: auto 2rem; transform: translateY(-50%);z-index: 1;}
 .step-box-area .cont-head {display: flex; gap: 1rem; align-items: center;}
 .step-box-area .cont-body .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; margin-top: 1.5rem;}
 .step-box-area .img-area {width: 2.5rem; height: 2.5rem;}
@@ -2615,7 +2616,7 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .container-box-area .container-item .item-box-list {display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.62rem; margin-top: 1rem;}
 .container-box-area .container-item .item-box-list.col3 {grid-template-columns: repeat(3, 1fr);}
 .container-box-area .container-item .item-box-list .item {background: #fff; padding:1rem 0 0.75rem; border-radius: 0.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.62rem; width: 8.6875rem;}
-.container-box-area .container-item .item-box-list.col3 .item {width: 12rem;}
+.container-box-area .container-item .item-box-list.col3 .item {width: 12rem;height:13.625rem;display: flex;align-items: center;justify-content: center;}
 .container-box-area .container-item .item-box-list .item .img-area {width: 2.5rem; height: 2.5rem;}
 .container-box-area .container-item .item-box-list .item .tit {font-size: 1rem; font-weight: 500; line-height: 1.6rem;}
 
