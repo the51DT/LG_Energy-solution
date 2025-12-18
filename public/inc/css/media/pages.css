@@ -1348,6 +1348,9 @@
 .sgov .title-desc + .title-desc {margin-top: 0.5rem;}
 .sgov [class^="title-h"] + .title-desc {margin-top: 1rem;}
 .sgov .title-h2 + .title-desc {font-size: 1.125rem;line-height: 1.75rem;}
+.sgov h2.title-h1{font-size:1.5rem;line-height: 2.0625rem;}
+.sgov h1.title-h1{font-size:1.5rem;line-height: 2.0625rem;}
+.sgov .title-h1 + .title-desc {font-size: 1.125rem;line-height: 1.75rem;}
 .sgov [class^="content-item"] .content-sect:has(> .accordion-list.type2) {padding-top: 1.5rem;}
 
 .sgov [class^="content-item"] .content-sect:has(.bod-status) {padding-top: 3rem;}

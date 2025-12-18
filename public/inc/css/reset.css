@@ -274,9 +274,7 @@ button {
 }
 
 
-html:lang(en) *,
-html:lang(pl) *,
-html:lang(de) *{
+html:lang(pl) *{
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
