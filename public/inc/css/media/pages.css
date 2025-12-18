@@ -2241,7 +2241,7 @@
 .program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .tit {font-size: 1rem; line-height: 1.6rem; text-align: center;}
 .program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .desc {padding-top: 0.5rem; font-size: 0.875rem; line-height: 1.3125rem; text-align: center;}
 .step-box-area {padding: 1.5rem; border-radius: 0.5rem;}
-.step-box-area > ul {flex-direction: column;gap:5rem;}
+.step-box-area > ul {flex-direction: column;gap:4rem;}
 .step-box-area > ul > li{width:100%;}
 .step-box-area > ul > li:not(:last-child) {padding-right: 0;}
 .step-box-area > ul > li:not(:last-child):after {content:""; width: 100%; height: 1px; top:revert;bottom: -37px; left: 0; right: revert; top: revert;}
