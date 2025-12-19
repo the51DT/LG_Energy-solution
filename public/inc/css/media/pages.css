@@ -985,7 +985,7 @@
 .pfom .prod-core-box > li .core-text .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .pfom .prod-core-box > li .core-text .desc {font-size: 1rem; line-height: 1.6rem; margin-top: 0.5rem;}
 .pfom .prod-core-box > li .core-icon {flex-wrap: wrap; justify-content: center; gap: 1.5rem;}
-.pfom .prod-core-box > li .core-icon .icon-wrap > p {font-size: 0.875rem; line-height: 1.3125rem;}
+.pfom .prod-core-box > li .core-icon .icon-wrap > p {font-size: 0.875rem; line-height: 1.3125rem;width:100%;}
 .pfom .prod-core-box > li .core-icon .icon-wrap > p > img {width: 1rem; height: 1rem;}
 .pfom:lang(pl) .prod-core-box > li .core-icon .icon-wrap:last-child > p img {bottom:2px; right:20px;}
 .pfom .prod-core-box > li .core-icon .icon-wrap:only-child {flex-direction: column; align-items: center;}
