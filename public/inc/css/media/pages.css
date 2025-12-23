@@ -191,7 +191,7 @@
 .sust-env .tab2-content .roadmap-wrap .roadmap-tit-wrap {flex-direction: column; align-items: flex-start; gap: 0.25rem; margin-bottom: 1.5rem;}
 .sust-env .tab2-content .roadmap-wrap .roadmap-tit-wrap .tit {font-size: 1rem; line-height: 1.6rem;}
 .sust-env .tab2-content .roadmap-wrap .roadmap-tit-wrap>span {width: 100%; text-align: right; font-size: 0.875rem; line-height: 1.3125rem;}
-
+.sust-env .tab2-content .title-h2 {margin-bottom: 1rem;}
 .sust-env .tab2-content .article-content4 {margin: 0;}
 .sust-env .article-content4 .article-inner {margin-top: 1rem;}
 .sust-env .article-content4 .text-wrap .article-desc {margin-top: .5rem;}
@@ -2241,8 +2241,8 @@
 .program-conts-wrap .program-cont-box > ul > li .right-area .text-wrap .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap {margin-top: 1.5rem;}
 .program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item {padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;}
-.program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .tit {font-size: 1rem; line-height: 1.6rem; text-align: center;}
-.program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .desc {padding-top: 0.5rem; font-size: 0.875rem; line-height: 1.3125rem; text-align: center;}
+.program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .tit {font-size: 1rem; line-height: 1.6rem; }
+.program-conts-wrap .program-cont-box > ul > li .right-area .textbox-wrap .nbdr-box-item .desc {padding-top: 0.5rem; font-size: 0.875rem; line-height: 1.3125rem; }
 .step-box-area {padding: 1.5rem; border-radius: 0.5rem;}
 .step-box-area > ul {flex-direction: column;gap:4rem;}
 .step-box-area > ul > li{width:100%;}
@@ -2260,6 +2260,7 @@
 
 .container-box-area .container-item .item-box-list .item,
 .container-box-area .container-item .item-box-list.col3 .item {width:100%;height:auto;}
+.container-box-area:lang(en) .container-item .item-box-list.col3 .item {height:8.3125rem;}
 .container-box-area .container-item .item-box-list .item .img-area {width: 2rem; height: 2rem;}
 .container-box-area .container-item .item-box-list .item .tit {font-size: 0.875rem; line-height: 1.3125rem;}
 

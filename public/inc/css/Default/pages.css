@@ -2617,8 +2617,9 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .container-box-area .container-item .item-box-list.col3 {grid-template-columns: repeat(3, 1fr);}
 .container-box-area .container-item .item-box-list .item {background: #fff; padding:1rem 0 0.75rem; border-radius: 0.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.62rem; width: 8.6875rem;}
 .container-box-area .container-item .item-box-list.col3 .item {width: 12rem;height:13.625rem;display: flex;align-items: center;justify-content: center;}
+.container-box-area:lang(en) .container-item .item-box-list.col3 .item {height:16.875rem;}
 .container-box-area .container-item .item-box-list .item .img-area {width: 2.5rem; height: 2.5rem;}
-.container-box-area .container-item .item-box-list .item .tit {font-size: 1rem; font-weight: 500; line-height: 1.6rem;}
+.container-box-area .container-item .item-box-list .item .tit {font-size: 1rem; font-weight: 500; line-height: 1.6rem;text-align: center;}
 
 /* 조직문화 */
 .rcct .content-sect { display: flex; flex-direction: column; gap: 5rem; padding-top: 0;}
