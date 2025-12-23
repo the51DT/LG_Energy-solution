@@ -2002,6 +2002,38 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 
 .download:lang(zh-CN) .total-wrap .total {font-weight: 500;}
 
+/* 다운로드 팝업 디자인 수정 */
+.modal-pop.size-sm .pop-wrap {max-width: 25rem; min-width: 25rem;}
+.modal-pop.size-sm .pop-wrap.input-form {padding: 1.5rem;}
+.modal-pop.size-sm .wrap-form-input {gap: 0;}
+.modal-pop.size-sm .pop-wrap .pop-close {top: 1.5rem; right: 1.5rem;}
+.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input {gap: 0.25rem;}
+.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap {gap: 1.13rem;}
+.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap > label {font-size: 1rem; font-weight: 400; line-height: 1.6rem; }
+:not(:lang(ko)).modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap > label {font-weight: 500; min-width: 5rem;}
+:lang(zh-CN).modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap > label {min-width: 5.5rem;}
+:not(:lang(ko)).checkbox input[type="checkbox"] + label {align-items: flex-start;}
+:not(:lang(ko)).checkbox input[type="checkbox"] + label .custom-checkbox {min-width: 1.5rem;}
+.modal-pop.size-sm .modal-pop .pop-wrap.input-form .pop-header {padding-bottom: 1.5rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item {font-size: 1.125rem; font-weight: 500; color: #171819; line-height: 1.8rem;}
+.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-box::placeholder {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #858889;}
+.modal-pop.size-sm .pop-footer > .btn-wrap button {max-width: 100%; height: 3.5rem; padding: 0.87rem 2.5rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .btn-detail {background: url(../../images/icon/icon_arrow_right_bl2.svg)no-repeat center / 100%;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-wrap {background: none; padding: 0; margin-top: 2rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-wrap.ty02 {position: relative; margin-top: 0;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-wrap.ty02::before {content:""; width: 100%; height: 1px; display:block; background: #c9ced1; margin: 1.5rem 0;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-wrap .terms-item:not(:last-child) {margin-bottom: 1.5rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-wrap.ty02 .terms-item:not(:last-child) {margin-bottom: 1rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox + label .custom-checkbox {border-radius: 0.25rem;}
+.modal-pop.size-sm .checkbox input[type="checkbox"] + label .txt {line-height: 1;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item strong {color: #171819; font-weight: 500;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item p {color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem;} 
+
+:not(:lang(ko)).modal-pop.size-sm .pop-wrap .pop-content .desc {font-size: 1.125rem; line-height: 1.8rem;}
+:not(:lang(ko)).modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item p {font-size: 1.125rem; line-height: 1.8rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .txt-group {font-size: 1rem; line-height: 1.4rem; font-weight: 500;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .txt-group .btn-detail {display: inline; position: absolute; margin-left: 0.25rem;}
+
 /* FAQ */
 .faq [class^="content-item"] {padding-bottom: 0;}
 .faq .tab-content-box {padding: 3.75rem 0; }
@@ -3019,7 +3051,6 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .video-policy-wrap > section .table-wrap table thead > tr > th {font-size: 1.125rem; line-height: 1.8rem; text-align: center;}
 .video-policy-wrap > section .table-wrap table tbody > tr > th {text-align: center;}
 .video-policy-wrap > section .table-wrap table tbody tr > td {text-align: center; color: #555758; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; border-right: 1px solid var(--colorElement-light-stroke-stroke-default03);}
-.video-policy-wrap > section .table-wrap table tbody tr > td:last-child {border-right: 0;}
 .video-policy-wrap > section .table-wrap table tbody tr > td:first-of-type {border-right: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 
 .video-policy-wrap > section .subp-tit {font-size: 1.5rem; line-height: 2.375rem; font-weight: 600;}
@@ -3027,6 +3058,17 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .video-policy-wrap > section .table-wrap .col-site { width: 228px; }
 .video-policy-wrap > section .table-wrap .col-time,
 .video-policy-wrap > section .table-wrap .col-period,
-.video-policy-wrap > section .table-wrap .col-place { width: 208px; }
-.video-policy-wrap > section .table-wrap .col-process { width: auto; }
-.video-policy-wrap > section:nth-child(6) .table-wrap table tbody tr > td:last-child {border-right: 0;}
+.video-policy-wrap > section .table-wrap .col-place,
+.video-policy-wrap > section .table-wrap .col-company,
+.video-policy-wrap > section .table-wrap .col-manager { width: 208px; }
+.video-policy-wrap > section .table-wrap .col-method { width:416px; }
+.video-policy-wrap > section .table-wrap .col-process,
+.video-policy-wrap > section:nth-child(6) .table-wrap .col-place { width: auto; }
+
+.video-policy-wrap > section .table-wrap table thead tr:not(:first-child) > th {border-top: 1px solid  #555758;}
+.video-policy-wrap > section .table-wrap table tbody tr > td:last-child {border-right: 0;}
+.video-policy-wrap > section .table-wrap table tbody tr > td.bdr-right {border-right: 1px solid var(--colorElement-light-stroke-stroke-default03);}
+.video-policy-wrap .text-list-wrap {margin-top: 1.25rem;}
+.video-policy-wrap .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.5rem;}
+.video-policy-wrap .text-list-wrap .text-list li {font-size: 1.125rem; line-height: 1.8rem; color: #171819; font-weight: 400; padding-left: 1.13rem !important;}
+.video-policy-wrap .text-list-wrap .text-list li:after {content:""; width: 6px; height: 2px; background: #171819; display: block; position: absolute; top: 12px; left: 3px;}

@@ -1865,10 +1865,11 @@
 
     
   <!-- popup : 다운로드 정보 입력 팝업 -->
-  <div class="modal-pop dialog" id="popupForm1">
+  <!-- 12.23 수정 : 다운로드 팝업 수정 - S -->
+  <div class="modal-pop size-sm" id="popupForm1">
     <div class="pop-wrap input-form">
         <div class="pop-header">
-            <h3 class="title">输入您的信息以下载</h3>
+            <h3 class="title">目录下载</h3>
         </div>
         <div class="pop-content">
             <div class="input-box-wrap">
@@ -1903,36 +1904,13 @@
                                 name="checkbox-01-1">
                             <label for="checkbox-01-1" class="checkbox-label">
                                 <span class="custom-checkbox"></span>
-                                
-                                <span class="txt">
-                                    我同意收集和使用个人信息.
-                                </span>
-                            </label>
-                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms1','#popupDialogTermsBtn1')">[+]</button>
-                        </div>
-                        <div class="text-wrap">
-                            <div class="text-list-wrap">
-                                <ul class="text-list">
-                                    <li>收集项目：姓名、邮箱、公司名称</li> 
-                                    <li>使用目的：提供产品目录、回复客户咨询</li>
-                                    <li>保存期限：自收集之日起保存 1 年，期满后销毁</li>
-                                    <li>您有权拒绝提供同意，但若拒绝，可能无法提供相关内容。</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="terms-item">
-                        <div class="checkbox chk-terms-wrap">
-                            <input type="checkbox" class="checkbox" id="checkbox-01-2"
-                                name="checkbox-01-2">
-                            <label for="checkbox-01-2" class="checkbox-label">
-                                <span class="custom-checkbox"></span>
-                                
-                                <span class="txt">
-                                    我同意接收营销信息（可选）
-                                </span>
-                            </label>
-                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms2','#popupDialogTermsBtn2')">[+]</button>
+                                <div class="txt-group">
+                                    <span class="txt">
+                                        【必填】同意个人信息的收集和使用
+                                    </span>
+                                    <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms1','#popupDialogTermsBtn1')"><span class="blind">-></span></button>
+                                </div>
+                            </label>                            
                         </div>
                     </div>
                     <div class="terms-item">
@@ -1941,32 +1919,49 @@
                                 name="checkbox-01-3">
                             <label for="checkbox-01-3" class="checkbox-label">
                                 <span class="custom-checkbox"></span>
-                                
-                                <span class="txt">
-                                    我同意接收营销信息（可选）
-                                </span>
+                                <div class="txt-group">
+                                    <span class="txt">
+                                        【必填】同意个人信息跨境传输
+                                    </span>
+                                    <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms3','#popupDialogTermsBtn3')"><span class="blind">-></span></button>
+                                </div>
                             </label>
-                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms3','#popupDialogTermsBtn3')">[+]</button>
                         </div>
                     </div>
+                    <div class="terms-item">
+                        <div class="checkbox chk-terms-wrap">
+                            <input type="checkbox" class="checkbox" id="checkbox-01-2"
+                                name="checkbox-01-2">
+                            <label for="checkbox-01-2" class="checkbox-label">
+                                <span class="custom-checkbox"></span>
+                                <div class="txt-group">
+                                    <span class="txt">
+                                       &nbsp;&nbsp;&nbsp;同意接收市场推广信息
+                                    </span>
+                                    <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms2','#popupDialogTermsBtn2')"><span class="blind">-></span></button>
+                                </div>
+                            </label>                            
+                        </div>
+                    </div>
+                    
                 </div><!-- //terms-wrap -->
             </div> <!-- //terms-chk-wrap -->
         </div>
         <div class="pop-footer">
           <div class="btn-wrap">
             <div class="btn-group">
-              <button type="button" class="act-btn-lg btn-outline01 btn-cancel" onclick="pubUi.popUp.close('#popupForm1','#popupFormBtn1')">取消</button>
-              <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="">同意并下载</button>
+              <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="">下载</button>
             </div>
           </div>
         </div>
         <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupForm1','#popupFormBtn1');" title="关闭弹出窗口"><span class="blind">关闭弹出窗口</span></button>
     </div>
-  </div>
+  </div><!-- //12.23 수정 : 다운로드 팝업 수정 - E -->
 
   
   <!-- popup : 약관 자세히보기 팝업 : 개인정보 수집 및 이용에 동의합니다 -->
-  <div class="modal-pop dialog" id="popupDialogTerms1">
+  <!-- 12.23 수정 : 다운로드 팝업 수정 - S -->
+  <div class="modal-pop size-sm" id="popupDialogTerms1">
     <div class="pop-wrap input-form">
         <div class="pop-header">
             <!-- 각 이용 동의 약관별 타이틀 노출 -->
@@ -1986,7 +1981,7 @@
             있습니다.
             </p> //개인정보 국외 이전 동의 관련 문구 -->
           
-            <div class="terms-wrap">
+            <div class="terms-wrap ty02">
                 <ul class="terms-item-list">
                     <li class="terms-item">
                         <strong>收集项目</strong>
@@ -2018,10 +2013,11 @@
         </div>
         <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms1','#popupDialogTermsBtn1');" title="关闭弹出窗口"><span class="blind">关闭弹出窗口</span></button>
     </div>
-  </div>
+  </div><!-- //12.23 수정 : 다운로드 팝업 수정 - E -->
 
   <!-- popup : 약관 자세히보기 팝업 : 마케팅 정보 수신 동의 -->
-  <div class="modal-pop dialog" id="popupDialogTerms2">
+  <!-- 12.23 수정 : 다운로드 팝업 수정 - S -->
+  <div class="modal-pop size-sm" id="popupDialogTerms2">
     <div class="pop-wrap input-form">
         <div class="pop-header">
             <!-- 각 이용 동의 약관별 타이틀 노출 -->            
@@ -2031,7 +2027,7 @@
         <div class="pop-content">          
           <!-- 마케팅 정보 수신 동의 문구 -->
           <p class="desc">LG新能源为向您提供新品、促销、新闻简报等有用信息，将按照以下方式使用个人信息。</p>           
-            <div class="terms-wrap">
+            <div class="terms-wrap ty02">
                 <ul class="terms-item-list">
                     <li class="terms-item">
                         <strong>收集项目</strong>
@@ -2063,10 +2059,11 @@
         </div>
         <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms2','#popupDialogTermsBtn2');" title="关闭弹出窗口"><span class="blind">关闭弹出窗口</span></button>
     </div>
-  </div>
+  </div><!-- //12.23 수정 : 다운로드 팝업 수정 - E -->
 
   <!-- popup : 약관 자세히보기 팝업 : 개인정보 국외 이전 동의 -->
-  <div class="modal-pop dialog" id="popupDialogTerms3">
+   <!-- 12.23 수정 : 다운로드 팝업 수정 - S -->
+  <div class="modal-pop size-sm" id="popupDialogTerms3">
     <div class="pop-wrap input-form">
         <div class="pop-header">
             <!-- 각 이용 동의 약관별 타이틀 노출 -->            
@@ -2077,7 +2074,7 @@
           <!-- 개인정보 국외 이전 동의 관련 문구 -->
           <p class="desc">LG新能源使用云端系统以安全地管理您的信息。因此，您的个人信息可能会被传输至海外。</p>
           
-            <div class="terms-wrap">
+            <div class="terms-wrap ty02">
                 <ul class="terms-item-list">
                     <li class="terms-item">
                         <strong>接收方</strong>
@@ -2117,7 +2114,7 @@
         </div>
         <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms3','#popupDialogTermsBtn3');" title="关闭弹出窗口"><span class="blind">关闭弹出窗口</span></button>
     </div>
-  </div>
+  </div><!-- //12.23 수정 : 다운로드 팝업 수정 - E -->
   
   
 

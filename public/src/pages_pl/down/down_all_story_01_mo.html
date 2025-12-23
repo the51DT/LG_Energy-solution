@@ -1160,11 +1160,12 @@
   </div>
 
     
-  <!-- popup : 다운로드 정보 입력 팝업 -->
-  <div class="modal-pop full" id="popupForm1">
+<!-- popup : 다운로드 정보 입력 팝업 -->
+  <!-- 12.23 수정 : 다운로드 팝업 수정 - S -->
+  <div class="modal-pop full size-sm" id="popupForm1">
     <div class="pop-wrap input-form">
         <div class="pop-header">
-            <h3 class="title">Wprowadź swoje dane, aby pobrać</h3>
+            <h3 class="title">Pobierz katalog</h3>
         </div>
         <div class="pop-content">
             <div class="input-box-wrap">
@@ -1199,35 +1200,13 @@
                                 name="checkbox-01-1">
                             <label for="checkbox-01-1" class="checkbox-label">
                                 <span class="custom-checkbox"></span>
-                                
-                                <span class="txt">
-                                    Wyrażam zgodę na zbieranie i wykorzystywanie danych osobowych.
-                                </span>
+                                <div class="txt-group">
+                                    <span class="txt">
+                                        [Wymagane] Zgoda na przetwarzanie danych osobowych
+                                    </span>
+                                    <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms1','#popupDialogTermsBtn1')"><span class="blind">-></span></button>
+                                </div>
                             </label>
-                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms1','#popupDialogTermsBtn1')">[+]</button>
-                        </div>
-                        <div class="text-wrap">
-                            <div class="text-list-wrap">
-                                <ul class="text-list">
-                                    <li>Zakres danych: Imię i nazwisko, adres e-mail, nazwa firmy</li>
-                                    <li>Cel: Udostępnianie katalogów produktów, odpowiedzi na zapytania klientów</li>
-                                    <li>Okres przechowywania: 1 rok od dnia zebrania, następnie dane są usuwaneMasz prawo odmówić wyrażenia zgody; jednak w takim przypadku dostęp do treści może być ograniczony.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="terms-item">
-                        <div class="checkbox chk-terms-wrap">
-                            <input type="checkbox" class="checkbox" id="checkbox-01-2"
-                                name="checkbox-01-2">
-                            <label for="checkbox-01-2" class="checkbox-label">
-                                <span class="custom-checkbox"></span>
-                                
-                                <span class="txt">
-                                    Wyrażam zgodę na otrzymywanie informacji marketingowych (opcjonalnie).
-                                </span> 
-                            </label>
-                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms2','#popupDialogTermsBtn2')">[+]</button>
                         </div>
                     </div>
                     <div class="terms-item">
@@ -1236,32 +1215,49 @@
                                 name="checkbox-01-3">
                             <label for="checkbox-01-3" class="checkbox-label">
                                 <span class="custom-checkbox"></span>
-                                
-                                <span class="txt">
-                                    Wyrażam zgodę na przekazywanie danych osobowych za granicę (opcjonalnie).
-                                </span>
-                            </label>
-                            <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms3','#popupDialogTermsBtn3')">[+]</button>
+                                <div class="txt-group">
+                                    <span class="txt">
+                                        [Wymagane] Zgoda na przekazywanie danych osobowych za granicę
+                                    </span>
+                                    <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms3','#popupDialogTermsBtn3')"><span class="blind">-></span></button>
+                                </div>                                
+                            </label>                            
                         </div>
                     </div>
+                    <div class="terms-item">
+                        <div class="checkbox chk-terms-wrap">
+                            <input type="checkbox" class="checkbox" id="checkbox-01-2"
+                                name="checkbox-01-2">
+                            <label for="checkbox-01-2" class="checkbox-label">
+                                <span class="custom-checkbox"></span>
+                                <div class="txt-group">
+                                    <span class="txt">
+                                        Zgoda na otrzymywanie informacji marketingowych
+                                    </span> 
+                                    <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms2','#popupDialogTermsBtn2')"><span class="blind">-></span></button>
+                                </div>                                
+                            </label>                            
+                        </div>
+                    </div>
+                    
                 </div><!-- //terms-wrap -->
             </div> <!-- //terms-chk-wrap -->
         </div>
         <div class="pop-footer">
           <div class="btn-wrap">
-            <div class="btn-group">
-              <button type="button" class="act-btn-lg btn-outline01 btn-cancel" onclick="pubUi.popUp.close('#popupForm1','#popupFormBtn1')">Cancel</button>
-              <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="">Agree & Download</button>
+            <div class="btn-group">             
+              <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="">Pobierz</button>
             </div>
           </div>
         </div>
         <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupForm1','#popupFormBtn1');" title="Popup Close"><span class="blind">Popup Close</span></button>
     </div>
-  </div>
+  </div><!-- //12.23 수정 : 다운로드 팝업 수정 - E -->
 
   
   <!-- popup : 약관 자세히보기 팝업 : 개인정보 수집 및 이용에 동의합니다 -->
-  <div class="modal-pop full" id="popupDialogTerms1">
+  <!-- 12.23 수정 : 다운로드 팝업 수정 - S -->
+  <div class="modal-pop full size-sm" id="popupDialogTerms1">
     <div class="pop-wrap input-form">
         <div class="pop-header">
             <!-- 각 이용 동의 약관별 타이틀 노출 -->
@@ -1281,7 +1277,7 @@
             있습니다.
             </p> //개인정보 국외 이전 동의 관련 문구 -->
           
-            <div class="terms-wrap">
+            <div class="terms-wrap ty02">
                 <ul class="terms-item-list">
                     <li class="terms-item">
                         <strong>Zakres danych</strong>
@@ -1313,10 +1309,11 @@
         </div>
         <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms1','#popupDialogTermsBtn1');" title="Popup Close"><span class="blind">Popup Close</span></button>
     </div>
-  </div>
+  </div><!-- //12.23 수정 : 다운로드 팝업 수정 - E -->
 
   <!-- popup : 약관 자세히보기 팝업 : 마케팅 정보 수신 동의 -->
-  <div class="modal-pop full" id="popupDialogTerms2">
+  <!-- 12.23 수정 : 다운로드 팝업 수정 - S -->
+  <div class="modal-pop full size-sm" id="popupDialogTerms2">
     <div class="pop-wrap input-form">
         <div class="pop-header">
             <!-- 각 이용 동의 약관별 타이틀 노출 -->            
@@ -1326,7 +1323,7 @@
         <div class="pop-content">          
           <!-- 마케팅 정보 수신 동의 문구 -->
           <p class="desc">LG Energy Solution wykorzystuje dane osobowe w następujący sposób, aby dostarczać przydatne informacje, takie jak nowe produkty, promocje i newslettery.</p>           
-            <div class="terms-wrap">
+            <div class="terms-wrap ty02">
                 <ul class="terms-item-list">
                     <li class="terms-item">
                         <strong>Zakres danych</strong>
@@ -1358,10 +1355,11 @@
         </div>
         <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms2','#popupDialogTermsBtn2');" title="Popup Close"><span class="blind">Popup Close</span></button>
     </div>
-  </div>
+  </div><!-- //12.23 수정 : 다운로드 팝업 수정 - E -->
 
+  <!-- 12.23 수정 : 다운로드 팝업 수정 - S -->
   <!-- popup : 약관 자세히보기 팝업 : 개인정보 국외 이전 동의 -->
-  <div class="modal-pop full" id="popupDialogTerms3">
+  <div class="modal-pop full size-sm" id="popupDialogTerms3">
     <div class="pop-wrap input-form">
         <div class="pop-header">
             <!-- 각 이용 동의 약관별 타이틀 노출 -->            
@@ -1372,7 +1370,7 @@
           <!-- 개인정보 국외 이전 동의 관련 문구 -->
           <p class="desc">LG Energy Solution korzysta z systemów chmurowych, aby bezpiecznie zarządzać Twoimi danymi. W związku z tym Twoje dane osobowe mogą być przekazywane za granicę.</p>
           
-            <div class="terms-wrap">
+            <div class="terms-wrap ty02">
                 <ul class="terms-item-list">
                     <li class="terms-item">
                         <strong>Odbiorca</strong>
@@ -1412,9 +1410,7 @@
         </div>
         <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupDialogTerms3','#popupDialogTermsBtn3');" title="Popup Close"><span class="blind">Popup Close</span></button>
     </div>
-  </div>
-  
-  
+  </div><!-- //12.23 수정 : 다운로드 팝업 수정 - E -->
 
   <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
   <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>

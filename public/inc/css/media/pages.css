@@ -1841,6 +1841,30 @@
 .download .total-wrap {margin-top: 1.5rem;}
 .download .total-wrap .total {font-size: 1rem; line-height: 1.6rem;}
 
+/* 다운로드 팝업 디자인 수정 */
+.modal-pop.size-sm .pop-wrap { min-width: 100%; max-width: 100%;}
+.modal-pop.size-sm.full .pop-wrap .pop-header {padding-bottom: 1rem;}
+.modal-pop.size-sm .pop-wrap .pop-header .title {font-size: 1.125rem; line-height: 1.75rem;}
+.modal-pop.size-sm .pop-wrap.input-form {padding: 1.25rem;}
+.modal-pop.size-sm .pop-wrap .pop-close {top: 1.25rem; right: 1.25rem;}
+
+.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap {gap: 1.19rem; display: flex;}
+.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap > label {font-size: 0.875rem; line-height: 1.3125rem; min-width: 3.8125rem;}
+:not(:lang(ko)).checkbox input[type="checkbox"] + label .custom-checkbox {min-width: 1.125rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item {font-size: 0.875rem; font-weight: 500; color: #171819; line-height: 1.3125rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .btn-detail {margin-left: 0.25rem;}
+.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-box::placeholder {font-size: 0.875rem; line-height: 1.3125rem; }
+.modal-pop.size-sm .pop-wrap.input-form .terms-wrap .terms-item:not(:last-child) {margin-bottom: 1rem;}
+.modal-pop.size-sm .pop-footer > .btn-wrap button {max-width: 100%; height: 3.5rem; padding: 0.87rem 2.5rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox {display: flex;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item strong {margin-left: 0.25rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item p {color: #555758; font-size: 0.875rem; font-weight: 400; line-height: 1.3125rem; padding-left: 1.25rem;}  
+.modal-pop.size-sm.full .pop-wrap .pop-footer {padding-top: 1.5rem;}
+:not(:lang(ko)).modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox + label .custom-checkbox {margin-top: 2px;}
+:not(:lang(ko)).modal-pop.size-sm .pop-wrap .pop-content .desc {font-size: 1rem; line-height: 1.6rem;}
+:lang(zh-CN).modal-pop.size-sm .pop-wrap .pop-content .desc {font-size: 0.875rem; line-height: 1.3125rem;}
+:not(:lang(ko)).modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item p {font-size: 0.875rem; line-height: 1.3125rem;}
+
 /* 문의하기 */
 .wrap.cont .content-header .subp-tit { font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #171819; }
 .cont .stepper-wrapper .faq-list { background-color: #F3F5F7; padding: 0 1.25rem 6.25rem !important; }
@@ -2720,3 +2744,41 @@
 .foot-guide_de .content-area .text-list-tynum li{display: flex;align-items: flex-start;font-size: var(--size-mobile-B2, 0.875rem);font-weight: 400;line-height: var(--line-height-mobile-B2, 1.3125rem); /* 150% */letter-spacing: var(--letter-spacing-default, 0);}
 .foot-guide_de .content-area .text-list-tynum li span{flex:0 0 1.25rem;}
 .foot-guide_de .content-area .text-cont02{margin-top:3rem;display: flex;padding: 1.25rem;gap: var(--Desktop-radius-04, 1rem);}
+
+/* 영상정보처리방침 */
+.wrap.foot-video-policy #container {padding-top: 5rem;}
+.foot-video-policy .header-cont {justify-content: flex-start; padding: 2rem 1.25rem 1.25rem; border-bottom: 0;}
+.foot-video-policy .header-cont > .ci {width: 11.0625rem; height: 1.75rem;}
+.foot-video-policy .header-cont > .ci a {width: 100%; height: 100%;}
+.foot-video-policy .content-wrap .content-header {padding: 3rem 0 1.5rem; border-top: 1px solid #C9CED1; margin: 0 1.25rem;}
+.foot-video-policy .content-wrap .content-header .title-h1 {margin-bottom: 1rem; }
+.foot-video-policy .content-header .desc {font-size: 1rem; line-height: 1.6rem;}
+
+.foot-video-policy .content-area {max-width: 100%; padding-bottom: 6.25rem; margin: 0;}
+.video-policy-wrap > section {padding: 0 1.25rem;}
+.video-policy-wrap > section:has(.table-wrap) {padding-right: 0;}
+.video-policy-wrap > section:not(:last-child) {padding-bottom: 1.5rem;}
+.video-policy-wrap > section .table-wrap {margin-top: 1rem;}
+.video-policy-wrap > section .table-wrap table {margin-right: 1.25rem;}
+.video-policy-wrap > section .table-wrap table thead > tr > th {font-size: 0.875rem; line-height: 1.3125rem;}
+.video-policy-wrap > section .table-wrap table tbody tr > td {font-size: 0.875rem; line-height: 1.3125rem;}
+
+.video-policy-wrap > section .subp-tit {font-size: 1.125rem; line-height: 1.75rem; padding-left: 1.25rem; position: relative;}
+.video-policy-wrap > section .subp-tit .num {display: inline-block; position: absolute; top: 0; left: 0;}
+
+.video-policy-wrap > section .desc {font-size: 0.875rem; font-weight: 500; line-height: 1.3125rem; margin-top: 1rem;}
+.video-policy-wrap > section .table-wrap .col-range {min-width: 408px;}
+.video-policy-wrap > section .table-wrap .col-site { min-width: 128px; width: auto;}
+.video-policy-wrap > section .table-wrap .col-name,
+.video-policy-wrap > section .table-wrap .col-dept {min-width: 104px;}
+.video-policy-wrap > section .table-wrap .col-contact {min-width: 208px;}
+.video-policy-wrap > section .table-wrap .col-process {min-width: 288px;}
+.video-policy-wrap > section .table-wrap .col-time,
+.video-policy-wrap > section .table-wrap .col-period,
+.video-policy-wrap > section .table-wrap .col-company,
+.video-policy-wrap > section .table-wrap .col-count,
+.video-policy-wrap > section .table-wrap .col-manager { min-width: 104px; width: auto;}
+.video-policy-wrap > section .table-wrap .col-method { min-width:232px; width: auto;}
+.video-policy-wrap > section .table-wrap .col-place {min-width: 144px; width: auto;}
+.video-policy-wrap .text-list-wrap .text-list li {font-size: 0.875rem; line-height: 1.3125rem;}
+.video-policy-wrap .text-list-wrap .text-list li:after {content:""; width: 6px; height: 1.2px; background: #171819; display: block; position: absolute; top: 8px; left: 3px;}
