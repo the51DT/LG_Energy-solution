@@ -87,7 +87,7 @@
 .sust-sys .esg-wrap .esg-box4 {background-color: #33B0C6;}
 .sust-sys .esg-wrap .esg-box .esg-tit {font-size: 1.125rem; font-weight: 600; line-height: 1.75rem; color: #171819;}
 .sust-sys .esg-wrap .text-list-wrap {margin-top: .5rem;}
-.sust-sys .esg-wrap .text-list-wrap .text-list > li {font-size: .875rem; font-weight: 400; line-height: 1.3125rem; color: #555758; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.sust-sys .esg-wrap .text-list-wrap .text-list > li {font-size: .875rem; font-weight: 400; line-height: 1.3125rem; color: #555758; }
 .sust-sys .esg-wrap .esg-box4 .text-list-wrap .text-list > li::before {background-color: #fff;}
 .sust-sys .esg-wrap .esg-box4 .esg-tit {color: #fff;}
 .sust-sys .esg-wrap .esg-box4 .text-list-wrap .text-list > li {color: #fff;}
