@@ -1848,7 +1848,7 @@
 .modal-pop.size-sm .pop-wrap.input-form {padding: 1.25rem;}
 .modal-pop.size-sm .pop-wrap .pop-close {top: 1.25rem; right: 1.25rem;}
 
-.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap {gap: 1.19rem; display: flex;}
+.modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap {gap: 0; display: flex;}
 .modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-wrap > label {font-size: 0.875rem; line-height: 1.3125rem; min-width: 3.8125rem;}
 :not(:lang(ko)).checkbox input[type="checkbox"] + label .custom-checkbox {min-width: 1.125rem;}
 .modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item {font-size: 0.875rem; font-weight: 500; color: #171819; line-height: 1.3125rem;}
@@ -2605,7 +2605,7 @@
 .foot-guide .title-h2 { margin: 3rem 0px 1rem 1.25rem; }
 .foot-guide .content-sect { padding-top: 3rem; }
 .foot-guide .content-wrap .content-sect:first-of-type { padding-top: 0; }
-.foot-guide .article-sub-tit { font-size: 1.25rem; margin-bottom: 1rem; }
+.foot-guide .article-sub-tit { font-size: 1.25rem; margin-bottom: 1rem; padding-left:1.25rem;text-indent: -1.25rem; line-height: 1.575rem;}
 .foot-guide .article-desc { font-size: 1rem; line-height: 1.6rem; }
 .foot-guide .article-sub-desc { font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem; }
 .foot-guide .accordion-wrap { margin-bottom: 3rem; }
@@ -2625,14 +2625,22 @@
 .foot-guide .safety-guide-wrap > p:not(.caution-text) { font-size: 1.125rem; line-height: 1.75rem; }
 .foot-guide .safety-guide-wrap > p.highlight:last-child { font-size: 1rem; line-height: 1.6rem; }
 .foot-guide .safety-guide-wrap > p + .safety-guide, .foot-guide .safety-guide-wrap > .safety-guide + p, .foot-guide .safety-guide-wrap > p + p { margin-top: 1rem; }
+.foot-guide .safety-guide li > ol{padding-left:0;}
 .foot-guide .safety-guide li > ol > li {list-style-position: outside; margin-left: 1.12rem;}
 .foot-guide .guide-table-wrap {margin-block: 0.5rem 1rem;}
 .foot-guide .guide-table-wrap > p {font-size: 1rem; line-height: 1.6rem;}
 .foot-guide .guide-table-wrap .table-wrap {margin-block: 0.5rem 1rem;}
+.foot-guide:lang(en) .guide-table-wrap .table-wrap,
+.foot-guide:lang(pl) .guide-table-wrap .table-wrap,
+.foot-guide:lang(de) .guide-table-wrap .table-wrap {width:100%;overflow-x:auto ;}
+.foot-guide:lang(en) .guide-table-wrap .table-wrap table,
+.foot-guide:lang(pl) .guide-table-wrap .table-wrap table,
+.foot-guide:lang(de) .guide-table-wrap .table-wrap table{width:32.5rem}
 .foot-guide .guide-table-wrap .table-wrap td > div {margin-inline: 0.125rem; width: 1.25rem; height: 1.25rem;}
 .foot-guide .guide-table-wrap .table-wrap td > div > img {width: 0.599rem;}
 .foot-guide .guide-table-wrap > p.noti {font-size: 0.875rem; line-height: 1.313rem; display: flex; gap: 0.25rem; margin-bottom: 0.5rem;}
-.foot-guide .safety-guide li > p {font-size: 0.875rem; line-height: 1.313rem;}
+.foot-guide .safety-guide li > p.noti{padding-left:0;text-indent: 0;}
+.foot-guide .safety-guide li > p {font-size: 0.875rem; line-height: 1.313rem; padding-left:.6rem;text-indent: -.6rem;}
 
 /* 개인정보처리방침 */
 .foot-policy .tab-cate-wrap {padding-inline: 1.25rem;}
