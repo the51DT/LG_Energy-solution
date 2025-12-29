@@ -2003,7 +2003,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .download:lang(zh-CN) .total-wrap .total {font-weight: 500;}
 
 /* 다운로드 팝업 디자인 수정 */
-.modal-pop.size-sm .pop-wrap {max-width: 25rem; min-width: 25rem;}
+.modal-pop.size-sm .pop-wrap {max-width: 26.25rem; min-width: 26.25rem;}
 .modal-pop.size-sm .pop-wrap.input-form {padding: 1.5rem;}
 .modal-pop.size-sm .wrap-form-input {gap: 0;}
 .modal-pop.size-sm .pop-wrap .pop-close {top: 1.5rem; right: 1.5rem;}
@@ -2015,7 +2015,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 :not(:lang(ko)).checkbox input[type="checkbox"] + label {align-items: flex-start;}
 :not(:lang(ko)).checkbox input[type="checkbox"] + label .custom-checkbox {min-width: 1.5rem;}
 .modal-pop.size-sm .modal-pop .pop-wrap.input-form .pop-header {padding-bottom: 1.5rem;}
-.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item {font-size: 1.125rem; font-weight: 500; color: #171819; line-height: 1.8rem;}
+.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item {font-size: 1.125rem; font-weight: 500; color: #171819; line-height: 1.8rem;padding-left:1.25rem; text-indent: -1.25rem;}
 .modal-pop.size-sm .pop-wrap.input-form .wrap-form-input .input-box::placeholder {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #858889;}
 .modal-pop.size-sm .pop-footer > .btn-wrap button {max-width: 100%; height: 3.5rem; padding: 0.87rem 2.5rem;}
 .modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .btn-detail {background: url(../../images/icon/icon_arrow_right_bl2.svg)no-repeat center / 100%;}
@@ -2027,7 +2027,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox + label .custom-checkbox {border-radius: 0.25rem;}
 .modal-pop.size-sm .checkbox input[type="checkbox"] + label .txt {line-height: 1;}
 .modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item strong {color: #171819; font-weight: 500;}
-.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item p {color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem;} 
+.modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item p {color: #555758; font-size: 1rem; font-weight: 400; line-height: 1.6rem;padding:0;text-indent: 0;} 
 
 :not(:lang(ko)).modal-pop.size-sm .pop-wrap .pop-content .desc {font-size: 1.125rem; line-height: 1.8rem;}
 :not(:lang(ko)).modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item p {font-size: 1.125rem; line-height: 1.8rem;}
