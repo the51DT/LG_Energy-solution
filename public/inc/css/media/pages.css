@@ -2626,7 +2626,7 @@
 .foot-guide .safety-guide-wrap > p.highlight:last-child { font-size: 1rem; line-height: 1.6rem; }
 .foot-guide .safety-guide-wrap > p + .safety-guide, .foot-guide .safety-guide-wrap > .safety-guide + p, .foot-guide .safety-guide-wrap > p + p { margin-top: 1rem; }
 .foot-guide .safety-guide li > ol{padding-left:0;}
-.foot-guide .safety-guide li > ol > li {list-style-position: outside; margin-left: 1.12rem;}
+.foot-guide .safety-guide li > ol > li {list-style-position: outside; margin-left: 1.12rem; font-size: 0.875rem; line-height: 1.313rem;}
 .foot-guide .guide-table-wrap {margin-block: 0.5rem 1rem;}
 .foot-guide .guide-table-wrap > p {font-size: 1rem; line-height: 1.6rem;}
 .foot-guide .guide-table-wrap .table-wrap {margin-block: 0.5rem 1rem;}
