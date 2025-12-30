@@ -201,12 +201,13 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .footer-area {display: flex; justify-content: space-between; padding: 3.75rem 0 5rem; max-width: 90rem; margin: 0 auto;}
 .footer-area:not(:lang(ko)) {align-items: flex-end;}
 .footer-site_map {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
-.footer-site_map > li:not(:last-child) {padding-bottom: 1rem;}
+.footer-site_map > li:not(:last-child) {padding-bottom: .5rem;}
 .footer-site_map > li a:hover {color: var(--text-text-primary, #33B0C6);}
 .footer-site_map-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; text-align: right;}
 .footer-item02 {display: flex; gap: 2.94rem; flex-direction: column;} 
 .footer-bottom {display: flex; justify-content: space-between; padding-bottom: 5rem; align-items: center; max-width: 90rem; margin: 0 auto;}
 .footer-util {display: flex; gap: 0.5rem; padding: 1.22rem 0;}
+.footer-wrap .text-nomal{font-weight:400}
 .footer-wrap .selectbox-wrap.type3 > div button,
 .footer-wrap .selectbox-wrap.type3 > div a {color: #fff;}
 .footer-wrap .selectbox-wrap.type3 .select-cate > button {color: #171819;}
