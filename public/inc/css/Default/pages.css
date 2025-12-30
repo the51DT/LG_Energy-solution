@@ -2866,6 +2866,7 @@ html:lang(en) .rolling-banner-gradient-right::before{height:258px;}
 .foot-guide .safety-guide-wrap > p:not(.caution-text) { font-size: 1.25rem; font-weight: 500; line-height: 2rem; }
 .foot-guide .safety-guide-wrap > p + .safety-guide, .foot-guide .safety-guide-wrap > .safety-guide + p, .foot-guide .safety-guide-wrap > p + p { margin-top: 1.25rem; }
 .foot-guide .safety-guide-wrap .highlight { color: #33b0c6; }
+.foot-guide .safety-guide-wrap > .safety-guide + .highlight {font-size: 1.125rem; line-height: 1.8rem;}
 .foot-guide .safety-guide > span + span { font-size: 1.125rem; font-weight: 500; color: #171819; margin-bottom: -0.5rem; padding-left:0;text-indent: 0;}
 .foot-guide .safety-guide li, .foot-guide .accordion-content li { font-size: 1.125rem; font-weight: 400; color: #555758; line-height: 1.8rem; }
 .foot-guide .safety-guide li > p, .foot-guide .safety-guide li > ol > li { font-size: 1rem; line-height: 1.6rem; }
