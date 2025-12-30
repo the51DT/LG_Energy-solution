@@ -220,6 +220,10 @@ html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
 .footer-wrap .selectbox-wrap.type3 .select-menu > li a {font-weight: 400; line-height: 1.6rem; font-size: 1rem; padding: 0 1.5rem; background: #171819;}
 .footer-wrap .selectbox-wrap.type3 .select-menu > li a.active {color: #fff; font-weight: 400; line-height: 1.6rem; position: relative;}
 .footer-wrap .selectbox-wrap.type3 .select-menu > li a:hover {background: transparent; font-weight: 600;}
+.footer-wrap .footer-logo-wrap{display:flex;height:2.375rem;gap:1.5rem;align-items: center;justify-content: center}
+.footer-wrap .footer-logo-wrap a{display: flex; align-items: center;}
+.footer-wrap .footer-logo-wrap .web_award{display: flex;gap:1.5rem; align-items: center;justify-content: center;}
+.footer-wrap .footer-logo-wrap .web_award::before {content:"";width:1px;height:2.375rem;background:#C9CED1;}
 
 
 /* 컨텐츠 */
