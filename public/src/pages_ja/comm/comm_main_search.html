@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <!-- <meta name="viewport" content="width=1920" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name=" format-detection" content="telephone=no" />
+        <title>LG新能源 - 搜索</title>
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />        
+        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/lottie.js"></script>
+
+    </head>
+
+    <body>
+        <div class="skip-navigation">
+            <a href="#container">Skip to content</a>
+        </div>
+        <div class="wrap search"> <!-- wrap에 화면id(id) 관련 클래스 추가하여 사용 -->
+            
+            <!-- header -->
+            <header class="header-wrap parent-event">
+            <div class="header-area pc-only">
+                <div class="header-cont">
+                    <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/ci_ja.svg" alt=""></a>
+                    </h1>
+                    <div class="sitemap-wrap">
+                        <nav class="nav-wrap ">
+                            <ul class="gnb__tab-btn-wrap">
+                                <li class="depth01">
+                                    <button class="parent-event_btn">产品</button>
+                                    <ul>
+                                        <li class="depth02"><a href="#">按行业解决方案</a></li>
+                                        <li class="depth02"><a href="#">外形规格</a></li>
+                                        <li class="depth02"><a href="#">材料</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth01">
+                                    <button class="parent-event_btn">服务</button>
+                                    <ul>
+                                        <li class="depth02"><a href="#">VPP</a></li>
+                                        <li class="depth02"><a href="#">B.around</a></li>
+                                        <li class="depth02"><a href="#">B-Lifecare</a></li>
+                                        <li class="depth02"><a href="#">B.once</a></li>
+                                        <li class="depth02"><a href="#">KooRoo</a></li>
+                                        <li class="depth02"><a href="#">ESS SI</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth01">
+                                    <button class="parent-event_btn">公司信息</button>
+                                    <ul><li class="depth02"><a href="#">公司介绍</a></li>
+                                        <li class="depth02"><a href="#">正道经营</a></li>
+                                        <li class="depth02"><a href="#">事业场所</a></li>
+                                        <li class="depth02"><a href="#">R&D</a></li>
+                                        <li class="depth02"><a href="#">新闻中心</a></li>
+                                        <li class="depth02"><a href="#">人才招聘</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth01">
+                                    <button class="parent-event_btn">客户支持</button>
+                                    <ul>
+                                        <li class="depth02"><a href="#">下载</a></li>
+                                        <li class="depth02"><a href="#">联系我们</a></li>
+                                        <li class="depth02"><a href="#">常见问题</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="utile-wrap">
+                        <div class="utile-cont">
+                            <div class="utile-item">
+                                <div class="lang-wrap">
+                                    <div class="select-cate activeSelect">
+                                        <button class="lang-button" aria-haspopup="listbox"><img
+                                                src="../../../inc/images/icon/icon_global_img.svg" alt="language"><i
+                                                class="select-btn-right-icon"></i></button>
+                                        <ul class="select-menu" role="listbox">
+                                            <li><a href="javascript:;" role="option" tabindex="0">KR</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0">EN</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0" class="active">CN</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0">PL</a></li>
+                                            <li><a href="javascript:;" role="option" tabindex="0">DE</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!-- //lang-wrap -->
+                            </div>
+                            <div class="utile-item02">
+                                <button class="search-btn header_search-btn search-reset" onclick="pubUi.popUp.open('.header_search-area','.header_search-btn');"></button>
+                            </div>
+                            
+                            <div class="utile-item03">
+                                <button class="nav-btn" title="menu" onclick="pubUi.popUp.open('.sitemap_pop-wrap','.nav-btn');">
+                                    <i class="x-icon">
+                                        <span class="x-line"></span>
+                                        <span class="x-line"></span>
+                                    </i>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="header_search-area target-header_search search-reset">
+            <div class="pop-wrap">
+                    <div class="search-box-wrap pc-only">
+                    <div class="search-box searchEvt">
+                        <button type="button" class="btn-search" aria-label="search" class="btn-search">
+                            <img src="../../../inc/images/icon/icon_head_search.svg" alt="search" role="button">
+                        </button>
+                        <input type="text" id="faq-search" placeholder="请输入搜索词。">
+                        <button type="button" class="btn-search-reset btn-delete" aria-label="">
+                            <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="delete">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sitemap_pop-wrap">
+            <div class="pop-wrap">
+                <div class="sitemap_pop-header">
+                    <a class="sitemap_pop-ci" href="#"><img src="../../../inc/images/symbol/ci_ja_wh.svg" alt=""></a>
+                </div>
+                <ul class="sitemap-area">
+                    <li class="depth01">
+                        <a href="#">产品</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">按行业解决方案</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">乘用车EV </a></li>
+                                    <li class="depth03"><a href="#">商用车EV </a></li>
+                                    <li class="depth03"><a href="#">ESS</a></li>
+                                    <li class="depth03"><a href="#">LEV</a></li>
+                                    <li class="depth03"><a href="#">智能设备</a></li>
+                                    <li class="depth03"><a href="#">电动工具</a></li>
+                                    <li class="depth03"><a href="#">重型设备</a></li>
+                                    <li class="depth03"><a href="#">机器人</a></li>
+                                    <li class="depth03"><a href="#">未来出行</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">外形规格</a>
+                                <ul>
+                                <li class="depth03"><a href="#">圆柱型</a></li>
+                                    <li class="depth03"><a href="#">软包型</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">材料</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">NCM</a></li>
+                                    <li class="depth03"><a href="#">LFP</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+                        <a href="#">服务</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">VPP</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">B.around</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">B-Lifecare</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">B.once</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">KooRoo</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">ESS SI</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+                        <a href="#">公司信息</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">公司介绍</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">公司概况</a></li>
+                                    <li class="depth03"><a href="#">愿景</a></li>
+                                    <li class="depth03"><a href="#">历程</a></li>
+                                    <li class="depth03"><a href="#">CI</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">正道经营</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">事业场所</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">R&D</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">研发现状</a></li>
+                                    <li class="depth03"><a href="#">研发领域</a></li>
+                                    <li class="depth03"><a href="#">下一代电池</a></li>
+                                    <li class="depth03"><a href="#">开放式创新</a></li>
+                                </ul>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">新闻中心</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">人才招聘</a>
+                                <ul>
+                                    <li class="depth03"><a href="#">人才观</a></li>
+                                    <li class="depth03"><a href="#">人事制度</a></li>
+                                    <li class="depth03"><a href="#">职位介绍</a></li>
+                                    <li class="depth03"><a href="#">招聘公告</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="depth01">
+                        <a href="#">客户支持</a>
+                        <ul>
+                            <li class="depth02">
+                                <a href="#">下载</a>                                 
+                            </li>
+                            <li class="depth02">
+                                <a href="#">联系我们</a>
+                            </li>
+                            <li class="depth02">
+                                <a href="#">常见问题</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="sitemap-close" onclick="pubUi.popUp.close('.sitemap_pop-wrap','.nav-btn');"><img src="../../../inc/images/icon/icon_close-md_wh.svg" alt=""></button>
+            </div>
+        </div>
+            <!-- //header -->
+            <!-- section -->
+            <section id="container" class="content-wrap">
+                <div class="content-area">
+                    <!-- content-area 하위 pc-only / mo-only 클래스 : pc/mobile 레이아웃이 달라 분기처리 필요시 두벌소스적용 / 그렇지 않고 동일한 구조 레이아웃 일 경우 소스한벌로 처리 할 것 -->
+                    <div class="pc-only">                       
+                        <div class="content-item01">
+                            <div class="content-wrap">
+                                <h2 class="title-h1">搜索</h2> <!-- title-h1 (페이지타이틀) -->
+                                <div class="content-sect news-content-area">
+                                    <div class="search-result searchEvt pc-only"> 
+                                        <a href="javascript:;" aria-label="搜索" class="btn-search">
+                                            <img src="../../../inc/images/icon/icon_head_search.svg" alt="搜索">
+                                        </a>
+                                        <input type="text" id="news-search" placeholder="请输入搜索词。">
+                                        <button aria-label="delete" class="btn-delete">
+                                            <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <div class="search-list-wrap">
+                                        <!-- 검색결과 있을때 -->
+                                        <div class="total-count">您查找的 <span>23</span></div>
+                                        <ul class="news-list">
+                                            <li class="news-item" role="article" >
+                                                <a class="news-content">
+                                                    <p class="title" aria-label="title">LG新能源BIC 2021隆重举办，全球电池创新技术汇集一堂。</p>
+                                                    <p class="ellipsis2 news-desc">LG新能源大力开发创新技术，渴望实现颠覆。对此，LG新能源在4日表示，将面向全球名门学府和研究机构，举办BIC 2021（BIC, Battery Innovation Contest ）。<br>征集有效期从8月9日起至9月30日，国内外的学者和研究人员均由资格参与。有意者可登录LG新能源官网提交技术提案完成，还可在智能手机下载应用程序，随时随地征集作品。</p>
+                                                </a>
+                                            </li>
+                                            <li class="news-item" role="article" >
+                                                <a class="news-content">
+                                                    <p class="title" aria-label="title">LG新能源BIC 2021隆重举办，全球电池创新技术汇集一堂。</p>
+                                                    <p class="ellipsis2 news-desc">LG新能源大力开发创新技术，渴望实现颠覆。对此，LG新能源在4日表示，将面向全球名门学府和研究机构，举办BIC 2021（BIC, Battery Innovation Contest ）。<br>征集有效期从8月9日起至9月30日，国内外的学者和研究人员均由资格参与。有意者可登录LG新能源官网提交技术提案完成，还可在智能手机下载应用程序，随时随地征集作品。</p>
+                                                </a>
+                                            </li>
+                                            <li class="news-item" role="article" >
+                                                <a class="news-content">
+                                                    <p class="title" aria-label="title">LG新能源BIC 2021隆重举办，全球电池创新技术汇集一堂。</p>
+                                                    <p class="ellipsis2 news-desc">LG新能源大力开发创新技术，渴望实现颠覆。对此，LG新能源在4日表示，将面向全球名门学府和研究机构，举办BIC 2021（BIC, Battery Innovation Contest ）。<br>征集有效期从8月9日起至9月30日，国内外的学者和研究人员均由资格参与。有意者可登录LG新能源官网提交技术提案完成，还可在智能手机下载应用程序，随时随地征集作品。</p>
+                                                </a>
+                                            </li>
+                                            <li class="news-item" role="article" >
+                                                <a class="news-content">
+                                                    <p class="title" aria-label="title">LG新能源BIC 2021隆重举办，全球电池创新技术汇集一堂。</p>
+                                                    <p class="ellipsis2 news-desc">LG新能源大力开发创新技术，渴望实现颠覆。对此，LG新能源在4日表示，将面向全球名门学府和研究机构，举办BIC 2021（BIC, Battery Innovation Contest ）。<br>征集有效期从8月9日起至9月30日，国内外的学者和研究人员均由资格参与。有意者可登录LG新能源官网提交技术提案完成，还可在智能手机下载应用程序，随时随地征集作品。</p>
+                                                </a>
+                                            </li>
+                                            <li class="news-item" role="article" >
+                                                <a class="news-content">
+                                                    <p class="title" aria-label="title">LG新能源BIC 2021隆重举办，全球电池创新技术汇集一堂。</p>
+                                                    <p class="ellipsis2 news-desc">LG新能源大力开发创新技术，渴望实现颠覆。对此，LG新能源在4日表示，将面向全球名门学府和研究机构，举办BIC 2021（BIC, Battery Innovation Contest ）。<br>征集有效期从8月9日起至9月30日，国内外的学者和研究人员均由资格参与。有意者可登录LG新能源官网提交技术提案完成，还可在智能手机下载应用程序，随时随地征集作品。</p>
+                                                </a>
+                                            </li>
+                                            <li class="news-item" role="article" >
+                                                <a class="news-content">
+                                                    <p class="title" aria-label="title">LG新能源BIC 2021隆重举办，全球电池创新技术汇集一堂。</p>
+                                                    <p class="ellipsis2 news-desc">LG新能源大力开发创新技术，渴望实现颠覆。对此，LG新能源在4日表示，将面向全球名门学府和研究机构，举办BIC 2021（BIC, Battery Innovation Contest ）。<br>征集有效期从8月9日起至9月30日，国内外的学者和研究人员均由资格参与。有意者可登录LG新能源官网提交技术提案完成，还可在智能手机下载应用程序，随时随地征集作品。</p>
+                                                </a>
+                                            </li>
+                                            <li class="news-item" role="article" >
+                                                <a class="news-content">
+                                                    <p class="title" aria-label="title">LG新能源BIC 2021隆重举办，全球电池创新技术汇集一堂。</p>
+                                                    <p class="ellipsis2 news-desc">LG新能源大力开发创新技术，渴望实现颠覆。对此，LG新能源在4日表示，将面向全球名门学府和研究机构，举办BIC 2021（BIC, Battery Innovation Contest ）。<br>征集有效期从8月9日起至9月30日，国内外的学者和研究人员均由资格参与。有意者可登录LG新能源官网提交技术提案完成，还可在智能手机下载应用程序，随时随地征集作品。</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!-- 검색결과 없을때 -->
+                                        <!-- <div class="top-bar">
+                                            <div class="total-count no-result">No results found.</div>
+                                        </div> -->
+                                    </div> <!--//search-list-wrap -->
+                                    <div class="paging-wrap">
+                                        <ul class="paging pc-only">
+                                            <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="首页"></a></li>
+                                            <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="上一页"></a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li class=""><a href="#">2</a></li>
+                                            <li class=""><a href="#">3</a></li>
+                                            <li class=""><a href="#">4</a></li>
+                                            <li class=""><a href="#">5</a></li>
+                                            <li class=""><a href="#">...</a></li>
+                                            <li class=""><a href="#">30</a></li>
+                                            <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="下一页"><span class="blind">下一页</span></a></li>
+                                            <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="末页"><span class="blind">末页</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- //pc-only -->
+                </div>
+            </section>
+            <!-- // section -->
+            <aside>
+                <img src="../../../inc/images/sample/floating.png" alt="floating" />
+            </aside>
+            <!-- footer -->
+            <footer class="footer-wrap">
+            <div class="footer-area">
+            <div class="footer-item01">
+                <ul class="footer-site_map">
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">Ethics Hotline</a></li>
+                    <li><a href="#">安全指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-item02">
+                
+                <div class="selectbox-wrap type3">
+                    <div class="select-cate activeSelect">
+                        <button type="button" aria-haspopup="listbox">相关网站</button>                                                
+                        <ul class="select-menu" role="listbox">
+                            <li>
+                                <p class="cate-title">LG Corp.</p>
+                                <ul class="cate-item">
+                                    <li><a href="javascript:;" role="option" tabindex="0">LG</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">LG Chem</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">LG Electronics</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <p class="cate-title">Family Site</p>
+                                <ul class="cate-item">
+                                    <li><a href="javascript:;" role="option" tabindex="0">LG ESS Battery</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">LG Energy Solution Micigan</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">LG Energy Solution Wroclaw Energy</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">Open Innovation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="cate-title">Business</p>
+                                <ul class="cate-item">
+                                    <li><a href="javascript:;" role="option" tabindex="0">Procurement Portal System</a></li>
+                                    <li><a href="javascript:;" role="option" tabindex="0">Partner Security Portal</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="footer-bottom">
+            <a class="footer-logo">
+                <img src="../../../inc/images/img/img_footer_logo.svg" alt="LG Energy Solution" />
+            </a>
+            <ul class="footer-util">
+                <li><a href="#"><img src="../../../inc/images/icon/icon_circle-facebook.svg" alt="facebook"></a></li>
+                <li><a href="#"><img src="../../../inc/images/icon/icon_circle-in.svg" alt="in"></a></li>
+                <li><a href="#"><img src="../../../inc/images/icon/icon_circle-insta.svg" alt="instagram"></a></li>
+                <li><a href="#"><img src="../../../inc/images/icon/icon_circle-naver.svg" alt="naver"></a></li>
+                <li><a href="#"><img src="../../../inc/images/icon/icon_circle-youtube.svg" alt="youtube"></a></li>
+                <li><a href="#"><img src="../../../inc/images/icon/icon_circle-blog.svg" alt="blog"></a></li>
+            </ul>
+            </div>
+        </footer>
+            <!-- // footer -->
+        </div>
+
+        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
+        <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
+    </body>
+</html>

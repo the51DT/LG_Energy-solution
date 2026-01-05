@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <!-- <meta name="viewport" content="width=1920" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name=" format-detection" content="telephone=no" />
+        <title>LG에너지솔루션 - 레이아웃_Tab-case</title>
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />        
+        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/lottie.js"></script>
+
+    </head>
+
+    <body>
+        <div class="skip-navigation">
+            <a href="#container">Skip to content</a>
+        </div>
+        <div class="wrap main-page"> <!-- wrap에 화면id(id) 관련 클래스 추가하여 사용 -->
+        <!-- 11.4  main-scroll-area 스크롤 영역 추가-->
+        <div class="main-scroll-area">
+            <!-- header -->
+            <header class="header-wrap parent-event">
+                <div class="header-area pc-only">
+                    <div class="header-cont">
+                        <h1 class="ci"><a href="../cyanogen/cyanogen_main.html"><img src="../../../inc/images/symbol/ci_ja.svg" alt=""></a>
+                        </h1>
+                        <div class="sitemap-wrap">
+                            <nav class="nav-wrap ">
+                                <ul class="gnb__tab-btn-wrap">
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">产品</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">按行业解决方案</a></li>
+                                            <li class="depth02"><a href="#">外形规格</a></li>
+                                            <li class="depth02"><a href="#">材料</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">服务</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">VPP</a></li>
+                                            <li class="depth02"><a href="#">B.around</a></li>
+                                            <li class="depth02"><a href="#">B-Lifecare</a></li>
+                                            <li class="depth02"><a href="#">B.once</a></li>
+                                            <li class="depth02"><a href="#">KooRoo</a></li>
+                                            <li class="depth02"><a href="#">ESS SI</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">公司信息</button>
+                                        <ul><li class="depth02"><a href="#">公司介绍</a></li>
+                                            <li class="depth02"><a href="#">正道经营</a></li>
+                                            <li class="depth02"><a href="#">事业场所</a></li>
+                                            <li class="depth02"><a href="#">R&D</a></li>
+                                            <li class="depth02"><a href="#">新闻中心</a></li>
+                                            <li class="depth02"><a href="#">人才招聘</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="depth01">
+                                        <button class="parent-event_btn">客户支持</button>
+                                        <ul>
+                                            <li class="depth02"><a href="#">下载</a></li>
+                                            <li class="depth02"><a href="#">联系我们</a></li>
+                                            <li class="depth02"><a href="#">常见问题</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="utile-wrap">
+                            <div class="utile-cont">
+                                <div class="utile-item">
+                                    <div class="lang-wrap">
+                                        <div class="select-cate activeSelect">
+                                            <button class="lang-button" aria-haspopup="listbox"><img
+                                                    src="../../../inc/images/icon/icon_global_img.svg" alt="language"><i
+                                                    class="select-btn-right-icon"></i></button>
+                                            <ul class="select-menu" role="listbox">
+                                                <li><a href="javascript:;" role="option" tabindex="0">KR</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">EN</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0" class="active">CN</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">PL</a></li>
+                                                <li><a href="javascript:;" role="option" tabindex="0">DE</a></li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- //lang-wrap -->
+                                </div>
+                                <div class="utile-item02">
+                                    <button class="search-btn header_search-btn search-reset" onclick="pubUi.popUp.open('.header_search-area','.header_search-btn');"></button>
+                                </div>
+                                
+                                <div class="utile-item03">
+                                    <button class="nav-btn" title="menu" onclick="pubUi.popUp.open('.sitemap_pop-wrap','.nav-btn');">
+                                        <i class="x-icon">
+                                            <span class="x-line"></span>
+                                            <span class="x-line"></span>
+                                        </i>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="header_search-area target-header_search search-reset">  
+                <div class="pop-wrap">
+                        <div class="search-box-wrap pc-only">
+                        <div class="search-box searchEvt">
+                            <button type="button" class="btn-search" aria-label="search" class="btn-search">
+                                <img src="../../../inc/images/icon/icon_head_search.svg" alt="search" role="button">
+                            </button>
+                            <input type="text" id="faq-search" placeholder="请输入搜索词。">
+                            <button type="button" class="btn-search-reset btn-delete" aria-label="">
+                                <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="delete">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 11.4  data-lenis-prevent 속성 추가-->
+            <div class="sitemap_pop-wrap" data-lenis-prevent>
+                <div class="pop-wrap">
+                    <div class="sitemap_pop-header">
+                        <a class="sitemap_pop-ci" href="#"><img src="../../../inc/images/symbol/ci_ja_wh.svg" alt=""></a>
+                    </div>
+                    <ul class="sitemap-area">
+                        <li class="depth01">
+                            <a href="#">产品</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">按行业解决方案</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">乘用车EV </a></li>
+                                        <li class="depth03"><a href="#">商用车EV </a></li>
+                                        <li class="depth03"><a href="#">ESS</a></li>
+                                        <li class="depth03"><a href="#">LEV</a></li>
+                                        <li class="depth03"><a href="#">智能设备</a></li>
+                                        <li class="depth03"><a href="#">电动工具</a></li>
+                                        <li class="depth03"><a href="#">重型设备</a></li>
+                                        <li class="depth03"><a href="#">机器人</a></li>
+                                        <li class="depth03"><a href="#">未来出行</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">外形规格</a>
+                                    <ul>
+                                    <li class="depth03"><a href="#">圆柱型</a></li>
+                                        <li class="depth03"><a href="#">软包型</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">材料</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">NCM</a></li>
+                                        <li class="depth03"><a href="#">LFP</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">服务</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">VPP</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">B.around</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">B-Lifecare</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">B.once</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">KooRoo</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">ESS SI</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">公司信息</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">公司介绍</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">公司概况</a></li>
+                                        <li class="depth03"><a href="#">愿景</a></li>
+                                        <li class="depth03"><a href="#">历程</a></li>
+                                        <li class="depth03"><a href="#">CI</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">正道经营</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">事业场所</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">R&D</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">研发现状</a></li>
+                                        <li class="depth03"><a href="#">研发领域</a></li>
+                                        <li class="depth03"><a href="#">下一代电池</a></li>
+                                        <li class="depth03"><a href="#">开放式创新</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">新闻中心</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">人才招聘</a>
+                                    <ul>
+                                        <li class="depth03"><a href="#">人才观</a></li>
+                                        <li class="depth03"><a href="#">人事制度</a></li>
+                                        <li class="depth03"><a href="#">职位介绍</a></li>
+                                        <li class="depth03"><a href="#">招聘公告</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="depth01">
+                            <a href="#">客户支持</a>
+                            <ul>
+                                <li class="depth02">
+                                    <a href="#">下载</a>                                 
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">联系我们</a>
+                                </li>
+                                <li class="depth02">
+                                    <a href="#">常见问题</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="sitemap-close" onclick="pubUi.popUp.close('.sitemap_pop-wrap','.nav-btn');"><img src="../../../inc/images/icon/icon_close-md_wh.svg" alt=""></button>
+                </div>
+            </div>
+            <!-- //header -->
+            <!-- section -->
+            <section id="container" class="content-wrap">
+                <div class="main-content_header-bg">
+                    <div class="visual-video">
+                        <video src="../../../inc/video/video_main01.mp4"  autoplay muted playsinline loop>
+                            <!-- 비디오 영상 소리 정보 존재시 내용 입력 (접근성 처리용) -->
+                        </video>
+                    </div>
+                    <div class="content-header_text cont-grid">
+                        <div>
+                            <p class="title-intro">
+                                EMPOWER<br/>
+                                <strong>EVERY POSSIBILITY</strong>
+                            </p>
+                            <p class="txt-intro">
+                                LG新能源是一家全球综合能源解决方案企业，致力于构建能源生态系统
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-area">
+                    <div class="pc-only">
+                        
+                        <!-- 11.4 content-item01 레이아웃 변경 -->
+                        <div class="content-item01">
+                            <div class="content-wrap">
+                                <div class="cont-area anim-section">
+                                    <div class="cont-area-item">
+                                        <div class="text-area anim-item" data-start="100px" data-end="100%">
+                                            <span>Our Solution</span>
+                                            <h3>驱动未来<br /><strong> LG新能源 无处不在</strong></h3>
+                                            <p>凭借全球技术领导力， <br/>我们为各类应用与产业提供最优电池解决方案</p>
+                                        </div>
+                                        <div class="anim-item" 
+                                        data-center="y"
+                                        data-start="5%" data-end="50%"
+                                        data-w0="100%" data-w1="57.25%"
+                                        data-brtl0="0" data-brtl1="20">
+                                            <div class="bg-area anim-box">
+                                                <img src="../../../inc/images/img/main_img1.png" art=""/>
+                                                <div class="link-area anim-item" data-start="400px" data-end="100%">
+                                                    <div class="anim-box">
+                                                        <a href="#">按行业解决方案</a>
+                                                        <a href="#">服务</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //content-item01 -->
+                         <!-- // 11.4 content-item01 레이아웃 변경 -->
+                        <div class="content-item02"> 
+                            <div class="cont_bg-area">
+                                <div class="cont_bg01"><img src="../../../inc/images/img/main_img3.png" alt=""></div>
+                                <div class="cont_bg02"><img src="../../../inc/images/img/main_img4.png" alt=""></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="cont-area">
+                                    <a href="#" class="left-area">
+                                        <h3><strong>圆柱电池</strong></h3>
+                                        <p>
+                                            <strong>高能量，无限应用，灵活设计</strong>
+                                            <span>凭借高能量密度与结构稳定性，适用于广泛应用场景</span>
+                                        </p>
+                                        <span class="btn-more">查看更多</span>
+                                        
+                                    </a>
+                                    <a href="#" class="right-area">
+                                        <h3><strong>软包电池</strong></h3>
+                                        <p>
+                                            <strong>纤薄设计，强劲能量</strong>
+                                            <span>超薄高密度结构最大化产品性能与设计自由度</span>
+                                        </p>
+                                        <span class="btn-more">查看更多</span>
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div><!-- //content-item02 -->
+                        
+                        <div class="content-item03"> 
+                            <div class="content-wrap">
+                                <video src="../../../inc/video/video_main02.mp4"  autoplay muted playsinline loop>
+                                    <!-- 비디오 영상 소리 정보 존재시 내용 입력 (접근성 처리용) -->
+                                </video>
+                                <div class="cont-area cont-grid">
+                                    <span class="">材料</span>
+                                    <h3>更强大的能源,<br/> 始于先进材料。</h3>
+                                    <div class="cont-item">
+                                        <a href="#">
+                                            <span><strong>NCM</strong>高能量密度与卓越性能</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><strong>LFP</strong>卓越安全性与成本效益</span>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div><!-- //content-item03 -->
+                        
+                        
+                         <div class="content-item04"> 
+                            <div class="content-wrap">
+                                <div class="cont-item01">
+                                    <div class="text-area">
+                                        
+                                        <p><strong>LG新能源在全球运营六大生产基地，</strong> <br/><strong>确保更快速、更可靠地向全球供应电池</strong></p>
+                                        <a class="btn-link">事业场所</a>
+                                    </div>
+                                    
+                                    <div class="move-img-area">
+                                        <video src="../../../inc/video/video_main03.mp4"  autoplay muted playsinline loop>
+                                            <!-- 비디오 영상 소리 정보 존재시 내용 입력 (접근성 처리용) -->
+                                        </video>
+                                    </div>
+                                    
+                                </div>
+                                <!-- <div class="cont-item02">
+                                    <div class="text-area">
+                                        <h3><strong> 차세대 배터리 기술</strong>로 </h3>
+                                        <p>더 안전하고, 더 오래가고, 더 지속가능한 세상을 만듭니다.</p>
+                                        <a class="btn-link"><span>#바이폴라</span><span>#소듐이온 </span><span>#리튬황</span><span>#전고체</span></a>
+                                    </div>
+                                    <div class="img-area">
+                                        <img src="../../../inc/images/img/main_img6.png" alt="">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div><!-- //content-item04 -->
+                        
+                         <div class="content-item05"> 
+                            <div class="content-wrap">
+                                <div class="text-area">
+                                    <p>下一代电池技术，成就更安全、更持久、更可持续的未来</p>
+                                        <a class="btn-link"><span>#双极</span><span>#钠离子 </span><span>#锂硫</span><span>#全固态</span></a>
+                                </div>
+                                <div class="img-area">
+                                    <img src="../../../inc/images/img/main_img6.png" alt="">
+                                </div>
+                            </div>
+                        </div><!-- //content-item05 -->
+                         
+                        <div class="content-item06"> 
+                            <div class="content-wrap cont-grid">
+                                <div class="tit-area">
+                                    <h4 class="tit">新闻中心 <a href="#">查看更多</a></h4>
+                                </div>
+                                <ul class="area-box">
+                                    <li>
+                                        <a href="#">
+                                            <div class="text-area">
+                                                <p class="txt ellipsis2">LG Energy Solution signed a large-scale ESS project with ...</p>
+                                                <span class="date">2025.5.21</span>
+                                            </div>
+                                            <div class="img-area">
+                                                <img src="../../../inc/images/img/main_img7.png" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="text-area">
+                                                <p class="txt ellipsis2">LG Energy Solution signed a large-scale ESS project with ...</p>
+                                                <span class="date">2025.5.17</span>
+                                            </div>
+                                            <div class="img-area">
+                                                <img src="../../../inc/images/img/main_img8.png" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="text-area">
+                                                <p class="txt ellipsis2">LG Energy Solution-Delta Electronics Strategic Breakdown..</p>
+                                                <span class="date">2025.5.21</span>
+                                            </div>
+                                            <div class="img-area">
+                                                <img src="../../../inc/images/img/main_img9.png" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="text-area">
+                                                <p class="txt ellipsis2">LG Energy Solution signed a large-scale ESS project with ...</p>
+                                                <span class="date">2025.5.21</span>
+                                            </div>
+                                            <div class="img-area">
+                                                <img src="../../../inc/images/img/main_img10.png" alt="">
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- //content-item06 -->
+                                
+                    </div> 
+                </div>
+            </section>
+            <!-- // section -->
+            <aside>
+                <img src="../../../inc/images/sample/floating.png" alt="floating" />
+            </aside>
+            <!-- footer -->
+            <footer class="footer-wrap">
+                <div class="footer-area">
+                <div class="footer-item01">
+                    <ul class="footer-site_map">
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">Ethics Hotline</a></li>
+                    <li><a href="#">安全指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item02">
+                    
+                    
+                    <div class="selectbox-wrap type3">
+                        <div class="select-cate activeSelect">
+                            <button type="button" aria-haspopup="listbox">相关网站</button>                                                
+                            <!-- 11.4  data-lenis-prevent 속성 추가-->
+                            <ul class="select-menu" role="listbox" data-lenis-prevent>
+                                <li>
+                                    <p class="cate-title">LG Corp.</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG Chem</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG Electronics</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                    <p class="cate-title">Family Site</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG ESS Battery</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG Energy Solution Micigan</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">LG Energy Solution Wroclaw Energy</a></li>
+                                        <!--<li><a href="javascript:;" role="option" tabindex="0">Virtual Experience</a></li>-->
+                                        <li><a href="javascript:;" role="option" tabindex="0">Open Innovation</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p class="cate-title">Business</p>
+                                    <ul class="cate-item">
+                                        <li><a href="javascript:;" role="option" tabindex="0">Procurement Portal System</a></li>
+                                        <li><a href="javascript:;" role="option" tabindex="0">Partner Security Portal</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="footer-bottom">
+                <a class="footer-logo">
+                    <img src="../../../inc/images/img/img_footer_logo.svg" alt="LG Energy Solution" />
+                </a>
+                <ul class="footer-util">
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-in.svg" alt="in"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-insta.svg" alt="instagram"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-naver.svg" alt="naver"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-youtube.svg" alt="youtube"></a></li>
+                    <li><a href="#"><img src="../../../inc/images/icon/icon_circle-blog.svg" alt="blog"></a></li>
+                </ul>
+                </div>
+            </footer>
+            <!-- // footer -->
+        </div>
+        <!-- //11.4  main-scroll-area 스크롤 영역 추가-->
+        </div>
+
+        
+        <!-- 메인 쿠키 설정 모달 레이어 -->
+        <div class="main-cookie" id="popupCookieLayer">
+            <div class="content-wrap">
+                <div class="desc">
+                    本网站使用 Cookie，以提供便捷的浏览体验，并通过流量分析不断改进功能。<br class="pc-only">
+                    选择“允许所有 Cookie”即表示您同意使用 Cookie。您也可以选择“Cookie 设置”，以允许或禁用特定的 Cookie。 <br class="pc-only">
+                    详细内容请参阅我们的<a href="#" class="underline">《隐私政策》。</a>
+                </div>
+                <div class="btn-wrap">
+                    <div class="btn-group">
+                        <button type="button" class="act-btn-sm btn-primary02 btn-allow">允许所有 Cookie</button>
+                        <button type="button" class="act-btn-sm btn-outline03 btn-setting" id="popupCookieSettingBtn1" onclick="pubUi.popUp.open('#popupCookieSetting', '#popupCookieSettingBtn1')">Cookie 设置</button>
+                    </div>
+                    <div class="btn-close">
+                        <button type="button"><img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- popup : 메인 쿠키 설정 팝업 - Cookie Settings -->
+        <div class="modal-pop dialog setting-cookie" id="popupCookieSetting">
+            <div class="pop-wrap">
+                <div class="pop-header">
+                    <h3 class="title">Cookie 设置</h3>
+                </div>
+                <div class="pop-content">
+                    <div class="section-wrap">
+                        <section>
+                            <div class="title-wrap">
+                                <h5 class="title">您的隐私</h5>
+                            </div>
+                            <p class="desc">
+                                LG新能源认为，让您了解我们如何使用您的个人信息非常重要。<br class="pc-only">
+                                对于通过电子方式收集的消费者数据，LG新能源根据我们的《隐私政策》提供通知、选择、访问和安全保障。
+                            </p>
+                        </section>
+                        <section>
+                            <div class="title-wrap">
+                                <h5 class="title">分析型 Cookie</h5>
+                                <div class="toggle-btn">
+                                    <input type="checkbox" name="toggle" id="toggle1" class="toggle-circle">
+                                 </div>
+                            </div>
+                            <p class="desc">
+                                这些 Cookie 使我们能够通过网站流量分析不断改进网站功能。
+                            </p>
+                        </section> 
+                    </div>
+                </div>
+                <div class="pop-footer">
+                  <div class="btn-wrap">
+                    <button type="button" class="act-btn-md btn-primary01" onclick="pubUi.popUp.close('#popupCookieSetting','#popupCookieSettingBtn1');">保存并继续</button>
+                  </div>
+                </div> 
+                <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupCookieSetting','#popupCookieSettingBtn1');" title="关闭弹出窗口"></button>
+            </div>
+        </div>
+        
+         
+    <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
+    <!-- 11.4 lenis.min.js 스크립트 파일 추가 -->
+    <script type="text/javascript" src="../../../inc/js/lenis.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
+    <!-- 11.4 main-ani.js 스크립트 파일 추가 -->
+    <script type="text/javascript" src="../../../inc/js/main-ani.js"></script>
+    </body>
+</html>
