@@ -8,8 +8,7 @@
         <meta name=" format-detection" content="telephone=no" />
         <title>LG에너지솔루션 - 레이아웃_Tab-case</title>
         <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
-        <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />        
-        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />
         <script type="text/javascript" src="../../../inc/js/lottie.js"></script>
 
     </head>
@@ -593,5 +592,23 @@
     <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
     <!-- 11.4 main-ani.js 스크립트 파일 추가 -->
     <script type="text/javascript" src="../../../inc/js/main-ani.js"></script>
+    <!-- header footer 추가 -->
+    <script>
+        async function includeHTML(target, url, position = "beforeend") {
+            const el =
+                typeof target === "string"
+                    ? document.querySelector(target)
+                    : target;
+
+            if (!el) return;
+
+            const res = await fetch(url);
+            const html = await res.text();
+
+            el.insertAdjacentHTML(position, html);
+        }
+        includeHTML(".main-scroll-area", "../comm/comm_header.html", "afterbegin");
+        includeHTML(".main-scroll-area", "../comm/comm_footer.html", "beforeend");
+    </script>
     </body>
 </html>
