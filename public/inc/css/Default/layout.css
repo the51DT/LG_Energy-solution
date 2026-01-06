@@ -55,6 +55,7 @@ aside > img{cursor: pointer;}
 html:lang(zh-CN) .gnb__tab-btn-wrap{gap:7.5rem;}
 html:lang(de) .gnb__tab-btn-wrap{gap:6.25rem;}
 html:lang(pl) .gnb__tab-btn-wrap{gap:6.25rem;}
+html:lang(ja) .gnb__tab-btn-wrap{gap:7.5rem;}
 
 
 
