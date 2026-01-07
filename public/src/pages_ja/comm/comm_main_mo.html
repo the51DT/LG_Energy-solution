@@ -270,24 +270,57 @@
          
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
+        <script>
+            
+        async function includeHTML(target, url, position = "beforeend") {
+            const el = typeof target === "string" ? document.querySelector(target) : target;
+            if (!el) return false;
+
+            const res = await fetch(url, { cache: "no-cache" });
+            const html = await res.text();
+            el.insertAdjacentHTML(position, html);
+            return true;
+        }
+
+        function waitFor(selector, { timeout = 3000 } = {}) {
+            return new Promise((resolve, reject) => {
+                const start = performance.now();
+
+                const tick = () => {
+                    const el = document.querySelector(selector);
+                    if (el) return resolve(el);
+
+                    if (performance.now() - start > timeout) {
+                        return reject(new Error(`waitFor timeout: ${selector}`));
+                    }
+                    requestAnimationFrame(tick);
+                };
+
+                tick();
+            });
+        }
+
+        function initHeaderOnce() {
+            if (window.__headerInited) return;
+            window.__headerInited = true;
+
+            // window.LGEnSol?.headerEvent?.();
+            window.LGEnSol?.headerEventMo?.();
+        }
+
+        (async () => {
+            await includeHTML(".wrap", "../comm/header_mo.html", "afterbegin");
+            await includeHTML(".wrap", "../comm/footer_mo.html", "beforeend");
+
+            await waitFor(".parent-event", { timeout: 5000 });
+            requestAnimationFrame(() => {
+                setTimeout(initHeaderOnce, 0);
+            });
+        })().catch((err) => {
+            console.warn(err);
+        });
+        </script>
         <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
         <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
-        <script>
-        async function includeHTML(target, url, position = "beforeend") {
-            const el =
-                typeof target === "string"
-                    ? document.querySelector(target)
-                    : target;
-
-            if (!el) return;
-
-            const res = await fetch(url);
-            const html = await res.text();
-
-            el.insertAdjacentHTML(position, html);
-        }
-        includeHTML(".wrap", "../comm/comm_header_mo.html", "afterbegin");
-        includeHTML(".wrap", "../comm/comm_footer_mo.html", "beforeend");
-    </script>
     </body>
 </html>

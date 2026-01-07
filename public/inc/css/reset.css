@@ -366,3 +366,55 @@ html:lang(zh-CN) ::-webkit-input-placeholder,
 html:lang(zh-CN) textarea::placeholder {
   font-family: "Noto Sans SC", sans-serif;
 }
+
+/************************** 
+    Reset - 중문(JA)
+***************************/
+html:lang(ja) *,
+html:lang(ja) header body,
+html:lang(ja) header p,
+html:lang(ja) header h1,
+html:lang(ja) header h2,
+html:lang(ja) header h3,
+html:lang(ja) header h4,
+html:lang(ja) header h5,
+html:lang(ja) header h6,
+html:lang(ja) header ul,
+html:lang(ja) header ol,
+html:lang(ja) header li,
+html:lang(ja) header dl,
+html:lang(ja) header dt,
+html:lang(ja) header dd,
+html:lang(ja) header table,
+html:lang(ja) header th,
+html:lang(ja) header td,
+html:lang(ja) header form,
+html:lang(ja) header fieldset,
+html:lang(ja) header legend,
+html:lang(ja) header input,
+html:lang(ja) header textarea,
+html:lang(ja) header button,
+html:lang(ja) header select,
+html:lang(ja) header div,
+html:lang(ja) header figure,
+html:lang(ja) header article,
+html:lang(ja) header header,
+html:lang(ja) header nav,
+html:lang(ja) header footer,
+html:lang(ja) header section,
+html:lang(ja) header aside {  
+  word-break: break-all ;
+}
+html:lang(ja) input[type="text"],
+html:lang(ja) input[type="password"],
+html:lang(ja) input[type="number"],
+html:lang(ja) input[type="tel"],
+html:lang(ja) input[type="email"],
+html:lang(ja) select,
+html:lang(ja) textarea {
+  font-family: "Pretendard JP", sans-serif;  
+}
+html:lang(ja) ::-webkit-input-placeholder,
+html:lang(ja) textarea::placeholder {
+  font-family: "Pretendard JP", sans-serif;
+}
