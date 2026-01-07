@@ -405,3 +405,16 @@ html:lang(ja) header section,
 html:lang(ja) header aside {  
   word-break: break-all ;
 }
+html:lang(ja) input[type="text"],
+html:lang(ja) input[type="password"],
+html:lang(ja) input[type="number"],
+html:lang(ja) input[type="tel"],
+html:lang(ja) input[type="email"],
+html:lang(ja) select,
+html:lang(ja) textarea {
+  font-family: "Pretendard JP", sans-serif;  
+}
+html:lang(ja) ::-webkit-input-placeholder,
+html:lang(ja) textarea::placeholder {
+  font-family: "Pretendard JP", sans-serif;
+}
