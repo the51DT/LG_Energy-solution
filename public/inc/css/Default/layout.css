@@ -176,6 +176,7 @@ html:lang(ja) .gnb__tab-btn-wrap{gap:7.5rem;}
 .lang-wrap .select-menu {padding: 1rem 1.5rem; top: 2rem; left: 50%;transform: translateX(-50%);width:auto;flex-direction: column;align-items: center;gap: 0.5rem;border-radius: 0.5rem;background: var(--fill-fill-on-primary, #FFF);box-shadow: 10px 20px 40px 0 var(--shadow-shadow-10, rgba(16, 16, 16, 0.10));}
 .lang-wrap .select-menu.on{display: flex; z-index: 902;}
 .lang-wrap .select-menu > li > a {color: var(--text-text-default-03, #858889);font-size: 1rem;font-style: normal;font-weight: 600;line-height: var(--line-height-desktop-B2, 1.6rem);letter-spacing: var(--letter-spacing-default, 0);background:#fff;padding:0;}
+.lang-wrap:lang(ja) .select-menu > li > a{word-break: keep-all}
 .lang-wrap .select-menu > li > a:hover,
 .lang-wrap .select-menu > li > a.active{color: var(--text-text-default-01, #171819);background:#fff;}
 .lang-wrap .select-menu > li:not(:last-child) {padding-bottom: 0.5rem;}
