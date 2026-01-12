@@ -13,63 +13,80 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
-        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
-        <!-- header footer 추가 js 실제론 불필요-->
-        <script>
-            
-            async function includeHTML(target, url, position = "beforeend") {
-                const el = typeof target === "string" ? document.querySelector(target) : target;
-                if (!el) return false;
+    <div class="wrap"></div>
+    <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+    <!-- header footer 추가 js 실제론 불필요-->
+    <script>
+        async function includeHTML(target, url, position = "beforeend") {
+            const el = typeof target === "string" ? document.querySelector(target) : target;
+            if (!el) return false;
 
-                const res = await fetch(url, { cache: "no-cache" });
-                const html = await res.text();
-                el.insertAdjacentHTML(position, html);
-                return true;
-            }
+            const res = await fetch(url, { cache: "no-cache" });
+            const html = await res.text();
+            el.insertAdjacentHTML(position, html);
+            return true;
+        }
 
-            function waitFor(selector, { timeout = 3000 } = {}) {
-                return new Promise((resolve, reject) => {
-                    const start = performance.now();
+        function waitFor(selector, { timeout = 3000 } = {}) {
+            return new Promise((resolve, reject) => {
+                const start = performance.now();
 
-                    const tick = () => {
-                        const el = document.querySelector(selector);
-                        if (el) return resolve(el);
+                const tick = () => {
+                    const el = document.querySelector(selector);
+                    if (el) return resolve(el);
 
-                        if (performance.now() - start > timeout) {
-                            return reject(new Error(`waitFor timeout: ${selector}`));
-                        }
-                        requestAnimationFrame(tick);
-                    };
+                    if (performance.now() - start > timeout) {
+                        return reject(new Error(`waitFor timeout: ${selector}`));
+                    }
+                    requestAnimationFrame(tick);
+                };
 
-                    tick();
-                });
-            }
-
-            function initHeaderOnce() {
-                if (window.__headerInited) return;
-                window.__headerInited = true;
-
-                // window.LGEnSol?.headerEvent?.();
-                window.LGEnSol?.headerEventMo?.();
-            }
-
-            (async () => {
-                // await includeHTML(".wrap", "../comm/header.html", "afterbegin");
-                await includeHTML(".wrap", "../comm/footer.html", "beforeend");
-
-                await waitFor(".parent-event", { timeout: 5000 });
-                requestAnimationFrame(() => {
-                    setTimeout(initHeaderOnce, 0);
-                });
-            })().catch((err) => {
-                console.warn(err);
+                tick();
             });
-        </script>
-        <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
-        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
-    </div>
+        }
+
+        function initHeaderOnce() {
+            if (window.__headerInited) return;
+            window.__headerInited = true;
+
+            // window.LGEnSol?.headerEvent?.();
+            window.LGEnSol?.headerEventMo?.();
+        }
+
+        (async () => {
+            // await includeHTML(".wrap", "../comm/header.html", "afterbegin");
+            await includeHTML(".wrap", "../comm/footer.html", "beforeend");
+
+            await waitFor(".parent-event", { timeout: 5000 });
+            requestAnimationFrame(() => {
+                setTimeout(initHeaderOnce, 0);
+            });
+        })().catch((err) => {
+            console.warn(err);
+        });
+        function loadScript(src) {
+            return new Promise((resolve, reject) => {
+                const s = document.createElement("script");
+                s.src = src;
+                s.onload = resolve;
+                s.onerror = reject;
+                document.body.appendChild(s);
+            });
+        }
+
+        (async () => {
+            // await includeHTML(...header...);
+            // await includeHTML(...footer...);
+            await loadScript("../../../inc/js/com-ui.js");
+            await loadScript("../../../inc/js/pub-ui.js");
+            await waitFor(".parent-event", { timeout: 5000 });
+        })();
+    </script>
+    <!-- 실제 사용 js  -->
+    <!-- <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+    <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script> -->
+    
 </body>
 
 </html>
