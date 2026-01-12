@@ -269,9 +269,9 @@
         
          
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
-        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>        
+        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+        <!-- header footer 추가 js 실제론 불필요-->
         <script>
-            
         async function includeHTML(target, url, position = "beforeend") {
             const el = typeof target === "string" ? document.querySelector(target) : target;
             if (!el) return false;
@@ -319,8 +319,26 @@
         })().catch((err) => {
             console.warn(err);
         });
+        function loadScript(src) {
+            return new Promise((resolve, reject) => {
+                const s = document.createElement("script");
+                s.src = src;
+                s.onload = resolve;
+                s.onerror = reject;
+                document.body.appendChild(s);
+            });
+        }
+
+        (async () => {
+            // await includeHTML(...header...);
+            // await includeHTML(...footer...);
+            await loadScript("../../../inc/js/com-ui.js");
+            await loadScript("../../../inc/js/pub-ui.js");
+            await waitFor(".parent-event", { timeout: 5000 });
+        })();
         </script>
-        <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
-        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
+        <!-- 실제 사용 js  -->
+        <!-- <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script> -->
     </body>
 </html>
