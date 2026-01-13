@@ -404,7 +404,8 @@ html:lang(ja) header footer,
 html:lang(ja) header section,
 html:lang(ja) header aside {  
   font-family: "Pretendard", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
-  word-break: break-all ;
+  word-break: normal;
+  line-break: strict;
 }
 html:lang(ja) input[type="text"],
 html:lang(ja) input[type="password"],
