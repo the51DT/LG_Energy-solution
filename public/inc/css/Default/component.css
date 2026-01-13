@@ -571,7 +571,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .selectbox-wrap > div.select-cate button.active::before {transform: translateY(-50%) rotate(180deg);}
 
 .selectbox-wrap > div.select-cate > a, 
-.selectbox-wrap > div.select-cate > button {font-size: 1.25rem; line-height: 1.875rem; font-weight: 400; display: block; text-align: left;}
+.selectbox-wrap > div.select-cate > button {font-size: 1.25rem; line-height: 1.875rem; font-weight: 500; display: block; text-align: left;}
 .selectbox-wrap > div.select-cate > a:focus,
 .selectbox-wrap > div.select-cate > button.on {color:var(--colorElement-light-text-text-default01); font-weight:500;}
 .selectbox-wrap > div.select-cate > a > img {margin-top: 3px;}
