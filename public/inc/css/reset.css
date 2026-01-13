@@ -368,7 +368,7 @@ html:lang(zh-CN) textarea::placeholder {
 }
 
 /************************** 
-    Reset - 중문(JA)
+    Reset - 일본어(JA)
 ***************************/
 html:lang(ja) *,
 html:lang(ja) header body,
@@ -403,7 +403,9 @@ html:lang(ja) header nav,
 html:lang(ja) header footer,
 html:lang(ja) header section,
 html:lang(ja) header aside {  
-  word-break: break-all ;
+  font-family: "Pretendard", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
+  word-break: normal;
+  line-break: strict;
 }
 html:lang(ja) input[type="text"],
 html:lang(ja) input[type="password"],
@@ -412,9 +414,9 @@ html:lang(ja) input[type="tel"],
 html:lang(ja) input[type="email"],
 html:lang(ja) select,
 html:lang(ja) textarea {
-  font-family: "Pretendard JP", sans-serif;  
+  font-family: "Pretendard", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
 }
 html:lang(ja) ::-webkit-input-placeholder,
 html:lang(ja) textarea::placeholder {
-  font-family: "Pretendard JP", sans-serif;
+  font-family: "Pretendard", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
 }
