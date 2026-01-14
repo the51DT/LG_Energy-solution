@@ -1772,8 +1772,9 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .netw:lang(zh-CN) .map-img::after { pointer-events: none;}
 
 .netw .content-header .title-h1 {margin-bottom: 0;}
-.netw .subp-tit-area {margin-top: 5rem;}
-.netw:lang(zh-CN) .subp-tit-area {margin-top: 2.5rem;}
+.netw .subp-tit-area {margin-top: 2.5rem;}
+.netw:lang(pl) .subp-tit-area,
+.netw:lang(de) .subp-tit-area {margin-top: 5rem;}
 
 
 .map-info-content-box .info-content-head .sort {display: flex; gap: 1rem; align-items: center;}
@@ -2343,7 +2344,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .serv-baround .btm-btn .txt-btn01 {font-size: .875rem; line-height: 1.225rem; padding-right: 1.5rem;}
 .serv-baround .btm-btn .txt-btn01::after {width: 1.25rem; height: 1.25rem;}
 .serv-baround .content-item02 .article-content .article-desc { padding:1.88rem 0;}
-.serv-baround .content-item03 .article-content .article-desc { padding:0 0 1.88rem;}
+.serv-baround .content-item03 .article-content .article-desc { padding:0 0 1.88rem;font-size:1.125rem;}
 
 .e2w-box {display: flex;}
 .e2w-box .e2w-logo-wrap {display: flex; align-items: center; justify-content: center; padding: 2.5rem; width: 16.25rem; background-color: #33B0C6; border-radius: 1rem 0 0 1rem;}
@@ -2767,6 +2768,7 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .serv-kooroo .content-item02 { background-color: #EAF3F8; }
 .serv-kooroo .station-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 2.5rem; z-index: 1; position: relative; }
 .serv-kooroo .station-box { background-color: #fff; display: flex; flex-direction: column; padding: 2.5rem; border-radius: 1rem; }
+.serv-kooroo:lang(ja) .station-box:last-child{padding-right:1.5rem;}
 .serv-kooroo .article-content + .article-content + .article-content .station-wrap{grid-template-rows: 1fr 1fr ; grid-template-columns: 28.125rem 1fr;}
 .serv-kooroo .station-box img { width: 5rem; height: 5rem; }
 .serv-kooroo .station-top { display: flex; align-items: center; gap: 0.62rem; }
