@@ -958,6 +958,7 @@
 .rcif .job-list > li .job-tit > img {flex-shrink: 0; width: 5rem; height: 5rem; padding: 1rem; object-fit: contain;}
 .rcif .job-list > li .job-tit > p {font-size: 1.5rem; font-weight: 600; line-height: 2.25rem; color: var(--colorElement-light-text-text-default01);}
 .rcif .job-list > li .text-list-wrap {padding-top: 1.875rem; font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02);}
+.rcif:lang(ja) .job-list > li .text-list-wrap,
 .rcif:lang(en) .job-list > li .text-list-wrap,
 .rcif:lang(pl) .job-list > li .text-list-wrap,
 .rcif:lang(de) .job-list > li .text-list-wrap {font-size: 1rem; line-height: 1.6rem;}
@@ -2536,10 +2537,12 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .rchr.wrap .content-header {padding: 7.5rem 0 3.75rem;}
 .rchr .subp-tit-area > p { color: #171819; font-size: 1.25rem; font-weight: 400; margin-top: 1.25rem; }
 .rchr .left-area .sub-title { color: #171819; font-size: 1.5rem; font-weight: 600; padding-bottom: 2rem; margin-bottom: 9.25rem; position: relative; }
+.rchr .left-area .sub-title:lang(ja){margin-bottom: 7.25rem;}
 .rchr .left-area .sub-title::after { content: ''; position: absolute; width: 35.75rem; height: 1px; background-color: rgba(23, 24, 25, 0.2); bottom: 0; left: 0; }
 .rchr .left-area .sub-title > span { display: block; color: #33B0C6; font-size: 1.75rem; font-weight: 500; }
 .rchr .sect-box { display: grid; grid-template-columns: 30.5rem 30.5rem; margin-right: -5rem; }
 .rchr .sect-box > div { background-color: #fff; border: 1px solid #e1e7ea; border-radius: 100%; padding: 4rem 5rem; margin: -1.88rem 0 0 -1.88rem; z-index: 1; }
+.rchr .sect-box > div:lang(ja){padding: 0 4rem 0 5rem; height:16rem;display: flex;flex-direction: column;justify-content: center;}
 .rchr .sect-box > div:nth-of-type(2) { background-color: transparent; border: transparent; }
 .rchr .sect-box > div > span { color: #33B0C6; font-size: 1.25rem; font-weight: 600; }
 .rchr .sect-box > div > p { font-size: 1.125rem; color: #171819; font-weight: 400; line-height: 1.8rem; }
