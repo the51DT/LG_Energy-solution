@@ -1675,6 +1675,7 @@
 
 /* 글로벌네트워크 (netw) */
 .netw .content-header .title-h1 {margin-bottom: 1.5rem;}
+.netw .subp-tit-area {margin-top: 0;}
 .netw:lang(pl) .content-header .title-h1,
 .netw:lang(de) .content-header .title-h1 {margin-bottom: 0;}
 .netw .content-area-head-tab {position: sticky;}
