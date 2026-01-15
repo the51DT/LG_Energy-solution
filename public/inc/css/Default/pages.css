@@ -2283,6 +2283,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .adv-wrap .adv-box img{width:5rem;height:5rem;}
 .adv-wrap .adv-box .lottie-wrap {width: 5rem; height: 5rem;}
 .adv-wrap .adv-box .adv-tit { font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: #171819; text-align: center; }
+.adv-wrap:lang(ja) .adv-box:nth-child(-n+3)  .adv-tit{height:64px;}
 .adv-wrap .adv-box .adv-desc { font-size: 1rem; line-height: 1.6rem; color: #555758; text-align: center; flex-grow: 1; padding:0 2.5rem;}
 .serv-trading .service-wrap .service-box { width: calc(50% - .625rem); padding: 2.5rem 2.5rem 3.75rem; border-radius: 1rem; background-color: #fff; }
 .serv-trading .service-wrap .service-tit-wrap {display: flex; align-items: center; gap: 0.625rem; padding-bottom: 1.25rem; border-bottom: 1px solid #C9CED1; }
@@ -2342,6 +2343,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .e4w-box .e4w-btm .asterisk-text {padding-top: 1.88rem;}
 .serv-baround .btm-btn {text-align: right;}
 .serv-baround .btm-btn .txt-btn01 {font-size: .875rem; line-height: 1.225rem; padding-right: 1.5rem;}
+.serv-baround:lang(ja) .btm-btn .txt-btn01{color: var(--text-text-default-01, #171819);font-weight: 500;line-height: var(--line-height-mobile-Dense14, 1.225rem); /* 140% */}
 .serv-baround .btm-btn .txt-btn01::after {width: 1.25rem; height: 1.25rem;}
 .serv-baround .content-item02 .article-content .article-desc { padding:1.88rem 0;}
 .serv-baround .content-item03 .article-content .article-desc { padding:0 0 1.88rem;font-size:1.125rem;}

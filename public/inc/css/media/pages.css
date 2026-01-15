@@ -2001,6 +2001,7 @@
 .service .article-content .article-desc {padding: 1rem 0 1.5rem; font-size: 1rem; line-height: 1.6rem;}
 .adv-wrap, .serv-trading .service-wrap {gap: 1rem; margin-top: 1rem;}
 .adv-wrap .adv-box {width: 100%; padding: 1.5rem; gap: 0;border-radius: 0.5rem;}
+.adv-wrap:lang(ja) .adv-box:nth-child(-n+3)  .adv-tit{height:auto;}
 .adv-wrap .adv-box .adv-img,
 .adv-wrap .adv-box .lottie-wrap {width: 4rem; height: 4rem;}
 .adv-wrap .adv-box .adv-tit {margin: 1rem 0 .5rem; font-size: 1.125rem; line-height: 1.75rem;}
@@ -2064,6 +2065,10 @@
 .e2w-box {flex-direction: column;}
 .e2w-box .e4w-top .top-logo>img {width: 6.29575rem;}
 .e2w-box .e4w-btm {gap: 1.5rem; height: auto;}
+
+.serv-baround .content-item03 .swiper-wrapper {align-items: stretch;}
+.serv-baround .content-item03 .swiper-slide {height: auto;display: flex;}
+.serv-baround .content-item03 .swiper-slide > * {flex: 1;}
 .bmts-box {gap: 1.5rem; width: 100%; padding: 1.5rem 1.25rem; border-radius: 0.5rem;}
 .swiper .bmts-box img {width: 4rem; height: 4rem;}
 .bmts-box .bmts-tit {font-size: 1rem; line-height: 1.6rem;}
