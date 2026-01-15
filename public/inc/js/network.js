@@ -427,11 +427,12 @@ const languageCode = (() => {
     return "ZH";
   if (lang.startsWith("pl")) return "PL";
   if (lang.startsWith("de")) return "DE";
+  if (lang.startsWith("ja")) return "JA";
   return "KO";
 })();
 // - 퍼블테스트용(개발은 따로 존재) - E
 
-//11.12 수정 - 해당 영역부터 적용 필요 : S
+
 let map; // 전역 map 객체
 let infowindow; // 인포윈도우 전역 선언 (중복 방지)
 
@@ -448,7 +449,7 @@ let selectedType = "";
 let regionFilter = [];
 let center, zoom;
 
-// 11.11 수정 : bindEvents 변경
+
 function bindEvents() {
   // 글로벌 네트워크
   let networkMap = document.querySelector(".map-conts-area");
@@ -464,7 +465,7 @@ function bindEvents() {
     );
     const mapCloseBtn = networkMapInfo.querySelector(
       ".map-info-content-box .btn-close > button"
-    ); // 11.11 수정 : mapCloseBtn 변수 선택자 변경
+    ); 
 
     let checkingInterval; // 깜빡임을 위한 인터벌 변수
 
@@ -522,19 +523,20 @@ function bindEvents() {
             "亚洲 · 大洋洲",
             "Asien · Ozeanien",
             "Azja · Oceania",
+            "アジア · オセアニア",
           ].includes(targetContinent)
         ) {
           map.setCenter({ lat: 34.0479, lng: 100.6197 });
           map.setZoom(3);
         } else if (
-          ["아메리카", "Americas", "美洲", "Amerika", "Ameryki"].includes(
+          ["아메리카", "Americas", "美洲", "Amerika", "Ameryki", "アメリカ"].includes(
             targetContinent
           )
         ) {
           map.setCenter({ lat: 39.6393, lng: -101.3754 });
           map.setZoom(4);
         } else if (
-          ["유럽", "Europe", "欧洲", "Europa"].includes(targetContinent)
+          ["유럽", "Europe", "欧洲", "Europa", "ヨーロッパ"].includes(targetContinent)
         ) {
           map.setCenter({ lat: 54.526, lng: 15.2551 });
           map.setZoom(5.5);
@@ -655,7 +657,8 @@ function initMap() {
       location.type === "Produkcja" ||
       location.type === "Produktion" ||
       location.type == "JV" ||
-      location.type == "JV/생산"
+      location.type == "JV/생산"||
+      location.type == "生産"
     ) {
       //생산 , JV/생산
       markerIcon = new google.maps.MarkerImage(
@@ -790,7 +793,7 @@ function updateInfoList(filtered) {
         li.closest(".map-info-item").closest(".map-info").classList.add("on");
 
         html = "";
-        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - S
+        
         html += '<div class="info-conts-wrap">';
         html += '<div class="info-content-head">';
         html += '   <ul class="sort">';
@@ -812,7 +815,7 @@ function updateInfoList(filtered) {
           // R&D
           html +=
             '       <li class="filter-type2">' + targetLocation.type + "</li>";
-          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - S*/
+          
         } else if (
           targetLocation.type === "생산" ||
           targetLocation.type === "生产" ||
@@ -820,9 +823,10 @@ function updateInfoList(filtered) {
           targetLocation.type === "Produktion" ||
           targetLocation.type === "JV" ||
           targetLocation.type === "JV/생산" ||
-          targetLocation.type === "Manufacturing"
+          targetLocation.type === "Manufacturing"||
+          targetLocation.type === "生産"
         ) {
-          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - E  */
+          
           //생산
           html +=
             '       <li class="filter-type3">' + targetLocation.type + "</li>";
@@ -887,7 +891,7 @@ function updateInfoList(filtered) {
           "       <button type='button'><img src='../../../inc/images/icon/icon_close_btn.svg' alt='닫기 버튼'/></button>";
         html += "   </div>";
         html += "</div>";
-        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - E
+        
 
         // 3. PC + Mobile info 영역 모두 갱신
         if (pcInfoBox) {
@@ -902,7 +906,7 @@ function updateInfoList(filtered) {
         // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
 
         let html = "";
-        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - S
+        
         html += '<div class="info-conts-wrap">';
         html += '   <div class="info-content-head" style="margin-top:100%;">';
         html += `   "${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`;
@@ -912,7 +916,7 @@ function updateInfoList(filtered) {
           "       <button type='button'><img src='../../../inc/images/icon/icon_close_btn.svg' alt='닫기 버튼'/></button>";
         html += "   </div>";
         html += "</div>";
-        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - E
+        
 
         if (pcInfoBox) pcInfoBox.innerHTML = html;
         if (moInfoBox) moInfoBox.innerHTML = html;
@@ -922,13 +926,13 @@ function updateInfoList(filtered) {
   bindEvents();
 }
 
-// 11.11 수정 : 유형 필터 클릭시, 활성화된 지역 기준으로, 선택한 필터값에맞는 리스트 출력되도록 구조 변경 - S
+
 // ✅ 기능 1: 유형 필터
 mapFilterList.forEach((button) => {
   button.addEventListener("click", function (e) {
     const filterType = button.className.replace("filter-type", "").trim(); // 1~4
 
-    // 언어별 유형 맵핑 - JV 추가 : S (11.25 수정)
+    
     let typeMap = {};
     if (languageCode == "KO")
 		typeMap = { 1: "본사", 2: "R&D", 3: "생산", 4: "판매", 5: "JV" };
@@ -940,13 +944,13 @@ mapFilterList.forEach((button) => {
 		typeMap = { 1: "Siedziba główna", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż", 5: "JV" };
 	else if (languageCode == "DE")
 		typeMap = { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb", 5: "JV" };
-	// 언어별 유형 맵핑 - JV 추가 : E (11.25 수정)
+	else if (languageCode == "JA")
+		typeMap = { 1: "本社", 2: "R&D", 3: "生産", 4: "販売", 5: "JV" };
 
     selectedType = typeMap[filterType];
 
-	// 유형 필터 분기처리 추가 (생산+JV / JV / 이외) : S (11.25 수정)
 	let filterTypes = [];
-	if (["생산","Manufacturing","生产","Produkcja","Produktion"].includes(selectedType)) {
+	if (["생산","Manufacturing","生产","Produkcja","Produktion","生産"].includes(selectedType)) {
 		filterTypes = [selectedType, "JV"]; // 생산 + JV
 	} else if (selectedType === "JV") {
 		filterTypes = ["JV"]; // JV
@@ -955,7 +959,6 @@ mapFilterList.forEach((button) => {
 	}
 
 	let filtered = locations.filter((loc) => filterTypes.includes(loc.type));
-	// 유형 필터 분기처리 추가 (생산+JV / JV / 이외) : E (11.25 수정)
 
     console.log(selectedText + "^" + targetContinent + "^" + selectedType + " CHECK3");
 
@@ -1063,6 +1066,7 @@ mapFilterList.forEach((button) => {
           "本社",
           "Siedziba główna",
           "Hauptsitz",
+          "本社",
         ].includes(loc.type)
       ) {
         markerIcon = new google.maps.MarkerImage(
@@ -1088,6 +1092,7 @@ mapFilterList.forEach((button) => {
           "Produkcja",
           "Produktion",
           "JV",
+          "生産",
         ].includes(loc.type)
       ) {
         markerIcon = new google.maps.MarkerImage(
@@ -1128,9 +1133,9 @@ mapFilterList.forEach((button) => {
     defaultMapSizeChk();
   });
 });
-// 11.11 수정 : 유형 필터 클릭시, 활성화된 지역 기준으로, 선택한 필터값에맞는 리스트 출력되도록 구조 변경 - E
 
-// 11.11 수정 - 기능 2 구조 변경(지역탭 선택시 해당 국가에 맞는 전체값 리스트 노출되도록 구조 변경) - S
+
+
 // ✅ 기능 2: 탭 클릭 시 지역 필터
 document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
   tab.addEventListener("click", function () {
@@ -1205,6 +1210,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
       ZH: "全部",
       PL: "Wszystkie",
       DE: "Alle",
+      JA: "すべて"
     };
     const resetText = langMap[languageCode] || "전체";
 
@@ -1219,12 +1225,10 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
       ".map-info.pc-only .map-info-list .select-menu > li"
     );
 
-    /* 11.12 수정 : 지역탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
     const mapInfo = document.querySelector(".map-info.pc-only");
     if (mapInfo.classList.contains("on")) {
       mapInfo.classList.remove("on");
-    } /* 11.12 수정 : 지역탭 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
-
+    }
     if (pcSelectBtn) {
       pcSelectBtn.innerText = resetText;
       pcSelectBtn.classList.remove("on");
@@ -1259,6 +1263,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
           "本社",
           "Siedziba główna",
           "Hauptsitz",
+          "本社",
         ].includes(loc.type)
       ) {
         iconFile = "icon_mark_black.svg";
@@ -1272,6 +1277,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
           "Produkcja",
           "Produktion",
           "JV",
+          "生産",
         ].includes(loc.type)
       ) {
         iconFile = "icon_mark_green.svg";
@@ -1320,6 +1326,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
       ZH: { 1: "本社", 2: "R&D", 3: "生产", 4: "销售" },
       PL: { 1: "Siedziba główna", 2: "B+R", 3: "Produkcja", 4: "Sprzedaż" },
       DE: { 1: "Hauptsitz", 2: "F&E", 3: "Produktion", 4: "Vertrieb" },
+      JA: { 1: "本社", 2: "R&D", 3: "生産", 4: "販売" },
     };
     const activeTypeMap = typeMapping[languageCode] || typeMapping["KO"];
 
@@ -1349,7 +1356,8 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
         text === "All" ||
         text === "全部" ||
         text === "Alle" ||
-        text === "Wszystkie"
+        text === "Wszystkie"||
+        text === "すべて"
       ) {
         li.style.display = "block"; // 전체 항목은 항상 표시
       } else if (isAllTab) {
@@ -1363,7 +1371,7 @@ document.querySelectorAll(".netw .tab-category .tab").forEach((tab) => {
     // 11.12 추가 : 지역탭 선택 시, 해당 지역의 type만 Selectbox와 필터에 표시 - E
   });
 });
-// 11.11 수정 - 기능 2 구조 변경(지역탭 선택시 해당 국가에 맞는 전체값 리스트 노출되도록 구조 변경) - E
+
 
 // li 클릭 → 지도 이동
 document.addEventListener("DOMContentLoaded", function () {
@@ -1426,7 +1434,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // 2. html 초기화 및 동적 생성
         let html = "";
 
-        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - S
+        
         html += '<div class="info-conts-wrap">';
         html += '<div class="info-content-head">';
         html += '   <ul class="sort">';
@@ -1435,7 +1443,8 @@ document.addEventListener("DOMContentLoaded", function () {
           targetLocation.type === "Headquarter" ||
           targetLocation.type === "本社" ||
           targetLocation.type === "Siedziba główna" ||
-          targetLocation.type === "Hauptsitz"
+          targetLocation.type === "Hauptsitz"||
+          targetLocation.type === "本社"
         ) {
           // 본사
           html +=
@@ -1448,7 +1457,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // R&D
           html +=
             '       <li class="filter-type2">' + targetLocation.type + "</li>";
-          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - S*/
+          
         } else if (
           targetLocation.type === "생산" ||
           targetLocation.type === "生产" ||
@@ -1456,9 +1465,11 @@ document.addEventListener("DOMContentLoaded", function () {
           targetLocation.type === "Produktion" ||
           targetLocation.type === "JV" ||
           targetLocation.type === "JV/생산" ||
-          targetLocation.type === "Manufacturing"
+          targetLocation.type === "Manufacturing"||
+          targetLocation.type === "生産"
+
         ) {
-          /* 11.25 수정 : JV/생산 추가 / 중복 JV 분기처리 제거 - E  */
+          
           html +=
             '       <li class="filter-type3">' + targetLocation.type + "</li>";
         } else {
@@ -1522,7 +1533,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "   <button type='button'><img src='../../../inc/images/icon/icon_close_btn.svg' alt='닫기 버튼'/></button>";
         html += "</div>";
         html += "</div>";
-        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - E
+        
 
         // 3. PC + Mobile info 영역 모두 갱신
         if (pcInfoBox) pcInfoBox.innerHTML = html;
@@ -1531,7 +1542,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // console.log(`"${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`);
 
         let html = "";
-        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - S
+        
         html += '<div class="info-conts-wrap">';
         html += '   <div class="info-content-head" style="margin-top:100%;">';
         html += `   "${clickedText}" 에 해당하는 위치와 정보를 찾을 수 없습니다.`;
@@ -1541,7 +1552,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "       <button type='button'><img src='../../../inc/images/icon/icon_close_btn.svg' alt='닫기 버튼'/></button>";
         html += "   </div>";
         html += "</div>";
-        // 11.11 수정 : map-info-content-box 마크업 구조 변경 - E
+        
 
         if (pcInfoBox) pcInfoBox.innerHTML = html;
         if (moInfoBox) moInfoBox.innerHTML = html;
@@ -1618,7 +1629,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // 전체선택 시: 해당 지역(탭)에 해당하는 전체만 노출
-      if (["전체", "All", "全部", "Alle", "Wszystkie"].includes(selectedText)) {
+      if (["전체", "All", "全部", "Alle", "Wszystkie", "すべて"].includes(selectedText)) {
         if (activeRegionFilter.length > 0) {
           filtered = locations.filter((loc) =>
             activeRegionFilter.includes(loc.country)
@@ -1639,11 +1650,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      /* 11.12 수정 : selectbox 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - S */
       const mapInfo = document.querySelector(".map-info.pc-only");
       if (mapInfo.classList.contains("on")) {
         mapInfo.classList.remove("on");
-      } /* 11.12 수정 : selectbox 선택시, map-info 영역 활성화되어있을경우, 비활성화 처리(창닫히게) - E */
+      } 
 
       // 3. 마커 리셋 및 새로 그림
       clearMarkers();
@@ -1654,7 +1664,8 @@ document.addEventListener("DOMContentLoaded", function () {
           location.type === "Headquarter" ||
           location.type === "本社" ||
           location.type === "Siedziba główna" ||
-          location.type === "Hauptsitz"
+          location.type === "Hauptsitz"||
+          location.type === "本社"
         ) {
           markerIcon = new google.maps.MarkerImage(
             "../../../inc/images/icon/icon_mark_black.svg",
@@ -1682,7 +1693,8 @@ document.addEventListener("DOMContentLoaded", function () {
           location.type === "Manufacturing" ||
           location.type === "生产" ||
           location.type === "Produkcja" ||
-          location.type === "Produktion"
+          location.type === "Produktion"||
+          location.type === "生産"
         ) {
           //생산 , JV/생산
           markerIcon = new google.maps.MarkerImage(
@@ -1733,4 +1745,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.initMap = initMap;
-//11.12 수정 - 해당 영역부터 적용 필요 : E
