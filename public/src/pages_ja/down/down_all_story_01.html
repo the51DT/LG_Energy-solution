@@ -247,15 +247,15 @@
         <div class="content-area download-content-area">
             <div class="content-item01 active"> 
                 <div class="content-wrap"> 
-                    <h2 class="title-h1 pc-only">下载</h2> <!-- title-h1 (페이지타이틀) -->
+                    <h2 class="title-h1 pc-only">ダウンロード</h2> <!-- title-h1 (페이지타이틀) -->
                     <div class="search-box-wrap">
                         <div class="search-box searchEvt">
-                            <button type="button" class="btn-search" aria-label="搜索" class="btn-search">
-                                <img src="../../../inc/images/icon/icon_head_search.svg" alt="搜索">
+                            <button type="button" class="btn-search" aria-label="検索" class="btn-search">
+                                <img src="../../../inc/images/icon/icon_head_search.svg" alt="検索">
                             </button>
-                            <input type="text" id="download-search" placeholder="请输入搜索词。">
-                            <button type="button" class="btn-search-reset btn-delete" aria-label="重置搜索词">
-                                <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="重置搜索词">
+                            <input type="text" id="download-search" placeholder="資料を検索">
+                            <button type="button" class="btn-search-reset btn-delete" aria-label="削除">
+                                <img src="../../../inc/images/icon/icon_close_btn_wh.svg" alt="削除">
                             </button>
                         </div>
                     </div>
@@ -264,35 +264,35 @@
                         <div class="tab-cate-wrap type3"> <!-- type3 -->
                             <ul class="tab-category activeTab" role="tablist">
                                 <li class="tab on" id="tab1"><button role="tab" aria-selected="true"
-                                    aria-controls="tab1-content">全部</button>
+                                    aria-controls="tab1-content">すべて</button>
                                 </li>
                                 <li class="tab" id="tab2"><button role="tab" aria-selected="false"
-                                    aria-controls="tab2-content">产品</button>
+                                    aria-controls="tab2-content">製品</button>
                                 </li>
                                 <li class="tab" id="tab3"><button role="tab" aria-selected="false"
-                                    aria-controls="tab3-content">服务</button>
+                                    aria-controls="tab3-content">サービス</button>
                                 </li>
                                 <li class="tab" id="tab4"><button role="tab" aria-selected="false"
-                                    aria-controls="tab4-content">公司信息</button>
+                                    aria-controls="tab4-content">会社情報</button>
                                 </li>
                             </ul>
                         </div>
                         <div class="tab-content-box">
                             
-                            <div class="total-wrap result-total-wrap" style="display: none;"><p class="total">找到 <span>201</span>个结果</p></div>
+                            <div class="total-wrap result-total-wrap" style="display: none;"><p class="total">全 <span>201</span>件</p></div>
                             
                              <!-- 검색결과없음 -->
                             <div class="no-result-wrap" style="display: none;">
                                 <p class="no-result">
-                                    抱歉，没找到您要的结果。<br>建议您尝试其他关键字重新搜索。
+                                    検索結果は 0件です。<br />別のキーワードで再度検索してください。
                                 </p>
-                                <button type="button" class="act-btn-md btn-outline01">查看全部</button>
+                                <button type="button" class="act-btn-md btn-outline01">一覧を見る</button>
                             </div>
                             <!-- 전체탭 -->
                             <div class="tab-content on" id="tab1-content">
                                 <div class="cont-area-wrap">
                                     <div class="total-wrap" style="display:block;"> <!-- 검색결과 존재시, 상단의 total 문구가 display:block되고 해당 default total-wrap 부분은 display:none 처리되어야함  -->
-                                        <p class="total">共 <span>201</span>条结果</p> 
+                                        <p class="total">全 <span>201</span>件 </p> 
                                     </div>
                                     <div class="cont-area-sect">
                                         <section>
@@ -307,11 +307,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                <span class="download-tit"><b>1865</b>catalog</span> <!-- 11.11 수정 : 검색 결과 키워드 관련 <b> 태그 추가 -->
+                                                                <p class="tab-cont-name"> 製品 </p>
+                                                                <span class="download-tit"><b>1865</b>catalog</span>
                                                             </div>
                                                             <a href="#" class="btn-download" id="popupFormBtn1" onclick="pubUi.popUp.open('#popupForm1','#popupFormBtn1');">
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -327,11 +327,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 产品 </p>
+                                                                <p class="tab-cont-name"> 製品 </p>
                                                                 <span class="download-tit">2170 Catalogue</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -347,11 +347,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 公司信息 </p>
+                                                                <p class="tab-cont-name"> 会社情報 </p>
                                                                 <span class="download-tit">Title</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -367,11 +367,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 公司信息 </p>
+                                                                <p class="tab-cont-name"> 会社情報 </p>
                                                                 <span class="download-tit">CI</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -387,11 +387,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 公司信息</p>
+                                                                <p class="tab-cont-name"> 会社情報 </p>
                                                                 <span class="download-tit">Title</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -407,11 +407,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 公司信息</p>
+                                                                <p class="tab-cont-name"> 会社情報 </p>
                                                                 <span class="download-tit">Title</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -427,11 +427,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 服务</p>
+                                                                <p class="tab-cont-name"> 会社情報 </p>
                                                                 <span class="download-tit">Title</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -447,11 +447,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 服务</p>
+                                                                <p class="tab-cont-name"> 会社情報 </p>
                                                                 <span class="download-tit">Title</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -467,11 +467,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 服务</p>
+                                                                <p class="tab-cont-name"> 会社情報 </p>
                                                                 <span class="download-tit">Title</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -487,11 +487,11 @@
                                                     <ul class="download-desc">
                                                         <li>
                                                             <div class="desc-tit-wrap">
-                                                                <p class="tab-cont-name"> 公司信息 </p>
+                                                                <p class="tab-cont-name"> 会社情報 </p>
                                                                 <span class="download-tit">Title</span>
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -516,7 +516,7 @@
                                                 </div>
                                                 <div class="btm-btn">
                                                     <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> 
-                                                        <span>下载所选</span>
+                                                        <span>選択項目をダウンロード</span>
                                                         <div class="icon-area"></div>
                                                     </button>
                                                 </div>
@@ -528,25 +528,10 @@
                             <!-- Products -->
                             <div class="tab-content" id="tab2-content">
                                 <div class="cont-area-wrap">
-                                    <div class="tab-wrap" data-tab-type="secondTab">
-                                        <div class="tab-cate-wrap">
-                                            <ul class="tab-category activeTab" role="tablist">
-                                                <li class="tab on" id="tab2_1"><button role="tab" aria-selected="true"
-                                                    aria-controls="tab2_1-content">按行业解决方案</button>
-                                                </li>
-                                                <li class="tab" id="tab2_2"><button role="tab" aria-selected="false"
-                                                    aria-controls="tab2_2-content">外形规格</button>
-                                                </li>
-                                                <li class="tab" id="tab2_3"><button role="tab" aria-selected="false"
-                                                    aria-controls="tab2_3-content">材料</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-content-box">
-                                            <div class="tab-content" id="tab2_1-content">
+
                                                 <div class="cont-area-wrap">
                                                     <div class="total-wrap">
-                                                        <p class="total">共 <span>201</span>条结果</p> 
+                                                        <p class="total">全 <span>201</span>件 </p> 
                                                     </div>
                                                     <div class="cont-area-sect">
                                                         <section>
@@ -565,7 +550,7 @@
                                                                                 <span class="download-tit">ESG 채권 관리 체계</span> 
                                                                             </div>
                                                                             <a href="#" class="btn-download" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -585,7 +570,7 @@
                                                                                 <span class="download-tit">외부인증보고 (DNV)</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -605,7 +590,7 @@
                                                                                 <span class="download-tit">외부인증보고 (Moody's)</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -625,7 +610,7 @@
                                                                                 <span class="download-tit">외부인증보고 (S&P)</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -645,7 +630,7 @@
                                                                                 <span class="download-tit">2024년 녹색채권 보고서</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -665,7 +650,7 @@
                                                                                 <span class="download-tit">2024년 외부인증 보고서</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -685,7 +670,7 @@
                                                                                 <span class="download-tit">전자공고 공시정보관리 규정</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -705,7 +690,7 @@
                                                                                 <span class="download-tit">제5기 결산공고 (2025.03.20)</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -725,7 +710,7 @@
                                                                                 <span class="download-tit">외부감사인 선임 공고 (2024.12.31)</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -745,7 +730,7 @@
                                                                                 <span class="download-tit">제4기 결산공고 (2024.03.25)</span>
                                                                             </div>
                                                                             <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
+                                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                                 <span class="icon-download"></span>
                                                                             </a>
                                                                         </li>
@@ -782,7 +767,7 @@
                                                                 </div>
                                                                 <div class="btm-btn">
                                                                     <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> 
-                                                                        <span>下载所选</span>
+                                                                        <span>選択項目をダウンロード</span>
                                                                         <div class="icon-area"></div>
                                                                     </button>
                                                                 </div>
@@ -790,510 +775,14 @@
                                                         </section>
                                                     </div>
                                                 </div>
-                                            </div>
-
-                                            <div class="tab-content" id="tab2_2-content">
-                                                <div class="cont-area-wrap">
-                                                    <div class="total-wrap"><p class="total">共 <span>201</span>条结果</p> </div>
-                                                    <div class="cont-area-sect">
-                                                        <section>
-                                                            <ul class="download-list">
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-1" name="checkbox-1">
-                                                                        <label for="checkbox-1" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">ESG 채권 관리 체계</span> 
-                                                                            </div>
-                                                                            <a href="#" class="btn-download" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
-                                                                        <label for="checkbox-2" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">외부인증보고 (DNV)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-3" name="checkbox-3">
-                                                                        <label for="checkbox-3" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">외부인증보고 (Moody's)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-4" name="checkbox-4">
-                                                                        <label for="checkbox-4" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">외부인증보고 (S&P)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-5" name="checkbox-5">
-                                                                        <label for="checkbox-5" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">2024년 녹색채권 보고서</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-6" name="checkbox-6">
-                                                                        <label for="checkbox-6" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">2024년 외부인증 보고서</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-7" name="checkbox-7">
-                                                                        <label for="checkbox-7" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">전자공고 공시정보관리 규정</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-8" name="checkbox-8">
-                                                                        <label for="checkbox-8" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">제5기 결산공고 (2025.03.20)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-9" name="checkbox-9">
-                                                                        <label for="checkbox-9" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">외부감사인 선임 공고 (2024.12.31)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-10" name="checkbox-10">
-                                                                        <label for="checkbox-10" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">제4기 결산공고 (2024.03.25)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-
-                                                            </ul>
-                                                            <div class="btm-btn-area">
-                                                                <div class="paging-wrap">
-                                                                    <ul class="paging pc-only">
-                                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="首页"></a></li>
-                                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="上一页"></a></li>
-                                                                        <li class="active"><a href="#">1</a></li>
-                                                                        <li class=""><a href="#">2</a></li>
-                                                                        <li class=""><a href="#">3</a></li>
-                                                                        <li class=""><a href="#">4</a></li>
-                                                                        <li class=""><a href="#">5</a></li>
-                                                                        <li class=""><a href="#">...</a></li>
-                                                                        <li class=""><a href="#">30</a></li>
-                                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="下一页"><span class="blind">下一页</span></a></li>
-                                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="末页"><span class="blind">末页</span></a></li>
-                                                                    </ul>
-                                                                    <ul class="paging mo-only">
-                                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="首页"></a></li>
-                                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="上一页"></a></li>
-                                                                        <li class="active"><a href="#">1</a></li>
-                                                                        <li class=""><a href="#">2</a></li>
-                                                                        <li class=""><a href="#">3</a></li>
-                                                                        <li class=""><a href="#">...</a></li>
-                                                                        <li class=""><a href="#">20</a></li>
-                                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="下一页"><span class="blind">下一页</span></a></li>
-                                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="末页"><span class="blind">末页</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="btm-btn">
-                                                                    <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> 
-                                                                        <span>下载所选</span>
-                                                                        <div class="icon-area"></div>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-content" id="tab2_3-content">
-                                                <div class="cont-area-wrap">
-                                                    <div class="total-wrap"><p class="total">共 <span>201</span>条结果</p> </div>
-                                                    <div class="cont-area-sect">
-                                                        <section>
-                                                            <ul class="download-list">
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-1" name="checkbox-1">
-                                                                        <label for="checkbox-1" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">ESG 채권 관리 체계</span> 
-                                                                            </div>
-                                                                            <a href="#" class="btn-download" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-2" name="checkbox-2">
-                                                                        <label for="checkbox-2" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">외부인증보고 (DNV)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-3" name="checkbox-3">
-                                                                        <label for="checkbox-3" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">외부인증보고 (Moody's)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-4" name="checkbox-4">
-                                                                        <label for="checkbox-4" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">외부인증보고 (S&P)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-5" name="checkbox-5">
-                                                                        <label for="checkbox-5" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">2024년 녹색채권 보고서</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-6" name="checkbox-6">
-                                                                        <label for="checkbox-6" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">2024년 외부인증 보고서</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-7" name="checkbox-7">
-                                                                        <label for="checkbox-7" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">전자공고 공시정보관리 규정</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-8" name="checkbox-8">
-                                                                        <label for="checkbox-8" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">제5기 결산공고 (2025.03.20)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-9" name="checkbox-9">
-                                                                        <label for="checkbox-9" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">외부감사인 선임 공고 (2024.12.31)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="checkbox">
-                                                                        <input type="checkbox" id="checkbox-10" name="checkbox-10">
-                                                                        <label for="checkbox-10" class="checkbox-label">
-                                                                            <span class="custom-checkbox"></span>
-                                                                        </label>
-                                                                    </div>
-                                                                    <ul class="download-desc">
-                                                                        <li>
-                                                                            <div class="desc-tit-wrap">
-                                                                                <p class="tab-cont-name"> 产品 </p>
-                                                                                <span class="download-tit">제4기 결산공고 (2024.03.25)</span>
-                                                                            </div>
-                                                                            <a href="#" class="btn-download disabled" download>
-                                                                                <span class="btn-download-txt">PDF</span>
-                                                                                <span class="icon-download"></span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-
-                                                            </ul>
-                                                            <div class="btm-btn-area">
-                                                                <div class="paging-wrap">
-                                                                    <ul class="paging pc-only">
-                                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="首页"></a></li>
-                                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="上一页"></a></li>
-                                                                        <li class="active"><a href="#">1</a></li>
-                                                                        <li class=""><a href="#">2</a></li>
-                                                                        <li class=""><a href="#">3</a></li>
-                                                                        <li class=""><a href="#">4</a></li>
-                                                                        <li class=""><a href="#">5</a></li>
-                                                                        <li class=""><a href="#">...</a></li>
-                                                                        <li class=""><a href="#">30</a></li>
-                                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="下一页"><span class="blind">下一页</span></a></li>
-                                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="末页"><span class="blind">末页</span></a></li>
-                                                                    </ul>
-                                                                    <ul class="paging mo-only">
-                                                                        <li class="arrow first"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev2_disabled.svg" alt="首页"></a></li>
-                                                                        <li class="arrow prev"><a href="#"><img src="../../../inc/images/icon/icon_arrow_prev1_disabled.svg" alt="上一页"></a></li>
-                                                                        <li class="active"><a href="#">1</a></li>
-                                                                        <li class=""><a href="#">2</a></li>
-                                                                        <li class=""><a href="#">3</a></li>
-                                                                        <li class=""><a href="#">...</a></li>
-                                                                        <li class=""><a href="#">20</a></li>
-                                                                        <li class="arrow next"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next1.svg" alt="下一页"><span class="blind">下一页</span></a></li>
-                                                                        <li class="arrow last"><a href="#"><img src="../../../inc/images/icon/icon_arrow_next2.svg" alt="末页"><span class="blind">末页</span></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="btm-btn">
-                                                                    <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> 
-                                                                        <span>下载所选</span>
-                                                                        <div class="icon-area"></div>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+       
                                 </div>
                             </div>
                             <!-- Service -->
                             <div class="tab-content" id="tab3-content">
                                 <div class="cont-area-wrap">
                                     <div class="total-wrap">
-                                        <p class="total">共 <span>201</span>条结果</p> 
+                                        <p class="total">全 <span>201</span>件 </p> 
                                     </div>
                                     <div class="cont-area-sect">
                                         <section>
@@ -1312,7 +801,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1332,7 +821,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1352,7 +841,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1372,7 +861,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1392,7 +881,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1412,7 +901,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1432,7 +921,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1452,7 +941,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1472,7 +961,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1492,7 +981,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1529,7 +1018,7 @@
                                                 </div>
                                                 <div class="btm-btn">
                                                     <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> 
-                                                        <span>下载所选</span>
+                                                        <span>選択項目をダウンロード</span>
                                                         <div class="icon-area"></div>
                                                     </button>
                                                 </div>
@@ -1542,7 +1031,7 @@
                             <div class="tab-content" id="tab4-content">
                                 <div class="cont-area-wrap">
                                     <div class="total-wrap">
-                                        <p class="total">共 <span>201</span>条结果</p> 
+                                        <p class="total">全 <span>201</span>件 </p> 
                                     </div>
                                     <div class="cont-area-sect">
                                         <section>
@@ -1561,7 +1050,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1581,7 +1070,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1601,7 +1090,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1621,7 +1110,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1641,7 +1130,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1661,7 +1150,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1681,7 +1170,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1701,7 +1190,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1721,7 +1210,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1741,7 +1230,7 @@
                                                                 <span class="download-tit">Title</span> 
                                                             </div>
                                                             <a href="#" class="btn-download disabled" download>
-                                                                <span class="btn-download-txt">PDF</span>
+                                                                <span class="btn-download-txt">ダウンロード</span>
                                                                 <span class="icon-download"></span>
                                                             </a>
                                                         </li>
@@ -1777,7 +1266,7 @@
                                                 </div>
                                                 <div class="btm-btn">
                                                     <button type="button" class="icon-btn-lg icon-white icon-download btn-outline01" disabled> 
-                                                        <span>下载所选</span>
+                                                        <span>選択項目をダウンロード</span>
                                                         <div class="icon-area"></div>
                                                     </button>
                                                 </div>
@@ -1868,30 +1357,30 @@
   <div class="modal-pop size-sm" id="popupForm1">
     <div class="pop-wrap input-form">
         <div class="pop-header">
-            <h3 class="title">目录下载</h3>
+            <h3 class="title">カタログダウンロード</h3>
         </div>
         <div class="pop-content">
             <div class="input-box-wrap">
                 <div class="wrap-form-input">
                     <div class="input-wrap">
-                        <label for="user-input">姓名<span>*</span></label>
+                        <label for="user-input">氏名<span>*</span></label>
                         <input type="text" id="user-input" class="input-box"
-                            placeholder="*请输入您的" required>
+                            placeholder="氏名を入力してください。" required>
                     </div>
                     <div class="input-wrap">
-                        <label for="company-input">公司名称<span>*</span></label>
+                        <label for="company-input">会社名<span>*</span></label>
                         <input type="text" id="company-input" class="input-box"
-                            placeholder="*请输入您的公司名称" required>
+                            placeholder="会社名を入力してください。" required>
                     </div>
                     <div class="input-wrap">
-                        <label for="email-input">电子邮件<span>*</span></label>
+                        <label for="email-input">メール<span>*</span></label>
                         <input type="email" id="email-input" class="input-box"
-                            placeholder="*请输入您的邮箱." required>                                                
+                            placeholder="メールを入力してください。" required>                                                
                     </div>
                     <div class="input-wrap">
-                        <label for="phone-input">意向产品</label>
+                        <label for="phone-input">関心製品分野</label>
                         <input type="text" id="phone-input" class="input-box"
-                            placeholder="*请输入您感兴趣的产品.">
+                            placeholder="【任意】 関心のある製品分野を入力してください。">
                     </div>
                 </div>
             </div>
@@ -1905,7 +1394,7 @@
                                 <span class="custom-checkbox"></span>
                                 <div class="txt-group">
                                     <span class="txt">
-                                        【必填】同意个人信息的收集和使用
+                                        【必須】個人情報の収集および利用に同意.
                                     </span>
                                     <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms1','#popupDialogTermsBtn1')"><span class="blind">-></span></button>
                                 </div>
@@ -1920,7 +1409,7 @@
                                 <span class="custom-checkbox"></span>
                                 <div class="txt-group">
                                     <span class="txt">
-                                        【必填】同意个人信息跨境传输
+                                        【必須】個人情報の国外移転に同意
                                     </span>
                                     <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms3','#popupDialogTermsBtn3')"><span class="blind">-></span></button>
                                 </div>
@@ -1935,7 +1424,7 @@
                                 <span class="custom-checkbox"></span>
                                 <div class="txt-group">
                                     <span class="txt">
-                                       &nbsp;&nbsp;&nbsp;同意接收市场推广信息
+                                       【任意】マーケティング情報の受信および活用
                                     </span>
                                     <button class="btn-detail" onclick="pubUi.popUp.open('#popupDialogTerms2','#popupDialogTermsBtn2')"><span class="blind">-></span></button>
                                 </div>
@@ -1945,11 +1434,11 @@
                     
                 </div><!-- //terms-wrap -->
             </div> <!-- //terms-chk-wrap -->
-        </div>
+        </div>                    
         <div class="pop-footer">
           <div class="btn-wrap">
             <div class="btn-group">
-              <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="">下载</button>
+              <button type="button" class="act-btn-lg btn-primary01 btn-confirm" onclick="">ダウンロード</button>
             </div>
           </div>
         </div>
