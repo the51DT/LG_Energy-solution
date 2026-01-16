@@ -2116,6 +2116,10 @@
 .serv_baround_chart .left-area .model-box .model-icon {width: 3rem; height: 3rem; top: 1.62rem;}
 .serv_baround_chart .right-area .model-box .model-icon img {width: 2.25rem; height: 2.25rem;}
 .serv_baround_chart .left-area .model-box .model-btn {width: 1.5rem; height: 1.5rem;}
+.serv_baround_chart:lang(ja) .left-area .model-box .model-tit {font-size: 0.75rem;}
+.serv_baround_chart:lang(ja) .left-area .model-box {max-width:9.375rem; min-height: 9.375rem; }
+.serv_baround_chart:lang(ja) .left-area .model-box:last-child { margin-left: -1.25rem;}
+
 
 .serv_baround_chart .right-area .model-box {display: block;}
 .serv_baround_chart .right-area .model-box:not(:last-child) {padding-right: 1.25rem;}

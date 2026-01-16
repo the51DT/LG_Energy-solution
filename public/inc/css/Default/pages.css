@@ -2382,6 +2382,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .serv_baround_chart .left-area .model-box:last-child {background: #9988DF; margin-left: -40px; mix-blend-mode: multiply;}
 .serv_baround_chart .left-area .model-box .model-group {display: flex; flex-direction: column; align-items: center; position: absolute; top: 6.87rem; left: 50%; transform: translateX(-50%);}
 .serv_baround_chart .left-area .model-box .model-tit {color: #fff; font-size: 1rem; font-weight: 600; line-height: 1.6rem; white-space: nowrap; padding-bottom: 0.25rem; text-align: center;}
+.serv_baround_chart:lang(ja) .left-area .model-box .model-tit{ font-size: .875rem;}
 .serv_baround_chart .left-area .model-box .model-icon {width: 4rem; height: 4rem; position: absolute; top: 2.31rem; left: 50%; transform: translateX(-50%);}
 .serv_baround_chart .left-area .model-box .model-btn {width: 1.5rem; height: 1.5rem; background-image: url(../../images/img/serv03_icon_07_wh.png);}
 .serv_baround_chart .right-area {padding: 1rem; position:absolute; right: 3.87rem; top: 4.5rem;}
