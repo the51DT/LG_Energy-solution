@@ -1874,7 +1874,7 @@ var pubUi = {
             if (targetSwiper.length > 0) {
                 //회사소개 > 소개 서비스영역 사용중
                 var swiper3 = new Swiper(".type03Swiper", {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1.15,
                     spaceBetween: 16,
                     pagination: {
                         el: ".type03Swiper .swiper-pagination",
