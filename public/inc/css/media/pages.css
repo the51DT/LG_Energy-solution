@@ -1523,12 +1523,15 @@
 .etmg #etmgPopup .pop-btn-list {gap: 0.5rem;}
 .etmg #etmgPopup .pop-btn-list [class^="icon-btn"] {height: 2.375rem; padding-inline: 1rem 0.75rem; font-size: 0.8125rem; font-weight: 500; line-height: 1.1375rem;}
 
+.etmg:lang(ja) .cont-head-wrap,
 .etmg:lang(zh-CN) .cont-head-wrap,
 .etmg:lang(pl) .cont-head-wrap,
 .etmg:lang(de) .cont-head-wrap {padding: 2rem 1.25rem 2rem;}
+.etmg:lang(ja) .tab-content-box .content-item01,
 .etmg:lang(zh-CN) .tab-content-box .content-item01,
 .etmg:lang(pl) .tab-content-box .content-item01,
 .etmg:lang(de) .tab-content-box .content-item01 {padding-top: 0;}
+.etmg:lang(ja) .tab-content-box .content-item01 .content-sect,
 .etmg:lang(zh-CN) .tab-content-box .content-item01 .content-sect,
 .etmg:lang(pl) .tab-content-box .content-item01 .content-sect,
 .etmg:lang(de) .tab-content-box .content-item01 .content-sect {padding-top: 0;}
