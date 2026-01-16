@@ -2231,7 +2231,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input > p > span.ico-info {position: relative;}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input > p > span.ico-info::before { display: block; content:""; width:0.875rem; height:0.875rem; background: url(../../../inc/images/icon/icon_info_primary.svg) no-repeat center 100%; margin-top: 0.35rem;}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap > input {position: relative;}
-.cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap > .label { width: 9.375rem; }
+.cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap > .label { width: 9.375rem; color: var(--text-text-default-01, #171819);font-size: var(--size-desktop-B1, 1.125rem);font-weight: 600;line-height: var(--line-height-desktop-B1, 1.8rem);}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap > span { color: #555758; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem;}
 .cont .selection-wrapper .sub-cont-wrap .wrap-form-input .input-wrap .performance-input-wrap { display: grid; grid-template-columns: 32.5rem 1fr; column-gap: 1.25rem; align-items: end; }
 /* 숫자 + 인터랙션 관련 코드 */
