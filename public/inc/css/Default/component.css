@@ -540,6 +540,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .sub {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; padding-top: 0.75rem;}
 
 :lang(en) .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {width: 17.5625rem;}
+:lang(ja) .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {font-weight: 500;;}
 
 
 

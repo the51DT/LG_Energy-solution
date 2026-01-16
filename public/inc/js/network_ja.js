@@ -156,7 +156,7 @@ const locations = [
         place: "LG Energy Solution Technology (Nanjing) Co., Ltd.",
         lat: 31.851233373477672,
         lng: 118.56839489592646,
-        address: "No.17-18 Hengyi Road. No.26 Hengfei Road.Nanjing Economical & Technological Development Zone,Nanjing, China",
+        address: "No.16 Hongli Road. Jiangning Street. Jiangning Zone,Nanjing, China",
         tel: "+86-25-5878-9000",
         sort: "Pouch Battery",
         type: "生産",
