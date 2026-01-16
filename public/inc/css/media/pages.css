@@ -2203,8 +2203,8 @@
 .rchr .title-h3, .rchr .content-wrap .title-h3 { font-size: 1.25rem; line-height: 1.875rem; font-weight: 600; margin-bottom: 0; }
 .rchr .title-h3 > span { color: #33B0C6; margin-left: 0.5rem; }
 .rchr:lang(ja) .title-h3 > span{margin-left: 0; }
-.rchr .subp-tit-area > p:first-child { font-size: 1.125rem; font-weight: 400; line-height: 1.75rem; }
 .rchr .subp-tit-area > p:last-child, .rchr .sect-box > div > p, .rchr .content-wrap > p { font-size: 1rem; line-height: 1.6rem; }
+.rchr .subp-tit-area > p:first-child { font-size: 1.125rem; font-weight: 400; line-height: 1.75rem; }
 .rchr .sect-box { display: flex; flex-direction: column; margin-right: 0; }
 .rchr .sect-box > div { text-align: center; margin: 0; padding: 2.5rem 2.5rem; }
 .rchr:lang(ja) .sect-box > div{text-align: center; margin: 0; padding: 0 2rem; height:13.5rem;}

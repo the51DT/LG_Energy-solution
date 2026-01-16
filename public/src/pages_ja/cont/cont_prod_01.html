@@ -50,6 +50,8 @@
                             <div class="content-wrap">
                                 <div class="stepper-wrapper">
                                     <ol class="faq-list">
+
+                                        
                                         <div class="accordion-list acdItem type3">
                                             <a href="javascript:void(0);" role="button" aria-expanded="false"
                                                 class="acd-btn accordion-btn">
@@ -82,7 +84,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-list acdItem type3 prev"> <!-- prev 클래스 정의 : 활성화된 단계에서 이전 단계 클릭시 prev클래스 부여필요 step 스타일 (darkgray) 컬러 적용됨 -->
+
+
+
+
+                                        <div class="accordion-list acdItem type3"> <!-- prev 클래스 정의 : 활성화된 단계에서 이전 단계 클릭시 prev클래스 부여필요 step 스타일 (darkgray) 컬러 적용됨 -->
                                             <a href="javascript:void(0);" role="button" aria-expanded="false"
                                                 class="acd-btn accordion-btn">
                                                 <div class="acd-group">
@@ -142,7 +148,7 @@
                                                 <div class="btn-wrap">
                                                     <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                        上一步
+                                                        前へ
                                                     </button>
                                                     <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
                                                         次へ
@@ -151,52 +157,53 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
                                         <div class="accordion-list acdItem type3 selection-wrapper">                                       
                                             <a href="javascript:void(0);" role="button" aria-expanded="false"
                                                 class="acd-btn accordion-btn">
                                                 <div class="acd-group">
                                                     <div class="align-group">
-                                                        <p class="acd-tit">请输入详细信息。</p>
+                                                        <p class="acd-tit">お問い合わせ情報を入力してください。</p>
                                                     </div>
                                                 </div>
                                             </a>
                                             <div class="acd-panel accordion-content" role="region">
-                                                <span class="required-field-text">* 必填项</span>
+                                                <span class="required-field-text">* は必須項目です。</span>
                                                 <div class="sub-cont-wrap">
                                                     <div class="wrap-form-input flex-type">
                                                         <div class="input-wrap selectbox-wrap type3 ">
-                                                            <label for="app-select">按行业解决方案</label>
+                                                            <label for="app-select">適用<br>アプリケーション</label>
                                                             <div class="select-cate activeSelect">
-                                                                <button type="button" aria-haspopup="listbox" id="app-select">* 请选择应用。</button>
+                                                                <button type="button" aria-haspopup="listbox" id="app-select">アプリケーションを選択してください。</button>
                                                                 <ul class="select-menu" role="listbox">
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">乘用车EV
-</a>
+                                                                            tabindex="0">乗用EV </a>
                                                                     </li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">商用车EV
-                                                                        </a></li>
+                                                                            tabindex="0">商用EV </a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">能源存储系统 (ESS)</a></li>
+                                                                            tabindex="0">ESS</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">轻型电动车 (LEV)
-                                                                        </a></li>
+                                                                            tabindex="0">LEV</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">智能设备</a></li>
+                                                                            tabindex="0">スマートデバイス</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动工具</a></li>
+                                                                            tabindex="0">電動工具</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动重型设备</a></li>
+                                                                            tabindex="0">建設機械</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">机器人</a></li>
+                                                                            tabindex="0">ロボット</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">未来出行</a></li>
+                                                                            tabindex="0">未来モビリティ</a></li>
                                                                 </ul>
                                                             </div>
 
                                                             <div class="select-cate activeSelect">
-                                                                <button type="button" aria-haspopup="listbox">请选择子类别。</button>
+                                                                <button type="button" aria-haspopup="listbox">詳細項目を選択してください。</button>
                                                                 <ul class="select-menu" role="listbox">
+                                                                    <!-- 乗用EV -->
                                                                     <li><a href="javascript:;" role="option"
                                                                             tabindex="0" class="active">BEV</a>
                                                                     </li>
@@ -206,74 +213,82 @@
                                                                             tabindex="0">HEV</a></li>
                                                                     <li><a href="javascript:;" role="option"
                                                                             tabindex="0">MHEV</a></li>
+
+                                                                    <!-- 乗用EV -->
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动卡车</a></li>
+                                                                            tabindex="0">電動トラック</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动巴士</a></li>
+                                                                            tabindex="0">電動バス</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动厢式车</a></li>
+                                                                            tabindex="0">電動バン</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">房车 (RV)</a></li>
+                                                                            tabindex="0">電動ピックアップトラッ</a></li>
+
+                                                                    <!-- 乗用EV -->
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电网储能</a></li>
+                                                                            tabindex="0">グリッド ESS</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">户用储能</a></li>
+                                                                            tabindex="0">コマーシャル ESS</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">工商储能</a></li>
+                                                                            tabindex="0">レジデンシャル ESS</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">UPS储能</a></li>
+                                                                            tabindex="0">UPS ESS</a></li>
+
+                                                                    <!-- 乗用EV -->
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动摩托车</a></li>
+                                                                            tabindex="0">電動バイク</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动滑板车</a></li>
+                                                                            tabindex="0">電動スクーター</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动自行车</a></li>
+                                                                            tabindex="0">電動自転車</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">高尔夫球车</a></li>
+                                                                            tabindex="0">ゴルフカート</a></li>
+
+                                                                    <!-- 乗用EV -->
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">智能手机</a></li>
+                                                                            tabindex="0">スマートフォン</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">家用电动工具</a></li>
+                                                                            tabindex="0">スマートモニター/テレビ</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">园艺工具</a></li>
+                                                                            tabindex="0">ノートパソコン</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">工业电动工具</a></li>
+                                                                            tabindex="0">産業用電動工具</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">家用电动工具</a></li>
+                                                                            tabindex="0">家庭用電動工具</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">园艺工具</a></li>
+                                                                            tabindex="0">園芸用工具</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动挖掘机</a></li>
+                                                                            tabindex="0">掘削機</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动叉车</a></li>
+                                                                            tabindex="0">フォークリフト</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动拖拉机</a></li>
+                                                                            tabindex="0">トラクター</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">人形机器人</a></li>
+                                                                            tabindex="0">ヒューマノイドロボット</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">四足机器人</a></li>
+                                                                            tabindex="0">四足ロボット</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">服务机器人</a></li>
+                                                                            tabindex="0">サービングロボット</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">物流机器人</a></li>
+                                                                            tabindex="0">物流ロボット</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">无人机</a></li>
+                                                                            tabindex="0">ドローン</a></li>
                                                                     <li><a href="javascript:;" role="option"
                                                                             tabindex="0">UAM</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">电动船舶</a></li>
+                                                                            tabindex="0">電動船舶</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                         <!-- ESS 항목 선택 시 세부 항목에 대한 필수 선택 안내 메세지 출력 문구 -->
-                                                        <!-- <p><span class="ico-info"></span>Selecting a subcategory for ESS is required.</p> -->
+                                                        <!-- <p><span class="ico-info"></span>ESSは詳細項目の選択が必須です。</p> -->
                                                     </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap notGrid">
-                                                            <p class="label">外形规格<span>*</span></p> <!-- 11.17 수정 : * 추가 -->
+                                                            <p class="label">フォーム<br>ファクター <span>*</span></p>
                                                             <div class="cont-btn-wrap multi-btn flex-wrap">
-                                                                <button type="button" class="btn">圆柱型</button>
-                                                                <button type="button" class="btn">软包型</button>
+                                                                <button type="button" class="btn">円筒形電池</button>
+                                                                <button type="button" class="btn">パウチ型電池</button>
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
@@ -288,28 +303,28 @@
                                                     </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap notGrid">
-                                                            <p class="label">产品类型</p>
+                                                            <p class="label">形態</p>
                                                             <div class="cont-btn-wrap multi-btn flex-wrap">
-                                                                <button type="button" class="btn">电芯</button>
-                                                                <button type="button" class="btn">模组</button>
-                                                                <button type="button" class="btn">电池包</button>
+                                                                <button type="button" class="btn">セル</button>
+                                                                <button type="button" class="btn">モジュール</button>
+                                                                <button type="button" class="btn">パック</button>
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input flex-type">
                                                         <div class="input-wrap">
-                                                            <label for="quantity-input">预计数量(1年)<span>*</span></label>
+                                                            <label for="quantity-input">需要数量<br>（年間）<span>*</span></label>
                                                             <div class="quantity-input-wrap input-wrap">
                                                                 <input type="number" id="quantity-input" class="input-box"
-                                                                    placeholder="请输入数字。">
+                                                                    placeholder="数値を入力してください。">
                                                                                                                                 
                                                             </div>
                                                             <div class="input-wrap selectbox-wrap type3">
                                                                 <div class="select-cate activeSelect size-sm">
-                                                                    <button type="button" aria-haspopup="listbox">选择</button><!-- 11.25 / 문구 수정 -->
+                                                                    <button type="button" aria-haspopup="listbox">単位を選択</button>
                                                                     <ul class="select-menu" role="listbox">
                                                                         <li><a href="javascript:;" role="option"
-                                                                                tabindex="0" class="active">选择</a><!-- 11.25 / 문구 수정 -->
+                                                                                tabindex="0" class="active">単位を選択</a>
                                                                         </li>
                                                                         <li><a href="javascript:;" role="option"
                                                                                 tabindex="0">Kwh</a>
@@ -324,8 +339,7 @@
                                                         </div>
                                                         <p>
                                                             <span class="ico-info"></span>
-                                                            电池仅售于电池包生产商或系统集成商，个人消费者除外。<br>
-                                                            在市场上，公司不得销售电池给消费者。
+                                                            バッテリーは、バッテリーパックメーカーまたはシステムインテグレーターのみに販売されます。<br>個人のお客様による取り扱いはできず、各市場において個人向けの販売は行っていません。。
                                                         </p>
                                                     </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input flex-type">
@@ -333,23 +347,23 @@
                                                             <label for="performance-input">要求性能</label>
                                                             <div class="performance-input-wrap input-wrap">
                                                                 <input type="text" id="performance-input" class="input-box"
-                                                                    placeholder="kWh, V, Ah">
+                                                                    placeholder="要求性能を入力してください。">
                                                                                                                                 
                                                             </div>
                                                         </div>
                                                     </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input">                                                        
                                                         <div class="input-wrap selectbox-wrap type3 ">
-                                                            <label for="develop-detail">开发状态</label>
+                                                            <label for="develop-detail">開発状況</label>
                                                             <div class="select-cate activeSelect">
-                                                                <button type="button" aria-haspopup="listbox" id="develop-detail">请选择。</button>
+                                                                <button type="button" aria-haspopup="listbox" id="develop-detail">開発状況を選択してください。</button>
                                                                 <ul class="select-menu" role="listbox">                                                                    
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0" class="active">开发评审</a></li>
+                                                                            tabindex="0" class="active">開発検討</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">试生产</a></li>
+                                                                            tabindex="0">パイロット</a></li>
                                                                     <li><a href="javascript:;" role="option"
-                                                                            tabindex="0">量产</a></li>
+                                                                            tabindex="0">量産</a></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -357,11 +371,11 @@
                                                     <!-- 공급 예상 시기 -->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
-                                                            <label for="supply-input">预计供货日期</label>
+                                                            <label for="supply-input">希望納期</label>
                                                             <div class="supply-input-wrap">
                                                                 <div class="calendar-wrap">                                                                    
                                                                     <button type="button" class="calendar-btn" id="supply-input">
-                                                                        <p class="title">请选择日期。</p>
+                                                                        <p class="title">日付を入力してください。</p>
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -369,21 +383,21 @@
                                                     </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
-                                                            <label for="supply-battery-input">电池供应商</label>
+                                                            <label for="supply-battery-input">他社バッテリーの使用有無</label>
                                                             <div class="supply-battery-input-wrap">
                                                                 <div class="wrap-form-box supply-battery-radio">
                                                                     <div class="radio">
                                                                       <input type="radio" id="radio-1-1" name="radio-vertical" checked>
                                                                       <label for="radio-1-1" class="radio-label">
                                                                         <span class="custom-radio"></span>
-                                                                        <span class="txt">Y</span>
+                                                                        <span class="txt">あり</span>
                                                                       </label>
                                                                     </div>
                                                                     <div class="radio">
                                                                       <input type="radio" id="radio-2-1" name="radio-vertical">
                                                                       <label for="radio-2-1" class="radio-label">
                                                                         <span class="custom-radio"></span>
-                                                                        <span class="txt">N</span>
+                                                                        <span class="txt">なし</span>
                                                                       </label>
                                                                     </div>
                                                                 </div>       
@@ -392,21 +406,21 @@
                                                     </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
-                                                            <label for="lges-trade-input">LG新能源合作</label>
+                                                            <label for="lges-trade-input">LG Energy Solutionとの<br>取引有無</label>
                                                             <div class="lges-trade-input-wrap">
                                                                 <div class="wrap-form-box lges-trade-radio">
                                                                     <div class="radio">
                                                                       <input type="radio" id="radio-1-2" name="radio-vertical2" checked>
                                                                       <label for="radio-1-2" class="radio-label">
                                                                         <span class="custom-radio"></span>
-                                                                        <span class="txt">Y</span>
+                                                                        <span class="txt">あり</span>
                                                                       </label>
                                                                     </div>
                                                                     <div class="radio">
                                                                       <input type="radio" id="radio-2-2" name="radio-vertical2">
                                                                       <label for="radio-2-2" class="radio-label">
                                                                         <span class="custom-radio"></span>
-                                                                        <span class="txt">N</span>
+                                                                        <span class="txt">なし</span>
                                                                       </label>
                                                                     </div>
                                                                 </div>       
@@ -415,9 +429,9 @@
                                                     </div><!--//wrap-form-input-->
                                                     <div class="wrap-form-input flex-type">
                                                         <div class="input-wrap selectbox-wrap type3">
-                                                            <label for="website-nation">目标市场(地区)</label>
+                                                            <label for="website-nation">ターゲット市場<br>（地域）</label>
                                                             <div class="select-cate activeSelect">
-                                                                <button type="button" aria-haspopup="listbox" id="website-nation">请选择地区。</button>
+                                                                <button type="button" aria-haspopup="listbox" id="website-nation">大陸を選択してください。</button>
                                                                 <ul class="select-menu" role="listbox">
                                                                     <li><a href="javascript:;" role="option"
                                                                             tabindex="0">Asia</a></li>
@@ -432,7 +446,7 @@
                                                                 </ul>
                                                             </div>
                                                             <div class="select-cate activeSelect">
-                                                                <button type="button" aria-haspopup="listbox">请选择国家。</button>
+                                                                <button type="button" aria-haspopup="listbox">国を選択してください。</button>
                                                                 <ul class="select-menu" role="listbox">
                                                                     <li><a href="javascript:;" role="option"
                                                                             tabindex="0">Republic of Korea</a></li>
@@ -490,7 +504,7 @@
                                                 <div class="btn-wrap">
                                                     <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                        上一步
+                                                        前へ
                                                     </button>
                                                     <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값 전체선택시 disabled 제거 필요-->
                                                         次へ 
@@ -499,6 +513,11 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
+
+
                                         <div class="accordion-list acdItem type3">
                                             <a href="javascript:void(0);" role="button" aria-expanded="false"
                                                 class="acd-btn accordion-btn">
@@ -509,7 +528,7 @@
                                                 </div>
                                             </a>
                                             <div class="acd-panel accordion-content" role="region">
-                                                <span class="required-field-text">* 必填项</span>
+                                                <span class="required-field-text">* は必須項目です。</span>
                                                 <div class="sub-cont-wrap">
                                                     <div class="wrap-form-input">
                                                         <div class="input-wrap">
@@ -579,7 +598,7 @@
                                                 <div class="btn-wrap">
                                                     <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                        上一步
+                                                        前へ
                                                     </button>
                                                     <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
                                                         次へ 
@@ -588,6 +607,10 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
+
                                         <div class="accordion-list acdItem type3">
                                             <a href="javascript:void(0);" role="button" aria-expanded="false"
                                                 class="acd-btn accordion-btn">
@@ -598,7 +621,7 @@
                                                 </div>
                                             </a>
                                             <div class="acd-panel accordion-content" role="region">
-                                                <span class="required-field-text">* 必填项</span>
+                                                <span class="required-field-text">* は必須項目です。</span>
                                                 <div class="sub-cont-wrap">
                                                     <div class="wrap-form-input filebox">
                                                         <div class="input-wrap">
@@ -637,7 +660,7 @@
                                                 <div class="btn-wrap">
                                                     <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                        上一步
+                                                        前へ
                                                     </button>
                                                     <button type="button" class="act-btn-md btn-primary01 btn-step-next disabled"> <!-- 값미선택시, 초기값 disabled 클래스 활성화, 값선택시 disabled 제거-->
                                                         次へ
@@ -646,6 +669,10 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
+
                                         <div class="accordion-list acdItem type3">
                                             <a href="javascript:void(0);" role="button" aria-expanded="false"
                                                 class="acd-btn accordion-btn">
@@ -690,12 +717,14 @@
                                                 <div class="btn-wrap">
                                                     <button type="button" class="act-btn-md btn-outline01 btn-step-prev">
                                                         <img src="../../../inc/images/icon/icon_arrow_left.svg">
-                                                        上一步
+                                                        前へ
                                                     </button>
                                                     <button type="button" class="act-btn-md btn-primary01 btn-step-accept disabled" id="popupAcceptBtn1" onclick="pubUi.popUp.open('#popupAccept1','#popupAcceptBtn1');">提交</button> <!-- 체크값 미선택시, disabled 클래스 활성화, 체크값선택시 disabled 제거-->
                                                 </div>
                                             </div>
                                         </div>
+
+
                                     </ol>
                                 </div>
                             </div>
