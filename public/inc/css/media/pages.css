@@ -1592,6 +1592,7 @@
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .text-wrap .desc {font-size: 1rem; color: #555758; line-height: 1.6rem; font-weight: 400; margin-top: 1rem;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .img-wrap {position: absolute; bottom:5.3rem; left:1.25rem; right: 1.25rem; width: 15.3125rem;}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt {position: absolute; bottom: 2rem; left: 1.25rem; font-size: 0.875rem; font-weight: 500;line-height: 1.225rem; padding-right: 1.5rem;}
+.comp:lang(ja) .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt{color: var(--text-text-default-01, #171819);font-weight: 600;line-height: var(--line-height-mobile-Dense14, 1.225rem);}
 .comp .content-area-box .type03Swiper .sect-item-box .swiper-slide > a .link-txt::after{content:""; width: 1.25rem; height: 1.25rem; background: url(../../images/icon/icon_arrow_right2.svg) no-repeat center center / 50%; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
 .comp .company .content-item03{padding-bottom:2rem;} 
 .comp .company .content-item04{padding-top:2rem;}
@@ -2562,11 +2563,13 @@
 .rnd .nbdr-box-list > .nbdr-box-wrap { width: 100%; }
 .rnd .nbdr-box-wrap { padding: 1.5rem; margin-top: 0; border-radius: 0.5rem; }
 
+
 .rnd .nbdr-box-wrap .cont-box-wrap { flex-direction: column; align-items: flex-start; padding: 0; gap: 2rem; }
 .rnd .nbdr-box-wrap .img-area .cate-group .cate { width: 100%; gap: 1rem; align-items: center; justify-content: center; }
 .rnd .nbdr-box-wrap .img-area .cate-group .cate > li { width: 7.5rem; height: 7.5rem;}
 .rnd .nbdr-box-wrap .text-area { font-weight: 500; }
 .rnd .nbdr-box-wrap .text-area .tit { font-size: 1.25rem; font-weight: 700; line-height: 1.75rem; }
+.rnd .nbdr-box-wrap .text-area .cate-group .cate > li{color: var(--text-text-default-01, #171819);font-size: var(--size-mobile-B1, 1rem);font-weight: 500;line-height: var(--line-height-mobile-B1, 1.6rem);}
 .rnd .nbdr-box-wrap .text-area .cate-group { padding-top: 1.5rem; gap: 1.5rem; }
 
 .rnd .nbdr-box-wrap .text-area .cate-group > .cate:first-child { width: 4.7rem; }
