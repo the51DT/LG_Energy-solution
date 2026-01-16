@@ -2380,6 +2380,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .serv_baround_chart .left-area .model-box {border-radius: 100%; width: 13.25rem; height: 13.25rem; position: relative;}
 .serv_baround_chart .left-area .model-box:first-child {background: #5AD1DC;}
 .serv_baround_chart .left-area .model-box:last-child {background: #9988DF; margin-left: -40px; mix-blend-mode: multiply;}
+.serv_baround_chart:lang(ja) .left-area .model-box:last-child {margin-left: -1.63rem;}
 .serv_baround_chart .left-area .model-box .model-group {display: flex; flex-direction: column; align-items: center; position: absolute; top: 6.87rem; left: 50%; transform: translateX(-50%);}
 .serv_baround_chart .left-area .model-box .model-tit {color: #fff; font-size: 1rem; font-weight: 600; line-height: 1.6rem; white-space: nowrap; padding-bottom: 0.25rem; text-align: center;}
 .serv_baround_chart:lang(ja) .left-area .model-box .model-tit{ font-size: .875rem;}
