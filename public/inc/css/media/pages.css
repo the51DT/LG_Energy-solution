@@ -1843,6 +1843,7 @@
 .download #tab5-content .tab-category > li button { font-size: 1rem; line-height: 1.4rem;}
 .download .paging-wrap { margin-top: 2.5rem; }
 .btn-download { flex-direction: column; gap: 0; width: 3.375rem; height: auto; padding: 0.5rem 0.75rem;}
+.btn-download:lang(ja){min-width:fit-content;}
 .btn-download .btn-download-txt { font-size: 0.8125rem; line-height: 1.1375rem; }
 .btn-download .icon-download { width: 1.125rem; height: 1.125rem; }
 
@@ -1855,7 +1856,7 @@
 /* 다운로드 팝업 디자인 수정 */
 .modal-pop.size-sm .pop-wrap { min-width: 100%; max-width: 100%;}
 .modal-pop.size-sm.full .pop-wrap .pop-header {padding-bottom: 1rem;}
-.modal-pop.size-sm .pop-wrap .pop-header .title {font-size: 1.125rem; line-height: 1.75rem;}
+.modal-pop.size-sm .pop-wrap .pop-header .title {font-size: 1.125rem; line-height: 1.75rem;padding-right:0;}
 .modal-pop.size-sm .pop-wrap.input-form {padding: 1.25rem;}
 .modal-pop.size-sm .pop-wrap .pop-close {top: 1.25rem; right: 1.25rem;}
 

@@ -2038,6 +2038,8 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 
 :not(:lang(ko)).modal-pop.size-sm .pop-wrap .pop-content .desc {font-size: 1.125rem; line-height: 1.8rem;}
 :not(:lang(ko)).modal-pop.size-sm .pop-wrap.input-form .terms-item-list .terms-item p {font-size: 1.125rem; line-height: 1.8rem;}
+.modal-pop.size-sm:lang(ja)  .pop-wrap .pop-content .desc {font-size: 1rem; line-height: 1.6rem;}
+.modal-pop.size-sm:lang(ja) .pop-wrap.input-form .terms-item-list .terms-item p {font-size: 1rem; line-height: 1.6rem;}
 .modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .txt-group {font-size: 1rem; line-height: 1.4rem; font-weight: 500;}
 .modal-pop.size-sm .pop-wrap.input-form .terms-chk-wrap .terms-wrap .terms-item .checkbox .txt-group .btn-detail {display: inline-block; margin-left: 0;margin-top:-0;vertical-align: middle;}
 
