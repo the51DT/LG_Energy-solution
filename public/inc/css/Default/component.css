@@ -234,7 +234,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .wrap-form-input.suc .input-box {border-bottom: 2px solid var(--colorElement-light-success-success-enabled);}
 
 .wrap-form-input.filebox input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0;}
-.wrap-form-input.filebox .input-box {padding-right: calc(130 / 16 * 1rem);}
+.wrap-form-input.filebox .input-box {padding-right: calc(130 / 16 * 1rem);    text-overflow: ellipsis;white-space: nowrap;}
 .wrap-form-input.filebox .input-box:disabled {color: var(--colorElement-light-text-text-disabled); border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03); background-color: #fff;}
 .wrap-form-input.filebox .input-box:disabled + .btn-wrap > .btn-file-attach {color: var(--colorElement-light-text-text-disabled); border: 1px solid var(--colorElement-light-stroke-stroke-disabled);}
 .wrap-form-input.filebox .btn-file-attach {position: absolute; right: 0; top: 50%; transform: translateY(-50%);}
@@ -540,7 +540,6 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .sub {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758; padding-top: 0.75rem;}
 
 :lang(en) .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {width: 17.5625rem;}
-:lang(ja) .accord-cont-wrap.horizontal .accordion-list .accordion-content .detail-wrap .title {font-weight: 500;;}
 
 
 
