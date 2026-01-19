@@ -1939,6 +1939,7 @@
 .cont .stepper-wrapper .consent-title { margin-bottom: 1rem; }
 .cont .stepper-wrapper .consent-cont-wrap { background-color: transparent; padding: 0; gap: 1rem; }
 .cont .stepper-wrapper .sub-cont-wrap .terms-wrap { background-color: #FFF; padding: 2rem 1.25rem; margin: 0; }
+.cont .stepper-wrapper .sub-cont-wrap .terms-wrap .text-list > li{padding-left:0;}
 .cont .stepper-wrapper .sub-cont-wrap .terms-wrap .text-list > li > strong { color: #555758; font-size: 1rem; display: flex; }
 .cont .stepper-wrapper .sub-cont-wrap .terms-wrap .text-list > li > strong > span { font-weight: 600; }
 .cont .stepper-wrapper .sub-cont-wrap .terms-wrap .text-list > li > p { font-size: 1rem; margin-left: 1.25rem; line-height: 1.6rem; }
