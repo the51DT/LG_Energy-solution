@@ -649,9 +649,10 @@ table {border-collapse: collapse;}
 .table-wrap.tb-list .tb-list-sub {padding-top: 1rem;}
 .table-wrap.tb-list .tb-list-sub .listbox {display: flex; gap: 1.88rem;}
 .table-wrap.tb-list .tb-list-sub .listbox.ty02 {gap: 2.5rem;}
-.table-wrap.tb-list .tb-list-sub .listbox .group {display: inline-flex; gap: 0.5rem;}
+.table-wrap.tb-list .tb-list-sub .listbox .group {display: inline-flex; }
 .table-wrap.tb-list .tb-list-sub .listbox li {font-size: 1.125rem; line-height: 1.8rem; font-weight: 600; color: #555758;}
 .table-wrap.tb-list .tb-list-sub .listbox li em {font-weight: 400;}
+.table-wrap.tb-list .tb-list-sub .listbox li em:first-child{margin-right:.5rem;}
 
 .table-wrap.ty-solid table tbody > tr > th {background:var(--colorElement-light-fill-fill-default04);}
 .table-wrap.ty02 table tbody > tr > th,
