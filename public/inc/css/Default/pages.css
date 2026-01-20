@@ -1595,6 +1595,10 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 
 /* 회사정보 회사소개 */
 .comp .comp-btn-area .btn-wrap {display: inline-block; margin-top: 5rem}
+.comp:lang(zh-CN) .table-wrap.tb-list .icon-title .title,
+.comp:lang(ja) .table-wrap.tb-list .icon-title .title{font-weight:500;}
+.comp:lang(zh-CN) .comp-btn-area .btn-wrap a,
+.comp:lang(ja) .comp-btn-area .btn-wrap a{font-weight:500;}
 .comp .right-area .table-wrap.tb-list tbody tr > td {text-align: right;}
 .comp .right-area .table-wrap.tb-list .tb-list-sub .listbox {justify-content: flex-end;}
 .comp .right-area .table-wrap.tb-list .tb-list-sub .listbox li {white-space: nowrap;}
@@ -1624,7 +1628,9 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .comp .sect-item-box .sect-item-list .text-wrap .link-text {font-size: 1.5rem; color: #171819; font-weight: 600; line-height: 2.25rem; width: 100%; position: relative; padding-right: 2rem;}
 .comp .sect-item-box .sect-item-list .text-wrap .link-text::after {content:""; display: block; width: 2rem; height: 2rem; background: url(../../images/icon/icon_arrow_right_bl2.svg) no-repeat center 50%; position: absolute; top:50%; right: 0; transform: translateY(-50%);}
 .comp .sect-item-box .sect-item-list .text-wrap .info-text {font-size: 1.125rem; color: #555758; font-weight: 400; line-height: 1.8rem;}
-.comp .sect-item-box .sect-item-list:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) {justify-content: center; gap: 19.5rem; padding-inline: 14.25rem 9.938rem;}
+.comp .sect-item-box .sect-item-list li{width:25rem;}
+.comp .sect-item-box .sect-item-list:has(li:first-child:nth-last-child(2),
+.comp .sect-item-box .sect-item-list li:first-child:nth-last-child(2) ~ li) {justify-content:flex-start; gap: 16rem; padding-inline: 15.1875rem 0; }
 .comp .sect-item-box.grid-type {padding-top: 0.625rem;}
 .comp .sect-item-box.grid-type .grid-item > a {height: 30rem; background-color: #f3f5f7; border-radius: 1rem; position: relative; padding: 2.5rem; display: block;}
 .comp:lang(ja) .sect-item-box.grid-type .grid-item > a .link-txt{font-weight: 600;}
@@ -2063,7 +2069,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .faq .no-result-wrap .no-result>span {color: #33B0C6;}
 .faq .no-result-wrap .no-result + button{margin:2.5rem auto 0;}
 .faq .no-result-wrap .no-result + .view-list-btn{margin:2.5rem auto 0;}
-.faq .total-wrap { margin: 3.75rem 0 1.88rem; }
+.faq .total-wrap { margin: 3.75rem auto 1.88rem; max-width: 90rem;}
 .faq .total-wrap .total { font-size: 1.25rem; font-weight: 600; line-height: 2rem; }
 .faq .total-wrap .total> span { color: #33B0C6; }
 .faq .accordion-list.type3 {border-radius: .5rem;}
