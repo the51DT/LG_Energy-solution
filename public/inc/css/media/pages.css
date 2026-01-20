@@ -1720,7 +1720,6 @@
 
 /* 뉴스룸 */
 .news h3{font-size:1.875rem;font-weight:700;margin: 2rem 0 1.5rem;}
-
 .news-content-area{padding:0 1.25rem;margin-bottom:6.25rem; }
 .news-content-area .top-bar{flex-direction:column-reverse;align-items:flex-start;gap:1.5rem;margin-bottom:1rem; width: 100%;}
 .news-content-area .top-bar .mo-only {width: 100%;}
@@ -1782,9 +1781,15 @@
 /* FAQ */
 .faq [class^="content-item"] {padding-top: 2rem; padding-bottom: 0;}
 .faq h3 {margin: 0;}
+.news.faq h3{font-size: var(--size-mobile-H1, 1.875rem);font-weight: 700;line-height: var(--line-height-mobile-H1, 2.275rem);}
+.news.faq:lang(zh-CN) h3,
+.news.faq:lang(pl) h3,
+.news.faq:lang(de) h3,
+.news.faq:lang(ja) h3{font-size: var(--size-mobile-H2, 1.5rem);font-weight: 700;line-height: var(--line-height-mobile-H2, 2.0625rem);}
 .faq:lang(zh-CN) .tab-content-box,
 .faq:lang(pl) .tab-content-box,
-.faq:lang(de) .tab-content-box {padding: 1rem 0 0;}
+.faq:lang(de) .tab-content-box,
+.faq:lang(ja) .tab-content-box {padding: 1rem 0 0;}
 .faq .news-content-area .tab-content-box {padding: 2rem 0;}
 
 .faq .paging-wrap {padding-bottom: 6rem;}
@@ -1797,7 +1802,11 @@
 .faq .tab-cate-wrap .tab-category > li button {padding: 0.53rem 1.5rem;} 
 .faq .tab-cate-wrap .tab-category > li:last-child {padding-right: 1.25rem;}
 .faq .news-content-area .search-result {border-bottom: 0; margin: 0; padding:2.16rem 0;}
-.faq .news-content-area .search-result>img {width: 2rem;}
+/* .faq:lang(ja) .news-content-area .search-result,
+.faq:lang(pl) .news-content-area .search-result,
+.faq:lang(de) .news-content-area .search-result,
+.faq:lang(zh-CN) .news-content-area .search-result{padding:0;} */
+.faq .news-content-area .search-result>img {width: 2rem; height:2rem;}
 .faq .news-content-area .search-result>input {font-size: 1.125rem;}
 .faq .news-content-area .search-result>input::placeholder {font-size: 1.25rem; line-height: 1.925rem;}
 .faq .desc-wrap > a {margin-top: 1.5rem;}
@@ -1880,6 +1889,7 @@
 
 /* 문의하기 */
 .wrap.cont .content-header .subp-tit { font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #171819; }
+.wrap.cont  .tab-content-box .content-header{padding-top:3rem;}
 .cont .stepper-wrapper .faq-list { background-color: #F3F5F7; padding: 0 1.25rem 6.25rem !important; }
 .cont .stepper-wrapper .faq-list .item {display: none;}
 .cont .stepper-wrapper .faq-list .item.on {display: block;}
