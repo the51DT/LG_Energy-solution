@@ -1555,8 +1555,9 @@
 .comp .comp-info .table-wrap.tb-list tbody tr > td {text-align: right;}
 .comp .comp-info .table-wrap.tb-list .tb-list-sub {padding-top: 0.5rem;}
 .comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox {justify-content: flex-end; gap: 0.75rem;}
-.comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox .group {gap: 0.25rem; font-size: 0.875rem; line-height: 1.3125rem; font-weight: 600;}
+.comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox .group {gap: 0; font-size: 0.875rem; line-height: 1.3125rem; font-weight: 600;}
 .comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox .group em {font-weight: 400; }
+.comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox .group em:first-child{margin-left:0.25rem;}
 .comp .comp-info .table-wrap.tb-list .tb-list-sub .listbox li {font-size: 0.875rem; line-height: 1.3125rem;}
 .comp .comp-info .comp-btn-area .btn-wrap {margin-top: 0.5rem; display: block;}
 .comp .comp-info .comp-btn-area .btn-wrap > a {width: 100%; min-width: revert;}
