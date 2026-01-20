@@ -114,6 +114,7 @@
 .table-wrap table tbody > tr > th {font-size: 0.875rem; font-weight: 600; line-height: 1.4rem; padding: 0.75rem 0.5rem;}
 .table-wrap table tr > td {font-size: 0.875rem; font-weight:400; line-height: 1.4rem; padding: 0.75rem 0.5rem;}
 .table-wrap table thead > tr > th {font-size: 1rem; font-weight: 600; line-height: 1.5rem; padding: 0.75rem 0.5rem;}
+.table-wrap.tb-list .icon-title .title{font-size: 1rem;}
 .table-notice-area {padding: 1rem 1.25rem 0;}
 .table-notice-area .text-list-wrap .text-list > li {font-size: 0.875rem; font-weight: 400; line-height: 1.4rem;}
 .table-container {padding: 0 1.25rem;}
