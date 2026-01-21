@@ -1890,9 +1890,11 @@
 /* 문의하기 */
 .wrap.cont .content-header .subp-tit { font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #171819; }
 .wrap.cont  .tab-content-box .content-header{padding-top:3rem;}
-.cont .stepper-wrapper .faq-list { background-color: #F3F5F7; padding: 0 1.25rem 6.25rem !important; }
-.cont .stepper-wrapper .faq-list .item {display: none;}
-.cont .stepper-wrapper .faq-list .item.on {display: block;}
+.wrap.cont .stepper-wrapper .faq-list { background-color: #F3F5F7; padding: 0 1.25rem 6.25rem !important; }
+.wrap.cont .content-header .title-h2{margin-bottom: 1rem;}
+.wrap.cont .content-header .title-h1{font-size: var(--size-mobile-H2, 1.5rem);font-weight: 700;line-height: var(--line-height-mobile-H2, 2.0625rem);margin-bottom: 1rem;}
+.wrap.cont .stepper-wrapperr .faq-list .item {display: none;}
+.wrap.cont .stepper-wrappe .faq-list .item.on {display: block;}
 /* .cont .stepper-wrapper .faq-list .item .btn-content {display: none;} */
 .cont .stepper-wrapper .acd-tit { font-size: 1.25rem; font-weight: 600; color: #171819; line-height: 1.875rem; }
 .cont .stepper-wrapper .btn-wrap { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 2.5rem; }
