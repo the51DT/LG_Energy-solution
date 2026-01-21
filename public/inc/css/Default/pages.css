@@ -1025,6 +1025,7 @@
 .pfom .prod-visual {margin-right: -15rem;}
 .pfom .prod-features {display: flex; justify-content: space-between;}
 .pfom .prod-features > li {display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.25rem; width: 20rem; height: 20rem; padding: 2.5rem; text-align: center; border-radius: 62.4375rem; background-color: var(--colorElement-light-fill-fill-default04);}
+.pfom:lang(ja) .prod-features > li{padding:2.5rem 0;}
 .pfom .prod-features.col4 > li {width: 16.25rem; height: 16.25rem;}
 .pfom .prod-features > li > img {width: 5rem; height: 5rem; object-fit: contain;}
 .pfom .prod-features > li > .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
@@ -1032,10 +1033,11 @@
 .pfom .prod-core-box {padding: 2.5rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04); background-color: var(--colorElement-light-fill-fill-on-primary);}
 .pfom .prod-core-box > li {display: flex; justify-content: space-between;}
 .pfom .prod-core-box > li > div {flex-grow: 0; flex-shrink: 0;}
+.pfom .prod-core-box > li > div:first-child{flex:1;}
 .pfom .prod-core-box > li + li {margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .pfom .prod-core-box > li .core-text .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .prod-core-box > li .core-text .desc {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
-.pfom .prod-core-box > li .core-icon {display: flex; align-items: flex-start; gap: 1.875rem;} /* 12.10 수정 */
+.pfom .prod-core-box > li .core-icon {display: flex; align-items: flex-start; gap: 1.875rem; justify-content: flex-end;} /* 12.10 수정 */
 .pfom .prod-core-box > li .core-icon:has(.more) {align-items: center;} /* 12.10 수정 */
 .pfom .prod-core-box > li .core-icon .icon-wrap {display: flex; flex-direction: column; gap: 0.625rem; text-align: center;}
 .pfom .prod-core-box > li .core-icon .icon-wrap img {width: 6.25rem; height: 6.25rem;}
@@ -1065,6 +1067,10 @@
 .pfom .prod-visual:has([class^="pch-visual"]) > img.pch-visual-3 {top: -8.69rem; left: 0;}
 .pfom .prod-comp {display: flex; gap: 1.25rem;}
 .pfom .prod-comp > li {width: 100%; padding: 2.5rem; border-radius: 1rem; border: 2px solid var(--colorElement-light-stroke-stroke-default04); background-color: var(--colorElement-light-fill-fill-on-primary); text-align: center;}
+.pfom:lang(ja) .prod-comp > li{padding:2.5rem 0;}
+.pfom:lang(ja) .prod-comp > li p{padding:0 2.5rem ;}
+/* .pfom:lang(ja) #tab2-content #tab2-3-content .prod-comp > li p:first-of-type{height:96px;} */
+.pfom:lang(ja) #tab2-content #tab2-3-content .prod-comp > li:nth-child(2) p:first-of-type{padding:0 1.5rem ;}
 .pfom .prod-comp > li > img {width: 5rem; height: 5rem; margin-bottom: 1.875rem;}
 .pfom .prod-comp > li .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem; color: var(--colorElement-light-text-text-default01);}
 .pfom .prod-comp > li .desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: var(--colorElement-light-text-text-default02); margin-top: 1.25rem;}
@@ -1091,6 +1097,7 @@
 .industry-box .box-link .tit {font-size: 1.25rem; font-weight: 600; line-height: 2rem;}
 .industry-box .box-link > img {width: 100%; height: auto;}
 .industry-box .box-link .more {display: flex; justify-content: flex-end; gap: 0.25rem; font-size: 0.875rem; font-weight: 500; line-height: 1.225rem;}
+.industry-box:lang(ja) .box-link .more{font-size: var(--size-mobile-Dense16, 1rem);font-weight: 600;line-height: var(--line-height-mobile-Dense16, 1.4rem);}
 .industry-box .box-link .more::after {content: ""; display: block; width: 1.25rem; height: 1.25rem; background-image: url(../../images/icon/icon_arrow_right_bl2.svg); background-position: center; background-size: cover;}
 .industry-box .box-link:only-child {width: 100%;}
 .industry-box a.box-link:hover {border-color: #33B0C6;}
@@ -1252,6 +1259,7 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .pfom .prod-sol-wrap .prod-sol-box .item-list {background:#F3F5F7; padding: 1.25rem 2.5rem;}
 .pfom .prod-sol-wrap .prod-sol-box .item-list > ul {display: flex; gap: 1.25rem; justify-content: center;}
 .pfom .prod-sol-wrap .prod-sol-box .item-list > ul > li {display: flex; gap: 1.25rem; flex-direction: column; align-items: center; padding: 2.5rem 1.25rem;}
+.pfom:lang(ja) .prod-sol-wrap .prod-sol-box .item-list > ul > li{flex:1;}
 .pfom .prod-sol-wrap .prod-sol-box .item-list > ul > li img {width: 12.5rem; height: 11.875rem;}
 .pfom .prod-sol-wrap .prod-sol-box .item-list > ul > li .title {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #171819; text-align: center; justify-content: space-between;}
 .pfom .prod-sol-wrap .prod-sol-box .item-list > ul > li .desc {flex-grow: 1; font-size: 1rem; line-height: 1.6rem; font-weight: 400; color: #171819;}
