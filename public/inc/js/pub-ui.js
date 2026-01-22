@@ -117,6 +117,7 @@ var pubUi = {
                     else if (lang == "pl") btn.innerText = "Zwiń";
                     else if (lang == "de") btn.innerText = "Einklappen";
                     else if (lang == "zh-CN") btn.innerText = "收起";
+                    else if (lang == "ja") btn.innerText = "閉じる";
                     else btn.innerText = "접기";
 
                     btn.classList.add("open");
@@ -125,6 +126,7 @@ var pubUi = {
                     else if (lang == "pl") btn.innerText = "Rozwiń";
                     else if (lang == "de") btn.innerText = "Ausklappen";
                     else if (lang == "zh-CN") btn.innerText = "展开";
+                    else if (lang == "ja") btn.innerText = "もっと見る";
                     else btn.innerText = "내용 더 보기";
 
                     btn.classList.remove("open");
