@@ -985,12 +985,16 @@
 .pfom .prod-core-box > li + li {margin-top: 2rem; padding-top: 2rem;}
 .pfom .prod-core-box > li .core-text .tit {font-size: 1.125rem; line-height: 1.75rem;}
 .pfom .prod-core-box > li .core-text .desc {font-size: 1rem; line-height: 1.6rem; margin-top: 0.5rem;}
-.pfom .prod-core-box > li .core-icon {flex-wrap: wrap; justify-content: center; gap: 1.5rem;}
+.pfom .prod-core-box > li .core-icon {flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+.pfom #tab1-1-content .prod-core-box > li .core-icon{max-width:12rem;margin:0 auto;}
+.pfom #tab1-1-content .prod-core-box > li .core-icon .icon-wrap{flex:0 0 5rem;}
+.pfom .prod-core-box > li .core-icon .more{width:5rem;}
+.pfom .prod-core-box > li .core-icon .icon-wrap > img{width:5rem; height: 5rem;}
 .pfom .prod-core-box > li .core-icon .icon-wrap > p {font-size: 0.875rem; line-height: 1.3125rem;width:100%;}
 .pfom .prod-core-box > li .core-icon .icon-wrap > p > img {width: 1rem; height: 1rem;}
 .pfom:lang(pl) .prod-core-box > li .core-icon .icon-wrap:last-child > p img {bottom:2px; right:20px;}
 .pfom .prod-core-box > li .core-icon .icon-wrap:only-child {flex-direction: column; align-items: center;}
-.pfom .prod-core-box > li .core-icon .more {width: 6.25rem;}
+/* .pfom .prod-core-box > li .core-icon .more {width: 6.25rem;} */
 .pfom .prod-core-box > li .core-prod {gap: 1rem; margin-top: -0.5rem;}
 .pfom .prod-core-box > li .core-prod > p {text-align: left;}
 .pfom .prod-visual-wrap + .prod-features,
@@ -1241,15 +1245,15 @@
 /* 소재 (pmtl) */
 .pmtl [class^="content-item"] .content-sect:not(:has( > img:only-child)) {padding-top: 1.5rem;}
 .pmtl .title-desc {font-size: 1.125rem; line-height: 1.75rem;}
-.pmtl .title-h2 + .title-desc {margin-top: 2rem;}
-.pmtl .mat-wrap {flex-direction: column; gap: 0.5rem; margin-top: 1.5rem;}
+.pmtl .title-h2 + .title-desc {margin-top: 1rem;}
+.pmtl .mat-wrap {flex-direction: column; gap: 0.5rem; margin-top: 0;}
 .pmtl .mat-wrap > div {gap: 1.5rem; height: auto; padding: 1.5rem;}
 .pmtl .mat-wrap > div:has(.text .arrow + .arrow) {padding: 1.5rem;}
 .pmtl .mat-wrap > div .tit {font-size: 1.5rem; line-height: 2.0625rem;}
 .pmtl .mat-wrap > div .tit > span {font-size: 0.875rem; line-height: 1.3125rem;}
 .pmtl .mat-wrap > div .text {min-height: unset; font-size: 0.875rem; line-height: 1.3125rem;}
 .pmtl .mat-wrap > div .text:has(.arrow + .arrow) {flex-direction: column; gap: 0.25rem;}
-.pmtl .mat-visual {margin-top: 1.5rem; max-width: 25rem; margin-inline: auto;}
+.pmtl .mat-visual {margin-top: .5rem; max-width: 25rem; margin-inline: auto;}
 .pmtl .mat-type-wrap {gap: 1.5rem; margin-top: 3rem;}
 .pmtl .mat-type-wrap > p {font-size: 1.25rem; line-height: 1.875rem;}
 .pmtl .mat-type {flex-direction: column; gap: 1rem;}
