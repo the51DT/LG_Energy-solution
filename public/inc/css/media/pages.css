@@ -1151,7 +1151,7 @@
 .pfom .line-up-box .line-up-wrap .line-up-info > div {padding: 1.5rem; border-radius: 0.5rem;}
 .pfom .line-up-box .line-up-wrap .line-up-info .tit {font-size: 1.125rem; line-height: 1.75rem; margin-bottom: 1rem;}
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex {gap: 0.5rem;}
-.pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > img {width: 6.875rem; height: 6.875rem;}
+.pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > img {width: 64%; height: auto; min-width: 6.875rem;min-height:6.875rem;;}
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > p {font-size: 0.875rem; line-height: 1.3125rem;}
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex > div > p > span {font-size: 0.75rem; line-height: 1.2rem; margin-top: 0.25rem;}
 .pfom .line-up-box .line-up-wrap .line-up-info .col-flex .arrow {width: 2rem; height: auto; margin-top: 2.5rem; margin-right: 0;}
