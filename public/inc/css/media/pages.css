@@ -2696,16 +2696,18 @@
 .foot-guide .guide-table-wrap .table-wrap {margin-block: 0.5rem 1rem;}
 .foot-guide:lang(en) .guide-table-wrap .table-wrap,
 .foot-guide:lang(pl) .guide-table-wrap .table-wrap,
+.foot-guide:lang(ja) .guide-table-wrap .table-wrap,
 .foot-guide:lang(de) .guide-table-wrap .table-wrap {width:100%;overflow-x:auto ;}
 .foot-guide:lang(en) .guide-table-wrap .table-wrap table,
 .foot-guide:lang(pl) .guide-table-wrap .table-wrap table,
+.foot-guide:lang(ja) .guide-table-wrap .table-wrap table,
 .foot-guide:lang(de) .guide-table-wrap .table-wrap table{width:32.5rem}
 .foot-guide .guide-table-wrap .table-wrap td > div {margin-inline: 0.125rem; width: 1.25rem; height: 1.25rem;}
 .foot-guide .guide-table-wrap .table-wrap td > div > img {width: 0.599rem;}
 .foot-guide .guide-table-wrap > p.noti {font-size: 0.875rem; line-height: 1.313rem; display: flex; gap: 0.25rem; margin-bottom: 0.5rem;}
 .foot-guide .safety-guide li > p.noti{padding-left:0;text-indent: 0;}
 .foot-guide .safety-guide li > p {font-size: 0.875rem; line-height: 1.313rem; padding-left:.6rem;text-indent: -.6rem;}
-
+.foot-guide:lang(ja) [class^="icon-btn"]{gap:unset}
 /* 개인정보처리방침 */
 .foot-policy .tab-cate-wrap {padding-inline: 1.25rem;}
 .foot-policy.wrap .content-header { margin-top: 0; }
