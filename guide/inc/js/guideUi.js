@@ -333,7 +333,7 @@ pathApp.initTotalCount = function () {
 
     const filteredCount = sum - sumG + (sumMinus - sumMinusG) - (count - countG);
     const filteredSum = sum - sumG;
-    const percentage = filteredSum > 0 ? parseInt((filteredSum /filteredCount) * 100) : 0;
+    const percentage = filteredSum > 0 ? parseInt((filteredCount /filteredSum) * 100) : 0;
 
     const str = `
       <span>${filteredCount} / ${filteredSum} Pages</span>
