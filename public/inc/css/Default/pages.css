@@ -2915,6 +2915,7 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .foot-guide .safety-guide > span { font-size: 1.125rem; font-weight: 600; line-height: 1.8rem; color: #33B0C6; padding-left:1rem;text-indent: -1rem;;}
 .foot-guide .safety-guide > span.gray { color: #555758; padding-left:0rem;text-indent: 0rem; font-weight: 500;}
 .foot-guide .safety-guide-wrap > p:not(.caution-text) { font-size: 1.25rem; font-weight: 500; line-height: 2rem; }
+.foot-guide:lang(ja) .safety-guide-wrap > p:not(.caution-text) .highlight{font-weight:500;}
 .foot-guide .safety-guide-wrap > p + .safety-guide, .foot-guide .safety-guide-wrap > .safety-guide + p, .foot-guide .safety-guide-wrap > p + p { margin-top: 1.25rem; }
 .foot-guide .safety-guide-wrap .highlight { color: #33b0c6; font-weight: normal;}
 .foot-guide .safety-guide-wrap > .safety-guide + .highlight {font-size: 1.125rem; line-height: 1.8rem;}
@@ -2951,6 +2952,7 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .foot-guide .text-bold {font-weight: 600 !important;}
 .foot-guide .guide-table-wrap {margin-block: 1.25rem 2.5rem;}
 .foot-guide .guide-table-wrap > p {font-size: 1.125rem; font-weight: 400; line-height: 1.8rem; color: #555758;}
+.foot-guide .guide-table-wrap > p strong{font-weight: 600;}
 .foot-guide .guide-table-wrap > p.noti {font-size: 1rem; line-height: 1.6rem; margin-bottom: 1.25rem;}
 .foot-guide .guide-table-wrap > p:not(.noti) + p {margin-top: 1rem;}
 .foot-guide .guide-table-wrap .table-wrap {margin-block: 1.25rem 1rem;}
