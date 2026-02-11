@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <!-- <meta name="viewport" content="width=1920" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name=" format-detection" content="telephone=no" />
+        <title>LG에너지솔루션 - 투자정보_주식정보</title>
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
+        <link type="text/css" rel="stylesheet" href="../../../inc/css/common_mo.css" />
+    </head>
+
+    <body>
+        <div class="skip-navigation">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap stif">
+            <!-- header -->
+            <!-- section -->
+            <section id="container" class="content-wrap">
+                <div class="content-area">
+                    <div class="mo-only">
+                        <div class="cont-head-wrap">
+                            <h2 class="title-h1">주식정보</h2> <!-- title-h1 (페이지타이틀) -->
+                        </div>
+                        <div class="tab-wrap">
+                            <div class="content-area-head-tab">
+                                <div class="tab-cate-wrap new">                            
+                                    <ul class="tab-category activeTab">
+                                        <li class="tab on"><a href="./ir_stock_info_01_mo-1.html">주가정보</a></li>
+                                        <li class="tab"><a href="./ir_stock_info_01_mo-2.html">주주환원</a></li>
+                                    </ul>                            
+                                </div><!--//tab-cate-wrap-->                                                
+                            </div><!-- //content-area-head-tab --> 
+                            <div class="tab-content">
+                                <div class="content-item01">
+                                    <div class="content-wrap"> 
+                                        <h2 class="title-h2">주가정보</h2> <!-- title-h2 (서브타이틀) -->
+                                    </div>
+                                    <div class="content-sect">
+                                        <div class="tab-wrap" data-tab-type="secondTab">
+                                            <div class="tab-cate-wrap full-line">
+                                                <ul class="tab-category activeTab" role="tablist">
+                                                    <li class="tab on" id="tab1-1"><button role="tab" aria-selected="true" aria-controls="tab1-1-content">현재가</button></li>
+                                                    <li class="tab" id="tab1-2"><button role="tab" aria-selected="false" aria-controls="tab1-2-content">시간별</button></li>
+                                                    <li class="tab" id="tab1-3"><button role="tab" aria-selected="false" aria-controls="tab1-3-content">일자별</button></li>
+                                                    <li class="tab" id="tab1-4"><button role="tab" aria-selected="false" aria-controls="tab1-4-content">외국인매매</button></li>
+                                                    <li class="tab" id="tab1-5"><button role="tab" aria-selected="false" aria-controls="tab1-5-content">기간별 등락률</button></li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-content-box">
+                                                <div class="tab-content on" id="tab1-1-content">
+                                                    <div class="content-wrap">
+                                                        <div class="content-sect">
+                                                            <div class="chart-container">
+                                                                <div style="width: 1900px; height: 500px; background-color: cornsilk;">차트영역</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content" id="tab1-2-content">
+                                                    <div class="content-wrap">
+                                                        <div class="content-sect">
+                                                            <div class="chart-container">
+                                                                <div style="width: 1900px; height: 500px; background-color: cornsilk;">차트영역</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content" id="tab1-3-content">
+                                                    <div class="content-wrap">
+                                                        <div class="content-sect">
+                                                            <div class="chart-container">
+                                                                <div style="width: 1900px; height: 500px; background-color: cornsilk;">차트영역</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content" id="tab1-4-content">
+                                                    <div class="content-wrap">
+                                                        <div class="content-sect">
+                                                            <div class="chart-container">
+                                                                <div style="width: 1900px; height: 500px; background-color: cornsilk;">차트영역</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-content" id="tab1-5-content">
+                                                    <div class="content-wrap">
+                                                        <div class="content-sect">
+                                                            <div class="chart-container">
+                                                                <div style="width: 1900px; height: 500px; background-color: cornsilk;">차트영역</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // section -->
+            <aside>
+                <img src="../../../inc/images/sample/floating.png" alt="floating" />
+            </aside>
+
+            <!-- footer -->
+
+        </div>
+        <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
+        <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
+        <!-- header footer 추가 js 실제론 불필요-->
+        <script>
+            async function includeHTML(target, url, position = "beforeend") {
+                const el = typeof target === "string" ? document.querySelector(target) : target;
+                if (!el) return false;
+
+                const res = await fetch(url, { cache: "no-cache" });
+                const html = await res.text();
+                el.insertAdjacentHTML(position, html);
+                return true;
+            }
+
+            function waitFor(selector, { timeout = 3000 } = {}) {
+                return new Promise((resolve, reject) => {
+                    const start = performance.now();
+
+                    const tick = () => {
+                        const el = document.querySelector(selector);
+                        if (el) return resolve(el);
+
+                        if (performance.now() - start > timeout) {
+                            return reject(new Error(`waitFor timeout: ${selector}`));
+                        }
+                        requestAnimationFrame(tick);
+                    };
+
+                    tick();
+                });
+            }
+
+            function initHeaderOnce() {
+                if (window.__headerInited) return;
+                window.__headerInited = true;
+
+                // window.LGEnSol?.headerEvent?.();
+                window.LGEnSol?.headerEventMo?.();
+            }
+
+            (async () => {
+                await includeHTML(".wrap", "../comm/header_mo.html", "afterbegin");
+                await includeHTML(".wrap", "../comm/footer_mo.html", "beforeend");
+
+                await waitFor(".parent-event", { timeout: 5000 });
+                requestAnimationFrame(() => {
+                    setTimeout(initHeaderOnce, 0);
+                });
+            })().catch((err) => {
+                console.warn(err);
+            });
+            function loadScript(src) {
+                return new Promise((resolve, reject) => {
+                    const s = document.createElement("script");
+                    s.src = src;
+                    s.onload = resolve;
+                    s.onerror = reject;
+                    document.body.appendChild(s);
+                });
+            }
+
+            (async () => {
+                // await includeHTML(...header...);
+                // await includeHTML(...footer...);
+                await loadScript("../../../inc/js/com-ui.js");
+                await loadScript("../../../inc/js/pub-ui.js");
+                await waitFor(".parent-event", { timeout: 5000 });
+            })();
+        </script>
+        <!-- 실제 사용 js  -->
+        <!-- <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
+        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script> -->
+    </body>
+</html>
