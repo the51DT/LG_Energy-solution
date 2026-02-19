@@ -403,7 +403,7 @@ html:lang(ja) header nav,
 html:lang(ja) header footer,
 html:lang(ja) header section,
 html:lang(ja) header aside {  
-  font-family: "Pretendard", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
+  font-family: "Pretendard JP", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
   word-break: normal;
   line-break: strict;
 }
@@ -414,9 +414,9 @@ html:lang(ja) input[type="tel"],
 html:lang(ja) input[type="email"],
 html:lang(ja) select,
 html:lang(ja) textarea {
-  font-family: "Pretendard", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
+  font-family: "Pretendard JP", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
 }
 html:lang(ja) ::-webkit-input-placeholder,
 html:lang(ja) textarea::placeholder {
-  font-family: "Pretendard", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
+  font-family: "Pretendard JP", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
 }
