@@ -406,6 +406,7 @@ html:lang(ja) header aside {
   font-family: "Pretendard JP", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
   word-break: normal;
   line-break: strict;
+  letter-spacing: -0.3px;
 }
 html:lang(ja) input[type="text"],
 html:lang(ja) input[type="password"],
