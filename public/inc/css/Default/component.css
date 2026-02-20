@@ -432,9 +432,12 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .tab-cate-wrap.scroll::after {content:''; display:inline-block; width: 1.375rem; height: 3.1875rem; background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 111.9%); position:absolute; right:0; top:0;}
 .tab-cate-wrap.new.scroll::after {display: none;}
 .tab-category {overflow-x:auto; overflow-y: hidden; display: flex; align-items: center; gap: 60px; height: 3.875rem; position: relative;} 
-.tab-category > li button {font-size: 1.25rem; line-height: 1.875rem; font-weight: 500; color: #707273; position:relative; padding:1rem 0.62rem; white-space: nowrap;}
-.tab-category > li.on button  {color:var(--colorElement-light-text-text-default01); font-weight: 600;}
-.tab-category > li.on button:after {content: ''; height: 0.25rem; width: 100%; display:inline-block; background-color:#121212; position: absolute; bottom:0; left:0;}
+.tab-category > li button,
+.tab-category > li a {font-size: 1.25rem; line-height: 1.875rem; font-weight: 500; color: #707273; position:relative; padding:1rem 0.62rem; white-space: nowrap;}
+.tab-category > li.on button,
+.tab-category > li.on a  {color:var(--colorElement-light-text-text-default01); font-weight: 600;}
+.tab-category > li.on button:after,
+.tab-category > li.on a:after {content: ''; height: 0.25rem; width: 100%; display:inline-block; background-color:#121212; position: absolute; bottom:0; left:0;}
 .tab-content-box .tab-content {display: none; font-size: 1.5rem; font-weight: 600; line-height: 2.25rem;}
 .tab-content-box .tab-content.on {display: block;}
 
@@ -461,6 +464,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 
 .tab-cate-wrap.new:before {display:none;}
 .tab-cate-wrap.new .tab-category {gap: 0.25rem; height: fit-content;} 
+.tab-cate-wrap.new .tab-category > li > a {display: flex; align-items: center; justify-content: center;}
 .tab-cate-wrap.new .tab-category > li > a,
 .tab-cate-wrap.new .tab-category > li button {width:100%; min-width: 6.875rem; padding: 0.625rem 1rem; border-radius: 0.125rem; background: #F3F5F7; font-size: 1rem; line-height: 1.6rem; font-weight: 500; color: #555758; white-space: nowrap; text-align: center;}
 .tab-cate-wrap.new .tab-category > li.on button,
