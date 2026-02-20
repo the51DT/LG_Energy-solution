@@ -259,7 +259,8 @@ html:lang(ja) .gnb__tab-btn-wrap{gap:7.5rem;}
 
 .sticky-area-tit {display: grid; grid-template-columns: 22.8125rem 1fr; max-width: 90rem; margin: 0 auto; padding-top: 7.5rem;}
 .sticky-area-tit .tab-cate-wrap.new .tab-category:has(li:first-child:nth-last-child(2), li:first-child:nth-last-child(2) ~ li) > li {width: fit-content;}
-.sticky-area-tit .tab-cate-wrap.new .tab button {width: 12.5rem; height: 3.5rem; padding: 0.375rem 2.5rem; border-radius: 0.25rem; font-size: 1.25rem; line-height: 1.75rem;}
+.sticky-area-tit .tab-cate-wrap.new .tab button,
+.sticky-area-tit .tab-cate-wrap.new .tab a {width: 12.5rem; height: 3.5rem; padding: 0.375rem 2.5rem; border-radius: 0.25rem; font-size: 1.25rem; line-height: 1.75rem;}
 .sticky-area {height: auto;}
 .sticky-area [class^="content-item"] .content-wrap {padding-left: 22.81rem;}
 .sticky-area [class^="content-item"]:nth-of-type(2) {padding-top: 5rem;}
