@@ -835,7 +835,8 @@
 .post:lang(zh-CN) .content-item01 .content-sect.bg-gray .content-wrap {padding-bottom: 6.25rem;}
 
 /* 채용정보 (rcif) */
-.rcif .tab-cate-wrap.full-line .tab > button {font-size: 1rem; line-height: 1.4rem; padding-block: 0.91rem;}
+.rcif .tab-cate-wrap.full-line .tab > button,
+.rcif .tab-cate-wrap.full-line .tab > a {font-size: 1rem; line-height: 1.4rem; padding-block: 0.91rem;}
 .rcif #tab1-content .tab-cate-wrap.full-line .tab-category {width: 100%; gap: 1rem; justify-content: space-between;}
 .rcif #tab1-content .tab-cate-wrap.full-line.scroll::after {content: none;}
 .rcif #tab1-content .tab-cate-wrap.full-line .tab {width: 100%;}
