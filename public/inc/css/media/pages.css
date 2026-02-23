@@ -835,7 +835,8 @@
 .post:lang(zh-CN) .content-item01 .content-sect.bg-gray .content-wrap {padding-bottom: 6.25rem;}
 
 /* 채용정보 (rcif) */
-.rcif .tab-cate-wrap.full-line .tab > button {font-size: 1rem; line-height: 1.4rem; padding-block: 0.91rem;}
+.rcif .tab-cate-wrap.full-line .tab > button,
+.rcif .tab-cate-wrap.full-line .tab > a {font-size: 1rem; line-height: 1.4rem; padding-block: 0.91rem;}
 .rcif #tab1-content .tab-cate-wrap.full-line .tab-category {width: 100%; gap: 1rem; justify-content: space-between;}
 .rcif #tab1-content .tab-cate-wrap.full-line.scroll::after {content: none;}
 .rcif #tab1-content .tab-cate-wrap.full-line .tab {width: 100%;}
@@ -962,7 +963,9 @@
 /* 폼팩터 (.pfom) */
 .pfom .tab-cate-wrap.full-line::after {content: none;}
 .pfom .tab-cate-wrap.full-line .tab-category {width: 100%;}
-.pfom .tab-cate-wrap.full-line .tab-category > li button {min-width: 5.625rem;width:max-content;}
+.pfom .tab-cate-wrap.full-line .tab-category > li button,
+.pfom .tab-cate-wrap.full-line .tab-category > li a {min-width: 5.625rem;width:max-content;}
+.pfom .tab-cate-wrap.full-line .tab-category > li a {display: flex; justify-content: center;}
 .pfom [class^="content-item"]:has([class^="content-item"]) {padding-bottom: 0;}
 .pfom [class^="content-item"] [class^="content-item"] {padding-top: 2rem;}
 .pfom .tab-content-box [class^="content-item"]:not([class^="content-item01"]) {padding-top: 3rem;}
