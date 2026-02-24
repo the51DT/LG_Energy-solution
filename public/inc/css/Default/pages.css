@@ -882,11 +882,11 @@
 .irif .agm-info-list .hangul { counter-reset: hangul; list-style: none; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .irif .agm-info-list .hangul > li { counter-increment: hangul; font-weight: 400; color: var(--colorSemantic-light-coolgray700); }
 .irif .agm-info-list .hangul > li::before { content: counter(hangul, hangul) ". "; margin-right: 0.5rem; font-weight: 600; }
-.irif .agm-info-list .agenda { display: flex; flex-direction: column; gap: 0.5rem; margin-left: 1.25rem; margin-top: 0.5rem; }
+.irif .agm-info-list .agenda { display: flex; flex-direction: column; gap: 0.5rem; margin-left: 0.25rem; margin-top: 0.5rem; }
 .irif .agm-info-list .agenda > li { counter-increment: agenda; font-weight: 400; color: var(--colorSemantic-light-coolgray700); }
 .irif .agm-info-list .agenda > li::before { content: "제 " counter(agenda) "호 의안 :"; font-weight: 600; margin-right: 0.5rem; }
 .irif .agm-info-list .agenda .desc {  color: var(--colorSemantic-light-coolgray700); margin-left: 3rem; font-size: 1rem; margin-top: 0.5rem; }
-.irif .agm-info-list .sub-agenda { counter-reset: sub; list-style: none; padding-left: 3rem; margin: 0.5rem 0; font-size: 1rem; }
+.irif .agm-info-list .sub-agenda { display: flex; flex-direction: column; gap: 0.25rem; counter-reset: sub; list-style: none; padding-left: 3rem; margin: 0.5rem 0; font-size: 1rem; }
 .irif .agm-info-list .sub-agenda > li { counter-increment: sub; font-weight: 400; }
 .irif .agm-info-list .agenda > li:nth-child(2) .sub-agenda > li::before { content: "제2-" counter(sub) "호 의안 :"; font-weight: 500; margin-right: 0.5rem; }
 .irif .agm-info-list li:last-of-type { padding-bottom: 0;}
