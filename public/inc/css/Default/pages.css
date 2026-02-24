@@ -827,6 +827,7 @@
 .btn-badge {border:1px solid var(--colorElement-light-stroke-stroke-default00); color: var(--colorElement-light-text-text-default01);}
 .btn-badge[class*=_ctype01] {border-color: #3EC2CF;}
 .btn-badge[class*=_ctype08] {border-color: #276EF2;}
+.irif .table-area {padding-top: 2.5rem;}
 .table-area.nonebdr .table-wrap tbody tr > th,
 .table-area.nonebdr .table-wrap tbody tr > td {border-right: 0 !important;}
 .irif .btn-badge {padding: 0.25rem 1rem; min-width: 6rem; max-width:6.2rem; font-size: 0.875rem; font-weight: 600; line-height: 1.4rem; height: auto; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; flex-shrink: 0;}
@@ -862,7 +863,33 @@
 .irif:lang(en) .btn-badge,
 .irif:lang(en) .evt-schedule-past .btn-badge {width: 8.5rem; max-width: 8.5rem; padding-inline: 0;}
 
-
+.irif .agm-info-list > li .desc { font-size: 1.125rem; color: var(--colorElement-light-text-text-default01); margin-top: 1.25rem; font-weight: 400; line-height: 1.8rem; }
+.irif .agm-info-list .num > li { color: var(--colorSemantic-light-coolgray700); font-size: 1.125rem; font-weight: 600; }
+.irif .agm-info-list .num > li > ul { font-weight: 400; margin-top: 0.5rem; }
+.irif .agm-info-list .num > li .sub-desc { margin-top: 0.5rem; }
+.irif .agm-info-list .num > li > ul a { color: var(--colorSemantic-light-cyan500); text-decoration: underline; }
+.irif .agm-info-list .dash { display: flex; }
+.irif .agm-info-list .dash::before { content: "-"; margin-right: 0.38rem; }
+.irif .agm-info-list .dash-group { font-size: 1rem; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.25rem; margin-left: 1.12rem; }
+.irif .agm-info-list > li .num {list-style-type: decimal; }
+.irif .agm-info-list > li .hangul {list-style-type: hangul;}
+.irif .agm-info-list ol li { display: list-item; }
+.irif .agm-info-list .num { list-style: none; margin-top: 1.25rem; font-size: 1.125rem; color: var(--colorSemantic-light-coolgray900); font-weight: 600; display: flex; flex-direction: column; gap: 1.25rem; }
+.irif .agm-info-list .num > li { counter-increment: num; }
+.irif .agm-info-list .num > li::before { content: counter(num) ". "; }
+.irif .agm-info-list .num > li > ol,
+.irif .agm-info-list .num > li > ul { padding-left: 1rem; }
+.irif .agm-info-list .hangul { counter-reset: hangul; list-style: none; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.irif .agm-info-list .hangul > li { counter-increment: hangul; font-weight: 400; color: var(--colorSemantic-light-coolgray700); }
+.irif .agm-info-list .hangul > li::before { content: counter(hangul, hangul) ". "; margin-right: 0.5rem; font-weight: 600; }
+.irif .agm-info-list .agenda { display: flex; flex-direction: column; gap: 0.5rem; margin-left: 1.25rem; margin-top: 0.5rem; }
+.irif .agm-info-list .agenda > li { counter-increment: agenda; font-weight: 400; color: var(--colorSemantic-light-coolgray700); }
+.irif .agm-info-list .agenda > li::before { content: "제 " counter(agenda) "호 의안 :"; font-weight: 600; margin-right: 0.5rem; }
+.irif .agm-info-list .agenda .desc {  color: var(--colorSemantic-light-coolgray700); margin-left: 3rem; font-size: 1rem; margin-top: 0.5rem; }
+.irif .agm-info-list .sub-agenda { counter-reset: sub; list-style: none; padding-left: 3rem; margin: 0.5rem 0; font-size: 1rem; }
+.irif .agm-info-list .sub-agenda > li { counter-increment: sub; font-weight: 400; }
+.irif .agm-info-list .agenda > li:nth-child(2) .sub-agenda > li::before { content: "제2-" counter(sub) "호 의안 :"; font-weight: 500; margin-right: 0.5rem; }
+.irif .agm-info-list li:last-of-type { padding-bottom: 0;}
 /* 채용공고 (rcpt) */
 .rcpt [class^="content-item"]:has(.content-sect.bg-gray) {padding-bottom: 0;}
 .rcpt .content-sect.bg-gray {margin-top: 2.5rem; padding-block: 5rem 7.5rem;}
