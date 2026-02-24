@@ -804,6 +804,23 @@
 .irif .asterisk-text {gap: 0; font-size: 0.875rem; line-height: 1.3125rem;}
 .irif .asterisk-text::before {content: "*\00a0"; display: block; margin: 0; width: auto; height: auto; background-image: none;}
 
+.irif .agm-info-list .num {margin-top: 1rem;}
+.irif .agm-info-list .num > li {font-size: 1rem; display: grid; grid-template-columns: 1.2rem 1fr;}
+.irif .agm-info-list .num > li > ul,
+.irif .agm-info-list .num > li > ol {grid-column: 1 / 3;}
+.irif .agm-info-list .num > li::before,
+.irif .agm-info-list .hangul > li::before {margin-right: 0.25rem;}
+.irif .agm-info-list .hangul {gap: 0.25rem;}
+.irif .agm-info-list .agenda{gap: 0.25rem;}
+.irif .agm-info-list .sub-agenda {margin: 0.25rem 0; grid-column: 1 / 3;}
+.irif .agm-info-list .sub-agenda > li {display: flex; font-size: 0.875rem; line-height: 1.3125rem;}
+.irif .agm-info-list .sub-agenda > li::before {  white-space: nowrap;}
+.irif .agm-info-list .agenda > li {display: grid; grid-template-columns: 5.5rem 1fr;}
+.irif .agm-info-list .agenda .desc {display: flex; gap: 0.5rem; grid-column: 1 / 3; margin-top: 0.25rem; font-size: 0.875rem; line-height: 1.3125rem;}
+.irif .agm-info-list .agenda > li::before {margin-right: 0.25rem; }
+.irif .agm-info-list .agenda > li:nth-child(2) .sub-agenda > li::before {margin-right: 0.25rem;}
+.irif .agm-info-list > li .desc {font-size: 1rem; margin-top: 1rem; line-height: 1.6rem;}
+.irif .agm-info-list .num > li .sub-desc {display: flex; gap: 0.25rem; margin-top: 0.25rem;}
 /* 채용공고 (rcpt) */
 .rcpt .content-sect.bg-gray  {padding-top: 2rem;}
 .rcpt#tab4-content .content-sect.bg-gray {margin-top: 0;}
@@ -833,7 +850,7 @@
 .post:lang(zh-CN) .content-item01 {padding-bottom: 0;}
 .post:lang(zh-CN) .content-item01 .content-sect.bg-gray {margin-top: 1rem; padding-top: 2rem;} 
 .post:lang(zh-CN) .content-item01 .content-sect.bg-gray .content-wrap {padding-bottom: 6.25rem;}
-
+.irif .agm-info-list .dash-group {font-size: 0.875rem; line-height: 1.3125rem;}
 /* 채용정보 (rcif) */
 .rcif .tab-cate-wrap.full-line .tab > button,
 .rcif .tab-cate-wrap.full-line .tab > a {font-size: 1rem; line-height: 1.4rem; padding-block: 0.91rem;}
