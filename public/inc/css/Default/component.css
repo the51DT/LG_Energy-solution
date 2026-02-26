@@ -864,7 +864,7 @@ table {border-collapse: collapse;}
 .type02Swiper .swiper-button-prev,
 .type02Swiper .swiper-button-next {background-color: #fff; border: 0;}
 
-.mainPopBnrSwiper .swiper-paging-wrap {display: block; position: absolute; left: 50%; transform: translateX(-50%); width: 8.9375rem; margin-top: 0; bottom: 1.25rem; height: 2.75rem; border-radius: 62.4375rem; padding: 0.62rem; background: rgba(0, 0, 0, 0.5);color: #fff; margin-top: 0;}
+.mainPopBnrSwiper .swiper-paging-wrap {display: none; position: absolute; left: 50%; transform: translateX(-50%); width: 8.9375rem; margin-top: 0; bottom: 1.25rem; height: 2.75rem; border-radius: 62.4375rem; padding: 0.62rem; background: rgba(0, 0, 0, 0.5);color: #fff; margin-top: 0;}
 .mainPopBnrSwiper .swiper-button-prev,
 .mainPopBnrSwiper .swiper-button-next {width: 1.5rem; height: 1.5rem; padding:0.25rem; border: 1px solid #fff; border-radius: 62.4375rem; background-image:url(../../images/icon/icon_arrow_right2_wh.svg); top: 32px;}
 .mainPopBnrSwiper .swiper-pagination {color: #fff; font-size: 0.875rem; line-height: 1.4rem; font-weight: 600; margin: 3px 0;}
