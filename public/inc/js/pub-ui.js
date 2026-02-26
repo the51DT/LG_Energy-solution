@@ -1969,8 +1969,10 @@ var pubUi = {
                     },
                     on: {
                         init: function (idx) {
+                            const pagingWrap = document.querySelector(".swiper-paging-wrap");
+                            if (!pagingWrap) return;
                             if (idx.el.swiper.slides.length > 1) {
-                                document.querySelector(".swiper-paging-wrap").style.display = "block";
+                                pagingWrap.style.display = "block";
                             }
                         },
                     },
