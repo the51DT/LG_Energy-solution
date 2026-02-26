@@ -2853,6 +2853,8 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .serv-kooroo .scooter-bottom { background-color: #5AD1DC; border-radius: 50%; display: flex; flex-direction: column; gap: 0.56rem; position: absolute; right: 0; z-index: -1; justify-content: center;align-items: center;width:16.5rem;height:16.5rem;}
 .serv-kooroo .scooter-bottom img { width: 4rem; }
 .serv-kooroo .scooter-bottom p { color: #fff; font-size: 1rem; font-weight: 600; line-height: 1.6rem; }
+.serv-kooroo .station_sub-text{color: var(--text-text-default-03, #858889);font-size: var(--size-desktop-D1, 0.8125rem);line-height: var(--line-height-desktop-D1, 1.3rem);display: flex;align-items: flex-start;justify-content: flex-start;gap:0.38rem;padding: 0.625rem 0 0 1rem;}
+.serv-kooroo .station_sub-text::before{content:"";display: block;background: url(../../images/icon/icon_text_bu.svg) no-repeat;width: 0.75rem;height: 1.5rem;}
 
 .serv-ess .bmts-txt, .serv-kooroo .bmts-txt { width: 100%;}
 .serv-kooroo .bmts-txt .asterisk-text{position: absolute;right:2.5rem;bottom:2.5rem;color: var(--text-text-default-03, #858889);font-size: var(--size-desktop-D1, 0.8125rem);font-weight: 400;line-height: var(--line-height-desktop-D1, 1.3rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);}
