@@ -1971,8 +1971,6 @@ var pubUi = {
                         init: function (idx) {
                             if (idx.el.swiper.slides.length > 1) {
                                 document.querySelector(".swiper-paging-wrap").style.display = "block";
-                            } else {
-                                document.querySelector(".swiper-paging-wrap").style.display = "none";
                             }
                         },
                     },
