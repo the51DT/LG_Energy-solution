@@ -241,7 +241,7 @@
             counterEl: el.querySelector('.counter'),
             C0: num('c0'), C1: num('c1'),
 
-            // ⬇⬇ 추가: 센터 모드 ('x' | 'y' | 'both')
+            // 추가: 센터 모드 ('x' | 'y' | 'both')
             center: (ds.center || '').toLowerCase(),  // '', 'x', 'y', 'both'
 
             spanPx: num('span'),
@@ -409,7 +409,7 @@
         lenis.on('scroll', ({ scroll }) => {
             items.forEach(it => {
                 if (!it.armed) {
-                    // 아직 한 번도 보이지 않음 → 초기 상태 유지
+                    // 아직 한 번도 보이지 않음. 초기 상태 유지
                     apply(it, 0);
                     return;
                 }
