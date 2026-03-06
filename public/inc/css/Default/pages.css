@@ -892,7 +892,7 @@
 .irif .agm-info-list li:last-of-type { padding-bottom: 0;}
 
 .irif .agm-info-list > li .btn-wrap.ui-block{position:static;margin-top:2.5rem;}
-.irif .agm-info-list .tit-btn-wrap{display: flex;align-items: center; justify-content: space-between;flex-wrap: wrap;}
+.irif .agm-info-list .tit-btn-wrap{display: flex;align-items: center; justify-content: space-between;flex-wrap: wrap;gap:0.5rem}
 .irif .agm-info-list .tit-btn-wrap .icon-btn-cs{display: flex; justify-content:space-between;gap:0.75rem;align-items: center;}
 .irif .agm-info-list .tit-btn-wrap .icon-btn-cs:after{content:"";background: url(../../images/icon/icon_cs_wh.svg)no-repeat;background-size: cover; width: 1.25rem;height: 1.25rem;}
 /* 채용공고 (rcpt) */
