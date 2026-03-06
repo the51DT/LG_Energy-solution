@@ -821,12 +821,16 @@
 .irif .agm-info-list .agenda > li:nth-child(2) .sub-agenda > li::before {margin-right: 0.25rem;}
 .irif .agm-info-list > li .desc {font-size: 1rem; margin-top: 1rem; line-height: 1.6rem;}
 .irif .agm-info-list .num > li .sub-desc {display: flex; gap: 0.25rem; margin-top: 0.25rem;}
+
+.irif .agm-info-list > li .btn-wrap.ui-block{position:static;margin-top:1rem;}
+.irif .agm-info-list .tit-btn-wrap{margin-bottom: 1rem;;}
+.irif .agm-info-list .tit-btn-wrap .icon-btn-cs{padding:0.72rem 0.88rem;margin-left:auto;height:auto;}
 /* 채용공고 (rcpt) */
 .rcpt .content-sect.bg-gray  {padding-top: 2rem;}
 .rcpt#tab4-content .content-sect.bg-gray {margin-top: 0;}
 .rcpt .content-wrap > .post-list + .paging-wrap {margin-top: 2rem;}
 .rcpt .content-wrap > .paging-wrap + .btn-wrap {margin-top: 3.5rem;}
-.rcpt .content-wrap > .btn-wrap {flex-direction: column; align-items: center; gap: 0.5rem;}
+.rcpt .content-wrap > .btn-wrap {line-height: 1.4rem;gap: 0.5rem;}
 
 .post-list {gap: 0.5rem;}
 .post-list > li > a {padding: 1.25rem; border-radius: 0.5rem; flex-direction: column; align-items: flex-start; gap: 0.5rem;}
