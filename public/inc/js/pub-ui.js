@@ -89,72 +89,75 @@ var pubUi = {
     bindEvents: function () {
         // 바깥 클릭 시 모든 메뉴 닫기
         document.addEventListener("click", (e) => {
-            this.self.selectCateBtn.forEach((btn) => {
-                const cate = btn.closest(".select-cate");
-                const menu = cate.querySelector(".select-menu");
+            if(this.self.selectCateBtn!=- null){
+                this.self.selectCateBtn.forEach((btn) => {
+                    const cate = btn.closest(".select-cate");
+                    const menu = cate.querySelector(".select-menu");
 
-                btn.classList.remove("active");
-                menu.classList.remove("on");
-            });
+                    btn.classList.remove("active");
+                    menu.classList.remove("on");
+                });
+            }
         });
 
         // 내용더보기 버튼 이벤트 추가 - 제품 > 폼팩터 (11.05 추가 + table 확장 11.17)
-        this.self.moreBtn.forEach((btn) => {
-            btn.addEventListener("click", function (e) {
-                e.preventDefault();
-                
-                const prodSolWrap = btn.closest(".prod-sol-wrap");
-                const lang = document.documentElement.getAttribute("lang");
-                prodSolWrap.classList.toggle("on");
+        if(this.self.moreBtn != null){
+            this.self.moreBtn.forEach((btn) => {
+                btn.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    
+                    const prodSolWrap = btn.closest(".prod-sol-wrap");
+                    const lang = document.documentElement.getAttribute("lang");
+                    prodSolWrap.classList.toggle("on");
 
-                const isOpen = prodSolWrap.classList.contains("on");
+                    const isOpen = prodSolWrap.classList.contains("on");
 
-                // -----------------------------
-                // ▼ 기존 언어별 버튼 처리 로직
-                // -----------------------------
-                if (isOpen) {
-                    if (lang == "en") btn.innerText = "Collapse";
-                    else if (lang == "pl") btn.innerText = "Zwiń";
-                    else if (lang == "de") btn.innerText = "Einklappen";
-                    else if (lang == "zh-CN") btn.innerText = "收起";
-                    else if (lang == "ja") btn.innerText = "閉じる";
-                    else btn.innerText = "접기";
+                    // -----------------------------
+                    // ▼ 기존 언어별 버튼 처리 로직
+                    // -----------------------------
+                    if (isOpen) {
+                        if (lang == "en") btn.innerText = "Collapse";
+                        else if (lang == "pl") btn.innerText = "Zwiń";
+                        else if (lang == "de") btn.innerText = "Einklappen";
+                        else if (lang == "zh-CN") btn.innerText = "收起";
+                        else if (lang == "ja") btn.innerText = "閉じる";
+                        else btn.innerText = "접기";
 
-                    btn.classList.add("open");
-                } else {
-                    if (lang == "en") btn.innerText = "Expand";
-                    else if (lang == "pl") btn.innerText = "Rozwiń";
-                    else if (lang == "de") btn.innerText = "Ausklappen";
-                    else if (lang == "zh-CN") btn.innerText = "展开";
-                    else if (lang == "ja") btn.innerText = "もっと見る";
-                    else btn.innerText = "내용 더 보기";
+                        btn.classList.add("open");
+                    } else {
+                        if (lang == "en") btn.innerText = "Expand";
+                        else if (lang == "pl") btn.innerText = "Rozwiń";
+                        else if (lang == "de") btn.innerText = "Ausklappen";
+                        else if (lang == "zh-CN") btn.innerText = "展开";
+                        else if (lang == "ja") btn.innerText = "もっと見る";
+                        else btn.innerText = "내용 더 보기";
 
-                    btn.classList.remove("open");
-                }
+                        btn.classList.remove("open");
+                    }
 
-                // ---------------------------------
-                // ▼ table-wrap 내부 tbody 열기/닫기
-                // ---------------------------------
-                const tableWrap = prodSolWrap.querySelector(".table-wrap");
+                    // ---------------------------------
+                    // ▼ table-wrap 내부 tbody 열기/닫기
+                    // ---------------------------------
+                    const tableWrap = prodSolWrap.querySelector(".table-wrap");
 
-                if (tableWrap) {
-                    const tbodys = tableWrap.querySelectorAll("tbody");
+                    if (tableWrap) {
+                        const tbodys = tableWrap.querySelectorAll("tbody");
 
-                    tbodys.forEach((tbody, idx) => {
-                        if (isOpen) {
-                            tbody.classList.remove("none");   // 펼쳐짐 → tbody 전체활성화
-                        } else {
-                            if(idx === 0) {
-                                tbody.classList.remove("none"); //처음 tbody만 활성화
+                        tbodys.forEach((tbody, idx) => {
+                            if (isOpen) {
+                                tbody.classList.remove("none");   // 펼쳐짐 → tbody 전체활성화
                             } else {
-                                tbody.classList.add("none"); // 나머지 tbody 비활성화
+                                if(idx === 0) {
+                                    tbody.classList.remove("none"); //처음 tbody만 활성화
+                                } else {
+                                    tbody.classList.add("none"); // 나머지 tbody 비활성화
+                                }
                             }
-                        }
-                    });
-                }
+                        });
+                    }
+                });
             });
-        });
-
+        }
         if (this.self.searchResult) {
             pubUi.searchTextDelEvt(this.self.searchResult);
         }
