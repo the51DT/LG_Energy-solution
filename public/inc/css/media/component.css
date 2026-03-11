@@ -74,7 +74,7 @@
 
 .accordion-list .accordion-content .table-wrap table thead > tr > th,
 .accordion-list .accordion-content .table-wrap table tbody > tr > th,
-.accordion-list .accordion-content .table-wrap table tbody > tr > td {font-size: 0.875rem; line-height: 1.4rem; white-space: pre;}
+.accordion-list .accordion-content .table-wrap table tbody > tr > td {font-size: 0.875rem; line-height: 1.4rem;}
 
 .accordion-list.type2 .accordion-btn {font-size: 1rem; font-weight: 600; line-height: 1.5rem;}
 .accordion-list .accordion-content .sect-cont-sub article:not(:last-child)::after {margin: 2rem 0;}
