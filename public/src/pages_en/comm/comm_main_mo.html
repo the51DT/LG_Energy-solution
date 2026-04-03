@@ -274,7 +274,7 @@
         
         
         <!-- popupEvt : mobile -->
-        <div class="modal-pop evt" id="popupEvt1">
+        <!-- <div class="modal-pop evt" id="popupEvt1">
             <div class="pop-wrap">
                 <div class="pop-content">
                     <div class="swiper mainPopBnrSwiper">
@@ -306,7 +306,7 @@
                             <div class="swiper-button-next"></div>
                             <div class="swiper-pagination"></div>
                         </div>                        
-                    </div><!-- //mainPopBnrSwiper -->
+                    </div>
                     <div class="foot-area checkbox">
                         <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
                         <label for="chk-close" class="checkbox-label">
@@ -315,11 +315,49 @@
                                 Don't show again today
                             </span>
                         </label>
-                        <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupEvt1', '#popupEvtBtn1');" title="팝업 닫기"><span class="blind">팝업 닫기</span></button> 
+                        <button type="button" class="pop-close" data-action="close" onclick="pubUi.popUp.close('#popupEvt1', '#popupEvtBtn1');" title="close popup"><span class="blind">close popup</span></button> 
                     </div>
                 </div>
             </div>
-        </div>   
+        </div> -->
+        <div class="modal-pop evt" id="popupEvt1">
+            <div class="pop-wrap">
+                <div class="pop-content">
+                    <div class="performance_wrap">
+                        <img class="pop_ci" src="../../../inc/images/symbol/ci_en_wh.svg" alt="">
+                        <div class="txt-area">
+                            <p class="txt-1">1Q 2026</p>
+                            <p class="txt-2"><span>Earings <br>Conference Call</span><span class="line-txt">Date & Time <br> May, 31th, 2026, AM 10:00</span></p>
+                        </div>
+                        <div class="btn-wrap">
+                            <!-- <a href="" class="icon-btn-sm icon-black icon-container btn-primary01">
+                                <span>Ask a Question</span>
+                                <div class="icon-area"></div>
+                            </a> -->
+                            <a href="" class="icon-btn-sm icon-black icon-sound btn-primary01">
+                                <span>Play</span>
+                                <div class="icon-area"></div>
+                            </a>
+                            <a href="" class="icon-btn-sm icon-black icon-download btn-primary01">
+                                <span>Earnings Materials</span>
+                                <div class="icon-area"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foot-area checkbox">
+                        <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
+                        <label for="chk-close" class="checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            <span class="txt">
+                                Don't show again today
+                            </span>
+                        </label>
+                        <button type="button" class="pop-close" onclick="pubUi.popUp.close('#popupEvt1');"
+                            title="close popup"><span class="blind">close popup</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
         <!-- header footer 추가 js 실제론 불필요-->
@@ -387,13 +425,11 @@
                 await loadScript("../../../inc/js/com-ui.js");
                 await loadScript("../../../inc/js/pub-ui.js");
                 await waitFor(".parent-event", { timeout: 5000 });
+                pubUi.evtPopEvt();
             })();
         </script>
         <!-- 실제 사용 js  -->
         <!-- <script type="text/javascript" src="../../../inc/js/com-ui.js"></script> -->
-        <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script>
-        <script>
-            pubUi.evtPopEvt();
-        </script>
+        <!-- <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script> -->
     </body>
 </html>
