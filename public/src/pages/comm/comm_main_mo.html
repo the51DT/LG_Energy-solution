@@ -278,7 +278,7 @@
         </div>
         
         <!-- popupEvt : mobile -->
-        <div class="modal-pop evt" id="popupEvt1">
+        <!-- <div class="modal-pop evt" id="popupEvt1">
             <div class="pop-wrap">
                 <div class="pop-content">
                     
@@ -311,7 +311,7 @@
                             <div class="swiper-button-next"></div>
                             <div class="swiper-pagination"></div>
                         </div>                        
-                    </div><!-- //mainPopBnrSwiper -->
+                    </div>
                     
                     <div class="foot-area checkbox">
                         <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
@@ -325,7 +325,45 @@
                     </div>
                 </div>
             </div>
-        </div>   
+        </div> -->
+        <div class="modal-pop evt" id="popupEvt1">
+            <div class="pop-wrap">
+                <div class="pop-content">
+                    <div class="performance_wrap">
+                        <img class="pop_ci" src="../../../inc/images/symbol/ci_en_wh.svg" alt="">
+                        <div class="txt-area">
+                            <p class="txt-1">2026년 1분기</p>
+                            <p class="txt-2"><span>실적설명회</span><span class="line-txt">일시 : 2026년 3월 31일, 오전 10시</span></p>
+                        </div>
+                        <div class="btn-wrap">
+                            <!-- <a href="" class="icon-btn-sm icon-black icon-container btn-primary01">
+                                <span>사전질문 등록</span>
+                                <div class="icon-area"></div>
+                            </a> -->
+                            <a href="" class="icon-btn-sm icon-black icon-sound btn-primary01">
+                                <span>방송듣기</span>
+                                <div class="icon-area"></div>
+                            </a>
+                            <a href="" class="icon-btn-sm icon-black icon-download btn-primary01">
+                                <span>실적발표 자료</span>
+                                <div class="icon-area"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foot-area checkbox">
+                        <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
+                        <label for="chk-close" class="checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            <span class="txt">
+                                오늘 하루 열지않음
+                            </span>
+                        </label>
+                        <button type="button" class="pop-close" onclick="pubUi.popUp.close('#popupEvt1');"
+                            title="팝업 닫기"><span class="blind">팝업 닫기</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
         <!-- header footer 추가 js 실제론 불필요-->
@@ -393,13 +431,13 @@
                 await loadScript("../../../inc/js/com-ui.js");
                 await loadScript("../../../inc/js/pub-ui.js");
                 await waitFor(".parent-event", { timeout: 5000 });
+                
+                pubUi.evtPopEvt();
             })();
         </script>
         <!-- 실제 사용 js  -->
         <!-- <script type="text/javascript" src="../../../inc/js/com-ui.js"></script>
         <script type="text/javascript" src="../../../inc/js/pub-ui.js"></script> -->
-        <script>
-            // pubUi.evtPopEvt();
-        </script>
+        
     </body>
 </html>
