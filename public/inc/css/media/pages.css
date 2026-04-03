@@ -623,6 +623,7 @@
 .irdt [class^="content-item"] .content-sect {padding-top: 0;}
 .irdt [class^="content-item"] .tab-content-box .content-wrap > .content-sect {padding-top: 0;}
 .irdt [class^="content-item"]:has(.tab-cate-wrap.full-line) {padding-top: 1rem;}
+.irdt .cont-head-wrap + .content-item01{padding-top:0;}
 .irdt .cont-area-title {flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;}
 .irdt .cont-area-title:has(> .selectbox-wrap) {margin-bottom: 2rem; flex-direction: column-reverse;}
 .irdt .cont-area-title .asterisk-text {font-size: 0.875rem; line-height: 1.3125rem; word-break: break-all;}
