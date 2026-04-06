@@ -641,7 +641,8 @@
 .irdt:lang(en) .tab-content-box .cont-head-wrap {padding: 0 1.25rem;}
 .irdt:lang(en) .cont-area-title .selectbox-wrap {margin-top: 2rem;}
 .irdt .history-list > li {gap: 1rem;}
-
+.irdt .history-desc > li > div{padding-right:3rem;max-width:100%;}
+.irdt .history-desc > li > div span{max-width:100%;}
 .history-list.type3 > li {align-items: flex-start; padding: 1.5rem; gap: 0.25rem;}
 .history-list.type3 .history-desc > li {background-color: unset; position: static;}
 .history-list.type3 .history-year {font-size: 1.25rem; font-weight: 700; line-height: 1.875rem;}
