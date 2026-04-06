@@ -802,7 +802,8 @@ table {border-collapse: collapse;}
 .modal-pop.evt .pop-wrap .pop-content .foot-area label .txt {font-size: 1rem; font-weight: 400; line-height: 1.6rem; color: #555758;}
 .modal-pop.evt .pop-wrap .pop-close {bottom: 0.81rem; top:revert; right: 2.5rem; width: 1.5rem; height: 1.5rem;}
 
-.modal-pop .performance_wrap{width: 50rem;height: 32.5rem;position:relative;background:#fff url(../../images/img/pop_bg.png) no-repeat center center;background-size:calc(100% - .75rem) calc(100% - .75rem);}
+.modal-pop .performance_wrap{width: 50rem;height: 32.5rem;position:relative;background:#fff;}
+.modal-pop .performance_wrap .pop_bg{width:calc(100% - 1.5rem);height:calc(100% - 1.5rem);position:absolute;left:0.75rem;top:0.75rem;}
 .modal-pop .performance_wrap .pop_ci{position:absolute;width: 14.3125rem;height: 1.75rem;top:3.19rem;right:3.12rem;}
 .modal-pop .performance_wrap .txt-area{display: flex;gap:.3rem;flex-direction: column;padding:7.87rem 3.1rem;width:calc(100% - .75rem);}
 .modal-pop .performance_wrap .txt-area p{color: var(--text-text-on-primary, #FFF);font-size: 2.25rem;font-weight: 700;line-height: 120%;letter-spacing: -0.03544rem;}
