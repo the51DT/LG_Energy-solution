@@ -724,6 +724,10 @@
 .irdt .box-container .accordion-content .table-area {padding-top: 3rem;}
 .irdt .box-container .accordion-content .table-area:first-of-type {padding-top: 0;}
 .irdt .paging-wrap + .history-list.type3 {margin-top: 7.5rem;}
+.irdt .history-list.type2 .history-desc{width:calc(100% - 122px)}
+.irdt .history-list.type2 .history-desc > li{width:100%;}
+.irdt .history-list.type2 .history-desc > li > div{padding-right:3rem;max-width:calc(100% - 68px);}
+.irdt .history-list.type2 .history-desc > li > div span{max-width:100%;}
 .history-list.type2 > li {margin-top: 0; border-bottom: 1px solid var(--colorElement-light-stroke-stroke-default03);}
 .history-list.type2 > li:not(:first-child)::before {content: none;}
 .history-list.type2 .history-desc > li {position: static; border: none;}
