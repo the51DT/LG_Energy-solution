@@ -202,15 +202,18 @@ html:lang(ja) .gnb__tab-btn-wrap{gap:7.5rem;}
 /* footer - 추후 layout 옮길예정 (시안페이지의 css 중복방지하기위해 우선 component.css에 적용함) */
 .footer-wrap {position:relative;}
 .footer-wrap::before {content:""; width: 100%; height: 1px; display: block; background:#E1E7EA; position: absolute; left: 0; top: 0;}
-.footer-area {display: flex; justify-content: space-between; padding: 3.75rem 0 5rem; max-width: 90rem; margin: 0 auto;}
-.footer-area:not(:lang(ko)) {align-items: flex-end;}
+.footer-area {display: flex; justify-content: space-between; padding: 3.75rem 0 0rem; max-width: 90rem; margin: 0 auto;}
+.footer-area:not(:lang(ko)) {margin-bottom: 1.56rem;}
 .footer-site_map {font-size: 1.125rem; font-weight: 600; line-height: 1.8rem;}
 .footer-site_map > li:not(:last-child) {padding-bottom: .5rem;}
 .footer-site_map > li a:hover {color: var(--text-text-primary, #33B0C6);}
 .footer-site_map-desc {font-size: 1rem; font-weight: 400; line-height: 1.6rem; text-align: right;}
 .footer-item02 {display: flex; gap: 2.94rem; flex-direction: column;} 
-.footer-bottom {display: flex; justify-content: space-between; padding-bottom: 5rem; align-items: center; max-width: 90rem; margin: 0 auto;}
-.footer-util {display: flex; gap: 0.5rem; padding: 1.22rem 0;}
+.footer-bottom {display: flex; justify-content: space-between; padding-bottom: 5rem; align-items: center; max-width: 90rem; margin: 0 auto; align-items: flex-end;}
+.footer-bottom .left{display: flex; align-items: center;}
+.footer-bottom .right img{width: 270px;}
+.footer-util {display: flex; gap: 0.5rem; margin-left: 2rem;}
+.footer-util:not(:lang(ko)){margin-left: 3rem;}
 .footer-wrap .text-nomal{font-weight:400}
 .footer-wrap .selectbox-wrap.type3 > div button,
 .footer-wrap .selectbox-wrap.type3 > div a {color: #fff;}

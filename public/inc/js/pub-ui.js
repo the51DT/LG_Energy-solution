@@ -89,7 +89,7 @@ var pubUi = {
     bindEvents: function () {
         // 바깥 클릭 시 모든 메뉴 닫기
         document.addEventListener("click", (e) => {
-            if(this.self.selectCateBtn!=- null){
+            if(this.self.selectCateBtn!= null){
                 this.self.selectCateBtn.forEach((btn) => {
                     const cate = btn.closest(".select-cate");
                     const menu = cate.querySelector(".select-menu");
@@ -2052,6 +2052,9 @@ var pubUi = {
                     // 날짜 셀 클릭
                     const dayCell = e.target.closest(".scriptCalendar > tbody.box-day td");
                     if (dayCell) {
+                        if (dayCell.classList.contains("disabled")) {
+                            return;
+                        }
                         const calendarID = dayCell.closest(".scriptCalendar").id;
                         const targetId = calendarID.replace("Calendar", "");
                         this.hideCalendar(targetId, dayCell);
@@ -2245,11 +2248,13 @@ var pubUi = {
 
         setDayCellStyle(column, day, lastDate) {
             if (!column.classList.contains("selected")) {
+                let isPast = false;
                 if (this.toDay.getFullYear() === this.nowDate.getFullYear()) {
                     if (this.toDay.getMonth() === this.nowDate.getMonth()) {
                         if (this.nowDate.getDate() > day && Math.sign(day) === 1) {
+                            isPast = true;
                             //(현재일 기준 해당달 이전 날짜 색상 비활성화 컬러 색상 활성화 원할시 해당 부분 주석 해제)
-                            // column.style.backgroundColor = "#E5E5E5";
+                            column.style.backgroundColor = "#E5E5E5";
                         } else if (this.nowDate.getDate() < day && lastDate.getDate() >= day) {
                             //column.style.backgroundColor = "#FFFFFF";
                             column.style.cursor = "pointer";
@@ -2259,8 +2264,9 @@ var pubUi = {
                         }
                     } else if (this.toDay.getMonth() < this.nowDate.getMonth()) {
                         if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
+                            isPast = true;
                             //(현재일 기준 이전달 날짜 색상 비활성화 컬러 색상 활성화 원할시 해당 부분 주석 해제)
-                            // column.style.backgroundColor = "#E5E5E5";
+                            column.style.backgroundColor = "#E5E5E5";
                         }
                     } else {
                         if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
@@ -2270,14 +2276,19 @@ var pubUi = {
                     }
                 } else if (this.toDay.getFullYear() < this.nowDate.getFullYear()) {
                     if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
+                        isPast = true;
                         //(현재일 기준 작년도 날짜 색상 비활성화 컬러 색상 활성화 원할시 해당 부분 주석 해제)
-                        // column.style.backgroundColor = "#E5E5E5";
+                        column.style.backgroundColor = "#E5E5E5";
                     }
                 } else {
                     if (Math.sign(day) === 1 && day <= lastDate.getDate()) {
                         //column.style.backgroundColor = "#FFFFFF";
                         column.style.cursor = "pointer";
                     }
+                }
+                if (isPast) {
+                    column.classList.add("disabled");
+                    column.style.cursor = "default";
                 }
             }
         },

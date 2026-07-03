@@ -623,7 +623,7 @@ a[class^="act-btn"] {display: inline-flex !important; align-items: center;}
 .selectbox-wrap.type3 .select-cate {padding: 0; flex-grow: 1;}
 .selectbox-wrap.type3 > div button,
 .selectbox-wrap.type3 > div a {min-width: 16.875rem; color: #555758; width:100%;}
-.selectbox-wrap.type3 .select-cate > button {color: #555758; display: block; padding: 1.09rem 0; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem;}
+.selectbox-wrap.type3 .select-cate > button {color: #555758; display: block; padding: .5rem 0; font-size: 1.125rem; font-weight: 500; line-height: 1.8rem;}
 .selectbox-wrap.type3 .select-cate::after {content: ''; width: 100%; height: 1px; background: var(--colorElement-light-stroke-stroke-default03); display: block;}
 .selectbox-wrap.type3 > div button::before {margin-top: 3px; right: 0rem;}
 .selectbox-wrap.type3 .select-menu {width: 100%; height:100%; height: fit-content; max-height: 36rem; background:#fff; color:#555758; top:3.99rem; overflow-y: auto; overflow-x: hidden; border: 1px solid #C9CED1; padding: 0;}
@@ -803,18 +803,19 @@ table {border-collapse: collapse;}
 .modal-pop.evt .pop-wrap .pop-close {bottom: 0.81rem; top:revert; right: 2.5rem; width: 1.5rem; height: 1.5rem;}
 
 .modal-pop .performance_wrap{width: 50rem;height: 32.5rem;position:relative;background:#fff;}
-.modal-pop .performance_wrap .pop_bg{width:calc(100% - 1.5rem);height:calc(100% - 1.5rem);position:absolute;left:0.75rem;top:0.75rem;}
+.modal-pop .performance_wrap .pop_bg{position:absolute}
 .modal-pop .performance_wrap .pop_ci{position:absolute;width: 14.3125rem;height: 1.75rem;top:3.19rem;right:3.12rem;}
-.modal-pop .performance_wrap .txt-area{display: flex;gap:.3rem;flex-direction: column;padding:7.87rem 3.1rem;width:calc(100% - .75rem);}
-.modal-pop .performance_wrap .txt-area p{color: var(--text-text-on-primary, #FFF);font-size: 2.25rem;font-weight: 700;line-height: 120%;letter-spacing: -0.03544rem;position:relative;}
+.modal-pop .performance_wrap .txt-area{display: flex;gap:.3rem;flex-direction: column;padding:7.87rem 3.1rem;width:100%}
+.modal-pop .performance_wrap .txt-area p{color: var(--text-text-on-primary, #FFF);font-size: 2.25rem;font-weight: 700;line-height: 120%;letter-spacing: -0.03544rem;position: relative;}
+.modal-pop:lang(en) .performance_wrap .txt-area{padding: 6.87rem 3.1rem;}
 .modal-pop .performance_wrap .txt-area .txt-2{color: var(--text-text-on-primary, #FFF);font-size: 5rem;position:relative;}
-.modal-pop .performance_wrap .txt-area .txt-2 span.line-txt{flex:1;position:absolute;right:-55px;top:4.12rem;;color: #FFF;font-size: var(--size-desktop-H4, 1.25rem);font-weight: 600;line-height: var(--line-height-desktop-H4, 2rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);text-align:right;width: 27.875rem;height: 6.4375rem;background: radial-gradient(65% 50% at 50% 50%, rgba(23, 40, 58, 0.80) 0%, rgba(23, 40, 58, 0.00) 100%);display: flex;align-items: center;justify-content: center;}
-.modal-pop .performance_wrap .txt-area .txt-2 span.line-txt:after{content:"";width: 20.4375rem;height: 0.25rem;position:absolute;top:.75rem;left:50%;transform: translateX(-50%);background: #FFF;}
-.modal-pop .performance_wrap .btn-wrap{position:absolute;bottom:5rem;width:100%;display: flex;gap:.62rem;align-items: center;justify-content: center;}
+.modal-pop .performance_wrap .txt-area .txt-2 span.line-txt{flex:1;position:absolute;right:3px;top:2.5rem;color: #FFF;font-size: var(--size-desktop-H4, 1.25rem);font-weight: 600;line-height: var(--line-height-desktop-H4, 2rem); /* 160% */letter-spacing: var(--letter-spacing-default, 0);text-align:right;display: flex;align-items: center;justify-content: center;}
+/* .modal-pop .performance_wrap .txt-area .txt-2 span.line-txt:after{content:"";width: 20.4375rem;height: 0.25rem;position:absolute;top:.75rem;left:50%;transform: translateX(-50%);background: #FFF;} */
+.modal-pop .performance_wrap .btn-wrap{position:absolute;bottom:3.75rem;width:100%;display: flex;gap:.62rem;align-items: center;justify-content: center;}
 .modal-pop .performance_wrap .btn-wrap a{display: flex; min-width: auto;padding: 1rem 1.75rem;justify-content: center;align-items: center;gap: 1.25rem;border-radius: var(--Desktop-radius-capsule, 62.4375rem);background: var(--fill-fill-on-primary, #FFF);flex:0 0 17.1875rem;}
 .modal-pop .performance_wrap .btn-wrap:has(> a:nth-child(2)) a{display: flex;flex:0 0 16rem;justify-content: space-between; gap:.5rem;}
 .modal-pop:lang(en) .performance_wrap .txt-area .txt-2{font-size: 4.375rem;}
-.modal-pop:lang(en)  .performance_wrap .txt-area .txt-2 span.line-txt{top:-1rem;font-size: var(--size-desktop-H4, 1.25rem);font-weight: 600;line-height: var(--line-height-desktop-H4, 2rem);letter-spacing: var(--letter-spacing-default, 0);}
+.modal-pop:lang(en) .performance_wrap .txt-area .txt-2 span.line-txt{top:1.4rem;font-size: var(--size-desktop-H4, 1.25rem);font-weight: 600;line-height: var(--line-height-desktop-H4, 2rem);letter-spacing: var(--letter-spacing-default, 0);}
 .modal-pop:lang(en) .performance_wrap .txt-area .txt-2 span.line-txt:after{width: 23.375rem;top:4.75rem;left:50%;}
 
 /* tooltip popup */
@@ -885,7 +886,7 @@ table {border-collapse: collapse;}
 .type02Swiper .swiper-button-prev,
 .type02Swiper .swiper-button-next {background-color: #fff; border: 0;}
 
-.mainPopBnrSwiper .swiper-paging-wrap {display: none; position: absolute; left: 50%; transform: translateX(-50%); width: 8.9375rem; margin-top: 0; bottom: 1.25rem; height: 2.75rem; border-radius: 62.4375rem; padding: 0.62rem; color: #fff; margin-top: 0;}
+.mainPopBnrSwiper .swiper-paging-wrap {display: none; position: absolute; left: 50%; transform: translateX(-50%); width: 8.9375rem; margin-top: 0; bottom: 1.25rem; height: 2.75rem; border-radius: 62.4375rem; padding: 0.62rem; background: rgba(0, 0, 0, 0.5);color: #fff; margin-top: 0;}
 .mainPopBnrSwiper .swiper-button-prev,
 .mainPopBnrSwiper .swiper-button-next {width: 1.5rem; height: 1.5rem; padding:0.25rem; border: 1px solid #fff; border-radius: 62.4375rem; background-image:url(../../images/icon/icon_arrow_right2_wh.svg); top: 32px;}
 .mainPopBnrSwiper .swiper-pagination {color: #fff; font-size: 0.875rem; line-height: 1.4rem; font-weight: 600; margin: 3px 0;}

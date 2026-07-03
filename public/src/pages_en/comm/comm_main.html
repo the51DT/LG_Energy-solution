@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+  <meta name="robots" content="noindex, nofollow">
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <!-- <meta name="viewport" content="width=1920" /> -->
@@ -298,36 +299,18 @@
         
         
          <!-- popupEvt -->
-        <div class="modal-pop evt" id="popupEvt1">
+        <!-- <div class="modal-pop evt" id="popupEvt1">
             <div class="pop-wrap">
                 <div class="pop-content">
+                    
                     <div class="swiper mainPopBnrSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide banr-item">
-                                <!-- 04/06 추가 -->
-                                <div class="performance_wrap">
-                                    <img class="pop_bg" src="../../../inc/images/img/pop_bg.png" alt="">
-                                    <img class="pop_ci" src="../../../inc/images/symbol/ci_en_wh.svg" alt="Lg Energy Solution">
-                                    <div class="txt-area">
-                                        <p class="txt-1">1Q 2026</p>
-                                        <p class="txt-2"><span>Earings <br>Conference Call</span><span class="line-txt">Date & Time : May, 31th, 2026, AM 10:00</span></p>
-                                    </div>
-                                    <div class="btn-wrap">
-                                        <!-- <a href="" class="icon-btn-sm icon-black icon-container btn-primary01">
-                                            <span>Ask a Question</span>
-                                            <div class="icon-area"></div>
-                                        </a> -->
-                                        <a href="" class="icon-btn-sm icon-black icon-sound btn-primary01">
-                                            <span>Play</span>
-                                            <div class="icon-area"></div>
-                                        </a>
-                                        <a href="" class="icon-btn-sm icon-black icon-download btn-primary01">
-                                            <span>Earnings Materials</span>
-                                            <div class="icon-area"></div>
-                                        </a>
-                                    </div>
+                                <div class="img-area">
+                                    <a href="#">                                
+                                        <img src="../../../inc/images/img/evt_pop_img.png" alt="pc image">                               
+                                    </a>
                                 </div>
-                                <!-- 04/06 추가 End-->
                             </div>
                             <div class="swiper-slide banr-item">
                                 <div class="img-area">
@@ -362,6 +345,48 @@
                             </span>
                         </label>
                         <button type="button" class="pop-close" onclick="pubUi.popUp.close('#popupEvt1', '#popupEvtBtn1');" title="close popup"><span class="blind">close popup</span></button> 
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="modal-pop evt" id="popupEvt1">
+            <div class="pop-wrap">
+                <div class="pop-content">
+                    <!-- 04/06 추가 -->
+                    <div class="performance_wrap">
+                        <img class="pop_bg" src="../../../inc/images/img/popup-pc-en.png" alt="">
+                        <img class="pop_ci" src="../../../inc/images/symbol/ci_en_wh.svg" alt="Lg Energy Solution">
+                        <div class="txt-area">
+                            <p class="txt-1">Q1 2026</p>
+                            <p class="txt-2"><span class="line-txt">Date : April 30th, 2026 10:00(KST)</span></p>
+                        </div>
+                        <div class="btn-wrap">
+                            <!-- <a href="" target="_blank" title="Opens in a new window" class="icon-btn-sm icon-black icon-container btn-primary01">
+                                <span>Ask a Question</span>
+                                <div class="icon-area"></div>
+                            </a> -->
+                            <a href="" target="_blank" title="Opens in a new window" class="icon-btn-sm icon-black icon-sound btn-primary01">
+                                <span>Play</span>
+                                <div class="icon-area"></div>
+                            </a>
+                            <a href="" target="_blank" title="Opens in a new window" class="icon-btn-sm icon-black icon-download btn-primary01">
+                                <span>Earnings Materials</span>
+                                <div class="icon-area"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 04/06 추가 End-->
+                    <div class="foot-area checkbox">
+                        <input type="checkbox" class="checkbox" id="chk-close" name="chk-close">
+                        <label for="chk-close" class="checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            <span class="txt">
+                                Don't show again today
+                            </span>
+                        </label>
+                        <button type="button" class="pop-close" onclick="pubUi.popUp.close('#popupEvt1');"
+                            title="close popup"><span class="blind">close popup</span></button>
                     </div>
                 </div>
             </div>
