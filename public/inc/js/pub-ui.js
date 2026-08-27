@@ -2130,9 +2130,9 @@ var pubUi = {
 
                         const activeVideo = activeSlide.querySelector("video");
 
-                        if (activeVideo) {
-                            console.log("active slide video 있음");
-                        }
+                        // if (activeVideo) {
+                        //     console.log("active slide video 있음");
+                        // }
                     }
 
                     /**
@@ -2246,9 +2246,9 @@ var pubUi = {
 
                         const activeVideo = activeSlide.querySelector("video");
 
-                        if (activeVideo) {
-                            console.log("active slide video 있음");
-                        }
+                        // if (activeVideo) {
+                        //     console.log("active slide video 있음");
+                        // }
                     }
 
                     /**
