@@ -456,7 +456,7 @@ var pubUi = {
                         } else {
                             scroller.scrollTo({ top: 0, behavior: "smooth" });
                         }
-                        if (wrapEl) wrapEl.style.overflow = "auto";
+                        // if (wrapEl) wrapEl.style.overflow = "auto";
                         aside.style.display = "none";
                         aside.style.opacity = "0";
                     });

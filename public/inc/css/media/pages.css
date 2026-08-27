@@ -2949,6 +2949,7 @@
 .exhibition .content-area .content-section .text-area {padding-top:1.5rem;}
 .exhibition .content-area .content-section .text-area .tit {font-size:1.25rem; line-height:1.875rem;}
 .exhibition .content-area .content-section .text-area .desc {padding-top:0.5rem; font-size:1.125rem; line-height:1.75rem;}
+.exhibition .content-area .content-section .img-area img {border-radius:0.5rem;}
 .exhibition .content-area .content-article .content-section:not(:last-child) {padding-bottom:1.5rem;}
 .exhibition .content-area .content-article:not(:last-child) {padding-bottom:6rem;}
 .exhibition .exhibition-highlight-swiper {display:block;}
