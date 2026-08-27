@@ -1831,6 +1831,9 @@ var pubUi = {
             this.bAroundMoSwiper();
             this.rollingSwiper();
             this.mainPopBnrSwiper();
+            this.exhibitionSwiper();
+            this.exhibitionRelatedSwiper();
+            this.exhibitionSwiperMo();
         },
         // swiper default 타입 : type01Swiper
         type01Swiper() {
@@ -1982,6 +1985,315 @@ var pubUi = {
                 });
             } else {
                 return;
+            }
+        },
+        exhibitionSwiper() {
+            const targetSwiper = document.querySelectorAll(".highlight");
+
+            if (targetSwiper.length > 0) {
+
+                targetSwiper.forEach(function (swiperArea) {   
+
+                    // 썸네일
+                    const thumbSwiper = new Swiper(
+                        swiperArea.querySelector(".highlightSwiper"),
+                        {
+                            direction: "vertical",
+                            slidesPerView: 'auto',
+                            spaceBetween: 19,
+                            watchSlidesProgress: true,
+                        }
+                    );
+
+
+                    // 메인 콘텐츠
+                    const mainSwiper = new Swiper(
+                        swiperArea.querySelector(".mainSwiper"),
+                        {
+                            slidesPerView: 1,
+                            speed: 500,
+                            allowTouchMove: false,
+                            navigation: {
+                                prevEl: swiperArea.querySelector(".swiper-button-prev"),
+                                nextEl: swiperArea.querySelector(".swiper-button-next"),
+                            },
+
+                            thumbs: {
+                                swiper: thumbSwiper,
+                            },
+
+                            on: {
+                                init: function () {
+                                    changeContent(this.activeIndex);
+                                },
+
+                                slideChange: function () {
+                                    changeContent(this.activeIndex);
+                                },
+                            },
+                        }
+                    );
+
+
+                    // 콘텐츠 변경
+                    function changeContent(index) {
+
+                        // 썸네일 active 위치 맞춤
+                        thumbSwiper.slideTo(index);
+                    }
+
+                });
+
+            }
+        },
+        exhibitionRelatedSwiper() {
+            const targetSwiper = document.querySelectorAll(".related");
+            
+
+            if (targetSwiper.length > 0) {
+
+                targetSwiper.forEach(function (swiperArea) {
+
+
+                    // 썸네일
+                    const thumbSwiper = new Swiper(
+                        swiperArea.querySelector(".highlightSwiper"),
+                        {                                                        
+                            slidesPerView: 'auto',
+                            spaceBetween: 20,
+                            watchSlidesProgress: true,                                                    
+                        }
+                       
+                    );
+
+
+                    // 메인 콘텐츠
+                    const mainSwiper = new Swiper(
+                        swiperArea.querySelector(".mainSwiper"),
+                        {
+                            slidesPerView: 1,
+                            speed: 500,
+                            allowTouchMove: false,
+
+                            navigation: {
+                                prevEl: swiperArea.querySelector(".swiper-button-prev"),
+                                nextEl: swiperArea.querySelector(".swiper-button-next"),
+                            },
+
+                            thumbs: {
+                                swiper: thumbSwiper,
+                            },
+
+                            on: {
+                                init: function () {
+                                    changeContent(this.activeIndex);                                    
+                                    resetVideo();
+                                },
+
+                                slideChange: function () {
+                                    changeContent(this.activeIndex);                                    
+                                    resetVideo();
+                                },
+                            },
+                        }
+                    );
+
+
+                    // 콘텐츠 변경
+                    function changeContent(index) {
+
+                        // 썸네일 active 위치 맞춤
+                        thumbSwiper.slideTo(index);
+                    }
+
+                    /**
+                     * 메인 Swiper의 모든 영상 정지
+                     */
+                    function resetVideo() {
+                        const videos = swiperArea.querySelectorAll(".mainSwiper .swiper-slide video");
+
+                        videos.forEach(function (video) {
+                            video.pause();
+                        });
+
+                        // 모든 재생 버튼 다시 노출
+                        const icons = swiperArea.querySelectorAll(".mainSwiper .swiper-slide .thumb-wrap > i");
+
+                        icons.forEach(function (icon) {
+                            icon.style.display = "block";
+                        });
+
+                        // 새 active slide 체크
+                        const activeSlide = swiperArea.querySelector(".mainSwiper .swiper-slide-active");
+
+                        if (!activeSlide) return;
+
+                        const activeVideo = activeSlide.querySelector("video");
+
+                        if (activeVideo) {
+                            console.log("active slide video 있음");
+                        }
+                    }
+
+                    /**
+                     * active slide video 재생 / 정지                     
+                     */
+                    swiperArea.querySelector(".mainSwiper").addEventListener("click", function (e) {
+                            const thumbWrap = e.target.closest(".swiper-slide-active .thumb-wrap");
+
+                            if (!thumbWrap) return;
+
+                            const targetVideo = thumbWrap.querySelector("video");
+                            const targetIcon = thumbWrap.querySelector(":scope > i");
+
+                            if (!targetVideo) return;
+
+                            e.preventDefault();
+
+                            if (!targetVideo.paused && !targetVideo.ended) {
+
+                                // 재생 중 → 정지
+                                targetVideo.pause();
+
+                                if (targetIcon) {
+                                    targetIcon.style.display = "block";
+                                }
+
+                            } else {
+
+                                // 정지 → 재생
+                                targetVideo.play().then(function () {
+                                    if (targetIcon) {
+                                        targetIcon.style.display = "none";
+                                    }
+                                }).catch(function (error) {
+                                    console.log("video 재생 실패", error);
+                                });
+                            }
+                        });
+
+                });
+
+                
+
+
+
+            }
+        },
+        exhibitionSwiperMo() {
+            const targetSwiper = document.querySelectorAll(".moSwiper");
+            
+
+            if (targetSwiper.length > 0) {
+
+                targetSwiper.forEach(function (swiperArea) {
+
+
+                    // 썸네일
+                    const thumbSwiper = new Swiper(
+                        swiperArea.querySelector(".highlightSwiper"),
+                        {                                                        
+                            slidesPerView: 'auto',
+                            spaceBetween: 20,
+                            watchSlidesProgress: true,
+                            navigation: {
+                                prevEl: swiperArea.querySelector(".swiper-button-prev"),
+                                nextEl: swiperArea.querySelector(".swiper-button-next"),
+                            },
+                            on: {
+                                init: function () {
+                                    // changeContent(this.activeIndex);
+                                    resetVideo();
+                                },
+
+                                slideChange: function () {
+                                    // changeContent(this.activeIndex);                                    
+                                    resetVideo();
+                                },
+                            },
+                        }
+                       
+                    );
+
+                    // 콘텐츠 변경
+                    function changeContent(index) {
+
+                        // 썸네일 active 위치 맞춤
+                        thumbSwiper.slideTo(index);
+                    }
+
+                    /**
+                     * Swiper의 모든 영상 정지
+                     */
+                    function resetVideo() {
+                        const videos = swiperArea.querySelectorAll(".highlightSwiper .swiper-slide video");
+
+                        videos.forEach(function (video) {
+                            video.pause();
+                        });
+
+                        // 모든 재생 버튼 다시 노출
+                        const icons = swiperArea.querySelectorAll(".highlightSwiper .swiper-slide .thumb-wrap > i");
+
+                        icons.forEach(function (icon) {
+                            icon.style.display = "block";
+                        });
+
+                        // 새 active slide 체크
+                        const activeSlide = swiperArea.querySelector(".highlightSwiper .swiper-slide-active");
+
+                        if (!activeSlide) return;
+
+                        const activeVideo = activeSlide.querySelector("video");
+
+                        if (activeVideo) {
+                            console.log("active slide video 있음");
+                        }
+                    }
+
+                    /**
+                     * active slide video 재생 / 정지                     
+                     */
+                    swiperArea.querySelector(".highlightSwiper").addEventListener("click", function (e) {
+                            const thumbWrap = e.target.closest(".swiper-slide-active .thumb-wrap");
+
+                            if (!thumbWrap) return;
+
+                            const targetVideo = thumbWrap.querySelector("video");
+                            const targetIcon = thumbWrap.querySelector(":scope > i");
+
+                            if (!targetVideo) return;
+
+                            e.preventDefault();
+
+                            if (!targetVideo.paused && !targetVideo.ended) {
+
+                                // 재생 중 → 정지
+                                targetVideo.pause();
+
+                                if (targetIcon) {
+                                    targetIcon.style.display = "block";
+                                }
+
+                            } else {
+
+                                // 정지 → 재생
+                                targetVideo.play().then(function () {
+                                    if (targetIcon) {
+                                        targetIcon.style.display = "none";
+                                    }
+                                }).catch(function (error) {
+                                    console.log("video 재생 실패", error);
+                                });
+                            }
+                        });
+
+                });
+
+                
+
+
+
             }
         },
     },

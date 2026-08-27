@@ -2925,3 +2925,47 @@
 .video-policy-wrap > section .table-wrap .col-place {min-width: 144px; width: auto;}
 .video-policy-wrap .text-list-wrap .text-list li {font-size: 0.875rem; line-height: 1.3125rem;}
 .video-policy-wrap .text-list-wrap .text-list li:after {content:""; width: 6px; height: 1.2px; background: #171819; display: block; position: absolute; top: 8px; left: 3px;}
+
+
+/* 회사소개 > 전시회 */
+.exhibition .content-header .title-h1 {margin-bottom:0;}
+.exhibition .content-visual {padding:0;}
+.exhibition .content-visual .visual-title {padding:1.5rem 1.25rem; font-size:1.5rem; line-height:2.0625rem; letter-spacing:0;}
+.exhibition .content-visual .visual-text {max-width:100%; padding:1rem 1.25rem 3rem;}
+.exhibition .content-visual .visual-text .title {font-size:1.25rem; line-height:2rem; font-weight:600;}
+.exhibition .content-visual .visual-text .desc {font-size:1.125rem; line-height:1.75rem; font-weight:400; padding-top:0.5rem;}
+.exhibition .content-info > section:not(:last-child) {padding-bottom:2rem;}
+.exhibition .content-info > section .title {font-size:1.5rem; line-height:2.0625rem; font-weight:700; margin-bottom:1.5rem;}
+.exhibition .content-info {display:block;}
+.exhibition .content-info > section.left-cont .info {width:100%; height:auto; padding:0;}
+.exhibition .content-info > section .info .sub {font-size:1rem; line-height:1.6rem; font-weight:400;}
+.exhibition .content-info > section .info .txt {font-size:1.25rem; line-height:1.875rem; font-weight:500;}
+.exhibition .content-info > section .info .info-img img {border-radius:0;}
+.exhibition .content-info > section .info .info-list {gap:0.5rem;}
+.exhibition .content-info-more {padding-top:2rem; justify-content:flex-end;}
+.exhibition .content-info-more > a {font-size:0.875rem; line-height:1.225rem;}
+.exhibition .content-info-more > a > img {width:1.25rem; height:1.25rem;}
+.exhibition .content-area .content-title {font-size:1.5rem; line-height:2.0625rem; margin-bottom:1.5rem;}
+.exhibition .content-area .content-section .text-area {padding-top:1.5rem;}
+.exhibition .content-area .content-section .text-area .tit {font-size:1.25rem; line-height:1.875rem;}
+.exhibition .content-area .content-section .text-area .desc {padding-top:0.5rem; font-size:1.125rem; line-height:1.75rem;}
+.exhibition .content-area .content-article .content-section:not(:last-child) {padding-bottom:1.5rem;}
+.exhibition .content-area .content-article:not(:last-child) {padding-bottom:6rem;}
+.exhibition .exhibition-highlight-swiper {display:block;}
+.exhibition .related-content {height:auto;}
+.exhibition .exhibition-highlight-swiper .mainSwiper {display:none;}
+.exhibition .related-content .highlight-swiper-area {width:100%; height:auto;}
+.exhibition .related-content .highlight-swiper-area .highlightSwiper .swiper-slide {width:100%;}
+.exhibition .related-content .highlight-swiper-area .highlightSwiper .swiper-slide .thumb-wrap {width:100%; height:11.25rem;}
+.exhibition .related-content .highlight-swiper-area .highlightSwiper .swiper-slide-thumb-active::before {width:100%; height:11.25rem;}
+.exhibition .related-content .highlight-swiper-area .swiper-button-wrap {width:100%; height:2rem; margin-top:1rem;}
+.exhibition .highlight-swiper-area .swiper-button-prev, .exhibition .highlight-swiper-area .swiper-button-next {width:2rem; height:2rem; background-size:contain;}
+.exhibition .related-content .highlight-swiper-area .swiper-button-prev, .exhibition .related-content .highlight-swiper-area .swiper-button-next {margin-top:0;}
+.exhibition .related-content {display:block;}
+.exhibition .related-content .highlight-swiper-area .highlightSwiper .swiper-slide .txt-wrap {align-items:center;}
+.exhibition .related-content .highlight-swiper-area .highlightSwiper .swiper-slide .txt-wrap .txt {font-size:0.8125rem; line-height:1.3rem;}
+.exhibition .pind .order-history > li > a {height:8.625rem;}
+.exhibition .download-desc>li {height:5.5rem; padding:1.5rem;}
+.exhibition .download-list .btn-download {width:2.5rem; height:2.5rem; padding:0; border-radius:0; background:none;}
+.exhibition .download-list .btn-download .icon-download {background-image:url(../../../inc/images/img/ico_down.png); width:2.5rem; height:2.5rem;}
+.exhibition .download-list .btn-download:hover .icon-download {background-image:url(../../../inc/images/img/ico_down_hover.png); width:2.5rem; height:2.5rem;}
