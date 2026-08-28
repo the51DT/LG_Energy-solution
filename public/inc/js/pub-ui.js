@@ -2320,55 +2320,161 @@ var pubUi = {
             }
         },
         exhibitionListSwiper() {
-           const targetSwiper = document.querySelectorAll(".list-swiper-area");
+            const targetSwiper = document.querySelectorAll(".list-swiper-area");
 
-            if (targetSwiper.length > 0) {
+            if (targetSwiper.length === 0) {
+                return;
+            }
+            
+            targetSwiper.forEach(function (swiperArea) {
 
-                targetSwiper.forEach(function (swiperArea) {
+                const swiperEl = swiperArea.querySelector(".exhibitionListSwiper");
 
-                    const swiperEl = swiperArea.querySelector(".exhibitionListSwiper");
+                if (!swiperEl) {
+                    return;
+                }
 
-                    if (!swiperEl) return;
 
-                    const listSwiper = new Swiper(swiperEl, {                        
-                        slidesPerView: 'auto',
-                        spaceBetween: 20,
-                        loop:true,
-                        watchOverflow: false,
-                        allowTouchMove: true,
-                        pagination: {
-                            el: swiperArea.querySelector(".swiper-pagination"),
-                            clickable: true,
-                        },
+                const slides = swiperEl.querySelectorAll(".swiper-slide");
 
-                        on: {
-                            init: function () {
-                                setActiveSlide(this);
-                            },
+                const pagination = swiperArea.querySelector(".swiper-pagination");
 
-                            slideChange: function () {
-                                setActiveSlide(this);
-                            },
+                let currentIndex = 0;
 
-                            resize: function () {
-                                setActiveSlide(this);
-                            }
-                        }
-                    });
 
-                    function setActiveSlide(swiper) {
-                        const currentTranslate = swiper.translate;
-
-                        requestAnimationFrame(function () {
-                            swiper.updateSlides();
-                            swiper.setTranslate(currentTranslate);
-                            swiper.updateProgress(currentTranslate);
-                        });
-                    }
-
+                const listSwiper = new Swiper(swiperEl, {
+                    slidesPerView: "auto",
+                    spaceBetween: 20,
+                    speed: 0,
+                    initialSlide: 0,
+                    allowTouchMove: true,
+                    simulateTouch: true,
+                    resistance: false,
+                    virtualTranslate: true
                 });
 
-            }
+
+                function setActiveSlide(index) {
+
+                    if (index < 0) {
+                        index = 0;
+                    }
+
+                    if (index >= slides.length) {
+                        index = slides.length - 1;
+                    }
+
+                    currentIndex = index;
+
+
+                    slides.forEach(function (slide, slideIndex) {
+
+                        slide.classList.toggle(
+                            "swiper-slide-active",
+                            slideIndex === currentIndex
+                        );
+
+                    });
+
+
+                    if (pagination) {
+
+                        const bullets =
+                            pagination.querySelectorAll(
+                                ".swiper-pagination-bullet"
+                            );
+
+                        bullets.forEach(function (bullet, bulletIndex) {
+
+                            bullet.classList.toggle(
+                                "swiper-pagination-bullet-active",
+                                bulletIndex === currentIndex
+                            );
+
+                        });
+
+                    }
+
+                }
+
+
+                if (pagination) {
+
+                    pagination.innerHTML = "";
+
+                    slides.forEach(function (slide, index) {
+
+                        const bullet = document.createElement("button");
+
+                        bullet.type = "button";
+
+                        bullet.className = "swiper-pagination-bullet";
+
+                        bullet.setAttribute("aria-label", `${index + 1}번 슬라이드`);
+
+                        bullet.addEventListener("click", function (e) {
+
+                                e.preventDefault();
+                                e.stopPropagation();
+
+                                setActiveSlide(index);
+
+                            }
+                        );
+
+                        pagination.appendChild(bullet);
+
+                    });
+
+                }
+
+
+                setActiveSlide(0);
+
+
+                listSwiper.on("touchEnd", function () {
+
+                    const startX = this.touches.startX;
+
+                    const currentX = this.touches.currentX;
+
+                    const diff = startX - currentX;
+
+
+                    if (Math.abs(diff) < 30) {
+                        return;
+                    }
+
+
+                    let nextIndex =
+                        currentIndex;
+
+
+                    if (diff > 0) {
+                        nextIndex++;
+                    } else {
+                        nextIndex--;
+                    }
+
+
+                    if (nextIndex < 0) {
+                        nextIndex = 0;
+                    }
+
+                    if (nextIndex >= slides.length) {
+                        nextIndex = slides.length - 1;
+                    }
+
+
+                    if (nextIndex === currentIndex) {
+                        return;
+                    }
+
+
+                    setActiveSlide(nextIndex);
+
+                });
+            });
         }
     },
     calendarUi: {

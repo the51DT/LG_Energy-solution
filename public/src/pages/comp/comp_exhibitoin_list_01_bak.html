@@ -2,55 +2,56 @@
 <html lang="ko">
 <head>
     <meta name="robots" content="noindex, nofollow">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="telephone=no">
     <title>LG에너지솔루션 - 회사소개_전시회</title>
 
-    <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css" />
-    <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css" />
+    <link type="text/css" rel="stylesheet" href="../../../inc/css/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="../../../inc/css/common.css">
 
     <script type="text/javascript" src="../../../inc/js/lottie.js"></script>
 
     <style>
-        /* =========================================================
-           Exhibition Swiper
-        ========================================================= */
-
-        .exhibitionSwiper {
+        .exhibitionListSwiper {
             width: 100%;
             overflow: hidden;
         }
 
-        .exhibitionSwiper .swiper-wrapper {
+        .exhibitionListSwiper .swiper-wrapper {
+            display: flex;
             align-items: stretch;
         }
 
-
-        .exhibitionListSwiper .swiper-wrapper:has(> .swiper-slide:only-child) .swiper-slide-active {width: 100%;}
-    .exhibitionListSwiper .swiper-wrapper:has(> .swiper-slide:nth-child(3):last-child) .swiper-slide-active {width:710px; }
-    .exhibitionListSwiper .swiper-wrapper:has(> .swiper-slide:nth-child(2):last-child) .swiper-slide-active {width: 1075px;}
-    .exhibitionListSwiper .swiper-wrapper .swiper-slide {transition:width 0.5s ease;  border: 1px solid #ccc; height: 200px;}
-    .exhibitionListSwiper .swiper-slide {width:345px; height:366px; flex-shrink:0;}
-        /* active 슬라이드 */
-        .exhibitionSwiper .swiper-slide.active {
-            width: calc((100% - 40px) / 2);
+        .exhibitionListSwiper .swiper-slide {
+            width: 345px !important;
+            flex: 0 0 345px;
+            height: 366px;
+            box-sizing: border-box;
+            transition:
+                width 0.5s ease,
+                flex-basis 0.5s ease;
         }
 
-        /* =========================================================
-           Mobile
-        ========================================================= */
+        .exhibitionListSwiper .swiper-slide-active {
+            width: 710px !important;
+            flex-basis: 710px !important;
+        }
+
+        .exhibitionListSwiper .swiper-pagination {
+            position: relative;
+            margin-top: 20px;
+        }
 
         @media (max-width: 767px) {
 
-            .exhibitionSwiper .swiper-slide {
-                width: 80%;
+            .exhibitionListSwiper .swiper-slide,
+            .exhibitionListSwiper .swiper-slide-active {
+                width: 80% !important;
+                flex-basis: 80% !important;
             }
 
-            .exhibitionSwiper .swiper-slide.active {
-                width: 80%;
-            }
         }
     </style>
 </head>
@@ -63,15 +64,8 @@
 
     <div class="wrap exhibition">
 
-        <!-- header -->
-
-
-        <!-- section -->
         <section id="container" class="content-wrap">
 
-            <!-- =====================================================
-                 Visual
-            ====================================================== -->
             <div class="content-header_bg">
 
                 <div class="visual-video">
@@ -81,7 +75,6 @@
                         muted
                         playsinline
                         loop>
-                        <!-- 비디오 영상 소리 정보 존재시 내용 입력 (접근성 처리용) -->
                     </video>
                 </div>
 
@@ -96,10 +89,6 @@
 
             </div>
 
-
-            <!-- =====================================================
-                 Page Map
-            ====================================================== -->
             <div class="page-map-wrap">
 
                 <div class="selectbox-wrap pc-only" role="listbox">
@@ -151,7 +140,6 @@
                         </ul>
 
                     </div>
-
 
                     <div class="select-cate activeSelect" role="option">
 
@@ -205,16 +193,8 @@
 
             </div>
 
-
-            <!-- =====================================================
-                 Content Area
-            ====================================================== -->
             <div class="content-area">
 
-
-                <!-- =================================================
-                     다가올 전시 / 이벤트
-                ================================================== -->
                 <div class="content-item01">
 
                     <div class="content-wrap">
@@ -229,11 +209,10 @@
                                     </h2>
                                 </div>
 
-
                                 <div class="content-section">
 
-                                    <!-- Exhibition Swiper -->
                                     <div class="exhibition-list">
+
                                         <div class="swiper exhibitionListSwiper">
 
                                             <div class="swiper-wrapper">
@@ -249,13 +228,14 @@
                                                 <div class="swiper-slide">
                                                     ITEM 3
                                                 </div>
-                                    
-                                            </div>
-                                            <div class="swiper-pagination"></div>
-                                        </div>
-                                    </div>
-                                    <!-- // Exhibition Swiper -->
 
+                                            </div>
+
+                                            <div class="swiper-pagination"></div>
+
+                                        </div>
+
+                                    </div>
 
                                 </div>
 
@@ -266,12 +246,7 @@
                     </div>
 
                 </div>
-                <!-- //content-item01 -->
 
-
-                <!-- =================================================
-                     상설 전시
-                ================================================== -->
                 <div class="content-item02 bg-gray">
 
                     <div class="content-wrap">
@@ -284,7 +259,6 @@
                                     상설 전시
                                 </h2>
 
-
                                 <div class="content-section">
 
                                     <div class="exhibition-list none ty03">
@@ -295,7 +269,7 @@
 
                                                 <img
                                                     src="../../../inc/images/img/exhibition_img1.png"
-                                                    alt="" />
+                                                    alt="">
 
                                                 <div class="text-area">
 
@@ -325,14 +299,13 @@
 
                                         </a>
 
-
                                         <a href="" class="item">
 
                                             <div class="list-container">
 
                                                 <img
                                                     src="../../../inc/images/img/exhibition_img2.png"
-                                                    alt="" />
+                                                    alt="">
 
                                                 <div class="text-area">
 
@@ -373,12 +346,7 @@
                     </div>
 
                 </div>
-                <!-- //content-item02 -->
 
-
-                <!-- =================================================
-                     지난 전시 / 이벤트
-                ================================================== -->
                 <div class="content-item03">
 
                     <div class="content-wrap">
@@ -392,7 +360,6 @@
                                     <h2 class="content-title">
                                         지난 전시/이벤트
                                     </h2>
-
 
                                     <div class="exhibition-cate-wrap">
 
@@ -444,26 +411,21 @@
 
                                 </div>
 
-
                                 <div class="exhibition-body tab-content-box">
 
                                     <div class="exhibition-list none ty02">
 
-
                                         <a href="" class="item">
-
                                             <img
                                                 src="../../../inc/images/img/exhibition_event01.png"
-                                                alt="" />
+                                                alt="">
 
                                             <div class="text-area">
 
                                                 <div class="badge_wrap">
-
                                                     <div class="badge">
                                                         모빌리티
                                                     </div>
-
                                                 </div>
 
                                                 <div class="info">
@@ -477,15 +439,12 @@
                                                 </div>
 
                                             </div>
-
                                         </a>
 
-
                                         <a href="" class="item">
-
                                             <img
                                                 src="../../../inc/images/img/exhibition_event01.png"
-                                                alt="" />
+                                                alt="">
 
                                             <div class="text-area">
 
@@ -512,15 +471,12 @@
                                                 </div>
 
                                             </div>
-
                                         </a>
 
-
                                         <a href="" class="item">
-
                                             <img
                                                 src="../../../inc/images/img/exhibition_event01.png"
-                                                alt="" />
+                                                alt="">
 
                                             <div class="text-area">
 
@@ -543,15 +499,12 @@
                                                 </div>
 
                                             </div>
-
                                         </a>
 
-
                                         <a href="" class="item">
-
                                             <img
                                                 src="../../../inc/images/img/exhibition_event01.png"
-                                                alt="" />
+                                                alt="">
 
                                             <div class="text-area">
 
@@ -574,15 +527,12 @@
                                                 </div>
 
                                             </div>
-
                                         </a>
 
-
                                         <a href="" class="item">
-
                                             <img
                                                 src="../../../inc/images/img/exhibition_event01.png"
-                                                alt="" />
+                                                alt="">
 
                                             <div class="text-area">
 
@@ -605,15 +555,12 @@
                                                 </div>
 
                                             </div>
-
                                         </a>
 
-
                                         <a href="" class="item">
-
                                             <img
                                                 src="../../../inc/images/img/exhibition_event01.png"
-                                                alt="" />
+                                                alt="">
 
                                             <div class="text-area">
 
@@ -636,14 +583,10 @@
                                                 </div>
 
                                             </div>
-
                                         </a>
-
 
                                     </div>
 
-
-                                    <!-- 더보기 버튼 -->
                                     <div class="exhibition-btn-area">
 
                                         <button
@@ -663,23 +606,12 @@
                     </div>
 
                 </div>
-                <!-- //content-item03 -->
-
 
             </div>
 
         </section>
-        <!-- //section -->
-
-
-        <!-- footer -->
 
     </div>
-
-
-    <!-- =========================================================
-         JS
-    ========================================================== -->
 
     <script
         type="text/javascript"
@@ -691,19 +623,9 @@
         src="../../../inc/js/swiper.min.js">
     </script>
 
-
-    <!-- header / footer 추가 js -->
     <script>
 
-        /* =========================================================
-           include HTML
-        ========================================================= */
-
-        async function includeHTML(
-            target,
-            url,
-            position = "beforeend"
-        ) {
+        async function includeHTML(target, url, position = "beforeend") {
 
             const el =
                 typeof target === "string"
@@ -712,14 +634,16 @@
 
             if (!el) return false;
 
-            const res = await fetch(
-                url,
-                {
-                    cache: "no-cache"
-                }
-            );
+            const res =
+                await fetch(
+                    url,
+                    {
+                        cache: "no-cache"
+                    }
+                );
 
-            const html = await res.text();
+            const html =
+                await res.text();
 
             el.insertAdjacentHTML(
                 position,
@@ -730,16 +654,7 @@
         }
 
 
-        /* =========================================================
-           waitFor
-        ========================================================= */
-
-        function waitFor(
-            selector,
-            {
-                timeout = 3000
-            } = {}
-        ) {
+        function waitFor(selector, { timeout = 3000 } = {}) {
 
             return new Promise(
                 (resolve, reject) => {
@@ -750,17 +665,14 @@
                     const tick = () => {
 
                         const el =
-                            document.querySelector(
-                                selector
-                            );
+                            document.querySelector(selector);
 
                         if (el) {
                             return resolve(el);
                         }
 
                         if (
-                            performance.now() - start
-                            > timeout
+                            performance.now() - start > timeout
                         ) {
 
                             return reject(
@@ -771,9 +683,7 @@
 
                         }
 
-                        requestAnimationFrame(
-                            tick
-                        );
+                        requestAnimationFrame(tick);
 
                     };
 
@@ -784,10 +694,6 @@
 
         }
 
-
-        /* =========================================================
-           Header
-        ========================================================= */
 
         function initHeaderOnce() {
 
@@ -803,10 +709,6 @@
 
         }
 
-
-        /* =========================================================
-           Header / Footer Include
-        ========================================================= */
 
         (async () => {
 
@@ -846,19 +748,13 @@
         });
 
 
-        /* =========================================================
-           Dynamic JS
-        ========================================================= */
-
         function loadScript(src) {
 
             return new Promise(
                 (resolve, reject) => {
 
                     const s =
-                        document.createElement(
-                            "script"
-                        );
+                        document.createElement("script");
 
                     s.src = src;
 
@@ -894,103 +790,184 @@
         })();
 
 
-        /* =========================================================
-           Exhibition Swiper
-        ========================================================= */
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
 
-        const exhibitionSwiper =
-            new Swiper(
-                ".exhibitionListSwiper",
-                {
+                const exhibitionListSwiperEl =
+                    document.querySelector(
+                        ".exhibitionListSwiper"
+                    );
 
-                    /* 슬라이드 자체 width를 CSS에서 제어 */
-                    slidesPerView: "auto",
-                    // autoplay:true,
-                    spaceBetween: 20,                    
-                    /* 처음에는 ITEM 1 active */
-                    initialSlide: 0,                
-                    pagination: {
-                        el: exhibitionSwiper.querySelector(".swiper-pagination"),
-                        clickable: true,
-                    },
-
-                    on: {
-
-                        /* -----------------------------------------
-                           초기화
-                        ----------------------------------------- */
-
-                        init: function () {
-
-                            this.slides.forEach(
-                                slide => {
-                                    slide.classList.remove(
-                                        "active"
-                                    );
-                                }
-                            );
-
-                            if (
-                                this.slides[
-                                    this.activeIndex
-                                ]
-                            ) {
-
-                                this.slides[
-                                    this.activeIndex
-                                ].classList.add(
-                                    "active"
-                                );
-
-                            }
-
-                        },
+                if (!exhibitionListSwiperEl) {
+                    return;
+                }
 
 
-                        /* -----------------------------------------
-                           슬라이드 변경
-                        ----------------------------------------- */
+                const slides =
+                    exhibitionListSwiperEl.querySelectorAll(
+                        ".swiper-slide"
+                    );
 
-                        slideChange: function () {
-
-                            this.slides.forEach(
-                                slide => {
-
-                                    slide.classList.remove(
-                                        "active"
-                                    );
-
-                                }
-                            );
+                const pagination =
+                    exhibitionListSwiperEl.querySelector(
+                        ".swiper-pagination"
+                    );
 
 
-                            if (
-                                this.slides[
-                                    this.activeIndex
-                                ]
-                            ) {
+                let currentIndex = 0;
 
-                                this.slides[
-                                    this.activeIndex
-                                ].classList.add(
-                                    "active"
-                                );
 
+                const exhibitionSwiper =
+                    new Swiper(
+                        exhibitionListSwiperEl,
+                        {
+
+                            slidesPerView: "auto",
+
+                            spaceBetween: 20,
+
+                            speed: 0,
+
+                            allowTouchMove: true,
+
+                            simulateTouch: true,
+
+                            resistance: false,
+
+                            virtualTranslate: true,
+
+                            pagination: {
+                                el: pagination,
+                                clickable: true
                             }
 
                         }
+                    );
 
+
+                function setActive(index) {
+
+                    if (index < 0) {
+                        index = 0;
                     }
 
+                    if (index >= slides.length) {
+                        index = slides.length - 1;
+                    }
+
+                    currentIndex = index;
+
+
+                    slides.forEach(
+                        function (slide, slideIndex) {
+
+                            slide.classList.toggle(
+                                "swiper-slide-active",
+                                slideIndex === currentIndex
+                            );
+
+                        }
+                    );
+
+
+                    exhibitionSwiper.activeIndex =
+                        currentIndex;
+
+                    exhibitionSwiper.updateSlidesClasses();
+
                 }
-            );
 
 
-        /* =========================================================
-           슬라이드 클릭
-        ========================================================= */
+                setActive(0);
 
-   
+
+                exhibitionSwiper.on(
+                    "touchEnd",
+                    function () {
+
+                        const startX =
+                            this.touches.startX;
+
+                        const currentX =
+                            this.touches.currentX;
+
+                        const diff =
+                            startX - currentX;
+
+
+                        if (Math.abs(diff) < 30) {
+                            return;
+                        }
+
+
+                        let nextIndex =
+                            currentIndex;
+
+
+                        if (diff > 0) {
+                            nextIndex++;
+                        } else {
+                            nextIndex--;
+                        }
+
+
+                        if (
+                            nextIndex === currentIndex
+                        ) {
+                            return;
+                        }
+
+
+                        setActive(nextIndex);
+
+                    }
+                );
+
+
+                if (pagination) {
+
+                    pagination.addEventListener(
+                        "click",
+                        function (e) {
+
+                            const bullet =
+                                e.target.closest(
+                                    ".swiper-pagination-bullet"
+                                );
+
+                            if (!bullet) {
+                                return;
+                            }
+
+
+                            const bullets =
+                                pagination.querySelectorAll(
+                                    ".swiper-pagination-bullet"
+                                );
+
+
+                            const index =
+                                Array.prototype.indexOf.call(
+                                    bullets,
+                                    bullet
+                                );
+
+
+                            if (index < 0) {
+                                return;
+                            }
+
+
+                            setActive(index);
+
+                        }
+                    );
+
+                }
+
+            }
+        );
 
     </script>
 
