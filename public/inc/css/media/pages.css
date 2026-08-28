@@ -2932,25 +2932,25 @@
 /* 전시회 메인 */
 .exhibitionListSwiper {padding-bottom: 0;}
 .exhibitionListSwiper .item:has(> img)::before {height: 188px;}
-.exhibition .list-swiper-area.accord-type .accordion-list .accordion-btn:after {display: none;}
-.exhibition .list-swiper-area.accord-type .exhibition-list {display: block; width: 100%;}
-.exhibition .list-swiper-area.accord-type .exhibition-list .no-data img {height: 440px;}
-.exhibition .list-swiper-area.accord-type .exhibition-list .item {height: 193px;}
-.exhibition .list-swiper-area.accord-type .exhibition-list .item .page-link {display: none; color: #fff; font-size: 14px; line-height: 19.6px; font-weight: 500; margin-top: 16px; position: relative;}
-.exhibition .list-swiper-area.accord-type .exhibition-list .item .page-link::after {content:""; width: 20px; height: 20px; display: block; background: url(../../../inc/images/img/ico_exhibition_arr.png) no-repeat center 100%; background-size: contain; position: absolute; right: 0; top: 0;}
+.exhibition .accord-type .accordion-list .accordion-btn:after {display: none;}
+.exhibition .accord-type .exhibition-list {display: block; width: 100%;}
+.exhibition .accord-type .exhibition-list .no-data img {height: 440px;}
+.exhibition .accord-type .exhibition-list .item {height: 193px;}
+.exhibition .accord-type .exhibition-list .item .page-link {display: none; color: #fff; font-size: 14px; line-height: 19.6px; font-weight: 500; margin-top: 16px; position: relative;}
+.exhibition .accord-type .exhibition-list .item .page-link::after {content:""; width: 20px; height: 20px; display: block; background: url(../../../inc/images/img/ico_exhibition_arr.png) no-repeat center 100%; background-size: contain; position: absolute; right: 0; top: 0;}
 
-.exhibition .list-swiper-area.accord-type .exhibitionListSwiper .item {width: 100%; transition: height 0.5s ease;}
-.exhibition .list-swiper-area.accord-type .exhibitionListSwiper .item:not(:last-child) {margin-bottom: 1rem;}
-.exhibition .list-swiper-area.accord-type .exhibitionListSwiper .item.active {height: 440px;}
-.exhibition .list-swiper-area.accord-type .exhibitionListSwiper .item.active .page-link {display: inline-flex; align-items: center; padding-right: 24px;}
+.exhibition .accord-type .exhibitionListSwiper .item {width: 100%; transition: height 0.5s ease;}
+.exhibition .accord-type .exhibitionListSwiper .item:not(:last-child) {margin-bottom: 1rem;}
+.exhibition .accord-type .exhibitionListSwiper .item.active {height: 440px;}
+.exhibition .accord-type .exhibitionListSwiper .item.active .page-link {display: inline-flex; align-items: center; padding-right: 24px;}
 
-.exhibition .list-swiper-area.accord-type .exhibition-list .item.active .text-area .title {font-size: 24px;  line-height: 33px;}
-.exhibition .list-swiper-area.accord-type .exhibition-list .item.active .text-area .info {font-size: 14px; line-height: 21px;}
-.exhibition .list-swiper-area.accord-type .exhibition-list .item.active .text-area .badge {font-size: 12px; line-height: 19.2px; height: 22px;}
+.exhibition .accord-type .exhibition-list .item.active .text-area .title {font-size: 24px;  line-height: 33px;}
+.exhibition .accord-type .exhibition-list .item.active .text-area .info {font-size: 14px; line-height: 21px;}
+.exhibition .accord-type .exhibition-list .item.active .text-area .badge {font-size: 12px; line-height: 19.2px; height: 22px;}
 
-.exhibition .list-swiper-area.accord-type .exhibition-list .item .text-area .title {font-size: 20px;  line-height: 30px; margin-top: 8px;}
-.exhibition .list-swiper-area.accord-type .exhibition-list .item .text-area .info {font-size: 12px; line-height: 21px; margin-top: 8px; color:#c9ced1; font-weight: 400;}
-.exhibition .list-swiper-area.accord-type .exhibition-list .item .text-area .badge {font-size: 12px; line-height: 19.2px; height: 24px; font-weight: 600;}
+.exhibition .accord-type .exhibition-list .item .text-area .title {font-size: 20px;  line-height: 30px; margin-top: 8px;}
+.exhibition .accord-type .exhibition-list .item .text-area .info {font-size: 12px; line-height: 21px; margin-top: 8px; color:#c9ced1; font-weight: 400;}
+.exhibition .accord-type .exhibition-list .item .text-area .badge {font-size: 12px; line-height: 19.2px; height: 24px; font-weight: 600;}
 
 .exhibition .content-area > [class^="content-item"]:first-child {padding-top: 24px;}
 .exhibition-list.ty02 {display: flex;}
