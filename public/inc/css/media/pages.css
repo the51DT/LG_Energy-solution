@@ -2928,6 +2928,62 @@
 
 
 /* 회사소개 > 전시회 */
+
+/* 전시회 메인 */
+.exhibitionListSwiper {padding-bottom: 0;}
+.exhibitionListSwiper .item:has(> img)::before {height: 188px;}
+.exhibition .list-swiper-area.accord-type .accordion-list .accordion-btn:after {display: none;}
+.exhibition .list-swiper-area.accord-type .exhibition-list {display: block; width: 100%;}
+.exhibition .list-swiper-area.accord-type .exhibition-list .no-data img {height: 440px;}
+.exhibition .list-swiper-area.accord-type .exhibition-list .item {height: 193px;}
+.exhibition .list-swiper-area.accord-type .exhibition-list .item .page-link {display: none; color: #fff; font-size: 14px; line-height: 19.6px; font-weight: 500; margin-top: 16px; position: relative;}
+.exhibition .list-swiper-area.accord-type .exhibition-list .item .page-link::after {content:""; width: 20px; height: 20px; display: block; background: url(../../../inc/images/img/ico_exhibition_arr.png) no-repeat center 100%; background-size: contain; position: absolute; right: 0; top: 0;}
+
+.exhibition .list-swiper-area.accord-type .exhibitionListSwiper .item {width: 100%; transition: height 0.5s ease;}
+.exhibition .list-swiper-area.accord-type .exhibitionListSwiper .item:not(:last-child) {margin-bottom: 1rem;}
+.exhibition .list-swiper-area.accord-type .exhibitionListSwiper .item.active {height: 440px;}
+.exhibition .list-swiper-area.accord-type .exhibitionListSwiper .item.active .page-link {display: inline-flex; align-items: center; padding-right: 24px;}
+
+.exhibition .list-swiper-area.accord-type .exhibition-list .item.active .text-area .title {font-size: 24px;  line-height: 33px;}
+.exhibition .list-swiper-area.accord-type .exhibition-list .item.active .text-area .info {font-size: 14px; line-height: 21px;}
+.exhibition .list-swiper-area.accord-type .exhibition-list .item.active .text-area .badge {font-size: 12px; line-height: 19.2px; height: 22px;}
+
+.exhibition .list-swiper-area.accord-type .exhibition-list .item .text-area .title {font-size: 20px;  line-height: 30px; margin-top: 8px;}
+.exhibition .list-swiper-area.accord-type .exhibition-list .item .text-area .info {font-size: 12px; line-height: 21px; margin-top: 8px; color:#c9ced1; font-weight: 400;}
+.exhibition .list-swiper-area.accord-type .exhibition-list .item .text-area .badge {font-size: 12px; line-height: 19.2px; height: 24px; font-weight: 600;}
+
+.exhibition .content-area > [class^="content-item"]:first-child {padding-top: 24px;}
+.exhibition-list.ty02 {display: flex;}
+.exhibition-list.ty02 .item > .text-area .title {font-size: 20px;  line-height: 30px; margin-top: 0;}
+.exhibition-list.ty02 .item > .text-area .info {font-size: 14px; line-height: 21px; margin-top: 12px; color:#858889;}
+.exhibition-list.ty02 .item > .text-area .badge {font-size: 12px; line-height: 19.2px; height: 24px;}
+
+.exhibition-list.ty03 .item {width: 100%;}
+.exhibition-list.ty03 .item .list-container {display: block;}
+.exhibition-list.ty03 .item {background-color: transparent; position: static; border-radius: 0;}
+.exhibition-list.ty03 .item:last-child {margin-bottom: 20px;}
+.exhibition-list.ty03 .item:not(:last-child) {position: relative;}
+.exhibition-list.ty03 .item:not(:last-child)::after {content:""; width: 100%; height: 1px; background-color: #c9ced1; display: block; margin: 32px 0;}
+.exhibition-list.ty03 .item img {height: auto; width:100%;}
+.exhibition-list.ty03 .item .text-area {height: auto; width: 100%; padding-top: 1rem;}
+.exhibition-list.ty03 .item .text-area .title {font-size: 20px; line-height: 30px; margin-top: 1rem;}
+.exhibition-list.ty03 .item .text-area .info {font-size: 14px; line-height: 21px; margin-top: 0;}
+
+.exhibition .content-area .exhibition-head .content-title {margin-bottom: 1rem;}
+.exhibition-head {display: block;}
+.exhibition-head .exhibition-cate-wrap {overflow-x: auto;}
+.exhibition-head .exhibition-cate-wrap .exhibition-category {gap:8px;}
+.exhibition-body .exhibition-list {overflow-x: auto; overflow-y: hidden;}
+.exhibition-body .exhibition-list .item {min-width:285px; height: 325px;}
+.exhibition-body .exhibition-list .item > img {width:100%; height: 190px; }
+.exhibition-body .exhibition-list .item > .text-area {height: 135px; padding: 24px 20px;}
+
+.exhibition [class^="content-item03"] .content-wrap {padding: 0;}
+.exhibition [class^="content-item03"] .content-article {padding-left: 20px;}
+.exhibition [class^="content-item03"] .exhibition-head .exhibition-category li:last-child {padding-right: 20px;}
+.exhibition [class^="content-item03"] .exhibition-body .exhibition-list .item:last-child {margin-right: 20px;}
+
+/* 전시회 상세 */
 .exhibition .content-header .title-h1 {margin-bottom:0;}
 .exhibition .content-visual {padding:0;}
 .exhibition .content-visual .visual-title {padding:1.5rem 1.25rem; font-size:1.5rem; line-height:2.0625rem; letter-spacing:0;}
@@ -2946,9 +3002,9 @@
 .exhibition .content-info-more > a {font-size:0.875rem; line-height:1.225rem;}
 .exhibition .content-info-more > a > img {width:1.25rem; height:1.25rem;}
 .exhibition .content-area .content-title {font-size:1.5rem; line-height:2.0625rem; margin-bottom:1.5rem;}
-.exhibition .content-area .content-section .text-area {padding-top:1.5rem;}
-.exhibition .content-area .content-section .text-area .tit {font-size:1.25rem; line-height:1.875rem;}
-.exhibition .content-area .content-section .text-area .desc {padding-top:0.5rem; font-size:1.125rem; line-height:1.75rem;}
+.exhibition .content-area .content-section > .text-area {padding-top:1.5rem;}
+.exhibition .content-area .content-section > .text-area .tit {font-size:1.25rem; line-height:1.875rem;}
+.exhibition .content-area .content-section > .text-area .desc {padding-top:0.5rem; font-size:1.125rem; line-height:1.75rem;}
 .exhibition .content-area .content-section .img-area img {border-radius:0.5rem;}
 .exhibition .content-area .content-article .content-section:not(:last-child) {padding-bottom:1.5rem;}
 .exhibition .content-area .content-article:not(:last-child) {padding-bottom:6rem;}

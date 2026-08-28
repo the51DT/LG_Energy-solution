@@ -84,6 +84,8 @@ var pubUi = {
         this.self.box = document.querySelector(".map-filter");
         (this.self.areaTop = 0), (this.self.areaH = 0), (this.self.boxH = 0), (this.self.rootTop = 0), (this.self.boxTop = 0);
         /* 사업장 필터 관련 변수 : 11.12 추가 - E */
+        
+
     },
 
     bindEvents: function () {
@@ -200,6 +202,26 @@ var pubUi = {
             });
         }
         /* 11.12 수정 : 사업장 스크롤 이벤트 추가 : 스크롤시, 유형 필터 위치값 처리하기 위함 - E */
+
+        /* 260828 추가 : 전시회 메인(모바일) > 다가올 전시 / 클릭이벤트(펼침/닫힘) 추가 - S  */    
+        let mainExhibitionListItem = document.querySelectorAll(".exhibition .accord-type .exhibitionListSwiper .item");
+        if(mainExhibitionListItem.length > 0 ) {
+            
+            mainExhibitionListItem.forEach(item => {
+                item.classList.remove("active");
+
+                item.addEventListener("click", (e) => {
+                    e.preventDefault();
+
+                    mainExhibitionListItem.forEach(el => {
+                        el.classList.remove("active");
+                    });
+
+                    e.currentTarget.classList.add("active");
+                });
+            });
+        }/* 260828 추가 : 전시회 메인(모바일) > 다가올 전시 / 클릭이벤트(펼침/닫힘) 추가 - E  */ 
+        
     },
     /* 11.12 추가 : 사업장 : 유형 필터 관련 함수 - S */
     networkFilterUpdate: function () {
@@ -1834,13 +1856,14 @@ var pubUi = {
             this.exhibitionSwiper();
             this.exhibitionRelatedSwiper();
             this.exhibitionSwiperMo();
+            this.exhibitionListSwiper();
         },
         // swiper default 타입 : type01Swiper
         type01Swiper() {
             const targetSwiper = document.querySelectorAll(".type01Swiper");
 
             if (targetSwiper.length > 0) {
-                //newsroom 상세 사용중
+                //newsroom 상세 사용중          
                 var swiper1 = new Swiper(".type01Swiper", {
                     pagination: {
                         el: ".type01Swiper .swiper-pagination",
@@ -2296,6 +2319,57 @@ var pubUi = {
 
             }
         },
+        exhibitionListSwiper() {
+           const targetSwiper = document.querySelectorAll(".list-swiper-area");
+
+            if (targetSwiper.length > 0) {
+
+                targetSwiper.forEach(function (swiperArea) {
+
+                    const swiperEl = swiperArea.querySelector(".exhibitionListSwiper");
+
+                    if (!swiperEl) return;
+
+                    const listSwiper = new Swiper(swiperEl, {                        
+                        slidesPerView: 'auto',
+                        spaceBetween: 20,
+                        loop:true,
+                        watchOverflow: false,
+                        allowTouchMove: true,
+                        pagination: {
+                            el: swiperArea.querySelector(".swiper-pagination"),
+                            clickable: true,
+                        },
+
+                        on: {
+                            init: function () {
+                                setActiveSlide(this);
+                            },
+
+                            slideChange: function () {
+                                setActiveSlide(this);
+                            },
+
+                            resize: function () {
+                                setActiveSlide(this);
+                            }
+                        }
+                    });
+
+                    function setActiveSlide(swiper) {
+                        const currentTranslate = swiper.translate;
+
+                        requestAnimationFrame(function () {
+                            swiper.updateSlides();
+                            swiper.setTranslate(currentTranslate);
+                            swiper.updateProgress(currentTranslate);
+                        });
+                    }
+
+                });
+
+            }
+        }
     },
     calendarUi: {
         toDay: new Date(),
