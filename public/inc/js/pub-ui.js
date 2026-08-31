@@ -209,7 +209,7 @@ var pubUi = {
         if(mainExhibitionListItem.length > 0 ) {
             
             mainExhibitionListItem.forEach(item => {
-                item.classList.remove("active");
+                // item.classList.remove("active"); 
 
                 item.addEventListener("click", (e) => {
                     e.preventDefault();
