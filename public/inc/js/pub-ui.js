@@ -2352,8 +2352,8 @@ var pubUi = {
                     spaceBetween: 20,
                     speed: 0,
                     initialSlide: 0,
-                    allowTouchMove: true,
-                    simulateTouch: true,
+                    allowTouchMove: false,
+                    simulateTouch: false,
                     resistance: false,
                     virtualTranslate: true
                 });
@@ -2433,9 +2433,40 @@ var pubUi = {
 
                 }
 
+                // PC 마우스오버
+                if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
 
-                setActiveSlide(0);
+                    slides.forEach(function (slide, index) {
 
+                        slide.addEventListener("mouseenter", function () {
+
+                            slides.forEach(function (item) {
+
+                                item.classList.remove(
+                                    "swiper-slide-active"
+                                );
+
+                            });
+
+                            slide.classList.add(
+                                "swiper-slide-active"
+                            );
+
+                        });
+
+                    });
+
+
+                    swiperEl.addEventListener("mouseleave", function () {
+
+                        setActiveSlide(currentIndex);
+
+                    });
+
+                }
+
+                setActiveSlide(0);                
+                
 
                 listSwiper.on("touchEnd", function () {
 
@@ -2479,6 +2510,8 @@ var pubUi = {
                     setActiveSlide(nextIndex);
 
                 });
+                
+
             });
         }
         /* 26.08.31 전시회 관련 스크립트 추가 - E */
