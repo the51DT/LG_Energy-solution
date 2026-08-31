@@ -3235,8 +3235,10 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 /* 회사소개 > 전시회 - S */
 /* 전시회 메인 */
 .exhibitionListSwiper {position: relative; overflow: hidden;}
+.exhibition-list .exhibitionListSwiper {display:none;}
+.exhibition-list .exhibitionListSwiper.active {display:block;}
 .exhibitionListSwiper .swiper-pagination {width:auto; display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-left:50%; margin-top:2.875rem; position:static;}
-.exhibitionListSwiper .swiper-pagination-bullet {display:block; margin:0 !important; border:0.0625rem solid #171819; opacity:1; background-color:#fff; width:0.75rem; height:0.75rem;}
+.exhibitionListSwiper .swiper-pagination-bullet {display:block; margin:0 !important; border:0.0625rem solid #171819; background-color:#fff; width:0.75rem; height:0.75rem; opacity: 1; transition: 1s;}
 .exhibitionListSwiper .swiper-pagination-bullet-active {background:#171819;}
 .exhibition .list-swiper-area {position:relative;}
 .exhibition .list-swiper-area .exhibition-list .item .text-area {bottom:2rem; top:revert; transform:none;}
@@ -3246,9 +3248,11 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .exhibitionListSwiper .swiper-wrapper:has(> .swiper-slide:only-child) .swiper-slide-active {width:100% !important; flex-basis:100% !important;}
 .exhibitionListSwiper .swiper-wrapper:has(> .swiper-slide:nth-child(3):last-child) .swiper-slide-active {width:44.375rem !important; flex-basis:44.375rem !important;}
 .exhibitionListSwiper .swiper-wrapper:has(> .swiper-slide:nth-child(2):last-child) .swiper-slide-active {width:67.1875rem !important; flex-basis:67.1875rem !important;}
-.exhibitionListSwiper .swiper-slide {width:21.5625rem !important; height:33.4375rem; flex:0 0 21.5625rem; flex-shrink:0; transition:width 0.5s ease, flex-basis 0.5s ease;}
+.exhibitionListSwiper .swiper-slide {width:21.5625rem !important; height:33.4375rem; flex:0 0 21.5625rem; flex-shrink:0; transition:width 1s ease-in, flex-basis 1s ease-out;}
 .exhibitionListSwiper .swiper-slide:not(.swiper-slide-active) .text-area .info {flex-direction:column;}
 .exhibitionListSwiper .swiper-slide:not(.swiper-slide-active) .text-area .info > span:not(:last-child)::after {display:none;}
+.exhibitionListSwiper .swiper-slide .text-area .info .date {transition: 0.5s;}
+.exhibitionListSwiper .swiper-slide-active .text-area .info .date {transform: translateX(17px);}
 .exhibitionListSwiper .swiper-slide-active .text-area .info {flex-direction:row; font-size:1.375rem; line-height:2.2rem;}
 .exhibitionListSwiper .swiper-slide-active .text-area .title {font-size:2.75rem; line-height:3.85rem;}
 
@@ -3271,8 +3275,8 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .exhibition-list .item .text-area .badge .ico {width:1.25rem; height:1.25rem; display:inline-block;}
 .exhibition-list .item .text-area .badge .ico img {width:100%; height:100%;}
 .exhibition-list .item .text-area .info {color:#555758; display:flex; gap:0; font-size:1.125rem; font-weight:500; line-height:1.8rem; margin-top:1rem;}
-.exhibition-list .item .text-area .info > span:not(:last-child) {position:relative; padding-right:1.0625rem;}
-.exhibition-list .item .text-area .info > span:not(:last-child)::after {position:absolute; content:''; width:0.0625rem; height:1rem; display:inline-block; top:50%; right:0.5rem; background-color:#D9D9D9; transform:translateY(-50%);}
+.exhibition-list .item .text-area .info > span:not(:last-child) {position:relative; }
+.exhibition-list .item .text-area .info > span:not(:last-child)::after {position:absolute; content:''; width:0.0625rem; height:1rem; display:inline-block; top:50%; right:-10px; background-color:#D9D9D9; transform:translateY(-50%);}
 .exhibition-list .item .text-area .title {color:#171819; margin-top:0.5rem; font-size:2rem; line-height:3rem; font-weight:600;}
 
 .exhibition-list.ty02 {grid-template-columns:repeat(3, 1fr);}
@@ -3307,8 +3311,8 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .exhibition .content-visual {padding:7.5rem 0;}
 .exhibition .content-visual .visual-title {padding-bottom:5rem; font-size:2.75rem; font-weight:700; max-width:90rem; margin:0 auto;}
 .exhibition .content-visual .visual-text {padding-top:1.875rem; max-width:90rem; margin:0 auto;}
-.exhibition .content-visual .visual-text .title {font-size:1.75rem; font-weight:600;}
-.exhibition .content-visual .visual-text .desc {font-size:1.125rem; font-weight:400; color:#555758; padding-top:1.25rem;}
+.exhibition .content-visual .visual-text .title {font-size:2rem; font-weight:700; line-height: 3rem;}
+.exhibition .content-visual .visual-text .desc {font-size:1.5rem; font-weight:400; color:#555758; padding-top:1.25rem; line-height: 2.375rem;}
 
 .exhibition .content-info {display:flex; gap:3.75rem; justify-content:space-between;}
 .exhibition .content-info > section.left-cont .info {min-width:33.0625rem; height:19.8125rem; padding:4.75rem 0;}

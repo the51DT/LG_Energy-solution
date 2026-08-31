@@ -2355,7 +2355,12 @@ var pubUi = {
                     allowTouchMove: false, // mouseover가 아닌 swipe 방식으로 처리 원할 경우, true로 변경
                     simulateTouch: false, // mouseover가 아닌 swipe 방식으로 처리 원할 경우, true로 변경
                     resistance: false,
-                    virtualTranslate: true
+                    virtualTranslate: true,
+                    on : {
+                        init : function(){
+                            swiperEl.classList.add("active");
+                        }
+                    }
                 });
 
 
