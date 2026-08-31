@@ -2352,8 +2352,8 @@ var pubUi = {
                     spaceBetween: 20,
                     speed: 0,
                     initialSlide: 0,
-                    allowTouchMove: false,
-                    simulateTouch: false,
+                    allowTouchMove: false, // mouseover가 아닌 swipe 방식으로 처리 원할 경우, true로 변경
+                    simulateTouch: false, // mouseover가 아닌 swipe 방식으로 처리 원할 경우, true로 변경
                     resistance: false,
                     virtualTranslate: true
                 });
@@ -2433,7 +2433,7 @@ var pubUi = {
 
                 }
 
-                // PC 마우스오버
+                // 마우스오버 처리 시,
                 if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
 
                     slides.forEach(function (slide, index) {
@@ -2448,9 +2448,8 @@ var pubUi = {
 
                             });
 
-                            slide.classList.add(
-                                "swiper-slide-active"
-                            );
+                            slide.classList.add("swiper-slide-active");
+                            setActiveSlide(index);
 
                         });
 
@@ -2463,17 +2462,17 @@ var pubUi = {
 
                     });
 
-                }
+                }                
 
-                setActiveSlide(0);                
+                setActiveSlide(0);
                 
 
+                // swipe 방식으로 처리 시,
+                /* 
                 listSwiper.on("touchEnd", function () {
 
                     const startX = this.touches.startX;
-
                     const currentX = this.touches.currentX;
-
                     const diff = startX - currentX;
 
 
@@ -2510,6 +2509,7 @@ var pubUi = {
                     setActiveSlide(nextIndex);
 
                 });
+                */
                 
 
             });
