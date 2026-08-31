@@ -203,6 +203,7 @@ var pubUi = {
         }
         /* 11.12 수정 : 사업장 스크롤 이벤트 추가 : 스크롤시, 유형 필터 위치값 처리하기 위함 - E */
 
+        /* 26.08.31 전시회 관련 스크립트 추가 - S */
         /* 260828 추가 : 전시회 메인(모바일) > 다가올 전시 / 클릭이벤트(펼침/닫힘) 추가 - S  */    
         let mainExhibitionListItem = document.querySelectorAll(".exhibition .accord-type .exhibitionListSwiper .item");
         if(mainExhibitionListItem.length > 0 ) {
@@ -221,6 +222,7 @@ var pubUi = {
                 });
             });
         }/* 260828 추가 : 전시회 메인(모바일) > 다가올 전시 / 클릭이벤트(펼침/닫힘) 추가 - E  */ 
+        /* 26.08.31 전시회 관련 스크립트 추가 - E */
         
     },
     /* 11.12 추가 : 사업장 : 유형 필터 관련 함수 - S */
@@ -1853,10 +1855,12 @@ var pubUi = {
             this.bAroundMoSwiper();
             this.rollingSwiper();
             this.mainPopBnrSwiper();
+            /* 26.08.31 전시회 관련 스크립트 추가 - S */
             this.exhibitionSwiper();
             this.exhibitionRelatedSwiper();
             this.exhibitionSwiperMo();
             this.exhibitionListSwiper();
+            /* 26.08.31 전시회 관련 스크립트 추가 - E */
         },
         // swiper default 타입 : type01Swiper
         type01Swiper() {
@@ -2010,6 +2014,7 @@ var pubUi = {
                 return;
             }
         },
+        /* 26.08.31 전시회 관련 스크립트 추가 - S */
         exhibitionSwiper() {
             const targetSwiper = document.querySelectorAll(".highlight");
 
@@ -2318,7 +2323,7 @@ var pubUi = {
 
 
             }
-        },
+        },        
         exhibitionListSwiper() {
             const targetSwiper = document.querySelectorAll(".list-swiper-area");
 
@@ -2476,6 +2481,7 @@ var pubUi = {
                 });
             });
         }
+        /* 26.08.31 전시회 관련 스크립트 추가 - E */
     },
     calendarUi: {
         toDay: new Date(),
