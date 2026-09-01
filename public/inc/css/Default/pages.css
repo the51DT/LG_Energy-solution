@@ -3259,8 +3259,6 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 
 .exhibition-list:not(.none) {width:90rem;}
 .exhibitionListSwiper .swiper-wrapper {display:flex; align-items:stretch; height:33.4375rem;}
-.exhibitionListSwiper .swiper-wrapper .swiper-slide .text-area .info .date {transform: revert;}
-.exhibitionListSwiper .swiper-wrapper .swiper-slide-active .text-area .info .date {transform: translateX(1px); transition: 0.3s;}
 
 .exhibitionListSwiper .swiper-wrapper:has(> .swiper-slide:only-child) .swiper-slide-active {width:100% !important; flex-basis:100% !important;}
 .exhibitionListSwiper .swiper-wrapper:has(> .swiper-slide:nth-child(3):last-child) .swiper-slide-active {width:44.375rem !important; flex-basis:44.375rem !important;}
