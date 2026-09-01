@@ -2931,6 +2931,7 @@
 /* 전시회 메인 */
 .exhibitionListSwiper {padding-bottom:0;}
 .exhibitionListSwiper .item:has(> img)::before {height:11.75rem;}
+.exhibition-list .item {border-radius: 0.5rem;}
 .exhibition .accord-type .accordion-list .accordion-btn:after {display:none;}
 .exhibition .accord-type .exhibition-list {display:block; width:100%;}
 .exhibition .accord-type .exhibition-list .no-data img {height:27.5rem;}
@@ -2941,19 +2942,23 @@
 .exhibition .accord-type .exhibitionListSwiper .item:not(:last-child) {margin-bottom:1rem;}
 .exhibition .accord-type .exhibitionListSwiper .item.active {height:27.5rem;}
 .exhibition .accord-type .exhibitionListSwiper .item.active .page-link > a {display:inline-flex; align-items:center; padding-right:1.5rem;}
+
 .exhibition .accord-type .exhibition-list .item.active .text-area .title {font-size:1.5rem; line-height:2.0625rem;}
 .exhibition .accord-type .exhibition-list .item.active .text-area .info {font-size:0.875rem; line-height:1.3125rem;}
 .exhibition .accord-type .exhibition-list .item.active .text-area .badge {font-size:0.75rem; line-height:1.2rem; height:1.375rem;}
 .exhibition .accord-type .exhibition-list .item .text-area {bottom:1rem; left: 1rem; top:revert; transform:none; width:calc(100% - 2rem)}
 .exhibition .accord-type .exhibition-list .item .text-area .title {font-size:1.25rem; line-height:1.875rem; margin-top:0.5rem;}
-.exhibition .accord-type .exhibition-list .item .text-area .info {font-size:0.75rem; line-height:1.3125rem; margin-top:0.5rem; font-weight:400; color:#c9ced1;}
+.exhibition .accord-type .exhibition-list .item .text-area .info {font-size:0.75rem; line-height:1.3125rem; margin-top:0.5rem; font-weight:400; color:#c9ced1; display: flex; flex-direction: column;}
+.exhibition .accord-type .exhibition-list .item .text-area .info > span:not(:last-child) {padding-right: 0;}
+.exhibition .accord-type .exhibition-list .item .text-area .info > span:not(:last-child)::after {display: none;}
 .exhibition .accord-type .exhibition-list .item .text-area .badge {font-size:0.75rem; line-height:1.2rem; height:1.5rem; font-weight:600;}
 
 .exhibition .content-area > [class^="content-item"]:first-child {padding-top:1.5rem;}
+
 .exhibition-list.ty02 {display:flex;}
 .exhibition-list.ty02 .item > .text-area .title {font-size:1.25rem; line-height:1.875rem; margin-top:0;}
 .exhibition-list.ty02 .item > .text-area .info {font-size:0.875rem; line-height:1.3125rem; margin-top:0.75rem; color:#858889;}
-.exhibition-list.ty02 .item .text-area .info .country {font-size:0.875rem; line-height:1.3125rem;}
+.exhibition-list.ty02 .item .text-area .info .country {font-size:0.875rem; line-height:1.3125rem; font-weight: 400;}
 .exhibition-list.ty02 .item > .text-area .badge {font-size:0.75rem; line-height:1.2rem; height:1.5rem;}
 
 .exhibition-list.ty03 .item {width:100%;}
@@ -2964,14 +2969,14 @@
 .exhibition-list.ty03 .item:not(:last-child)::after {content:""; width:100%; height:0.0625rem; background-color:#c9ced1; display:block; margin:2rem 0;}
 .exhibition-list.ty03 .item img {height:206px; width:100%;}
 .exhibition-list.ty03 .item .text-area {height:auto; width:100%; padding-top:1rem;}
-.exhibition-list.ty03 .item .text-area .title {font-size:1.25rem; line-height:1.875rem; margin-top:8px;}
+.exhibition-list.ty03 .item .text-area .title {font-size:1.25rem; line-height:1.875rem; margin-top:0.5rem;}
 .exhibition-list.ty03 .item .text-area .info {font-size:0.875rem; line-height:1.3125rem; margin-top:0;}
 
 .exhibition .content-area .exhibition-head .content-title {margin-bottom:1rem;}
-.exhibition-head {display:block; margin-bottom: 24px;}
+.exhibition-head {display:block; margin-bottom: 1.5rem;}
 .exhibition-head .exhibition-cate-wrap {overflow-x:auto;}
 .exhibition-head .exhibition-cate-wrap .exhibition-category {gap:0.5rem;}
-.exhibition-body .exhibition-list {overflow-x:auto; overflow-y:hidden; gap: 24px;}
+.exhibition-body .exhibition-list {overflow-x:auto; overflow-y:hidden; gap: 1.5rem;}
 .exhibition-body .exhibition-list .item {min-width:17.8125rem; height:20.3125rem;}
 .exhibition-body .exhibition-list .item > img {width:100%; height:11.875rem;}
 .exhibition-body .exhibition-list .item > .text-area {height:8.4375rem; padding:1.5rem 1.25rem;}
