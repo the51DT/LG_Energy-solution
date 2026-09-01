@@ -3305,7 +3305,7 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .exhibition-body .exhibition-btn-area {display:flex; justify-content:center; margin-top:1.875rem;}
 
 .exhibition-head .exhibition-cate-wrap .exhibition-category {display:flex; gap:0.625rem;}
-.exhibition-head .exhibition-cate-wrap .exhibition-category button {min-width:auto;}
+.exhibition-head .exhibition-cate-wrap .exhibition-category button {min-width:max-content;}
 .exhibition-head .exhibition-cate-wrap .exhibition-category button.active {background:#171819; color:#fff;}
 
 /* 전시회 상세 */
