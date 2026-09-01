@@ -3022,7 +3022,7 @@
 .exhibition .highlight-swiper-area .swiper-button-prev, .exhibition .highlight-swiper-area .swiper-button-next {width:2rem; height:2rem; background-size:contain;}
 .exhibition .related-content .highlight-swiper-area .swiper-button-prev, .exhibition .related-content .highlight-swiper-area .swiper-button-next {margin-top:0;}
 .exhibition .related-content {display:block;}
-.exhibition .related-content .highlight-swiper-area .highlightSwiper .swiper-slide .txt-wrap {align-items:center;}
+.exhibition .related-content .highlight-swiper-area .highlightSwiper .swiper-slide .txt-wrap {align-items:center; margin-top: 0.75rem;}
 .exhibition .related-content .highlight-swiper-area .highlightSwiper .swiper-slide .txt-wrap .txt {font-size:0.8125rem; line-height:1.3rem;}
 .exhibition .pind .order-history > li > a {height:8.625rem;}
 .exhibition .download-desc>li {height:5.5rem; padding:1.5rem;}
