@@ -2949,6 +2949,7 @@
 .exhibition .accord-type .exhibition-list .item.active .text-area .badge {font-size:0.75rem; line-height:1.2rem; height:1.375rem;}
 .exhibition .accord-type .exhibition-list .item .text-area {bottom:1rem; left: 1rem; top:revert; transform:none; width:calc(100% - 2rem)}
 .exhibition .accord-type .exhibition-list .item .text-area .title {font-size:1.25rem; line-height:1.875rem; margin-top:0.5rem; word-break: break-all;}
+.exhibition .accord-type .exhibition-list .item:not(.active) .text-area .title {white-space: nowrap; display: block; text-overflow: ellipsis;}
 .exhibition .accord-type .exhibition-list .item .text-area .info {font-size:0.75rem; line-height:1.3125rem; margin-top:0.5rem; font-weight:400; color:#c9ced1; display: flex; flex-direction: column;}
 .exhibition .accord-type .exhibition-list .item .text-area .info > span:not(:last-child) {padding-right: 0;}
 .exhibition .accord-type .exhibition-list .item .text-area .info > span:not(:last-child)::after {display: none;}
@@ -2958,7 +2959,7 @@
 
 .exhibition-list .item img {border-radius: 0.5rem;}
 .exhibition-list.ty02 {display:flex;}
-.exhibition-list.ty02 .item {min-height:20.3125rem;}
+.exhibition-list.ty02 .item {height:20.3125rem;}
 .exhibition-list.ty02 .item > img {border-radius: 0.5rem 0.5rem 0 0;}
 .exhibition-list.ty02 .item > .text-area {border-radius: 0 0 0.5rem 0.5rem;}
 .exhibition-list.ty02 .item > .text-area .title {font-size:1.25rem; line-height:1.875rem; margin-top:0;}

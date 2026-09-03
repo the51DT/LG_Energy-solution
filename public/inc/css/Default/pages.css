@@ -3284,10 +3284,10 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 
 
 .exhibition-list.ty02 {grid-template-columns:repeat(3, 1fr);}
-.exhibition-list.ty02 .item {min-height:31rem; height: auto;}
+.exhibition-list.ty02 .item {height:31rem; max-width: 29.1669rem;}
 .exhibition-list.ty02 .item > img {height:19.4375rem; position:static; border-radius:1rem 1rem 0 0;}
-.exhibition-list.ty02 .item > .text-area {min-height:11.5625rem; height:auto; background-color:#F3F5F7; border-radius:0 0 1rem 1rem; padding:2rem; position:static; transform:revert;}
-.exhibition-list.ty02 .item .text-area .title {font-size:1.75rem; line-height:2.625rem; font-weight:600; margin-top:0.5rem;}
+.exhibition-list.ty02 .item > .text-area {height:11.5625rem; background-color:#F3F5F7; border-radius:0 0 1rem 1rem; padding:2rem; position:static; transform:revert; width: 100%;}
+.exhibition-list.ty02 .item .text-area .title {font-size:1.75rem; line-height:2.625rem; font-weight:600; margin-top:0.5rem; white-space: nowrap; text-overflow: ellipsis;}
 .exhibition-list.ty02 .item .text-area .info {margin-top:1rem;}
 .exhibition-list.ty02 .item .text-area .info .country {font-size:1.125rem; line-height:1.8rem; font-weight:500;}
 .exhibition-list.ty02 .item .text-area .badge-wrap {display:flex; gap:0.5rem;}
