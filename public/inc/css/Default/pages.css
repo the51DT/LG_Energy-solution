@@ -1465,12 +1465,12 @@ html:lang(zh-CN) .pfom .line-up-box .line-up-wrap .line-up-col > li .desc{font-s
 .sprf .eval-status > li > div.group > .desc {font-size: 1.125rem; line-height: 1.8rem; font-weight: 400; color: #555758;}
 .sprf .eval-status > li > .info-txt {color: #555758; text-align: right; font-size: 1rem; font-weight: 400; line-height: 1.6rem;}
 
-
 .sprf .eval-status > li > div > img {height: 100%; width: auto;}
 .sprf .eval-status > li > div .grade {position: relative; width: 12.5rem; margin-left: 1.25rem; font-size: 4.5rem; font-weight: 800; line-height: 6.3rem; letter-spacing: -0.03125rem; color: var(--colorElement-light-text-text-primary); text-align: center;}
 .sprf .eval-status > li > div .grade::before {content: ""; position: absolute; top: 50%; left: -1.25rem; transform: translateY(-50%); display: block; width: 0.0625rem; height: 8.125rem; background-color: var(--colorElement-light-stroke-stroke-default03);}
 .sprf .eval-status > li > div .grade .sub {display: block; color: #33b0c6; font-size: 1.125rem; line-height: 1.8rem; font-weight: 500; position: absolute; bottom: -1rem; left: 50%; transform: translateX(-50%); white-space: nowrap;}
 .sprf .eval-status > li > div .grade .sub.before {bottom: 0; top: -1rem;}
+
 
 .sprf [class^="content-item"] .content-sect:has(.sust-rating) {padding-top: 1.875rem;}
 .sprf .sust-rating {padding: 2.5rem; border-radius: 1rem; background-color: var(--colorElement-light-fill-fill-on-primary);}
@@ -3337,7 +3337,7 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .exhibition .content-area .content-section > .text-area {padding-top:1.875rem;}
 .exhibition .content-area .content-section > .text-area .tit {font-size:1.75rem; font-weight:600;}
 .exhibition .content-area .content-section > .text-area .desc {font-size:1.125rem; font-weight:400; color:#555758; padding-top:1.25rem;}
-.exhibition .content-item02 .content-area .content-article:first-child .content-section > .text-area .desc {padding-top:0.625rem;}
+.exhibition .content-item02 .content-area .content-article:first-child .content-section > .text-area .desc {padding-top:1.25rem;}
 
 .exhibition .content-area .content-article:not(:last-child) {padding-bottom:7.5rem;}
 .exhibition .pind .order-history > li > a {height:8.75rem; background:#F3F5F7;}
