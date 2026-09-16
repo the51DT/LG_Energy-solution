@@ -1,0 +1,423 @@
+@charset "utf-8";
+
+/************************** 
+    Reset
+***************************/
+* {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  -webkit-user-select:unset;
+  -moz-user-select: unset;
+  -ms-user-select: unset;
+  user-select: unset;
+  box-sizing: border-box;
+  -webkit-user-drag: unset;
+  -khtml-user-drag: unset;
+  -moz-user-drag: unset;
+  -o-user-drag: unset;
+  /* user-drag: none; */
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select,
+div,
+figure,
+article,
+header,
+nav,
+footer,
+section,
+aside {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-family: "Pretendard", sans-serif;
+}
+html,
+body {
+  overflow: hidden;
+  position: relative;
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  color: #171819;
+  height: 100%;
+  font-weight: 400;
+  /* letter-spacing: -0.03125rem; */
+  -webkit-overflow-scrolling: touch;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Pretendard", sans-serif;
+  font-weight: normal;
+}
+img,
+fieldset,
+iframe {
+  border: 0;
+  vertical-align: top;
+}
+span{
+  -webkit-user-select:unset;
+  -moz-user-select: unset;
+  -ms-user-select: unset;
+  user-select: unset;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  resize: none;
+  font-family: "Pretendard", sans-serif;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+em,
+address {
+  font-style: normal;
+}
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  vertical-align: middle;
+  border: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+hr {
+  display: none;
+}
+label {
+  word-break: break-all;
+}
+html:lang(en) label {
+  word-break: keep-all;
+}
+legend,
+caption {
+  /* position: absolute; */
+  height: 0;
+  overflow: hidden;
+}
+strong,
+b {
+  font-weight: 700;
+}
+i {
+  font-style: normal;
+}
+button {
+  color:#171819;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Pretendard", sans-serif;
+  -webkit-appearance: none;
+}
+input,
+select,
+textarea {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  transform: translateZ(0);
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  border-radius: 3px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 17px;
+  color: #222;
+  word-break: break-all;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="email"] {
+  -webkit-ime-mode: inactive;
+  -moz-ime-mode: inactive;
+  -ms-ime-mode: inactive;
+  ime-mode: inactive;
+}
+a {
+  display: inline-block;
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+abbr {
+  text-decoration: none;
+}
+select::-ms-expand {
+  display: none;
+}
+::-webkit-input-placeholder,
+textarea::placeholder {
+  font-family: "Pretendard", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #b2b2b2;
+}
+
+[tabindex="-1"] {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+:disabled {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+:-webkit-autofill,
+:-webkit-autofill:hover,
+:-webkit-autofill:focus,
+:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  box-shadow: 0 0 0 1000px #fff inset;
+}
+@media screen and (min-width: 768px) {
+  *::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4px;
+    height: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 6px;
+    border-radius: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #aacae6;
+  }
+}
+body {
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+body * {
+  outline: none;
+}
+body *:focus {
+  outline: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.blind {
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+html:lang(pl) *{
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+/************************** 
+    Reset - 중문(zh-CN)
+***************************/
+html:lang(zh-CN) body,
+html:lang(zh-CN) p,
+html:lang(zh-CN) h1,
+html:lang(zh-CN) h2,
+html:lang(zh-CN) h3,
+html:lang(zh-CN) h4,
+html:lang(zh-CN) h5,
+html:lang(zh-CN) h6,
+html:lang(zh-CN) ul,
+html:lang(zh-CN) ol,
+html:lang(zh-CN) li,
+html:lang(zh-CN) dl,
+html:lang(zh-CN) dt,
+html:lang(zh-CN) dd,
+html:lang(zh-CN) table,
+html:lang(zh-CN) th,
+html:lang(zh-CN) td,
+html:lang(zh-CN) form,
+html:lang(zh-CN) fieldset,
+html:lang(zh-CN) legend,
+html:lang(zh-CN) input,
+html:lang(zh-CN) textarea,
+html:lang(zh-CN) button,
+html:lang(zh-CN) select,
+html:lang(zh-CN) div,
+html:lang(zh-CN) figure,
+html:lang(zh-CN) article,
+html:lang(zh-CN) header,
+html:lang(zh-CN) nav,
+html:lang(zh-CN) footer,
+html:lang(zh-CN) section,
+html:lang(zh-CN) aside {  
+  font-family: "Noto Sans SC", sans-serif;  
+  word-break: normal !important;
+}
+
+html:lang(zh-CN) header body,
+html:lang(zh-CN) header p,
+html:lang(zh-CN) header h1,
+html:lang(zh-CN) header h2,
+html:lang(zh-CN) header h3,
+html:lang(zh-CN) header h4,
+html:lang(zh-CN) header h5,
+html:lang(zh-CN) header h6,
+html:lang(zh-CN) header ul,
+html:lang(zh-CN) header ol,
+html:lang(zh-CN) header li,
+html:lang(zh-CN) header dl,
+html:lang(zh-CN) header dt,
+html:lang(zh-CN) header dd,
+html:lang(zh-CN) header table,
+html:lang(zh-CN) header th,
+html:lang(zh-CN) header td,
+html:lang(zh-CN) header form,
+html:lang(zh-CN) header fieldset,
+html:lang(zh-CN) header legend,
+html:lang(zh-CN) header input,
+html:lang(zh-CN) header textarea,
+html:lang(zh-CN) header button,
+html:lang(zh-CN) header select,
+html:lang(zh-CN) header div,
+html:lang(zh-CN) header figure,
+html:lang(zh-CN) header article,
+html:lang(zh-CN) header header,
+html:lang(zh-CN) header nav,
+html:lang(zh-CN) header footer,
+html:lang(zh-CN) header section,
+html:lang(zh-CN) header aside {  
+  word-break: keep-all !important;
+}
+html:lang(zh-CN) input[type="text"],
+html:lang(zh-CN) input[type="password"],
+html:lang(zh-CN) input[type="number"],
+html:lang(zh-CN) input[type="tel"],
+html:lang(zh-CN) input[type="email"],
+html:lang(zh-CN) select,
+html:lang(zh-CN) textarea {
+  font-family: "Noto Sans SC", sans-serif;  
+}
+html:lang(zh-CN) ::-webkit-input-placeholder,
+html:lang(zh-CN) textarea::placeholder {
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+/************************** 
+    Reset - 일본어(JA)
+***************************/
+html:lang(ja) *,
+html:lang(ja) header body,
+html:lang(ja) header p,
+html:lang(ja) header h1,
+html:lang(ja) header h2,
+html:lang(ja) header h3,
+html:lang(ja) header h4,
+html:lang(ja) header h5,
+html:lang(ja) header h6,
+html:lang(ja) header ul,
+html:lang(ja) header ol,
+html:lang(ja) header li,
+html:lang(ja) header dl,
+html:lang(ja) header dt,
+html:lang(ja) header dd,
+html:lang(ja) header table,
+html:lang(ja) header th,
+html:lang(ja) header td,
+html:lang(ja) header form,
+html:lang(ja) header fieldset,
+html:lang(ja) header legend,
+html:lang(ja) header input,
+html:lang(ja) header textarea,
+html:lang(ja) header button,
+html:lang(ja) header select,
+html:lang(ja) header div,
+html:lang(ja) header figure,
+html:lang(ja) header article,
+html:lang(ja) header header,
+html:lang(ja) header nav,
+html:lang(ja) header footer,
+html:lang(ja) header section,
+html:lang(ja) header aside {  
+  font-family: "Pretendard JP", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
+  word-break: normal;
+  line-break: strict;
+  letter-spacing: -0.3px;
+}
+html:lang(ja) input[type="text"],
+html:lang(ja) input[type="password"],
+html:lang(ja) input[type="number"],
+html:lang(ja) input[type="tel"],
+html:lang(ja) input[type="email"],
+html:lang(ja) select,
+html:lang(ja) textarea {
+  font-family: "Pretendard JP", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
+}
+html:lang(ja) ::-webkit-input-placeholder,
+html:lang(ja) textarea::placeholder {
+  font-family: "Pretendard JP", 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo',  sans-serif;
+}
