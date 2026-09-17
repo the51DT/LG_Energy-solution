@@ -3325,10 +3325,9 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .exhibition .content-info > section .info .info-img img {border-radius:62.4375rem;}
 .exhibition .content-info > section .info .sub {font-size:1.25rem; line-height:2rem; font-weight:400; color:#555758;}
 .exhibition .content-info > section .info .txt {font-size:1.75rem; line-height:2.625rem; font-weight:600;}
-.exhibition .content-info-more {padding-top:3.75rem; display:flex; justify-content:space-between; align-items:center;}
+.exhibition .content-info-more {padding-top:3.75rem; display:block;}
 .exhibition .content-info-more > p {color:#555758; font-size:1.25rem; line-height:2rem; font-weight:400;}
-.exhibition .content-info-more > a {font-size:1.125rem; font-weight:500;}
-.exhibition .content-info-more > a {display:flex; gap:0.25rem;}
+.exhibition .content-info-more > a {display:flex; gap:0.25rem; font-size:1.125rem; font-weight:500; margin-top: 12px;}
 .exhibition .content-info-more > a > img {width:1.5rem; height:1.5rem;}
 
 .exhibition .content-area .content-title {font-size:2rem; line-height:3rem; font-weight:700; margin-bottom:1.875rem;}
@@ -3402,3 +3401,27 @@ html:lang(ja) .rolling-banner-gradient-right::before{height:258px;}
 .exhibition .related-content .highlight-swiper-area .swiper-button-prev {transform:rotate(270deg);}
 .exhibition .related-content .highlight-swiper-area .swiper-button-next {transform:rotate(270deg);}
 /* 회사소개 > 전시회 - E */
+
+/* 09.17 추가 : S&P대응  / ESG 보고서 관련 내용 (유지보수 건) */
+.newImg {margin: 1rem 1.5rem 0 !important;}
+.new-content {padding-top: 80px !important;}
+.new-content .title-h2 {font-size: 1.75rem; line-height: 1.5;}
+.new-content .title-desc {font-size: 1.125rem; line-height: 1.6;}
+.sprf .eval-status > li > div.btn-ico-wrap {height: auto; justify-content: center; padding-top: 8px;}
+.sprf .eval-status > li > div.btn-ico-wrap .icon-download {height: 60px; border-color:#C9CED1; border-radius: 8px; background-color: #fff;}
+.sprf .eval-status > li > div.btn-ico-wrap .icon-download span {color: #555758;}
+.sprf .eval-status > li > div.btn-ico-wrap [class^="icon-btn"].icon-gray .icon-area {background-color: #555758;}
+.sprf .eval-status > li > div.btn-ico-wrap [class^="icon-btn"].icon-gray:hover span {color: #171819;}
+
+.infosec-subbox-btn .btn-wrap {margin-top: 60px; display: flex; justify-content: center;}
+.infosec-subbox-btn [class^="icon-btn"].icon-link2 .icon-area::before,
+.infosec-subbox-btn [class^="icon-btn"].icon-link2:hover .icon-area::before {background-image: url(../../images/icon/ico_rule_wh.svg);}
+
+.esg-table-wrap .tit-wrap {margin:1.87rem 0 2.5rem; }
+.esg-table-wrap .fc-red {color:#F3342D;}
+.esg-table-wrap .table-wrap table tbody tr > td {color: #555758; font-size: 1.125rem; line-height: 1.6; font-weight: 400;}
+.esg-table-wrap .table-wrap table tbody tr > td:first-child {font-weight: 600; color: #171819;}
+.esg-table-wrap .table-wrap table .text-list-wrap .text-list li {text-align: left; font-size: 1.125rem; line-height: 1.6; font-weight: 400;}
+.esg-table-wrap .table-wrap table .text-list-wrap .text-list li::before {top:12px;}
+.esg-table-wrap .table-wrap table .text-list-wrap .text-list > li:not(:last-child) {margin-bottom: 0.13rem;}
+

@@ -3007,8 +3007,8 @@
 .exhibition .content-info > section .info .txt {font-size:1.25rem; line-height:1.875rem; font-weight:500;}
 .exhibition .content-info > section .info .info-img img {border-radius:0;}
 .exhibition .content-info > section .info .info-list {gap:0.5rem;}
-.exhibition .content-info-more {padding-top:2rem; justify-content:flex-end;}
-.exhibition .content-info-more > a {font-size:0.875rem; line-height:1.225rem;}
+.exhibition .content-info-more {padding-top:2rem; display:flex; justify-content:flex-end;}
+.exhibition .content-info-more > a {font-size:0.875rem; line-height:1.225rem; margin-top: 0;}
 .exhibition .content-info-more > a > img {width:1.25rem; height:1.25rem;}
 .exhibition .content-area .content-title {font-size:1.5rem; line-height:2.0625rem; margin-bottom:1.5rem;}
 .exhibition .content-area .content-section > .text-area {padding-top:1.5rem;}
@@ -3039,3 +3039,22 @@
 .exhibition .download-list .btn-download .icon-download {background-image:url(../../../inc/images/img/ico_down.png); width:2.5rem; height:2.5rem;}
 .exhibition .download-list .btn-download:hover .icon-download {background-image:url(../../../inc/images/img/ico_down_hover.png); width:2.5rem; height:2.5rem;}
 /* 회사소개 > 전시회 - E */
+
+/* 09.17 추가 : S&P대응  / ESG 보고서 관련 내용 */
+.new-content {padding-top: 3rem !important;}
+.new-content .title-desc {color: #555758; font-size: 1rem;}
+.sprf .eval-status > li > div.btn-ico-wrap {display: block; padding-top: 0.5rem;}
+.sprf .eval-status > li > div.btn-ico-wrap .icon-download {min-width:revert; width:100%; height: 52px;}
+.infosec-subbox-btn .btn-wrap {margin-top: 1rem; display: block;}
+.infosec-subbox-btn [class^="icon-btn"] {font-size: 0.875rem; line-height: 1.225rem; width: 100%;}
+.infosec-subbox-btn [class^="icon-btn"].icon-link2 .icon-area::before,
+.infosec-subbox-btn [class^="icon-btn"].icon-link2:hover .icon-area::before {background-image: url(../../images/icon/ico_rule_wh.svg);}
+
+.esg-table-wrap {padding-left:1.25rem;}
+.esg-table-wrap .tit-wrap {margin:2rem 0 1rem; }
+.esg-table-wrap .table-wrap table {min-width:1200px; width:100%; table-layout: fixed; margin-right: 1.25rem;}
+.esg-table-wrap .table-wrap table tbody tr > td {font-size: 0.875rem; line-height: 1.5; font-weight: 400;}
+.esg-table-wrap .table-wrap table tbody tr > td:first-child {font-weight: 600; color: #171819;}
+.esg-table-wrap .table-wrap table .text-list-wrap .text-list li {text-align: left; font-size: 0.875rem; line-height: 1.5; font-weight: 400;}
+.esg-table-wrap .table-wrap table .text-list-wrap .text-list li::before {top:0.5rem;}
+
