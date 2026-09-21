@@ -163,7 +163,7 @@
 .sust-env .eiass-period .period-box span {font-size: .875rem; line-height: 1.3125rem;}
 .sust-env .eiass-period .period-box .label {padding: 0.25rem 0.625rem; font-size: .75rem; white-space: nowrap;}
 .sust-env .text-list>li {font-size: .875rem; line-height: 1.3125rem; }
-.sust-env .text-list-wrap .text-list > li::before {top: .625rem;}
+.sust-env .text-list-wrap .text-list > li::before {top: 8px;}
 .sust-env .eiass-box .eiass-img {width: 4rem; height: 4rem;}
 .sust-env #tab1-content .content-item03 {padding-top: 2rem;}
 .sust-env .tab1-content .content-item01 .article-desc.intro{font-size: var(--size-mobile-H4, 1.125rem);line-height: var(--line-height-mobile-H4, 1.75rem);}

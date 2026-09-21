@@ -108,7 +108,7 @@
 .sust-env .text-list>li>.text-list-wrap:has(.ty02) {margin-left: -1.13rem;}
 .sust-env .text-list>li>.text-list-wrap .ty02 > li {padding-left: 1.13rem;}
 .sust-env .text-list>li>.text-list-wrap .ty02 > li::before {content: ""; display: block; width: .375rem; height: .0875rem; border-radius: 0;}
-.sust-env .text-list-wrap .text-list > li::before {top: .875rem;}
+.sust-env .text-list-wrap .text-list > li::before {top: 10px;}
 .sust-env .btn-btm-wrap {display: flex; align-items: center; justify-content: center;}
 
 .sust-env .tab2-content .article-content {padding-bottom: 5rem; display: flex; flex-direction: column; gap: 2.5rem;}
