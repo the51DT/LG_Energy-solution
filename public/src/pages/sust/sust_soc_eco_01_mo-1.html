@@ -41,7 +41,7 @@
                                     </ul>                            
                                 </div><!--//tab-cate-wrap-->
                             </div>
-                            <div class="tab-content tab1-content"> 
+                            <div class="tab-content tab1-content" id="tab1-content"> 
                                 <div class="content-item01">
                                     <div class="content-wrap">
                                         <div class="cont-area-wrap">
@@ -351,47 +351,178 @@
                                                 </div>
                                                 <!-- 11.18 수정 : 보고서 관련 문의 버튼 추가 -->
                                                 <div class="btn-wrap">
-                                                    <a href="https://www.lgensol.com/assets/file/LGES_2025_RSR%20Report_KR.pdf"
-                                                        class="icon-btn-sm icon-gray btn-outline01"
-                                                        target="_blank">
-                                                        <span>2024 보고서 (국문)</span>
+                                                    <a href="#" onclick="catalogDown('D', 'D3', 'F0031');" class="icon-btn-sm icon-gray btn-outline01">
+                                                        <span>지속가능한 공급망 관리 보고서</span>
                                                         <div class="icon-area"></div>
                                                     </a>
-                                                    <a href="https://www.lgensol.com/assets/file/LGES_2025_RSR%20Report_EN.pdf"
-                                                        class="icon-btn-sm icon-gray btn-outline01"
-                                                        target="_blank">
-                                                        <span>2024 보고서 (영문)</span>
+                                                    
+                                                    
+                                                    <a href="#" onclick="catalogDown('D', 'D3', 'F0032');" class="icon-btn-sm icon-gray btn-outline01">
+                                                        <span>지속가능한 공급망 관리 보고서(영문)</span>
                                                         <div class="icon-area"></div>
                                                     </a>
-                                                    <a href="/LG_Energy-solution/public/src/pages/cont/cont_prod_01_mo.html" 
+                                                    
+                                                    <a href="/mobile/kr/etc/cs-inquiry?category=G" 
                                                         class="icon-btn-sm icon-gray icon-cs btn-outline01"
                                                         target="_blank">
                                                         <span>보고서 관련 문의</span>
                                                         <div class="icon-area"></div>
-                                                    </a> <!-- 11.24 수정 : href 링크 문의하기로 연결 (개발 경로로 반영시 변경해주세요)-->                                                        
+                                                    </a>
                                                 </div>
                                                 <!-- //11.18 수정 : 보고서 관련 문의 버튼 추가 -->
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 11.24 수정 : 문의하기 버튼 제거 -->
-                                <!-- 11.18 수정 : 문의하기 버튼 재추가 -->
-                                <!-- <div class="content-item05">
+                                <!-- 09.17 수정 : 이중중대성평가 내용 추가 -->
+                                <div class="content-item05">
                                     <div class="content-wrap">
                                         <div class="cont-area-wrap">
-                                            <div class="btn-wrap">
-                                                <a href="#"
-                                                    target="_blank"
-                                                    class="icon-btn-lg icon-white icon-cs btn-outline01">
-                                                    <span>문의하기</span>
-                                                    <div class="icon-area"></div>
-                                                </a>
+                                            <div class="sect-cont-report">
+                                                <h2 class="title-h2">이중중대성평가</h2>
+                                                <div class="main-text-wrap">
+                                                    <div class="article-content">
+                                                        <p class="desc">
+                                                            LG에너지솔루션은 지속가능경영 이슈가 기업 가치와 재무성과에 미치는 영향(Outside-in)뿐 아니라 기업 활동이 환경 및 사회에 미치는 영향(Inside-out)을 종합적으로 고려하기 위해 <br/>
+                                                            이중중대성평가(Double Materiality Assessment)를 실시하고 있습니다. 이를 통해 이해관계자 관점에서 중요한 지속가능경영 이슈를 식별하고, ESG 리스크 및 기회를 체계적으로 관리하고 있습니다. <br/>
+                                                            2026년 이중중대성평가 결과, 외부 이해관계자에게 미치는 영향 관점에서 아래 두 이슈가 가장 높은 중요도를 가진 것으로 평가되었습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>                                                                                            
                                             </div>
                                         </div>
                                     </div>
-                                </div>  -->
-                                <!-- //11.18 수정 : 문의하기 버튼 재추가 -->
+                                    <div class="esg-table-wrap">
+                                        <div class="tit-wrap">
+                                            <h4 class="title-h4">[Top 2 Social·Environmental Impact]</h4>
+                                        </div>
+                                        <div class="table-wrap ty-center">
+                                            <table summary="[Top 2 Social·Environmental Impact]">
+                                                <caption>[Top 2 Social·Environmental Impact] 현황</caption>
+                                                <colgroup>
+                                                    <col style="width:7.84%;">
+                                                    <col style="width:9.80%;">
+                                                    <col style="width:9.80%;">
+                                                    <col style="width:5.88%;">
+                                                    <col style="width:25.49%;">
+                                                    <col style="width:9.80%;">
+                                                    <col style="width:17.65%;">
+                                                    <col style="width:13.73%;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th id="column1" scope="col">이슈</th>
+                                                        <th id="column2" scope="col">가치사슬</th>
+                                                        <th id="column3" scope="col">영향 대상</th>
+                                                        <th id="column4" scope="col">영향 <br/>유형</th>
+                                                        <th id="column5" scope="col">이해관계자에게 <br/>미치는 영향</th>
+                                                        <th id="column6" scope="col">산출지표</th>
+                                                        <th id="column7" scope="col">영향 평가 방법</th>
+                                                        <th id="column8" scope="col">성과</th>
+                                                    </tr>
+                                                </thead>
+                                                
+                                                <tbody>
+                                                    <tr>
+                                                        <td headers="column1" scope="row">제품 책임</td>
+                                                        <td headers="column2">제품/서비스</td>
+                                                        <td headers="column3">소비자 및 고객</td>
+                                                        <td headers="column4"><strong class="fc-red">부정</strong></td>
+                                                        <td headers="column5">
+                                                            <div class="text-list-wrap">
+                                                                <ul class="text-list">
+                                                                    <li>
+                                                                        EU Battery Regulation 등 제품 정보공개 <br/>
+                                                                        요구 확대에 따라 제품 라벨링 오류 또는<br/>
+                                                                        정보 누락 발생 시 규제 위반 및 <br/>
+                                                                        벌금 부과 가능성 존재
+                                                                    </li>
+                                                                    <li>
+                                                                        제품 정보에 대한 신뢰도 저하로 고객사 및 최종사용자의 기업 신뢰도 하락 가능
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td headers="column6">
+                                                            <div class="text-list-wrap">
+                                                                <ul class="text-list">
+                                                                    <li>배터리 여권 구축 현황</li>
+                                                                    <li>제품 라벨링 적합성 검토 건수</li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td headers="column7">
+                                                            <div class="text-list-wrap">
+                                                                <ul class="text-list">
+                                                                    <li>제품 정보 및 라벨링 적합성 점검</li>                                                                        
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td headers="column8">
+                                                            <div class="text-list-wrap">
+                                                                <ul class="text-list">
+                                                                    <li>제품 정보관리 체계 구축</li>
+                                                                    <li>배터리 여권 대응 체계 마련</li>
+                                                                    <li>글로벌 규제 대응 역량 강화</li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td headers="column1" scope="row">안전보건 관리</td>
+                                                        <td headers="column2">사업장 운영<br/>및 공급망</td>
+                                                        <td headers="column3">임직원 및<br/>협력회사 근로자</td>
+                                                        <td headers="column4"><strong class="fc-red">부정</strong></td>
+                                                        <td headers="column5">
+                                                            <div class="text-list-wrap">
+                                                                <ul class="text-list">
+                                                                    <li>
+                                                                        직·간접 근로자 산업안전사고 발생 시 <br/>
+                                                                        근로자의 건강과 안전 훼손 가능성 존재
+                                                                    </li>
+                                                                    <li>
+                                                                        생산 차질 및 사업장 운영 중단 가능성 증가
+                                                                    </li>
+                                                                    <li>
+                                                                        지역사회 및 이해관계자의 기업 신뢰도 저하 우려
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td headers="column6">
+                                                            <div class="text-list-wrap">
+                                                                <ul class="text-list">
+                                                                    <li>LTIFR<br/>(근로손실재해율)</li>
+                                                                    <li>중대재해 건수</li>
+                                                                    <li>ISO 45001 인증 사업장 수</li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td headers="column7">
+                                                            <div class="text-list-wrap">
+                                                                <ul class="text-list">
+                                                                    <li>위험성평가 실시</li>                                                                        
+                                                                    <li>안전진단 및 사고 원인 분석(Root Cause Analysis)</li>                                                                        
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                        <td headers="column8">
+                                                            <div class="text-list-wrap">
+                                                                <ul class="text-list">
+                                                                    <li>글로벌 안전보건 <br/>관리체계 구축</li>
+                                                                    <li>ISO 45001 인증 유지</li>
+                                                                    <li>중대 산업재해 Zero 목표 운영</li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                
+                                            </table>
+                                        </div>                                                
+                                    </div>
+                                </div><!-- //09.17 수정 : 이중중대성평가 내용 추가 -->
+                               
                             </div>
                         </div>
                     </div>

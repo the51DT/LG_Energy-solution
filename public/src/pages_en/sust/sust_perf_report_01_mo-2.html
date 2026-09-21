@@ -104,6 +104,13 @@
                                                             B
                                                         </p>
                                                     </div>
+                                                    <!-- 09.17 추가 -->
+                                                    <div class="btn-ico-wrap">
+                                                        <button type="button" class="icon-btn-sm icon-gray icon-download btn-outline01">
+                                                            <span>CDP Climate Change Report</span>
+                                                            <div class="icon-area"></div>
+                                                        </button>
+                                                    </div><!-- //09.17 추가 -->
                                                 </li>
                                             </ul>
                                             
@@ -150,6 +157,283 @@
             </aside>
             <!-- footer -->
         </div>
+
+        <!-- 09.17 수정 : 팝업 추가 -->
+        <!-- popup : 다운로드 정보 입력 팝업 -->
+        <div class="modal-pop size-sm" id="popupForm1">
+            <div class="pop-wrap input-form">
+                <div class="pop-header">
+                    <h3 class="title">Catalog Download</h3>
+                </div>
+                <div class="pop-content">
+                    <div class="input-box-wrap">
+                        <div class="wrap-form-input">
+                            <div class="input-wrap">
+                                <label for="user-input">Name</label>
+                                <input type="text" id="leads_name" class="input-box"
+                                    placeholder="* Please enter your name." required>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="company-input">Company Name</label>
+                                <input type="text" id="leads_company_name" class="input-box"
+                                    placeholder="* Please enter your company name." required>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="email-input">Email</label>
+                                <input type="email" id="leads_email" class="input-box"
+                                    placeholder="* Please enter your Email." required>
+                            </div>
+
+                            <div class="input-wrap">
+                                <label for="phone-input">Product of interest.</label>
+                                <input type="text" id="leads_interestProductGroup" class="input-box"
+                                    placeholder="* Enter your product(s) of interest.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terms-chk-wrap">
+                        <div class="terms-wrap">
+                            <div class="terms-item">
+                                <div class="checkbox chk-terms-wrap">
+                                    <input type="checkbox" class="checkbox"
+                                        id="leads_contents_privacy_YN" name="leads_contents_privacy_YN">
+                                    <label for="leads_contents_privacy_YN" class="checkbox-label">
+                                        <span class="custom-checkbox"></span>
+                                        <div class="txt-group">
+                                            <span class="txt">
+                                                [Required] Consent to the Collection and Use of Personal
+                                                Information
+                                            </span>
+                                            <button class="btn-detail"
+                                                onclick="pubUi.popUp.open('#popupDialogTerms1','#popupDialogTermsBtn1')"><span
+                                                    class="blind">-></span></button>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="terms-item">
+                                <div class="checkbox chk-terms-wrap">
+                                    <input type="checkbox" class="checkbox"
+                                        id="leads_contents_data_transfer_YN"
+                                        name="leads_contents_data_transfer_YN">
+                                    <label for="leads_contents_data_transfer_YN" class="checkbox-label">
+                                        <span class="custom-checkbox"></span>
+                                        <div class="txt-group">
+                                            <span class="txt">[Required] Consent to the Transfer of Personal Information
+                                                Overseas
+                                            </span>
+                                            <button class="btn-detail"
+                                            onclick="pubUi.popUp.open('#popupDialogTerms3','#popupDialogTermsBtn3')"><span
+                                                class="blind">-></span></button>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="terms-item">
+                                <div class="checkbox chk-terms-wrap">
+                                    <input type="checkbox" class="checkbox"
+                                        id="leads_contents_marketing_YN"
+                                        name="leads_contents_marketing_YN">
+                                    <label for="leads_contents_marketing_YN" class="checkbox-label">
+                                        <span class="custom-checkbox"></span>
+                                        <div class="txt-group">
+                                            <span class="txt">
+                                                Consent to Receive Marketing <br>Communications
+                                            </span>
+                                            <button class="btn-detail"
+                                                onclick="pubUi.popUp.open('#popupDialogTerms2','#popupDialogTermsBtn2')"><span
+                                                    class="blind">-></span></button>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //terms-wrap -->
+                <!-- //terms-chk-wrap -->
+            </div>
+            <div class="pop-footer">
+                <div class="btn-wrap">
+                    <div class="btn-group">
+                        <button type="button" class="act-btn-lg btn-primary01 btn-confirm"
+                            onclick="saveLeadgen();">Download</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="pop-close" data-action="close"
+                onclick="pubUi.popUp.close('#popupForm1','#popupFormBtn1');" title="Popup Close">
+                <span class="blind">Popup Close</span>
+            </button>
+        </div>
+        </div>
+        <!-- popup : 약관 자세히보기 팝업 : 개인정보 수집 및 이용에 동의합니다 -->
+        <div class="modal-pop size-sm" id="popupDialogTerms1">
+            <div class="pop-wrap input-form">
+                <div class="pop-header">
+                    <!-- 각 이용 동의 약관별 타이틀 노출 -->
+                    <h3 class="title">Consent to Collection and<br /> Use of Personal Information</h3>
+                </div>
+                <div class="pop-content">
+                    <p class="desc">LG Energy Solution collects and uses personal information as follows
+                        for the purpose of providing downloads and responding to inquiries.</p>
+                    <div class="terms-wrap ty02">
+                        <ul class="terms-item-list">
+                            <li class="terms-item">
+                                <strong>Items Collected</strong>
+                                <p>Name, Email, Company Name</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Purpose of Use</strong>
+                                <p>Consent to Receive Marketing Information</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Method of Provision</strong>
+                                <p>Email</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Retention & Use Period</strong>
+                                <p>Retained for one (1) year from the date of collection, then destroyed
+                                </p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Right to Refuse and Disadvantage</strong>
+                                <p>You may refuse to provide consent; however, in such cases, access to
+                                    certain content may be restricted.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//terms-wrap -->
+                </div>
+                <div class="pop-footer">
+                    <div class="btn-wrap">
+                        <button type="button" class="act-btn-lg btn-primary01 btn-confirm"
+                            onclick="pubUi.popUp.close('#popupDialogTerms1','#popupDialogTermsBtn1');">OK</button>
+                    </div>
+                </div>
+                <button type="button" class="pop-close" data-action="close"
+                    onclick="pubUi.popUp.close('#popupDialogTerms1','#popupDialogTermsBtn1');"
+                    title="Popup Close">
+                    <span class="blind">Popup Close</span>
+                </button>
+            </div>
+        </div>
+        <!-- popup : 약관 자세히보기 팝업 : 마케팅 정보 수신 동의 -->
+        <div class="modal-pop size-sm" id="popupDialogTerms2">
+            <div class="pop-wrap input-form">
+                <div class="pop-header">
+                    <!-- 각 이용 동의 약관별 타이틀 노출 -->
+                    <h3 class="title">Consent to Receive<br> Marketing Information</h3>
+                </div>
+                <div class="pop-content">
+                    <!-- 마케팅 정보 수신 동의 문구 -->
+                    <p class="desc">LG Energy Solution uses personal information to provide useful
+                        information such as promotions and newsletters:</p>
+                    <div class="terms-wrap ty02">
+                        <ul class="terms-item-list">
+                            <li class="terms-item">
+                                <strong>Items Collected</strong>
+                                <p>Name, Email, Company Name</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Purpose of Use</strong>
+                                <p>Consent to Receive Marketing Information</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Method of Provision</strong>
+                                <p>Email</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Retention & Use Period</strong>
+                                <p>Retained for one (1) year from the date of collection, then destroyed
+                                </p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Right to Refuse and Disadvantage</strong>
+                                <p>You may refuse to consent; however, in such cases, content may not be
+                                    provided.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//terms-wrap -->
+                </div>
+                <div class="pop-footer">
+                    <div class="btn-wrap">
+                        <button type="button" class="act-btn-lg btn-primary01 btn-confirm"
+                            onclick="pubUi.popUp.close('#popupDialogTerms2','#popupDialogTermsBtn2');">OK</button>
+                    </div>
+                </div>
+                <button type="button" class="pop-close" data-action="close"
+                    onclick="pubUi.popUp.close('#popupDialogTerms2','#popupDialogTermsBtn2');"
+                    title="Popup Close">
+                    <span class="blind">Popup Close</span>
+                </button>
+            </div>
+        </div>
+        <!-- popup : 약관 자세히보기 팝업 : 개인정보 국외 이전 동의 -->
+        <div class="modal-pop size-sm" id="popupDialogTerms3">
+            <div class="pop-wrap input-form">
+                <div class="pop-header">
+                    <!-- 각 이용 동의 약관별 타이틀 노출 -->
+                    <h3 class="title">Consent to Overseas<br /> Transfer of Personal<br /> Information
+                    </h3>
+                </div>
+                <div class="pop-content">
+                    <!-- 개인정보 국외 이전 동의 관련 문구 -->
+                    <p class="desc">LG Energy Solution uses cloud systems to manage your information
+                        securely. Accordingly, your personal information may be transferred overseas.
+                    </p>
+
+                    <div class="terms-wrap ty02">
+                        <ul class="terms-item-list">
+                            <li class="terms-item">
+                                <strong>Recipient</strong>
+                                <p>Microsoft</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Country</strong>
+                                <p>United States</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Items Transferred</strong>
+                                <p>Name, Email, Company Name</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Purpose of Transfer</strong>
+                                <p>Data storage and system operation</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Method of Transfer</strong>
+                                <p>Transmitted over network immediately upon collection</p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Retention & Use Period</strong>
+                                <p>Retained for one (1) year from the date of collection, then destroyed
+                                </p>
+                            </li>
+                            <li class="terms-item">
+                                <strong>Right to Refuse and Disadvantage</strong>
+                                <p>You may refuse to consent; however, in such cases, content may not be
+                                    provided.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//terms-wrap -->
+                </div>
+                <div class="pop-footer">
+                    <div class="btn-wrap">
+                        <button type="button" class="act-btn-lg btn-primary01 btn-confirm"
+                            onclick="pubUi.popUp.close('#popupDialogTerms3','#popupDialogTermsBtn3');">OK</button>
+                    </div>
+                </div>
+                <button type="button" class="pop-close" data-action="close"
+                    onclick="pubUi.popUp.close('#popupDialogTerms3','#popupDialogTermsBtn3');"
+                    title="Popup Close">
+                    <span class="blind">Popup Close</span>
+                </button>
+            </div>
+        </div>
+        <!-- //09.17 수정 : 팝업 추가 -->
+
         <script type="text/javascript" src="../../../inc/js/jquery-3.7.1.slim.min.js"></script>
         <script type="text/javascript" src="../../../inc/js/swiper.min.js"></script>
         <!-- header footer 추가 js 실제론 불필요-->
